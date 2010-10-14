@@ -16,11 +16,9 @@ void testIsEpub (FILE* f)
     ifEpub[4] = '\0';
     if (strcmp(ifEpub, "epub")) //==1 when !equal
     {
-        //delete tmp;  //SIGABRT
         delete ifEpub;
         throw NotEpubException();
     }
-    //delete tmp; //SIGABRT
     delete ifEpub;
 }
 
@@ -94,8 +92,6 @@ void printTime (const char* p, FILE* log)
     gettimeofday(&tv, &tz);
     tm *tm1 = localtime(&tv.tv_sec);
     fprintf(log, "%s %d:%02d:%02d\n", p, tm1->tm_hour, tm1->tm_min, tm1->tm_sec);
-
-   // delete tm1; //SEGABRT
 }
 
 int main(int argc, char *argv[])
@@ -106,7 +102,7 @@ int main(int argc, char *argv[])
     if (!curl)
     {
         fprintf(stderr, "CURL error! Downloading aborted.\n");
-        return 3;
+        return 1;
     }
 
     // init parameters from arguments
@@ -139,10 +135,9 @@ int main(int argc, char *argv[])
     {
         fprintf(stderr, "Cannot create log file '%s'. Check the path.\nDownloading aborted.\n", logName);
         curl_easy_cleanup(curl);
-        return 1;
+        return 2;
     }
     fprintf(stdout, "Downloading log is %s.\n", logName);
-    //delete ln; //SEGFAULT
     delete logName;
 
     // set init values
@@ -160,19 +155,12 @@ int main(int argc, char *argv[])
         if (f == 0)
         {
             fprintf(stderr, "Cannot create file '%s'. Check the path.\nDownloading aborted.\n", fname);
-
-            //dispose mem
             printTime("Finished at", log);
             fclose(log);
-            //delete log; //SEGABRT
-            //delete f; //SEGABRT
             delete fname;
-            //delete srcUrl; //SEGFAULT
-            //delete tgDir; //SEGFAULT
             curl_easy_cleanup(curl);
-            //delete curl; //SEGABRT
 
-            return 2;
+            return 3;
         }
         fprintf(log,"Written file is <%s>\n",fname);
         if (DownloadBook(curl, bookId, f, srcUrl, log))
@@ -188,24 +176,15 @@ int main(int argc, char *argv[])
             else
                 fprintf(log, "       Deleted file '%s'.\n", fname);
         }
-
-        //delete f; //SEGABRT
         delete fname;
     }
-
     if ((bookId - downloaded) > 100)
         fprintf(stderr, "There were 100 SEGFAULTs in books' links. Check the source url. You have specified '%s'.\n", srcUrl);
     else
         fprintf(stdout, "Download finished!\n");
 
-    //dispose mem
     printTime("Finished at", log);
     fclose(log);
-    //delete log; //SEGABRT
-    //delete srcUrl; //SEGFAULT
-    //delete tgDir; //SEGFAULT
     curl_easy_cleanup(curl);
-    //delete curl; //SIGABRT
-
     return 0;
 }
