@@ -1,10 +1,16 @@
 #include <cstring>
-#include <stdlib.h>
+#include <cstdlib> //for atoi()
 #include <curl/curl.h>
 #include <curl/types.h>
 #include <sys/time.h>
+#include <fstream>
+#include <iostream>
 
+#include "StringConvert.h"
 #include "NotEpubException.h"
+
+typedef std::string string;
+typedef std::ofstream ofstream;
 
 void testIsEpub (FILE* f)
 // as I've noticed every *.epub file contains string "epub"
@@ -38,29 +44,14 @@ size_t WriteData(void *ptr, size_t size, size_t nmemb, FILE *myStream)
     return written;
 }
 
-char* MakeStr (const char* a, int id, const char* b)
+int DownloadBook (CURL *curl, int id, FILE* f, string srcUrl, ofstream * log)
 {
-    char* charId = new char();
-    sprintf(charId, "%d", id);
-
-    char* s = new char [strlen(a)+strlen(charId)+strlen(b)];
-    strcpy(s, a);
-    strcat(s, charId);
-    strcat(s, b);
-
-    delete charId;
-
-    return s;
-}
-
-int DownloadBook (CURL *curl, int id, FILE* f, const char* srcUrl, FILE *log)
-{
-    char* url = MakeStr(srcUrl, id, ".epub");
-    fprintf(log, "%s\n", url);
+    string url = srcUrl + toString<int>(id) + ".epub";
+    *log << url << std::endl;
 
     char errorBuffer[CURL_ERROR_SIZE];
     curl_easy_setopt(curl, CURLOPT_ERRORBUFFER, errorBuffer);
-    curl_easy_setopt(curl, CURLOPT_URL, url);
+    curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteData);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, f);
 
@@ -71,27 +62,24 @@ int DownloadBook (CURL *curl, int id, FILE* f, const char* srcUrl, FILE *log)
     }
     catch (NotEpubException& exc)
     {
-        fprintf(log, "   '%s' error: %s\n", url, exc.what());
-        delete url;
+        *log << "    " << url <<" error: " << exc.what() << std::endl;
         return 0;
     }
     if (result == CURLE_OK)
     {
-        delete url;
         return 1;
     }
-    fprintf(log, "   BookId %d error: [%d] - %s\n", id, result, errorBuffer);
-    delete url;
+    *log << "    file id " << id << "error " << result << " - " << errorBuffer << std::endl;
     return 0;
 }
 
-void printTime (const char* p, FILE* log)
+void printTime (string p, ofstream *log)
 {
     struct timeval tv;
     struct timezone tz;
     gettimeofday(&tv, &tz);
     tm *tm1 = localtime(&tv.tv_sec);
-    fprintf(log, "%s %d:%02d:%02d\n", p, tm1->tm_hour, tm1->tm_min, tm1->tm_sec);
+    *log << p << " " << tm1->tm_hour << ":" << tm1->tm_min << ":" << tm1->tm_sec << std::endl;
 }
 
 int main(int argc, char *argv[])
@@ -101,19 +89,18 @@ int main(int argc, char *argv[])
     curl = curl_easy_init();
     if (!curl)
     {
-        fprintf(stderr, "CURL error! Downloading aborted.\n");
+        std::cerr << "CURL error! Downloading aborted.\n";
         return 1;
     }
 
     // init parameters from arguments
-    const char* srcUrl;
-    const char* tgDir;
+    string srcUrl;
+    string tgDir;
     int cnt;
 
     if (argc != 3)
     {
-        fprintf(stdout, "You should have entered 3 arguments:\nSource url (f.e.  www.feedbooks.com/book)\nTarget directory (f.e. /home)\nQuantity of books to download.\n");
-        fprintf(stdout, "The defaults are: www.feedbooks.com/book/, /home/kate/Downloads/books/, 10.\n");
+        std::cout <<"You should have entered 3 arguments:\nSource url (f.e.  www.feedbooks.com/book)\nTarget directory (f.e. /home)\nQuantity of books to download.\nThe defaults are: www.feedbooks.com/book/, /home/kate/Downloads/books/, 10.\n";
         srcUrl = "www.feedbooks.com/book/";
         tgDir = "/home/kate/Downloads/books/";
         cnt = 10;
@@ -126,44 +113,39 @@ int main(int argc, char *argv[])
     }
 
     // initialize log file
-    const char* ln = "downloadLog.txt\0";
-    char *logName = new char[strlen(tgDir)+strlen(ln)];
-    strcpy(logName, tgDir);
-    strcat(logName, ln);
-    FILE* log = fopen(logName, "w");
-    if (log == 0)
+    string logName = tgDir + "downloadLog.txt";
+    ofstream log(logName.c_str(), ofstream::trunc);
+    if (!log.is_open())
     {
-        fprintf(stderr, "Cannot create log file '%s'. Check the path.\nDownloading aborted.\n", logName);
+        std::cerr << "Cannot create log file " << logName << " Check the path.\nDownloading aborted.\n";
         curl_easy_cleanup(curl);
         return 2;
     }
-    fprintf(stdout, "Downloading log is %s.\n", logName);
-    delete logName;
+    std::cout << "Downloading log is " << logName << std::endl;
 
     // set init values
-    fprintf(stdout, "Downloading ...\n");
+    std::cout << "Downloading ...\n";
     int downloaded = 0;
     int bookId = 0;
 
-    printTime("Started at", log);
+    printTime("Started at", &log);
 
     while (downloaded < cnt && (bookId - downloaded) < 101)
     {
         ++bookId;
-        char* fname = MakeStr(tgDir, bookId, ".epub");
-        FILE* f = fopen(fname, "w");
+        string fname = tgDir + toString<int>(bookId) + ".epub";
+        FILE* f = fopen(fname.c_str(), "w");
         if (f == 0)
         {
-            fprintf(stderr, "Cannot create file '%s'. Check the path.\nDownloading aborted.\n", fname);
-            printTime("Finished at", log);
-            fclose(log);
-            delete fname;
+            std::cerr << "Cannot create file " << fname << ". Check the path.\nDownloading aborted.\n";
+            printTime("Finished at", &log);
+            log.close();
             curl_easy_cleanup(curl);
-
             return 3;
         }
-        fprintf(log,"Written file is <%s>\n",fname);
-        if (DownloadBook(curl, bookId, f, srcUrl, log))
+
+        log << "Written file is "<< fname << std::endl;
+        if (DownloadBook(curl, bookId, f, srcUrl, &log))
         {
             ++downloaded;
             fclose(f);
@@ -171,20 +153,19 @@ int main(int argc, char *argv[])
         else
         { //если файл не загружен, удаляем созданный f
             fclose(f);
-            if (remove(fname) == -1)
-                fprintf(log, "       Failed to delete %s.\n", fname);
+            if (remove(fname.c_str()) == -1)
+                log << "       Failed to delete " << fname << std::endl;
             else
-                fprintf(log, "       Deleted file '%s'.\n", fname);
+                log << "       Deleted file " << fname << std::endl;
         }
-        delete fname;
     }
     if ((bookId - downloaded) > 100)
-        fprintf(stderr, "There were 100 SEGFAULTs in books' links. Check the source url. You have specified '%s'.\n", srcUrl);
+        std::cerr << "There were 100 SEGFAULTs in books' links. Check the source url. You have specified " << srcUrl << std::endl;
     else
-        fprintf(stdout, "Download finished!\n");
+        std::cout << "Download finished!\n";
 
-    printTime("Finished at", log);
-    fclose(log);
+    printTime("Finished at", &log);
+    log.close();
     curl_easy_cleanup(curl);
     return 0;
 }
