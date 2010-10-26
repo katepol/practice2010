@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>404. Страница не найдена</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/i/favicon.ico" />
+	<link rel="stylesheet" type="text/css" media="all" href="/s/style.css" />
+	<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="/s/ie.css" /><![endif]-->
+	<!--
+	<script type="text/javascript" src="/j/script.js"></script>
+	-->
+</head>
+<body>
+	<div id="error-page">
+		<h3 class="logo-ico"><a href="/">LiveJournal.Ru &mdash; путеводитель по ЖЖ</a></h3>
+		<h1>Страница не найдена</h1>
+		<p>Попробуйте начать поиски с <a href="/">главной страницы</a>, либо вспользуйтесь поиском:</p>
+		<div class="searchbar">
+	    		
+	<form action="http://www.livejournal.com/search/" id="searchbar" method="get" accept-charset='UTF-8'>
+			
+		<ul class="tabs">
+	    		
+				<li class="cur ljsearch"><span>В ЖЖ</span></li>
+				<li class="last ljru"><span>В LJ.RU</span></li>
+			
+		</ul>
+		<table>
+			<tr>
+				<td class="txt">
+					<input type="hidden" name="ie" value="utf-8" />
+					<input type="hidden" id="hidden_id" name="id" value="" />
+					<input type="text" id="search-input" name="q" value="" />
+					<ul class="links">
+						<li class="sample">Например: <a href="http://www.livejournal.com/search/?q=%D0%91%D0%BB%D0%BE%D0%B3%D0%B8">Блоги</a></li>
+						
+					</ul>
+				</td>
+				<td class="btn"><input type="image" src="/i/btn/find.gif" alt="Найти" /></td>
+			</tr>
+		</table>
+	</form>
+</div>
+
+		<p id="footer">&copy;&laquo;Суп&raquo;</p>
+	</div>
+</body>
+</html>
