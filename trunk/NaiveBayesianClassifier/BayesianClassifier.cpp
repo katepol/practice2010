@@ -7,15 +7,15 @@
 #include <ctime>
 #include "PrintTemplates.cpp"
 
-typedef std::string                         string;
+using std::string;
+using std::ifstream;
+using std::ofstream;
 typedef std::list<std::string>              lststr;
 typedef std::vector<std::string>            vecstr;
 typedef std::map<std::string, int>          mapsi;
 typedef std::map<std::string, double>       mapsd;
 typedef std::map<std::string, std::map<std::string, int> >     mapSmapSI;
 typedef std::map<std::string, std::map<std::string, double> >  mapSmapSD;
-typedef std::ifstream ifstream;
-typedef std::ofstream ofstream;
 
 mapsi BayesianClassifier::MakeMap (lststr const & list)
 {
@@ -92,6 +92,7 @@ lststr BayesianClassifier::ParseDocument (string const &docFileName, unsigned in
       // punctuation
       string s;
       doc >> s;
+      //int tolower(int);
       if (s.length() > importance)
         word.push_back(s);
     }

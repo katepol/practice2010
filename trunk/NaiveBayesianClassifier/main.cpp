@@ -2,12 +2,15 @@
 #include <fstream>
 #include <string>
 #include "BayesianClassifier.h"
+#include "Downloader.h"
 
-typedef std::string string;
+using std::string;
+using std::ofstream;
+using std::ifstream;
 
-void makeDataFile(string const & s)
+/*void makeDataFile(string const & s)
 {
-    std::ofstream doc(s.c_str(), std::ofstream::trunc);
+    ofstream doc(s.c_str(), ofstream::trunc);
     if (!doc.is_open())
         return;
     for (int i=1; i!=101; ++i)
@@ -18,10 +21,11 @@ void makeDataFile(string const & s)
         doc << i << " livejournal\n";
     doc.close();
 }
+*/
 
 int main(int argc, char* argv[])
 {
-    string dir("/home/kate/APTU/Practice/data/");
+    string dir("/home/kate/APTU/Practice/data2/");
     if (argc != 2)
     {
         std::cout << "Default working directory: " << dir << "\n";
@@ -33,7 +37,19 @@ int main(int argc, char* argv[])
     }
 
     string dataFileName(dir + "description.txt");
-    makeDataFile(dataFileName);
+    ofstream doc(dataFileName.c_str(), ofstream::trunc);
+    if (!doc.is_open())
+    {
+        std::cout << "Cannot open file for writing data. Abort.\n";
+        return 1;
+    }
+    Downloader d;
+    //REM: in extention must be . : f.e. ".txt"
+    int faultLim = 3;
+    d.Download(&doc, "forum", "", "http://forumishka.net/showthread.php?t=", dir, "log_forum.txt", 1, 100, faultLim);
+    d.Download(&doc, "science article", "", "http://swsys.ru/index.php?page=article&id=", dir, "log_science_article.txt", 2463, 100, faultLim);
+    d.Download(&doc, "livejournal", "", "http://www.livejournal.ru/themes/id/", dir, "log_livejournal.txt", 22201, 100, faultLim);
+    doc.close();
 
     BayesianClassifier bc;
 
@@ -42,13 +58,13 @@ int main(int argc, char* argv[])
 
     resultFileName = dir + "classify_output.txt";
 
-    std::ifstream data(dataFileName.c_str(), std::ifstream::in);
+    ifstream data(dataFileName.c_str(), ifstream::in);
     if (!data.is_open())
     {
         std::cerr << "Error reading data from " << dataFileName << "\n";
         return 1;
     }
-    std::ofstream out(resultFileName.c_str(), std::ofstream::trunc);
+    ofstream out(resultFileName.c_str(), ofstream::trunc);
     if (!out.is_open())
     {
         std::cerr << "Error writing data to " << resultFileName << "\n";
