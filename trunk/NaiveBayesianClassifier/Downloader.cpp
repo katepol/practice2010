@@ -1,6 +1,9 @@
 #include <cstdlib> //for atoi()
-#include <curl/curl.h>
-#include <curl/types.h>
+
+ #include <curl/curl.h>
+ #include <curl/types.h>
+
+
 #include <sys/time.h>
 
 #include "StringConvert.h"
@@ -28,23 +31,6 @@ size_t Downloader::WriteData(void *ptr, size_t size, size_t nmemb, FILE *myStrea
     return written;
 }
 
-size_t wd(void *ptr, size_t size, size_t nmemb, FILE *myStream)
-{
-    bool firstTime = false;
-
-    if (myStream->_IO_read_ptr == 0)
-        firstTime = true;
-
-    size_t written = fwrite(ptr, size, nmemb, myStream);
-
-    if (firstTime)
-    {
-        // Check(myStream, extention);
-    }
-
-    return written;
-}
-
 int Downloader::DownloadFile (CURL *curl, int id, FILE* f)
 {
     string url = srcUrl + toString<int>(id) + extention;
@@ -53,7 +39,7 @@ int Downloader::DownloadFile (CURL *curl, int id, FILE* f)
     char errorBuffer[CURL_ERROR_SIZE];
     curl_easy_setopt(curl, CURLOPT_ERRORBUFFER, errorBuffer);
     curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
-    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, wd); //Downloader::WriteData
+    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, Downloader::WriteData);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, f);
 
     CURLcode result;
@@ -68,6 +54,12 @@ int Downloader::DownloadFile (CURL *curl, int id, FILE* f)
     }
     if (result == CURLE_OK)
     {
+        // check for file size
+        if (ftell(f) < minFileSize)
+        {
+            log << "    file id " << id << " error: FILE SEEMS TO BE EMPTY. SKIP.\n";
+            return 0;
+        }
         return 1;
     }
     log << "    file id " << id << " error " << result << " - " << errorBuffer << std::endl;
@@ -83,7 +75,7 @@ void Downloader::printTime (string const & p)
     log << p << " " << tm1->tm_hour << ":" << tm1->tm_min << ":" << tm1->tm_sec << std::endl;
 }
 
-int Downloader::Download(ofstream * res, string const & category, string const & ext, string const & su, string const & tgDir, string const & logFileName, int startNum, int cnt, int faultLimit)
+int Downloader::Download(ofstream * res, string const & category, string const & ext, string const & su, string const & tgDir, string const & logFileName, int startNum, int cnt)
 {
     extention = ext;
     srcUrl = su;
@@ -141,7 +133,6 @@ int Downloader::Download(ofstream * res, string const & category, string const &
         else
         { //если файл не загружен, удаляем созданный f
             ++faultNum;
-            std::cerr << faultNum << "\n";
             fclose(f);
             if (remove(fname.c_str()) == -1)
                 log << "       Failed to delete " << fname << std::endl;

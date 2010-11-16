@@ -17,7 +17,7 @@ typedef std::map<std::string, double>       mapsd;
 typedef std::map<std::string, std::map<std::string, int> >     mapSmapSI;
 typedef std::map<std::string, std::map<std::string, double> >  mapSmapSD;
 
-mapsi BayesianClassifier::MakeMap (lststr const & list)
+mapsi BayesianClassifier::MakePreCounter (lststr const & list)
 {
     if (list.empty())
         return mapsi();
@@ -33,56 +33,86 @@ mapsi BayesianClassifier::MakeMap (lststr const & list)
     return result;
 }
 
-void BayesianClassifier::MergeMaps (mapsi map, string const & cat)
+mapSmapSI BayesianClassifier::MakeSimpleCounter (mapsi const & preCounter, string const & cat)
 {
-    for (mapsi::iterator i = map.begin(); i != map.end(); ++i)
+    mapSmapSI cnt;
+    for (mapsi::const_iterator i = preCounter.begin(); i != preCounter.end(); ++i)
     {
-        if (counter.find(i->first) != counter.end())
+        cnt.insert(std::pair<string, mapsi>(i->first, mapsi())); // вставили признак
+        for (mapsi::const_iterator j = ndocs.begin(); j != ndocs.end(); ++j)
+        {
+            int k = (j->first == cat) ? i->second : 0;
+            cnt[i->first].insert(std::pair<string, int>(j->first, k));
+        }
+    }
+    return cnt;
+}
+
+void BayesianClassifier::MergeCounters (mapSmapSI & cnt, mapsi const & map, string const & cat)
+{
+    for (mapsi::const_iterator i = map.begin(); i != map.end(); ++i)
+    {
+        if (cnt.find(i->first) != cnt.end())
         {// такой признак уже есть, увеличиваем счетчик категории (если она есть)
-            if (counter[i->first].find(cat) != counter[i->first].end())
+            if (cnt[i->first].find(cat) != cnt[i->first].end())
             {// такая категория есть, увеличиваем счетчик
-                counter[i->first][cat] += i->second;
+                cnt[i->first][cat] += i->second;
             }
             else
             {// добавляем категорию
-                counter[i->first].insert(std::pair<string, int>(cat, i->second));
+                cnt[i->first].insert(std::pair<string, int>(cat, i->second));
             }
         }
         else
-        {// добавляем признак и категорию в него
-            counter.insert(std::pair<string, mapsi>(i->first, mapsi()));
-            counter[i->first].insert(std::pair<string, int>(cat, i->second));
+        {// добавляем признак и все категории в него
+            cnt.insert(std::pair<string, mapsi>(i->first, mapsi()));
+            cnt[i->first].insert(std::pair<string, int>(cat, i->second));
         }
     }
 }
 
-void BayesianClassifier::MakeProb(int weight, double aprioryProbability)
+void BayesianClassifier::MergeProbs (mapSmapSD const & prob)
 {
-    for (mapSmapSI::const_iterator i = counter.begin(); i != counter.end(); ++i)
+    for (mapSmapSD::const_iterator i = prob.begin(); i != prob.end(); ++i)
     {
-        probability.insert(std::pair<string, mapsd>(i->first, mapsd()));
+        probability.insert(std::pair<string, mapsd>(i->first, i->second));
+    }
+}
+
+mapSmapSD BayesianClassifier::MakeProb(mapSmapSI & cnt, int weight, double aprioryProbability)
+{
+    mapSmapSD res;
+
+    for (mapSmapSI::const_iterator i = cnt.begin(); i != cnt.end(); ++i)
+    {
+        res.insert(std::pair<string, mapsd>(i->first, mapsd()));
         // подсчет суммы вхождений признака во все документы
         int sum = 0;
         for (mapsi::const_iterator j = (i->second).begin(); j != (i->second).end(); ++j)
         {
             sum += j->second;
         }
-        for (mapsi::const_iterator j = (i->second).begin(); j != (i->second).end(); ++j)
+
+        for (mapsi::const_iterator j = ndocs.begin(); j != ndocs.end(); ++j)
         {
-            double p = (double)j->second/sum;
+            double p = 0;
+            if (cnt[i->first].find(j->first) != cnt[i->first].end())
+                p = (double)cnt[i->first][j->first]/sum;
             double wp = ((weight*aprioryProbability) + (sum*p))/(weight + sum);
-            probability[i->first].insert(std::pair<string, double>(j->first, wp));
+
+            res[i->first].insert(std::pair<string, double>(j->first, wp));
         }
     }
+    return res;
 }
 
-lststr BayesianClassifier::ParseDocument (string const &docFileName, unsigned int importance)
+mapsi BayesianClassifier::ParseDocument (string const &docFileName)
 {
     ifstream doc(docFileName.c_str(), ifstream::in);
     if (!doc.is_open())
     {
         std::cerr << "Cannot open document " << docFileName << " Check the path.\nParsing aborted.\n";
-        return lststr();
+        return mapsi();
     }
     // std::cout << "Parsing document " << docFileName << std::endl;
 
@@ -90,6 +120,7 @@ lststr BayesianClassifier::ParseDocument (string const &docFileName, unsigned in
     while (!doc.eof())
     { // to lower case
       // punctuation
+      // stemming
       string s;
       doc >> s;
       //int tolower(int);
@@ -98,15 +129,15 @@ lststr BayesianClassifier::ParseDocument (string const &docFileName, unsigned in
     }
     doc.close();
     word.sort();
-    return word;
+    return MakePreCounter(word);
 }
 
-int BayesianClassifier::TrainOnFile (string const & fileName, string const & cat, unsigned int importance)
+int BayesianClassifier::TrainOnFile (string const & fileName, string const & cat, mapSmapSI & cnt)
 {
-    lststr v = ParseDocument(fileName, importance);
-    mapsi m = MakeMap(v);
-    // std::cout << "  training on " << fileName << "...\n";
-    MergeMaps(m, cat);
+    mapsi m = ParseDocument(fileName);
+
+    // std::cout << "  training on " << fileName << "...\n";   
+    MergeCounters(cnt, m, cat);
 
     mapsi::iterator i = ndocs.find(cat);
     if (i != ndocs.end())
@@ -120,7 +151,7 @@ int BayesianClassifier::TrainOnFile (string const & fileName, string const & cat
     return 0;
 }
 
-int BayesianClassifier::Train (string dataFileName, unsigned int examplesQty, unsigned int importance, string resultFileName)
+int BayesianClassifier::Train (string dataFileName, unsigned int examplesQty, string resultFileName)
 {
     ifstream data(dataFileName.c_str(), ifstream::in);
     if (!data.is_open())
@@ -156,7 +187,7 @@ int BayesianClassifier::Train (string dataFileName, unsigned int examplesQty, un
     ofstream out(resultFileName.c_str(), ofstream::trunc);
     if (!out.is_open())
     {
-        std::cerr << "Cannot open output file " << resultFileName << " Check the path.\nTraining not logging.\n";
+        std::cerr << "Cannot open output file " << resultFileName << " Check the path.\nTraining logging is off.\n";
     }
 
     // выбор random examplesQty образцов для обучения
@@ -166,6 +197,8 @@ int BayesianClassifier::Train (string dataFileName, unsigned int examplesQty, un
     srand (time(NULL));
 
     std::list<int> tested;
+    // множество счетчиков уникальных признаков по категориям {слово: {(категория:счетчик)} }
+    mapSmapSI counter;
 
     while (nTrained < examplesQty)
     {
@@ -179,7 +212,7 @@ int BayesianClassifier::Train (string dataFileName, unsigned int examplesQty, un
         string fname = files[k].substr(0, q);
         string cat   = files[k].substr(q+1);
 
-        if (TrainOnFile(tgDir+fname, cat, importance) == 0)
+        if (TrainOnFile(tgDir+fname, cat, counter) == 0)
         {
             ++nTrained;
             if (out.good())
@@ -188,34 +221,38 @@ int BayesianClassifier::Train (string dataFileName, unsigned int examplesQty, un
     }
     if (out.is_open())
         out.close();
-   // printMM (counter);
+   // printMM (cnt);
     std::cout << "ndocs\n";
     printM (ndocs);
+
     std::cout << "vocabulary size = " << counter.size() <<"\n";
 
     // устанавливаем вероятности
-    MakeProb(1, 0.5);
+    probability = MakeProb(counter, 1, 0.5);
     //printMM (probability);
 
     return 0;
 }
 
-mapsd BayesianClassifier::DocumentProbability (string const & fileName)
-{// ~ метод не очень-то :(
-    lststr list = ParseDocument(fileName, 2);
-    list.unique();
-
+mapsd BayesianClassifier::DocumentProbability (string const & fileName, mapsi & unknown /*список незнакомых признаков*/)
+{
+    mapsi m = ParseDocument(fileName);
     mapsd result;
+
     for (mapsi::const_iterator i = ndocs.begin(); i != ndocs.end(); ++i)
         result.insert(std::pair<string, double>(i->first, 1));
 
-    for(lststr::const_iterator i = list.begin(); i != list.end(); ++i)
+    for(mapsi::const_iterator i = m.begin(); i != m.end(); ++i)
     {
-        mapSmapSD::const_iterator j = probability.find(*i);
+        mapSmapSD::const_iterator j = probability.find(i->first);
         if (j != probability.end())
-        { // такой признак видели, классифицируем  ---> А ЕСЛИ НЕТ?
+        { // такой признак видели, классифицируем
             for (mapsi::const_iterator j = ndocs.begin(); j != ndocs.end(); ++j)
-                result[j->first] *= probability[*i][j->first];
+                result[j->first] *= probability[i->first][j->first];
+        }
+        else
+        { // А ЕСЛИ НЕТ
+            unknown.insert(*i);
         }
     }
     return result;
@@ -223,7 +260,8 @@ mapsd BayesianClassifier::DocumentProbability (string const & fileName)
 
 string BayesianClassifier::Classify (string const & fileName)
 {
-    mapsd pDocCat = DocumentProbability(fileName);
+    mapsi newWords;
+    mapsd pDocCat = DocumentProbability(fileName, newWords);
     // общее число документов
     int total = 0;
     for (mapsi::const_iterator i = ndocs.begin(); i != ndocs.end(); ++i)
@@ -242,5 +280,14 @@ string BayesianClassifier::Classify (string const & fileName)
         if (i->second > max->second)
             max = i;
 
-    return max->first;
+    string cat = max->first;
+
+    // добавляем в общий probability новые слова и вероятности
+    mapSmapSI tmpCnt = MakeSimpleCounter (newWords, cat);
+    mapSmapSD tmpProb = MakeProb (tmpCnt, 1, 0.25);
+    MergeProbs(tmpProb);
+
+    std::cout << "vocabulary size = " << probability.size() << "\n";
+
+    return cat;
 }
