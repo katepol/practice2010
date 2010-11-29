@@ -4,12 +4,12 @@
 
 OrientDB DBMS - это СУБД, реализующая модель Not Only SQL.
 Общими чертами нереляционных СУБД (NoSQL) и их преимуществами над реляционными являются:
-
  * простой интерфейс/протокол доступа,
  * хорошая горизонтальная масштабируемость и пропускная способность, 
  * эффективное использование распределенных индексов и RAM для хранения данных,
  * возможность динамического определения различных атрибутов и схемы данных.
 
+== Введение ==
 
 OrientDB относится к классу *документо-ориентированных (Documet Store/Document based/Document oriented) СУБД NoSQL*. Документо-ориентированные СУБД хранят коллекции пар ключ/значение, а внутри них рекурсивно коллекции коллекций. Как правило, для представления таких "документов" используются JSON (см. http://en.wikipedia.org/wiki/JSON), или XML структуры. В частности, OrientDB использует JSON.
 
@@ -19,10 +19,9 @@ OrientDB относится к классу *документо-ориентир
 
 _Rem. CouchDB, MongoDB, SimpleDB так же являются документо-ориентированными._ 
 
-
 OrientDB написана на Java, что обеспечивает *кроссплатформенность*.
  
-Доступ к БД реализован через Java API (c поддержкой схемы данных (full-schema mode)) или просто через  ODatabaseDocumentPool (less-schema mode).
+Доступ к БД реализован через Java API (c поддержкой схемы данных (full-schema mode)) или просто через  ODatabaseDocumentPool (без схемы (less-schema mode)).
 
 == Web интерфейс ==
 
@@ -43,10 +42,9 @@ _Так же OrientDB поддерживает улучшенный проток
    
 
 
-=== Источники ===
-# http://nosql-database.org/ 
-# http://www.slideshare.net/lvca/orient-db-introduction 
-# http://www.orientechnologies.com/orient-db.htm
-
-# http://blog.nahurst.com/visual-guide-to-nosql-systems
-#http://blogerator.ru/page/nosql-vvedenie-v-teoriju-bd
+= Источники =
+ # http://nosql-database.org/ 
+ # http://www.slideshare.net/lvca/orient-db-introduction 
+ # http://www.orientechnologies.com/orient-db.htm
+ # http://blog.nahurst.com/visual-guide-to-nosql-systems
+ # http://blogerator.ru/page/nosql-vvedenie-v-teoriju-bd
