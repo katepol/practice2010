@@ -42,6 +42,7 @@ Node failures do not prevent survivors from continuing to operate.
 The system continues to operate despite arbitrary message loss.
 
 *CAP model matrix*
+
 Usage || (C)onsistency || (A)vailability || (P)artition-tolerance
 Local database || Yes || No || No
 Remote database	|| Yes || No || No
@@ -90,7 +91,7 @@ Many SQL commands share the WHERE conditions. OrientDB ignore the case when pars
 
 == Интерфейсы доступа ==
 
-=== Web === 
+=== Web ===
 OrientDB RESTful HTTP протокол позволяет обращаться к OrientDB серверу по HTTP протоколу.
 
 OrientDB RESTful HTTP протокол использует 4 метода протокола HTTP:
