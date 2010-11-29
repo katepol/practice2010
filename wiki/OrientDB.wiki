@@ -2,7 +2,7 @@
 
 = OrientDB DBMS =
 
-OrientDB DBMS - это СУБД, реализующая модель Not Only SQL.
+OrientDB DBMS - это СУБД c открытым программным кодом (лицензия Open Source Apache 2), реализующая модель Not Only SQL.
 Общими чертами нереляционных СУБД (NoSQL) и их преимуществами над реляционными являются:
  * простой интерфейс/протокол доступа,
  * хорошая горизонтальная масштабируемость и пропускная способность, 
@@ -11,19 +11,23 @@ OrientDB DBMS - это СУБД, реализующая модель Not Only SQ
 
 == Введение ==
 
-OrientDB относится к классу *документо-ориентированных (Documet Store/Document based/Document oriented) СУБД NoSQL*. Документо-ориентированные СУБД хранят коллекции пар ключ/значение, а внутри них рекурсивно коллекции коллекций. Как правило, для представления таких "документов" используются JSON (см. http://en.wikipedia.org/wiki/JSON), или XML структуры. В частности, OrientDB использует JSON.
+OrientDB относится к классу *документо-ориентированных (Documet Store/Document based/Document oriented) СУБД NoSQL*. Документо-ориентированные СУБД хранят коллекции пар ключ/значение, а внутри них рекурсивно коллекции коллекций. Как правило, для представления таких "документов" используются JSON-подобные (см. http://en.wikipedia.org/wiki/JSON), или XML-подобные структуры. В частности, OrientDB использует JSON и XML в оригинальном виде.
 
-Но в таких БД не используется оператор SQL JOIN (все JOIN'ы, если необходимо, придется реализовывать на уровне приложения), в основном применяется масштабирование по горизонтали.
+Но в документо-ориентированных хранилищах как правило не используется оператор SQL JOIN (все JOIN'ы, если необходимо, придется реализовывать на уровне приложения), в основном применяется масштабирование по горизонтали.
 
 В документо-ориентированные БД очень просто осуществить перенос данных из объектно-ориентированного программного обеспечения.
 
-_Rem. CouchDB, MongoDB, SimpleDB так же являются документо-ориентированными._ 
+_Rem 1. CouchDB, MongoDB, SimpleDB так же являются документо-ориентированными._ 
+
+_Rem 2. Для обработки связей OrientDB имплементирует особенности графовых хранилищ (GraphDB)_
 
 OrientDB написана на Java, что обеспечивает *кроссплатформенность*.
 
+Позволяет извлекать в графы из сотен связанных объектов быстрее, чем за 1мс, в отличие от реляционных СУБД, использующих дорогостоящие JOIN'ы.
+
 == Архитектура ==
 
-OrientDB is a document DBMS. On top of it has been built the Orient KeyValue Server and the Orient Object Database.
+OrientDB is a document DBMS. On top of it has been built the Orient Key-Value Server and the Orient Object Database.
 
 The ODatabase class provides the main APIs an application uses. ODatabase communicates with a OStorage class implementation that stores physically the records.
 
@@ -57,7 +61,7 @@ All nodes see the same data at the same time.
 
 Node failures do not prevent survivors from continuing to operate.
 
-*Partition-tolerance*
+=== Partition-tolerance ===
 
 The system continues to operate despite arbitrary message loss.
 
@@ -83,15 +87,24 @@ Bye default is false.
 
 Bye default is true.
 
+== Репликация ==
+
+ * Master-Slaves type, where it can be only one Master and N Slaves. If the Master crashes a Slave is elected to be the new Master
+ * IP multicast to discover cluster nodes
+ * Configuration of nodes using TCP/IP, useful for Clouds that don't allow the IP multicast
+ * Two sync modes: full where all the database is compressed and sent over the network, and partial by sending only the changes happened since the last sync
+ * New database handled by the Master OrientDB Server instance to store all the pending records until a configurable threshold. Up this threshold the logs are deleted and the node need a full-sync on startup
+ * New console commands to display nodes, listen clustering messages and elect the master manually
+
 == SQL ==
 
 Althought OrientDB is a NoSQL dbms, it supports SQL as language to execute queries and commands. The choice was made for the main reason that developers already know SQL and they feel more comfortable if start to use something familiar.
 
 Many SQL commands share the WHERE conditions. OrientDB ignore the case when parses.
 
-== Интерфейсы доступа ==
+== Интерфейсы доступа (APIs) ==
 
-=== Web ===
+=== RESTful HTTP ===
 OrientDB RESTful HTTP протокол позволяет обращаться к OrientDB серверу по HTTP протоколу.
 
 OrientDB RESTful HTTP протокол использует 4 метода протокола HTTP:
@@ -102,16 +115,11 @@ OrientDB RESTful HTTP протокол использует 4 метода пр�
 
 Результаты - в формате JSON.
 
-=== Application programming interface (API) ===
+=== Java API ===
 Для передачи данных между приложением и сервером OrientDB используется улучшенный протокол двоичной синхронной передачи данных для повышения производительности.
 
 Доступ к БД реализован через Java API (c поддержкой схемы данных (full-schema mode)) или просто через  ODatabaseDocumentPool (без схемы (less-schema mode)).
 
-
- 
-
-
-   
 
 
 = Источники =
