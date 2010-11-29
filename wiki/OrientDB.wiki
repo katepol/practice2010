@@ -20,7 +20,27 @@ OrientDB относится к классу *документо-ориентир
 _Rem. CouchDB, MongoDB, SimpleDB так же являются документо-ориентированными._ 
 
 OrientDB написана на Java, что обеспечивает *кроссплатформенность*.
- 
+
+== Архитектура ==
+
+OrientDB is a document DBMS. On top of it has been built the Orient KeyValue Server and the Orient Object Database.
+
+The ODatabase class provides the main APIs an application uses. ODatabase communicates with a OStorage class implementation that stores physically the records.
+
+It's the real physical database. There are three OStorage implementations:
+
+ * Local, that write and read records on the local file system (the access is made in the same process)
+ * Remote, that acts as a proxy and send and receive all the requests to a remote OrientDB Server instance
+ * Memory, all data remain in memory without to use the file system at all
+
+A Storage is composed by multiple Clusters and Data Segments. You can move real files in your file system only by using the Orient APIs to avoid data corruption.
+
+*Cluster* is very generic way to group records and it's a concept that not exists in the Relational world. You can use a cluster to group all the record of a certain type, or by a specific values.
+
+If you've the background of Relational DBMS world you can start to think to a cluster like a table and use it to group all the records by types.
+
+A cluster can be local or logical.
+
 == CAP ==
 
 Large distributed systems run into a problem which smaller systems don’t usually have to worry about. “Brewers CAP Theorem” defines this problem in a very simple way. It states, that though its desirable to have Consistency, High-Availability and Partition-tolerance in every system, unfortunately no system can achieve all three at the same time.
@@ -62,26 +82,6 @@ Bye default is false.
 *Synchronize all changes to the disk when a transaction is committed*
 
 Bye default is true.
-
-== Архитектура ==
-
-Orient DB is a document DBMS. On top of it has been built the Orient KeyValue Server and the Orient Object Database.
-
-The ODatabase class provides the main APIs an application uses. ODatabase communicates with a OStorage class implementation that stores physically the records.
-
-It's the real physical database. There are three OStorage implementations:
-
- * Local, that write and read records on the local file system (the access is made in the same process)
- * Remote, that acts as a proxy and send and receive all the requests to a remote OrientDB Server instance
- * Memory, all data remain in memory without to use the file system at all
-
-A Storage is composed by multiple Clusters and Data Segments. You can move real files in your file system only by using the Orient APIs to avoid data corruption.
-
-*Cluster* is very generic way to group records and it's a concept that not exists in the Relational world. You can use a cluster to group all the record of a certain type, or by a specific values.
-
-If you've the background of Relational DBMS world you can start to think to a cluster like a table and use it to group all the records by types.
-
-A cluster can be local or logical.
 
 == SQL ==
 
