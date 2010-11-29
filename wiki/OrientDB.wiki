@@ -96,9 +96,26 @@ Bye default is true.
  * New database handled by the Master OrientDB Server instance to store all the pending records until a configurable threshold. Up this threshold the logs are deleted and the node need a full-sync on startup
  * New console commands to display nodes, listen clustering messages and elect the master manually
 
-== SQL ==
+== Запросы ==
 
-Althought OrientDB is a NoSQL dbms, it supports SQL as language to execute queries and commands. The choice was made for the main reason that developers already know SQL and they feel more comfortable if start to use something familiar.
+OrientDB поддерживает запросы на java:
+ {{{
+ List<ODocument> result = database.query(new ONativeSynchQuery<ODocument, OQueryContextNativeSchema<ODocument>>(database,
+                                "Person", new OQueryContextNativeSchema<ODocument>()) {
+                        @Override
+                        public boolean filter(OQueryContextNativeSchema<ODocument> iRecord) {
+                                return iRecord.field("city").field("name").eq("Rome").and().field("name").like("G%").go();
+                        };
+                });
+ }}} 
+
+И SQL-запросы: 
+ {{{
+ List<ODocument> result = db.query(
+  new OSQLSynchQuery<ODocument>("select * from Animal where ID = 10 and name like 'G%'"));
+ }}}
+
+The choice was made for the main reason that developers already know SQL and they feel more comfortable if start to use something familiar.
 
 Many SQL commands share the WHERE conditions. OrientDB ignore the case when parses.
 
