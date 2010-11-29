@@ -115,9 +115,9 @@ OrientDB поддерживает запросы на java:
   new OSQLSynchQuery<ODocument>("select * from Animal where ID = 10 and name like 'G%'"));
  }}}
 
-The choice was made for the main reason that developers already know SQL and they feel more comfortable if start to use something familiar.
+Во время парсинга SQL кода OrientDB не обращает внимание на регистр ключевых слов.
 
-Many SQL commands share the WHERE conditions. OrientDB ignore the case when parses.
+_OrientDB поддерживает ACID транзакции._
 
 == Интерфейсы доступа (APIs) ==
 
