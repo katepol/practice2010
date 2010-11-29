@@ -24,21 +24,17 @@ OrientDB написана на Java, что обеспечивает *кросс
 
 Класс ODatabase предоставляет основной интерфейс для работы приложений. ODatabase взаимодействует с реализацией класса OStorage, который отвечает за физическое хранение данных. Всего 3 вида реализаций:
 
- * локальная: запись и чтение that write and read records on the local file system (the access is made in the same process)
- * Remote, that acts as a proxy and send and receive all the requests to a remote OrientDB Server instance
- * Memory, all data remain in memory without to use the file system at all
+ * локальная: запись и чтение в локальной файловой системе;
+ * удаленная: работает как прокси, все запросы на отправку и получение идут через удаленный OrientDB сервер;
+ * в памяти: все данные хранятся в RAM, локальная файловая система не используется.
 
-A Storage is composed by multiple Clusters and Data Segments. You can move real files in your file system only by using the Orient APIs to avoid data corruption.
+Хранилище состоит из множества кластеров и сегментов данных. Советуют перемещать реальные файлы через Orient API, чтобы не испортить.
 
-*Cluster* is very generic way to group records and it's a concept that not exists in the Relational world. You can use a cluster to group all the record of a certain type, or by a specific values.
-
-If you've the background of Relational DBMS world you can start to think to a cluster like a table and use it to group all the records by types.
-
-A cluster can be local or logical.
+В терминологии реляционных БД кластеры можно считать таблицами.
 
 == CAP ==
 
-В соответствии с CAP теоремой Брюера, OrientDB отвечает требованиям CA. Диаграмма сравнений некоторых СУБД представлена в источнике [4].
+В соответствии с CAP теоремой Брюера, OrientDB отвечает требованиям CA. Диаграмма сравнений некоторых СУБД представлена в источнике 4. OrientDB занимает на той диаграмме то же место, что и реляционные СУБД.
 
 *Матрица CAP для OrientDB в зависимости от типа использования*
 
@@ -50,12 +46,12 @@ A cluster can be local or logical.
 
 == Репликация ==
 
- * Master-Slaves type, where it can be only one Master and N Slaves. If the Master crashes a Slave is elected to be the new Master
- * IP multicast to discover cluster nodes
- * Configuration of nodes using TCP/IP, useful for Clouds that don't allow the IP multicast
- * Two sync modes: full where all the database is compressed and sent over the network, and partial by sending only the changes happened since the last sync
- * New database handled by the Master OrientDB Server instance to store all the pending records until a configurable threshold. Up this threshold the logs are deleted and the node need a full-sync on startup
- * New console commands to display nodes, listen clustering messages and elect the master manually
+ * Репликация по типу "Master-Slaves". Один Master и N Slaves. При отказе Master'а, из Slave'ов выбирается новый Master.
+ * IP мультикаст для обнаружения кластерных узлов.
+ * Конфигурация узлов по TCP/IP (например, для Clouds, где нет поддержки IP multicast).
+ * Два режима синхронизации: полная (full), когда БД сжимается и посылается по сети целикомwork, и частичная (partial) - отправляются только изменения, произошедшие с момента последней синхронизации.
+ * Master OrientDB сервер использует дополнительную БД для хранения изменений до полной синхронизации.
+ * Возможность отображения узлов из консоли, просмотр сообщений от кластеров, выбор нового Master вручную.
 
 == Запросы ==
 
@@ -80,19 +76,18 @@ OrientDB поддерживает запросы на java:
 
 _OrientDB поддерживает ACID транзакции._
 
-=== Disk-write strategies ===
+=== Параметры записи на диск ===
 
-Orient, by default, is configured for synchronous writes but depending by the OS file system management changes can be permanents only after the OS flushes the buffer into the disk. If you're using a transaction you're protect in case any crash happens when data are not written to the disk yet.
+По умолчанию OrientDB настроен на синхронную запись, но это зависит от менеджера файловой системы ОС. Изменения будут применены только после того, как ОС запишет данные на жёсткий диск. При проведении транзакции при сбое данные сохранят целостность только если ОС ещё не произвела запись на диск. По этой причине OrientDB разрешает изменять свои настройки.
 
-For this reason Orient permits to change this policy.
+Следует обратить внимание на параметры:
+ * *Synchronize all changes to the disk when any single-record is changed*
 
-*Synchronize all changes to the disk when any single-record is changed*
+По умолчанию false.
 
-Bye default is false.
+ * *Synchronize all changes to the disk when a transaction is committed*
 
-*Synchronize all changes to the disk when a transaction is committed*
-
-Bye default is true.
+По умолчанию true.
 
 == Интерфейсы доступа (APIs) ==
 
