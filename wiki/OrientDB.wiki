@@ -21,7 +21,72 @@ _Rem. CouchDB, MongoDB, SimpleDB так же являются документо
 
 OrientDB написана на Java, что обеспечивает *кроссплатформенность*.
  
+== CAP ==
 
+Large distributed systems run into a problem which smaller systems don’t usually have to worry about. “Brewers CAP Theorem” defines this problem in a very simple way. It states, that though its desirable to have Consistency, High-Availability and Partition-tolerance in every system, unfortunately no system can achieve all three at the same time.
+
+Following the CAP theorem OrientDB supports *CA*.
+
+=== Consistency ===
+
+All nodes see the same data at the same time.
+
+"A fully Consistent system is one where the system can guarantee that once you store a state (lets say “x=y”) in the system, it will report the same state in every subsequent operation until the imagestate is explicitly changed by something outside the system."
+
+=== Availability ===
+
+Node failures do not prevent survivors from continuing to operate.
+
+*Partition-tolerance*
+
+The system continues to operate despite arbitrary message loss.
+
+*CAP model matrix*
+Usage || (C)onsistency || (A)vailability || (P)artition-tolerance
+Local database || Yes || No || No
+Remote database	|| Yes || No || No
+Remote clustered database || Yes || Yes || No
+Key/Value server || No || Yes || Yes
+
+=== Disk-write strategies ===
+
+Orient, by default, is configured for synchronous writes but depending by the OS file system management changes can be permanents only after the OS flushes the buffer into the disk. If you're using a transaction you're protect in case any crash happens when data are not written to the disk yet.
+
+For this reason Orient permits to change this policy.
+
+*Synchronize all changes to the disk when any single-record is changed*
+
+Bye default is false.
+
+*Synchronize all changes to the disk when a transaction is committed*
+
+Bye default is true.
+
+== Архитектура ==
+
+Orient DB is a document DBMS. On top of it has been built the Orient KeyValue Server and the Orient Object Database.
+
+The ODatabase class provides the main APIs an application uses. ODatabase communicates with a OStorage class implementation that stores physically the records.
+
+It's the real physical database. There are three OStorage implementations:
+
+ * Local, that write and read records on the local file system (the access is made in the same process)
+ * Remote, that acts as a proxy and send and receive all the requests to a remote OrientDB Server instance
+ * Memory, all data remain in memory without to use the file system at all
+
+A Storage is composed by multiple Clusters and Data Segments. You can move real files in your file system only by using the Orient APIs to avoid data corruption.
+
+*Cluster* is very generic way to group records and it's a concept that not exists in the Relational world. You can use a cluster to group all the record of a certain type, or by a specific values.
+
+If you've the background of Relational DBMS world you can start to think to a cluster like a table and use it to group all the records by types.
+
+A cluster can be local or logical.
+
+== SQL ==
+
+Althought OrientDB is a NoSQL dbms, it supports SQL as language to execute queries and commands. The choice was made for the main reason that developers already know SQL and they feel more comfortable if start to use something familiar.
+
+Many SQL commands share the WHERE conditions. OrientDB ignore the case when parses.
 
 == Интерфейсы доступа ==
 
@@ -40,6 +105,7 @@ OrientDB RESTful HTTP протокол использует 4 метода пр�
 Для передачи данных между приложением и сервером OrientDB используется улучшенный протокол двоичной синхронной передачи данных для повышения производительности.
 
 Доступ к БД реализован через Java API (c поддержкой схемы данных (full-schema mode)) или просто через  ODatabaseDocumentPool (без схемы (less-schema mode)).
+
 
  
 
