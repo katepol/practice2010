@@ -43,11 +43,11 @@ The system continues to operate despite arbitrary message loss.
 
 *CAP model matrix*
 
-Usage || (C)onsistency || (A)vailability || (P)artition-tolerance
-Local database || Yes || No || No
-Remote database	|| Yes || No || No
-Remote clustered database || Yes || Yes || No
-Key/Value server || No || Yes || Yes
+|| Usage || (C)onsistency || (A)vailability || (P)artition-tolerance ||
+|| Local database || Yes || No || No ||
+|| Remote database	|| Yes || No || No ||
+|| Remote clustered database || Yes || Yes || No ||
+|| Key/Value server || No || Yes || Yes ||
 
 === Disk-write strategies ===
 
