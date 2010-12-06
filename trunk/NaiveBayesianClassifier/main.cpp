@@ -1,64 +1,56 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cstdio>
+#include <cstdlib> /* for malloc, free */
+#include <cctype>  /* for isupper, tolower */
+
+#include <libs/libstemmer.h>
 #include "BayesianClassifier.h"
 #include "Downloader.h"
 
 using std::string;
 using std::ofstream;
 using std::ifstream;
+using std::cout;
+using std::cerr;
 
 int DownloadFiles (string const & dir, string const & dataFileName)
 {
     ofstream doc(dataFileName.c_str(), ofstream::trunc);
     if (!doc.is_open())
     {
-        std::cout << "Cannot open file for writing data. Abort.\n";
+        cout << "Cannot open file for writing data. Abort.\n";
         return 0;
     }
     Downloader d (20000, 1000);
     //REM: in extention must be . : f.e. ".txt"
-    d.Download(&doc, "forum", "", "http://forumishka.net/showthread.php?t=", dir, "log_forum.txt", 1, 100);
-    d.Download(&doc, "science article", "", "http://swsys.ru/index.php?page=article&id=", dir, "log_science_article.txt", 2463, 100);
-    d.Download(&doc, "livejournal", "", "http://www.livejournal.ru/themes/id/", dir, "log_livejournal.txt", 22201, 100);
+    d.download(&doc, "forum", "", "http://forumishka.net/showthread.php?t=", dir, "log_forum.txt", 1, 100);
+    d.download(&doc, "science article", "", "http://swsys.ru/index.php?page=article&id=", dir, "log_science_article.txt", 2463, 100);
+    d.download(&doc, "livejournal", "", "http://www.livejournal.ru/themes/id/", dir, "log_livejournal.txt", 22201, 100);
     doc.close();
     return 1;
 }
 
-int main(int argc, char* argv[])
+int Classify (string const & dir, string const & dataFileName, string const &language, string const &encoding)
 {
-    string dir("/home/kate/APTU/Practice/data2/");
-    if (argc != 2)
-    {
-        std::cout << "Default working directory: " << dir << "\n";
-    }
-    else
-    {
-        dir = argv[1];
-        std::cout << "Custom working directory: " << dir << "\n";
-    }
-    string dataFileName(dir + "description.txt");
-
-    if (!DownloadFiles (dir, dataFileName))
-        return 1;
-
     BayesianClassifier bc(2);
 
     string resultFileName(dir + "train_output.txt");
-    bc.Train(dataFileName, 100, resultFileName);
+    bc.train(dataFileName, 100, resultFileName, language, encoding);
 
     resultFileName = dir + "classify_output.txt";
 
     ifstream data(dataFileName.c_str(), ifstream::in);
     if (!data.is_open())
     {
-        std::cerr << "Error reading data from " << dataFileName << "\n";
+        cerr << "Error reading data from " << dataFileName << "\n";
         return 2;
     }
     ofstream out(resultFileName.c_str(), ofstream::trunc);
     if (!out.is_open())
     {
-        std::cerr << "Error writing data to " << resultFileName << "\n";
+        cerr << "Error writing data to " << resultFileName << "\n";
         return 3;
     }
     while (data.good())
@@ -67,18 +59,38 @@ int main(int argc, char* argv[])
         data.getline(c, 50);
         if (c == 0)
         {
-            std::cerr << "Extracting line from " << dataFileName << " ERROR\n";
+            cerr << "Extracting line from " << dataFileName << " ERROR\n";
             continue;
         }
         string fname(c);
         if (fname == "")
             continue;
         fname = fname.substr(0, fname.find(' '));
-        out << fname << " " << bc.Classify(dir+fname) << "\n";
+        out << fname << " " << bc.classify(dir+fname, language, encoding) << "\n";
         delete c;
     }
     data.close();
     out.close();
-
     return 0;
+}
+
+int main(int argc, char* argv[])
+{
+    string dir("/home/kate/APTU/Practice/data2/");
+    string dataFileName("description.txt");
+    if (argc != 2)
+    {
+        cout << "Default working directory: " << dir << "\n";
+    }
+    else
+    {
+        dir = argv[1];
+        cout << "Custom working directory: " << dir << "\n";
+    }
+    dataFileName = dir + dataFileName;
+
+    if (!DownloadFiles (dir, dataFileName))
+        return 1;
+
+    return Classify(dir, dataFileName, "russian", "UTF_8");
 }

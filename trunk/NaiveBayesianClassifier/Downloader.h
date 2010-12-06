@@ -4,25 +4,32 @@
 #include <cstdio>
 #include <curl/curl.h>
 #include <curl/types.h>
+#include <cstdlib> //for atoi()
+#include <sys/time.h>
+#include "StringConvert.h"
 
 #ifndef _MyDownloader
 #define _MyDownloader
 
-class Downloader {
-private:
-    int minFileSize;
-    int faultLimit;
-    std::string extention;
-    std::string srcUrl;
-    std::ofstream log;
+using std::string;
+using std::ofstream;
 
-    static size_t WriteData(void *ptr, size_t size, size_t nmemb, FILE *myStream);
-    int DownloadFile (CURL *curl, int id, FILE* f);
-    void printTime (std::string const & p);
+class Downloader
+{
+private:
+    int minFileSize_;
+    int faultLimit_;
+    string extention_;
+    string srcUrl_;
+    ofstream log_;
+
+    static size_t writeData(void *ptr, size_t size, size_t nmemb, FILE *myStream);
+    int downloadFile (CURL *curl, int id, FILE* f);
+    void printTime (string const & p);
 
 public:
-    Downloader (int minimumFileSize, int faultsLimit): minFileSize(minimumFileSize), faultLimit(faultsLimit) {}
-    int Download(std::ofstream * res, std::string const & category, std::string const & ext, std::string const & su, std::string const & td, std::string const & lfn, int startNum, int cnt);
+    Downloader (int minimumFileSize, int faultsLimit): minFileSize_(minimumFileSize), faultLimit_(faultsLimit) {}
+    int download(ofstream * res, string const & category, string const & ext, string const & su, string const & td, string const & lfn, int startNum, int cnt);
 };
 
 #endif
