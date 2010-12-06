@@ -1,68 +1,32 @@
-#include <cstdlib> //for atoi()
-
- #include <curl/curl.h>
- #include <curl/types.h>
-
-
-#include <sys/time.h>
-
-#include "StringConvert.h"
-#include "WrongFileException.h"
 #include "Downloader.h"
-#include "Checkers.h"
 
-using std::string;
-using std::ofstream;
-
-size_t Downloader::WriteData(void *ptr, size_t size, size_t nmemb, FILE *myStream)
+size_t Downloader::writeData(void *ptr, size_t size, size_t nmemb, FILE *myStream)
 {
-    bool firstTime = false;
-
-    if (myStream->_IO_read_ptr == 0)
-        firstTime = true;
-
-    size_t written = fwrite(ptr, size, nmemb, myStream);
-
-    if (firstTime)
-    {
-        // Check(myStream, extention);
-    }
-
-    return written;
+    return fwrite(ptr, size, nmemb, myStream);
 }
 
-int Downloader::DownloadFile (CURL *curl, int id, FILE* f)
+int Downloader::downloadFile (CURL *curl, int id, FILE* f)
 {
-    string url = srcUrl + toString<int>(id) + extention;
-    log << url << std::endl;
-
+    string url = srcUrl_ + toString<int>(id) + extention_;
+    log_ << url << std::endl;
     char errorBuffer[CURL_ERROR_SIZE];
     curl_easy_setopt(curl, CURLOPT_ERRORBUFFER, errorBuffer);
     curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
-    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, Downloader::WriteData);
+    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, Downloader::writeData);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, f);
 
-    CURLcode result;
-    try
-    {
-        result = curl_easy_perform(curl);
-    }
-    catch (WrongFileException& exc)
-    {
-        log << "    " << url <<" error: " << exc.what() << std::endl;
-        return 0;
-    }
+    CURLcode result = curl_easy_perform(curl);
     if (result == CURLE_OK)
     {
         // check for file size
-        if (ftell(f) < minFileSize)
+        if (ftell(f) < minFileSize_)
         {
-            log << "    file id " << id << " error: FILE SEEMS TO BE EMPTY. SKIP.\n";
+            log_ << "    file id " << id << " error: FILE SEEMS TO BE EMPTY. SKIP.\n";
             return 0;
         }
         return 1;
     }
-    log << "    file id " << id << " error " << result << " - " << errorBuffer << std::endl;
+    log_ << "    file id " << id << " error " << result << " - " << errorBuffer << std::endl;
     return 0;
 }
 
@@ -72,13 +36,13 @@ void Downloader::printTime (string const & p)
     struct timezone tz;
     gettimeofday(&tv, &tz);
     tm *tm1 = localtime(&tv.tv_sec);
-    log << p << " " << tm1->tm_hour << ":" << tm1->tm_min << ":" << tm1->tm_sec << std::endl;
+    log_ << p << " " << tm1->tm_hour << ":" << tm1->tm_min << ":" << tm1->tm_sec << std::endl;
 }
 
-int Downloader::Download(ofstream * res, string const & category, string const & ext, string const & su, string const & tgDir, string const & logFileName, int startNum, int cnt)
+int Downloader::download(ofstream * res, string const & category, string const & ext, string const & su, string const & tgDir, string const & logFileName, int startNum, int cnt)
 {
-    extention = ext;
-    srcUrl = su;
+    extention_ = ext;
+    srcUrl_ = su;
 
     // init curl
     CURL* curl;
@@ -90,10 +54,10 @@ int Downloader::Download(ofstream * res, string const & category, string const &
     }
 
     // initialize log file
-    if (log.is_open())
-        log.close();
-    log.open((tgDir+logFileName).c_str(), ofstream::trunc);
-    if (!log.is_open())
+    if (log_.is_open())
+        log_.close();
+    log_.open((tgDir+logFileName).c_str(), ofstream::trunc);
+    if (!log_.is_open())
     {
         std::cerr << "Cannot create log file " << logFileName << " Check the path.\nDownloading aborted.\n";
         curl_easy_cleanup(curl);
@@ -109,44 +73,45 @@ int Downloader::Download(ofstream * res, string const & category, string const &
     printTime("Started at");
     int faultNum = 0;
 
-    while (downloaded < cnt && faultNum < faultLimit)
+    while (downloaded < cnt && faultNum < faultLimit_)
     {
         ++fileId;
-        string fname = tgDir + toString<int>(fileId) + extention;
+        string fname = tgDir + toString<int>(fileId) + extention_;
         FILE* f = fopen(fname.c_str(), "w");
         if (f == 0)
         {
             std::cerr << "Cannot create file " << fname << ". Check the path.\nDownloading aborted.\n";
             printTime("Finished at");
-            log.close();
+            log_.close();
             curl_easy_cleanup(curl);
             return 3;
         }
 
-        log << "Written file is "<< fname << std::endl;
-        if (DownloadFile(curl, fileId, f))
+        log_ << "Written file is "<< fname << std::endl;
+        if (downloadFile(curl, fileId, f))
         {
-            *res << fileId << extention << " " << category << std::endl;
+            *res << fileId << extention_ << " " << category << std::endl;
             ++downloaded;
             fclose(f);
         }
         else
         { //если файл не загружен, удаляем созданный f
             ++faultNum;
+            //std::cerr << faultNum << "\n";
             fclose(f);
             if (remove(fname.c_str()) == -1)
-                log << "       Failed to delete " << fname << std::endl;
+                log_ << "       Failed to delete " << fname << std::endl;
             else
-                log << "       Deleted file " << fname << std::endl;
+                log_ << "       Deleted file " << fname << std::endl;
         }
     }
-    if (faultNum >= faultLimit)
-        std::cerr << "There were "<< faultNum << " faults in files' links. Check the source url. You have specified " << srcUrl << std::endl;
+    if (faultNum >= faultLimit_)
+        std::cerr << "There were "<< faultNum << " faults in files' links. Check the source url. You have specified " << srcUrl_ << std::endl;
     else
         std::cout << "Download finished!\n";
 
     printTime("Finished at");
-    log.close();
+    log_.close();
     curl_easy_cleanup(curl);
     return 0;
 }
