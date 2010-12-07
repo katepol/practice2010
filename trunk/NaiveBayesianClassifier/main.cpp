@@ -89,8 +89,7 @@ int main(int argc, char* argv[])
     }
     dataFileName = dir + dataFileName;
 
-    if (!DownloadFiles (dir, dataFileName))
-        return 1;
+    // if (!DownloadFiles (dir, dataFileName))        return 1;
 
     return Classify(dir, dataFileName, "russian", "UTF_8");
 }

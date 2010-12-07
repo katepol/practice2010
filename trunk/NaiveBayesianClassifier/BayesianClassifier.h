@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <ctime>
 #include "PrintTemplates.cpp"
+#include "Parser.h"
 #include <libs/libstemmer.h>
 
 #ifndef _MyBayesianClassifier
