@@ -112,12 +112,16 @@ void BayesianClassifier::stemWord (string & s) const
 
 mapsi BayesianClassifier::parseDocument (string const &docFileName, string const &language, string const &encoding)
 {
-    ifstream doc(docFileName.c_str(), ifstream::in);
+    string fName = parseFile(docFileName);
+    ifstream doc(fName.c_str(), ifstream::in);
+    //ifstream doc(docFileName.c_str(), ifstream::in);
     if (!doc.is_open())
     {
         cerr << "Cannot open document " << docFileName << " Check the path.\nParsing aborted.\n";
         return mapsi();
     }
+
+
     // cout << "Parsing document " << docFileName << std::endl;
 
     stemmer_ = sb_stemmer_new(language.c_str(),  encoding.c_str());
@@ -231,7 +235,7 @@ int BayesianClassifier::train (string dataFileName, unsigned int examplesQty, st
 
     // printMM (cnt);
     // cout << "ndocs\n"; printM (ndocs_);
-    // cout << "vocabulary size = " << counter.size() <<"\n";
+    cout << "vocabulary size = " << counter.size() <<"\n";
 
     // устанавливаем вероятности
     probability_ = makeProb(counter, 1, 0.5);
@@ -268,7 +272,7 @@ mapsd BayesianClassifier::documentProbability (string const & fileName, mapsi & 
 
 string BayesianClassifier::classify (string const & fileName, string const &language, string const &encoding)
 {
-   /* if (fileName=="/home/kate/APTU/Practice/data2/10")
+    if (fileName=="/home/kate/APTU/Practice/data2/10")
     {
         cout << "TEEEEEEEEEEEST.\n";
         ofstream doc("/home/kate/APTU/Practice/data2/voc.txt", ofstream::trunc);
@@ -281,7 +285,7 @@ string BayesianClassifier::classify (string const & fileName, string const &lang
         printMM(probability_, doc);
 
         doc.close();
-    }*/
+    }
 
     mapsi newWords;
     mapsd pDocCat = documentProbability(fileName, newWords, language, encoding);
@@ -310,7 +314,7 @@ string BayesianClassifier::classify (string const & fileName, string const &lang
     mapSmapSD tmpProb = makeProb (tmpCnt, 1, 0.25);
     mergeProbs(tmpProb);
 
-    //cout << "vocabulary size = " << probability_.size() << "\n";
+    cout << "vocabulary size = " << probability_.size() << "\n";
 
     return cat;
 }
