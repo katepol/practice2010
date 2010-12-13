@@ -112,15 +112,23 @@ void BayesianClassifier::stemWord (string & s) const
 
 mapsi BayesianClassifier::parseDocument (string const &docFileName, string const &language, string const &encoding)
 {
-    string fName = parseFile(docFileName);
-    ifstream doc(fName.c_str(), ifstream::in);
-    //ifstream doc(docFileName.c_str(), ifstream::in);
-    if (!doc.is_open())
+    // NOTE: забиваем, если конвертируется с ошибками
+    convertToXml(docFileName.c_str(), (docFileName+".xml").c_str());
+
+    string fName(docFileName+"_p.xml");
+    Parser p;
+    if (p.parseFile((docFileName+".xml").c_str(), (docFileName+"_p.xml").c_str()) > 0) //parsing failed
     {
-        cerr << "Cannot open document " << docFileName << " Check the path.\nParsing aborted.\n";
-        return mapsi();
+        fName = docFileName+".xml";
     }
 
+    ifstream doc(fName.c_str(), ifstream::in);
+
+    if (!doc.is_open())
+    {
+        cerr << "Cannot open document " << fName << " Check the path.\nParsing aborted.\n";
+        return mapsi();
+    }
 
     // cout << "Parsing document " << docFileName << std::endl;
 
@@ -145,6 +153,11 @@ mapsi BayesianClassifier::parseDocument (string const &docFileName, string const
     }
     if (stemmer_ != 0) sb_stemmer_delete(stemmer_);
     doc.close();
+
+    // delete *.xml and *_p.xml
+    remove((docFileName+".xml").c_str());
+    remove((docFileName+"_p.xml").c_str());
+
     word.sort();
     return makePreCounter(word);
 }

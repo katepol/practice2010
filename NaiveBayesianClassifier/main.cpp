@@ -2,10 +2,7 @@
 #include <fstream>
 #include <string>
 #include <cstdio>
-#include <cstdlib> /* for malloc, free */
-#include <cctype>  /* for isupper, tolower */
 
-#include <libs/libstemmer.h>
 #include "BayesianClassifier.h"
 #include "Downloader.h"
 
@@ -73,6 +70,8 @@ int Classify (string const & dir, string const & dataFileName, string const &lan
     out.close();
     return 0;
 }
+
+
 
 int main(int argc, char* argv[])
 {

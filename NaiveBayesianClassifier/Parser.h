@@ -3,29 +3,27 @@
 
 #include <string>
 #include <fstream>
-#include <istream>
-#include <ostream>
+//#include <istream>
+//#include <ostream>
 #include <iostream>
+#include "externallibs/include/expat/expat.h"
 
 using std::string;
 using std::ifstream;
 using std::ofstream;
 using std::cerr;
 
-string parseFile (string const & fileName);
-
-/*class Parser
-{
+class Parser {
 private:
-    Parser (Parser const & parser);
-    Parser & operator= (Parser const & parser);
+    const int BUFFSIZE;
+    ofstream out;
+    void XMLCALL characterDataHandler(void *userdata, char const *d, int len);
 
-    bool tagOpened_;
+    Parser (Parser const & p);
+    Parser& operator= (Parser const & p);
 public:
-    Parser(): tagOpened_(false) {}
-    string parseLine (string const & s);
-    void parseFile (string const & fileName) const;
-
+    Parser() : BUFFSIZE(1024) {}
+    int parseFile (char const * toParseFileName, char const * outputFileName);
 };
-*/
+
 #endif // PARSER_H
