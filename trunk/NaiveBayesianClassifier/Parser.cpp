@@ -1,57 +1,38 @@
 #include "Parser.h"
-/*
-string Parser::parseLine (string const & s)
+
+/*void XMLCALL Parser::characterDataHandler(void * userdata, XML_Char const *d, int len)
 {
-    string r("");
-    size_t k = (tagOpened_) ? s.find_first_of('>') : s.find_first_of('<');
-    if (k != string::npos)
-    {
-
-        tagOpened_ = !tagOpened_;
-
-    }
+    for (int i=0; i<len; ++i)
+        out << d[i];
 }
-
-void Parser::parseFile (string const & fileName) const*/
-
-string parseFile (string const & fileName)
+*/
+int Parser::parseFile (char const * toParseFileName, char const * outputFileName)
 {
-    ifstream in(fileName.c_str(), ifstream::in);
-    if (!in.is_open())
-    {
-        cerr << "Error opening input file " << fileName << " for parsing. Aborted.\n";
-        return "";
-    }
-    size_t k = fileName.find_last_of('/');
-    string outFileName = (k == string::npos) ? "" : fileName.substr(0, k+1);
-    outFileName += "tmp";
-    ofstream out(outFileName.c_str(), ofstream::trunc);
+    out.open(outputFileName, ofstream::trunc);
     if (!out.is_open())
     {
-        cerr << "Error opening output file " << fileName << " for parsing. Aborted.\n";
-        return "";
+        std::cerr << "Cannot create output file " << outputFileName << ". Abort.\n";
+        return 1;
     }
-
-    bool tagOpened = false;
-    while (!in.eof())
+    XML_Parser parser = XML_ParserCreate(NULL);
+    //XML_SetCharacterDataHandler(parser, characterDataHandler);
+    FILE * inp = fopen(toParseFileName, "r");
+    if (inp == 0)
     {
-        unsigned char c = in.get();
-        if (tagOpened)
-        {
-            if (c == '>')
-                tagOpened = false;
-        }
-        else
-        {
-            if (c == '<')
-                tagOpened = true;
-            else {
-                //if (c != '\r')
-                    out << c;
-            }
-        }
+        std::cerr << "Cannot open file to parse "<< toParseFileName <<". Abort.\n";
+        return 2;
     }
-    in.close();
+    int done, len;
+    char Buff[BUFFSIZE];
+    do
+    {
+        len = fread(Buff, 1, BUFFSIZE, inp);
+        done = feof(inp);
+        XML_Parse(parser, Buff, len, done);
+    } while (!done);
+    fclose(inp);
     out.close();
-    return outFileName;
+    XML_ParserFree(parser);
+    return 0;
 }
+

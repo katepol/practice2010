@@ -2,8 +2,10 @@
 #include <fstream>
 #include <iostream>
 #include <cstdio>
-#include <curl/curl.h>
-#include <curl/types.h>
+
+#include "externallibs/include/curl/curl.h"
+#include "externallibs/include/curl/types.h"
+
 #include <cstdlib> //for atoi()
 #include <sys/time.h>
 #include "StringConvert.h"

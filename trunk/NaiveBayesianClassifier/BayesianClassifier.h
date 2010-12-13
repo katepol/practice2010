@@ -7,9 +7,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "PrintTemplates.cpp"
+#include "PrintTemplates.h"
 #include "Parser.h"
-#include <libs/libstemmer.h>
+#include "HtmlToXml.h"
+#include <externallibs/include/libstemmer.h>
 
 #ifndef _MyBayesianClassifier
 #define _MyBayesianClassifier
