@@ -15,15 +15,19 @@ using std::cerr;
 
 class Parser {
 private:
+	// static Parser * instance_;
     const int BUFFSIZE;
     ofstream out;
-    void XMLCALL characterDataHandler(void *userdata, char const *d, int len);
-
+   
+	~Parser();
     Parser (Parser const & p);
     Parser& operator= (Parser const & p);
+
+	Parser() : BUFFSIZE(1024) {}
+	void XMLCALL characterDataHandler(void *userdata, char const *d, int len);
 public:
-    Parser() : BUFFSIZE(1024) {}
-    int parseFile (char const * toParseFileName, char const * outputFileName);
+    static int parseFile (char const * toParseFileName, char const * outputFileName);
+    Parser & getInstance();
 };
 
 #endif // PARSER_H
