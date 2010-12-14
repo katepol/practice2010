@@ -113,7 +113,7 @@ void BayesianClassifier::stemWord (string & s) const
 mapsi BayesianClassifier::parseDocument (string const &docFileName, string const &language, string const &encoding)
 {
     // NOTE: забиваем, если конвертируется с ошибками
-    convertToXml(docFileName.c_str(), (docFileName+".xml").c_str());
+    HtmlToXml::convertToXml(docFileName.c_str(), (docFileName+".xml").c_str());
 
     string fName(docFileName+"_p.xml");
     Parser p;

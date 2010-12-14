@@ -6,7 +6,7 @@
 #include <iostream>
 #include <errno.h>
 
-int convertToXml(char const * htmlToConvert, char const * xmlOutput)
+static int convertToXml(char const * htmlToConvert, char const * xmlOutput)
 {
     TidyBuffer errbuf = {0};
     int rc = -1;
