@@ -16,6 +16,7 @@
 #define _MyBayesianClassifier
 
 using std::string;
+using std::vector;
 using std::ifstream;
 using std::ofstream;
 using std::cerr;
@@ -28,14 +29,14 @@ typedef std::map<std::string, double>       mapsd;
 typedef std::map<std::string, std::map<std::string, int> >     mapSmapSI;
 typedef std::map<std::string, std::map<std::string, double> >  mapSmapSD;
 
+// singletone
 class BayesianClassifier
 {
     private:
 
-        sb_stemmer * stemmer_;
+        static BayesianClassifier * instance_;
 
-        // min word length to proceed
-        unsigned int importance_;
+        sb_stemmer * stemmer_;
 
         // пары (категория:счетчик документов)
         // note: заполнен после Train
@@ -59,29 +60,31 @@ class BayesianClassifier
         void mergeCounters (mapSmapSI & cnt, mapsi const & map, string const & cat) const;
 
         // обучение на файле
-        int trainOnFile (string const & fileName, string const & cat, mapSmapSI & cnt, string const &language, string const &encoding);
+        int trainOnFile (string const & fileName, string const & cat, mapSmapSI & cnt, string const &language, string const &encoding, unsigned int importance);
 
         // вероятности (категория|документ) по всем категориям для данного файла
-        mapsd documentProbability (string const & fileName, mapsi & unknown, string const &language, string const &encoding);
+        mapsd documentProbability (string const & fileName, mapsi & unknown, string const &language, string const &encoding, unsigned int importance);
 
         void stemWord (string & s) const;
 
         // составление словаря по документу:
         // возвращает отсортированный список отстемленных уникальных признаков в нижнем регистре (длины > importance)
-        mapsi parseDocument (string const &docFileName, string const &language, string const &encoding);
+        mapsi parseDocument (string const &docFileName, string const &language, string const &encoding, unsigned int importance);
 
         // запрещаем конструктор копирования и опреатор присваивания
         BayesianClassifier (BayesianClassifier const & b);
         BayesianClassifier& operator= (BayesianClassifier const & b);
 
+        BayesianClassifier() {}
+        ~BayesianClassifier() { if (instance_!=0) delete instance_; }
+
     public:
-        BayesianClassifier (unsigned int i) : importance_(i) {}
 
         // принимает имя файла со списком документов по категориям и количество примеров на которых будет обучаться
-        int train (string dataFileName, unsigned int examplesQty, string resultFileName, string const &language, string const &encoding);
+        static int train (string dataFileName, unsigned int examplesQty, unsigned int importance, string resultFileName, string const &language, string const &encoding);
 
         // возвращает категорию документа
-        string classify (string const & fileName, string const &language, string const &encoding);
+        static string classify (string const & fileName, string const &language, unsigned int importance, string const &encoding);
 };
 
 #endif
