@@ -20,21 +20,21 @@ int DownloadFiles (string const & dir, string const & dataFileName)
         cout << "Cannot open file for writing data. Abort.\n";
         return 0;
     }
-    Downloader d (20000, 1000);
     //REM: in extention must be . : f.e. ".txt"
-    d.download(&doc, "forum", "", "http://forumishka.net/showthread.php?t=", dir, "log_forum.txt", 1, 100);
-    d.download(&doc, "science article", "", "http://swsys.ru/index.php?page=article&id=", dir, "log_science_article.txt", 2463, 100);
-    d.download(&doc, "livejournal", "", "http://www.livejournal.ru/themes/id/", dir, "log_livejournal.txt", 22201, 100);
+    //Downloader::download(&doc, "forum", "", "http://forum.nic.ru/showthread.php?t=", dir, "log_forum.txt", 1, 100, 20000, 2000);
+    Downloader::download(&doc, "forum", "", "http://forum.ubuntu.ru/index.php?topic=", dir, "log_forum.txt", 400, 100, 20000, 2000);
+    Downloader::download(&doc, "science article", "", "http://swsys.ru/index.php?page=article&id=", dir, "log_science_article.txt", 2463, 100, 20000, 1000);
+    Downloader::download(&doc, "livejournal", "", "http://www.livejournal.ru/themes/id/", dir, "log_livejournal.txt", 22201, 100, 20000, 1000);
     doc.close();
     return 1;
 }
 
 int Classify (string const & dir, string const & dataFileName, string const &language, string const &encoding)
 {
-    BayesianClassifier bc(2);
+    unsigned int importance = 2;
 
     string resultFileName(dir + "train_output.txt");
-    bc.train(dataFileName, 100, resultFileName, language, encoding);
+    BayesianClassifier::train(dataFileName, 100, importance, resultFileName, language, encoding);
 
     resultFileName = dir + "classify_output.txt";
 
@@ -63,7 +63,7 @@ int Classify (string const & dir, string const & dataFileName, string const &lan
         if (fname == "")
             continue;
         fname = fname.substr(0, fname.find(' '));
-        out << fname << " " << bc.classify(dir+fname, language, encoding) << "\n";
+        out << fname << " " << BayesianClassifier::classify(dir+fname, language, importance, encoding) << "\n";
         delete c;
     }
     data.close();
@@ -88,7 +88,7 @@ int main(int argc, char* argv[])
     }
     dataFileName = dir + dataFileName;
 
-    // if (!DownloadFiles (dir, dataFileName))        return 1;
+    //if (!DownloadFiles (dir, dataFileName))        return 1;
 
     return Classify(dir, dataFileName, "russian", "UTF_8");
 }

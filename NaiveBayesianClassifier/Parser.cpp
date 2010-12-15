@@ -1,18 +1,22 @@
 #include "Parser.h"
 
+ofstream Parser::out;
+
+/*
 Parser & Parser::getInstance()
 {
-	static Parser instance;
-  	return instance;
+//	static Parser instance;
+//  	return instance;
 }
+*/
 
-void XMLCALL Parser::characterDataHandler(void * userdata, XML_Char const *d, int len)
+void XMLCALL characterDataHandler(void * userdata, XML_Char const *d, int len)
 {
     for (int i=0; i<len; ++i)
-        out << d[i];
+        Parser::out << d[i];
 }
 
-static int Parser::parseFile (char const * toParseFileName, char const * outputFileName)
+int Parser::parseFile (char const * toParseFileName, char const * outputFileName)
 {
     out.open(outputFileName, ofstream::trunc);
     if (!out.is_open())

@@ -1,5 +1,7 @@
 #include "BayesianClassifier.h"
 
+BayesianClassifier * BayesianClassifier::instance_ = new BayesianClassifier();
+
 mapsi BayesianClassifier::makePreCounter (lststr const & list) const
 {
     if (list.empty())
@@ -91,7 +93,28 @@ mapSmapSD BayesianClassifier::makeProb(mapSmapSI & cnt, int weight, double aprio
 
 void BayesianClassifier::stemWord (string & s) const
 {
-    // TODO: remowe punctuation
+    //remowe punctuation from the end & from the beginning
+    string p ( "!?:;.,\"()"  );
+    int index = s.length();
+    for (int i = s.length()-1; i!=0; --i)
+    {
+        if (p.find_first_of(s[i]) >= p.length())
+        {
+            index = i + 1;
+            break;
+        }
+    }
+    s = s.substr(0, index);
+    index = 0;
+    for (int i = 0; i!=s.length(); ++i)
+    {
+        if (p.find_first_of(s[i]) >= p.length())
+        {
+            index = i;
+            break;
+        }
+    }
+    s = s.substr(index);
 
     // to lower case
     for (unsigned int i=0; i != s.length(); ++i)
@@ -110,14 +133,14 @@ void BayesianClassifier::stemWord (string & s) const
     }
 }
 
-mapsi BayesianClassifier::parseDocument (string const &docFileName, string const &language, string const &encoding)
+mapsi BayesianClassifier::parseDocument (string const &docFileName, string const &language, string const &encoding, unsigned int importance)
 {
     // NOTE: забиваем, если конвертируется с ошибками
-    HtmlToXml::convertToXml(docFileName.c_str(), (docFileName+".xml").c_str());
+    convertToXml(docFileName.c_str(), (docFileName+".xml").c_str());
 
     string fName(docFileName+"_p.xml");
-    Parser p;
-    if (p.parseFile((docFileName+".xml").c_str(), (docFileName+"_p.xml").c_str()) > 0) //parsing failed
+
+    if (Parser::parseFile((docFileName+".xml").c_str(), (docFileName+"_p.xml").c_str()) > 0) //parsing failed
     {
         fName = docFileName+".xml";
     }
@@ -145,7 +168,7 @@ mapsi BayesianClassifier::parseDocument (string const &docFileName, string const
     {
       string s;
       doc >> s;
-      if (s.length() > importance_)
+      if (s.length() > importance)
       {
           stemWord(s);
           word.push_back(s);
@@ -162,9 +185,9 @@ mapsi BayesianClassifier::parseDocument (string const &docFileName, string const
     return makePreCounter(word);
 }
 
-int BayesianClassifier::trainOnFile (string const & fileName, string const & cat, mapSmapSI & cnt, string const &language, string const &encoding)
+int BayesianClassifier::trainOnFile (string const & fileName, string const & cat, mapSmapSI & cnt, string const &language, string const &encoding, unsigned int importance)
 {
-    mapsi m = parseDocument(fileName, language, encoding);
+    mapsi m = parseDocument(fileName, language, encoding, importance);
 
     // cout << "  training on " << fileName << "...\n";
     mergeCounters(cnt, m, cat);
@@ -181,7 +204,7 @@ int BayesianClassifier::trainOnFile (string const & fileName, string const & cat
     return 0;
 }
 
-int BayesianClassifier::train (string dataFileName, unsigned int examplesQty, string resultFileName, string const &language, string const &encoding)
+int BayesianClassifier::train (string dataFileName, unsigned int examplesQty, unsigned int importance, string resultFileName, string const &language, string const &encoding)
 {
     ifstream data(dataFileName.c_str(), ifstream::in);
     if (!data.is_open())
@@ -236,7 +259,7 @@ int BayesianClassifier::train (string dataFileName, unsigned int examplesQty, st
         string fname = files[k].substr(0, q);
         string cat   = files[k].substr(q+1);
 
-        if (trainOnFile(tgDir+fname, cat, counter, language, encoding) == 0)
+        if (instance_->trainOnFile(tgDir+fname, cat, counter, language, encoding, importance) == 0)
         {
             ++nTrained;
             if (out.good())
@@ -251,15 +274,15 @@ int BayesianClassifier::train (string dataFileName, unsigned int examplesQty, st
     cout << "vocabulary size = " << counter.size() <<"\n";
 
     // устанавливаем вероятности
-    probability_ = makeProb(counter, 1, 0.5);
+    instance_->probability_ = instance_->makeProb(counter, 1, 0.5);
     //printMM (probability);
 
     return 0;
 }
 
-mapsd BayesianClassifier::documentProbability (string const & fileName, mapsi & unknown /*список незнакомых признаков*/, string const &language, string const &encoding)
+mapsd BayesianClassifier::documentProbability (string const & fileName, mapsi & unknown /*список незнакомых признаков*/, string const &language, string const &encoding, unsigned int importance)
 {
-    mapsi m = parseDocument(fileName, language, encoding);
+    mapsi m = parseDocument(fileName, language, encoding, importance);
     mapsd result;
 
     for (mapsi::const_iterator i = ndocs_.begin(); i != ndocs_.end(); ++i)
@@ -283,32 +306,30 @@ mapsd BayesianClassifier::documentProbability (string const & fileName, mapsi & 
 
 
 
-string BayesianClassifier::classify (string const & fileName, string const &language, string const &encoding)
+string BayesianClassifier::classify (string const & fileName, string const &language, unsigned int importance, string const &encoding)
 {
-    if (fileName=="/home/kate/APTU/Practice/data2/10")
-    {
-        cout << "TEEEEEEEEEEEST.\n";
-        ofstream doc("/home/kate/APTU/Practice/data2/voc.txt", ofstream::trunc);
-        if (!doc.is_open())
+    if (fileName=="/home/kate/APTU/Practice/data2/22312l")
         {
-            cout << "Cannot open file for writing data. Abort.\n";
-            return 0;
+            cout << "TEEEEEEEEEEEST.\n";
+            ofstream doc("/home/kate/APTU/Practice/data2/voc.txt", ofstream::trunc);
+            if (!doc.is_open())
+            {
+                cout << "Cannot open file for writing data. Abort.\n";
+                return 0;
+            }
+            printMM(instance_->probability_, doc);
+            doc.close();
         }
 
-        printMM(probability_, doc);
-
-        doc.close();
-    }
-
     mapsi newWords;
-    mapsd pDocCat = documentProbability(fileName, newWords, language, encoding);
+    mapsd pDocCat = instance_->documentProbability(fileName, newWords, language, encoding, importance);
     // общее число документов
     int total = 0;
-    for (mapsi::const_iterator i = ndocs_.begin(); i != ndocs_.end(); ++i)
+    for (mapsi::const_iterator i = instance_->ndocs_.begin(); i != instance_->ndocs_.end(); ++i)
         total += i->second;
 
     mapsd pCatDoc;
-    for (mapsi::const_iterator i = ndocs_.begin(); i != ndocs_.end(); ++i)
+    for (mapsi::const_iterator i = instance_->ndocs_.begin(); i != instance_->ndocs_.end(); ++i)
     {
         double p = pDocCat[i->first] * (double)i->second / total;
         pCatDoc.insert(std::pair<string, double>(i->first, p));
@@ -323,11 +344,12 @@ string BayesianClassifier::classify (string const & fileName, string const &lang
     string cat = max->first;
 
     // добавляем в общий probability новые слова и вероятности
-    mapSmapSI tmpCnt = makeSimpleCounter (newWords, cat);
-    mapSmapSD tmpProb = makeProb (tmpCnt, 1, 0.25);
-    mergeProbs(tmpProb);
+    mapSmapSI tmpCnt = instance_->makeSimpleCounter (newWords, cat);
+    mapSmapSD tmpProb = instance_->makeProb (tmpCnt, 1, 0.25);
+    instance_->mergeProbs(tmpProb);
 
-    cout << "vocabulary size = " << probability_.size() << "\n";
+    //cout << "vocabulary size = " << instance_->probability_.size() << "\n";
+    //cout << "classify " << fileName << "\n";
 
     return cat;
 }

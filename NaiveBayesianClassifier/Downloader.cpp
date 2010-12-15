@@ -1,11 +1,13 @@
 #include "Downloader.h"
 
+Downloader * Downloader::instance_ = new Downloader();
+
 size_t Downloader::writeData(void *ptr, size_t size, size_t nmemb, FILE *myStream)
 {
     return fwrite(ptr, size, nmemb, myStream);
 }
 
-int Downloader::downloadFile (CURL *curl, int id, FILE* f)
+int Downloader::downloadFile (CURL *curl, int id, FILE* f, int minFileSize)
 {
     string url = srcUrl_ + toString<int>(id) + extention_;
     log_ << url << std::endl;
@@ -19,7 +21,7 @@ int Downloader::downloadFile (CURL *curl, int id, FILE* f)
     if (result == CURLE_OK)
     {
         // check for file size
-        if (ftell(f) < minFileSize_)
+        if (ftell(f) < minFileSize)
         {
             log_ << "    file id " << id << " error: FILE SEEMS TO BE EMPTY. SKIP.\n";
             return 0;
@@ -39,10 +41,10 @@ void Downloader::printTime (string const & p)
     log_ << p << " " << tm1->tm_hour << ":" << tm1->tm_min << ":" << tm1->tm_sec << std::endl;
 }
 
-int Downloader::download(ofstream * res, string const & category, string const & ext, string const & su, string const & tgDir, string const & logFileName, int startNum, int cnt)
+int Downloader::download(ofstream * res, string const & category, string const & ext, string const & su, string const & tgDir, string const & logFileName, int startNum, int cnt, int minFileSize, int faultLimit)
 {
-    extention_ = ext;
-    srcUrl_ = su;
+    instance_->extention_ = ext;
+    instance_->srcUrl_ = su;
 
     // init curl
     CURL* curl;
@@ -54,10 +56,10 @@ int Downloader::download(ofstream * res, string const & category, string const &
     }
 
     // initialize log file
-    if (log_.is_open())
-        log_.close();
-    log_.open((tgDir+logFileName).c_str(), ofstream::trunc);
-    if (!log_.is_open())
+    if (instance_->log_.is_open())
+        instance_->log_.close();
+    instance_->log_.open((tgDir+logFileName).c_str(), ofstream::trunc);
+    if (!instance_->log_.is_open())
     {
         std::cerr << "Cannot create log file " << logFileName << " Check the path.\nDownloading aborted.\n";
         curl_easy_cleanup(curl);
@@ -70,27 +72,28 @@ int Downloader::download(ofstream * res, string const & category, string const &
     int downloaded = 0;
     int fileId = startNum-1;
 
-    printTime("Started at");
+    instance_->printTime("Started at");
     int faultNum = 0;
 
-    while (downloaded < cnt && faultNum < faultLimit_)
+    while (downloaded < cnt && faultNum < faultLimit)
     {
         ++fileId;
-        string fname = tgDir + toString<int>(fileId) + extention_;
-        FILE* f = fopen(fname.c_str(), "w");
+        string shortFileName = toString<int>(fileId) + category[0] + instance_->extention_;
+        string fullFileName = tgDir + shortFileName;
+        FILE* f = fopen(fullFileName.c_str(), "w");
         if (f == 0)
         {
-            std::cerr << "Cannot create file " << fname << ". Check the path.\nDownloading aborted.\n";
-            printTime("Finished at");
-            log_.close();
+            std::cerr << "Cannot create file " << fullFileName << ". Check the path.\nDownloading aborted.\n";
+            instance_->printTime("Finished at");
+            instance_->log_.close();
             curl_easy_cleanup(curl);
             return 3;
         }
 
-        log_ << "Written file is "<< fname << std::endl;
-        if (downloadFile(curl, fileId, f))
+        instance_->log_ << "Written file is "<< fullFileName << std::endl;
+        if (instance_->downloadFile(curl, fileId, f, minFileSize))
         {
-            *res << fileId << extention_ << " " << category << std::endl;
+            *res << shortFileName << " " << category << std::endl;
             ++downloaded;
             fclose(f);
         }
@@ -99,19 +102,19 @@ int Downloader::download(ofstream * res, string const & category, string const &
             ++faultNum;
             //std::cerr << faultNum << "\n";
             fclose(f);
-            if (remove(fname.c_str()) == -1)
-                log_ << "       Failed to delete " << fname << std::endl;
+            if (remove(fullFileName.c_str()) == -1)
+                instance_->log_ << "       Failed to delete " << fullFileName << std::endl;
             else
-                log_ << "       Deleted file " << fname << std::endl;
+                instance_->log_ << "       Deleted file " << fullFileName << std::endl;
         }
     }
-    if (faultNum >= faultLimit_)
-        std::cerr << "There were "<< faultNum << " faults in files' links. Check the source url. You have specified " << srcUrl_ << std::endl;
+    if (faultNum >= faultLimit)
+        std::cerr << "There were "<< faultNum << " faults in files' links. Check the source url. You have specified " << instance_->srcUrl_ << std::endl;
     else
         std::cout << "Download finished!\n";
 
-    printTime("Finished at");
-    log_.close();
+    instance_->printTime("Finished at");
+    instance_->log_.close();
     curl_easy_cleanup(curl);
     return 0;
 }
