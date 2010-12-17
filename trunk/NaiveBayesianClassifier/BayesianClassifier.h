@@ -7,6 +7,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <regex.h>
 #include "PrintTemplates.h"
 #include "Parser.h"
 #include "HtmlToXml.h"
@@ -65,7 +66,17 @@ class BayesianClassifier
         // вероятности (категория|документ) по всем категориям для данного файла
         mapsd documentProbability (string const & fileName, mapsi & unknown, string const &language, string const &encoding, unsigned int importance);
 
-        void stemWord (string & s) const;
+		// подсчет количества раз, которое встречается regexp паттерн в stringToCheck и удаление вхождений
+		int regexp (string & stringToCheck, char const * pattern) const;
+
+		// collecting smiles
+		mapsi findSmiles (string & s, mapsi & smileCounter) const;
+
+		// stemming, includes collecting smiles
+        void stemWord (string & s, mapsi & smileCounter) const;
+        
+        // подсчет, сколько раз встречается pattern в строке stringToCheck и удаление
+        int regexp (string & stringToCheck, char const * pattern) const;
 
         // составление словаря по документу:
         // возвращает отсортированный список отстемленных уникальных признаков в нижнем регистре (длины > importance)
