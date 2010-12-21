@@ -1,6 +1,26 @@
 #include "BayesianClassifier.h"
 
-BayesianClassifier * BayesianClassifier::instance_ = new BayesianClassifier();
+BayesianClassifier * BayesianClassifier::instance_;
+
+BayesianClassifier::BayesianClassifier()
+{
+    stemmer_ru_ = sb_stemmer_new("russian",  "UTF_8");
+    if (stemmer_ru_ == 0)
+        cerr << "stemmer for russian in utf-8 not created.\n";
+    stemmer_en_ = sb_stemmer_new("english",  "UTF_8");
+    if (stemmer_en_ == 0)
+        cerr << "stemmer for english in utf-8 not created.\n";
+}
+
+BayesianClassifier::~BayesianClassifier()
+{
+    if (instance_!=0)
+        delete instance_;
+    if (stemmer_ru_ != 0)
+        sb_stemmer_delete(stemmer_ru_);
+    if (stemmer_en_ != 0)
+        sb_stemmer_delete(stemmer_en_);
+}
 
 mapsi BayesianClassifier::makePreCounter (lststr const & list) const
 {
@@ -59,7 +79,7 @@ void BayesianClassifier::mergeCounters (mapSmapSI & cnt, mapsi const & map, stri
 void BayesianClassifier::mergeProbs (mapSmapSD const & prob)
 {
     for (mapSmapSD::const_iterator i = prob.begin(); i != prob.end(); ++i)
-    {// TODO: why not simply i->first, i->second ?
+    {
         probability_.insert(std::pair<string, mapsd>(i->first, i->second));
     }
 }
@@ -91,81 +111,133 @@ mapSmapSD BayesianClassifier::makeProb(mapSmapSI & cnt, int weight, double aprio
     return res;
 }
 
-int BayesianClassifier::regexp (string & stringToCheck, char const * pattern) const
+/*void BayesianClassifier::prepareRegexp ()
+{
+    for (int i = 0; (smilePattern+i) != 0 ; ++i)
+    {
+        regcomp(smileRegex+i, *(smilePattern+i).c_str(), REG_EXTENDED);
+
+    }
+}
+
+void BayesianClassifier
+
+int BayesianClassifier::regexp (string & stringToCheck, int i) const
 {     
-	int num = 0;           
-	regex_t rgT;
+        int num = 0;
+        // TODO: откомпилировать регэкспы до парсинга. желательно ! раз
+        //regex_t rgT;
 	regmatch_t match;
-	regcomp(&rgT, pattern, REG_EXTENDED);
-	while (regexec(&rgT, stringToCheck.c_str(), 1, &match, 0) == 0) 
+        //regcomp(&rgT, pattern.c_str(), REG_EXTENDED);
+        //while (regexec(&rgT, stringToCheck.c_str(), 1, &match, 0) == 0)
+        while (regexec(smileRegex+i, stringToCheck.c_str(), 1, &match, 0) == 0)
 	{
 		int begin = (int)match.rm_so;
 		int end = (int)match.rm_eo;
 		stringToCheck = stringToCheck.substr(0, begin) +  stringToCheck.substr(end);
 		++num;
 	}
-	regfree(&rgT);
+        //regfree(&rgT);
 	return num;
 }
+*/
 
-mapsi BayesianClassifier::findSmiles (string & s, mapsi & smileCounter) const
+
+int BayesianClassifier::regexp (string & stringToCheck, string const & pattern) const
+{
+    int num = 0;
+    // TODO: откомпилировать регэкспы до парсинга. желательно ! раз
+    regex_t rgT;
+    regmatch_t match;
+    regcomp(&rgT, pattern.c_str(), REG_EXTENDED);
+    while (regexec(&rgT, stringToCheck.c_str(), 1, &match, 0) == 0)
+    {
+        int begin = (int)match.rm_so;
+        int end = (int)match.rm_eo;
+        stringToCheck = stringToCheck.substr(0, begin) +  stringToCheck.substr(end);
+        ++num;
+    }
+    return num;
+}
+
+void BayesianClassifier::findSmiles (string & s, mapsi & smileCounter) const
 {// TODO: check
-	string re[] = { ":\\)+", ":-\\)+", ";\\)+", ";-\\)+", ":\\(+", ":-\\(+", ":-\\*+" }; 	
-	string smiles[] = { ":)", ":-)", ";)", ";-)", ":(", ":-(", ":-*" };
-	int n = 7;
-	for (int i=0; i != 7; ++i)
-	{
-		int k = regexp(s, smiles[i]);
-		if (k > 0)
-		{
-			mapsi::iterator it = smileCounter.find(smiles[i]);
-			if (it != map::end)
-			{
-				it->second += k;
-			}
-			else
-				smileCounter.insert(smiles[i], k);
-		}
+    string re[] = { ":\\)+", ":-\\)+", ";\\)+", ";-\\)+", ":\\(+", ":-\\(+", ":-\\*+" };
+    string smiles[] = { ":)", ":-)", ";)", ";-)", ":(", ":-(", ":-*" };
+    int n = 7;
+    for (int i=0; i != n; ++i)
+    {
+        int k = regexp(s, re[i]);
+        if (k > 0)
+        {
+            mapsi::iterator it = smileCounter.find(smiles[i]);
+            if (it != smileCounter.end())
+               it->second += k;
+            else
+               smileCounter.insert(std::pair<string, int>("1"+smiles[i], k));
 	}
+    }
 }
 	
-void BayesianClassifier::stemWord (string & s, mapsi & smileCounter) const
+void BayesianClassifier::removePunctuation (string & s) const
 {
-	// find and remove smiles
-	smiles = findSmiles(s, smileCounter);
-	
-    //remowe punctuation from the end & from the beginning
-    string p ( "!?:;.,\"()"  );
-    int index = s.length();
-    for (int i = s.length()-1; i!=0; --i)
+    if (s.length() > 0)
     {
-        if (p.find_first_of(s[i]) >= p.length())
+        string p ( "!?:;.,\"()'-"  );
+        int index = s.length();
+        for (unsigned int i = s.length()-1; i != 0; --i)
         {
-            index = i + 1;
-            break;
+            if (p.find_first_of(s[i]) >= p.length())
+            {
+                index = i + 1;
+                break;
+            }
         }
+        s = s.substr(0, index);
+        index = 0;
+        for (unsigned int i = 0; i!=s.length(); ++i)
+        {
+            if (p.find_first_of(s[i]) >= p.length())
+            {
+                index = i;
+                break;
+            }
+        }
+        s = s.substr(index);
     }
-    s = s.substr(0, index);
-    index = 0;
-    for (int i = 0; i!=s.length(); ++i)
+}
+
+char const * BayesianClassifier::toLowerCase (string & s) const
+{// NOTE: utf-8 only!
+    if (s.length() > 0)
     {
-        if (p.find_first_of(s[i]) >= p.length())
+        for (unsigned int i=0; i != s.length(); ++i)
         {
-            index = i;
-            break;
+            int k = s[i];
+
+            if (k < -80 && k > -113)
+                k += 32;
+            if (k > 64 && k < 91)
+                k += 32;
+            s[i] = (char)k;
+            //if (isupper((unsigned char)s[i]))
+            //    s[i] = (unsigned char)tolower(s[i]);
         }
+
+        char const * lang = ((int)s[0] < -46) ? "russian" : "english";
+        return lang;
     }
-    s = s.substr(index);
+    else
+        return "english";
+}
 
-    // to lower case
-    // TODO: russian!
-    // TODO: define language
-    for (unsigned int i=0; i != s.length(); ++i)
-        if (isupper((unsigned char)s[i]))
-            s[i] = (unsigned char)tolower(s[i]);
-
-    //stemming
-    char * stemmed = (char *)sb_stemmer_stem(stemmer_, (unsigned char *)s.c_str(), s.length());
+void BayesianClassifier::stem (string & s, char const * language) const
+{
+    char * stemmed = 0;
+    if (language == "russian")
+        stemmed = (char *)sb_stemmer_stem(stemmer_ru_, (unsigned char *)s.c_str(), s.length());
+    if (language == "english")
+        stemmed = (char *)sb_stemmer_stem(stemmer_en_, (unsigned char *)s.c_str(), s.length());
     if (stemmed == 0)
     {
         cerr << "Stemming failed!\n";
@@ -176,14 +248,22 @@ void BayesianClassifier::stemWord (string & s, mapsi & smileCounter) const
     }
 }
 
-mapsi BayesianClassifier::parseDocument (string const &docFileName, string const &language, string const &encoding, unsigned int importance)
+void BayesianClassifier::processWord (string & s, mapsi & smileCounter) const
+{
+    /*findSmiles(s, smileCounter);
+    removePunctuation (s);
+    char const * lang = toLowerCase (s);
+    stem(s, lang);*/
+}
+
+mapsi BayesianClassifier::parseDocument (string const &docFileName, unsigned int importance)
 {
     // NOTE: забиваем, если конвертируется с ошибками
     convertToXml(docFileName.c_str(), (docFileName+".xml").c_str());
 
     string fName(docFileName+"_p.xml");
 
-    if (Parser::parseFile((docFileName+".xml").c_str(), (docFileName+"_p.xml").c_str()) > 0) //parsing failed
+    if (parseFile((docFileName+".xml").c_str(), (docFileName+"_p.xml").c_str()) > 0) //parsing failed
     {
         fName = docFileName+".xml";
     }
@@ -198,31 +278,25 @@ mapsi BayesianClassifier::parseDocument (string const &docFileName, string const
 
     // cout << "Parsing document " << docFileName << std::endl;
 
-    stemmer_ = sb_stemmer_new(language.c_str(),  encoding.c_str());
-    if (stemmer_ == 0) {
-        if (encoding == "")
-            cerr << "language " << language << " not available for stemming\n";
-        else
-            cerr << "language " << language << " not available for stemming in encoding " << encoding << "\n";
-    }
 
     lststr word;
     mapsi smiles;
-    strig previousWord("");
+    string previousWord("");
     while (!doc.eof())
     {
       string s;
       doc >> s;
       if (s.length() > importance)
       {
-          stemWord(s, smiles);
+          processWord(s, smiles);
           word.push_back(s);
-          
-          word.push_back(previousWord+" "+s);
-          previousWord = s;
+          /*if (previousWord != "")
+          {
+              word.push_back(previousWord+" "+s);
+          }
+          previousWord = s;*/
       }
     }
-    if (stemmer_ != 0) sb_stemmer_delete(stemmer_);
     doc.close();
 
     // delete *.xml and *_p.xml
@@ -233,16 +307,20 @@ mapsi BayesianClassifier::parseDocument (string const &docFileName, string const
     mapsi m1 = makePreCounter(word);
     // merge smiles and m1
     // TODO: check
+    if (smiles.size()>3)
+    {
+        cout << "hello\n";
+    }
     for (mapsi::const_iterator it = smiles.begin(); it != smiles.end(); ++it)
-    	m1.insert (it->first, it->second);
+        m1.insert (std::pair<string, int>(it->first, it->second));
     
     
-	return m1;
+    return m1;
 }
 
-int BayesianClassifier::trainOnFile (string const & fileName, string const & cat, mapSmapSI & cnt, string const &language, string const &encoding, unsigned int importance)
+int BayesianClassifier::trainOnFile (string const & fileName, string const & cat, mapSmapSI & cnt, unsigned int importance)
 {
-    mapsi m = parseDocument(fileName, language, encoding, importance);
+    mapsi m = parseDocument(fileName, importance);
 
     // cout << "  training on " << fileName << "...\n";
     mergeCounters(cnt, m, cat);
@@ -259,7 +337,7 @@ int BayesianClassifier::trainOnFile (string const & fileName, string const & cat
     return 0;
 }
 
-int BayesianClassifier::train (string dataFileName, unsigned int examplesQty, unsigned int importance, string resultFileName, string const &language, string const &encoding)
+int BayesianClassifier::train (string dataFileName, unsigned int examplesQty, unsigned int importance, string const & resultFileName)
 {
     ifstream data(dataFileName.c_str(), ifstream::in);
     if (!data.is_open())
@@ -314,7 +392,7 @@ int BayesianClassifier::train (string dataFileName, unsigned int examplesQty, un
         string fname = files[k].substr(0, q);
         string cat   = files[k].substr(q+1);
 
-        if (instance_->trainOnFile(tgDir+fname, cat, counter, language, encoding, importance) == 0)
+        if (trainOnFile(tgDir+fname, cat, counter, importance) == 0)
         {
             ++nTrained;
             if (out.good())
@@ -329,15 +407,15 @@ int BayesianClassifier::train (string dataFileName, unsigned int examplesQty, un
     cout << "vocabulary size = " << counter.size() <<"\n";
 
     // устанавливаем вероятности
-    instance_->probability_ = instance_->makeProb(counter, 1, 0.5);
+    probability_ = makeProb(counter, 1, 0.5);
     //printMM (probability);
 
     return 0;
 }
 
-mapsd BayesianClassifier::documentProbability (string const & fileName, mapsi & unknown /*список незнакомых признаков*/, string const &language, string const &encoding, unsigned int importance)
+mapsd BayesianClassifier::documentProbability (string const & fileName, mapsi & unknown /*список незнакомых признаков*/, unsigned int importance)
 {
-    mapsi m = parseDocument(fileName, language, encoding, importance);
+    mapsi m = parseDocument(fileName, importance);
     mapsd result;
 
     for (mapsi::const_iterator i = ndocs_.begin(); i != ndocs_.end(); ++i)
@@ -361,7 +439,7 @@ mapsd BayesianClassifier::documentProbability (string const & fileName, mapsi & 
 
 
 
-string BayesianClassifier::classify (string const & fileName, string const &language, unsigned int importance, string const &encoding)
+string BayesianClassifier::classify (string const & fileName, unsigned int importance)
 {
     if (fileName=="/home/kate/APTU/Practice/data2/22312l")
         {
@@ -372,19 +450,19 @@ string BayesianClassifier::classify (string const & fileName, string const &lang
                 cout << "Cannot open file for writing data. Abort.\n";
                 return 0;
             }
-            printMM(instance_->probability_, doc);
+            printMM(probability_, doc);
             doc.close();
         }
 
     mapsi newWords;
-    mapsd pDocCat = instance_->documentProbability(fileName, newWords, language, encoding, importance);
+    mapsd pDocCat = documentProbability(fileName, newWords, importance);
     // общее число документов
     int total = 0;
-    for (mapsi::const_iterator i = instance_->ndocs_.begin(); i != instance_->ndocs_.end(); ++i)
+    for (mapsi::const_iterator i = ndocs_.begin(); i != ndocs_.end(); ++i)
         total += i->second;
 
     mapsd pCatDoc;
-    for (mapsi::const_iterator i = instance_->ndocs_.begin(); i != instance_->ndocs_.end(); ++i)
+    for (mapsi::const_iterator i = ndocs_.begin(); i != ndocs_.end(); ++i)
     {
         double p = pDocCat[i->first] * (double)i->second / total;
         pCatDoc.insert(std::pair<string, double>(i->first, p));
@@ -399,11 +477,11 @@ string BayesianClassifier::classify (string const & fileName, string const &lang
     string cat = max->first;
 
     // добавляем в общий probability новые слова и вероятности
-    mapSmapSI tmpCnt = instance_->makeSimpleCounter (newWords, cat);
-    mapSmapSD tmpProb = instance_->makeProb (tmpCnt, 1, 0.25);
-    instance_->mergeProbs(tmpProb);
+    mapSmapSI tmpCnt = makeSimpleCounter (newWords, cat);
+    mapSmapSD tmpProb = makeProb (tmpCnt, 1, 0.25);
+    mergeProbs(tmpProb);
 
-    //cout << "vocabulary size = " << instance_->probability_.size() << "\n";
+    //cout << "vocabulary size = " << probability_.size() << "\n";
     //cout << "classify " << fileName << "\n";
 
     return cat;

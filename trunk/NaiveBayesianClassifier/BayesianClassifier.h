@@ -37,7 +37,11 @@ class BayesianClassifier
 
         static BayesianClassifier * instance_;
 
-        sb_stemmer * stemmer_;
+        sb_stemmer * stemmer_ru_;
+        sb_stemmer * stemmer_en_;
+
+        //regex_t * smileRegex;
+        //string * smilePattern;
 
         // пары (категория:счетчик документов)
         // note: заполнен после Train
@@ -61,41 +65,57 @@ class BayesianClassifier
         void mergeCounters (mapSmapSI & cnt, mapsi const & map, string const & cat) const;
 
         // обучение на файле
-        int trainOnFile (string const & fileName, string const & cat, mapSmapSI & cnt, string const &language, string const &encoding, unsigned int importance);
+        int trainOnFile (string const & fileName, string const & cat, mapSmapSI & cnt, unsigned int importance);
 
         // вероятности (категория|документ) по всем категориям для данного файла
-        mapsd documentProbability (string const & fileName, mapsi & unknown, string const &language, string const &encoding, unsigned int importance);
+        mapsd documentProbability (string const & fileName, mapsi & unknown, unsigned int importance);
 
-		// подсчет количества раз, которое встречается regexp паттерн в stringToCheck и удаление вхождений
-		int regexp (string & stringToCheck, char const * pattern) const;
+        // find & remove smiles
+        void findSmiles (string & s, mapsi & smileCounter) const;
 
-		// collecting smiles
-		mapsi findSmiles (string & s, mapsi & smileCounter) const;
+        //remowe punctuation from the end & from the beginning
+        void removePunctuation (string & s) const;
 
-		// stemming, includes collecting smiles
-        void stemWord (string & s, mapsi & smileCounter) const;
+        // returns language
+        char const * toLowerCase (string & s) const;
+
+        void stem (string & s, char const * language) const;
+
+        // stemming, includes collecting smiles
+        void processWord (string & s, mapsi & smileCounter) const;
         
         // подсчет, сколько раз встречается pattern в строке stringToCheck и удаление
-        int regexp (string & stringToCheck, char const * pattern) const;
+        int regexp (string & stringToCheck, string const & pattern) const;
 
         // составление словаря по документу:
         // возвращает отсортированный список отстемленных уникальных признаков в нижнем регистре (длины > importance)
-        mapsi parseDocument (string const &docFileName, string const &language, string const &encoding, unsigned int importance);
+        mapsi parseDocument (string const &docFileName, unsigned int importance);
 
         // запрещаем конструктор копирования и опреатор присваивания
         BayesianClassifier (BayesianClassifier const & b);
         BayesianClassifier& operator= (BayesianClassifier const & b);
 
-        BayesianClassifier() {}
-        ~BayesianClassifier() { if (instance_!=0) delete instance_; }
+        BayesianClassifier();
+
+        ~BayesianClassifier();
 
     public:
+        static BayesianClassifier * getInstance ()
+        {
+            if (instance_ == 0)
+                instance_ = new BayesianClassifier();
+            return instance_;
+        }
 
         // принимает имя файла со списком документов по категориям и количество примеров на которых будет обучаться
-        static int train (string dataFileName, unsigned int examplesQty, unsigned int importance, string resultFileName, string const &language, string const &encoding);
+        int train (string dataFileName, unsigned int examplesQty, unsigned int importance, string const & resultFileName);
 
         // возвращает категорию документа
-        static string classify (string const & fileName, string const &language, unsigned int importance, string const &encoding);
+        string classify (string const & fileName, unsigned int importance);
+
+        mapsi getNdocs () { return ndocs_; }
 };
+
+//BayesianClassifier * BayesianClassifier::instance_ ;
 
 #endif
