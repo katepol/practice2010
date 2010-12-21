@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Компонентный подход: модуль продукционной экспертной системы</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Компонентный подход: модуль продукционной экспертной системы</h2><div style="margin-bottom:10px"><strong>A component-based approach: rule-based expert system module</strong></div>Статья опубликована в выпуске журнала № 3 за 2010 год. [ 07.09.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Рассматривается подход к созданию системы автоматизации исследований на основе компонентной сборки. Компоненты представлены как автономные модули, реализующие определенные методы исследования. При этом каждый компонент оснащен внутренней памятью и унифицированным интерфейсом. Подробно рассмотрен компонент, реализующий продукционную экспертную систему: приведено описание его функций, архитектуры, функциональных модулей. </em><br /><strong>Abstract:</strong><em style="font-size:8pt">The paper considers a component-based development of system for computer-aided investigations. All components are autonomous modules that implements specified analysis method. Each component has the internal memory and unified interface. The paper considers in detail the rule-based expert system component. The architecture, functions and functional modules of the component are discussed.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=4596">Николайчук О.А. (nikoly@icc.ru)</a> - Институт динамики систем и теории управления СО РАН, г. Иркутск Кандидат технический наук Ph.D., <a href="index.php?page=infou&id=5365">Павлов А.И. (asd@icc.ru)</a> - Институт динамики систем и теории управления СО РАН, г. Иркутск Кандидат технический наук Ph.D., <a href="index.php?page=infou&id=5366">Юрин А.Ю. (iskander@irk.ru)</a> - Институт динамики систем и теории управления СО РАН, г. Иркутск Кандидат технический наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1641">продукционная экспертная система</a>, <a href="index.php?page=infotg&id=874">компонент</a>, <a href="index.php?page=infotg&id=1642">качественные решения</a>, <a href="index.php?page=infotg&id=83">база знаний</a>, <a href="index.php?page=infotg&id=1640">автоматизация исследований</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1641">rule-based expert system</a>, <a href="index.php?page=infotg&id=874">component</a>, <a href="index.php?page=infotg&id=1642">qualitative decisions</a>, <a href="index.php?page=infotg&id=83">knowledge base</a>, <a href="index.php?page=infotg&id=1640">automation of investigations</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 313<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2556">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;">Компьютерная поддержка исследователя в слабоформализованных предметных областях, связанных с процессами, представляющими опасность для человека (например, производство полиэтилена в нефтехимии) [1], является актуальной проблемой. Ее актуальность главным образом обусловлена необходимостью обеспечения безопасности людей и повышения надежности оборудования, задействованного в опасных процессах.</p>  <p>Одним из современных направлений решения данной проблемы является создание специализированного программного обеспечения, в частности, программных систем, автоматизирующих исследование динамики опасных процессов. Для создания условий активного применения средств автоматизации проектируемые системы исследований должны обладать высокой универсальностью (гибкостью), то есть обеспечивать возможность решения широкого круга задач исследования (идентификация, диагностирование и прогнозирование) и настройки на определенную предметную область непрограммирующими пользователями. </p>  <p>Наиболее эффективным способом создания программных систем, удовлетворяющих требованию универсальности (гибкости), является компонентная сборка (Component-Based Development) требуемой системы из функциональных компонентов [2]. В соответствии с данным подходом программная система с требуемым набором функций «синтезируется» из отдельных программных проблемно-ориентирован­ных компонентов. Этот подход позволяет повысить эффективность разработки программных систем путем создания расширяемого и настраиваемого компонентного программного обеспечения, способного решать широкий круг исследовательских задач. Недостатком существующих технологий является их ориентация на программирующего пользователя.</p>  <p><img width=297 height=278  src="uploaded/image/2010-3/image326.png" align=left     alt="Подпись:  
+
+Рис. 1. Концептуальная архитектура 
+компонентной системы
+"  >Эффективность решения предметных задач при помощи компонентного программного обеспечения зависит от набора доступных методов, реализованных в виде компонентов: это могут быть как вычислительные методы, направленные на получение точных численных решений, так и методы искусственного интеллекта, оперирующие символьными вычислениями, направленные на получение решений качественного характера [3]. </p>  <p>Одним из методов искусственного интеллекта, обеспечивающих моделирование механизмов мышления человека, являются продукционные экспертные системы. Реализация продукционной экспертной системы в качестве одного из компонентов системы автоматизации исследований позволила бы предметнику решать проблемы на основе логических правил, описывающих динамику опасных процессов, и получать обоснование полученного решения, используя только предметные знания.</p>  <p>Цель данной работы – описание модуля продукционной экспертной системы как одного из компонентов системы автоматизации исследований динамики опасных процессов для специалистов-предметников (непрограммирующих пользователей). </p>  <p>Концепция многокомпонентной системы автоматизации исследований. Технология сборки систем из компонентов [2] является одним из подходов объектно-ориентированного программирования. Центральным понятием данной технологии является компонент – независимый модуль, который может быть реализован в виде исполняемого файла или динамической библиотеки.</p>  <p>Каждый компонент реализует как минимум один интерфейс, который определяет границу взаимодействия компонента с другими компонентами или программами. Интерфейс строго специфицирует поведение компонента, благодаря чему компонент может использоваться на основании описания интерфейса при сокрытии (инкапсуляции) от конечного пользователя подробностей реализации компонента.</p>  <p>В данной работе под компонентом системы автоматизации исследований понимается компонент, который, кроме основной функциональности, обеспечивает реализацию механизма внутренней памяти и предложенного авторами унифицированного интерфейса компонента [3]. </p>  <p>Концептуально в архитектуре подобной системы (рис. 1) можно выделить библиотеку компонентов, содержащую компоненты с унифицированными интерфейсами, и управляющий модуль с механизмом интеграции компонентов в единую систему [4]. Использование унифицированного интерфейса позволяет перестраивать архитектуру системы исследования динамически, без внесения в код компонентов информации о межкомпонентных связях.</p>  <p>Компонент продукционной экспертной системы. Использование продукционной экспертной системы является одним из способов обеспечения пользователя компьютерной поддержкой при принятии решений на основе знаний эксперта. Как компонент продукционная экспертная система может использоваться либо для решения задач предметной области (связанных с логическим выводом), либо для интеллектуализации работы программной системы (возможность программной системы осуществлять самонастройку с использованием внутренних баз знаний). </p>  <p>Решение подобных задач требует предметных (модель предметной области) и проблемных (принципиальные методы решения проблемы на основе модели предметной области) знаний. Предметные знания зависят от предметной области, проблемные остаются неизменными при выборе любой предметной области. На этом принципе организована реализация оболочек экспертных систем. Предлагается создать архитектуру компонента продукционной системы, обеспечивающую решение широкого круга задач на основе использования множества баз знаний. Предполагается, что базы знаний могут быть накоплены различными пользователями и описаны на независимом от машины вывода языке. </p>  <p>В настоящее время существуют как коммерческие, так и свободно распространяемые оболочки продукционных экспертных систем (CLIPS [5], JESS, OPS5), с помощью которых можно реализовать механизм рассуждения на основе продукций. В связи с этим наиболее рациональным представляется реализация данного компонента на основе уже существующей машины вывода. В данной работе для этой цели выбрана свободно распространяемая система CLIPS (C Language Integrated Production System). </p>  <p>На рисунке 2 представлена предлагаемая архитектура компонента, построенного на основе CLIPS. Опишем модули компонента.</p>  <p>Управляющий модуль. Для применения CLIPS в качестве компонента системы автоматизации исследований необходимо создать модуль управления данной системой. Модуль управления с помощью механизма компонентной обертки обеспечивает реализацию унифицированного интерфейса компонента и механизма внутренней памяти для управляемой программной системы. Функции модуля управления можно разделить на не зависимые от специфики компонента (присущие всем модулям управления компонентами, создаваемыми в соответствии с данным подходом) и зависимые (специализированные). </p>  <p>К функциям, не зависимым от специфики компонента, относятся:</p>  <p>·     предоставление информации о свойствах управляемой системы и реализуемых ею функциях; </p>  <p>·     прямое и обратное преобразование полученной извне информации в формат, используемый управляемой системой;</p>  <p>·     управление состоянием параметров управляемой (контролируемой) системы.</p>  <p>Необходимо отметить, что при реализации компонента продукционной экспертной системы предлагается использовать двухуровневую модель представления правил и фактов: первый уровень – логический: представление фактов и правил в виде, не зависимом от конкретной машины вывода (обобщенный вид); второй уровень – физический: представление фактов и правил в формате определенной машины вывода, например CLIPS. Использование подобной двухуровневой модели позволяет значительно снизить затраты на разработку нового компонента при выборе другой машины вывода.</p>  <p>С учетом данного положения перечислим зависимые функции управляющего модуля, зависящие от специфики компонента, – продукционной экспертной системы: </p>  <p>·     создание базы знаний в виде набора правил и классов фактов в обобщенном виде;</p>  <p>·     преобразование правил и фактов из обобщенного вида к формату машины вывода CLIPS;</p>  <p>·     управление процессом вывода: </p>  <p>-    формирование рабочей базы знаний на основе обобщенного представления (вида);</p>  <p>-    передача рабочей базы знаний в машину вывода (загрузка ее в рабочую память); </p>  <p>-    <img width=435 height=246  src="uploaded/image/2010-3/image328.png" align=left     alt="Подпись:  
+
+Рис. 2. Архитектура компонента, осуществляющего рассуждение по правилам
+"  >получение результатов и преобразование их в обобщенный вид.</p>  <p>За реализацию каждой из специализированных функций управляющего модуля отвечают подсистемы (функциональные модули): модуль управления базами знаний и модуль преобразования.</p>  <p>Модуль управления базами знаний предназначен для работы (выполнение операций создания, модификации и удаления) с фактами и правилами, представлен­<img width=448 height=331  src="uploaded/image/2010-3/image330.png" align=left     alt="Подпись:  
+
+Рис. 3. Модель продукционного правила
+"  >ными в обобщенном виде. При этом правила и факты могут быть как абстрактными (образцы правил и фактов), так и конкретными (экземпляры правил и фактов). Факты и правила группируются согласно их предметной классификации, образуя базы знаний и формируя таким образом сферы своего применения. Каждая база знаний имеет уникальное имя и рассматривается компонентом в качестве предоставляемой им функции, доступ к которой осуществляется через унифицированный интерфейс компонента. </p>  <p>Для представления продукционного правила в обобщенном виде используется следующая теоретико-множественная модель: (i): Q; P; A→B; N, где i – имя продукции; Q – сфера применения продукции; P – предусловие (условие применимости ядра продукции); A→B – ядро продукции (Если … То …); N – постусловие продукции.</p>  <p>Модель реализована в объектно-ориентиро­ванном виде (рис. 3). При этом свойства «Условие» и «Заключение» содержат в себе информацию о фактах, используемых в процедуре вывода; «Предусловие» и «Постусловие» – информацию, управляющую процессом вывода. Примером управляющей информации могут быть запреты на срабатывание правила при условии, что в оперативной памяти присутствуют запросы на прерывание процесса вывода, например, для вычисления значения какого-либо из свойств нового факта. </p>  <p>Модуль преобразования обеспечивает не только приведение правил и фактов из обобщенного вида к языку конкретной машины вывода, например, к формату CLIPS, но и обратное преобразование. Сформированная в результате преобразования рабочая база знаний подключается к машине вывода путем загрузки рабочей базы знаний в рабочую память. Реализация данного модуля зависит от специфики используемой машины вывода и нуждается в изменении в случае замены машины вывода при создании нового компонента. </p>  <p>Продукционная машина вывода осуществляет процесс рассуждения (логического вывода) по правилам. При реализации данного модуля будет использоваться динамическая библиотека, реализующая машину вывода CLIPS.</p>  <p>В статье предложен подход, обеспечивающий повышение эффективности процесса создания расширяемого и настраиваемого компонентного программного обеспечения. Многокомпонентные программные системы автоматизации исследований, разработанные с использованием данного подхода, способны решать широкий круг исследовательских задач в различных предметных областях, в частности, при исследовании динамики опасных процессов в нефтехимии.</p>  <p>Эффективность решения исследовательских задач при помощи компонентного программного обеспечения зависит от набора доступных методов, реализованных в виде компонентов. В данной работе предложена концепция компонента, реализующего продукционную экспертную систему, приведено описание его функций, архитектуры и функциональных модулей. </p>  <p>Применение компонента продукционной экспертной системы обеспечит возможность использования логического вывода в процессе решения задач планирования, диагностики и проектирования машин и конструкций, а также при интеллектуализации поведения других компонентов. </p>    <p>Литература</p>    <p>1.   Берман А.Ф. Деградация механических систем. Новосибирск: Наука, 1998.</p>  <p>2.   Heineman G.T., Councill W.T. Component-Based Software Engineering: Putting the Pieces Together. Addison-Wesley, 2001.</p>  <p>3.   Павлов А.И. Подход к автоматизации исследования надежности механических систем // Информационно-вычислительные технологии и их приложения: матер. Междунар. науч.-технич. конф. Пенза: РИО ПГСХА, 2007. С. 137–139.</p>  <p>4.   Павлов А.И., Юрин А.Ю. Компонентный подход: модуль правдоподобного вывода по прецедентам // Программные продукты и системы. 2008. № 3. С. 55–58. </p>  <p>5.   CLIPS: A Tool for building Expert Systems // Sourceforge.net. URL: http://clipsrules.sourceforge.net/ (дата обращения: 09.05.2008).</div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2556</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2556">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 3 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=91">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

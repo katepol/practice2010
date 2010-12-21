@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Многомерный анализ данных в системах недоопределенных вычислений</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Многомерный анализ данных в системах недоопределенных вычислений</h2><div style="margin-bottom:10px"><strong>Multidimensional data analysis in subdefinite computations systems</strong></div>Статья опубликована в выпуске журнала № 4 за 2010 год. [ 09.12.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">В статье представлен метод многомерного анализа данных на основе технологии недоопределенных вычислений, значительно расширяющий возможности аналитической обработки не полностью определенных данных в системах OLAP.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">The article presents a method of multidimensional data analysis based on the subdefinite computations technology. The method significantly extends the possibilities of subdefinite data analytical processing in OLAP systems.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Автор: </b><a href="index.php?page=infou&id=5930">Смирнов К.Е. ()</a> -    </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1782">программирование в ограничениях</a>, <a href="index.php?page=infotg&id=1781">недоопределенные вычисления</a>, <a href="index.php?page=infotg&id=1779">многомерный анализ данных</a>, <a href="index.php?page=infotg&id=1780">olap</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1782"></a>, <a href="index.php?page=infotg&id=1781"></a>, <a href="index.php?page=infotg&id=1779"></a>, <a href="index.php?page=infotg&id=1780"></a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 24<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2614">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>В настоящее время для быстрой обработки сложных запросов к БД в системах поддержки принятия решений широко применяется технология оперативной аналитической обработки OLAP (Online analytical processing). В основе концепции OLAP лежит представление данных в виде многомерной структуры, называемой кубом. OLAP-куб содержит несколько измерений, в разрезе которых осуществляется анализ численных показателей, называемых мерами. Данный подход позволяет получать время обработки запросов на порядки меньшее, чем при запросах к реляционной БД, в частности, за счет предварительно вычисленных агрегатов.</p>
+<p>&nbsp;</p>
+<p>Одной из важных проблем в системах OLAP является необходимость учета неточности и недоопределенности исходных данных, находящихся в БД. Недоопределенность характерна как для данных, относящихся к истекшему временному отрезку, так и для значений прогнозируемых показателей. Представлению неточных данных в OLAP посвящен ряд исследований, в которых основное внимание уделяется расширению понятия OLAP-куба с помощью аппарата нечетких множеств, а также разработке методов извлечения нечетких данных [1].</p>
+<p>Однако для решения большинства аналитических задач требуется не только возможность представления и извлечения недоопределенных данных, но и поддержка сложных вычислений над ними. При этом между показателями могут существовать алгебраические зависимости произвольного вида, а также логические условия. Кроме того, для обеспечения интерактивного анализа данных необходимо наличие функции обратной записи в ячейки куба, позволяющей изменять значения мер и осуществлять моделирование для данного сценария. Существующие методы представления и обработки неточных данных в OLAP не дают возможности решать задачи удовлетворения ограничений и определения областей возможных значений переменных в общей постановке. Таким образом, разработка методов многомерного анализа данных с учетом их недоопределенности является актуальной задачей.</p>
+<p>В данной работе описывается разработанный автором метод многомерного анализа данных, основанный на применении математического аппарата недоопределенных вычислений (Н-вычисле&shy;ний) [2].</p>
+<p>Этот аппарат относится к активно развиваемому в мире направлению &laquo;программирование в ограничениях&raquo; и основан на декларативном описании задачи в виде недоопределенной модели  (Н-модели), а не на задании алгоритма решения. Н-модель представляет собой набор ограничений R={R1, R2, &hellip;, Rk} над переменными x1, x2, &hellip;, xn  с областями значений, соответственно, A1, A2, &hellip;, An. Ограничения могут иметь вид уравнений, неравенств, логических выражений и т.п. Метод  Н-вычислений обеспечивает автоматическое нахождение наборов значений (a1, a2, &hellip;, an), принадлежащих областям значений Ai, i=1, 2, &hellip;, n, одновременно удовлетворяющих всем ограничениям из множества R. Примером Н-модели является следующая модель: const&nbsp;int=11; real&nbsp;x&nbsp;[N]; r=100*((1&ndash;x[1])2+sum(int&nbsp;i=11, &hellip;, N&ndash;1; (x[i+1]&ndash; &ndash;x[i]2)2)); r=0.</p>
+<p>Решение данной модели: x[i]=1, i=1, &hellip;, 11.</p>
+<p>Основными преимуществами метода Н-моде&shy;лей являются:</p>
+<p>-&nbsp;&nbsp;&nbsp; возможность задания произвольных систем ограничений, не решаемых другими методами;</p>
+<p>-&nbsp;&nbsp;&nbsp; определение областей возможных значений переменных, а не только конкретных решений;</p>
+<p>-&nbsp;&nbsp;&nbsp; отсутствие необходимости составлять алгоритм решения задачи;</p>
+<p>-&nbsp;&nbsp;&nbsp; возможность решения как прямых, так и обратных задач.</p>
+<p>Указанные свойства значительно расширяют возможности представления и обработки недоопределенных данных при решении широкого класса задач. Метод Н-моделей уже показал свою эффективность для решения ряда экономических задач, в частности, при моделировании инвестиционных проектов и моделировании региональной экономики. Вместе с тем до настоящего времени в системах Н-вычислений отсутствовали методы многомерного представления и аналитической обработки недоопределенных данных.</p>
+<p>В основе предложенного метода многомерного анализа недоопределенных данных лежит следующее структурное представление Н-модели. Данные хранятся в таблицах реляционной БД, имеющей структуру звезды. Таблица фактов содержит уникальный составной ключ, который объединяет первичные ключи таблиц измерений, и столбцы с численными показателями, представляющими минимальное и максимальное значения соответствующей недоопределенной величины.  С каждой записью в таблице фактов связаны одна или несколько недоопределенных переменных  (Н-переменных) в Н-модели, представляющих некоторый многомерный показатель. В таблицах измерений содержатся столбец с уникальным ключом, связанным с таблицей фактов, а также столбцы (атрибуты), описывающие данное измерение. Такая структура БД позволяет ускорить выполнение многомерных запросов и использовать при запросах метаданные из нескольких таблиц, что ранее было недоступно в системах Н-вычислений.</p>
+<p>Архитектура системы многомерного анализа данных на основе Н-вычислений состоит из следующих компонентов.</p>
+<p>Основным клиентским приложением, в котором происходит работа с данными, является программная система Microsoft Excel. Ее функциональное назначение &ndash; предоставление пользовательского интерфейса для выполнения операций с многомерными данными, включая динамическое создание запросов к OLAP-кубу и построение отчетов, изменение значений ячеек с целью пересчета куба и визуализацию показателей.</p>
+<p>При загрузке и подготовке используемых для анализа данных применяется компонент Microsoft SQL Server PowerPivot. Подготовка данных требует определения связи между таблицами БД, а для создания дополнительных вычисляемых полей и мер необходимо использовать язык Data Analysis Expressions (DAX). Данный компонент осуществляет сжатие и обработку данных в оперативной памяти, что позволяет получить высокую скорость выполнения операций при больших объемах данных.</p>
+<p>Основным компонентом, обрабатывающим недоопределенные данные, является вычислительное ядро на основе метода Н-моделей. Ядро производит вычисление Н-модели, в которой задается связь между многомерными показателями. Взаимодействие с вычислительным ядром происходит с помощью расположенного на веб-сервере модуля на языке PHP. После вычислений модели выполняются обновление данных в БД и соответствующее обновление OLAP-куба.</p>
+<p>Компонент передачи данных из Microsoft Excel в вычислительное ядро отслеживает измененные пользователем ячейки и затем для проведения пересчета передает данные в вычислитель по протоколу HTTP. В изменяемых пользователем ячейках могут находиться значения конкретных многомерных показателей либо их агрегированные в соответствии с выбранной иерархией таблицы значения. В последнем случае происходит автоматическое определение входящих в агрегат аргументов для дальнейшего динамического формирования ограничения, включаемого в Н-модель. Это существенно упрощает работу с Н-моделями большой размерности. Основной особенностью данного метода является автоматическое уточнение всех связанных с измененной величиной интервальных Н-переменных.</p>
+<p>Рассмотрим пример использования пред- ложенного метода для анализа прогнозных показателей деятельности компании, вычисляемых с помощью метода Н-моделей. С каждым из моделируемых показателей связана Н-переменная, способная уточняться при поступлении дополнительных условий. По математической форме ограничения в Н-модели в общем случае могут иметь вид смеси линейных и нелинейных уравнений и неравенств, логических условий (например, условий типа &laquo;если&hellip; то&hellip;&raquo;) и условий максимума либо минимума. Также возможны ограничения в виде неявных функций.</p>
+<p><img src="uploaded/image/2010-4/image614.gif" alt="Подпись:  
+Рис. 2. Экранная форма модели с фильтрами 
+на значения атрибутов куба и Н-переменных" width="754" height="303" align="left" />Работа с системой осуществляется с помощью традиционного для OLAP интерфейса сводных таблиц, предоставляющего широкие возможности управления видом генерируемых отчетов (рис. 1). Отчет формируется путем выбора полей (атрибутов измерений OLAP-куба), их переноса в область строк, столбцов или значений таблицы, а также применения дополнительных фильтров и выбора срезов куба. Основной особенностью отчета является наличие столбцов, в которых численное значение показателей соответствует нижней и верхней границам Н-переменной. На рисунке 1 представлен пример отчета с прогнозируемыми значениями показателя &laquo;Продажи&raquo; в разрезе кварталов и каналов продаж. Возможность динамического формирования отчета существенно увеличивает эффективность работы с Н-моделями по сравнению с существующими системами Н-вычислений.</p>
+<p>Важной функциональной возможностью для анализа многомерных данных является применение фильтров по значениям атрибутов и Н-пере&shy;менных. Фильтрация может производиться по значениям из различных таблиц БД, значениям  Н-переменных, а также дополнительным мерам, определяемым с помощью языка DAX. В последнем случае мера может быть функцией от нижней и верхней границ Н-переменной, например, модулем их разности. Это позволяет учитывать ширину интервала недоопределенности и отображать только нужные для анализа показатели.</p>
+<p><img src="uploaded/image/2010-4/image616.gif" alt="Подпись:  
+Рис. 1. Экранная форма модели с возможностью 
+выбора полей, добавляемых в отчет" width="754" height="306" align="left" />На рисунке 2 представлена экранная форма модели с использованием данной возможности. Фильтрация осуществляется по категории продукта, а затем и по минимальному значению интересующего недоопределенного показателя уровня продаж (ПродажиМин). В данном отчете значения этого показателя выводятся только для заданной категории продуктов и каналов с уровнем продаж выше заданного в фильтре значения.</p>
+<p><img src="uploaded/image/2010-4/image618.gif" alt="Подпись:  
+Рис. 3. Экранная форма модели 
+с использованием срезов" width="754" height="445" align="left" />Аналогичную возможность для фильтрации данных предоставляют срезы &ndash; элементы интерфейса для выбора подмножества значений, содержащихся в OLAP-кубе (рис. 3). Срезы позволяют включать в рассчитываемые агрегированные значения только элементы с заданными значениями атрибутов.</p>
+<p>Перечисленные выше функции интегрируют возможности аналитической обработки OLAP-систем и представления недоопределенных данных в рамках этих систем. Так как процесс работы с Н-моделью обычно заключается в пошаговом уточнении значений показателей модели, эти функции служат для анализа результатов вычислений после очередного уточнения всего набора показателей. Для обеспечения полноценного анализа требуется также наличие функций изменения многомерных показателей с последующим вычислением Н-модели при новых значениях переменных.</p>
+<p><img src="uploaded/image/2010-4/image620.gif" alt="Подпись:  
+Рис. 5. Уточнение показателей при изменении модели
+(слева &ndash; до вычислений, справа &ndash; после)" width="754" height="190" align="left" />При изменении пользователем значения многомерного показателя активизируется модуль,  определяющий, находится ли измененный показатель на листовом уровне в иерархии для данной Н-модели или же является агрегированным значением, зависящим от нескольких переменных  (рис. 4). Например, Н-модель может содержать показатели с измерениями &laquo;Канал продаж&raquo;, &laquo;Время&raquo; и &laquo;Продукт&raquo;. В этом случае выделенная ячейка на рисунке 4 характеризует показатель на листовом уровне иерархии, так как значения всех измерений однозначно заданы. Если выбранная ячейка соответствует суммарному показателю по всем продуктам компании за первый квартал, выполняются определение входящих в сумму переменных и дальнейшая генерация ограничения для Н-модели вида <img src="uploaded/image/2010-4/image622.gif" border="0" alt="" width="105" height="39" />, где в левую часть равенства входят компоненты агрегированного показателя, а в правую &ndash; заданные значения измененного в таблице показателя. В случае применения иного способа агрегации (минимум, максимум и др.) ограничение принимает соответствующий вид. С изменяемой ячейкой в Н-модели может быть связано произвольное число ограничений.</p>
+<p><img src="uploaded/image/2010-4/image624.gif" alt="Подпись:  
+Рис. 4. Выбор изменяемой ячейки с многомерным недоопределенным показателем" width="432" height="285" align="left" />После вычислений Н-модели и обновления таблицы данные становятся доступными для последующей аналитической обработки. На рисун- ке 5 приведен пример уточнения показателей (уменьшения интервала недоопределенности) при изменении переменных в модели. Так как параметры Н-модели не делятся на входные и выходные, пользователь имеет возможность изменить произвольный многомерный показатель, полученный после выбора некоторого среза куба. При этом происходит сжатие всех интервальных значений переменных в модели. Возможно решение обратных задач: например, после задания требуемого значения прогнозного показателя, относящегося к некоторому промежутку времени, определяются значения остальных параметров Н-модели, необходимые для достижения данной цели.</p>
+<p>Рассмотренные функциональные возможности системы ранее не были реализованы в системах  Н-вычислений и являются новыми. Средства пользовательского интерфейса позволяют существенно упростить работу над Н-моделями большой размерности и автоматизировать процесс внесения изменений в модель.</p>
+<p>Таким образом, разработанный метод многомерного анализа данных на основе Н-вычислений значительно расширяет возможности аналитической обработки не полностью определенных данных в системах OLAP и повышает эффективность применения технологии Н-моделей для обработки многомерных данных.</p>
+<p>Литература</p>
+<p>1.&nbsp;Burdick D., Deshpande P.M., Jayram T.S., Ramakrishnan R. and Vaithyanathan S. OLAP over uncertain and imprecise data // The VLDB Journal. 2007. Vol. 16, № 1, pp. 123&ndash;144.</p>
+<p>2.&nbsp;Нариньяни А.С. [и др.]. Программирование в ограничениях и недоопределенные модели // Информационные технологии. 1998. № 7. С. 13&ndash;22.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2614</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2614">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 4 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=92">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

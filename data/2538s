@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Фрактальная модель лесных пожаров</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Фрактальная модель лесных пожаров</h2><div style="margin-bottom:10px"><strong>Fractal model of a forest fire</strong></div>Статья опубликована в выпуске журнала № 2 за 2010 год. [ 27.05.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">В работе построена модель лесного пожара, учитывающая фрактальный характер фронта горения. Найдены ана-литические зависимости скорости распространения лесного пожара и размеров сгоревшего участка от фрактальной размерности, времени и параметров лесного массива. Составлена и реализована программа по вычислению фрак-тальной размерности лесных массивов по данным аэрофотосъемки.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">In this work the model of forest fire considering fractal character of front of burning is constructed. Analytical associations of a velocity of distribution of forest fire and sizes of the burnt down site on fractal dimension, time and large forest parameters are discovered. The program on computation of fractal dimensions of forested area by data of aerial photo coverage is made and realized. </em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=5428">Кудинов А.Н. (tsvet@tversu.ru)</a> - Тверской государственный университет Доктор физико-математических наук Ph.D., <a href="index.php?page=infou&id=5430">Цветков В.П. (tsvet@tversu.ru)</a> - Тверской государственный университет   , <a href="index.php?page=infou&id=5431">Цветков И.В. (tsvet@tversu.ru)</a> - Тверской государственный университет Доктор физико-математических наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1624">фронт горения</a>, <a href="index.php?page=infotg&id=1459">фрактальный анализ</a>, <a href="index.php?page=infotg&id=1119">математическая модель</a>, <a href="index.php?page=infotg&id=1623">лесной пожар</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1624">front of burning</a>, <a href="index.php?page=infotg&id=1459">fractal analysis</a>, <a href="index.php?page=infotg&id=1119">mathematical model</a>, <a href="index.php?page=infotg&id=1623">forest fire</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 568<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2538">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Леса занимают более 74&nbsp;% территории РФ, и каждый лесной пожар наносит существенный вред экономике. Так, по данным МЧС РФ, в 2008 г. произошло более 30 тысяч лесных пожаров, а общая площадь лесных массивов, охваченных огнем, составила более 1 млн га [1].</p>
+<p>&nbsp;</p>
+<p>Наиболее часто возникают низовые лесные пожары, при которых выгорают лесная подстилка, подрост и подлесок, травянистый и кустарниковый покров, валежник, корневища деревьев и т.п.</p>
+<p>В засушливый период при ветре могут возникать верховые пожары, при которых огонь распространяется по кронам деревьев преимущественно хвойных пород. Горение торфа может вызвать подземные пожары.</p>
+<p>В последние годы наука существенно продвинулась в разработке математических моделей лесных пожаров [2].</p>
+<p>Целью настоящей работы является построение модели лесных пожаров, учитывающей фрактальные свойства этих явлений. Фрактальные свойства лесных пожаров очевидны из тесной аналогии фронта горения и береговой линии. Фрактальный характер свойства береговой линии рассмотрен подробно в [3].</p>
+<p>Одна из главных характеристик лесного пожара &ndash; скорость его распространения V. Для низового пожара характерная скорость VH составляет 0,1&ndash;3 м/мин., для верховых лесных пожаров температура в очаге достигает 1100 оС, а скорость их распространения VB при ветре &ndash; 100 м/мин. При безветрии скорость распространения лесного пожара ниже, VB&raquo;2&ndash;3 км/час.</p>
+<p>Нормальная скорость пламени лесного пожара, если фронт горения представляет гладкую кривую, может быть оценена как <img src="uploaded/image/2010-2/image864.gif" border="0" alt="" width="40" height="36" />. Здесь t &ndash; характерное время горения; d &ndash; ширина зоны горения [4].</p>
+<p>Фрактальный характер кривой фронта горения эффективно будет увеличивать значение d по сравнению с гладким фронтом.</p>
+<p>Длина фрактальной кривой L существенно зависит от масштаба [3]: <img src="uploaded/image/2010-2/image866.gif" border="0" alt="" width="72" height="43" />. Здесь D &ndash; значение фрактальной размерности; L0 &ndash; значение L для гладкой кривой D=1. В нашем случае <img src="uploaded/image/2010-2/image868.gif" border="0" alt="" width="45" height="40" />, где h &ndash; размер зоны горения; hmin &ndash; минимальное расстояние между фрагментами в зоне горения. Величина h имеет порядок размера участка выгоревшего леса, hmin &ndash; порядок характерного расстояния между деревьями и кустарниками горящего леса.</p>
+<p>Фрактальный характер зоны горения эффективно увеличивает ширину зоны горения, а именно <img src="uploaded/image/2010-2/image870.gif" border="0" alt="" width="63" height="40" />, где d0 &ndash; ширина зоны горения для гладкого фронта.</p>
+<p>В результате скорость распространения лесного пожара v с учетом фрактальности фронта горения имеет вид</p>
+<p><img src="uploaded/image/2010-2/image872.gif" border="0" alt="" width="85" height="47" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+<p>Значение D можно оценить по измерению фрактальной размерности участка леса до возгорания по данным аэрофотосъемки. Как фрактальная размерность фронта горения, так и фрактальная размерность изображения участка леса на снимке определяются геометрией расположения   его деревьев и кустов, поэтому вполне разумно считать их значения достаточно близкими.</p>
+<p><img src="uploaded/image/2010-2/image874.gif" alt="Подпись:  
+Примечание: прямая 1 &ndash; D=1,1; 2 &ndash; D=1,3; 3 &ndash; D=1,5; 4 &ndash; D=1,7." width="294" height="195" align="left" />В работе [5] был описан один из способов определения фрактальной размерности изображений. На основе классического клеточного алгоритма, предложенного в [3], в среде программирования Delphi была создана программа определения фрактальной размерности изображения в формате *.bmp. На вход программы подавались изображения, отсканированные в 256 оттенках серого с разрешением не менее 1000 точек/дюйм. Для каждого изображения по тестовому участку выбирался пороговый уровень серого, на основе которого изображение переводилось в двутоновое.</p>
+<p>Далее производился отсев отдельных элементов, размером меньше заданного, не имеющих связи между собой. После чего задавались начальное и конечное значения шага сетки и число промежуточных замеров.</p>
+<p>Фрактальная размерность определялась как тангенс угла наклона прямой, аппроксимирующей зависимость числа ячеек сетки, в которые попали элементы изображения, от шага сетки в дважды логарифмических координатах.</p>
+<p>Для компенсации ошибки метода производилось нормирование полученного результата по изображению, сгенерированному специальной программой создания изображения из случайно окрашенных элементов, близких по характерному размеру элементам анализируемого изображения.</p>
+<p>Были проанализированы снимки, выполненные с самолета локатором бокового обзора, ряда участков леса в Осташковском районе Тверской области. В ходе исследований получены значения в диапазоне D=1,44&ndash;1,53.</p>
+<p>Из (1) следует, что на первых этапах возгорания h&raquo;hmin, то есть скорость распространения огня минимальна. Само значение v0 будет определяться конечным состоянием леса в зоне возгорания, погодными условиями, состоянием и структурой подлеска, леса и характером ветра.</p>
+<p>При h&gt;&gt;hmin величина v будет существенно больше v0. Так, при h=1 км и hmin=10 м и D=1,5 имеем v=10v0, то есть скорость v возрастает на порядок. На основе формулы (1) получена интересная закономерность</p>
+<p><img src="uploaded/image/2010-2/image876.gif" border="0" alt="" width="94" height="47" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)</p>
+<p>где <img src="uploaded/image/2010-2/image878.gif" border="0" alt="" width="111" height="46" />, <img src="uploaded/image/2010-2/image880.gif" border="0" alt="" width="112" height="46" />.</p>
+<p>Сравнение (2) с опытными данными позволяет сделать оценку D непосредственно по наблюдению за зависимостью скорости лесного пожара от его размеров. График зависимости логарифма отношения <img src="uploaded/image/2010-2/image882.gif" border="0" alt="" width="32" height="44" />&nbsp;от логарифма отношения <img src="uploaded/image/2010-2/image884.gif" border="0" alt="" width="41" height="44" />&nbsp;при различных значениях D приводится на рисунке в дважды логарифмических координатах.</p>
+<p>На основании (1) составлено дифференциальное уравнение, определяющее зависимость диаметра области пожара от времени.</p>
+<p>Используя соотношение h=v и (1), получим</p>
+<p><img src="uploaded/image/2010-2/image886.gif" border="0" alt="" width="86" height="47" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p>Обезразмерим (5), введя переменную <img src="uploaded/image/2010-2/image888.gif" border="0" alt="" width="47" height="40" />, и будем считать h(t=0)=hmin, то есть y(t=0)=1.</p>
+<p>Тогда из (3) следует</p>
+<p><img src="uploaded/image/2010-2/image890.gif" border="0" alt="" width="123" height="52" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)</p>
+<p>где H=2&ndash;D &ndash; постоянная Херста.</p>
+<p>Рассмотрим несколько характерных значений H и D при H=1 и D=1:</p>
+<p>H=hminv0t.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5)</p>
+<p>Формула (5) соответствует гладкому фронту горения и описывает линейный характер роста размера области горения лесного массива.</p>
+<p>При H=0,5 и D=1,5</p>
+<p><img src="uploaded/image/2010-2/image892.gif" border="0" alt="" width="113" height="47" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6)</p>
+<p>В данном случае получен параболический нелинейный рост h с ростом времени.</p>
+<p>Очевидно, что тушение такого лесного пожара надо проводить в кратчайшее время.</p>
+<p>И наконец, если H=0 и D=2, то</p>
+<p><img src="uploaded/image/2010-2/image894.gif" border="0" alt="" width="70" height="33" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (7)</p>
+<p>Этот случай, на взгляд авторов, описывает наиболее быстрый, почти мгновенный характер горения лесного массива.</p>
+<p>Из построенной математической модели лесного пожара, учитывающей фрактальный характер фронта горения, следуют два важных вывода. Скорость распространения лесного пожара v можно существенно уменьшить, увеличивая hmin и уменьшая D. А этого можно достичь, проводя санитарную рубку деревьев и кустов и соблюдая геометрический порядок при высадке лесонасаждений.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; URL: www.mchs.gov.ru (дата обращения: 06.06.2009).</p>
+<p>2.&nbsp;&nbsp; Эндрюс П., Финни М. Новый взгляд на лесные пожары // В мире науки. 2007. № 10.</p>
+<p>3.&nbsp;&nbsp; Мандельброт Б. Фрактальная геометрия природы. М.: Наука, 1992.</p>
+<p>4.&nbsp;&nbsp; Ландау Л.Д., Лифшиц Е.М. Гидродинамика. М.: Наука, 1988. Т. 6.</p>
+<p>5.&nbsp;&nbsp; Тищенко А.П., Цветков И.В. Фрактальная размерность текстур природных объектов и их идентификация методом фрактального анализа // Моделирование сложных систем: тематич. сб. Тверь: Изд-во ТвГУ, 1998. Вып. 1.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2538</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2538">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 2 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=90">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

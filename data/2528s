@@ -1,0 +1,944 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Моделирование взаимодействия робота с внешней средой на основе пространственных логик и распространения ограничений</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Моделирование взаимодействия робота с внешней средой на основе пространственных логик и распространения ограничений</h2><div style="margin-bottom:10px"><strong>Modelling robot’s interaction with external environment  on the basis of spatial logics and constraints propagation</strong></div>Статья опубликована в выпуске журнала № 2 за 2010 год. [ 27.05.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Проанализирована эволюция поколений роботов, сформулированы требования к роботам четвертого поколения как когнитивным агентам. Показано, что важнейшим качеством когнитивного агента является ситуативное гранули-рование информации, необходимое для работы в условиях неопределенности. В контексте построения пространст-венных гранул введена статическая пространственная логика для моделирования взаимодействия робота с внешней средой. Исследованы варианты распространения нечетких лингвистических ограничений в задачах анализа про-странственной ситуации.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">The evolution of robots generations is analyzed.  The necessary requirements to develop 4th generation robots as cognitive agents are formulated. It is shown that an important property of cognitive agent is situative information granulation enabling the work under uncertainty. In the context of constructing spatial granules a static spatial logic is introduced to model robot’s interaction with external environment. It is based on combining Pospelov’s pseudophysical logics with Zadeh’s generalized constraints. Some versions of fuzzy linguistic constraints propagation for the problems of spatial situation analysis are investigated.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=4010">Тарасов В.Б. (tarasov@rk9.bmstu.ru)</a> - Московский государственный технический университет им. Н.Э. Баумана Кандидат технический наук Ph.D., <a href="index.php?page=infou&id=5865">Калуцкая А.П. (k_a_p@rbcmail.ru)</a> - Московский государственный технический университет им. Н.Э. Баумана   </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1589">среда</a>, <a href="index.php?page=infotg&id=1592">псевдофизические логики</a>, <a href="index.php?page=infotg&id=1594">пространственные логики</a>, <a href="index.php?page=infotg&id=1593">обобщенные ограничения</a>, <a href="index.php?page=infotg&id=1595">логики расстояний и направлений</a>, <a href="index.php?page=infotg&id=1591">когнитивный робот</a>, <a href="index.php?page=infotg&id=1590">взаимодействие агента со средой</a>, <a href="index.php?page=infotg&id=1588">автономный агент</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1589">environment</a>, <a href="index.php?page=infotg&id=1592">pseudophysical logics</a>, <a href="index.php?page=infotg&id=1594">spatial logics</a>, <a href="index.php?page=infotg&id=1593">generalized constraints</a>, <a href="index.php?page=infotg&id=1595">distance and orientation logic</a>, <a href="index.php?page=infotg&id=1591">cognitive robot</a>, <a href="index.php?page=infotg&id=1590">robot-environment interaction</a>, <a href="index.php?page=infotg&id=1588">autonomous agent</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 439<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2528">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Проблема моделирования взаимодействия искусственных агентов с внешней средой является одной из центральных при создании и использовании агентно-ориентированных технологий в различных областях: от мобильных софтботов, перемещающихся в сети Интернет, до автономных роботов, функционирующих в экстремальных средах, или многоагентных комплексов, входящих в состав интеллектуальных производств. Искусственный агент представляет собой автономную, открытую систему, помещенную в некоторую среду, причем эта система обладает собственным поведением, удовлетворяющим некоторым экстремальным принципам [1]. Минимальный набор базовых характеристик агента, отличающих его от обычных объектов информатики и искусственного интеллекта, включает такие свойства, как активность, реактивность, автономность, общительность и целенаправленность.</p>
+<p>&nbsp;</p>
+<p>В статье рассматриваются индивидуальные, физические, мобильные, автономные агенты. Примерами таких агентов служат интеллектуальные роботы, функционирующие в экстремальных средах. Здесь ключевую роль играет моделирование взаимодействия робота со средой, и в первую очередь, описание процесса комплексирования информации, поступающей на датчики (сенсоры) робота, а также диалога человека-пользователя с роботом на ограниченном естественном языке [2]. Соответствующее отношение моделирования [3] является нечетким, то есть отображает полиморфное соответствие между компонентами физического и ментального мира робота.</p>
+<p>&nbsp;</p>
+<p>На пути к когнитивным роботам</p>
+<p>В работах [4, 5] описаны три поколения роботов: промышленные, очувствленные, интегральные. Роботы первого поколения работают в простом, строго фиксированном внешнем мире, соответственно, модель внешней среды у них отсутствует. Как следствие, управляющая программа является жесткой, и ее надо менять даже тогда, когда меняется положение хотя бы одного объекта в сфере действия промышленного робота. Конечно, промышленные роботы не имеют автономности.</p>
+<p>Роботы второго поколения уже являются очувствленными, то есть снабжены системой тактильных датчиков, позволяющих воспринимать информацию о мире. Внешний мир роботов второго поколения уже не фиксирован строго, поэтому у них появляются простейшие, одношаговые планы, которые в основном сводятся к подстановке конкретных координат в программу с параметрами. Роботы этого поколения также не обладают автономностью.</p>
+<p>Роботы третьего поколения называются интегральными (этот термин был предложен Н. Нильсоном) и обладают некоторой степенью интеллектуальности. Для определения понятия &laquo;интегральный робот&raquo; обычно используют следующие пять групп робототехнических устройств: 1) системы восприятия зрительной, слуховой, тактильной и других типов информации о внешнем мире; 2) системы воздействия на объекты внешнего мира &ndash; манипуляторы, педипуляторы и пр.; 3) системы, обеспечивающие перемещение робота, &ndash; колесные, гусеничные, шагающие, плавающие, летающие движители и аппараты; 4) системы целеполагания и планирования действий робота, системы решения задач; 5) системы, обеспечивающие коммуникацию робота с человеком-оператором и другими роботами на языках общения различных уровней вплоть до естественного языка. Любой конкретный робот сочетает в себе системы, принадлежащие указанным группам. Это позволяет классифицировать роботы третьего поколения по степени интеграции и набору входящих в них систем.</p>
+<p><img src="uploaded/image/2010-2/image617.gif" alt="Подпись:  
+Рис. 1. Общая структура 
+интеллектуального робота" width="295" height="304" align="left" />Согласно [4], уровень интеллектуальности робота оценивают по следующим параметрам: сложность и динамичность внешней среды; богатство восприятия роботом информации о внешней среде; гибкость планирующей и управляющей систем робота; степень его автономности. Но главный признак интеллектуальности &ndash; наличие развитой модели внешней среды (динамической БЗ), что позволяет роботу действовать в условиях неопределенности. Общая структура интеллектуального робота представлена на рисунке 1.</p>
+<p>Роботы четвертого поколения должны быть способными работать в открытых динамических мирах, строить сложные многоцелевые планы поведения, определяемые оценкой внешней ситуации и внутренней мотивацией робота [4].</p>
+<p>Следовательно, можно утверждать, что роботы нового поколения имеют статус когнитивного агента. Когнитивная функция обеспечивает процессы познания роботом внешнего мира, других агентов, а также самопознание. При этом ос- новными когнитивными процессами являются восприятие среды, построение ее обобщенного представления, понимание закономерностей взаимодействия и поведения. Сюда же относятся  процессы распределения ресурсов (в частности внимания), прогнозирования и планирования поведения, формирования рассуждений о собственных состояниях и состояниях других объектов и агентов.</p>
+<p>Таким образом, когнитивный робот должен иметь БЗ, встроенный механизм мотивации и целеобразования (или интерпретации целей пользователя), возможность формирования своих мнений и предпочтений по выполняемой задаче, способность перемещаться в реальном физическом мире и выполнять как рабочие, так и гностические (познавательные) движения. Подобные роботы в первую очередь требуются для функционирования в экстремальных средах.</p>
+<p>На взгляд авторов, важнейшей характеристикой когнитивного робота должна быть способность к гранулированию информации &ndash; формированию информационных &laquo;зерен&raquo; различной точности. Гранулой называется семейство объектов, связанных между собой либо функционально, либо отношениями сходства, эквивалентности или неразличимости. Гранулярные (приближенные) структуры обычно противопоставляются сингулярным (точным, одноэлементным): различия между ними подчас интерпретируются как различия между данными и уровнями знаний (величинами гранул). Примером простейшей операции грануляции служит разбиение целого на части (в общем случае приближенное и нечеткое). Классическими примерами математических гранулярных структур служат интервалы, распределения, приближенные множества, нечеткие множества. При создании когнитивных роботов следует в первую очередь реализовать в них процедуры гранулирования пространства и времени. В частности, речь идет о построении модели внешней среды робота с использованием естественных пространственных отношений.</p>
+<p>В данной работе для этого используются псевдофизические пространственные логики вместе с обобщенными ограничениями.</p>
+<p>Псевдофизические логики и обобщенные ограничения</p>
+<p>Логико-лингвистические методы описания когнитивных роботов основаны на том, что поведение робота выражается в терминах ограниченного естественного языка и может быть представлено с помощью лингвистических переменных. При этом последние используются в качестве пропозициональных переменных псевдофизических логик (ПФЛ). Под ПФЛ понимается логика, отражающая восприятие агентом закономерностей внешней физической среды [6]. Примерами ПФЛ являются временные логики, пространственные, логики действий и т.п.</p>
+<p>В целом ПФЛ можно охарактеризовать как логики отношений; логики на шкалах; логики, которые в качестве аксиом содержат утверждения, вытекающие из восприятия мира человеком, причем эти утверждения должны быть обоснованы результатами соответствующих психологических экспериментов; неклассические, многозначные, нечеткие, лингвистические логики.</p>
+<p>Псевдофизическая логическая система представляет собой семейство взаимосвязанных логических подсистем, которые можно отнести к двум основным уровням. На первом уровне находятся пространственная, временная, каузальная логика, а также логика движений и действий. На втором, более высоком уровне находятся логики мнений, целей, оценок, норм и пр. Логики первого уровня непосредственно связаны с взаимодействием роботов с внешней средой.</p>
+<p>Отметим, что ПФЛ тесно связаны с понятием нечеткого отношения моделирования [3]. Пусть среда, в которой находится робот, характеризуется множеством состояний W={w1, &hellip;, wm}. Будем характеризовать представление роботом среды с помощью нечеткого отображения c: W<img src="uploaded/image/2010-2/image618.gif" alt="" width="22" height="20" />M, которое ставит в соответствие некоторому элементу среды w&Icirc;W нечеткое множество элементов ее внутренней модели m&Icirc;M, или, что одно и то же, с помощью нечеткого отношения моделирования R: W&acute;M&reg;[0, 1]. Отношение моделирования удобно записать в виде матрицы размером m&acute;n, где на пересечении столбца wi, i=1,&hellip;, m, и строки mj, j=1, &hellip;, n, находится число mR(wi, mj). Это число представляет собой коэффициент соответствия между данным состоянием среды, например, &laquo;расстояние 2 м от робота до препятствия&raquo;, и его внутренним представлением роботом в виде лингвистического значения &laquo;малое&raquo;. Пример матрицы нечеткого отношения моделирования для ситуации приближения интеллектуального робота к препятствию приведен в таблице 1.</p>
+<p>&nbsp;Таблица 1</p>
+<table border="1" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr>
+<td rowspan="2" width="127" valign="top">
+<p>Качественная   оценка расстояния</p>
+</td>
+<td colspan="7" width="168" valign="top">
+<p>Расстояние от   робота    до препятствия, м</p>
+</td>
+</tr>
+<tr>
+<td width="24">
+<p>0.5</p>
+</td>
+<td width="24">
+<p>1</p>
+</td>
+<td width="24">
+<p>2</p>
+</td>
+<td width="24">
+<p>5</p>
+</td>
+<td width="24">
+<p>10</p>
+</td>
+<td width="24">
+<p>20</p>
+</td>
+<td width="24">
+<p>30</p>
+</td>
+</tr>
+<tr>
+<td width="127" valign="top">
+<p>Очень близко</p>
+</td>
+<td width="24" valign="top">
+<p>1</p>
+</td>
+<td width="24" valign="top">
+<p>0.9</p>
+</td>
+<td width="24" valign="top">
+<p>0.8</p>
+</td>
+<td width="24" valign="top">
+<p>0.4</p>
+</td>
+<td width="24" valign="top">
+<p>0.2</p>
+</td>
+<td width="24" valign="top">
+<p>0</p>
+</td>
+<td width="24" valign="top">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td width="127" valign="top">
+<p>Близко</p>
+</td>
+<td width="24" valign="top">
+<p>1</p>
+</td>
+<td width="24" valign="top">
+<p>1</p>
+</td>
+<td width="24" valign="top">
+<p>0.9</p>
+</td>
+<td width="24" valign="top">
+<p>0,7</p>
+</td>
+<td width="24" valign="top">
+<p>0,3</p>
+</td>
+<td width="24" valign="top">
+<p>0,1</p>
+</td>
+<td width="24" valign="top">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td width="127" valign="top">
+<p>Не далеко и не   близко</p>
+</td>
+<td width="24" valign="top">
+<p>0</p>
+</td>
+<td width="24" valign="top">
+<p>0.2</p>
+</td>
+<td width="24" valign="top">
+<p>0.5</p>
+</td>
+<td width="24" valign="top">
+<p>1</p>
+</td>
+<td width="24" valign="top">
+<p>0.8</p>
+</td>
+<td width="24" valign="top">
+<p>0.3</p>
+</td>
+<td width="24" valign="top">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td width="127" valign="top">
+<p>Далеко</p>
+</td>
+<td width="24" valign="top">
+<p>0</p>
+</td>
+<td width="24" valign="top">
+<p>0</p>
+</td>
+<td width="24" valign="top">
+<p>0.1</p>
+</td>
+<td width="24" valign="top">
+<p>0.3</p>
+</td>
+<td width="24" valign="top">
+<p>0.6</p>
+</td>
+<td width="24" valign="top">
+<p>0.8</p>
+</td>
+<td width="24" valign="top">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="127" valign="top">
+<p>Очень далеко</p>
+</td>
+<td width="24" valign="top">
+<p>0</p>
+</td>
+<td width="24" valign="top">
+<p>0</p>
+</td>
+<td width="24" valign="top">
+<p>0</p>
+</td>
+<td width="24" valign="top">
+<p>0.2</p>
+</td>
+<td width="24" valign="top">
+<p>0.4</p>
+</td>
+<td width="24" valign="top">
+<p>0.7</p>
+</td>
+<td width="24" valign="top">
+<p>1</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>В настоящей работе предложены варианты построения ПФЛ с помощью обобщенных ограничений (а не разнородных отношений), что обеспечивает единый подход к описанию неопределенностей при взаимодействии агента с внешней средой и существенно упрощает инженерную реализацию агентно-ориентированных технологий в робототехнике. Обобщенное ограничение [7] имеет вид: GC(X)=X isr R, где X &ndash; переменная, принимающая значение на универсуме U; R &ndash; гибкое ограничение на эту переменную; isr &ndash; переменная связка, в которой r является переменной, а ее значение определяет способ, которым R ограничивает X (то есть тип ограничения и его семантику).</p>
+<p>Пространственные логики</p>
+<p>Пространственные логики подразделяются на статические и динамические. Статические пространственные логики позволяют описывать закономерности взаимного расположения объектов в пространстве с учетом расстояний между ними, ориентации объектов относительно друг друга и размеров объектов при их расположении в пространстве. Динамические пространственные логики позволяют определить величину и направление скорости движения робота и описать траекторию перемещения робота в пространстве.</p>
+<p>При разработке интеллектуальных роботов, имеющих специальные устройства для получения информации о внешнем мире (объектах, расположенных в нем), возникает проблема создания описания пространственной ситуации вокруг робота по информации, полученной от человека-операто&shy;ра на ограниченном естественном языке (рис. 1).</p>
+<p>Пространственные отношения. В пространственных логиках для робототехнических систем следует использовать нечеткие бинарные пространственные отношения трех типов: отношения для расстояний, для направлений, отношения взаимного расположения объектов.</p>
+<p>Так, отношения для расстояний обычно имеют исходные значения &laquo;близко&ndash;далеко&raquo;, на основе которых строятся составные значения &laquo;очень близко&raquo;, &laquo;довольно далеко&raquo; и пр. Соответственно, значения лингвистической переменной &laquo;Расстояние между объектами а и b&raquo; ограничиваются функциями принадлежности (распределениями возможности). Эти распределения получены в результате оценки дистанции человеком-операто&shy;ром; их можно записать в виде нечеткого лингвистического ограничения: X(a, b) is dj, где dj &ndash; термы лингвистической переменной &laquo;Расстояние&raquo;: d0 &ndash; вплотную, d1 &ndash; очень близко, d2 &ndash; близко и т.д.  (в соответствии с табл. 1). Каждое такое ограничение образует гранулу. Возможность изменения размеров и центров гранул позволяет изменять степень точности описания пространственной ситуации.</p>
+<p>Взаимная угловая ориентация между объектами обычно определяется с помощью базовых направлений, связанных с системой координат наблюдателя. В самом простом случае это впереди&ndash;сзади и справа&ndash;слева [6]. Их комбинация дает восемь базовых отношений для направлений, и лингвистическая переменная &laquo;Направление&raquo; принимает значения fi, i=1, 2, &hellip;, 8, где f1 &ndash; впереди, f2 &ndash; впереди и слева, f3 &ndash; слева и т.д.</p>
+<p>Взаимное положение объектов можно представить конъюнкцией обобщенных ограничений на расстояние и ориентацию: [X(a1; a2) is dj] &amp; [X(a1; a2) is fj]=[X(a1; a2) is dj] is fj.</p>
+<p><img src="uploaded/image/2010-2/image620.gif" alt="Подпись:  
+Рис. 2. Схема расположения
+ объектов на плоскости" width="173" height="276" align="left" />Например, отношение &laquo;робот а находится далеко и справа от объекта b&raquo; можно записать как [X(a; b)&nbsp;is&nbsp;d4]&amp;[X(a; b)&nbsp;is&nbsp;f7] = [X(a; b) is d4] is f7.</p>
+<p>Статическая пространственная логика. Главную роль в организации нечетких пространственных рассуждений робота на основе теории ограничений Л.&nbsp;Заде играет распространение нечетких ограничений от посылок к заключениям. В частности, &laquo;если робот а находится рядом с роботом b, а тот держит схватом объект с, то робот а находится вблизи объекта с&raquo;. Несомненный интерес представляет построение рассуждений на основе системы связанных между собой неоднородных ограничений, в частности, относящихся к лингвистическим переменным &laquo;Расстояние&raquo; и &laquo;Размер&raquo;.</p>
+<p>Гипотеза о влиянии размеров объектов на оценку оператором расстояния между ними [6] позволяет производить замену пространственных отношений для расстояний на размеры объектов и наоборот в соответствии с таблицей 2.</p>
+<p>Таблица 2</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="38" valign="top">
+<p>№</p>
+</td>
+<td width="168" valign="top">
+<p>Расстояние</p>
+</td>
+<td width="170" valign="top">
+<p>Размер</p>
+</td>
+</tr>
+<tr>
+<td width="38" valign="top">
+<p>0</p>
+</td>
+<td width="168" valign="top">
+<p>вплотную</p>
+</td>
+<td width="170" valign="top">
+<p>нулевой</p>
+</td>
+</tr>
+<tr>
+<td width="38" valign="top">
+<p>1</p>
+</td>
+<td width="168" valign="top">
+<p>очень   близко</p>
+</td>
+<td width="170" valign="top">
+<p>очень   маленький</p>
+</td>
+</tr>
+<tr>
+<td width="38" valign="top">
+<p>2</p>
+</td>
+<td width="168" valign="top">
+<p>близко</p>
+</td>
+<td width="170" valign="top">
+<p>маленький</p>
+</td>
+</tr>
+<tr>
+<td width="38" valign="top">
+<p>3</p>
+</td>
+<td width="168" valign="top">
+<p>не   далеко &ndash; не близко</p>
+</td>
+<td width="170" valign="top">
+<p>средний</p>
+</td>
+</tr>
+<tr>
+<td width="38" valign="top">
+<p>4</p>
+</td>
+<td width="168" valign="top">
+<p>далеко</p>
+</td>
+<td width="170" valign="top">
+<p>большой</p>
+</td>
+</tr>
+<tr>
+<td width="38" valign="top">
+<p>5</p>
+</td>
+<td width="168" valign="top">
+<p>очень   далеко</p>
+</td>
+<td width="170" valign="top">
+<p>очень   большой</p>
+</td>
+</tr>
+<tr>
+<td width="38" valign="top">
+<p>6</p>
+</td>
+<td width="168" valign="top">
+<p>очень-очень   далеко</p>
+</td>
+<td width="170" valign="top">
+<p>очень-очень   большой</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Например, &laquo;если робот а находится близко от объекта b, а между объектами b и c расположен объект очень большого размера (скажем, здание), то робот а находится не далеко и не близко от объекта с&raquo;.</p>
+<p>Рассмотрим частный случай расположения объектов на плоскости, когда они находятся на одной прямой. Правила вывода для полного анализа отношений между объектами должны связывать между собой цепочки из трех объектов.</p>
+<p>Схема вывода, связанная с распространением нечетких лингвистических ограничений, имеет вид:</p>
+<p><img src="uploaded/image/2010-2/image622.gif" border="0" alt="" width="221" height="47" /></p>
+<p>Если размеры объектов a1 и a2 не совпадают, необходимо, используя связь между размерами объектов и отношением расстояния, перейти к объектам с одинаковым размером. Порядковый номер нового отношения расстояния определяется по формуле j*=i+x&ndash;y, где i, j, x, y &ndash; порядковые номера отношений расстояния и размеров объектов (столбец 1 в табл. 1). В результате получим схему распространения нечетких лингвистических ограничений:</p>
+<p><img src="uploaded/image/2010-2/image624.gif" border="0" alt="" width="205" height="44" /></p>
+<p>Рассмотрим случай, когда объекты расположены на одной плоскости (рис. 2). Из взаимосвязи размеров объектов и отношений расстояния следует, что достаточно построить логику на плоскости для произвольно расположенных точечных объектов. Отношения расстояния между объектами различных размеров могут быть получены с помощью правила соотнесения размеров и расстояний.</p>
+<p>Для упрощения вычислений на плоскости направления фиксированы и их количество ограничено количеством введенных отношений для взаимной угловой ориентации объектов. Другими словами, будем считать, что объект a3 может находиться только на этих восьми фиксированных направлениях.</p>
+<p>На рисунке 2 изображены три точечных объекта на плоскости. Примем объект a2 за точку отсчета. Проведем окружность с центром в точке a2 и радиусом dj для фиксации направлений на плоскости. Схема вывода имеет вид</p>
+<p><img src="uploaded/image/2010-2/image626.gif" border="0" alt="" width="291" height="44" /></p>
+<p><img src="uploaded/image/2010-2/image628.gif" alt="Подпись:  
+Рис. 3. Гибкая производственная система" width="297" height="214" align="left" />Для построения логики на плоскости первоначально определим правила для вывода направлений, так как расстояния между объектами зависят от угловой ориентации объектов. Построим правила вывода для направлений по заданным направлениям для двух объектов относительно третьего [7]. Они имеют вид</p>
+<p><img src="uploaded/image/2010-2/image630.gif" border="0" alt="" width="215" height="43" /></p>
+<p>Для определения расстояний рассмотрим объекты, которые находятся на пересечении этой окружности с вертикальной прямой. Из рисунка 2 видно, что искомое отношение удовлетворяет неравенству dmin&pound;d?&pound;dmax. Для получения d? воспользуемся тем, что в построенной модели пространства направления фиксированные. Для объектов, изображенных на рисунке 2, получим <img src="uploaded/image/2010-2/image632.gif" border="0" alt="" width="250" height="20" />&nbsp;Рассматривается только одна полуплоскость, так как вторая симметрична первой: n*=n(dmax&ndash;n(dmin), где n(dmax), n(dmin) &ndash; порядковый номер отношений расстояния, определенный по таблице 3 в зависимости от отношения направления. Операция &laquo;&ndash;&raquo; обозначает уменьшение порядкового номера отношения расстояния.</p>
+<p>Таблица 3</p>
+<table border="1" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr>
+<td>
+<p>fp</p>
+</td>
+<td>
+<p>n*=0</p>
+</td>
+<td>
+<p>n*=1</p>
+<p>(dmin&ne; d0)</p>
+</td>
+<td>
+<p>n*=2</p>
+</td>
+<td>
+<p>n*=3</p>
+</td>
+<td>
+<p>n*=4</p>
+</td>
+<td>
+<p>n*=5</p>
+</td>
+<td>
+<p>n*=6</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>f1</p>
+</td>
+<td valign="top">
+<p>dmax</p>
+</td>
+<td valign="top">
+<p>dmax</p>
+</td>
+<td valign="top">
+<p>dmax</p>
+</td>
+<td valign="top">
+<p>dmax</p>
+</td>
+<td valign="top">
+<p>dmax</p>
+</td>
+<td valign="top">
+<p>dmax</p>
+</td>
+<td valign="top">
+<p>dmax</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>f2</p>
+</td>
+<td valign="top">
+<p>dmax</p>
+</td>
+<td valign="top">
+<p>dmax</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;1</p>
+</td>
+<td valign="top">
+<p>dmax</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;1</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;2</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;2</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>f3</p>
+</td>
+<td valign="top">
+<p>dmax</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;1</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;1</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;1</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;2</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;3</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;4</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>f4</p>
+</td>
+<td valign="top">
+<p>dmax</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;1</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;2</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;2</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;3</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;4</p>
+</td>
+<td valign="top">
+<p>dmax&ndash;5</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>f5</p>
+</td>
+<td valign="top">
+<p>dmax</p>
+</td>
+<td valign="top">
+<p>dmin</p>
+</td>
+<td valign="top">
+<p>dmin</p>
+</td>
+<td valign="top">
+<p>dmin</p>
+</td>
+<td valign="top">
+<p>dmin</p>
+</td>
+<td valign="top">
+<p>dmin</p>
+</td>
+<td valign="top">
+<p>dmin</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Построенная логика на плоскости позволяет выводить новые пространственные отношения расстояния, являющиеся функцией направления.</p>
+<p>Проиллюстрируем работу построенной логики на примере. Пусть имеется гибкий производственный модуль (ГПМ), содержащий станок и робот-манипулятор, а также автономный робокар, который, перемещаясь между складом и ГПМ, обеспечивает модуль заготовками.</p>
+<p>Пусть пространственное положение компонентов данной гибкой производственной системы описывается в виде: &laquo;Впереди, не далеко и не близко от робокара расположен ГПМ 1, очень близко и справа от ГПМ 1 находится ГПМ 2. Близко и сзади, справа от ГПМ 2, размещен склад заготовок для ГПМ 1, 2&raquo; (рис. 3). Введем обозначения: a1 &ndash; робокар; a2 &ndash; ГПМ 1; a3 &ndash; ГПМ 2; a4 &ndash; склад. В соответствии с этим для значений лингвистических переменных &laquo;Расстояние&raquo; и &laquo;Направление&raquo; (табл. 1) получим исходные ограничения:</p>
+<p><img src="uploaded/image/2010-2/image634.gif" border="0" alt="" width="127" height="53" /></p>
+<p>С помощью распространения ограничений получим новые факты для пространственной ситуации робокара: <img src="uploaded/image/2010-2/image636.gif" border="0" alt="" width="116" height="18" />, так как n(d3) &ndash; n(d1)=2&sup3;2, dmax=dmin=d3; <img src="uploaded/image/2010-2/image638.gif" border="0" alt="" width="116" height="18" />&nbsp;так как n*=n(dmax=d4)&ndash;n(dmin=d1)=3; далее по таблице 2 находим d(f4), потому что направление f6 симметрично направлению f4.</p>
+<p>Таким образом, построенная пространственная логика на плоскости позволяет выводить дополнительные нечеткие пространственные ограничения, не описанные человеком явно.</p>
+<p>В заключение можно сделать выводы о перспективах применения ПФЛ в робототехнике, которые не ограничиваются задачей построения пространственной или пространственно-времен&shy;ной модели внешней среды. Несомненно, они тесно связаны с планированием поведения и организацией действий робота, и в первую очередь, с организацией диалогового управления [2], когда между партнерами (человеком и роботом) ведется диалог на ограниченном естественном языке, в ходе которого у последнего формируется достаточный уровень понимания проблемы, поставленной пользователем.</p>
+<p>&nbsp;  Литература  &nbsp;</p>
+<p>1.&nbsp;Тарасов В.Б. От многоагентных систем к интеллектуальным организациям. М.: Эдиториал УРСС, 2002.</p>
+<p>2.&nbsp;Ющенко А.С. Диалоговое управление роботами с использованием нечетких моделей // Интегрированные модели и мягкие вычисления в искусственном интеллекте: сб. тр. V Междунар. науч.-практич. конф. (Коломна, 28&ndash;30 мая 2009 г.). М.: Физматлит, 2009. Т. 1. С. 97&ndash;108.</p>
+<p>3.&nbsp;Аверкин А.Н., Тарасов В.Б. Нечеткое отношение моделирования и его применение в психологии и искусственном интеллекте. М.: ВЦ АН СССР, 1986.</p>
+<p>4.&nbsp;Попов Э.В., Фирдман Г.Р. Алгоритмические основы интеллектуальных роботов и искусственного интеллекта. М.: Наука, 1976.</p>
+<p>5. Добрынин Д.А. Интеллектуальные роботы вчера, сегодня, завтра // КИИ-2006: тр. 10-й национальной конф. по искусствен. интел. (25&ndash;28 сентября 2006 г., Обнинск). М.: Физматлит, 2006. Т. 1. С. 20&ndash;32.</p>
+<p>6. Кандрашина Е.Ю., Литвинцева Л.В., Поспелов Д.А. Представление знаний о времени и пространстве в интеллектуальных системах. М.: Наука, 1989.</p>
+<p>7. Zadeh L.A. Toward a Generalized Theory of Uncertainty (GTU): an Outline // Information Sciences &ndash; Informatics and Computer Science. 2005. Vol. 172. № 1&ndash;2, pp. 1&ndash;40.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2528</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2528">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 2 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=90">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Оптимальность структурирования программных ресурсов при конвейерной распределенной обработке</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Оптимальность структурирования программных ресурсов при конвейерной распределенной обработке</h2><div style="margin-bottom:10px"><strong>Optimality of structurization of program resources at the conveyor distributed processing</strong></div>Статья опубликована в выпуске журнала № 3 за 2010 год. [ 07.09.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Получены формулы и оценки минимального общего времени выполнения однородных распределенных конкурирующих процессов. Проведен сравнительный анализ режимов взаимодействия процессов, процессоров и блоков программного ресурса. Сформулированы и доказаны критерии эффективности и оптимальности структурирования программных ресурсов.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">Formulas and estimations of minimum general time of performance of the homogeneous distributed com-
+peting processes are received. The comparative analysis of modes of interaction of processes, processors and blocks of a program resource is carried out. Are formulated criterion of efficiency and an optimality of structurization of program resources.
+</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=5890">Павлов П.А. (pin2535@tut.by)</a> - Полесский государственный университет, Беларусь, г. Пинск Доктор физико-математических наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=73">эффективность</a>, <a href="index.php?page=infotg&id=1662">характеристический набор</a>, <a href="index.php?page=infotg&id=563">структурирование</a>, <a href="index.php?page=infotg&id=1657">распределенный процесс</a>, <a href="index.php?page=infotg&id=1658">программный ресурс</a>, <a href="index.php?page=infotg&id=1663">оптимальность</a>, <a href="index.php?page=infotg&id=1659">однородная система</a>, <a href="index.php?page=infotg&id=1661">ограниченный (неограниченный) параллелизм</a>, <a href="index.php?page=infotg&id=1660">асинхронный и синхронный режимы</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=73">effectively</a>, <a href="index.php?page=infotg&id=1662">characteristic set</a>, <a href="index.php?page=infotg&id=563">the structurization</a>, <a href="index.php?page=infotg&id=1657">the distributed process</a>, <a href="index.php?page=infotg&id=1658">the program resource</a>, <a href="index.php?page=infotg&id=1663">optimality</a>, <a href="index.php?page=infotg&id=1659">homogeneous system</a>, <a href="index.php?page=infotg&id=1661">the limited (unlimited) parallelism</a>, <a href="index.php?page=infotg&id=1660">asynchronous mode</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 166<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2564">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>В различных областях человеческой деятельности постоянно приходится сталкиваться с большими задачами, эффективное решение которых связано с распараллеливанием процессов вычислений. Решение подобных задач объединяет в единое целое сведения из таких областей, как архитектура компьютеров и вычислительных систем, системное программирование и языки программирования, различные методы обработки информации и т.д. [1]. С появлением и активным использованием масштабируемых систем многие проблемы параллельных вычислений приходится переосмыслить, по-новому взглянуть на принципы организации вычислений, на создание эффективного аппаратного, алгоритмического и программного обеспечения многопроцессорных систем (МС), на обеспечение однозначности результата выполнения программ, на эффективное планирование и распределение параллельных процессов [2]. В связи с этим особую актуальность приобретают задачи построения и исследования математических моделей параллельных распределенных процессов, основанных на принципах распараллеливания и конвейеризации.</p>
+<p>&nbsp;</p>
+<p>Математическая модель распределенной обработки конкурирующих процессов. Для построения математических моделей распределенных вычислительных систем конструктивными элементами являются понятия процесса и программного ресурса.</p>
+<p>Как и в [3], процесс рассмотрим как последовательность блоков (команд, процедур) Q1, Q2, &hellip;, Qs, для выполнения которых используется множество процессоров (процессорных узлов, обрабатывающих устройств). При этом процесс называется распределенным, если все блоки или часть их обрабатываются разными процессорами. Для ускорения выполнения процессы могут обрабатываться параллельно, взаимодействуя путем обмена информацией. Такие процессы называются кооперативными, или взаимодействующими.</p>
+<p>Понятие ресурса используется для обозначения любых объектов вычислительной системы, которые могут использоваться процессами для своего выполнения. Реентерабельные (многократно используемые) ресурсы характеризуются возможностью одновременного использования несколькими процессами. Для параллельных систем характерной является ситуация, когда одну и ту же последовательность блоков или ее часть процессорам необходимо выполнять многократно. Такую последовательность будем называть программным ресурсом (ПР), а множество соответствующих процессов &ndash; конкурирующими.</p>
+<p>Математическая модель распределенной обработки конкурирующих процессов включает в себя p процессоров МС, n конкурирующих процессов, s блоков Q1, Q2, &hellip;, Qs структурированного на блоки программного процесса, матрицу Tp=[tij] времен выполнения j-х блоков i-ми конкурирующими процессами [3&ndash;5]. Указанные параметры изменяются в пределах p&sup3;2, n&sup3;2, s&sup3;2, 1&pound;i&pound;n, 1&pound;j&pound;s. Будем предполагать, что все n процессов используют одну копию структурированного на блоки ПР, а на множестве блоков установлен линейный порядок их выполнения.</p>
+<p>Введем в рассмотрение параметр t&gt;0, характеризующий время (системные расходы), затрачиваемое МС на организацию параллельного выполнения блоков программного ресурса множеством распределенных конкурирующих процессов. В дальнейшем будем говорить, что вышеперечисленные объекты математической модели образуют систему распределенных конкурирующих процессов.</p>
+<p>Определение 1. Система n распределенных конкурирующих процессов называется неоднородной, если время выполнения блоков программного ресурса Q1, Q2, &hellip;, Qs зависит от объема обрабатываемых данных и/или их структуры, то есть разное для разных процессов.</p>
+<p>Определение 2. Система n распределенных конкурирующих процессов называется однородной, если время выполнения j-го блока каждым i-м процессом равно, то есть tij=tj, <img src="uploaded/image/2010-3/image272.png" border="0" alt="" width="41" height="21" />, <img src="uploaded/image/2010-3/image676.png" border="0" alt="" width="40" height="23" />.</p>
+<p>Будем считать, что взаимодействие процессов, процессоров и блоков подчинено следующим условиям [3&ndash;5]:</p>
+<p>1)&nbsp;&nbsp; ни один из блоков программного ресурса не может обрабатываться одновременно более чем одним процессором;</p>
+<p>2)&nbsp;&nbsp; ни один из процессоров не может обрабатывать одновременно более одного блока;</p>
+<p>3)&nbsp;&nbsp; обработка каждого блока осуществляется без прерываний;</p>
+<p>4)&nbsp;&nbsp; распределение блоков программного ресурса по процессорам для каждого из процессов осуществляется циклически по правилу: блок с номером j=kp+i, <img src="uploaded/image/2010-3/image676.png" border="0" alt="" width="40" height="23" />, <img src="uploaded/image/2010-3/image679.png" border="0" alt="" width="41" height="23" />, k&sup3;0, распределяется на процессор с номером i.</p>
+<p>Кроме того, введем дополнительные условия, которые определяют режимы взаимодействия процессов, процессоров и блоков:</p>
+<p>5)&nbsp;&nbsp; отсутствуют простои процессоров при условии готовности блоков, а также невыполнение блоков при наличии процессоров;</p>
+<p>6)&nbsp;&nbsp; для каждого из n процессов момент завершения выполнения j-го блока на i-м процессоре совпадает с моментом начала выполнения следующего (j+1)-го блока на (i+1)-м процессоре, <img src="uploaded/image/2010-3/image681.png" border="0" alt="" width="59" height="23" />, <img src="uploaded/image/2010-3/image683.png" border="0" alt="" width="57" height="23" />;</p>
+<p>7)&nbsp;&nbsp; для каждого из блоков момент завершения его выполнения l-м процессом совпадает с моментом начала его выполнения (l+1)-м процессом на том же процессоре, <img src="uploaded/image/2010-3/image685.png" border="0" alt="" width="60" height="21" />.</p>
+<p>Условия 1&ndash;5 определяют асинхронный режим взаимодействия процессоров, процессов и блоков, который предполагает отсутствие простоев процессоров при условии готовности блоков, а также невыполнение блоков при наличии процессоров.</p>
+<p>Если к условиям 1&ndash;4 добавить условие 6, то получим первый синхронный режим, обеспечивающий непрерывное выполнение блоков программного ресурса внутри каждого из процессов.</p>
+<p>Второй синхронный режим, определяемый условиями 1&ndash;4, 7, обеспечивает непрерывное выполнение каждого блока всеми процессами.</p>
+<p>Время реализации однородных систем распределенных конкурирующих процессов. В работах [3,&nbsp;4] исследованы базовые асинхронный и синхронные режимы, возникающие при организации распределенных процессов в условиях конкуренции за общий программный ресурс. В рамках этих режимов получены математические соотношения для вычисления значений минимального общего времени выполнения неоднородных распределенных конкурирующих процессов в случаях неограниченного (s&pound;p) и ограниченного (s&gt;p) параллелизма по числу процессоров МС.</p>
+<p>Рассмотрим однородную систему распределенных конкурирующих процессов. Пусть <img src="uploaded/image/2010-3/image687.png" border="0" alt="" width="80" height="21" />&nbsp;&ndash; длительности выполнения каждого блока Qj, <img src="uploaded/image/2010-3/image676.png" border="0" alt="" width="40" height="23" />, ПР с учетом параметра t&gt;0. При s&pound;p&nbsp; для вычисления минимального общего времени в асинхронном режиме <img src="uploaded/image/2010-3/image690.png" border="0" alt="" width="73" height="23" />и первом синхронном режиме <img src="uploaded/image/2010-3/image692.png" border="0" alt="" width="73" height="23" />&nbsp;будем иметь <img src="uploaded/image/2010-3/image694.png" border="0" alt="" width="205" height="37" />.</p>
+<p>Рассмотрим случай, когда s=kp, k&gt;1. Введем следующие обозначения: <img src="uploaded/image/2010-3/image696.png" border="0" alt="" width="92" height="23" />&nbsp;&ndash; время выполнения j-го блока l-й группы всеми n процессами, <img src="uploaded/image/2010-3/image698.png" border="0" alt="" width="41" height="23" />, <img src="uploaded/image/2010-3/image700.png" border="0" alt="" width="43" height="21" />; <img src="uploaded/image/2010-3/image702.png" border="0" alt="" width="149" height="39" />&nbsp;&ndash; общее время выполнения l-й группы блоков всеми n процессами на p процессорах, <img src="uploaded/image/2010-3/image700.png" border="0" alt="" width="43" height="21" />; <img src="uploaded/image/2010-3/image705.png" border="0" alt="" width="155" height="37" />&nbsp;&ndash; время завершения выполнения [(l-1)p+j]-го блока программного ресурса всеми n процессами на j-м процессоре, <img src="uploaded/image/2010-3/image698.png" border="0" alt="" width="41" height="23" />, <img src="uploaded/image/2010-3/image700.png" border="0" alt="" width="43" height="21" />.</p>
+<p>Общее время выполнения n конкурирующих распределенных однородных процессов в случае s=kp, k&gt;1, определяется как сумма длин составляющих диаграмм Ганта с учетом максимально допустимого совмещения по оси времени, то есть</p>
+<p><img src="uploaded/image/2010-3/image709.png" border="0" alt="" width="243" height="36" />.</p>
+<p>Здесь <img src="uploaded/image/2010-3/image711.png" border="0" alt="" width="16" height="21" />&nbsp;&ndash; отрезок возможного совмещения по оси времени, представляющий собой разность между моментом начала выполнения j-го блока первым процессом для (l+1)-й группы блоков и моментом завершения выполнения j-го блока последним процессом для l-й группы блоков; <img src="uploaded/image/2010-3/image713.png" border="0" alt="" width="17" height="21" />&nbsp;&ndash; разность между началом выполнения первого блока i-м процессом для (l+1)-й группы блоков и моментом завершения выполнения p-го блока i-м процессом для l-й группы блоков, которые вычисляются по формулам</p>
+<p><img src="uploaded/image/2010-3/image715.png" border="0" alt="" width="172" height="82" />,</p>
+<p><img src="uploaded/image/2010-3/image717.png" border="0" alt="" width="204" height="35" />,</p>
+<p><img src="uploaded/image/2010-3/image719.png" border="0" alt="" width="60" height="21" />.</p>
+<p>В случае s=kp+r, k&sup3;1, 1&pound;r</p>
+<p><img src="uploaded/image/2010-3/image721.png" border="0" alt="" width="252" height="60" /></p>
+<p>где <img src="uploaded/image/2010-3/image723.png" border="0" alt="" width="183" height="37" />&nbsp;&ndash; время выполнения (k+1)-й группы r блоков всеми n процессами; <img src="uploaded/image/2010-3/image725.png" border="0" alt="" width="169" height="41" />&nbsp;&ndash; разность между моментом начала выполнения j-го блока первым процессом для (k+1)-й группы блоков и моментом завершения выполнения j-го блока последним процессом для k-й группы блоков; <img src="uploaded/image/2010-3/image727.png" border="0" alt="" width="205" height="35" />&nbsp;&ndash; разность между началом выполнения первого блока i-м процессом для (k+1)-й группы блоков и моментом завершения выполнения p-го блока i-м процессом для k-й группы блоков.</p>
+<p>Если взаимодействие процессов, процессоров и блоков осуществляется во втором синхронном режиме, при котором для каждого блока структурированного программного ресурса момент завершения его выполнения для i-го процесса совпадает с началом его выполнения для (i+1)-го процесса на том же процессоре, <img src="uploaded/image/2010-3/image729.png" border="0" alt="" width="61" height="21" />&nbsp;то минимальное общее время <img src="uploaded/image/2010-3/image731.png" border="0" alt="" width="73" height="23" />&nbsp;выполнения n однородных процессов на p процессорах определяется по формулам</p>
+<p><img src="uploaded/image/2010-3/image733.png" border="0" alt="" width="292" height="41" />&nbsp;при s&pound;p,</p>
+<p><img src="uploaded/image/2010-3/image735.png" border="0" alt="" width="265" height="151" /></p>
+<p>Значения Tl, <img src="uploaded/image/2010-3/image737.png" border="0" alt="" width="17" height="21" />, <img src="uploaded/image/2010-3/image739.png" border="0" alt="" width="19" height="21" />, <img src="uploaded/image/2010-3/image741.png" border="0" alt="" width="27" height="20" />, <img src="uploaded/image/2010-3/image743.png" border="0" alt="" width="20" height="21" />, <img src="uploaded/image/2010-3/image745.png" border="0" alt="" width="20" height="21" />&nbsp;вычисляются по формулам</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="uploaded/image/2010-3/image747.png" border="0" alt="" width="257" height="41" />&nbsp;&ndash; общее время выполнения l-х p блоков программного ресурса всеми n процессами на p процессорах, <img src="uploaded/image/2010-3/image700.png" border="0" alt="" width="43" height="21" />;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="uploaded/image/2010-3/image737.png" border="0" alt="" width="17" height="21" />&nbsp;и <img src="uploaded/image/2010-3/image739.png" border="0" alt="" width="19" height="21" />&nbsp;&ndash; отрезки возможного совмещения двух последовательных диаграмм по оси времени:</p>
+<p><img src="uploaded/image/2010-3/image752.png" border="0" alt="" width="183" height="28" />,</p>
+<p><img src="uploaded/image/2010-3/image754.png" border="0" alt="" width="144" height="23" />, <img src="uploaded/image/2010-3/image719.png" border="0" alt="" width="60" height="21" />,</p>
+<p><img src="uploaded/image/2010-3/image757.png" border="0" alt="" width="247" height="39" />, <img src="uploaded/image/2010-3/image698.png" border="0" alt="" width="41" height="23" />, <img src="uploaded/image/2010-3/image700.png" border="0" alt="" width="43" height="21" />&nbsp;&ndash; время завершения выполнения [(l-1)p+j]-го блока программного ресурса всеми n процессами на j-м процессоре;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="uploaded/image/2010-3/image761.png" border="0" alt="" width="255" height="41" />&nbsp;<img src="uploaded/image/2010-3/image763.png" border="0" alt="" width="61" height="41" />&nbsp;&ndash; время выполнения (k+1)-х r блоков для всех n процессов;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="uploaded/image/2010-3/image765.png" border="0" alt="" width="75" height="21" />&nbsp;&ndash; величина максимального  совмещения по оси времени k-й и (k+1)-й диаграмм:</p>
+<p><img src="uploaded/image/2010-3/image767.png" border="0" alt="" width="196" height="28" />&nbsp;</p>
+<p><img src="uploaded/image/2010-3/image769.png" border="0" alt="" width="153" height="23" />.</p>
+<p>Анализ режимов организации распределенных конкурирующих процессов. Определенный теоретический и практический интерес представляет задача сравнительного анализа соотношений для определения минимального общего времени выполнения множества распределенных конкурирующих процессов. Проведем такой анализ для класса однородных систем с учетом дополнительных системных расходов t&gt;0.</p>
+<p>Рассмотрим однородную систему распределенных конкурирующих процессов с временем выполнения блоков структурированного на блоки программного процесса <img src="uploaded/image/2010-3/image771.png" border="0" alt="" width="77" height="21" />. Обозначим через <img src="uploaded/image/2010-3/image773.png" border="0" alt="" width="57" height="37" />&nbsp;суммарное время выполнения программного ресурса каждым из процессов с учетом накладных (системных) расходов и назовем набор параметров <img src="uploaded/image/2010-3/image775.png" border="0" alt="" width="112" height="23" />&nbsp;данной системы характеристическим.</p>
+<p>Пусть &nbsp;<img src="uploaded/image/2010-3/image777.png" border="0" alt="" width="301" height="41" />есть множество всех допустимых характеристических наборов систем однородных конкурирующих процессов. Выделим из множества b подмножество характеристических наборов вида</p>
+<p><img src="uploaded/image/2010-3/image779.png" border="0" alt="" width="237" height="49" /></p>
+<p>Тогда для введенного подмножества характеристических наборов справедлива теорема 1.</p>
+<p>Теорема 1. Пусть <img src="uploaded/image/2010-3/image781.png" border="0" alt="" width="60" height="23" />&nbsp;&ndash; характеристический набор любой однородной системы с параметрами p, n, s&sup3;2 и накладными расходами t&gt;0. Тогда в случае неограниченного параллелизма минимальное общее время <img src="uploaded/image/2010-3/image783.png" border="0" alt="" width="21" height="23" />, <img src="uploaded/image/2010-3/image785.png" border="0" alt="" width="21" height="23" />&nbsp;и <img src="uploaded/image/2010-3/image787.png" border="0" alt="" width="21" height="23" />&nbsp;выполнения множества однородных распределенных конкурирующих процессов в асинхронном и базовых синхронных режимах совпадают.</p>
+<p>Доказательство. Пусть <img src="uploaded/image/2010-3/image789.png" border="0" alt="" width="65" height="28" />. Тогда для асинхронного и первого синхронного режима с непрерывным переходом по блокам для любого характеристического допустимого набора однородной системы, в том числе и для любого характеристического набора <img src="uploaded/image/2010-3/image781.png" border="0" alt="" width="60" height="23" />&nbsp;при 2&pound;s&pound;p, имеют место равенства</p>
+<p><img src="uploaded/image/2010-3/image792.png" border="0" alt="" width="240" height="23" />,</p>
+<p>где <img src="uploaded/image/2010-3/image773.png" border="0" alt="" width="57" height="37" />, <img src="uploaded/image/2010-3/image795.png" border="0" alt="" width="59" height="23" />, <img src="uploaded/image/2010-3/image676.png" border="0" alt="" width="40" height="23" />.</p>
+<p>Пусть взаимодействие процессов, процессоров и блоков осуществляется во втором синхронном режиме с непрерывным переходом по процессам. В этом режиме для любого характеристического набора из множества b при 2&pound;s&pound;p выполняется равенство</p>
+<p><img src="uploaded/image/2010-3/image798.png" border="0" alt="" width="281" height="41" />.</p>
+<p>Покажем, что для любого характеристического набора <img src="uploaded/image/2010-3/image781.png" border="0" alt="" width="60" height="23" />&nbsp;выполняется равенство <img src="uploaded/image/2010-3/image801.png" border="0" alt="" width="152" height="37" />, тем самым будет доказана теорема.</p>
+<p>Учитывая, что <img src="uploaded/image/2010-3/image803.png" border="0" alt="" width="65" height="28" />, для всех номеров j&pound;l имеет место равенство <img src="uploaded/image/2010-3/image805.png" border="0" alt="" width="127" height="37" />, а для j&gt;l имеет место <img src="uploaded/image/2010-3/image807.png" border="0" alt="" width="160" height="37" />. Следовательно, <img src="uploaded/image/2010-3/image809.png" border="0" alt="" width="186" height="37" /> <img src="uploaded/image/2010-3/image811.png" border="0" alt="" width="47" height="21" />, что и требовалось доказать.</p>
+<p>Теорема 2. Для любой однородной распределенной системы с параметрами p, n, s и накладными расходами t&gt;0, допустимый характеристический набор которой <img src="uploaded/image/2010-3/image813.png" border="0" alt="" width="60" height="23" />, при 2&pound;s&pound;p выполняются соотношения</p>
+<p><img src="uploaded/image/2010-3/image815.png" border="0" alt="" width="236" height="23" />. (2)</p>
+<p>Доказательство. Условие теоремы 2 равносильно неравенству <img src="uploaded/image/2010-3/image817.png" border="0" alt="" width="138" height="37" /> <img src="uploaded/image/2010-3/image819.png" border="0" alt="" width="73" height="28" />. Доказательство последнего проведем индукцией по числу блоков s, s&sup3;2.</p>
+<p>При s=2 множество всех допустимых характеристических наборов однородных систем конкурирующих процессов <img src="uploaded/image/2010-3/image821.png" border="0" alt="" width="61" height="21" />&nbsp;будет принадлежать классу <img src="uploaded/image/2010-3/image823.png" border="0" alt="" width="39" height="23" />.</p>
+<p>При s=3 справедливость неравенства (2) для <img src="uploaded/image/2010-3/image813.png" border="0" alt="" width="60" height="23" />&nbsp;легко установить непосредственной проверкой.</p>
+<p>Пусть неравенство (2) выполняется при s=i, то есть <img src="uploaded/image/2010-3/image826.png" border="0" alt="" width="195" height="37" />. Покажем, что оно справедливо при s=i+1.</p>
+<p>Действительно, при s=i+1 имеем</p>
+<p><img src="uploaded/image/2010-3/image828.png" border="0" alt="" width="200" height="37" /></p>
+<p><img src="uploaded/image/2010-3/image830.png" border="0" alt="" width="288" height="37" /></p>
+<p>Рассмотрим два случая.</p>
+<p>1)&nbsp;&nbsp; Максимальное значение <img src="uploaded/image/2010-3/image832.png" border="0" alt="" width="14" height="23" />, 1&pound;j&pound;i+1, равно <img src="uploaded/image/2010-3/image834.png" border="0" alt="" width="21" height="21" />, тогда <img src="uploaded/image/2010-3/image836.png" border="0" alt="" width="222" height="37" />&nbsp;<img src="uploaded/image/2010-3/image838.png" border="0" alt="" width="265" height="37" />.</p>
+<p>Здесь второе слагаемое равно нулю, так как <img src="uploaded/image/2010-3/image840.png" border="0" alt="" width="47" height="21" />, а первое слагаемое больше нуля, в противном случае <img src="uploaded/image/2010-3/image781.png" border="0" alt="" width="60" height="23" />, что противоречит условию теоремы 2.</p>
+<p>2)&nbsp;&nbsp; Значение <img src="uploaded/image/2010-3/image843.png" border="0" alt="" width="44" height="28" />&nbsp;находится в промежутке 1&pound;j&pound;i. В этом случае имеем: <img src="uploaded/image/2010-3/image845.png" border="0" alt="" width="125" height="37" />&nbsp;<img src="uploaded/image/2010-3/image847.png" border="0" alt="" width="233" height="37" />&nbsp;<img src="uploaded/image/2010-3/image849.png" border="0" alt="" width="268" height="37" /></p>
+<p>Здесь <img src="uploaded/image/2010-3/image851.png" border="0" alt="" width="203" height="37" />&nbsp;по индукционному предположению и в силу того, что <img src="uploaded/image/2010-3/image853.png" border="0" alt="" width="95" height="28" />. Покажем, что <img src="uploaded/image/2010-3/image855.png" border="0" alt="" width="56" height="21" /> <img src="uploaded/image/2010-3/image857.png" border="0" alt="" width="121" height="21" />. Действительно, для <img src="uploaded/image/2010-3/image859.png" border="0" alt="" width="47" height="21" />&nbsp;равенство нулю очевидно.</p>
+<p>При <img src="uploaded/image/2010-3/image861.png" border="0" alt="" width="47" height="21" />&nbsp;получаем <img src="uploaded/image/2010-3/image855.png" border="0" alt="" width="56" height="21" />&nbsp;<img src="uploaded/image/2010-3/image864.png" border="0" alt="" width="231" height="21" />, а при <img src="uploaded/image/2010-3/image866.png" border="0" alt="" width="47" height="21" />&nbsp;имеем <img src="uploaded/image/2010-3/image868.png" border="0" alt="" width="156" height="21" />&nbsp;<img src="uploaded/image/2010-3/image870.png" border="0" alt="" width="77" height="21" />, что и требовалось доказать.</p>
+<p>Эффективность систем однородных конкурирующих процессов в условиях неограниченного параллелизма. Введем следующее определение, которое выделяет в классе однородных систем конкурирующих процессов специальный подкласс так называемых равномерных систем.</p>
+<p>Определение 3. Однородную распределенную систему конкурирующих процессов назовем равномерной, если выполняется цепочка равенств <img src="uploaded/image/2010-3/image872.png" border="0" alt="" width="112" height="21" />.</p>
+<p>В теореме 1 доказано, что для однородных систем конкурирующих процессов минимальное общее время с учетом накладных расходов t&gt;0 для всех трех базовых режимов, указанных ранее, в случае s&pound;p вычисляется по формуле</p>
+<p><img src="uploaded/image/2010-3/image874.png" border="0" alt="" width="181" height="23" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p>где <img src="uploaded/image/2010-3/image773.png" border="0" alt="" width="57" height="37" />, <img src="uploaded/image/2010-3/image795.png" border="0" alt="" width="59" height="23" />, <img src="uploaded/image/2010-3/image676.png" border="0" alt="" width="40" height="23" />, <img src="uploaded/image/2010-3/image879.png" border="0" alt="" width="76" height="28" />.</p>
+<p>В случае равномерной однородной системы конкурирующих процессов минимальное общее время их выполнения определяется равенством</p>
+<p><img src="uploaded/image/2010-3/image881.png" border="0" alt="" width="138" height="23" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)</p>
+<p>где tt=Ts/s+t, Ts=st.</p>
+<p>Определение 4. Однородную систему распределенных конкурирующих процессов будем называть эффективной при фиксированных p, n&sup3;2, если выполняется соотношение <img src="uploaded/image/2010-3/image883.png" border="0" alt="" width="80" height="21" /> <img src="uploaded/image/2010-3/image885.png" border="0" alt="" width="93" height="23" />, где nTs &ndash; время выполнения n процессов в последовательном режиме; <img src="uploaded/image/2010-3/image887.png" border="0" alt="" width="56" height="37" />.</p>
+<p>При наличии двух эффективных однородных систем конкурирующих процессов будем считать, что первая более эффективна, чем вторая, если величина Dt(s) первой системы не меньше соответствующей величины второй. Для введенного подмножества однородных систем справедливо следующее утверждение.</p>
+<p>Теорема 3. Для любой эффективной однородной системы конкурирующих процессов при s&pound;p и t&gt;0 существует более эффективная равномерная однородная распределенная система.</p>
+<p>Доказательство. Рассмотрим любую эффективную однородную распределенную конвейерную систему. Согласно определению 4 условие ее эффективности с учетом (3) записывается в виде следующего неравенства:</p>
+<p><img src="uploaded/image/2010-3/image889.png" border="0" alt="" width="251" height="21" />,&nbsp;&nbsp;&nbsp; (5)</p>
+<p>где <img src="uploaded/image/2010-3/image891.png" border="0" alt="" width="60" height="37" />&nbsp;<img src="uploaded/image/2010-3/image893.png" border="0" alt="" width="75" height="28" />.</p>
+<p>Для любой равномерной однородной распределенной системы с учетом (4) имеем, что</p>
+<p><img src="uploaded/image/2010-3/image895.png" border="0" alt="" width="235" height="23" />,&nbsp; (6)</p>
+<p>где <img src="uploaded/image/2010-3/image897.png" border="0" alt="" width="52" height="19" />.</p>
+<p>Чтобы убедиться в справедливости теоремы 3, достаточно доказать выполнение неравенства <img src="uploaded/image/2010-3/image899.png" border="0" alt="" width="19" height="20" />&sup3; &sup3;Dt для введенных эффективных систем. Подставив в левую и правую части последнего неравенства из (5) и (6) вместо <img src="uploaded/image/2010-3/image901.png" border="0" alt="" width="56" height="23" />&nbsp;и Dt(s&pound;p) соответствующие величины и проведя несложные преобразования, приходим к равносильному неравенству <img src="uploaded/image/2010-3/image903.png" border="0" alt="" width="103" height="21" />.</p>
+<p>Докажем справедливость последнего неравенства. Рассмотрим равномерную однородную распределенную систему, в которой <img src="uploaded/image/2010-3/image905.png" border="0" alt="" width="93" height="28" />. Пусть для определенности <img src="uploaded/image/2010-3/image907.png" border="0" alt="" width="48" height="21" />, тогда справедлива цепочка соотношений</p>
+<p><img src="uploaded/image/2010-3/image909.png" border="0" alt="" width="251" height="37" />,</p>
+<p>что и доказывает теорему.</p>
+<p>Следующее утверждение устанавливает достаточное условие эффективности однородной системы в случае неограниченного параллелизма.</p>
+<p>Теорема 4. Однородная система конкурирующих процессов с параметрами p, n, s, t, удовлетворяющая соотношениям 3&pound;s&pound;p, s=n&sup1;3, ns&sup3;2(n+s-1) и <img src="uploaded/image/2010-3/image911.png" border="0" alt="" width="77" height="27" />, является эффективной.</p>
+<p>Доказательство. Согласно (5) условие эффективности равносильно неравенству</p>
+<p><img src="uploaded/image/2010-3/image913.png" border="0" alt="" width="112" height="37" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (7)</p>
+<p>Следовательно, для доказательства теоремы 4 достаточно убедиться в справедливости неравенства (7). Непосредственная проверка показывает, что следствием соотношений <img src="uploaded/image/2010-3/image915.png" border="0" alt="" width="112" height="28" />&nbsp;является цепочка неравенств</p>
+<p><img src="uploaded/image/2010-3/image917.png" border="0" alt="" width="159" height="37" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (8)</p>
+<p>так как в силу выбора t выполняется неравенство <img src="uploaded/image/2010-3/image919.png" border="0" alt="" width="57" height="21" />.</p>
+<p>Из ns&sup3;2(n+s-1) следует справедливость неравенства</p>
+<p><img src="uploaded/image/2010-3/image921.png" border="0" alt="" width="87" height="36" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (9)</p>
+<p>Проверка показывает, что неравенство (7) является следствием неравенств (8) и (9). Таким образом, теорема 4 доказана.</p>
+<p>Сформулируем и докажем критерий существования эффективной однородной системы распределенных конкурирующих процессов при достаточном числе процессоров в зависимости от величины накладных расходов t.</p>
+<p>Теорема 5. Для существования эффективного структурирования программного ресурса при заданных параметрах 3&pound;s&pound;p, Ts, t&gt;0 необходимо и достаточно, чтобы выполнялись следующие условия:</p>
+<p><img src="uploaded/image/2010-3/image923.png" border="0" alt="" width="219" height="71" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (10)</p>
+<p>где <img src="uploaded/image/2010-3/image925.png" border="0" alt="" width="129" height="40" />, [x] &ndash; наибольшее целое, не превосходящее x.</p>
+<p>Доказательство. Согласно (6) условие эффективности любой однородной распределенной системы конкурирующих процессов равносильно неравенству</p>
+<p><img src="uploaded/image/2010-3/image927.png" border="0" alt="" width="112" height="40" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (11)</p>
+<p>Введем в рассмотрение функцию <img src="uploaded/image/2010-3/image929.png" border="0" alt="" width="128" height="40" />.</p>
+<p>Нетрудно проверить, что она достигает своего максимума в точке <img src="uploaded/image/2010-3/image931.png" border="0" alt="" width="61" height="20" />&nbsp;при x&gt;0. Выбрав в качестве эффективного структурирование на s блоков, при котором <img src="uploaded/image/2010-3/image933.png" border="0" alt="" width="82" height="20" />, если <img src="uploaded/image/2010-3/image935.png" border="0" alt="" width="23" height="20" />&nbsp;&ndash; целое, или <img src="uploaded/image/2010-3/image937.png" border="0" alt="" width="148" height="23" />, если <img src="uploaded/image/2010-3/image935.png" border="0" alt="" width="23" height="20" />&nbsp;&ndash; не целое, докажем необходимость.</p>
+<p>Достаточность следует из (11), поскольку j(x) достигает наибольшего значения при <img src="uploaded/image/2010-3/image931.png" border="0" alt="" width="61" height="20" />, если <img src="uploaded/image/2010-3/image935.png" border="0" alt="" width="23" height="20" />&nbsp;&ndash; целое, или <img src="uploaded/image/2010-3/image941.png" border="0" alt="" width="128" height="23" />, если <img src="uploaded/image/2010-3/image935.png" border="0" alt="" width="23" height="20" />&nbsp;&ndash; не целое.</p>
+<p>Замечание. При p=s=2 структурирование программного ресурса будет эффективным, если выполняется <img src="uploaded/image/2010-3/image944.png" border="0" alt="" width="79" height="39" />.</p>
+<p>оптимальность одинаково распределенных систем конкурирующих процессов.</p>
+<p>Определение 5. Эффективная одинаково распределенная система называется оптимальной, если величина De достигает наибольшего значения.</p>
+<p>Ранее показано, что оптимальную однородную распределенную систему достаточно искать среди эффективных однородных распределенных систем. Более того, в силу теоремы 3 оптимальную однородную распределенную систему следует искать среди равномерных однородных распределенных систем. Тогда с учетом (6) имеем</p>
+<p><img src="uploaded/image/2010-3/image946.png" border="0" alt="" width="213" height="23" />.</p>
+<p>Введем функцию действительного аргумента x вида</p>
+<p><img src="uploaded/image/2010-3/image948.png" border="0" alt="" width="251" height="40" /></p>
+<p>Решение задачи об оптимальности равномерного структурирования программного ресурса на s блоков для достаточного числа процессоров для всех трех базовых режимов следует из теоремы 6.</p>
+<p>Теорема 6. Для того чтобы эффективное структурирование программного ресурса на s блоков при s&pound;p было оптимальным при заданных s&sup3;2, Ts, t&gt;0, необходимо и достаточно, чтобы оно было равномерным и число блоков s0 равнялось одному из чисел</p>
+<p><img src="uploaded/image/2010-3/image950.png" border="0" alt="" width="231" height="50" />,</p>
+<p>в котором функция <img src="uploaded/image/2010-3/image952.png" border="0" alt="" width="36" height="23" />&nbsp;достигает наибольшего значения. Здесь [x] означает наибольшее целое, не превосходящее x.</p>
+<p>Доказательство.</p>
+<p>Необходимость. Рассмотрим введенную функцию</p>
+<p><img src="uploaded/image/2010-3/image948.png" border="0" alt="" width="251" height="40" /></p>
+<p>Согласно определению 5 однородная распределенная система будет оптимальной в той точке x, где функция <img src="uploaded/image/2010-3/image952.png" border="0" alt="" width="36" height="23" />&nbsp;достигает своего наибольшего значения. Покажем, что функция <img src="uploaded/image/2010-3/image952.png" border="0" alt="" width="36" height="23" />&nbsp;достигает своего наибольшего значения в точке <img src="uploaded/image/2010-3/image957.png" border="0" alt="" width="87" height="41" />. Действительно, <img src="uploaded/image/2010-3/image959.png" border="0" alt="" width="101" height="37" /> <img src="uploaded/image/2010-3/image961.png" border="0" alt="" width="23" height="14" />&nbsp;<img src="uploaded/image/2010-3/image963.png" border="0" alt="" width="141" height="37" />&nbsp;так как n&sup3;2, x&gt;0.</p>
+<p>Следовательно, функция <img src="uploaded/image/2010-3/image952.png" border="0" alt="" width="36" height="23" />&nbsp;достигает максимума в точке, где первая ее производная обращается в нуль <img src="uploaded/image/2010-3/image966.png" border="0" alt="" width="57" height="25" />, то есть <img src="uploaded/image/2010-3/image968.png" border="0" alt="" width="92" height="41" />.</p>
+<p>Целочисленными точками, в которых достигается наибольшее значение функции <img src="uploaded/image/2010-3/image970.png" border="0" alt="" width="33" height="23" />, будут s0=[x*] или s0=[x*]+1. Следовательно, в качестве S0 можно выбрать одно из чисел <img src="uploaded/image/2010-3/image972.png" border="0" alt="" width="180" height="49" />, в которых функция <img src="uploaded/image/2010-3/image952.png" border="0" alt="" width="36" height="23" />&nbsp;принимает наибольшее значение.</p>
+<p>Если же окажется, что ни одна из точек <img src="uploaded/image/2010-3/image972.png" border="0" alt="" width="180" height="49" />, в которых функ-</p>
+<p>ция <img src="uploaded/image/2010-3/image952.png" border="0" alt="" width="36" height="23" />&nbsp;принимает наибольшее значение, не принадлежит [2, p], то в качестве оптимального структурирования по числу блоков выбираем s0=p.</p>
+<p>В силу отрицательности второй производной исследуемая функция выпукла. Следовательно, точка максимума всегда существует, а значит, существует и эффективная однородная распределенная система конкурирующих процессов в случае, когда s&reg;&yen;.</p>
+<p>Достаточность следует из свойств выпуклости функции <img src="uploaded/image/2010-3/image952.png" border="0" alt="" width="36" height="23" />&nbsp;при s&pound;p на отрезке [2, p].</p>
+<p>Обобщая, отметим, что полученные критерии эффективности и оптимальности структурирования программных ресурсов могут использоваться при проектировании системного и прикладного программного обеспечения МС и вычислительных комплексов. Полученные формулы также служат основой для решения задач оптимизации числа процессоров при заданных объемах вычислений и (или) директивных сроках реализации процессов, исследования всевозможных смешанных режимов организации выполнения параллельных процессов при распределенной обработке, в том числе с учетом ограниченного числа копий структурированного программного ресурса и прочего.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Воеводин В.В., Воеводин Вл.В. Параллельные вычисления. СПб: БХВ&ndash;Петербург, 2002. 608 с.</p>
+<p>2.&nbsp;&nbsp; Топорков В.В. Модели распределенных вычислений. М.: Физматлит, 2004. 320 с.</p>
+<p>3.&nbsp;&nbsp; Иванников В.П., Коваленко Н.С., Метельский В.М. О минимальном времени реализации распределенных конкурирующих процессов в синхронных режимах // Программирование. 2000. № 5. С. 44&ndash;52.</p>
+<p>4.&nbsp;&nbsp; Kapitonova Yu.V., Kovalenko N.S., Pavlov P.А. Optimality of systems of identically distributed competing processes // Cybernetics and Systems Analysis. New York: Springer, 2006, pp. 793&ndash;799.</p>
+<p>5.&nbsp;&nbsp; Павлов П.А. Анализ режимов организации одинаково распределенных конкурирующих процессов // Вест. БГУ.  Сер. 1: Физматинформ. 2006. № 1. С. 116&ndash;120.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2564</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2564">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 3 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=91">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

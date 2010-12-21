@@ -1,0 +1,547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Разработка численной схемы стекловаренной печи</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Разработка численной схемы стекловаренной печи</h2><div style="margin-bottom:10px"><strong>Development numerical scheme of glass furnace</strong></div>Статья опубликована в выпуске журнала № 3 за 2010 год. [ 07.09.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">В статье приведен пример построения дискретного аналога трехмерной математической модели гидродинамики и теплообмена ванны стекловаренной печи. Выполнены необходимые преобразования уравнений неразрывности и балансов импульса, проведен переход к уравнениям дискретного аналога на разнесенной конечноразностной сетке. Также даны рекомендации по решению уравнений дискретного аналога с использованием итерационного метода и по нахождению граничных условий.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">The article gives an example of constructing a discrete analogue of three-dimensional mathematical model for bath hydrodynamics and heat exchange in glass furnace. Authors have done all the necessary transformations of the continuity equation and impulse balances equation, as well as transition to the equations of discrete analogue on straddling finite-difference grid. The article gives recommendations on the method of further solution to the equations of discrete analogue using an iterative method, and recommendations on finding the boundary conditions.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=5901">Швыдкий В.С. (vshvit@isnet.ru)</a> - Уральский государственный технический университет, г. Екатеринбург Доктор технический наук Ph.D., <a href="index.php?page=infou&id=5902">Собянин С.Е. (ssergey@pochtamt.ru)</a> - Уральский государственный технический университет, г. Екатеринбург   </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1698">численная схема</a>, <a href="index.php?page=infotg&id=1697">стекловаренная печь</a>, <a href="index.php?page=infotg&id=1119">математическая модель</a>, <a href="index.php?page=infotg&id=1699">дискретный аналог</a>, <a href="index.php?page=infotg&id=774">аппроксимация</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1698">numerical scheme</a>, <a href="index.php?page=infotg&id=1697">glass furnace</a>, <a href="index.php?page=infotg&id=1119">mathematical model</a>, <a href="index.php?page=infotg&id=1699">discrete analog</a>, <a href="index.php?page=infotg&id=774">approximation</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 144<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2574">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>При разработке численной схемы стекловаренной печи необходимо обязательно учесть особенности стекломассы: большую плотность и вязкость, медленное движение (практически ползущее). Учитывая их, можно уверенно отнести стекломассу к несжимаемой жидкости.</p>
+<p>&nbsp;</p>
+<p>Конечно, плотность стекломассы зависит от температуры, а температура в бассейне изменяется, но, во-первых, эта зависимость слабая и, во-вторых, температура стекломассы в ванне изменяется от 1000 до 1580 оС, что приводит к относительно небольшим изменениям плотности. Иными словами, с достаточной точностью можно считать для стекломассы div v=0 и записать уравнения движения в виде:</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; в проекции на ось x</p>
+<p><img src="uploaded/image/2010-3/image1111.png" border="0" alt="" width="259" height="89" />&nbsp; (1)</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; в проекции на ось y</p>
+<p><img src="uploaded/image/2010-3/image1113.png" border="0" alt="" width="194" height="133" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; в проекции на ось z</p>
+<p><img src="uploaded/image/2010-3/image1115.png" border="0" alt="" width="165" height="133" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p><img src="uploaded/image/2010-3/image1117.png" border="0" alt="" width="111" height="41" /></p>
+<p>Вязкость стекломассы существенно зависит от температуры. Однако уравнения (1)&ndash;(3) &ndash; это уравнения баланса импульса для бесконечно малого объема. При составлении этого баланса можно считать, что температура стекломассы, следовательно, и ее вязкость, в пределах элементарного объема одинаковы. Тогда m можно вынести из-под знака производных, что приводит к упрощению уравнений.</p>
+<p>Например, в уравнении (1) выделим слагаемые</p>
+<p><img src="uploaded/image/2010-3/image1119.png" border="0" alt="" width="156" height="84" /></p>
+<p>то же сделаем и для уравнений (2) и (3). Заметим, что такой подход не исключает учета зависимости m от температуры, поэтому окончательный вид уравнений движения стекломассы можно представить следующим образом:</p>
+<p><img src="uploaded/image/2010-3/image1121.png" border="0" alt="" width="253" height="85" /></p>
+<p><img src="uploaded/image/2010-3/image1123.png" border="0" alt="" width="252" height="86" /></p>
+<p><img src="uploaded/image/2010-3/image1125.png" border="0" alt="" width="180" height="127" /></p>
+<p>Уравнение неразрывности можно упростить. Хотя формально необходимо учитывать наличие внутренних источников (стоков) массы, фактически сделать это нельзя из-за неопределенности кинетики физико-химических превращений и отсутствия математического описания. Поэтому используем уравнение неразрывности в форме</p>
+<p><img src="uploaded/image/2010-3/image1127.png" border="0" alt="" width="184" height="38" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)</p>
+<p>Здесь возникло некоторое противоречие со сделанным утверждением о несжимаемости стекломассы, однако, во-первых, введение плотности под знаки производных не слишком усложняет уравнение, а, во-вторых, это важно для дальнейшего учета теплообмена.</p>
+<p>Построение дискретного аналога всегда нужно выполнять для безразмерных уравнений, поскольку в этом случае легче оценить порядок аппроксимации и устойчивость численной схемы. Введем соответствующие безразмерные параметры. Предварительно, однако, приведем уравнения движения к дивергентному виду, объединив с уравнением неразрывности:</p>
+<p><img src="uploaded/image/2010-3/image1129.png" border="0" alt="" width="237" height="84" /></p>
+<p><img src="uploaded/image/2010-3/image1131.png" border="0" alt="" width="223" height="80" /></p>
+<p><img src="uploaded/image/2010-3/image1133.png" border="0" alt="" width="254" height="80" /></p>
+<p>Отсчитаем компоненты скорости в долях среднерасходной скорости стекломассы в протоке V0=P/(86,4∙r0∙z2∙b2) м/с, где r0 &ndash; масштабное значение плотности стекломассы (кг/м3); P &ndash; производительность печи, т/сутки; z2 &ndash; высота прото- ка, м; b2 &ndash; ширина протока, м. Индекс 0 у теплофизических параметров характеризует значение при масштабной температуре T0=1000&nbsp;оС. В качестве характерной длины выберем длину ванны L. Тогда имеем</p>
+<p><img src="uploaded/image/2010-3/image1135.png" border="0" alt="" width="195" height="40" /></p>
+<p><img src="uploaded/image/2010-3/image1137.png" border="0" alt="" width="173" height="36" /></p>
+<p><img src="uploaded/image/2010-3/image1139.png" border="0" alt="" width="245" height="40" /></p>
+<p>Здесь h &ndash; глубина слоя стекломассы в ван- не, м; b &ndash; ширина ванны, м; x1 &ndash; длина загрузочной части ванны, м. Подстановка этих соотношений в консервативную форму записи уравнения движения в проекции на ось x приводит к выражению</p>
+<p><img src="uploaded/image/2010-3/image1141.png" border="0" alt="" width="260" height="36" /></p>
+<p>или</p>
+<p><img src="uploaded/image/2010-3/image1143.png" border="0" alt="" width="153" height="122" />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5)</p>
+<p><img src="uploaded/image/2010-3/image1145.png" alt="Подпись:  
+Рис. 1. Контрольный объем для аппроксимации 
+уравнения неразрывности" width="754" height="282" align="left" /><img src="uploaded/image/2010-3/image1147.png" border="0" alt="" width="157" height="121" />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6)</p>
+<p><img src="uploaded/image/2010-3/image1149.png" border="0" alt="" width="183" height="121" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (7)</p>
+<p>где P=p/(r0V02) &ndash; безразмерное давление, или  число Эйлера; Re=r0V0L/m0 &ndash; число Рейнольдса;  Fr=V02/(gL) &ndash; число Фруда.</p>
+<p>Введем обозначения:</p>
+<p>F1=<img src="uploaded/image/2010-3/image1151.png" border="0" alt="" width="83" height="36" />&nbsp;G1=<img src="uploaded/image/2010-3/image1153.png" border="0" alt="" width="91" height="36" /></p>
+<p>H1=<img src="uploaded/image/2010-3/image1155.png" border="0" alt="" width="90" height="36" />&nbsp;</p>
+<p>F2=<img src="uploaded/image/2010-3/image1157.png" border="0" alt="" width="87" height="36" />&nbsp;G2=<img src="uploaded/image/2010-3/image1159.png" border="0" alt="" width="83" height="36" />&nbsp;</p>
+<p>H2=<img src="uploaded/image/2010-3/image1161.png" border="0" alt="" width="90" height="36" /></p>
+<p>F3=<img src="uploaded/image/2010-3/image1163.png" border="0" alt="" width="95" height="36" />&nbsp;G3=<img src="uploaded/image/2010-3/image1165.png" border="0" alt="" width="95" height="36" />&nbsp;</p>
+<p>H3=<img src="uploaded/image/2010-3/image1167.png" border="0" alt="" width="91" height="36" /></p>
+<p>Тогда уравнения движения можно переписать в компактном виде:</p>
+<p><img src="uploaded/image/2010-3/image1169.png" border="0" alt="" width="187" height="111" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (8)</p>
+<p>Для аппроксимации уравнения неразрывности и уравнений системы (8) воспользуемся шахматной, или разнесенной, конечноразностной сеткой. Осуществим переход к разностным соотношениям на различных контрольных объемах (КО). Нужно отметить, что сетка на самом деле едина (в геометрическом плане) и индексация в различных КО изменяется лишь с целью более четкого выделения искомых параметров. В ряде случаев такая условность затрудняет построение дискретных аналогов (возникает неопределенность индексации), поэтому в данной работе следует связать индексацию с геометрическим центром КО, на котором аппроксимируется уравнение неразрывности. В этом центре определим все параметры состояния среды: давление, температуру и концентрацию.</p>
+<p>Используя контрольный объем, соответствующий данным рисунка 1, запишем уравнение неразрывности в виде</p>
+<p><img src="uploaded/image/2010-3/image1171.png" alt="Подпись:  
+Рис. 2. Контрольный объем для аппроксимации 
+уравнения импульса по оси x" width="295" height="282" align="left" /><img src="uploaded/image/2010-3/image1173.png" border="0" alt="" width="233" height="92" />&nbsp;&nbsp; (9)</p>
+<p>Но по заданному условию теплофизические свойства берутся в центре КО и далее остаются неизменными во всем объеме параллелепипеда. Тогда во всех слагаемых плотность одинакова и, следовательно, исключается из (9). В результате имеем</p>
+<p><img src="uploaded/image/2010-3/image1175.png" border="0" alt="" width="193" height="83" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (9а)</p>
+<p>Можно видеть, что данная форма аппроксимации сохраняет физический смысл уравнения неразрывности как разности между массовыми расходами втекающей в КО и вытекающей из него стекломассы. По сравнению с первоначальной трактовкой изменена индексация компонентов скорости. Согласно физическому смыслу баланса массы определяемыми величинами являются компоненты скорости в геометрическом центре граней, то есть Uj-1/2,k,l, Uj+1/2,k,l, Vj,k-1/2,l, Vj,k+1/2,l,  Wj,k,l-1/2 и Wj,k,l+1/2.</p>
+<p>Перейдем к уравнениям баланса импульсов.  В проекции на ось Х имеем</p>
+<p><img src="uploaded/image/2010-3/image1177.png" border="0" alt="" width="175" height="36" /></p>
+<p>В новой индексации не все суммарные индексы попадают в целочисленные узлы. В соответствии с рисунком 2 координаты КО для оси Х изменяются в пределах: по Х от Xj до Xj+1; по Y от  Yk-1/2 до Yk+1/2; по Z от Zl-1/2 до Zl+1/2. Применяя метод контрольного объема к уравнению х-компо&shy;ненты импульса (8) с КО, показанным на рисун- ке 2, можно получить дискретное уравнение</p>
+<p><img src="uploaded/image/2010-3/image1179.png" border="0" alt="" width="219" height="111" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (10)</p>
+<p>Центральным параметром данного КО является компонент Uj+1/2,k,l, поэтому все аппроксимации выполняются относительно этой величины. После небольших математических преобразований получим следующее уравнение, записанное в каноническом виде:</p>
+<p><img src="uploaded/image/2010-3/image1181.png" border="0" alt="" width="171" height="59" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (11)</p>
+<p>где <img src="uploaded/image/2010-3/image1183.png" border="0" alt="" width="61" height="31" />&nbsp;означает все конвективные и диффузионные вклады из соседних узлов.</p>
+<p>Можно заметить, что уравнение (11) нелинейно и, следовательно, может быть решено только методом итераций. Теплофизические параметры на гранях КО можно определить либо как среднегеометрическое из соседних узловых значений, либо как среднеарифметическое.</p>
+<p>Аналогично рассматриваются и другие координатные направления. КО для оси y лежит в диапазоне: по Х &ndash; от Xj -1/2 до Xj+1/2; по Y &ndash; от Yk  до Yk+1; по Z &ndash; от Zl&ndash;&frac12; до Zl+1/2 (рис. 3). При помощи КО, изображенного на рисунке 3, дискретная форма уравнения y-компоненты импульса (второе уравнение системы (8)) может быть записана  в виде</p>
+<p><img src="uploaded/image/2010-3/image1185.png" border="0" alt="" width="199" height="44" /></p>
+<p><img src="uploaded/image/2010-3/image1187.png" border="0" alt="" width="216" height="44" />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (12)</p>
+<p>Здесь основной (искомой) переменной является Vj,k+1/2,l. После небольших математических преобразований получим уравнение для оси Y, записанное в канонической форме:</p>
+<p><img src="uploaded/image/2010-3/image1189.png" border="0" alt="" width="168" height="53" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (13)</p>
+<p>Наконец, в соответствии с КО, представленным на рисунке 4, для z-компоненты импульса (третье уравнение системы (8)) можно записать</p>
+<p><img src="uploaded/image/2010-3/image1191.png" border="0" alt="" width="208" height="128" /><img src="uploaded/image/2010-3/image1193.png" border="0" alt="" width="12" height="23" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (14)</p>
+<p>В данном случае определяющей величиной является компонента Wj,k,l+1/2, поэтому получаем следующее уравнение для оси Z, записанное в канонической форме:</p>
+<p><img src="uploaded/image/2010-3/image1195.png" border="0" alt="" width="183" height="55" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (15)</p>
+<p>Подведем итоги. Гидродинамическая часть численной модели на данном этапе включает четыре уравнения: одно уравнение неразрывнос- ти (9а):</p>
+<p><img src="uploaded/image/2010-3/image1198.png" alt="Подпись:  
+Рис. 3. Контрольный объем для аппроксимации 
+уравнения импульса по оси y
+ 
+Рис. 4. Контрольный объем уравнения импульсов 
+по оси z" width="294" height="552" align="left" /><img src="uploaded/image/2010-3/image1200.png" border="0" alt="" width="193" height="81" />&nbsp;</p>
+<p>и три уравнения баланса импульсов:</p>
+<p><img src="uploaded/image/2010-3/image1181.png" border="0" alt="" width="171" height="59" /></p>
+<p><img src="uploaded/image/2010-3/image1203.png" border="0" alt="" width="168" height="53" /></p>
+<p><img src="uploaded/image/2010-3/image1205.png" border="0" alt="" width="203" height="53" /></p>
+<p>Уравнения баланса импульсов дадут верные значения компонентов скорости, превращающие уравнение неразрывности в тождество, лишь в том случае, когда при их решении будет использоваться правильное поле давления. Но даже тогда для решения системы понадобятся граничные условия. Для решения уравнений дискретного аналога можно воспользоваться методом SIMPLE С.&nbsp;Патанкара. В плане граничных условий основную сложность представляет задание компонентов скорости на свободной поверхности. Для неизотермической задачи здесь можно попытаться воспользоваться эффектом Марангони. Однако для изотермического потока этот выход отсутствует, и приходится изыскивать какие-то другие способы.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Патанкар С. Численные методы решения задач теплообмена и динамики жидкости. М.: Энергоатомиздат, 1984.  152 с.</p>
+<p>2.&nbsp;&nbsp; Самарский А.А., Николаев Е.С. Методы решения сеточных уравнений. М.: Наука, 1978. 592 с.</p>
+<p>3.&nbsp;&nbsp; Дзюзер В.Я., Брылина Т.С., Собянин С.Е. Численное моделирование внешнего теплообмена в газоэлектрической стекловаренной печи с подковообразным направлением пламени // Стекло и керамика. 2008. № 5. С. 8&ndash;16.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2574</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2574">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 3 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=91">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Подсистема учета влияния одиночных событий на характеристики микросхем</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Подсистема учета влияния одиночных событий на характеристики микросхем</h2><div style="margin-bottom:10px"><strong>Subsystem of the account of influence of single events  on characteristics of microcircuits</strong></div>Статья опубликована в выпуске журнала № 2 за 2010 год. [ 27.05.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">В статье рассматриваются программное обеспечение и модели расчета реакции микросхем на воздействие от-дельных ядерных частиц. Для решения задач моделирования на различных уровнях адаптированы известные средства функционально-логического моделирования и генерации тестов, схемотехнического, топологического проектирования.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">In article the software and the models, counting reaction of microcircuits to influence of separate nuclear particles is considered. For the decision of problems of modelling at various levels known means of functional-logic modelling and generation of tests, shemo-technical, topological designing are adapted.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Автор: </b><a href="index.php?page=infou&id=5511">Фортинский Ю.К. (nilitv@gmail.com)</a> - Воронежская государственная лесотехническая академия Кандидат технический наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1617">схемотехническое и функционально-логическое моделирование</a>, <a href="index.php?page=infotg&id=1271">радиация</a>, <a href="index.php?page=infotg&id=1616">отдельные ядерные частицы</a>, <a href="index.php?page=infotg&id=1618">генерация тестов</a>, <a href="index.php?page=infotg&id=971">автоматизация проектирования</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1617">shemo-technical and is functional-logic modelling</a>, <a href="index.php?page=infotg&id=1271">radiation</a>, <a href="index.php?page=infotg&id=1616">separate nuclear particles</a>, <a href="index.php?page=infotg&id=1618">generation of tests</a>, <a href="index.php?page=infotg&id=971">design automation</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 307<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2536">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Для проектирования микросхем, стойких к одиночным событиям, разработано проблемно-ориентированное программное обеспечение, позволяющее учесть радиационные эффекты от одиночных ядерных частиц (ОЯЧ).</p>
+<p>&nbsp;</p>
+<p><img src="uploaded/image/2010-2/image777.gif" alt="Подпись:  
+Рис. 1. Структура программного обеспечения 
+расчета радиационных воздействий космического характера" width="408" height="421" align="left" />Оно является одной из подсистем программного обеспечения, с помощью которого рассчитывается стойкость изделий к факторам космического происхождения. На рисунке 1 приведена структура подсистемы расчета стойкости сверхбольших интегральных схем (СБИС) к факторам космического пространства.</p>
+<p>Основное внимание при разработке данного программного обеспечения уделялось созданию математических моделей, позволяющих учесть воздействие ОЯЧ, а для решения задач собственно моделирования на различных уровнях адаптированы известные средства функционально-логи&shy;ческого моделирования и генерации тестов, схемотехнического, топологического проектирования.</p>
+<p>При адаптации указанных средств проведена их модификация с целью повышения эффективности и в первую очередь снижения вычислительных затрат для обеспечения решения задач моделирования базовых элементов в реальном времени.</p>
+<p>Алгоритм процесса моделирования сбора заряда предложено свести к решению упрощенной задачи, основанной на следующих предположениях.</p>
+<p>Во-первых, чувствительный объем представляется в виде цилиндра, по оси которого проходит трек тяжелых заряженных частиц. Вдоль оси цилиндра направлена координатная ось z. Заряд, генерированный в треке, собирается коллекторной областью, которой является верхняя торцевая поверхность цилиндра. В начальный момент задается радиальное распределение носителей заряда в треке, а дальше рассматривается эволюция трека с учетом объемной рекомбинации носителей заряда.</p>
+<p><img src="uploaded/image/2010-2/image779.gif" alt="Подпись:  
+Трек тяжелых заряженных частиц располагается по оси цилиндра (ось z); верхняя торцевая поверхность цилиндра (z=0) &ndash; коллекторная область для сбора носителей заряда из трека тяжелых заряженных частиц.
+Рис. 2. Модельное представление чувствительного объема
+ в виде цилиндра радиусом R и высотой Z0" width="754" height="351" align="left" />Во-вторых, предполагается отсутствие внешнего поля. Таким образом, рассматривается только заряд, собранный посредством диффузии. Учет дрейфовой составляющей, как это описывалось выше, может быть осуществлен, например, путем удвоения диффузионного тока неосновных носителей.</p>
+<p>В-третьих, объемная рекомбинация определяется двумя механизмами: Оже-рекомбиницией и рекомбинацией Шокли&ndash;Рида&ndash;Холла. Общая скорость объемной рекомбинации R будет складываться из скоростей этих двух видов рекомбинации:</p>
+<p class="-0"><img src="uploaded/image/2010-2/image781.gif" border="0" alt="" width="94" height="21" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+<p>Для скорости Оже-рекомбинации RAuger можно записать как</p>
+<p class="-0"><img src="uploaded/image/2010-2/image783.gif" border="0" alt="" width="192" height="63" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)</p>
+<p>где n, р &ndash; полные концентрации носителей; n0,  р0 &ndash; начальные равновесные концентрации носителей.</p>
+<p>Значения Оже-коэффициентов Ce и Сh для кремния обычно составляют порядка 2&times;10&ndash;31&nbsp;см6/с.</p>
+<p>Для скорости рекомбинации Шокли&ndash;Рида&ndash;Холла RSRH можно записать как</p>
+<p class="-0"><img src="uploaded/image/2010-2/image785.gif" border="0" alt="" width="161" height="43" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p>где <img src="uploaded/image/2010-2/image787.gif" border="0" alt="" width="164" height="41" />&nbsp;&ndash; время жизни электронов и дырок (при низком уровне инжекции); vthn, vthp &ndash; тепловая скорость электронов и дырок соответственно; sn, sp &ndash; сечение захвата электронов и дырок соответственно.</p>
+<p>Для низкого уровня инжекции (когда доминирует механизм рекомбинации Шокли&ndash;Рида&ndash;Холла) можно приблизительно считать, что скорость рекомбинации определяется выражением</p>
+<p class="-0"><img src="uploaded/image/2010-2/image789.gif" border="0" alt="" width="117" height="37" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)</p>
+<p>где tpl=tnl=t.</p>
+<p>В-четвертых, предполагается наличие аксиальной симметрии относительно оси z (направление начального трека). Если использовать цилиндрическую систему координат, то данное предположение позволяет превратить решаемую задачу из трехмерной в двухмерную относительно независимых координат z и r (рис. 2). Плотность носителей заряда не будет зависеть от полярного угла в силу наличия аксиальной симметрии относительно оси z.</p>
+<p>При этих предположениях уравнения диффузии для неравновесных носителей заряда, генерированных в треке тяжелых заряженных частиц, можно записать в виде</p>
+<p class="-0"><img src="uploaded/image/2010-2/image791.gif" border="0" alt="" width="88" height="37" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5)</p>
+<p class="-0"><img src="uploaded/image/2010-2/image793.gif" border="0" alt="" width="88" height="36" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6)</p>
+<p>где Dp, Dn &ndash; коэффициенты диффузии электронов и дырок.</p>
+<p>Общий ток, характеризующий значение собранного заряда, определяется диффузионным током неосновных носителей заряда, значение которого умножается на коэффициент порядка 2 для учета дрейфовой компоненты. Известно, что обычно в качестве чувствительной области, отвечающей за возникновение одиночных обратимых сбоев при воздействии тяжелых заряженных частиц, выступает область пространственного заряда стокового p-n-перехода закрытого n-канального транзистора. Если считать, что уровень легирования n+-стоковой области значительно выше, чем в р-подложке, то область пространственного заряда будет практически полностью сосредоточена в подложке. Следовательно, в качестве неосновных носителей заряда можно рассматривать электроны, изменение концентрации которых описывается уравнением (6).</p>
+<p>Следует учесть, что при высоком уровне инжекции коэффициенты диффузии для электронов и дырок в уравнениях (5) и (6) будут равны коэффициенту амбиполярной диффузии. В качестве границы между высоким и низким уровнями инжекции можно принять равенство концентраций избыточных неосновных носителей (электронов) и основных носителей заряда (дырок): n&ndash;n0=p0. Если концентрация избыточных электронов превышает равновесную концентрацию дырок, реализуется состояние с высоким уровнем инжекции, иначе &ndash; с низким.</p>
+<p>В качестве граничных условий можно принять:</p>
+<p class="-0"><img src="uploaded/image/2010-2/image795.gif" border="0" alt="" width="54" height="41" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (7)</p>
+<p class="-0"><img src="uploaded/image/2010-2/image797.gif" border="0" alt="" width="59" height="43" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (8)</p>
+<p class="-0"><img src="uploaded/image/2010-2/image799.gif" border="0" alt="" width="97" height="41" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (9)</p>
+<p class="-0"><img src="uploaded/image/2010-2/image801.gif" border="0" alt="" width="44" height="23" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (10)</p>
+<p class="-0"><img src="uploaded/image/2010-2/image803.gif" border="0" alt="" width="59" height="43" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (11)</p>
+<p class="-0"><img src="uploaded/image/2010-2/image805.gif" border="0" alt="" width="97" height="41" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (12)</p>
+<p>Начальное распределение плотности носителей заряда можно найти из начального распределения поглощенной энергии в треке тяжелых заряженных частиц, которое в общем случае не является однородным (в некоторых работах указывается, что распределение поглощенной энергии в треке пропорционально 1/r2, где r &ndash; расстояние от трека). Однако во многих случаях можно пренебречь неоднородным распределением поглощенной энергии в треке, поскольку начальный радиус трека намного меньше размеров области сбора заряда, для которой решается задача. Типичное значение начального радиуса трека составляет порядка 0,1&nbsp;мкм, отсюда площадь поперечного сечения трека ~0,03&nbsp;мкм2. Как уже указывалось, чувствительной областью для эффектов одиночных сбоев является область пространственного заряда стокового перехода закрытого n-канального транзистора. Размеры стоковой области можно определить, если известна топология базового элемента СБИС. Рассмотрим топологию с проектными нормами 350 нм. В соответствии с правилами проектирования транзисторы бывают трех типов: А-типа,  Н-типа и с параллельно соединенными стоками.</p>
+<p>Если считать, что напряжение на стоке закрытого n-канального транзистора в КМОП-паре равно напряжению питания, и взять его равным 5&nbsp;В, то ширина области пространственного заряда составит порядка 0,8&ndash;2,6&nbsp;мкм в зависимости от уровня легирования р-подложки (данные оценки получены для концентрации акцепторной примеси в р-подложке 1016 и 1015&nbsp;см&ndash;3). При этом площадь чувствительной области, определяемая площадью области пространственного заряда стокового перехода n-канального транзистора, составит 48&ndash;112&nbsp;мкм2. Как видно, данные значения существенно превосходят площадь поперечного сечения исходного трека тяжелых заряженных частиц. Это позволяет пренебречь неоднородностью распределения плотности носителей заряда по толщине трека.</p>
+<p>Если считать, что длина пробега тяжелых заряженных частиц значительно превышает глубину области сбора заряда, в результате в пределах этой области можно пренебречь изменением линейной потери энергии (ЛПЭ) по длине трека (такая ситуация реализуется при длине пробега тяжелых заряженных частиц порядка 30&ndash;40&nbsp;мкм и более), то концентрацию электронно-дырочных пар ne-h в треке можно оценить следующим образом:</p>
+<p class="-0"><img src="uploaded/image/2010-2/image807.gif" border="0" alt="" width="124" height="40" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (13)</p>
+<p>где DE &ndash; энергия, поглощенная на участке трека длиной Dz; ei &ndash; энергия ионизации (для Si ei&raquo;3,6&nbsp;эВ); DV &ndash; объем участка трека длиной Dz.</p>
+<p>Если линейные потери энергии тяжелых заряженных частиц L считать приблизительно постоянными, то для них можно записать</p>
+<p class="-0"><img src="uploaded/image/2010-2/image809.gif" border="0" alt="" width="95" height="39" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (14)</p>
+<p>С учетом (14) выражение (13) принимает вид:</p>
+<p class="-0"><img src="uploaded/image/2010-2/image811.gif" border="0" alt="" width="70" height="40" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (15)</p>
+<p>Начальные концентрации электронов и дырок в треке принимаются равными концентрации электронно-дырочных пар, определяемой формулой (15).</p>
+<p>Таким образом, алгоритм моделирования сбора заряда из трека тяжелых заряженных частиц в случае нормального падения тяжелых заряженных частиц по центру области сбора заряда проводится следующим образом.</p>
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Решается краевая задача для распределений концентрации носителей заряда в чувствительном объеме</p>
+<p><img src="uploaded/image/2010-2/image813.gif" border="0" alt="" width="211" height="80" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (16)</p>
+<p class="-0"><img src="uploaded/image/2010-2/image815.gif" border="0" alt="" width="212" height="80" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (17)</p>
+<p class="-0"><img src="uploaded/image/2010-2/image801.gif" border="0" alt="" width="44" height="23" />; <img src="uploaded/image/2010-2/image818.gif" border="0" alt="" width="149" height="43" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (18)</p>
+<p class="-0"><img src="uploaded/image/2010-2/image820.gif" border="0" alt="" width="183" height="41" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (19)</p>
+<p class="-0"><img src="uploaded/image/2010-2/image822.gif" border="0" alt="" width="220" height="63" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (20)</p>
+<p class="-0"><img src="uploaded/image/2010-2/image824.gif" border="0" alt="" width="140" height="68" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (21)</p>
+<p class="-0"><img src="uploaded/image/2010-2/image826.gif" border="0" alt="" width="141" height="65" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (22)</p>
+<p>Данная задача решается численно для различных значений ЛПЭ падающих частиц, которые определяют начальную концентрацию электронно-дырочных пар в треке.</p>
+<p>2.&nbsp;Вычисляется диффузионный ток неосновных носителей заряда (электронов) через верхнюю торцевую поверхность цилиндрического чувствительного объема:</p>
+<p class="-0"><img src="uploaded/image/2010-2/image828.gif" border="0" alt="" width="144" height="39" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (23)</p>
+<p>В полярной системе координат с учетом аксиальной симметрии относительно оси z выражение (23) можно преобразовать:</p>
+<p class="-0"><img src="uploaded/image/2010-2/image830.gif" border="0" alt="" width="193" height="83" /></p>
+<p class="-0"><img src="uploaded/image/2010-2/image832.gif" border="0" alt="" width="158" height="43" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (24)</p>
+<p>3.&nbsp;Общий ток неосновных носителей, учитывающий дрейфовую компоненту, определяется путем удваивания диффузионного тока:</p>
+<p class="-0"><img src="uploaded/image/2010-2/image834.gif" border="0" alt="" width="196" height="43" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (25)</p>
+<p>4.&nbsp;Собранный заряд определяется путем интегрирования выражения (25):</p>
+<p class="-0"><img src="uploaded/image/2010-2/image836.gif" border="0" alt="" width="207" height="43" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (26)</p>
+<p>Таким образом, предлагаемая методика позволяет рассчитать для заданного значения ЛПЭ падающих частиц форму импульса ионизационного тока (точнее, его диффузионной составляющей) и зависимость собранного заряда от времени после попадания частицы. При вычислении собранного заряда необходимо корректно выбрать верхний предел интегрирования в интеграле по времени.  В частности, можно взять такое значение t в качестве верхнего предела интегрирования, при котором остаток составит не более 10&nbsp;% от общего значения заряда.</p>
+<p>После того как получена зависимость собранного заряда от значения ЛПЭ тяжелых заряженных частиц, может быть определено пороговое значение ЛПЭ тяжелых заряженных частиц для одиночных обратимых сбоев. В качестве порогового выбирается такое значение ЛПЭ, при котором собранный заряд равен заряду переключения логического состояния КМОП-триггера, для которого проводится моделирование. Величина заряда переключения обычно известна, как правило, она рассчитывается на этапе разработки конструкции и технологии СБИС.</p>
+<p>Для предсказания частоты и вероятности возникновения одиночных сбоев при воздействии тяжелых заряженных частиц с заданными спектрально-энергетическими характеристиками, кроме порогового значения ЛПЭ L0, необходимо также знать значение сечения насыщения s0. Если известны эти два параметра, можно воспользоваться, например, рекомендациями РД В 319.03.38-2000 для определения значений остальных параметров функции Вейбулла, аппроксимирующей зависимость сечения сбоев от ЛПЭ, и рассчитать частоту сбоев по формуле</p>
+<p class="-0"><img src="uploaded/image/2010-2/image838.gif" border="0" alt="" width="132" height="46" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (27)</p>
+<p>где jion(L) &ndash; дифференциальный ЛПЭ-спектр тяжелых заряженных частиц, см&ndash;2с&ndash;1(МэВ&times;см2/мг)&ndash;1; s(L) &ndash; зависимость сечения событий от ЛПЭ тяжелых заряженных частиц, которая обычно аппроксимируется функцией Вейбулла.</p>
+<p>В качестве s0 можно принять площадь торцевой поверхности цилиндрического чувствительного объема, для которого проводилось моделирование сбора заряда:</p>
+<p class="-0">s0 = pR2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (28)</p>
+<p>Можно также воспользоваться известным соотношением, характерным для статических ОЗУ, между площадью запоминающей ячейки SЗЯ и топологической нормой проектирования lT</p>
+<p class="-0">SЗЯ&nbsp;[мкм2]&nbsp;&raquo;&nbsp;300(lT&nbsp;[мкм])2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (29)</p>
+<p>и считать сечение насыщения равным площади запоминающей ячейки. Такой подход будет давать завышенное значение s0, следовательно, завышенное значение частоты возникновения событий, однако относительно обеспечения стойкости изделий к эффектам одиночного события это является вполне оправданным.</p>
+<p>Следует также отметить, что при вычислении частоты возникновения событий по формуле (27) берется сечение сбоев, приходящееся на корпус. Для этого сечение одной запоминающейся ячейки умножается на информационную емкость (общее количество бит) моделируемой СБИС. После этого проводится предварительное формирование результатов расчета. Оно заключается во включении в БД результатов расчета четырех составляющих: порогового значения энергии и массивов тока ионизации, частоты сбоев, сечения в зависимости от энергии тяжелых заряженных частиц.</p>
+<p>Отметим, что оценка стойкости СБИС к воздействию тяжелых заряженных частиц в полном виде включает в себя определение оценки времени потери работоспособности СБИС и пороговой энергии наступления тиристорного эффекта, если он наблюдается. Однако очень часто проектировщику аппаратуры достаточно знать пороговое значение энергии и зависимости сечения и частоты сбоев от энергии частиц при условии, что тиристорный эффект отсутствует. Поэтому, как правило, расчет на этом заканчивается. Необходимо только оценить его адекватность и, если точность расчета вписывается в допустимые нормы, сформировать результаты для окончательного вывода.</p>
+<p>Разработанная подсистема позволяет проводить расчет параметров внешней среды (радиационного воздействия), изменения параметров моделей стандартных элементов при воздействии статических видов радиации космического характера &ndash; электронного и протонного излучений, характерных для космического пространства.</p>
+<p>Программное обеспечение радиационного моделирования включает модули:</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; монитора &ndash; центрального звена средств моделирования, который обеспечивает взаимодействие всех программных модулей, а также выход на операционную систему;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; расчета накопленной дозы, определяющего характеристики внешней среды;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; расчета заряда в подзатворном диэлектрике, который накапливается при воздействии статических факторов космического пространства;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; расчета параметров моделей транзистора для схемотехнического моделирования с использованием Spice-подобных программ.</p>
+<p>Полученные значения параметров транзисторов соответствуют их деградации при воздействии данной дозы радиации. Данные об элементах заносятся в БД. Они относятся к так называемым неисправным элементам. Для моделирования предусмотрены три несправных элемента, соответствующих значению дозы уровней начального, среднего и конечного изменений параметров.</p>
+<p>Эти уровни соответствуют следующим величинам дозы: начальной, когда изменения параметров только начинаются; конечной, при которой изменения выходят на норму технического задания или технических условий, и средней, расположенной в средней между ними точке.</p>
+<p>Численные значения накопленной дозы высчитываются в зависимости от вида воздействия и его ионизационной составляющей. Другими словами, данный модуль позволяет свести всю сложную совокупность внешнего воздействия к понятиям дозы.</p>
+<p>Комплекс программ расчета стойкости к электронному и протонному излучениям обеспечивает полное представление о стойкости изделия к факторам космического пространства.</p>
+<p>Графический редактор обеспечивает ввод информации и вывод результатов расчета в наглядной форме. Программный модуль интерфейса пользователя предназначен для взаимодействия человека и ЭВМ.</p>
+<p>Предусмотрена обучающая подсистема.</p>
+<p>Литература</p>
+<p>Ачкасов В.Н. Проектирование микроэлектронных компонентов космического назначения: монография. Воронеж: ВГУ, 2005. 270 с.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2536</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2536">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 2 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=90">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

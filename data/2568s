@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Компьютерная программа генерации контрольных работ на базе системы latex</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Компьютерная программа генерации контрольных работ на базе системы latex</h2><div style="margin-bottom:10px"><strong>Computer program for control’s creating by using system latex</strong></div>Статья опубликована в выпуске журнала № 3 за 2010 год. [ 07.09.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">В статье обсуждаются основные принципы построения компьютерного генератора контрольных работ по различным учебным дисциплинам. Представляемая программа использует известную типографскую систему LaTex, позволяющую создавать варианты контрольных работ в удобной графической форме.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">Abstract. In the article are considered main principles of computer generator for erudition’s control on different branches of science (mathematics, physics, information science, …). Considered program is using typographical system LaTex, which creates control tasks using more graphical resources.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Автор: </b><a href="index.php?page=infou&id=5046">Карнаухов В.М. (karnauhov.60@mail.ru)</a> - Московский государственный университет природообустройства Кандидат физико-математических наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1679">преподаватель</a>, <a href="index.php?page=infotg&id=1674">контрольная работа</a>, <a href="index.php?page=infotg&id=1677">компьютерная программа</a>, <a href="index.php?page=infotg&id=1676">задачи с параметрами</a>, <a href="index.php?page=infotg&id=1675">генератор</a>, <a href="index.php?page=infotg&id=1678">библиотека задач</a>, <a href="index.php?page=infotg&id=1673">latex</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1679">teacher</a>, <a href="index.php?page=infotg&id=1674">control</a>, <a href="index.php?page=infotg&id=1677">computer program</a>, <a href="index.php?page=infotg&id=1676">tasks with parameters</a>, <a href="index.php?page=infotg&id=1675">generator</a>, <a href="index.php?page=infotg&id=1678">task’s library</a>, <a href="index.php?page=infotg&id=1673">latex</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 273<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2568">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Созданная в середине 90-х годов система  K-Commander [1, 2] активно использовалась на кафедре высшей математики Московского государственного университета природообустройства (МГУП) последние 10 лет. При помощи этой системы проводились текущие контрольные, итоговые зачетные и расчетно-графические работы. Однако графика подготовленных при помощи данной системы вариантов контрольных работ оставляла желать лучшего: специальные математические символы (знаки интегралов, арифметических корней, рядов и т.д.) набирались при помощи обыкновенного текстового редактора. Поэтому внимание преподавателей привлекла редакционная система LaTex, преимущество которой состоит в открытости формата, в котором набирается текст. Автором была создана новая система подготовки раздаточного материала контрольных работ на базе редактора LaTex с использованием инструментальной среды Delphi 7. Система получила название VmTex [3,&nbsp;4]. Характерные особенности системы в том, что задачи ее базы набираются определенным способом при помощи всех доступных средств редактора LaTex, а система VmTex формирует различные контрольные работы, используя созданную базу.</p>
+<p>&nbsp;</p>
+<p>Представляемая в данной статье система Uni&shy;Tex является значительно усовершенствованным вариантом VmTex. Благодаря широким возможностям инструментальной среды Delphi 7 автор упростил работу пользователя с библиотекой задач и хранилищем контрольных работ.</p>
+<p>Схема, отражающая файловую и функциональную структуры представляемой системы, приведена на рисунке 1.</p>
+<p>Программа, руководящая процессом генерации контрольных работ, находится в файле UniTex.exe. Опишем данный процесс.</p>
+<p>При помощи встроенного редактора или внешнего специализированного редактора (напри&shy;мер WinShell) создается структурированная библиотека задач на основе языка LaTex.</p>
+<p>При помощи системы LaTex любые задачи библиотеки Library могут быть выведены в каталог временных файлов TMP, а затем на дисплей или на принтер.</p>
+<p>При создании вариантов контрольных работ вначале в каталоге Z формируются файлы с номерами задач библиотеки. По этим номерам из библиотеки извлекаются соответствующие задачи, помещаются в каталог временных файлов TMP. Используя систему LaTex, можно просмотреть либо распечатать сформированные варианты.</p>
+<p>Окно программы состоит из двух панелей. Верхняя панель &ndash; основная, содержит два компонента TTreeView (рис. 2).</p>
+<p>Одно из этих деревьев представляет собой хранилище сформированных контрольных работ системы. Верхний, 1-й, уровень дерева призван разделить весь набор контрольных работ по тематике (исчисления дифференциальное и интегральное, дифференциальные уравнения и т.д.), целенаправленности (расчетно-графические, стандартные контрольные, зачетные работы и т.д.), принадлежности преподавателям (именные папки работ преподавателей) и т.д. На этом уровне содержатся папки с контрольными работами.</p>
+<p>Следующий, 2-й, уровень дерева содержит список контрольных работ.</p>
+<p>Далее идет 3-й уровень (рис. 3), раскрывающийся при выборе (нажатии &laquo;+&raquo;). Он представляет собой набор задач, из которых составляется контрольная работа. Каждая задача может содержать подзадачи (4-й уровень). В этом случае подзадачи участвуют в формировании вариантов контрольных работ в той же степени, что и родительская задача.</p>
+<p>Другое дерево содержит библиотеку задач. Верхний уровень (рис. 2) призван разделить все задачи по тематике (матричная алгебра, векторная алгебра, аналитическая геометрия и т.д.), целенаправленности (расчетно-графические работы №&nbsp;1, №&nbsp;2 и т.д.), принадлежности преподавателям. Этот уровень содержит папки, после раскрытия (нажатия &laquo;+&raquo;) которых появляется их содержимое в виде задач (рис. 3).</p>
+<p>Два компонента тесно взаимодействуют друг с другом: можно составлять различные контрольные работы при помощи задач библиотеки задач.</p>
+<p>Элементы каждого дерева также взаимодействуют друг с другом в пределах компонента: можно копировать, перемещать, удалять элементы. Для элементов библиотеки задач существуют такие возможности, как запись задач на внешний источник, включение в систему задач с внешних носителей.</p>
+<p>В хранилище контрольных работ можно просмотреть любую сформированную контрольную работу и распечатать ее. В библиотеке задач также можно просмотреть любую созданную задачу и отредактировать ее.</p>
+<p><img src="uploaded/image/2010-3/image991.png" alt="Подпись:  
+Рис. 2. Главное окно программы UniTex
+ 
+Рис. 3. Низшие уровни базы контрольных работ
+ и библиотеки задач" width="293" height="570" align="left" />Нижняя панель окна программы представляет собой панель быстрой печати. Если известен номер контрольной работы, который можно узнать (всплывающая подсказка), зайдя в хранилище контрольных работ, программа предоставит возможность распечатать нужное количество вариантов (при необходимости с ответами) этой контрольной работы.</p>
+<p>База задач системы. База задач, используемых в системе UniTex, насчитывает около 200 задач (1800 вариантов) по пятнадцати темам, из них около 100 задач с параметрами. База содержит задачи по следующим темам: школьная математика, матричная алгебра, векторная алгебра, аналитическая геометрия, дифференциальное исчисление функции одной переменной, интегральное исчисление функции одной переменной, теория функций многих переменных, обыкновенные дифференциальные уравнения, кратные интегралы, теория поля, теория вероятностей, математическая статистика.</p>
+<p>Рассмотрим три способа набора задач с вариантами: непосредственный, фрагментальный и параметрический.</p>
+<p>Непосредственный способ состоит в простом наборе вариантов задания с использованием всех команд редактора LaTex. В примере 1 набраны следующие варианты математической задачи получения общего интеграла дифференциального уравнения 1-го порядка с разделяющимися переменными.</p>
+<p>1)&nbsp;Найти общий интеграл дифференциального уравнения: <img src="uploaded/image/2010-3/image993.png" border="0" alt="" width="176" height="21" />.</p>
+<p>Ответ: <img src="uploaded/image/2010-3/image995.png" border="0" alt="" width="124" height="33" />.</p>
+<p>2)&nbsp;Найти общий интеграл дифференциального уравнения: <img src="uploaded/image/2010-3/image997.png" border="0" alt="" width="144" height="25" />.</p>
+<p>Ответ: <img src="uploaded/image/2010-3/image999.png" border="0" alt="" width="127" height="25" />.</p>
+<p>3)&nbsp;Найти общий интеграл дифференциального уравнения: <img src="uploaded/image/2010-3/image1001.png" border="0" alt="" width="139" height="25" />.</p>
+<p>Ответ: <img src="uploaded/image/2010-3/image1003.png" border="0" alt="" width="125" height="25" />.</p>
+<p>В примере 1-я, 2-я и последняя строки являются в языке LaTex обязательными. После текста варианта с новой строки, начинающейся с символа &laquo;/&raquo;, записывается ответ. Формулы LaTex располагают в скобках $...$.</p>
+<p>Пример 1.</p>
+<p>\input def</p>
+<p>\begin{document}</p>
+<p>Найти общий интеграл дифференциального уравнения:</p>
+<p>&nbsp;$4xdx - 3ydy = 3x^2ydy - 2xy^2dx$.</p>
+<p>/$C(x^2+1)=\sqrt {(y^2+2)^3}$\\</p>
+<p><img src="uploaded/image/2010-3/image1007.png" alt="Подпись:  
+Рис. 4. Графики функций   и y=x-1
+ 
+Рис. 5. График функции A=a2-3a+1" width="298" height="496" align="left" />Найти общий интеграл дифференциального уравнения:</p>
+<p>&nbsp;$x \sqrt{1+ y^2} + yy`\sqrt{1+ x^2} = 0$.</p>
+<p>/$\sqrt{1+y^2}=-\sqrt{1+x^2}+C$\\</p>
+<p>Найти общий интеграл дифференциального уравнения:</p>
+<p>&nbsp;$ \sqrt{4+ y^2}dx - ydy = x^2ydy$.</p>
+<p>/$\sqrt{y^2+4}=\arctg x+C$\\</p>
+<p>&hellip;</p>
+<p>\end{document}</p>
+<p>Фрагментальный способ использует команду 
+ewcommand редактора LaTex, позволяющую программировать повторяющиеся фрагменты в тексте вариантов задания. В примере 2 набраны следующие варианты задачи вычисления двойного интеграла.</p>
+<p>1)&nbsp;Вычислить двойной интеграл: <img src="uploaded/image/2010-3/image1009.png" border="0" alt="" width="32" height="31" />dxdy, где D: x=2; y=3x; y=x.</p>
+<p>Ответ: 16.</p>
+<p>2)&nbsp;Вычислить двойной интеграл: <img src="uploaded/image/2010-3/image1011.png" border="0" alt="" width="25" height="31" />dxdy, где D: y=0 ,y=3; y=x; y=x+2.</p>
+<p>Ответ: 9.</p>
+<p>3)&nbsp;Вычислить двойной интеграл: <img src="uploaded/image/2010-3/image1013.png" border="0" alt="" width="25" height="31" />dxdy, где D: x+y=5; x=0; y=0.</p>
+<p>Ответ: <img src="uploaded/image/2010-3/image1015.png" border="0" alt="" width="27" height="36" />.</p>
+<p>Ответы указаны после текста задания с новой строки, начинающейся с символа &laquo;/&raquo;.</p>
+<p>Пример 2.</p>
+<p>\input def</p>
+<p>ewcommand{\tf}[2]{Вычислить двойной интеграл:</p>
+<p>$\int\limits_D\!\!\int\,\,xy\,dx\,dy \quad,$</p>
+<p>где $\; D: x=#1; y=#2x; y=x$}</p>
+<p>ewcommand{\ti}[1]{Вычислить двойной интеграл:</p>
+<p>$\int\limits_D\!\!\int\,\,x\,dx\,dy \quad,$</p>
+<p>где $\; D: x+y=#1; x=0; y=0$}</p>
+<p>ewcommand{\tj}[2]{Вычислить двойной интеграл:</p>
+<p>$\int\limits_D\!\!\int\,\,y\,dx\,dy \quad,$</p>
+<p>где $\; D: y=0 ,y=#1; y=x; y=x+#2$}</p>
+<p>\begin{document}</p>
+<p>\tf{2}{3}</p>
+<p>/$16$\\</p>
+<p>\tj{3}{2}</p>
+<p>/$9$\\</p>
+<p>\ti{5}</p>
+<p>/$\frac{125}6$\\</p>
+<p>&hellip;.</p>
+<p>\end{document}</p>
+<p>Параметрический способ предполагает набор задач с параметрами. Опишем процесс получения одной из таких задач.</p>
+<p>Пусть требуется решить иррациональное уравнение вида <img src="uploaded/image/2010-3/image1017.png" border="0" alt="" width="84" height="20" />&nbsp;(A&gt;0). Из графиков функций <img src="uploaded/image/2010-3/image1019.png" border="0" alt="" width="67" height="23" />&nbsp;и y=x-1 (рис. 4) видно, что имеется единственное решение a&gt;1.</p>
+<p>Пусть а &ndash; целое (для удобства проверки ответа) решение исходного иррационального уравнения. Тогда A=a2-3a+1 &ndash; целое число. Анализируя график квадратичной функции A=a2-3a+1 (рис. 5) и учитывая, что a&gt;1 и A&gt;0, приходим к диапазону изменения целочисленного параметра а: a&gt;2. Для обеспечения равносложности вариантов целесообразно положить a&lt;51.</p>
+<p>Итак, получена следующая задача с переменными полями A и B и одним параметром a.</p>
+<p>Текст: Найти решение или сумму решений, если существует не одно решение:<img src="uploaded/image/2010-3/image1021.png" border="0" alt="" width="84" height="20" />.</p>
+<p>Ответ: B.</p>
+<p>Параметр: a=3&cedil;50.</p>
+<p>Переменные поля и их формулы: A=a2-3a+1, B=a.</p>
+<p>В тексте задачи не зря указывается на случай с двумя корнями уравнения. Это является ключевым в таких задачах, так как учащийся должен уметь отбрасывать лишние корни.</p>
+<p>На языке LaTex данная задача будет выглядеть, как в примере 3. После текста задачи с новой строки, начинающейся с символа &laquo;/&raquo;, указывается ответ.</p>
+<p>Пример 3.</p>
+<p>\input def</p>
+<p>\begin{document}</p>
+<p>%a=3 50 1</p>
+<p>%@1=a2-3a+1</p>
+<p>%@2=a</p>
+<p>Найти решение или сумму решений, если существует не одно решение\\</p>
+<p><img src="uploaded/image/2010-3/image1023.png" border="0" alt="" width="93" height="23" /></p>
+<p>/$@2$\\</p>
+<p>&hellip;</p>
+<p>\end{document}</p>
+<p>Предложенная в статье компьютерная система позволяет автоматизировать процесс подготовки вариантов контрольных работ по различным темам высшей математики и другим дисциплинам и обладает следующими положительными особенностями:</p>
+<p>-&nbsp;&nbsp;&nbsp; к каждому подготовленному комплекту вариантов прилагаются ответы задач, наличие которых существенно облегчает процесс проверки результатов проведенных контрольных работ;</p>
+<p>-&nbsp;&nbsp;&nbsp; благодаря использованию известной издательской системы LaTex можно</p>
+<p>а)&nbsp;готовить варианты контрольных работ в правильной математической форме,</p>
+<p>б)&nbsp;набирать тексты задач в любом текстовом редакторе ОС Windows,</p>
+<p>в)&nbsp;манипулировать с набранными текстами в соответствии с пожеланиями программиста.</p>
+<p>Кроме того, созданная программа достаточно проста в использовании.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Карнаухов В.М. Пакет прикладных программ для преподавания математики // Функциональные пространства. Дифференциальные операторы. Проблемы математического образования: тез. докл. Междунар. конф., посвящ. 75-летию чл.-корр. РАН, проф. Л.Д. Кудрявцева. М.: РУДН, 1998. С. 211.</p>
+<p>2.&nbsp;&nbsp; Карнаухов В.М. Компьютерная программа для подготовки раздаточного материала K-Commander // Вопросы повышения качества образования в области природообустройства и водопользования: сб. матер. 4-й межвуз. науч.-методич. и науч.-технич. конф. М.: МГУП, 2002.</p>
+<p>3.&nbsp;&nbsp; Карнаухов В.М., Денисова О.И. Генератор контрольных работ на основе программируемого редактора LaTex // Новые технологии в аграрном образовании: 4-я Междунар. конф. М.: МГУП, 2003.</p>
+<p>4.&nbsp;&nbsp; Карнаухов В.М. Использование редактора LaTex для создания генератора контрольных работ // Информатика и образование. 2008. № 11. С. 114&ndash;116.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2568</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2568">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 3 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=91">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

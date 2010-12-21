@@ -1,0 +1,858 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9" /> 
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	
+	
+		
+			<meta name="title" content="Вермахт под кайфом" />
+		
+
+		
+			<meta name="description" content=" nazdarru рассказал, как специальные таблетки помогали солдатам немецкого вермахта поднимать боевой дух. Две таблетки в день " />
+		
+
+		
+			<meta name="keywords" content="жж, livejournal, живой Журнал, lj, дневник, Журнал, онлайн-Журнал, дневники, онлайн-дневники, блог, сервис блогов, как стать блоггером, создать блог, социальные сети" />
+		
+
+		
+			
+				<title>Вермахт под кайфом | Живой Журнал</title>
+			
+		
+	
+	<link rel="shortcut icon" type="image/x-icon" href="/i/favicon.ico" />
+	<link rel="stylesheet" type="text/css" media="all" href="/s/style.css" />
+	
+	
+	
+	<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="/s/ie.css" /><![endif]-->
+	
+	<link rel="alternate" type="application/rss+xml" title="Живой Журнал | Сюжеты" href="/themes/rss" />
+	
+	
+	<script type="text/javascript">
+		document.domain = "livejournal.ru";
+		var iframe_hidden = true;
+		function showIFrame() {
+			if (iframe_hidden) {
+				iframe_hidden = false;
+				if (document.getElementById('hsLoading') != null)
+					document.getElementById('hsLoading').style.display = "none";
+			}
+		}
+		setTimeout("showIFrame()", 20000);
+		window.horizontal_alias = 'themes';
+		
+		
+	</script>
+	<script type="text/javascript" src="/j/jquery.js"></script>
+	<script type="text/javascript" src="/j/script.js"></script>
+	
+	
+	<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+	
+		
+			<link rel="image_src" href="http://www.livejournal.ru/static/files/themes/front/22273_ver.jpg" />
+		
+	
+	
+	
+
+	
+</head>
+
+<body class="
+
+
+
+
+
+
+
+
+ny
+" >
+	
+	
+	<div id="layout">
+		
+		<div id="counters">
+	<!-- Rambler -->
+	<a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?1132242" width="1" height="1" alt="" /></a>
+	<!-- Mail.ru -->
+	<script type="text/javascript">d=document;var a='';a+=';r='+escape(d.referrer);js=13;a+=';j='+navigator.javaEnabled();s=screen;a+=';s='+s.width+'*'+s.height;a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);d.write('<img src="http://d1.c1.b3.a1.top.list.ru/counter?id=1249721;js='+js+a+';rand='+Math.random()+'" width="1" height="1" alt="" />')</script>
+	<noscript><img src="http://d1.c1.b3.a1.top.list.ru/counter?js=na;id=1249721" width="1" height="1" alt="" /></noscript>
+	
+	
+	<!-- TNS -->
+	<script type="text/javascript">var img=new Image();img.src='http://www.tns-counter.ru/V13a***' + document.referrer.replace(/\*/g,'%2a') + '*sup_ru/ru/UTF-8/tmsec=livejournal_ru/';</script>
+	<noscript><img src="http://www.tns-counter.ru/V13a****sup_ru/ru/UTF-8/tmsec=livejournal_ru/" width="1" height="1" alt="" /></noscript>
+	
+	
+</div>
+
+		<div id="ajax_loader" style="display: none;"></div>
+		<div id="header">
+	
+	
+	
+	<h1 class="logo">
+		
+			<a href="http://www.livejournal.ru/" title="LiveJournal">
+			
+				LiveJournal.Ru</a>
+			
+		
+	</h1>
+
+	
+	
+
+	
+	
+	
+	
+	
+	<div class="options">
+		<div class="login-tl off">
+			<div class="login-br">
+				<div class="login-tr">
+					<div class="login-bl">
+							
+	<div id="ljform">
+	<form action="http://www.livejournal.com/login.bml?nojs=1" class="loginlj_form" id="loginlj" method="post" name="loginlj"><input id="submitted_loginlj" name="submitted__loginlj" type="hidden" value="1" />
+	<input class="loginlj_hidden" id="ret" name="ret" type="hidden" value="http://account.livejournal.ru/login/ljwho?back=http%3a%2f%2fwww%2elivejournal%2eru%2fthemes%2fid%2f22273" />
+	<input class="loginlj_hidden" id="ret_fail" name="ret_fail" type="hidden" value="http://account.livejournal.ru/login/ljfault?back=http%3a%2f%2fwww%2elivejournal%2eru%2fthemes%2fid%2f22273&amp;code=" />
+	<table class="login-form">
+		<tr>
+			<td><label for="login-login">Логин</label></td>
+			<td colspan="2"><label for="login-pass">Пароль</label> <a href="http://www.livejournal.com/lostinfo.bml" target="_blank">забыли?</a></td>
+		</tr>
+		<tr>
+			<td><input type="text" class="txt" id="login-login" name="user" value="" /></td>
+			<td><input type="password" class="txt" id="login-pass" name="password" value="" /></td>
+			<td><input type="image" src="/i/login/enter.gif" /></td>
+		</tr>
+		<tr>
+			<td><a href="http://www.livejournal.com/create.bml" target="_blank">Создать журнал</a></td>
+			<td><label for="login-rememb" class="rememb"><input type="checkbox" id="login-rememb" name="remember_me" value="1" /> запомнить</label></td>
+			<td><!-- <a href="http://www.livejournal.com/openid/" target="_blank">OpenID</a> --></td>
+		</tr>
+	</table>
+	</form>
+	</div>
+	
+	<p id="ljform_error" style="display: none;" class="login-error">
+		<br/>
+		<a href="" onclick="document.getElementById('ljform_error').style.display = 'none'; document.getElementById('ljform').style.display = 'block'; return false">Попробовать ещё раз</a>
+	</p>
+	
+<script type="text/javascript">
+	function show_auth_message( message ) {
+		document.getElementById('ljform_error').style.display = '';
+		document.getElementById('ljform').style.display = 'none';
+		document.getElementById('ljform_error_message').innerHTML = message;
+	}
+</script>
+						<iframe name="login_iframe" style="position: absolute; left: -1px; top: -1px; width: 0; height: 0" width="0" height="0" frameborder="0" scrolling="no" src="http://account.livejournal.ru/async?time=1292849937&form_url=http%3A%2F%2Fwww.livejournal.ru%2Fljauth%2Fok&reload_url=http%3A%2F%2Fwww.livejournal.ru%2Fljauth%2Freload"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="themes">
+	<div>
+		<ul>
+			<li>
+				<span><a href="http://www.livejournal.ru/">Главная</a></span>
+			</li>
+			<li class="cur">
+				<span><a href="http://www.livejournal.ru/themes">Сюжеты</a></span>
+			</li>
+			<li>
+				<span><a href="http://www.livejournal.ru/photos">Фото</a></span>
+			</li>
+			<li>
+				<span><a href="http://www.livejournal.ru/celebrities">Знаменитости</a></span>
+			</li>
+			<li>
+				<span><a href="http://www.livejournal.com/ratings/" target="_blank">Рейтинги</a></span>
+			</li>
+			<li>
+				<span><a href="http://www.livejournal.ru/communities">Сообщества</a></span>
+			</li>
+			<li class="jjj-item">
+				<span><a href="http://www.livejournal.ru/zh_zh_zh">ЖЖЖ</a></span>
+			</li>
+			<li class="">
+				<span><a href="http://www.livejournal.ru/travel">Путешествия</a></span>
+			</li>
+			<li class="">
+				<span><a href="http://www.livejournal.ru/tech">Технологии</a></span>
+			</li>
+			
+			
+			<li class="last food-item ">
+				<span><a href="http://www.livejournal.ru/eda">Еда</a></span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+	<div class="searchbar">
+	    		
+	<form action="http://www.livejournal.com/search/" id="searchbar" method="get" accept-charset='UTF-8'>
+			
+		<ul class="tabs">
+	    		
+				<li class="cur ljsearch"><span>В ЖЖ</span></li>
+				<li class="last ljru"><span>В LJ.RU</span></li>
+			
+		</ul>
+		<table>
+			<tr>
+				<td class="txt">
+					<input type="hidden" name="ie" value="utf-8" />
+					<input type="hidden" id="hidden_id" name="id" value="" />
+					<input type="text" id="search-input" name="q" value="" />
+					<ul class="links">
+						<li class="sample">Например: <a href="http://www.livejournal.com/search/?q=%D0%91%D0%BB%D0%BE%D0%B3%D0%B8">Блоги</a></li>
+						
+					</ul>
+				</td>
+				<td class="btn"><input type="image" src="/i/btn/find.gif" alt="Найти" /></td>
+			</tr>
+		</table>
+	</form>
+</div>
+
+	
+	
+	
+</div>
+
+<div class="hr div"><hr /></div>
+<div id="genres">
+	<div>
+		<ul class="side">
+			<li class="first">Читайте нас</li>
+			<li class="ljru_themes"><a href="http://www.livejournal.com/friends/add.bml?user=ljru_themes" target="_blank"><img src="/i/ico/icon_addfriend.gif" width="20" height="17" alt="Читайте нас в своей френдленте" title="Читайте нас в своей френдленте" /></a></li>
+			<li><a href="http://www.facebook.com/livejournal.ru" target="_blank"><img src="/i/ico/icon_facebook.gif" width="14" height="14" alt="Читайте нас в фейсбуке" title="Читайте нас в фейсбуке" /></a></li>
+			<li><a href="http://twitter.com/ru_LiveJournal" target="_blank"><img src="/i/ico/icon_twitter.gif" width="14" height="14" alt="Читайте нас в твитере" title="Читайте нас в твитере" /></a></li>
+			<li><a href="http://www.livejournal.ru/themes/rss" target="_blank"><img src="/i/ico/icon_rss.gif" width="14" height="14" alt="Читайте нас через rss" title="Читайте нас через rss" /></a></li>
+			<li><a href="http://www.livejournal.ru/newsletter_subscribe" target="_blank"><img src="/i/ico/subscribe.png" width="14" height="14" alt="Новости блогосферы" title="Новости блогосферы" /></a></li>
+			<li class="ljtimes"><a href="http://www.livejournal.com/ljtimes/" target="_blank"><img src="/i/ico/ljtimes.png" width="44" height="10" alt="LJTimes" title="LJTimes" /></a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+	
+
+
+		
+		
+		
+		
+		<div id="body">
+			<div class="top-banner">
+	<div id="sol936x90b">
+	        <SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript">
+	        <!-- Hide from old browsers
+	        // Modify to reflect site specifics
+	        adserver = "http://sol.adbureau.net";
+
+			target = "/SITE=LJ.RU/AREA=THEMES/AAMSZ=936X90/POSITION=TOP/UID="; 
+
+	        // Cache-busting and pageid values
+	        random = Math.round(Math.random() * 10000000000);
+	        if (!pageNum) var pageNum = Math.round(Math.random() * 10000000000);
+	        document.write('<SCR');
+	        document.write('IPT SRC="' + adserver + '/jserver/acc_random=' + random + target + "/pageid=" + pageNum  + '">');
+	        document.write('</SCR');
+	        document.write('IPT>');
+	        // End Hide -->
+	        </SCRIPT>
+	</div>
+	
+	<SCRIPT type="text/javascript">
+	<!--
+	var solDIV900bID = 'sol936x90b';
+	if (typeof(document) != 'undefined') {
+		if (typeof(document.getElementById) != 'undefined') {
+			var solDIV900b = document.getElementById(solDIV900bID);
+			var solIsDefault900b = solDIV900b.innerHTML.indexOf('images/AE') != -1 || solDIV900b.innerHTML.indexOf('images/DS') != -1 || solDIV900b.innerHTML.indexOf('images/null.gif') != -1;
+			if (solIsDefault900b) {
+			solDIV900b.style.display = 'none';
+			// ADFOX START
+			if (typeof(pr) == 'undefined') { var pr = Math.floor(Math.random() * 1000000); }
+			
+			if (typeof(document.referrer) != 'undefined') {
+				if (typeof(afReferrer) == 'undefined') {
+					afReferrer = escape(document.referrer);
+				}
+			} else {
+				
+				afReferrer = '';
+			}
+			
+			var addate = new Date();
+
+			document.write('<scr' + 'ipt type="text/javascript" src="http://sup.adfox.ru/7386/prepareCode?p1=bedc&amp;p2=duhc&amp;pucn=a&amp;pfc=a&amp;pfb=a&amp;pr=' + pr +'&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;py=a&amp;prr=' + afReferrer + '&amp;puid1=&amp;puid2=&amp;puid3=&amp;puid4=&amp;puid5="><\/scr' + 'ipt>'); 
+
+			// ADFOX END
+			}
+		}
+	}
+	// -->
+	</SCRIPT> 
+	
+</div>
+
+			<div id="content">
+	
+
+<h1>Вермахт под кайфом</h1>
+<ul class="shared-list">
+	<li class="shared-facebook"><a name="fb_share" type="button" href="http://www.facebook.com/sharer.php">Опубликовать</a></li>
+</ul>
+<p class="entry-meta"><a href="/themes/id/22273#comments"><span class="comm">81</span></a>, 6 октября в 20 ч. 09 мин.</p>
+
+<div class="h-theme"><p class="entry-lead"><span class="ljuser vcard"><a class="ico" href="http://nazdarru.livejournal.com/profile" target="_blank" title="Профиль"><img src="/i/0.gif" alt="" /></a> <a class="fn nickname url" href="http://nazdarru.livejournal.com/" target="_blank" title="Журнал">nazdarru</a></span> рассказал, как специальные таблетки помогали солдатам немецкого вермахта поднимать боевой дух. </p><br/><div class="quote-post"><span class="quote-author"><span class="ljuser vcard"><a class="ico" href="http:// nazdarru.livejournal.com/profile" target="_blank" title="Профиль"><img src="/i/0.gif" alt="" /></a> <a class="fn nickname url" href="http:// nazdarru.livejournal.com/" target="_blank" title="Журнал"> nazdarru</a></span></span>  <br/><span class="pic"><img src="/static/files/themes/quote/22273_ver.jpg" alt="" /></span><br/><br/><em>9 ноября 1939 года<br/>Дорогие родители, братишки и сестрёнки, я служу в Польше, здесь тяжело и я прошу вас меня понять когда буду писать только каждые 2-4 дня, сегодня я пишу только для того, чтобы попросить вас прислать мне первитина.<br/>Ваш Генрих </em> <br/><br/>Это письмо будущего Нобелевского лауреата Генриха Бёлля родителям и оно не было чем-то необычным - солдатам вермахта с 1939 года выдавали первитин, бензедрин и изофан для бодрости, а когда им не хватало первитина - они просили родителей прислать им его. Родителям было несложно - в самом Рейхе первитин продавался открыто, даже в форме шоколадных конфет, которые прозвали "панцершоколаде" - "танковый шоколад" за то, что его охотно покупали солдаты.<br/><br/>Первыми испытателями первитина были 90 студентов, которые в 1939 году под надзором военного врача Отто Ранке принимали средство и выразили уверенность, что пилюльки им помогают быть бодрыми и энергичными, затем его получили танкисты и водители перед вторжением в Польшу, ну а после успеха порции первитина стали получать лётчики. Якобы именно первитин, бензедрин и изофан содействовали успеху блицкрига в Европе. <br/><br/>Только за апрель-июль 1940 года вермахт получил 35 миллионов таблеток от фирмы "Кнолл" с инструкцией применять до 2 таблеток в день для бодрости. <br/><a href="http://nazdarru.livejournal.com/111433.html " target="_blank">Продолжение</a><span class="quote-source"><a href="http://nazdarru.livejournal.com/111433.html" class="quote-link">Дискуссия в журнале</a></span></div>	<br/><div class="quote-comment"><span class="quote-author"><span class="ljuser vcard"><a class="ico" href="http://chupvl.livejournal.com/profile" target="_blank" title="Профиль"><img src="/i/0.gif" alt="" /></a> <a class="fn nickname url" href="http://chupvl.livejournal.com/" target="_blank" title="Журнал">chupvl</a></span></span> СССР<br/>Где-то упоминали, что наших летчиков тоже амфетаминами кормили.<span class="quote-source"><a href="http://nazdarru.livejournal.com/111433.html?thread=7316553#t7316553">Дискуссия в журнале</a></span></div><br/><div class="quote-comment"><span class="quote-author"><span class="ljuser vcard"><a class="ico" href="http://warsh .livejournal.com/profile" target="_blank" title="Профиль"><img src="/i/0.gif" alt="" /></a> <a class="fn nickname url" href="http://warsh .livejournal.com/" target="_blank" title="Журнал">warsh </a></span></span> Вот почему они дошли до Москвы и Сталинграда, оказывается...<span class="quote-source"><a href="http://nazdarru.livejournal.com/111433.html?thread=7317065#t7317065">Дискуссия в журнале</a></span></div><br/><div class="quote-comment"><span class="quote-author"><span class="ljuser vcard"><a class="ico" href="http://harry-lonsdale.livejournal.com/profile" target="_blank" title="Профиль"><img src="/i/0.gif" alt="" /></a> <a class="fn nickname url" href="http://harry-lonsdale.livejournal.com/" target="_blank" title="Журнал">harry_lonsdale</a></span></span> Красным бы Ройзмана заместо Жукова! =)<span class="quote-source"><a href="http://nazdarru.livejournal.com/111433.html?thread=7319369#t7319369">Дискуссия в журнале</a></span></div><br/><div class="quote-comment"><span class="quote-author"><span class="ljuser vcard"><a class="ico" href="http://wild-hedgehogs.livejournal.com/profile" target="_blank" title="Профиль"><img src="/i/0.gif" alt="" /></a> <a class="fn nickname url" href="http://wild-hedgehogs.livejournal.com/" target="_blank" title="Журнал">wild_hedgehogs</a></span></span> Спасибо! Очень интересно! Вот он, значит, какой, этот "винт".<br/>У нас знакомый был, на "глумливом винте", как он называл своего кумира, он по снежным полям бродил часами в тонкой футболочке по зиме.<span class="quote-source"><a href="http://nazdarru.livejournal.com/111433.html?thread=7323721#t7323721">Дискуссия в журнале</a></span></div><br/><div class="quote-comment"><span class="quote-author"><span class="ljuser vcard"><a class="ico" href="http://morganoid.livejournal.com/profile" target="_blank" title="Профиль"><img src="/i/0.gif" alt="" /></a> <a class="fn nickname url" href="http://morganoid.livejournal.com/" target="_blank" title="Журнал">morganoid</a></span></span> Как мне этого не хватает.<span class="quote-source"><a href="http://nazdarru.livejournal.com/111433.html?thread=7331145#t7331145">Дискуссия в журнале</a></span></div><br/></div>
+<ul class="entry-tags"><li><a href="/tags/%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F">история</a>, </li><li><a href="/tags/%D0%BD%D0%B0%D1%80%D0%BA%D0%BE%D1%82%D0%B8%D0%BA%D0%B8">наркотики</a>, </li><li><a href="/tags/%D1%84%D0%B0%D1%88%D0%B8%D0%B7%D0%BC">фашизм</a>, </li><li><a href="/tags/%D0%B6%D0%B8%D0%B2%D0%B0%D1%8F%20%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F">живая история</a>, </li><li><a href="/tags/%D1%80%D1%87">рч</a></li></ul>
+
+
+<div class="head-set" id="comments">
+	<h3>Комментарии <small>(81)</small></h3>
+<!--	<ul>
+		<li><a href="#" class="expand-all">Развернуть все</a></li>
+		<li class="last"><a href="#footer">Последний комментарий</a></li>
+	</ul> -->
+</div>
+<div id="comments-frame">
+	<iframe id="hsIFrame" frameborder="0" scrolling="no" src="http://lj.livejournal.ru/comments/?docID=122273&amp;docHash=0a12463462bb62e4446adbdce9e0db55">Your browser is not supporting IFRAME</iframe>
+	<p id="hsLoading">Загрузка&hellip;</p>
+</div>
+
+	
+
+<h3 class="div-double">6 октября</h3>
+<ul class="links-set bottom">
+	
+	<li>
+		<a href="/themes/id/22267">Stars365: Первая ракетка мира отдыхает в Майами</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22267#comments">22</a>, в 23 ч. 31 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22261">Я, человечество и НОСКИ™</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22261#comments">53</a>, в 22 ч. 02 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22266">Женский Живой Журнал</a>
+		<span class="entry-meta">в 21 ч. 07 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22265">Живые путешествия</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22265#comments">3</a>, в 20 ч. 25 мин.</span>
+	</li>
+	
+	<li>
+		Вермахт под кайфом
+		<span class="entry-meta"><a class="comm" href="/themes/id/22273#comments">81</a>, в 20 ч. 09 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22271">"Фишки" ЖЖ: дайджест блогосферы</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22271#comments">41</a>, в 19 ч. 35 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22263">Метро против Сталина</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22263#comments">86</a>, в 18 ч. 51 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22264">К сожалению, в России есть пенсионеры</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22264#comments">144</a>, в 17 ч. 47 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22262">Как милиция мобилы отжимает</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22262#comments">127</a>, в 16 ч. 45 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22260">Девушки с журфака МГУ разделись для Путина</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22260#comments">187</a>, в 16 ч. 21 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22259">Мистер Ресин — элегантный господин</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22259#comments">128</a>, в 15 ч. 30 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22258">Навальный объявил войну "Единой России"</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22258#comments">95</a>, в 14 ч. 19 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22257">Гей, славяне!</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22257#comments">112</a>, в 13 ч. 15 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22255">Комментаторы, вперед!</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22255#comments">77</a>, в 12 ч. 41 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22217">Технологии и ЖЖизнь</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22217#comments">4</a>, в 11 ч. 59 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22184">Религия! На 20 световых лет впереди науки</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22184#comments">84</a>, в 10 ч. 58 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22243">Распил переписи населения</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22243#comments">101</a>, в 09 ч. 35 мин.</span>
+	</li>
+	
+	<li>
+		<a href="/themes/id/22254">Ресин стал единороссом</a>
+		<span class="entry-meta"><a class="comm" href="/themes/id/22254#comments">75</a>, в 07 ч. 49 мин.</span>
+	</li>
+	
+</ul>
+
+
+
+<ul class="navigation">
+	<li class="prev"><a href="/themes/2010/10/05">назад</a></li>
+	<li class="next"><a href="/themes/2010/10/07">вперёд</a></li>
+</ul>
+
+</div>
+<div id="sidebar">
+	<div class="mod-tl collapsed" id="calendar">
+<div class="mod-br">
+	<div class="mod-tr">
+		<div class="mod-bl">
+		
+			<div class="calendar">
+				<ul>
+					
+					<li class="month"><a class="prev" href="/themes/id/22273?yearmonth=2010-09-01">&larr;</a> <strong>октябрь</strong> <a class="next" href="/themes/id/22273?id=22273&yearmonth=2010-11-01">&rarr;</a></li>
+					<li class="year"><a class="prev" href="/themes/id/22273?yearmonth=2009-10-01">&larr;</a> <strong>2010</strong> <span class="next">&rarr;</span></li>
+					
+				</ul>
+				<table>
+					<tr>
+						<th>пн</th>
+						<th>вт</th>
+						<th>ср</th>
+						<th>чт</th>
+						<th>пт</th>
+						<th>сб</th>
+						<th>вс</th>
+					</tr>
+					
+					<tr>
+						
+						<td class="inactive"><a href="/themes/2010/09/27">27</a></td>
+						
+						<td class="inactive"><a href="/themes/2010/09/28">28</a></td>
+						
+						<td class="inactive"><a href="/themes/2010/09/29">29</a></td>
+						
+						<td class="inactive"><a href="/themes/2010/09/30">30</a></td>
+						
+						<td><a href="/themes/2010/10/01">1</a></td>
+						
+						<td><a href="/themes/2010/10/02">2</a></td>
+						
+						<td><a href="/themes/2010/10/03">3</a></td>
+						
+					</tr>
+					
+					<tr>
+						
+						<td><a href="/themes/2010/10/04">4</a></td>
+						
+						<td><a href="/themes/2010/10/05">5</a></td>
+						
+						<td class="current"><a href="/themes/2010/10/06">6</a></td>
+						
+						<td><a href="/themes/2010/10/07">7</a></td>
+						
+						<td><a href="/themes/2010/10/08">8</a></td>
+						
+						<td><a href="/themes/2010/10/09">9</a></td>
+						
+						<td><a href="/themes/2010/10/10">10</a></td>
+						
+					</tr>
+					
+					<tr>
+						
+						<td><a href="/themes/2010/10/11">11</a></td>
+						
+						<td><a href="/themes/2010/10/12">12</a></td>
+						
+						<td><a href="/themes/2010/10/13">13</a></td>
+						
+						<td><a href="/themes/2010/10/14">14</a></td>
+						
+						<td><a href="/themes/2010/10/15">15</a></td>
+						
+						<td><a href="/themes/2010/10/16">16</a></td>
+						
+						<td><a href="/themes/2010/10/17">17</a></td>
+						
+					</tr>
+					
+					<tr>
+						
+						<td><a href="/themes/2010/10/18">18</a></td>
+						
+						<td><a href="/themes/2010/10/19">19</a></td>
+						
+						<td><a href="/themes/2010/10/20">20</a></td>
+						
+						<td><a href="/themes/2010/10/21">21</a></td>
+						
+						<td><a href="/themes/2010/10/22">22</a></td>
+						
+						<td><a href="/themes/2010/10/23">23</a></td>
+						
+						<td><a href="/themes/2010/10/24">24</a></td>
+						
+					</tr>
+					
+					<tr>
+						
+						<td><a href="/themes/2010/10/25">25</a></td>
+						
+						<td><a href="/themes/2010/10/26">26</a></td>
+						
+						<td><a href="/themes/2010/10/27">27</a></td>
+						
+						<td><a href="/themes/2010/10/28">28</a></td>
+						
+						<td><a href="/themes/2010/10/29">29</a></td>
+						
+						<td><a href="/themes/2010/10/30">30</a></td>
+						
+						<td><a href="/themes/2010/10/31">31</a></td>
+						
+					</tr>
+					
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<script type="text/javascript"><!--
+	calendar( ['date_____2010-10-06', 'selected_date_____2010-10-06'], ['calendar'], 'POST' );
+//--></script>
+
+
+	<div class="side-banner">
+	<div class="tr">
+		<div class="bl">
+			<div class="br">
+			<!--	<script type="text/javascript" language="JavaScript">
+					<!- Hide from old browsers
+					// Modify to reflect site specifics
+					adserver = "http://sol.adbureau.net";
+					target = "/SITE=LJ.RU/AREA=THEMES/AAMFILL=300X250/POSITION=RIGHT/UID=";
+					// Cache-busting and pageid values
+					random = Math.round(Math.random() * 10000000000);
+					if (!pageNum) var pageNum = Math.round(Math.random() * 10000000000); document.write('<SCR');
+					document.write('IPT SRC="' + adserver + '/jserver/acc_random=' + random + target + "/pageid=" + pageNum + '">');
+					document.write('</SCR');
+					document.write('IPT>');
+					// End Hide ->
+				</script>				
+				<noscript>
+					<a rel="nofollow" target="_blank" href="http://sol.adbureau.net/adclick/ACC_RANDOM=1292849937/SITE=LJ.RU/AREA=THEMES/AAMFILL=300X250/POSITION=RIGHT/UID=/pageid=1292849937"> <img border="0" src="http://sol.adbureau.net/nserver/ACC_RANDOM=1292849937/SITE=LJ.RU/AREA=THEMES/AAMFILL=300X250/POSITION=RIGHT/UID=/pageid=1292849937" alt="" /></a>
+				</noscript> -->
+
+				<div id="sol300x250r">
+				        <SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript">
+				        <!-- Hide from old browsers
+				        // Modify to reflect site specifics
+				        adserver = "http://sol.adbureau.net";
+
+						target = "/SITE=LJ.RU/AREA=THEMES/AAMFILL=300X250/POSITION=RIGHT/UID=" 
+
+				        // Cache-busting and pageid values
+				        random = Math.round(Math.random() * 10000000000);
+				        if (!pageNum) var pageNum = Math.round(Math.random() * 10000000000);
+				        document.write('<SCR');
+				        document.write('IPT SRC="' + adserver + '/jserver/acc_random=' + random + target + "/pageid=" + pageNum  + '">');
+				        document.write('</SCR');
+				        document.write('IPT>');
+				        // End Hide -->
+				        </SCRIPT>
+				</div>
+
+				<SCRIPT type="text/javascript">
+				<!--
+				var solDIV300rID = 'sol300x250r';
+				if (typeof(document) != 'undefined') {
+					if (typeof(document.getElementById) != 'undefined') {
+						var solDIV300r = document.getElementById(solDIV300rID);
+						var solIsDefault300r = solDIV300r.innerHTML.indexOf('images/AE') != -1 || solDIV300r.innerHTML.indexOf('images/DS') != -1 || solDIV300r.innerHTML.indexOf('images/null.gif') != -1;
+						if (solIsDefault300r) {
+						solDIV300r.style.display = 'none';
+						// ADFOX START
+						if (typeof(pr) == 'undefined') { var pr = Math.floor(Math.random() * 1000000); }
+						if (typeof(document.referrer) != 'undefined') {
+							if (typeof(afReferrer) == 'undefined') {
+								afReferrer = escape(document.referrer);
+							}
+						} else {
+							afReferrer = '';
+						}
+						var addate = new Date();
+
+						document.write('<scr' + 'ipt type="text/javascript" src="http://sup.adfox.ru/7386/prepareCode?p1=bedj&amp;p2=duhb&amp;pucn=a&amp;pfc=a&amp;pfb=a&amp;pr=' + pr +'&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;py=a&amp;prr=' + afReferrer + '&amp;puid1=&amp;puid2=&amp;puid3=&amp;puid4=&amp;puid5="><\/scr' + 'ipt>');
+
+						// ADFOX END
+						}
+					}
+				}
+				// -->
+				</SCRIPT> 
+
+			</div>
+		</div>
+	</div>
+</div>
+	<dl class="side-block video-block">
+	<dt class="side-block-header">Видео ЖЖ</dt>
+	<dd class="side-block-content">
+		<div>
+			<object width="336" height="220"><param name="movie" value="http://player.livejournal.ru/vplayer.swf"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="flashvars" value="id=49419"><embed src="http://player.livejournal.ru/vplayer.swf" flashvars="id=49419" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="336" height="220"></object>
+		</div>
+	</dd>
+</dl>
+
+	
+
+
+	<div class="subscribe">
+
+	<form method="post" action="http://www.unisender.com/ru/subscribe?hash=2nqCqd2PMmdOjTOnJclDQG21XcPIMo6Yf&amp;list_ids=103491" target="_blank">
+		<h3><label for="sbscrb-mail">Подпишись на новости ЖЖ</label></h3>
+
+		<p><input type="text" name="email" id="sbscrb-mail" value="Ваша эл. почта" class="sbscrb-text sbscrb-placeholder" onfocus="if (this.value=='Ваша эл. почта') {this.value=''; this.className = this.className.replace(' sbscrb-placeholder','');}" onblur="if (this.value=='') {this.value='Ваша эл. почта'; this.className += ' sbscrb-placeholder';}" /></p>
+
+		<p><input type="image" alt="Подписаться" src="/i/btn/subscribe.gif" id="subscribe-submit" /></p>
+		<input type="hidden" name="charset" value="utf-8" />
+		<div class="subscribe-msg"></div>
+	</form>
+</div>
+
+
+	<dl class="side-block charity-block">
+	<dt class="side-block-header"><a href="http://www.livejournal.ru/communities/298">Благотворительность</a></dt>
+	<dd class="side-block-content">
+		<img src="/static/files/charity/2011.jpg" alt="Благотворительный аукцион" />
+		<h3><a href="http://bf-sozidanie.livejournal.com/121290.html">Благотворительный аукцион</a></h3>
+		<p>Виниловые пластинки от Юрия Шевчука, лампочка с автографом Анатолия Чубайса, оригинальный постер к фильму 1974 года &laquo;Москва, любовь моя&raquo; с автографом А.</p>
+		
+	</dd>
+</dl>
+
+
+	
+	
+	
+	<div class="mod-tl">
+	<div class="mod-br">
+		<div class="mod-tr">
+			<div class="mod-bl">
+				<iframe frameborder="0" scrolling="no" src="http://banners.adfox.ru/090310/1/5770/Livejournal.ru_vnutrennie_300x250.html" style="width: 300px; height: 251px; margin: 0;"></iframe>
+				<div class="hr simple"><hr /></div>
+				<iframe frameborder="0" scrolling="no" src="http://banners.adfox.ru/090901/adfox/81791/new_championat_lj.html" style="width: 300px; height: 165px; margin: 0;"></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+	<ul class="tags-list"><li class="l-6"><a href="/themes/tags/livejournal" title="752">livejournal</a> </li><li class="l-1"><a href="/themes/tags/%D0%B0%D0%B2%D1%82%D0%BE" title="260">авто</a> </li><li class="l-2"><a href="/themes/tags/%D0%B1%D0%B0%D0%BD%D0%BA%D0%B8" title="301">банки</a> </li><li class="l-4"><a href="/themes/tags/%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81" title="440">бизнес</a> </li><li class="l-2"><a href="/themes/tags/%D0%B1%D0%BB%D0%BE%D0%B3%D0%B3%D0%B5%D1%80%D1%8B" title="309">блоггеры</a> </li><li class="l-8"><a href="/themes/tags/%D0%B2%D0%B1" title="1014">вб</a> </li><li class="l-10"><a href="/themes/tags/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE" title="1496">видео</a> </li><li class="l-4"><a href="/themes/tags/%D0%B2%D0%BB%D0%B0%D1%81%D1%82%D0%B8" title="454">власти</a> </li><li class="l-3"><a href="/themes/tags/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B" title="371">гаджеты</a> </li><li class="l-6"><a href="/themes/tags/%D0%B4%D0%B0%D0%B9%D0%B4%D0%B6%D0%B5%D1%81%D1%82" title="662">дайджест</a> </li><li class="l-2"><a href="/themes/tags/%D0%B4%D0%B5%D0%BD%D1%8C%D0%B3%D0%B8" title="342">деньги</a> </li><li class="l-4"><a href="/themes/tags/%D0%B4%D0%B5%D1%82%D0%B8" title="520">дети</a> </li><li class="l-4"><a href="/themes/tags/%D0%B4%D1%82" title="460">дт</a> </li><li class="l-4"><a href="/themes/tags/%D0%B6%D0%B5%D0%BD%D1%89%D0%B8%D0%BD%D1%8B" title="515">женщины</a> </li><li class="l-5"><a href="/themes/tags/%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD" title="561">закон</a> </li><li class="l-4"><a href="/themes/tags/%D0%B7%D0%BD%D0%B0%D0%BC%D0%B5%D0%BD%D0%B8%D1%82%D0%BE%D1%81%D1%82%D0%B8" title="441">знаменитости</a> </li><li class="l-5"><a href="/themes/tags/%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82" title="541">интернет</a> </li><li class="l-6"><a href="/themes/tags/%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" title="716">история</a> </li><li class="l-4"><a href="/themes/tags/%D0%BA%D0%B8%D0%BD%D0%BE" title="489">кино</a> </li><li class="l-1"><a href="/themes/tags/%D0%BA%D0%BE%D1%80%D1%80%D1%83%D0%BF%D1%86%D0%B8%D1%8F" title="262">коррупция</a> </li><li class="l-4"><a href="/themes/tags/%D0%BA%D1%80%D0%B8%D0%B7%D0%B8%D1%81" title="502">кризис</a> </li><li class="l-5"><a href="/themes/tags/%D0%BA%D1%83%D1%80%D1%8C%D0%B5%D0%B7%D1%8B" title="594">курьезы</a> </li><li class="l-8"><a href="/themes/tags/%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B0" title="1007">москва</a> </li><li class="l-1"><a href="/themes/tags/%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B0" title="250">музыка</a> </li><li class="l-2"><a href="/themes/tags/%D0%BD%D0%B0%D1%83%D0%BA%D0%B0" title="305">наука</a> </li><li class="l-4"><a href="/themes/tags/%D0%BF%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0" title="499">политика</a> </li><li class="l-1"><a href="/themes/tags/%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B" title="249">проекты</a> </li><li class="l-6"><a href="/themes/tags/%D0%BF%D1%81%D0%B8%D1%85%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F" title="667">психология</a> </li><li class="l-3"><a href="/themes/tags/%D0%BF%D1%83%D1%82%D0%B5%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%B8%D1%8F" title="428">путешествия</a> </li><li class="l-2"><a href="/themes/tags/%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0" title="343">работа</a> </li><li class="l-6"><a href="/themes/tags/%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D0%B8" title="657">рекомендации</a> </li><li class="l-1"><a href="/themes/tags/%D1%80%D0%B5%D0%BB%D0%B8%D0%B3%D0%B8%D1%8F" title="268">религия</a> </li><li class="l-12"><a href="/themes/tags/%D1%80%D0%BE%D1%81%D1%81%D0%B8%D1%8F" title="1918">россия</a> </li><li class="l-1"><a href="/themes/tags/%D1%81%D0%B5%D0%BA%D1%81" title="270">секс</a> </li><li class="l-4"><a href="/themes/tags/%D1%81%D1%81%D1%81%D1%80" title="464">ссср</a> </li><li class="l-5"><a href="/themes/tags/%D1%81%D1%88%D0%B0" title="545">сша</a> </li><li class="l-5"><a href="/themes/tags/%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8" title="533">технологии</a> </li><li class="l-2"><a href="/themes/tags/%D1%82%D0%BE%D0%BF" title="310">топ</a> </li><li class="l-11"><a href="/themes/tags/%D1%84%D0%BE%D1%82%D0%BE" title="1662">фото</a> </li><li class="l-6"><a href="/themes/tags/%D1%8E%D0%BC%D0%BE%D1%80" title="632">юмор</a></li></ul>
+
+	
+<div class="mod-tl">
+	<div class="mod-br">
+		<div class="mod-tr">
+			<div class="mod-bl">
+
+				<h3>Интересные сообщества</h3>
+				<script type="text/javascript"><!--
+					sup_service = 4;
+					sup_slot_id = 'Ljru_themes_spotlight_top';
+					sup_ad_width = 300;
+					sup_ad_height = 80;
+					
+				//--></script>
+				<script type="text/javascript" src="http://ads.sup.com/ad_show.js"></script>
+				<noscript>
+					<iframe class="frame-banner-promo" frameborder="0" scrolling="no" src="http://ads.sup.com/adv?srv=4&amp;adzone=Ljru_themes_spotlight_top&amp;r=66560038&amp;vid=1292849937"></iframe>
+				</noscript>
+				<script type="text/javascript"><!--
+					sup_service = 4;
+					sup_slot_id = 'Ljru_themes_spotlight_bottom';
+					sup_ad_width = 300;
+					sup_ad_height = 80;
+					
+				//--></script>
+				<script type="text/javascript" src="http://ads.sup.com/ad_show.js"></script>
+				<noscript>
+					<iframe class="frame-banner-promo" frameborder="0" scrolling="no" src="http://ads.sup.com/adv?srv=4&amp;adzone=Ljru_themes_spotlight_bottom&amp;r=56058630&amp;vid=1292849937"></iframe>
+				</noscript>
+
+			</div>
+		</div>
+	</div>
+
+</div>
+	
+
+	<div class="side-banner">
+	<div class="tr">
+		<div class="bl">
+			<div class="br">
+<!--				<script type="text/javascript"><!-
+					sup_service = 4;
+					sup_slot_id = 'Ljru_themes_tv_bottom';
+					sup_ad_width = 300;
+					sup_ad_height = 250;
+					
+				//-></script>
+				 <script type="text/javascript" src="http://ads.sup.com/ad_show.js"></script>
+				<noscript>
+					<iframe class="frame-banner-tv" frameborder="0" scrolling="no" src="http://ads.sup.com/adv?srv=4&amp;adzone=Ljru_themes_tv_bottom&amp;r=62869893&amp;vid=1292849937"></iframe>
+				</noscript>
+-->
+
+ <script type="text/javascript">
+<!--
+if (typeof(pr) == 'undefined') { var pr = Math.floor(Math.random() * 1000000); }
+if (typeof(document.referrer) != 'undefined') {
+  if (typeof(afReferrer) == 'undefined') {
+    afReferrer = escape(document.referrer);
+  }
+} else {
+  afReferrer = '';
+}
+var addate = new Date();
+
+		// ADFOX START
+		if (typeof(pr) == 'undefined') { var pr = Math.floor(Math.random() * 1000000); }
+		var addate = new Date();
+
+		document.write('<scr' + 'ipt type="text/javascript" src="http://sup.adfox.ru/7386/prepareCode?p1=bedq&amp;p2=duhb&amp;pucn=a&amp;pfc=a&amp;pfb=a&amp;pr=' + pr +'&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;py=a&amp;prr=' + afReferrer + '&amp;puid1=&amp;puid2=&amp;puid3=&amp;puid4=&amp;puid5="><\/scr' + 'ipt>');		
+		// ADFOX END
+
+// -->
+</script>
+
+
+
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="side-banner">
+	<div class="tr">
+		<div class="bl">
+			<div class="br">
+				<script type="text/javascript"><!--
+					sup_service = 4;
+					sup_slot_id = 'Ljru_themes_promo';
+					sup_ad_width = 300;
+					sup_ad_height = 80;
+					
+				//--></script>
+				<script type="text/javascript" src="http://ads.sup.com/ad_show.js"></script>
+				<noscript>
+					<iframe class="frame-banner-promo" frameborder="0" scrolling="no" src="http://ads.sup.com/adv?srv=4&amp;adzone=Ljru_themes_promo&amp;r=13038927&amp;vid=1292849937"></iframe>
+				</noscript>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+		</div>
+		
+
+		<div id="footer">
+	<div class="hr div"><hr/></div>
+
+
+	<ul class="side">
+		<li><a href="http://www.livejournal.ru/about">О проекте</a></li>
+		<li><a href="http://www.livejournal.ru/map">Все сервисы</a></li>
+		<li><a href="http://www.livejournal.ru/advertise">Реклама на сайте</a></li>
+	</ul>
+	<p>&copy;&laquo;Суп&raquo;</p>
+	<div class="buttons">
+		<!-- Top100 -->
+		<a href="http://top100.rambler.ru/top100/" target="_blank"><img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" width="88" height="31" alt="Rambler's Top100"/></a>
+		<!-- Mail.ru -->
+		<a href="http://top.mail.ru/jump?from=1249721" target="_blank"><img src="http://d1.c1.b3.a1.top.list.ru/counter?id=1249721;t=99;l=1" width="88" height="18" alt="Рейтинг@Mail.ru"/></a>
+		<!-- SpyLOG -->
+		
+		<script type="text/javascript" src="http://tools.spylog.ru/counter_cv.js" id="spylog_code" counter="960805" part="" track_links="all" page_level="1"></script><noscript><a href="http://u9608.05.spylog.com/cnt?cid=960805&amp;f=3&amp;p=1" target="_blank"><img src="http://u9608.05.spylog.com/cnt?cid=960805&amp;p=1" width="1" height="1" alt="" /></a></noscript>
+		
+		<!-- Google Analytics -->
+            <script type="text/javascript">
+                  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+                  var pageTracker = _gat._getTracker("UA-5141001-1"); pageTracker._setDomainName(".livejournal.ru"); pageTracker._initData(); pageTracker._trackPageview(); </script> 
+
+		<script type="text/javascript"><!--
+	sup_service = 23;
+	sup_slot_id = 'cnt_ljru_themes';
+	sup_ad_width = 1;
+	sup_ad_height = 1;
+	
+//--></script>
+<script type="text/javascript" src="http://cnt.sup.com/ad_show.js"></script>
+<noscript>
+	<iframe class="frame-banner-footer" frameborder="0" scrolling="no" src="http://cnt.sup.com/adv?srv=23&amp;adzone=cnt_ljru_themes&amp;r=57477051&amp;vid=1292849937"></iframe>
+</noscript>
+
+	</div>
+	
+	
+</div>
+<!--
+<script type="text/javascript" src="/j/script.js"></script>
+-->
+
+		
+	</div>
+	
+
+<script type="text/javascript">initAccordions();</script>
+</body>
+</html>

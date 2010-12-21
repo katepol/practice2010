@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Программный комплекс поддержки принятия решений при оптимизации производственно-сбытового процесса</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Программный комплекс поддержки принятия решений при оптимизации производственно-сбытового процесса</h2><div style="margin-bottom:10px"><strong>Program complex of supporting decisions adoption  with optimization of production-sale process</strong></div>Статья опубликована в выпуске журнала № 2 за 2010 год. [ 27.05.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Рассматриваются принципы организации, основные функции и структурные компоненты программного комплекса поддержки принятия решений при оптимизации производственно-сбытовых систем, разработанного с использованием оптимизационно-имитационного подхода.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">Enterprise principles, base functions and structural components of program complex of supporting decisions adoption with production-sale systems optimization, developed using optimizing-imitative approach are considered.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Автор: </b><a href="index.php?page=infou&id=5362">Боковая Н.В. (bokovaya@vfrsute.ru)</a> - Российский государственный торгово-экономический университет  (Воронежский филиал) Кандидат технический наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1612">процедура оптимизации</a>, <a href="index.php?page=infotg&id=1611">производственно-сбытовая система</a>, <a href="index.php?page=infotg&id=1610">оптимизационно-имитационный подход</a>, <a href="index.php?page=infotg&id=144">имитационное моделирование</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1612">optimizing procedure</a>, <a href="index.php?page=infotg&id=1611">production-sale system</a>, <a href="index.php?page=infotg&id=1610">optimizing-imitative approach</a>, <a href="index.php?page=infotg&id=144">simulation</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 337<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2534">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Одним из наиболее перспективных направлений рационализации принятия решений при управлении промышленным предприятием является использование оптимизационно-имитацион&shy;ного подхода [1,&nbsp;2]. Современное предприятие рассматривается как сложная производственно-сбытовая система, в которой в единую логистическую цепь объединяются процессы закупки сырья и материалов, производства продукции, ее хранения и распределения. Особенностью производственно-сбытовых систем является невозможность адекватного описания процессов их функционирования с помощью аналитических моделей. Это связано с многообразием связей между структурными элементами систем, неоднозначностью алгоритмов поведения при различных условиях, наличием случайных воздействий и возмущений, с корреляционным взаимодействием между большим числом параметров. Необходимость комплексного учета данных факторов затрудняет аналитическую формулировку критериев оптимальности и ограничений в оптимизационных задачах и приводит к использованию аппарата имитационного моделирования. При этом связи между входными и выходными параметрами задаются с помощью различных моделирующих алгоритмов в соответствии с закономерностями функционирования производственно-сбытовых систем.</p>
+<p>&nbsp;</p>
+<p>Оптимизационно-имитационный подход основан на совместном применении имитационных и оптимизационных моделей в процессе управления. При этом имитационные модели используются для оценки основных характеристик производственно-сбытовой системы &ndash; коэффициентов загрузки оборудования, средней длины очереди на производственных участках, объема выпускаемой продукции, временных параметров и т.д. Выходные характеристики производственно-сбытовой системы являются исходной информацией для формирования критериев оптимальности и ограничений в оптимизационных моделях. Для рационального выбора текущих значений входных управляемых параметров имитационных моделей используются алгоритмы оптимизации поискового типа [3]. Целенаправленным варьированием параметров имитационной модели под управлением процедур оптимизации можно получить оптимальные и близкие к оптимальным решения.</p>
+<p>Рассматриваемые оптимизационные задачи обобщенно могут быть сформулированы в виде</p>
+<p><img src="uploaded/image/2010-2/image765.gif" border="0" alt="" width="115" height="27" /></p>
+<p><img src="uploaded/image/2010-2/image767.gif" border="0" alt="" width="213" height="48" /></p>
+<p>Здесь X=(x1, &hellip;, xn) &ndash; вектор варьируемых параметров модели; fi(X) &ndash; частные критерии оптимальности; D &ndash; допустимая область, представленная ограничениями двух видов: прямыми (xjmin&pound;xj&pound;xjmax) и функциональными (gs(X)&sup3;0, hk(X)=0).</p>
+<p>При этом предполагается, что критерии и ограничения (или их часть) заданы алгоритмически в виде моделирующих процедур, позволяющих по заданным значениям X=(x1, &hellip;, xn) получать значения fi(X), gp(X), hk(X).</p>
+<p>Практическая реализация оптимизационно-имитационного подхода при оптимизации производственно-сбытовых систем предполагает решение следующих основных задач:</p>
+<p>-&nbsp;&nbsp;&nbsp; построение комплексной динамической модели производственно-сбытовой системы;</p>
+<p>-&nbsp;&nbsp;&nbsp; формирование алгоритмов оптимального поиска с целью направленного проведения модельных экспериментов;</p>
+<p>-&nbsp;&nbsp;&nbsp; разработка процедур интеграции имитационных и оптимизационных моделей в процессе поиска оптимальных решений.</p>
+<p>На рисунке показана структура программного комплекса поддержки принятия решений при оптимизации производственно-сбытового процесса на предприятии. Программный комплекс имеет модульную структуру и состоит из набора взаимодействующих блоков, наиболее значимыми из которых являются блоки функционального моделирования, имитационного моделирования, оптимального поиска и управления.</p>
+<p>Блок функционального моделирования предназначен для структурного и функционального анализа производственно-сбытовых процессов предприятия. При разработке функциональных моделей производственных систем предлагается использовать CASE-систему BPwin [3], позволяющую анализировать, документировать и планировать сложные бизнес-процессы. Методология SADT, на которой базируется BPwin, обеспечивает целостное описание производственной системы, которое начинается с ее общего обзора, а затем детализируется посредством вложенных диаграмм, приобретая иерархическую структуру. BPwin совмещает средства моделирования функций (IDEF0), потоков данных (DFD) и потоков работ (IDEF3).</p>
+<p><img src="uploaded/image/2010-2/image769.gif" alt="Подпись:  " width="295" height="422" align="left" />На базе разработанной функциональной модели в дальнейшем строится имитационная модель с целью проведения динамического многовариантного анализа и оптимизации бизнес-процессов производства. В качестве среды моделирования выбрана система Arena, в настоящее время являющаяся наиболее эффективным инструментальным средством имитационного моделирования производственных систем. В основе ее построения лежит язык имитационного моделирования SIMAN. В системе Arena предусмотрены возможности формирования иерархически вложенных моделей, что позволяет осуществлять моделирование с различной степенью детализации. Достоинством системы является наличие развитого графического интерфейса и средств анимации моделей, способствующих повышению эффективности принимаемых управленческих решений. Выходная информация представляется в виде динамических графиков, диаграмм, структурированных таблиц, обеспечивающих формирование целостной картины производственно-сбытового процесса на предприятии.</p>
+<p>Подготовленный в системе BPwin комплекс IDEF3-диаграмм может быть перенесен в систему Arena посредством функции экспорта. При экспорте передаются структура модели, логика взаимодействия бизнес-процессов, последовательность функций и работ. Далее осуществляются диалоговая доработка и корректировка имитационной модели &ndash; установка временных параметров основных процессов, определение характеристик базовых блоков модели, выбор случайных воздействий и возмущений. При формировании имитационной модели определяются ее структура (число накопителей и каналов обслуживания, их характеристики и связи между ними), параметры входного и выходного потоков заявок, дисциплины ожидания и обслуживания, а также алгоритмы функционирования системы. На основании имитационных экспериментов с моделью оцениваются основные характеристики производственной системы &ndash; коэффициенты загрузки оборудования, объем выпускаемой продукции, средняя длина очереди, временные параметры и т.д. Рассматриваемая технология позволяет формировать комплексную интегрированную функционально-ими&shy;тационную модель производственно-сбытового процесса, отражающую его различные аспекты и использующуюся для выбора оптимальных управляющих воздействий.</p>
+<p>Решение оптимизационных задач при управлении обеспечивается блоком оптимального поиска. При выборе оптимальных вариантов применяются методы оптимизации нулевого порядка, не использующие дифференциальные характеристики критериев и ограничений. В библиотеку оптимизационных процедур включены и стандартные алгоритмы оптимизации данного класса (методы деформируемых конфигураций, покоординатной оптимизации, случайного поиска), и рандомизированные поисковые процедуры, построенные с использованием адаптивного подхода [4]. Разнообразие представленных в библиотеке методов и алгоритмов обеспечивает возможность комплексного применения оптимизационных процедур и выбора комбинированных стратегий поиска оптимальных решений. Формирование вычислительных схем оптимизации производится генератором оптимизационных процедур на основании динамической оценки свойств решаемой задачи.</p>
+<p>Перед началом оптимального поиска осуществляются построение оптимизационной модели (определение размерности задачи, формирование критериев и ограничений), установка исходных данных для оптимизации (выбор начального приближения, точности и максимального количества итераций поиска), а также ввод параметров поисковых процедур, использующихся для решения данной задачи. Оптимизационная модель может быть сформирована пользователем в диалоговом режиме или выбрана из библиотеки стандартных моделей. Характеристики построенной модели являются исходной информацией для выбора рациональных процедур оптимизации.</p>
+<p>Связующим звеном между основными блоками программного комплекса, обеспечивающим передачу информации и формирование управляющих воздействий, является блок управления. Основные его функции &ndash; взаимодействие с ЛПР для координации его действий, связь по данным и управлению между основными программными компонентами, передача результатов оптимизации в банк статистической информации для обработки и дальнейшего анализа. Для взаимосвязи имитационных и оптимизационных моделей используются соответствующие процедуры интеграции, позволяющие осуществлять информационный обмен в автоматическом режиме.</p>
+<p>В заключение следует отметить, что применение программного комплекса поддержки принятия решений при оптимизации производственно-сбы&shy;товых систем, разработанного с использованием оптимизационно-имитационного подхода, позволит учитывать различные аспекты, возникающие при выборе оптимальных управляющих воздействий на систему.</p>
+<p>Литература</p>
+<p>1.&nbsp;Цвиркун А.Д. Структура многоуровневых и крупномасштабных систем. М.: Наука, 1993. 287 с.</p>
+<p>2.&nbsp;Хоботов Е.Н. Оптимизационно-имитационный подход к моделированию сложных систем // Изв. РАН. 1996. № 1.  С. 12&ndash;24 (Теория и системы управления).</p>
+<p>3.&nbsp;Маклаков С.В. Моделирование бизнес-процессов с BPwin 4.0. М.: Диалог-МИФИ, 2002. 224 с.</p>
+<p>4.&nbsp;Кельтон В., Лоу А. Имитационное моделирование. СПб: Питер, 2004. 848 с.</p>
+<p>5.&nbsp;Батищев Д.И., Львович Я.Е., Фролов В.Н. Оптимизация в САПР. Воронеж: Изд-во ВГУ, 1997.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2534</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2534">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 2 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=90">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="wine" />
+	<meta name="keywords" content="PHP, MySQL, bulletin, board, free, open, source, smf, simple, machines, forum" />
+	<script language="JavaScript" type="text/javascript" src="http://forum.ubuntu.ru/Themes/default/script.js"></script>
+	<script language="JavaScript" type="text/javascript"><!--
+		var smf_theme_url = "http://forum.ubuntu.ru/Themes/firefox_ro";
+		var smf_images_url = "http://forum.ubuntu.ru/Themes/firefox_ro/images";
+	// --></script>
+	<title>wine</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="http://forum.ubuntu.ru/Themes/firefox_ro/style.css" />
+	<link rel="help" href="http://forum.ubuntu.ru/index.php?action=help" target="_blank" />
+	<link rel="contents" href="http://forum.ubuntu.ru/index.php" />
+	<link rel="alternate" type="application/rss+xml" title="Русскоязычное сообщество Ubuntu Linux - RSS" href="http://forum.ubuntu.ru/index.php?type=rss2;limit=10;action=.xml" />
+	<link rel="prev" href="http://forum.ubuntu.ru/index.php?action=;topic=425.0;prev_next=prev" />
+	<link rel="next" href="http://forum.ubuntu.ru/index.php?action=;topic=425.0;prev_next=next" />
+	<link rel="index" href="http://forum.ubuntu.ru/index.php?action=;board=41.0" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<style type="text/css">
+	a img{
+	border: 0;
+	}
+	</style>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		var smf_scripturl = "http://forum.ubuntu.ru/index.php";
+	// ]]></script>
+
+	<script language="JavaScript" type="text/javascript"><!--
+		var current_header = false;
+
+		function shrinkHeader(mode)
+		{
+			document.cookie = "upshrink=" + (mode ? 1 : 0);
+			document.getElementById("upshrink").src = smf_images_url + (mode ? "/upshrink2.gif" : "/upshrink.gif");
+
+			document.getElementById("upshrinkHeader").style.display = mode ? "none" : "";
+
+			current_header = mode;
+		}
+	// --></script>
+</head>
+<body>
+<div style="padding: 20px 20px 4px 20px;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-image: url(http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_middle.gif);">
+  <tr>
+    <td width="1" rowspan="2"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_left.gif" alt="" /></td>
+    <td width="70%" align="left" id="search"><script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try {var pageTracker = _gat._getTracker("UA-4515300-5");pageTracker._trackPageview();} catch(err) {}</script>
+<form method="get" action="http://www.google.ru/search" target="_blank">
+<label><b>Поиск: </b></label>
+<input type="text" name="q" value="" size="20" maxlength="64" id="infield"/>&nbsp;
+<input type="submit" name="submit" value="Поиск" id="submit"/>
+<input type="hidden" name="sitesearch" value="ubuntu.ru"/>
+<input type="hidden" name="hl" value="ru"/></form>
+    </td>
+    <td width="30%" rowspan="2" align="center" class="hdrtitle">
+	Русскоязычное сообщество Ubuntu Linux
+    </td>
+    <td width="1" rowspan="2"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_right.gif" alt="" /></td>
+  </tr>
+  <tr>
+    <td width="70%" valign="bottom" align="left">
+  	<div id="tabs">
+ 	  <ul>
+ 	   <li id="current"><a href="http://forum.ubuntu.ru/index.php">Начало</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?board=35.0">Правила</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=help" target="_blank">Помощь</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=calendar">Календарь</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=register">Регистрация</a></li>
+ 	  </ul>
+  	</div>
+    </td>
+  </tr>
+</table>
+<a href="#" onclick="shrinkHeader(!current_header); return false;"><img id="upshrink" src="http://forum.ubuntu.ru/Themes/firefox_ro/images/upshrink.gif" alt="*" title="Свернуть/Развернуть." style="margin: 2px 0;" border="0" /></a><img id="upshrinkTemp" src="http://forum.ubuntu.ru/Themes/firefox_ro/images/blank.gif" alt="" style="margin-right: 2ex;" />
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id="upshrinkHeader">
+  <tr>
+    <td width="50%" class="smalltext" valign="top">
+	<br />Добро пожаловать, <b>Гость</b>. Пожалуйста, <a href="http://forum.ubuntu.ru/index.php?action=login">войдите</a> или <a href="http://forum.ubuntu.ru/index.php?action=register">зарегистрируйтесь</a>.<br />Вам не пришло <a href="http://forum.ubuntu.ru/index.php?action=activate">письмо с кодом активации?</a><br />
+	Войти<br /><br />
+	<form action="http://forum.ubuntu.ru/index.php?action=login2" method="post">
+	  <input type="text" name="user" size="8" /> <input type="password" name="passwrd" size="8" />
+	   <select name="cookielength">
+		<option value="60">1 час</option>
+		<option value="1440">1 день</option>
+		<option value="10080">1 неделя</option>
+		<option value="302400">1 месяц</option>
+		<option value="-1" selected="selected">Навсегда</option>
+	   </select>
+	  <input type="submit" value="Войти" />
+	</form>
+    </td>
+    <td valign="top">
+    <div style="text-align:center;padding:10px;color:#bb2211;font-weight:bold;background-color:#ffffff;border: #D4C2A6 1px solid;">
+    &nbsp;Получить помощь вы также можете в нашем списке рассылки:<br /><a href="http://lists.ubuntu.com/mailman/listinfo/ubuntu-ru" target="_blank">ubuntu-ru@lists.ubuntu.com</a>
+    </div>
+
+    </td>
+  </tr>
+</table>
+</div>
+
+
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding: 0.5ex 20px 2ex 20px;">
+<a name="top"></a>
+<a name="msg2782"></a>
+<div><span class="nav" style="font-size: smaller;"><b><a href="http://forum.ubuntu.ru/index.php" class="nav">Русскоязычное сообщество Ubuntu Linux</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php#4" class="nav">Поддержка</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php?board=41.0" class="nav">Виртуальные сервера и эмуляторы</a></b> &nbsp;|&nbsp; Тема: <b><a href="http://forum.ubuntu.ru/index.php?topic=425.0" class="nav">wine</a></b></span></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="middletext" valign="bottom" style="padding-bottom: 4px;">Страниц: [<b>1</b>] <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=425.15">2</a> <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=425.30">3</a> <b> ... </b><a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=425.555">38</a>   &nbsp;&nbsp;<a href="#lastPost"><b>Вниз</b></a></td>
+		<td align="right" style="padding-right: 1ex;">
+			<div class="nav" style="margin-bottom: 2px;"> <a href="http://forum.ubuntu.ru/index.php?topic=425.0;prev_next=prev#new">&laquo; предыдущая тема</a> <a href="http://forum.ubuntu.ru/index.php?topic=425.0;prev_next=next#new">следующая тема &raquo;</a></div>
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					
+		<td ><a href="http://forum.ubuntu.ru/index.php?action=printpage;topic=425.0" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/russian-utf8/print.gif" alt="Печать" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="0" border="0" class="tborder" style="border-bottom: 0;">
+		<tr class="catbg3">
+				<td valign="middle" width="2%" style="padding-left: 6px;">
+						<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/topic/veryhot_post_locked.gif" align="bottom" alt="" />
+				</td>
+				<td width="13%"> Автор</td>
+				<td valign="middle" width="85%" style="padding-left: 6px;" id="top_subject">
+						Тема: wine &nbsp;(Прочитано 59993 раз)
+				</td>
+		</tr>
+		<tr>
+				<td colspan="3" class="smalltext">0 Пользователей и 1 Гость смотрят эту тему.
+				</td>
+		</tr>
+</table>
+<form action="http://forum.ubuntu.ru/index.php?action=quickmod2;topic=425.0" method="post" accept-charset="UTF-8" name="quickModForm" id="quickModForm" style="margin: 0;" onsubmit="return in_edit_mode == 1 ? modify_save('b1fab6711b27ec01d55cd962638a988a') : confirm('Вы уверены?');">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="bordercolor">
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=277" title="Просмотр профиля MaHeTa">MaHeTa</a></b>
+							<div class="smalltext"><span style="color:#BB2211; font-weight:bold"> Автор темы </span><br />
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 14<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=699245" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=699245" alt="699245" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=277"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:admin@sumgum.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg2782#msg2782"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2782">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg2782#msg2782">wine</a>
+									</div>
+									<div class="smalltext">&#171; <b> :</b> 08 Июля 2005, 16:41:24 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">хочу поставить wine но незнаю как и какую лучше использовать</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2782">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2785"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=3" title="Просмотр профиля clx">clx</a></b>
+							<div class="smalltext">
+								Ilya Uralskiy<br />
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 1205<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=1444;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=3"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:clx.mini@gmail.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg2785#msg2785"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2785">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg2785#msg2785">Re: wine</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #1 :</b> 08 Июля 2005, 16:56:26 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">sudo apt-get install wine</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2785">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2786"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=277" title="Просмотр профиля MaHeTa">MaHeTa</a></b>
+							<div class="smalltext"><span style="color:#BB2211; font-weight:bold"> Автор темы </span><br />
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 14<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=699245" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=699245" alt="699245" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=277"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:admin@sumgum.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg2786#msg2786"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2786">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg2786#msg2786">Re: wine</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #2 :</b> 08 Июля 2005, 16:58:49 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Спасибо <img src="http://forum.ubuntu.ru/Smileys/webby/cheesy.gif" alt="Cheesy" border="0" /><br />//Тока как её включать? </div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2786">
+									&#171; <i>Последнее редактирование: 08 Июля 2005, 17:25:35 от MaHeTa</i> &#187;
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2804"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=3" title="Просмотр профиля clx">clx</a></b>
+							<div class="smalltext">
+								Ilya Uralskiy<br />
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 1205<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=1444;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=3"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:clx.mini@gmail.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg2804#msg2804"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2804">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg2804#msg2804">Re: wine</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #3 :</b> 08 Июля 2005, 18:32:37 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg2786#msg2786">Цитата: MaHeTa от 08 Июля 2005, 16:58:49</a></div><div class="quote">Спасибо <img src="http://forum.ubuntu.ru/Smileys/webby/cheesy.gif" alt="Cheesy" border="0" /><br />//Тока как её включать? <br /></div><br />wine *.exe</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2804">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg128228"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=13570" title="Просмотр профиля Dima006">Dima006</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 1<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=13570"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:d006@list.ru"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg128228#msg128228"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_128228">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg128228#msg128228">Re: wine</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #4 :</b> 03 Января 2008, 16:19:43 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">привет всем...<br />я поставил себе Ubuntu 6.06, настроил там интернет..<br />но никак не могу настроить и запустить вин.программу через вайн... помогыте</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_128228">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg128235"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=4672" title="Просмотр профиля Sanijok">Sanijok</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 3<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=4672"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:alext26@gmail.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg128235#msg128235"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_128235">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg128235#msg128235">Re: wine</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #5 :</b> 03 Января 2008, 16:54:42 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg2785#msg2785">Цитата: clx от 08 Июля 2005, 16:56:26</a></div><div class="quote">sudo apt-get install wine<br /></div><br />Пакет wine недоступен, но упомянут в списке зависимостей другого пакета.<br />Это может означать, что пакет отсутствует, устарел, или доступен из источников, не упомянутых в sources.list<br />E: Для пакета wine не найдены кандидаты на установку<br /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_128235">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg128240"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=11955" title="Просмотр профиля doctor.01">doctor.01</a></b>
+							<div class="smalltext">
+								Участник<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 211<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=4051;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								Начинающий!<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=276323155" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=276323155" alt="276323155" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=11955"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:doctor.01@list.ru"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg128240#msg128240"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_128240">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg128240#msg128240">Re: wine</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #6 :</b> 03 Января 2008, 17:05:11 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">имхо лучше ставить через Система - Администрирование - Менеджер пакетов Synaptic <br />[Изображение удалено администратором]<br />чем через Консоль.<br />[Изображение удалено администратором]<br />а потом сделать рекомендуется скопировать шрифты с разрешением .ttf из папки fonts ОС Windows в каталог <br />/home/имя_учетной_записи/.wine/drive_c/windows/fonts <img src="http://forum.ubuntu.ru/Smileys/webby/tongue.gif" alt="Tongue" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_128240">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg128245"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=5419" title="Просмотр профиля Scarab">Scarab</a></b>
+							<div class="smalltext">
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 413<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=2622;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								Ubuntu-не ОС для блондинок!<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=318202314" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=318202314" alt="318202314" width="18" height="18" border="0" /></a>
+								
+								
+								<a href="xmpp:ubuntolog@jabber.ru" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/jabber.png" alt="ubuntolog@jabber.ru" border="0" /></a>
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=5419"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg128245#msg128245"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_128245">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg128245#msg128245">Re: wine</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #7 :</b> 03 Января 2008, 17:12:21 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg128240#msg128240">Цитата: doctor.01 от 03 Января 2008, 17:05:11</a></div><div class="quote">имхо лучше ставить через Система - Администрирование - Менеджер пакетов Synaptic</div>Я раньше так же думал, но у меня появилось 2 причины для перехода в консоль:<br />1) Синаптик так же тупо обрабатывает зависимости, как и apt-get<br />2) через aptitude я установлю все быстрее, чем синаптик запустится <img src="http://forum.ubuntu.ru/Smileys/webby/smiley.gif" alt="Smiley" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_128245">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg128255"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=11955" title="Просмотр профиля doctor.01">doctor.01</a></b>
+							<div class="smalltext">
+								Участник<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 211<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=4051;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								Начинающий!<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=276323155" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=276323155" alt="276323155" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=11955"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:doctor.01@list.ru"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg128255#msg128255"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_128255">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg128255#msg128255">Re: wine</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #8 :</b> 03 Января 2008, 17:31:09 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><b>Scarab</b> не най не най. ставил через консоль командой выше, была проблема со шрифтами, было так ... ........ ...... ... ........... <br />А так встало сразу с русским. и в меню вайна появилось 3 пункта 1. обзор С, 2. конфигуратор 3. удаление программ. <br />Когда ставил через консоль такого не было <img src="http://forum.ubuntu.ru/Smileys/webby/huh.gif" alt="Huh" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_128255">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg128325"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b>Bren74</b>
+							<div class="smalltext">
+								Гость<br />
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg128325#msg128325"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_128325">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg128325#msg128325">Re: wine</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #9 :</b> 03 Января 2008, 20:28:31 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">А можно <b>совсем ламерский</b> вопрос <img src="http://forum.ubuntu.ru/Smileys/webby/smiley.gif" alt="Smiley" border="0" /><br />Как потом ставить собственно тот софт, для которого wine и предназначен?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_128325">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg128350"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=11955" title="Просмотр профиля doctor.01">doctor.01</a></b>
+							<div class="smalltext">
+								Участник<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 211<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=4051;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								Начинающий!<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=276323155" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=276323155" alt="276323155" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=11955"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:doctor.01@list.ru"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg128350#msg128350"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_128350">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg128350#msg128350">Re: wine</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #10 :</b> 03 Января 2008, 21:24:58 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><b>Bren74</b> <img src="http://forum.ubuntu.ru/Smileys/webby/wink.gif" alt="Wink" border="0" /><br />Виндовс приложения в Wine запускаются следующим образом <br />wine /директория/название_программы.exe <b>но! приложения запускаются только с домашнего католога</b><br />прочитал тут на форуме и сделал по описанию аццкий костыль (к сожалению не помню кто выложил)<br />1. Создаем файл wine.sh в домашнем каталоге и даем ему права на исполнение.<br />2. Пишем там примерно следующее:<br /><div class="codeheader">Код:</div><div class="code">#!/bin/sh<br />Dir=`dirname &quot;$1&quot;`<br />Prog=`basename &quot;$1&quot;`<br />cd &quot;$Dir&quot;<br />wine &quot;$Prog&quot;<br /></div>3. Теперь в свойствах какого-нибудь экзешника открываем вкладку &quot;открывать в программе&quot; и добавляем туда путь к нашему скрипту.<br />4. Запускаем любой экзешник двойным кликом <b>из любой директории</b>)<br /><b>Установка</b><br />просто запускаете инсталятор и программа устанавливается в папку <br /><div class="codeheader">Код:</div><div class="code">/home/имя_пользователя/.wine/drive_c/Program Files</div> и в Приложения - Вайн - Программы - получите то что установили.<br /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_128350">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg128359"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b>Bren74</b>
+							<div class="smalltext">
+								Гость<br />
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg128359#msg128359"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_128359">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg128359#msg128359">Re: wine</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #11 :</b> 03 Января 2008, 21:42:26 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">To <b>doctor.01</b><br />Спасибо за подробное разьяснение...воспользуемся-с...<img src="http://forum.ubuntu.ru/Smileys/webby/smiley.gif" alt="Smiley" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_128359">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg128458"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=9570" title="Просмотр профиля sx1">sx1</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 5<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=2831;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=2880570" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=2880570" alt="2880570" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=9570"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:mandriva@bk.ru"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg128458#msg128458"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_128458">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg128458#msg128458">Re: wine</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #12 :</b> 04 Января 2008, 00:50:10 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">извините а есть ли разница между установкой из синаптика и установкой из исходников? <img src="http://forum.ubuntu.ru/Smileys/webby/huh.gif" alt="Huh" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_128458">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg128459"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b>Vit.Ok</b>
+							<div class="smalltext">
+								Гость<br />
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg128459#msg128459"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_128459">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg128459#msg128459">Re: wine</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #13 :</b> 04 Января 2008, 00:56:19 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg128350#msg128350">Цитата: doctor.01 от 03 Января 2008, 21:24:58</a></div><div class="quote"><b>Bren74</b> <img src="http://forum.ubuntu.ru/Smileys/webby/wink.gif" alt="Wink" border="0" /><br />Виндовс приложения в Wine запускаются следующим образом <br />wine /директория/название_программы.exe <b>но! приложения запускаются только с домашнего католога</b><br /><br /></div><br />откуда такие познания? я S.T.A.L.K.E.R. запускаю вобще с виндового нтфс раздела. да и впрочем все что работает на вайне и работает без установки в винде, вайн запускает из любого католога. кстате на какой версии сидиш? я на 0.9.52</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_128459">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg128464"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b>Vit.Ok</b>
+							<div class="smalltext">
+								Гость<br />
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg128464#msg128464"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_128464">
+										<a href="http://forum.ubuntu.ru/index.php?topic=425.msg128464#msg128464">Re: wine</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #14 :</b> 04 Января 2008, 01:12:56 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=425.msg128458#msg128458">Цитата: sx1 от 04 Января 2008, 00:50:10</a></div><div class="quote">извините а есть ли разница между установкой из синаптика и установкой из исходников? <img src="http://forum.ubuntu.ru/Smileys/webby/huh.gif" alt="Huh" border="0" /><br /></div><br />да, и существенная.<br />из синаптика все просто и красиво станет, но могут быть небольшие подвисание иксов. (на своем опыте рассказываю)<br />а если компилить из исходников, то готовый продукт для твоей машини получиться лучше, чем из синаптика, да и к тому же в синаптике старые версии<br />если не ошибаюсь, сейчас там 0.9.46. а в исходниках доступна 0.9.52 <a href="http://www.winehq.org/?announce=latest" target="_blank">http://www.winehq.org/?announce=latest</a> <br />я скажу так: если нет времяни и желания компилить, то ставь из синаптика,<br />а если хочеш более свежий и оптимизированиый продукт для твоей машины (т.е. более стабильный (оброзно говоря)) то тогда компили исходники.<br />последствия такие: из синаптика хуже работает, но зато легко ставить и в меню нужные пункты автоматом появляються,<br />а если компилить, вопервых гемор, во второх в меню самому кнопки запуска надо будет делать, но зато сам вайн будет лучше работать.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_128464">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 0 0 1px 0;"></td></tr>
+</table>
+<a name="lastPost"></a>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="middletext">Страниц: [<b>1</b>] <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=425.15">2</a> <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=425.30">3</a> <b> ... </b><a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=425.555">38</a>   &nbsp;&nbsp;<a href="#top"><b>Вверх</b></a></td>
+		<td align="right" style="padding-right: 1ex;">
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					
+		<td ><a href="http://forum.ubuntu.ru/index.php?action=printpage;topic=425.0" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/russian-utf8/print.gif" alt="Печать" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<script language="JavaScript" type="text/javascript" src="http://forum.ubuntu.ru/Themes/default/xml_topic.js"></script>
+<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+	quickReplyCollapsed = true;
+
+	smf_topic = 425;
+	smf_start = 0;
+	smf_show_modify = 1;
+
+	// On quick modify, this is what the body will look like.
+	var smf_template_body_edit = '<div id="error_box" style="padding: 4px; color: red;"></div><textarea class="editor" name="message" rows="12" style="width: 94%; margin-bottom: 10px;">%body%</textarea><br /><input type="hidden" name="sc" value="b1fab6711b27ec01d55cd962638a988a" /><input type="hidden" name="topic" value="425" /><input type="hidden" name="msg" value="%msg_id%" /><div style="text-align: center;"><input type="submit" name="post" value="Сохранить" onclick="return modify_save(\'b1fab6711b27ec01d55cd962638a988a\');" accesskey="s" />&nbsp;&nbsp;<input type="submit" name="cancel" value="Отменить" onclick="return modify_cancel();" /></div>';
+
+	// And this is the replacement for the subject.
+	var smf_template_subject_edit = '<input type="text" name="subject" value="%subject%" size="60" style="width: 99%;"  maxlength="80" />';
+
+	// Restore the message to this after editing.
+	var smf_template_body_normal = '%body%';
+	var smf_template_subject_normal = '<a href="http://forum.ubuntu.ru/index.php?topic=425.msg%msg_id%#msg%msg_id%">%subject%</a>';
+	var smf_template_top_subject = "Тема: %subject% &nbsp;(Прочитано 59993 раз)"
+
+	if (window.XMLHttpRequest)
+		showModifyButtons();
+// ]]></script>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 1ex;">
+		<tr>
+				<td valign="top"><span class="nav" style="font-size: smaller;"><b><a href="http://forum.ubuntu.ru/index.php" class="nav">Русскоязычное сообщество Ubuntu Linux</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php#4" class="nav">Поддержка</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php?board=41.0" class="nav">Виртуальные сервера и эмуляторы</a></b> &nbsp;|&nbsp; Тема: <b><a href="http://forum.ubuntu.ru/index.php?topic=425.0" class="nav">wine</a></b></span></td> 
+				<td valign="top" align="right" class="nav"> <a href="http://forum.ubuntu.ru/index.php?topic=425.0;prev_next=prev#new">&laquo; предыдущая тема</a> <a href="http://forum.ubuntu.ru/index.php?topic=425.0;prev_next=next#new">следующая тема &raquo;</a></td>
+		</tr>
+</table>
+	<table cellpadding="0" cellspacing="0" border="0" style="margin-left: 1ex;">
+		<tr>
+			
+		<td ></td>
+		</tr>
+	</table>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		document.getElementById("quickmodSubmit").style.display = "none";
+	// ]]></script>
+</form>
+<div class="tborder"><div class="titlebg2" style="padding: 4px;" align="right">
+	<form action="http://forum.ubuntu.ru/index.php" method="get" accept-charset="UTF-8" style="padding:0; margin: 0;">
+		<span class="smalltext">Перейти в:</span>
+		<select name="jumpto" id="jumpto" onchange="if (this.selectedIndex > 0 &amp;&amp; this.options[this.selectedIndex].value) window.location.href = smf_scripturl + this.options[this.selectedIndex].value.substr(smf_scripturl.indexOf('?') == -1 || this.options[this.selectedIndex].value.substr(0, 1) != '?' ? 0 : 1);">
+			<option value="">Пожалуйста, выберите назначение:</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#7">Новости</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=10.0"> => Новости и анонсы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=11.0"> => Общие вопросы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=12.0"> => Встречи</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=13.0"> => Сборка пакетов</option>
+			<option value="?board=14.0"> => Локализация</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=15.0"> => Обсуждение форума</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=17.0"> => Разговоры обо всём</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=18.0"> => How-To и F.A.Q</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=19.0"> => Распространение Ubuntu</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=20.0"> => Коллективный bug report</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#9">Галерея</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=21.0"> => Скриншоты</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#7">Новости</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=23.0"> => Новости из мира *NIX</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#9">Галерея</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=24.0"> => Интересные картинки</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=25.0"> => Железо</option>
+			<option value="?board=26.0"> => Мультимедиа</option>
+			<option value="?board=27.0"> => Сети/Интернет</option>
+			<option value="?board=28.0"> => Установка Ubuntu</option>
+			<option value="?board=29.0"> => GUI</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=31.0"> => Программирование</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=32.0"> ===> GNOME</option>
+			<option value="?board=33.0"> ===> XFCE</option>
+			<option value="?board=34.0"> ===> KDE</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#10">Правила форума</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=35.0"> => Правила...</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=37.0"> ===> Юмор</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=38.0"> => Обсуждение ubuntu.ru</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=39.0"> => Linux в организациях</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=40.0"> => Тестирование Ubuntu</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=41.0" selected="selected"> => Виртуальные сервера и эмуляторы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=42.0"> => Обсуждение IRC и Jabber конференций</option>
+			<option value="?board=44.0"> => Русскоязычная команда Ubuntu</option>
+			<option value="?board=50.0"> => Обсуждение help.ubuntu.ru</option>
+		</select>&nbsp;
+		<input type="button" value="да" onclick="if (this.form.jumpto.options[this.form.jumpto.selectedIndex].value) window.location.href = 'http://forum.ubuntu.ru/index.php' + this.form.jumpto.options[this.form.jumpto.selectedIndex].value;" />
+	</form>
+</div></div><br />
+            </td>
+          </tr>
+	</table>
+<hr style="background-color: #CCCCCC; width: 95%;" />
+<table cellspacing="0" cellpadding="3" border="0" align="center" width="100%">
+  <tr>
+    <td width="28%" valign="middle" align="center">
+    <!--a href="http://validator.w3.org/check/referer" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/valid-xhtml10.gif" alt="Valid XHTML 1.0!" style="margin: 4px;" border="0" /></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/valid-css.gif" alt="Valid CSS!" style="margin: 4px;" border="0" /></a-->
+    <a href="http://www.mysql.com/" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/powered-mysql.gif" alt="Powered by MySQL" style="margin: 4px;" border="0"  /></a>
+    <a href="http://www.php.net/" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/powered-php.gif" alt="Powered by PHP" style="margin: 4px;" border="0" /></a>
+    </td>
+    <td valign="middle" align="center" style="white-space: nowrap;">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">Powered by SMF 1.1.12</a> | 
+<a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">SMF &copy; 2006, Simple Machines LLC</a>
+		</span></td>
+    <td width="28%" valign="middle" align="center">
+     <a href="http://www.best-hosting.ru/dedicated_server.asp" title="Хостинг предоставлен компанией Best Hosting"><img src="http://s.ubuntu.ru/bhlogo.png" alt="Best Hosting" style="padding-bottom:6px;" /></a><br />
+     <a href="http://www.best-hosting.ru/dedicated_server.asp" style="color:#333;font:9px/9px sans">Серверы на Ubuntu</a>
+    </td>
+
+  </tr>
+</table>
+		<span class="smalltext">Страница сгенерирована за 0.197 секунд. Запросов: 18.</span>
+</body>
+</html>

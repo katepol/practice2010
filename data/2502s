@@ -1,0 +1,1209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Анализ отказоустойчивости параллельных кольцевых вычислительных систем</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Анализ отказоустойчивости параллельных кольцевых вычислительных систем</h2><div style="margin-bottom:10px"><strong>Analyze of fault tolerance  for parallel circular computing system</strong></div>Статья опубликована в выпуске журнала № 2 за 2010 год. [ 27.05.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Вводятся понятия модели кольцевой вычислительной системы (КлВС), представленной в виде ненаправленного кольцевого раскрашенного графа, а также набора одинаковых кольцевых моделей (НКлВС). В качестве модели задачи для НКлВС используется задача, граф которой полностью совпадает с графом КлВС. Исследуется возможность выполнения задачи на разрушенной КлВС, а также ее зависимость от количества цветов в графе и длины кольца. Методом имитационного моделирования исследуется зависимость наработки НКлВС от параметров графа КлВС и закона роста НКлВС.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">It inputted the notion of circular computing system model (CCS) (which represented in form non-orienteering circular coloring graph) and set of several identical that models (SCCS). Model of task for SCCS defined haw graph which is identical model of CCS. Destruction of CCS mean a selection any own subgraph in model (DCCS), and mending DCCS is addition of any vertexes and-or edges from CCS/DCCS. Failure of SCCS is inability to find isomorphic image of task model in any DCCS on SCCS. It is researching the possible of task entering on DSSC and depending that on color number and ring long. It is reasserting the depending mean time of first failure SCCS on parameters of graph CCS and increase low of SCCS by imitation modeling method</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=4024">Коганов А.В. (koganow@niisi.msk.ru)</a> - НИИСИ РАН, г. Москва Кандидат физико-математических наук Ph.D., <a href="index.php?page=infou&id=4025">Сазонов А.Н. (sazonov@rg.ru)</a> - ООО «Дойчебанк», г. Москва   </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1500">наработка на отказ</a>, <a href="index.php?page=infotg&id=1501">дублирование</a>, <a href="index.php?page=infotg&id=218">вычислительные системы</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1500">mean time of first failure</a>, <a href="index.php?page=infotg&id=1501">dual system</a>, <a href="index.php?page=infotg&id=218">computing system</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 279<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2502">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Одной из классических схем организации вычислительных систем была кольцевая модель, имеющая свои преимущества и недостатки. На современном этапе чаще используются модели типа &laquo;звезда&raquo; или &laquo;дерево&raquo;. В работах [1&ndash;3] исследуются планетарные вычислительные системы со структурой, близкой к древовидной и одновременно включающей подсистемы типа &laquo;звезда&raquo;. Для таких систем в указанных работах рассматривается влияние процессов разрушения и починки. В работах [4&ndash;5] исследуются системы с полным графом, корпоративные вычислительные системы (КВС), которые идеально подходят для изучения эффектов, возникающих при росте системы, то есть не только процессов разрушения и восстановления существующих элементов, но и добавления новых. Еще одним подходом к изучению процессов роста может быть фиксация структуры графа системы (необязательно полносвязного) и рассмотрение набора одинаковых систем, граф которых имеет указанную структуру. Для данной работы в качестве графа выбрано кольцо, а системы, соответственно, названы кольцевыми вычислительными системами (КлВС). На первый взгляд может показаться, что отказоустойчивость такой системы крайне мала: разрушение одного элемента превращает граф в линейную структуру, что, например, в случае компьютерных сетей, основанных на протоколах работы с использованием маркера, могло привести к выходу из строя всей системы. Однако, если использование каких-либо передаваемых по кольцу маркеров не рассматривается, а граф задачи, которую требуется решить, совпадает с графом КлВС, образ задачи в некоторых случаях может быть найден и на разрушенной КлВС. Простейший пример &ndash; КлВС с элементами лишь двух типов. Для этой системы достаточно, чтобы работоспособными оставались хотя бы два соседних элемента разных типов: на такой разрушенной КлВС можно выполнить любую двухцветную задачу. Возможность выполнения задачи на разрушенной КлВС и ее зависимость от параметров графа системы также стали предметом рассмотрения в настоящей работе.</p>
+<p>&nbsp;</p>
+<p>Результаты машинного эксперимента достаточно четко очерчивают границы двух классов КлВС по признаку возможности выполнения задачи на разрушенной системе. Несколько неожиданными оказались результаты машинного эксперимента с кольцами разной длины, но если принять указанное выше разделение систем на классы, результаты этих испытаний выглядят естественно.</p>
+<p>&nbsp;  Моделирование  функционирования КлВС    Понятие кольцевой системы и задачи. Модель КлВС рассматривается в виде направленного графа с помеченными вершинами, где метки (цвета) вершин соответствуют типам узлов, а дуги &ndash; двунаправленным каналам передачи данных. Граф КлВС имеет кольцевую структуру, то есть элементы графа могут быть упорядочены и каждый следующий элемент связан с предыдущим и следующим элементом, и только с ними. Первый элемент также связан с последним.</p>
+<p>Модель задачи основана на модели КлВС, более того, граф задачи в точности совпадает с графом системы. В случае выхода из строя компонентов КлВС оставшаяся работоспособной часть системы называется разрушенной КлВС (РКлВС). В работе рассматривается только разрушение узлов системы, каналы передачи данных считаются абсолютно надежными. Разрушение каналов данных можно имитировать путем введения дополнительных вершин.</p>
+<p>Поиск образа задачи на графе системы. Для возможности выполнения задачи на РКлВС необходимо ассоциировать каждую вершину графа задачи с вершиной графа РКлВС того же типа так, чтобы при этом в полученном образе задачи на графе РКлВС существовали все дуги, соответствующие дугам на графе модели задачи. В данной работе рассматривается случай, когда несколько однотипных вершин графа модели задачи могут ассоциироваться с одной и той же вершиной РКлВС того же типа. При этом предполагается, что локальные пересылки данных с одного узла ВС на самого себя всегда возможны.</p>
+<p>Под разложимостью графа модели задачи на граф РКлВС понимается возможность ассоциировать каждую вершину модели задачи с некоторой вершиной РКлВС того же типа. При этом, если между двумя вершинами графа модели задачи есть дуга, между образами вершин модели задачи на графе РКлВС также должна быть дуга либо образы этих вершин должны совпадать. В случае, когда модели задачи разложима на РКлВС, полученный набор образов вершин модели задачи на графе РКлВС называется образом задачи. Если граф модели задачи совпадает с графом исходной КлВС, для неразрушенной КлВС в качестве образа задачи может быть выбран сам граф КлВС. При этом граф модели задачи по определению имеет кольцевую структуру, однако образ модели задачи на КлВС может не быть кольцевым.</p>
+<p>Генерация графа системы. Для КлВС был задан процесс генерации вероятностного типа с двумя основными характеристиками: количеством вершин S и количеством цветов C.</p>
+<p>При генерации КлВС каждая вершина получает цвет как реализацию равновероятного испытания Бернулли на множестве цветов: 1, &hellip;, С.</p>
+<p>Разрушение и восстановление. Для моделирования процессов разрушения и восстановления системы задаются два параметра: Pd &ndash; вероятность разрушения одного узла и Pf &ndash; вероятность починки одного узла.</p>
+<p>Один цикл разрушения графа РКлВС проводится следующим образом: для каждого узла РКлВС проходит испытание Бернулли с вероятностью успеха Pd. В случае успеха узел и все инцендентные ему дуги исключаются из графа РКлВС. Восстановление осуществляется аналогично: для всех узлов исходной КлВС, не содержащихся в графе РКлВС, производится испытание Бернулли с вероятностью успеха Pf. В случае успеха узел и все инцендентные ему дуги, идущие к другим узлам РКлВС, добавляются в граф РКлВС. После одного цикла разрушения и восстановления при моделировании делается попытка разложения модели задачи на полученный граф РКлВС, поэтому порядок следования операций разрушения и восстановления важен [3]. В данной работе используется последовательность DR (destruct-repair), то есть каждый этап жизни системы состоит из разрушения, последующего восстановления и попытки разложения модели задачи на РКлВС.</p>
+<p>Набор КлВС</p>
+<p>Рост. Набор КлВС &ndash; это множество, состоящее из E одинаковых КлВС.</p>
+<p>Разрушенный набор &ndash; набор КлВС, в котором все или некоторые КлВС подвергались разрушению и восстановлению.</p>
+<p>Отказ разрушенного набора &ndash; ситуация, при которой ни на одной (Р)КлВС из набора не может быть найден образ модели задачи.</p>
+<p>Процесс роста разрушенного набора задается добавлением в набор одной или нескольких копий исходной, неразрушенной КлВС. В работе исследовались наборы систем с логарифмическим законом роста и количество систем (в том числе полностью разрушенных) в наборе на i-й итерации эксперимента E(i)=E0+&euml;E1log2(i+2)&ucirc;, где скобки &euml;&nbsp;&ucirc; &ndash; операция округления вниз до ближайшего целого числа. В программных обозначениях E0=E0, E1=E1. Логарифмический рост выбран для экспериментальной проверки теоретического вывода о достаточности такой скорости роста для получения положительной вероятности не ограниченной по времени безотказной работы. Для этой цели естественно выбрать исходную систему с низкой отказоустойчивостью, например КлВС.</p>
+<p>Алгоритм моделирования и сбора статистики. Помимо указанных параметров S, C, Pd, Pf, E0 и E1, для моделирования функционирования наборов КлВС задаются дополнительно Ni &ndash; общее количество итераций разрушения&ndash;восста&shy;новления&ndash;роста&ndash;проверки в одном эксперименте, а также Ne &ndash; количество повторений эксперимента с целью сбора статистики.</p>
+<p>Для проведения однократного эксперимента применялся следующий алгоритм.</p>
+<p>1.&nbsp;&nbsp; Согласно параметрам S и C генерируется исходный граф КлВС.</p>
+<p>2.&nbsp;&nbsp; Исходный граф копируется и сохраняется в качестве модели задачи.</p>
+<p>3.&nbsp;&nbsp; Создается набор, состоящий из E(0)=E0+E1 копий исходного графа.</p>
+<p>4.&nbsp;&nbsp; Запускается первая итерация эксперимента.</p>
+<p>На каждой i-й итерации эксперимента</p>
+<p>1)&nbsp; производится разрушение всех РКлВС из набора с использованием вероятности разруше- ния Pd;</p>
+<p>2)&nbsp; производится починка всех РКлВС из набора с использованием вероятности починки Pf;</p>
+<p>3)&nbsp; происходит рост набора: к набору добавляются k копий исходной КлВС, причем k выбирается так, чтобы всего в наборе было E(i) систем, считая полностью разрушенные;</p>
+<p>4)&nbsp; производится попытка разложения модели задачи на все (Р)КлВС из набора. Если ни на  одной системе из набора образ задачи не был найден, эксперимент завершается, наработка набора  T в данном эксперименте устанавливается рав- ной i-1.</p>
+<p>Если достигнута итерация с номером Ni и отказ на ней получен не был, T устанавливается равным Ni и эксперимент прекращается, считаясь успешным. Если T</p>
+<p>Для сбора статистики указанный эксперимент проводится Ne раз, причем вычисляются средняя наработка &ndash; среднее арифметическое всех значений T, а также величина F &ndash; количество успешных экспериментов. Величина F является предметом исследования при варьировании разнообразных параметров алгоритма.</p>
+<p>Результаты  численного эксперимента</p>
+<p>Варьирование количества типов элементов. В данной серии экспериментов варьировался  параметр С &ndash; количество типов элементов. Результаты представлены в виде поверхностей,  полученных по значениям функции F(C, Pf), где  C &ndash; количество типов элементов; Pf &ndash; вероятность починки; F &ndash; количество успешных экспериментов.</p>
+<p>Эксперимент 1. Постоянные параметры эксперимента: начальное количество копий КлВС E0=100; скорость роста набора E1=0 (рост отсутствует); вероятность разрушения Pd=0,1. Максимальное количество итераций эксперимента Ni=100; количество повторений каждого эксперимента Ne=1000; длина кольца S=10. Переменные параметры: число цветов C меняется от 2 до 100 с шагом 2; вероятность восстановления Pf меняется от 0,1 до 0,4 с шагом 0,01.</p>
+<p>Описание и анализ результата. При C=2 все системы сохранили работоспособность. Это связано с сохранением достаточно большого числа исправных двухцветных пар.</p>
+<p>При Pf&pound;0,21 для всех C&sup3;10 частота выживания обнуляется, но с ростом вероятности починки примерно до 0,27 для всех значений С выходит на 100&nbsp;%. Это связано с большим начальным числом КлВС. В этом эксперименте (табл. 1) зависимость от числа цветов очень слабая для C&sup3;10.</p>
+<p>Таблица 1</p>
+<p>Фрагмент таблицы значений F(C, Pf)  по результатам эксперимента 1</p>
+<table border="1" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr height="17">
+<td width="39" height="17" valign="bottom">
+<p>С</p>
+</td>
+<td colspan="6" width="256" height="17" valign="bottom">
+<p>Pf</p>
+</td>
+</tr>
+<tr height="17">
+<td width="39" height="17" valign="bottom"></td>
+<td width="43" height="17" valign="bottom">
+<p>0,20</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>0,21</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>0,22</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>0,23</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>0,24</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>0,25</p>
+</td>
+</tr>
+<tr height="17">
+<td width="39" height="17" valign="bottom">
+<p>2</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>100</p>
+</td>
+</tr>
+<tr height="17">
+<td width="39" height="17" valign="bottom">
+<p>4</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>13</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>12</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>10</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>18</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>36</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>75</p>
+</td>
+</tr>
+<tr height="17">
+<td width="39" height="17" valign="bottom">
+<p>6</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>5</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>3</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>3</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>2</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>24</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>57</p>
+</td>
+</tr>
+<tr height="17">
+<td width="39" height="17" valign="bottom">
+<p>8</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>1</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>1</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>5</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>21</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>66</p>
+</td>
+</tr>
+<tr height="17">
+<td width="39" height="17" valign="bottom">
+<p>10</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>1</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>4</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>32</p>
+</td>
+<td width="43" height="17" valign="bottom">
+<p>71</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Эксперимент 2. Число вершин S=100; параметр Pf варьируется от 0,7 до 0,83 с шагом 0,01; остальные параметры такие же, как в эксперименте 1.</p>
+<p>Описание и анализ результата. С увеличением длины кольца при числе цветов C&sup3;3 вероятность выживания системы резко падает в сравнении с экспериментом 1. Это связано с ростом числа цветных подграфов исходной системы, которые надо воспроизвести на разрушенной системе. При С=2 сохраняется полная выживаемость при всех вероятностях ремонта. Для других значений С при Pf&pound;0,76 частота выживания обнуляется. В интервале C&sup3;3 для 0,77&pound;Pf&pound;0,8 происходит быстрый рост частоты выживания почти до 100&nbsp;% (табл. 2). Зависимость от числа цветов при C&sup3;3 слабая.</p>
+<p>Таблица 2</p>
+<p>Фрагмент таблицы значений F(C, Pf)  по результатам эксперимента 2</p>
+<table border="1" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr height="17">
+<td width="65" height="17" valign="bottom">
+<p>C</p>
+</td>
+<td colspan="5" width="406" height="17" valign="bottom">
+<p>Pf</p>
+</td>
+</tr>
+<tr height="17">
+<td width="65" height="17" valign="bottom"></td>
+<td width="81" height="17" valign="bottom">
+<p>0,750000</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>0,760000</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>0,770000</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>0,780000</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>0,790000</p>
+</td>
+</tr>
+<tr height="17">
+<td width="65" height="17" valign="bottom">
+<p>2</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>100</p>
+</td>
+</tr>
+<tr height="17">
+<td width="65" height="17" valign="bottom">
+<p>4</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>1</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>14</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>62</p>
+</td>
+</tr>
+<tr height="17">
+<td width="65" height="17" valign="bottom">
+<p>6</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>1</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>13</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>63</p>
+</td>
+</tr>
+<tr height="17">
+<td width="65" height="17" valign="bottom">
+<p>8</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>2</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>23</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>62</p>
+</td>
+</tr>
+<tr height="17">
+<td width="65" height="17" valign="bottom">
+<p>26</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>3</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>24</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>60</p>
+</td>
+</tr>
+<tr height="17">
+<td width="65" height="17" valign="bottom">
+<p>28</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>1</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>20</p>
+</td>
+<td width="81" height="17" valign="bottom">
+<p>56</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>В обоих экспериментах пределы изменения Pf подбирались вручную для включения в результаты эксперимента области перехода функции F(C, Pf) с нулевых значений к значениям Ni.</p>
+<p>Варьирование длины кольца. После анализа результатов экспериментов 1 и 2 был проведен эксперимент 3, в котором варьировались параметры S и C. Постоянные параметры: начальное количество копий КлВС E0=20; скорость роста набора E1=0 (не растет); вероятность разрушения Pd=0,3; вероятность починки Pf=0,6; максимальное количество итераций эксперимента Ni=100; количество повторений каждого эксперимента Ne=1000. Переменные параметры: длина кольца S изменяется от 2 до 30, шаг 1; количество типов элементов С изменяется от 2 до 50, шаг 1.</p>
+<p>Описание и анализ результата. При S&gt;10 и C&gt;4 наработка на отказ F была близка к 0. Для С=2 наработка остается 100 при всех S. При малых 2</p>
+<p>Таблица 3</p>
+<p>Фрагмент таблицы значений F(S, C)  по результатам эксперимента 3</p>
+<table border="1" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr height="17">
+<td rowspan="2" width="42">
+<p>S</p>
+</td>
+<td colspan="6" width="253" height="17" valign="bottom">
+<p>C</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>2</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>3</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>4</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>5</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>9</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>10</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>2</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>3</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>4</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>99</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>5</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>97</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>93</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>94</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>6</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>93</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>85</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>86</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>87</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>79</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>7</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>61</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>39</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>41</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>19</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>30</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>8</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>58</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>22</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>10</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>2</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>3</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>9</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>53</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>18</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>6</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>1</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>10</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>35</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>14</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>5</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>11</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>38</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>6</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>3</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>12</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>33</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>4</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>1</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>1</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>13</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>37</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>3</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>2</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>28</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>4</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>29</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>8</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+</tr>
+<tr height="17">
+<td width="42" height="17" valign="bottom">
+<p>30</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>100</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>3</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+<td width="42" height="17" valign="bottom">
+<p>0</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>В экспериментах 4&ndash;7 варьировались параметры S и Pf при различных С в разных экспериментах. Постоянные параметры: начальное количество копий КлВС E0=20; скорость роста набора E1=0 (не растет); вероятность разрушения Pd=0,3; максимальное количество итераций эксперимента Ni=100; количество повторений каждого эксперимента Ne=1000. Переменные параметры: длина кольца S варьируется от 2 до 30, шаг 1; вероятность починки Pf варьируется от 0,05 до 0,9, шаг 0,05; количество С типов элементов принимало значения 3, 5, 10, 20 соответственно в экспериментах 4, 5, 6, 7.</p>
+<p>Описание и анализ результата. Эти эксперименты показали, что при всех значениях С наработка F с ростом S монотонно уменьшается. При S выше 16 наступает относительная стабилизация наработки на низком уровне. При этом для высоких значений Pf&sup3;0,65 начинается быстрый рост наработки до значений, близких к 100. С ростом C происходит некое уменьшение наработки, которое почти стабилизируется при C&sup3;5. На рисунках 1 и 2 показаны крайние по значениям C поверхности зависимости F(S, Pf). Неровности поверхности связаны со статистическими флуктуациями средних значений. Графики для 5&pound;C&pound;10 близки к графику при C=20.</p>
+<p>Эти результаты подтверждают уменьшение зависимости количества успешных экспериментов от S и от C по мере роста их значений.</p>
+<p>Рост наборов систем. Основной и исходной целью разработки ПО для моделирования наборов РКлВС было изучение изменения значений F в зависимости от основного параметра роста &ndash; E1. Эксперименты 8 и 9 были посвящены этому вопросу.</p>
+<p>Эксперимент 8. Постоянные параметры: вероятность разрушения Pd=0,3; максимальное количество итераций эксперимента Ni=100; количество повторений каждого эксперимента Ne=1000; длина кольца S=100; вероятность починки Pf=0,5; количество типов элементов C=3. Переменные параметры: начальное количество копий КлВС E0 варьируется от 0 до 100, шаг 1; скорость роста набора E1 варьируется от 0 до 30, шаг 1.</p>
+<p><img src="uploaded/image/2010-2/image018.gif" alt="Подпись:  
+Рис. 3. Зависимость F(E0, E1) (эксперимент 8)" width="299" height="243" align="left" /><img src="uploaded/image/2010-2/image021.gif" alt="Подпись:  
+Рис. 1. Зависимость F(S, Pf), C=3 (эксперимент 4)
+															
+ 
+Рис. 2. Зависимость F(S, Pf), C=20 (эксперимент 7)" width="295" height="487" align="left" />Описание и анализ результата. Как и ожидалось, по обеим переменным наработка F растет. В соответствии с теорией при достаточно большом параметре логарифмического роста E1 наработка выходит на высокие значения, близкие к 100 при всех значениях начального количества копий E0. Крутизна роста F по Е1 близка при всех значениях Е0, но начинается он при различных значениях Е1. Для Е0=1 рост начинается с Е1=5. При Е0=90 рост начинается сразу при Е1=1. Линия начала роста в плоскости  в указанных пределах близка к прямой. При дальнейшем росте Е0 линия роста совпадает с осью Е0=0. Крутизна роста характеризуется изменением F от 0 до 100 при DE1&raquo;12. График представлен на рисунке 3.</p>
+<p>Эксперимент 9. Это дополнительный эксперимент, в котором варьировались параметры C и E1. Его параметры в основном повторяют параметры эксперимента 8.</p>
+<p>Постоянные параметры: вероятность разрушения Pd=0,3; максимальное количество итераций эксперимента Ni=100; количество повторений каждого эксперимента Ne=1000; длина кольца S=100; вероятность починки Pf=0,5. =3; начальное количество копий КлВС E0=0. Переменные параметры: скорость роста набора E1 варьируется от 0 до 30, шаг 1; количество типов элементов C варьируется от 3 до 20, шаг 1.</p>
+<p>Описание и анализ результата. Результаты эксперимента 9 показывают практически полную независимость значений F(C, E1) от C, в том числе и при значении C, равном 3, которое использовалось в эксперименте 8. При E1&lt;12 наработка практически нулевая. Потом начинается плавный рост наработки до значения около 100 при Е1=27. Линейный участок роста при 15&pound;E1&pound;21. При росте Е1 после значения 21 происходит плавный выход на константу 100 (рис. 4).</p>
+<p>Общий анализ полученных данных.  Классы систем</p>
+<p>Результаты экспериментов 1&ndash;3 четко показывают резкое увеличение количества успешных экспериментов при снижении С до значения 2. При C=1 эксперимент выродился бы в поиск хотя бы одного исправного узла в любой из РКлВС. При C, равном 2, достаточно найти хотя бы два разнотипных связанных исправных элемента, так как любая двухцветная задача может быть разложена на граф РКлВС, состоящий из двух указанных элементов.</p>
+<p>Одним из интересных результатов работы стало то, что при увеличении C всего лишь до 3 эффект непропорционально высокого количества успешных экспериментов практически пропадает. Этот факт можно объяснить так: если КлВС разрушена, любая оставшаяся исправной подсистема не является кольцом, то есть не замкнута. Подсистемы, не имеющие какого-либо из цветов, присутствующих в задаче, не позволяют выполнить ее. В случае трехцветных графов возможно существование трех неизоморфных связных подсистем длины 3, имеющих все три цвета: 1-2-3, 1-3-2 и 2-1-3 (здесь цифрами обозначены тип элемента, его &laquo;цвет&raquo;, а дефисами &ndash; связи между элементами). В каждой из таких подсистем отсутствует связь между элементами каких-либо двух типов: 1 и 3 для первой, 1 и 2 для второй, 2 и 3 для третьей. Таким образом, любую задачу, требующую наличия соответствующей связи, невозможно разложить на соответствующую подсистему РКлВС. Не спасает положение и возможность удлинения рассматриваемых подсистем: добавление недостающей связи (путем добавления соответствующей вершины графа) в произвольном месте подсистемы не приведет к автоматической разложимости задачи на эту подсистему, так как граф модели задачи задает необходимый ему порядок следования элементов различного типа. Автоматическая разложимость любой трехцветной задачи достигалась бы на полносвязном графе, состоящем из трех разнотипных вершин, но этот граф является кольцом, а РКлВС нет.</p>
+<p><img src="uploaded/image/2010-2/image023.gif" alt="Подпись:  
+Рис. 4. Зависимость F(С, E1) (эксперимент 9)" width="294" height="245" align="left" />Вообще автоматическая разложимость произвольной (даже не кольцевой) задачи естественно достигается на полносвязном графе системы, имеющем вершины всех возможных цветов. Подсистема РКлВС, состоящая из вершин всех  возможных цветов, теряет свойство полносвязности при увеличении количества цветов до 3, и количество успешных экспериментов при этом резко падает.</p>
+<p>Таким образом, можно рассматривать два класса систем и процессов разрушения: системы, граф которых обладает свойством после разрушения оставлять подсистемы, в которых есть полносвязный подграф из всех присутствующих в подсистеме типов элементов, и все прочие. Увеличение C от 2 к 3 переводит КлВС из одного класса в другой. Дальнейшее (при C&gt;3) увеличение количества цветов слабо влияет на параметры системы, что, например, ярко демонстрируют результаты экспериментов 1, 2 и 9.</p>
+<p>При рассмотрении параметра S следует отметить, что с его уменьшением естественным образом уменьшается и C, так как количество реально используемых типов элементов всегда не более S. При увеличении S быстро накапливаются требования к наличию разнообразных связей между элементами и быстро падает количество успешных экспериментов.</p>
+<p>При достаточно больших значениях С и S эксперимент практически сводится к поиску полностью работоспособной КлВС, граф которой по определению совпадает с графом задачи. Возможность работы модели задачи на РКлВС в таких условиях практически отсутствует.</p>
+<p>Варьирование параметров E0 и E1 приводит к результатам с четкой структурой. С увеличением E0 количество успешных экспериментов растет линейно. Разрушение может компенсироваться и размером начального набора, и ростом количества КлВС во время эксперимента. В целом количество успешных экспериментов монотонно растет по количеству КлВС в наборе. При малом Е0 основную роль берет на себя скорость роста набора систем, причем эксперименты 8 и 9 подтверждают достаточность логарифмического роста.</p>
+<p>Литература</p>
+<p>1.&nbsp;Коганов А.В., Сазонов А.Н. Анализ отказоустойчивости вычислительной среды планетарного типа // Математика. Компьютер. Образование: сб. науч. тр. Междунар. науч. конф.; под ред. Г.Ю. Ризниченко. М.&ndash;Ижевск: НИЦ &laquo;Регулярная и хаотическая динамика&raquo;. 2006. Т. 2. Вып. 13. С. 235&ndash;248.</p>
+<p>2.&nbsp;Коганов А.В., Сазонов А.Н. Анализ критических точек отказоустойчивости вычислительной среды планетарного типа. // Там же. 2007. Т. 2. Вып. 14. С. 179&ndash;186.</p>
+<p>3.&nbsp;Коганов А.В., Сазонов А.Н. Анализ критических точек отказоустойчивости вычислительной среды планетарного типа // Программные продукты и системы. 2007. № 3. С. 27&ndash;31.</p>
+<p>4.&nbsp;Коганов А.В., Сазонов А.Н. Анализ отказоустойчивости вычислительной среды корпоративного типа // Математика. Компьютер. Образование: сб. науч. тр. Междунар. науч. конф.; под ред. Г.Ю. Ризниченко. М.&ndash;Ижевск: НИЦ &laquo;Регулярная и хаотическая динамика&raquo;. 2006. Т. 2. Вып. 13. С. 228&ndash;234.</p>
+<p>5.&nbsp;Коганов А.В., Сазонов А.Н. Корпоративные вычислительные сети с разрушением и восстановлением. Фазовый переход в растущих сетях // Там же. 2007. Т. 2. Вып. 14. С. 48&ndash;59.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2502</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2502">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 2 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=90">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Моделирование принятия решений интеллектуальным агентом</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Моделирование принятия решений интеллектуальным агентом</h2><div style="margin-bottom:10px"><strong>Model of decision-making by the intellectual agent</strong></div>Статья опубликована в выпуске журнала № 3 за 2010 год. [ 07.09.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Рассматривается проблема моделирования принятия решений интеллектуальным агентом в состоянии целеустремленного выбора. Предлагаемый подход основывается на включении в модель рационального выбора результатов, полученных в психологии, социологии и других научных дисциплинах, занимающихся изучением поведения человека. Математическим аппаратом, используемым для построения оценок поведения агента при формировании решения, является теория нечетких множеств, позволяющая формализовать субъективные вербальные оценки.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">The problem of development of model of decision-making by the intellectual agent in a condition of a purposeful choice is considered. The approach based on expansion of classical models of decision-making by inclusion in them of concepts of psychology is offered, sociology, etc. According to it definitions of the functional properties describing behavior of the agent, their parameters describing and measures are entered. Allowing to receive estimations of functional properties. For construction of measures the device of the theory of indistinct sets is used. </em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Автор: </b><a href="index.php?page=infou&id=4003">Виноградов Г.П. (wgp272ng@mail.ru)</a> - Тверской государственный технический университет Кандидат технический наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1644">целеустремленное состояние</a>, <a href="index.php?page=infotg&id=94">принятие решений</a>, <a href="index.php?page=infotg&id=831">нечеткие оценки</a>, <a href="index.php?page=infotg&id=1643">нечеткие модели</a>, <a href="index.php?page=infotg&id=214">нейронные сети</a>, <a href="index.php?page=infotg&id=300">многоагентная система</a>, <a href="index.php?page=infotg&id=1135">интеллектуальный агент</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1644">goal sets</a>, <a href="index.php?page=infotg&id=94">decision making</a>, <a href="index.php?page=infotg&id=831">fuzzy sets</a>, <a href="index.php?page=infotg&id=1643">fuzzy model</a>, <a href="index.php?page=infotg&id=214">neural network</a>, <a href="index.php?page=infotg&id=300">multiagents systems</a>, <a href="index.php?page=infotg&id=1135">intelligent agent</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 310<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2557">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>В основу исследования функционирования организационных систем положена базовая модель [1], в которой центр осуществляет управление агентом, обладающим свойствами целенаправленного и активного поведения. Одной из основных проблем, возникающих при попытке формального моделирования поведения подобных систем, является разработка адекватных моделей принятия решений целеустремленным агентом (ЦА). Для описания процесса принятия решения используется либо классическая, либо поведенческая модель принятия решения. В обоих вариантах ЦА не сравнивает альтернативы, а оценивает возможные исходы. В первом случае это выполняется с помощью функции выигрыша, а во втором выбор связан с желаемым уровнем поведения или уровнем достигаемого конечного эффекта.</p>
+<p>&nbsp;</p>
+<p>Классическая и поведенческая модели  принятия решения</p>
+<p>Принятие решения всегда связано с целеустремленным поведением и происходит в ситуации целеустремленного состояния, которое может быть определено с помощью следующих компонент [2].</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; Субъект, осуществляющий выбор, то есть ЦА, k&Icirc;K.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; Окружение выбора (S), то есть множество элементов и их существенных свойств, не являющихся элементами системы, но изменение в любом из которых может стать причиной изменения состояния системы или продуцировать его. Эти элементы генерируют множество состояний s&Icirc;S, называемых состоянием природы.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; Доступные способы действий: <img src="uploaded/image/2010-3/image332.png" border="0" alt="" width="25" height="23" />&nbsp;<img src="uploaded/image/2010-3/image334.png" border="0" alt="" width="91" height="25" />&nbsp;k-го агента для достижения i-го результата.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; Возможные при окружении S результаты, существенные для ЦА: <img src="uploaded/image/2010-3/image336.png" border="0" alt="" width="115" height="23" />.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; Множество способов действий: <img src="uploaded/image/2010-3/image338.png" border="0" alt="" width="68" height="33" /> <img src="uploaded/image/2010-3/image340.png" border="0" alt="" width="47" height="23" />, которые ЦА считает приемлемыми.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; Функция исхода W, которая выражает связь альтернативы c с любым состоянием природы s и любым исходом о. Другими словами, W:C&acute;S&reg;O. Это позволяет определить множество Oa исходов при альтернативе c, являющееся подмножеством О и <img src="uploaded/image/2010-3/image342.png" border="0" alt="" width="85" height="27" />. Данную функцию можно считать моделью объекта управления, которую ЦА использует при выборе способа действия.</p>
+<p>Классическая и поведенческая модели принятия решения используют функцию выигрыша &nu;, которая выражает соответствие между любым исходом о и его выигрышем, оцениваемым величиной g, формируемой на основе предпочтений ЦА. Система предпочтений &ndash; это субъективное отражение цели ЛПР, или оценочное суждение. Таким образом, v:O&reg;G, где G &ndash; множество оценок g выигрышей.</p>
+<p>Определим функцию &omega; как композицию функции исхода w и функции выигрыша &nu;: w=v&acute;w. Таким образом, множество Gc возможных выигрышей по альтернативе c определяется как подмножество G, такое, что <img src="uploaded/image/2010-3/image344.png" border="0" alt="" width="84" height="27" />.</p>
+<p>Классическая модель строится на предположении, что функция выигрыша &ndash; действительно значная, линейно упорядочивающая все исходы, с помощью которой ЦА назначает каждой альтернативе действительное число. Затем ЦА выбирает альтернативу с наибольшим выигрышем. Это можно выразить следующим образом:</p>
+<p><img src="uploaded/image/2010-3/image346.png" border="0" alt="" width="113" height="29" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+<p>g(c)=<img src="uploaded/image/2010-3/image348.png" border="0" alt="" width="253" height="20" />.</p>
+<p>Данная запись выражает правило выбора такой альтернативы, которая будет максимизировать по c&Icirc;C выигрыш из множества возможных выигрышей Gс.</p>
+<p>Таким образом, при формализации поведения ЦА по классической схеме речь идет о принятии решения умным и рациональным агентом, всегда способным сформировать оценки выигрыша. В противоположность этому Саймон [3] предложил модель принятия решения, в которой ЛПР относительно любого исхода выдает оценку &laquo;хорошо&raquo; или &laquo;плохо&raquo; либо &laquo;удовлетворительно&raquo; или &laquo;неудовлетворительно&raquo; в зависимости от целей или системы предпочтений. Такая оценка отражает представление о желаемом уровне достижения цели или уровне удовлетворенности ЛПР.</p>
+<p>Функция выигрыша, элементы которой принимают два значения, например, когда исход удовлетворяет желаемым условиям, ЛПР назначает этому исходу, допустим, значение выигрыша &laquo;единица&raquo;, в противном случае будет назначено значение &laquo;ноль&raquo;, может иметь вид</p>
+<p><img src="uploaded/image/2010-3/image350.png" border="0" alt="" width="153" height="41" />.</p>
+<p>Исходы с выигрышем &laquo;единица&raquo; составляют множество О&cent; удовлетворительных исходов (О&cent; &Icirc; О).</p>
+<p>В соответствии с этой процедурой ЦА должен сформировать понятие удовлетворительной альтернативы, определив свое представление о множестве (С&cent;) приемлемых альтернатив. Затем и в условиях определенности, риска и неопределенности Саймон рекомендует ЛПР выбирать ту альтернативу, любой исход которой удовлетворителен. Формально эту идею можно выразить следующим образом:</p>
+<p>Oc &Igrave; O&cent; &THORN; выбрать c&cent;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)</p>
+<p>где Оc &ndash; множество исходов, порожденных c; О&cent; &ndash; множество удовлетворительных исходов.</p>
+<p>Такой принцип принятия решения Саймон назвал принципом ограниченной рациональности, а модель (2) получила название поведенческой модели принятия решения.</p>
+<p>Формулы (1) и (2), выражающие соответственно классическую и поведенческую модели принятия решений, показывают различие между ними, которое состоит в способе упорядочения. В классической модели альтернативы упорядочиваются по отношению неравенства (&sup3;) и выбирается альтернатива с наибольшим значением выигрыша. Напротив, поведенческая модель характеризуется отношением включения (&Igrave;) и выбирается альтернатива, множество возможных исходов от реализации которой содержится во множестве удовлетворительных исходов.</p>
+<p>Как показали исследования в области математической психологии, эти подходы не позволяют объяснить (или описывают слишком сложно) многие наблюдаемые на практике явления и процесс- сы [4].</p>
+<p>Расширение классической модели рационального поведения возможно за счет включения в нее так называемых ненаблюдаемых переменных &ndash; оценок поведения человека, используемых в психологии, социологии и т.п. Для этого в описание базовой модели вводится параметр r, который будет характеризовать тип агента, причем r&Icirc;B  (r иначе можно назвать характеристикой агента).</p>
+<p>Согласно этому подходу функция выигрыша ЦА будет зависеть от состояния внешней среды s&Icirc;S, выбираемых стратегий <img src="uploaded/image/2010-3/image352.png" border="0" alt="" width="44" height="25" />, управления со стороны центра u(&middot;)&Icirc;U, которое зависит от результатов деятельности агента <img src="uploaded/image/2010-3/image354.png" border="0" alt="" width="20" height="21" />, учитываемых центром, и типа агента r&Icirc;B. Действие <img src="uploaded/image/2010-3/image356.png" border="0" alt="" width="23" height="23" />, выбираемое агентом, по гипотезе рационального поведения будет максимизировать его функцию выигрыша.</p>
+<p>Возникает проблема оценки типа агента r на основании наблюдений <img src="uploaded/image/2010-3/image358.png" border="0" alt="" width="105" height="33" />. Решение этой задачи возможно при условии:</p>
+<p>&minus;&nbsp;&nbsp;&nbsp; определения функциональных свойств, характеризующих поведение ЦА, таких, чтобы они вытекали из наблюдаемого поведения и не зависели от точки зрения наблюдателя;</p>
+<p>&minus;&nbsp;&nbsp;&nbsp; введения понятий, характеризующих эти функциональные свойства;</p>
+<p>&minus;&nbsp;&nbsp;&nbsp; задания мер, позволяющих получать оценки проявления наблюдаемых функциональных свойств и гарантирующих возможность воспроизведения наблюдений различными наблюдателями.</p>
+<p>Это предполагает интеграцию математических моделей, достижений наук, изучающих поведение человека, на базе теории нечетких множеств, позволяющей формализовать субъективные вербальные оценки, которые имеют многозначный и нечеткий характер.</p>
+<p>Модель целеустремленного состояния</p>
+<p>Введем для описанных компонент целеустремленного состояния меры для его оценки.</p>
+<p>1.&nbsp;Будем считать, что ЦА способен выделять факторы &ndash; характеристики функционального окружения: <img src="uploaded/image/2010-3/image360.png" border="0" alt="" width="106" height="28" />. Влияние каждого фактора ЦА оценивает с помощью лингвистической переменной &laquo;степень влияния фактора&raquo; <img src="uploaded/image/2010-3/image362.png" border="0" alt="" width="109" height="21" />.</p>
+<p>Предположим, что для описания влияния выделенных факторов на результаты <img src="uploaded/image/2010-3/image364.png" border="0" alt="" width="67" height="23" />, ЦА использует аппроксимацию в виде продукционных правил, которые имеют вид</p>
+<p>если x1 есть <img src="uploaded/image/2010-3/image366.png" border="0" alt="" width="23" height="21" />&nbsp;и если x2 есть <img src="uploaded/image/2010-3/image368.png" border="0" alt="" width="25" height="21" />&nbsp;</p>
+<p>и &hellip; и если xN есть <img src="uploaded/image/2010-3/image370.png" border="0" alt="" width="25" height="21" />,</p>
+<p>то <img src="uploaded/image/2010-3/image372.png" border="0" alt="" width="125" height="21" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p><img src="uploaded/image/2010-3/image374.png" border="0" alt="" width="93" height="23" />,</p>
+<p>где R &ndash; количество продукционных правил; r &ndash; номер текущего продукционного правила; <img src="uploaded/image/2010-3/image376.png" border="0" alt="" width="123" height="21" />&nbsp;&ndash; функция, отражающая представление ЦА о функциональной связи входных факторов с возможными результатами для  r-го правила (r-я частная модель); <img src="uploaded/image/2010-3/image378.png" border="0" alt="" width="21" height="21" />&nbsp;&ndash; нечеткие переменные, определенные на <img src="uploaded/image/2010-3/image380.png" border="0" alt="" width="105" height="26" />. В качестве функции <img src="uploaded/image/2010-3/image382.png" border="0" alt="" width="32" height="21" />&nbsp;могут использоваться, например, полиномы нулевого порядка, авторегрессионные модели, модели, применяемые в теории детерминированного хаоса, а также словесное описание.</p>
+<p>2.&nbsp;Известные (доступные) ЦА способы действия. Способ действия следует понимать функционально (морфологически). ЦА способен моделировать и прогнозировать ситуацию, если</p>
+<p>&minus;&nbsp;&nbsp;&nbsp; может воспринимать и распознавать внешние воздействия и формировать адекватный или неадекватный образ среды: <img src="uploaded/image/2010-3/image384.png" border="0" alt="" width="125" height="31" />, здесь u &ndash; градация состояния внутри класса, например, уровень состояния;</p>
+<p>&minus;&nbsp;&nbsp;&nbsp; обладает априорной информацией о среде (вложенной при создании и накопленной), хранимой в виде образов среды: <img src="uploaded/image/2010-3/image386.png" border="0" alt="" width="75" height="28" />&nbsp;<img src="uploaded/image/2010-3/image388.png" border="0" alt="" width="115" height="25" />, здесь v &ndash; индекс класса состояния; предполагается, что <img src="uploaded/image/2010-3/image390.png" border="0" alt="" width="87" height="21" /> <img src="uploaded/image/2010-3/image392.png" border="0" alt="" width="95" height="21" />&AElig;;</p>
+<p>&minus;&nbsp;&nbsp;&nbsp; обладает информацией о самом себе, своих свойствах и возможностях. Эта информация хранится в виде двух типов:</p>
+<p>а)&nbsp;морфологического: <img src="uploaded/image/2010-3/image394.png" border="0" alt="" width="121" height="29" />;</p>
+<p>б)&nbsp;функционального: <img src="uploaded/image/2010-3/image396.png" border="0" alt="" width="128" height="29" />,</p>
+<p>где <img src="uploaded/image/2010-3/image398.png" border="0" alt="" width="107" height="23" />.</p>
+<p>В результате сопоставления, распознавания и преобразования информационных образов вырабатываются стратегии (способы действий), которые определяют поведение ЦА: воздействие на среду (функциональная деятельность) и воздействие на себя (функциональная морфологическая деятельность).</p>
+<p>Теперь можно определить способ действия как реакцию системы на внешнее воздействие, которое формируется на основе <img src="uploaded/image/2010-3/image400.png" border="0" alt="" width="19" height="21" />:</p>
+<p><img src="uploaded/image/2010-3/image402.png" border="0" alt="" width="264" height="25" />, где U &ndash; фактор, изменяющий состояние ЦА и вызывающий акт поведения ЦА (его еще можно определить как мотивацию).</p>
+<p>Поскольку <img src="uploaded/image/2010-3/image404.png" border="0" alt="" width="20" height="23" />&nbsp;является функцией параметров состояния внешней среды, принимаемых во внимание ЦА, функциональных и морфологических свойств системы, то набор предположений об их возможных значениях образует сценарий вероятного состояния внешней среды, функциональных возможностей системы и возможности ее морфологического изменения.</p>
+<p>Реализация сценариев, например, с помощью правил (3), позволяет сформировать представление о возможных результатах <img src="uploaded/image/2010-3/image406.png" border="0" alt="" width="72" height="25" />, а значит, определяет неравнозначность при выборе способа действия, которую можно описать как степень уверенности в необходимости применения (или привычность, понимаемую как степень владения данным способом получения результата  <img src="uploaded/image/2010-3/image408.png" border="0" alt="" width="20" height="23" />) способа действия. Эту оценку можно описать лингвистической переменной <img src="uploaded/image/2010-3/image410.png" border="0" alt="" width="115" height="23" />&nbsp;<img src="uploaded/image/2010-3/image412.png" border="0" alt="" width="52" height="23" />, или <img src="uploaded/image/2010-3/image414.png" border="0" alt="" width="186" height="23" /> <img src="uploaded/image/2010-3/image416.png" border="0" alt="" width="48" height="23" />. Подобная мера является индивидуальной характеристикой ЦА, которая может меняться в результате обучения и приобретения опыта. Более того, она будет меняться после коммуникационного взаимодействия ЦА между собой и с центром. Поэтому <img src="uploaded/image/2010-3/image418.png" border="0" alt="" width="109" height="22" />&nbsp;в <img src="uploaded/image/2010-3/image420.png" border="0" alt="" width="80" height="21" />&nbsp;<img src="uploaded/image/2010-3/image422.png" border="0" alt="" width="51" height="23" />, где <img src="uploaded/image/2010-3/image424.png" border="0" alt="" width="16" height="21" />&nbsp;&ndash; информация (знание), которой располагает ЦА на момент tk.</p>
+<p>Если степень уверенности у ЦА в необходимости применения какого-либо возможного способа действий равна нулю, то этот способ для ЦА не является потенциальным выбором. Но каждый потенциальный способ является еще и возможным. Способ действий, являющийся потенциальным в одном окружении, может не быть таковым в другом.</p>
+<p>3.&nbsp;Возможные результаты при данном окружении выбора. Предположим, что для ЦА определена функция вознаграждения. Второе предположение состоит в возможности ЦА оценить затраты труда. Кроме этих показателей, ЦА может принимать во внимание оценку его результатов коллегами, ЛПР и ряд других показателей, играющих роль морального стимулирования. В принципе можно считать, что они понижают его оценку требуемых трудовых издержек. К возможным результатам следует отнести поддержку его точки зрения другими экспертами, признание его авторитета, долю его предложений, принятую во внимание ЛПР, новизну полученных результатов и т.п.</p>
+<p>Представим возможные результаты при заданном окружении выбора ЦА в виде <img src="uploaded/image/2010-3/image426.png" border="0" alt="" width="108" height="28" />, где <img src="uploaded/image/2010-3/image428.png" border="0" alt="" width="21" height="23" />&nbsp;&ndash; множество возможных результатов при выборе j-го способа действия, i&Icirc;I &ndash; множество результатов, принимаемых во внимание k-м ЦА. Очевидно, что <img src="uploaded/image/2010-3/image430.png" border="0" alt="" width="77" height="23" />&nbsp;<img src="uploaded/image/2010-3/image432.png" border="0" alt="" width="36" height="20" />.</p>
+<p>4.&nbsp;Ценность результатов <img src="uploaded/image/2010-3/image434.png" border="0" alt="" width="18" height="21" />. Наличие этого показателя следует из качественного предполо- жения о том, что ЦА наделен способностью сравнивать блага, приобретаемые при получении различных видов стимулирования результатов, с  затратами труда, которые он должен для этого приложить.</p>
+<p>Каждый человек обладает личностными ценностями, под которыми понимаются осознанные и/или принятые им общие компоненты смысла его жизни. Они обеспечиваются смысловым, эмоционально переживаемым, задевающим ЦА отношением к жизни. Ценности могут быть уникальными, характерными только для данного индивида, и объединяющими его с определенной группой людей. Ценности &ndash; это глубокие убеждения, которые определяют действия и суждения ЦА в различных ситуациях. Например, социологи выделяют следующие ценности благосостояния: благополучие (здоровье и безопасность), богатство (обладание различными материальными благами), мастерство (профессионализм в определенных видах деятельности), образованность (знания, информационный потенциал, культурные связи), уважение (статус ЦА, престиж, слава, репутация).</p>
+<p>Поскольку <img src="uploaded/image/2010-3/image436.png" border="0" alt="" width="76" height="23" />, а Si=Si(Ci), значимость j-го вида результата можно оценить лингвистической переменной <img src="uploaded/image/2010-3/image438.png" border="0" alt="" width="108" height="23" />.</p>
+<p>5.&nbsp;Эффективность действия с точки зрения  результата &ndash; это уверенность получения данного результата этим способом действия при известных (или предполагаемых) затратах на его реализацию. Степень уверенности <img src="uploaded/image/2010-3/image440.png" border="0" alt="" width="19" height="23" />&nbsp;в том, что некоторый способ действия <img src="uploaded/image/2010-3/image404.png" border="0" alt="" width="20" height="23" />&nbsp;будет приводить к результату <img src="uploaded/image/2010-3/image354.png" border="0" alt="" width="20" height="21" />&nbsp;в окружении S, если ЦА выберет именно его: <img src="uploaded/image/2010-3/image444.png" border="0" alt="" width="235" height="23" />, позволя&shy;ет оценить эффективность способа действия, выбранного ЦА. Она является лингвистической переменной и выражает индивидуальную оценку ЦА последствий выбора затрат финансовых, материальных, труда, интенсивности труда.</p>
+<p>Введенные лингвистические переменные <img src="uploaded/image/2010-3/image440.png" border="0" alt="" width="19" height="23" />, <img src="uploaded/image/2010-3/image447.png" border="0" alt="" width="45" height="21" />&nbsp;<img src="uploaded/image/2010-3/image449.png" border="0" alt="" width="23" height="23" />&nbsp;образуют модель представлений ЦА (знаний) о ситуации целеустремленного выбора.</p>
+<p>6.&nbsp;Поскольку <img src="uploaded/image/2010-3/image404.png" border="0" alt="" width="20" height="23" />&nbsp;можно описать в терминах <img src="uploaded/image/2010-3/image452.png" border="0" alt="" width="20" height="21" />, то для ЦА существует база правил, которая связывает <img src="uploaded/image/2010-3/image454.png" border="0" alt="" width="20" height="23" />&nbsp;и ценность i-го результата <img src="uploaded/image/2010-3/image354.png" border="0" alt="" width="20" height="21" />. Это позволяет определить ценность целеустремленного состояния по i-му результату <img src="uploaded/image/2010-3/image354.png" border="0" alt="" width="20" height="21" />&nbsp;для k-го ЦА в соответствии с правилом</p>
+<p><img src="uploaded/image/2010-3/image458.png" border="0" alt="" width="211" height="61" />.</p>
+<p>По аналогии можно оценить целеустремленное состояние для k-го ЦА по эффективности для i-го вида результата:</p>
+<p><img src="uploaded/image/2010-3/image460.png" border="0" alt="" width="187" height="57" />.</p>
+<p>7.&nbsp;Оценка ЦА желательности целеустремленного состояния по i-му результату и эффективности его достижения в ситуации выбора. Она задается в виде лингвистической переменной</p>
+<p><img src="uploaded/image/2010-3/image462.png" border="0" alt="" width="257" height="21" />.</p>
+<p>В основе процесса взаимодействия личности и организации находятся психологический и экономический контракты, которые определяют условия психологического и экономического вовлечения субъекта в совместную деятельность. Они отражают существенные ожидания личности (интересная работа, достойная оплата, хороший психологический климат, уважение личности, удовлетворенность работой, возможность использования своего творческого потенциала) и соответствующие ожидания организации (высокие результаты деятельности ЦА, преданность организации, добросовестный труд, организационная культура). Следовательно, можно определить следующие ограничения:</p>
+<p><img src="uploaded/image/2010-3/image464.png" border="0" alt="" width="203" height="28" />,</p>
+<p>где <img src="uploaded/image/2010-3/image466.png" border="0" alt="" width="51" height="21" />&nbsp;&ndash; ожидания ЦА от организации, которые отражают баланс между затратами и вознаграждением за достигнутые результаты <img src="uploaded/image/2010-3/image354.png" border="0" alt="" width="20" height="21" />.</p>
+<p>Так как si является функцией от информированности k-го ЦА, <img src="uploaded/image/2010-3/image469.png" border="0" alt="" width="64" height="20" />, и центр организует итерационную процедуру обмена представлениями между ЦА, то справедливо следующее предположение: <img src="uploaded/image/2010-3/image471.png" border="0" alt="" width="87" height="21" />, где t &ndash; номер итерации при интерактивном формировании согласованного прогноза (это предположение о росте информированности k-го ЦА в зависимости от номера итерации); &omega; &ndash; итерационное отображение (в общем случае точечно-множественное), такое, что при начальном уровне информированности <img src="uploaded/image/2010-3/image473.png" border="0" alt="" width="16" height="21" />&nbsp;любая последовательность, порождаемая включением <img src="uploaded/image/2010-3/image475.png" border="0" alt="" width="51" height="21" />, будет ограничена, а все ее предельные точки содержатся в M &Igrave; Rn. Справедливость этого предположения следует из того, что ЦА в процессе общения и анализа формирует определенную устойчивую по убеждению точку зрения. Параметр sk &ndash; это характеристика способности ЦА к восприятию новых точек зрения и пересмотру структуры своей информированности. Введение этого параметра позволяет центру путем продуцирования изменения в одной или нескольких компонентах или параметров представлений в процессе общения или интерактивного взаимодействия вызвать трансформацию модели ситуации выбора эксперта как ЦА.</p>
+<p>Вклад ЦА в ситуацию выбора проявляется в оценках степени значимости факторов ситуации <img src="uploaded/image/2010-3/image477.png" border="0" alt="" width="43" height="21" />&nbsp;и через них на представление о ситуации в форме (3); ценности результатов <img src="uploaded/image/2010-3/image479.png" border="0" alt="" width="83" height="21" />; степени возможности применения j-го способа действия для достижения i-го результата <img src="uploaded/image/2010-3/image481.png" border="0" alt="" width="47" height="23" />; эффективности <img src="uploaded/image/2010-3/image483.png" border="0" alt="" width="45" height="23" />&nbsp;достижения результата <img src="uploaded/image/2010-3/image354.png" border="0" alt="" width="20" height="21" />&nbsp;j-м способом действия <img src="uploaded/image/2010-3/image486.png" border="0" alt="" width="16" height="23" />, с помощью которых ЦА оценивает собственные затраты на получение результата.</p>
+<p>Первая и последняя группы оценок отражают знание ЦА о предметной области, уровень его подготовки (умения, навыки и т.п.). Две средние группы позволяют описать систему ценностей ЦА и в принципе оценить степень конгруэнтности ценностей ЦА и организации, которые в значительной степени определяют качество работы ЦА.</p>
+<p>Есть еще одна группа факторов, определяющих реализацию результата, &ndash; воля, склонность к рискам, самооценка, мотивированность. Эти факторы позволяют говорить о таком показателе, как уверенность в получении результата <img src="uploaded/image/2010-3/image354.png" border="0" alt="" width="20" height="21" />&nbsp;в ситуации выбора <img src="uploaded/image/2010-3/image489.png" border="0" alt="" width="45" height="21" />&nbsp;при использовании одного из возможных способов действия <img src="uploaded/image/2010-3/image491.png" border="0" alt="" width="31" height="23" />.</p>
+<p>При фиксированной функции вознаграждения <img src="uploaded/image/2010-3/image493.png" border="0" alt="" width="64" height="20" />&nbsp;ЦА в соответствии с гипотезой о рациональном поведении формирует решение в соответствии с <img src="uploaded/image/2010-3/image495.png" border="0" alt="" width="204" height="20" />&nbsp;<img src="uploaded/image/2010-3/image497.png" border="0" alt="" width="179" height="21" />, где <img src="uploaded/image/2010-3/image499.png" border="0" alt="" width="17" height="20" />&nbsp;&ndash; оценка ЦА максимального выигрыша, который он мог бы получить, выполняя другую работу. Очевидно, что, если <img src="uploaded/image/2010-3/image501.png" border="0" alt="" width="69" height="20" />, то следует ожидать, что ЦА выберет Si=0 вследствие ее более высокой привлекательности. Если же <img src="uploaded/image/2010-3/image503.png" border="0" alt="" width="69" height="20" />, то поведение ЦА будет зависеть от его информированности о выигрыше центра. Рассмотрим ситуацию, когда ЦА не располагает такой информацией. Если ЦА принимает условия W, то его выигрыш <img src="uploaded/image/2010-3/image503.png" border="0" alt="" width="69" height="20" />. В противном случае он может потребовать от центра более выгодные условия. Здесь возможны два варианта: либо центр сделает такое предложение, либо нет. В последнем случае ЦА должен перейти на другую работу с желательностью c0.</p>
+<p>Согласно предположению об отсутствии информации у ЦА о выигрыше центра, у ЦА нет уверенности, что в случае отказа от условий W он может рассчитывать на c0, причем только при переходе на другую работу. Следовательно, решение принять условие W при <img src="uploaded/image/2010-3/image503.png" border="0" alt="" width="69" height="20" />&nbsp;для него предпочтительнее.</p>
+<p>Окончательно выбор ЦА при отсутствии у него информации о выигрыше центра будет описываться соотношениями <img src="uploaded/image/2010-3/image507.png" border="0" alt="" width="43" height="20" /><img src="uploaded/image/2010-3/image509.png" border="0" alt="" width="65" height="21" /><img src="uploaded/image/2010-3/image511.png" border="0" alt="" width="48" height="21" /><img src="uploaded/image/2010-3/image503.png" border="0" alt="" width="69" height="20" />.</p>
+<p>Теперь можно определить целеустремленное состояние ЦА или системы, которое характеризуется тем, что</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; ЦА находится в состоянии выбора: U(&middot;)&gt;0;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; существует по крайней мере один потенциальный результат <img src="uploaded/image/2010-3/image354.png" border="0" alt="" width="20" height="21" />; если существуют другие потенциальные результаты, их ценности по целеустремленному состоянию по результату не равны;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; для ЦА существуют по крайней мере два потенциальных способа действий &ndash; <img src="uploaded/image/2010-3/image515.png" border="0" alt="" width="56" height="21" />, такие, что <img src="uploaded/image/2010-3/image517.png" border="0" alt="" width="95" height="21" />;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; эффективности способов действий <img src="uploaded/image/2010-3/image515.png" border="0" alt="" width="56" height="21" />&nbsp;таковы, что сумма оценок ценностей целеустремленного состояния по эффективностям получения результатов <img src="uploaded/image/2010-3/image354.png" border="0" alt="" width="20" height="21" />&nbsp;этими двумя способами не равны: <img src="uploaded/image/2010-3/image521.png" border="0" alt="" width="197" height="28" />.</p>
+<p>Существует по крайней мере один потенциальный результат <img src="uploaded/image/2010-3/image354.png" border="0" alt="" width="20" height="21" />, ценность которого для ЦА больше некоторой пороговой величины <img src="uploaded/image/2010-3/image524.png" border="0" alt="" width="23" height="21" />&nbsp;и степень уверенности получения которого у ЦА превышает некоторое пороговое значение <img src="uploaded/image/2010-3/image526.png" border="0" alt="" width="21" height="21" />.</p>
+<p>Эти правила означают, что существует ЦА, который находится в состоянии, когда он хочет получить какой-либо результат. Он располагает для этого несколькими альтернативными способами достижения с разной эффективностью, которыми можно попытаться достичь желаемого результата, и его уверенность в получении желаемого результата значительна.</p>
+<p>Определение личности ЦА</p>
+<p>При анализе целеустремленного состояния использовались такие понятия, как ЦА (или субъект Аk), параметры, характеризующие с точки зрения ЦА состояние окружения (<img src="uploaded/image/2010-3/image528.png" border="0" alt="" width="20" height="21" />), возможные результаты {<img src="uploaded/image/2010-3/image354.png" border="0" alt="" width="20" height="21" />}, возможные способы действий  {<img src="uploaded/image/2010-3/image404.png" border="0" alt="" width="20" height="23" />}, оценки степени влияния факторов ЦА  {<img src="uploaded/image/2010-3/image532.png" border="0" alt="" width="17" height="21" />}, степени уверенности необходимости выбора способа действий {<img src="uploaded/image/2010-3/image449.png" border="0" alt="" width="23" height="23" />}, ценность i-го результата {<img src="uploaded/image/2010-3/image535.png" border="0" alt="" width="19" height="23" />} по j-му способу действия, ценность целеустремленного состояния по результату {<img src="uploaded/image/2010-3/image537.png" border="0" alt="" width="28" height="21" />}, желательность ценности целеустремленного состояния по результату {<img src="uploaded/image/2010-3/image539.png" border="0" alt="" width="17" height="21" />}, эффективность каждого способа действий по каждому возможному результату {<img src="uploaded/image/2010-3/image440.png" border="0" alt="" width="19" height="23" />}, значимость эффективности способа действия по каждому возможному результа- ту {<img src="uploaded/image/2010-3/image542.png" border="0" alt="" width="28" height="21" />}.</p>
+<p>Способы действий и результаты зависят от окружения и от субъекта, а все остальные характеристики определяются субъектом в зависимости от ситуации (хотя субъект может и не учитывать свойства ситуации). Поэтому индивидуальность ЦА должна вытекать из того, как оставшиеся характеристики зависят от свойств выбора: окружения {Sk}, возможных результатов <img src="uploaded/image/2010-3/image354.png" border="0" alt="" width="20" height="21" />, возможных способов действий {<img src="uploaded/image/2010-3/image404.png" border="0" alt="" width="20" height="23" />}. Из перечисленных характеристик, в принципе, оценка степени влияния фактора, степень уверенности необходимости выбора способа действий, ценность результата, эффективность способа действия по каждому результату являются характеристиками личности (индивидуальности). Все остальные выводятся из них известными методами теории нечетких множеств. Ранее были определены ценность целеустремленного состояния по результату <img src="uploaded/image/2010-3/image537.png" border="0" alt="" width="28" height="21" />&nbsp;и по эффективности <img src="uploaded/image/2010-3/image542.png" border="0" alt="" width="28" height="21" />. Можно определить интегральный показатель ценности целеустремленного состояния для k-го индивида как <img src="uploaded/image/2010-3/image548.png" border="0" alt="" width="76" height="28" />, а, учитывая степень уверенности k-го ЦА в достижении результата <img src="uploaded/image/2010-3/image550.png" border="0" alt="" width="17" height="21" />, получить показатель ожидаемой удельной ценности <img src="uploaded/image/2010-3/image552.png" border="0" alt="" width="29" height="21" />:</p>
+<p><img src="uploaded/image/2010-3/image554.png" border="0" alt="" width="149" height="55" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)</p>
+<p>Это означает, что если два субъекта находятся в одной и той же ситуации выбора, разница в их поведении должна проявляться в значениях оценок удельной ценности по результату и эффективности и в степени уверенности в достижении цели.</p>
+<p>Поскольку входящие в (4) величины являются функциями компонент понимания ЦА ситуации выбора, ожидаемая удельная ценность будет функцией ситуации выбора:</p>
+<p><img src="uploaded/image/2010-3/image556.png" border="0" alt="" width="164" height="23" />.</p>
+<p>Теперь можно определить ЦА как личность.</p>
+<p>Личность (индивидуальность) ЦА: математическая функция p(&middot;), связывающая ожидаемую удельную ценность в любой ситуации выбора со свойствами возможных способов действий, их возможными результатами и принимаемыми во внимание как существенные переменные окружения.</p>
+<p>Смысл введенного определения состоит в том, что, наблюдая поведение ЦА в различных ситуациях выбора, можно построить некоторое приближение к функции p(&middot;).</p>
+<p>Используя перечисленные компоненты выбора в качестве зависимых переменных, можно получить представление о таких характеристиках психологической индивидуальности, как восприимчивость ситуации, привычность выбора, знания, стремления. Во всех четырех случаях необходимо вывести меру выбора действия на основе наблюдений выборов, реально производимых в управляемой ситуации выбора.</p>
+<p>Мера восприимчивости выводится из того, какое влияние различия в принимаемых во внимание характеристиках окружения оказывают на оценку степени необходимости применения способов действия, когда выбранный способ действия приводит к одному и тому же результату (к разным результатам).</p>
+<p>Мера привычности определяется через оценку выбора способа действия из множества способов действия с различными свойствами, приводящих к одним и тем же результатам с одной и той же эффективностью.</p>
+<p>Мера знания выводится из того, какое влияние различия в эффективностях выбора оказывают на степень необходимости выбора при одних и тех же ценностях полученных результатов. Такие оценки являются мерами чувствительности к эффективностям.</p>
+<p>Меры стремления выводятся из того, какое влияние различия в ценностях результатов оказывают на степень необходимости выбора действий, когда каждый возможный способ может продуцировать возможные результаты и каждый возможный результат может быть получен.</p>
+<p>Поведение ЦА</p>
+<p>Исход, соответствующий каждой альтернативе, зависит от переменных, описывающих внешние условия, и от переменных, характеризующих альтернативу. Описание этой зависимости образует модель рассматриваемого процесса (предметной области). С ростом сложности рассматриваемого объекта возрастает сложность построения адекватной исследуемому процессу модели, а значит, возрастает риск формирования неправильного представления о возможных исходах. В этих условиях ЛПР обычно абстрагирует проблему и строит простую модель. Полученный из анализа модели исход он считает оценкой фактического исхода, которая в этом случае определяется его представлениями о ситуации выбора.</p>
+<p>Затем ЦА выполняет действия по формированию у себя определенного уровня убежденности в адекватности своих представлений. Степень адекватности представлений ЦА (а значит, знаний и моделей ситуации выбора) определяется его информированностью и его субъективными оценками (способами преобразования исходной информации в прогноз). Деятельность ЦА на устранение неопределенности описания предметной области направлена на получение и анализ всей доступной для него информации и является циклической.</p>
+<p>Алгоритм индивидуального выбора</p>
+<p>Описанная функция личности выражает ожидаемую удельную ценность результатов для ЦА в окружении выбора в зависимости от доступных способов действия, возможных результатов и существенных переменных окружения. Ожидаемая удельная ценность может быть выражена в виде функции <img src="uploaded/image/2010-3/image558.png" border="0" alt="" width="165" height="33" />.</p>
+<p>Это позволяет разложить функцию личности на три составляющие:</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; функцию привычности <img src="uploaded/image/2010-3/image560.png" border="0" alt="" width="111" height="25" />, связывающую ценность результата, эффективность способа действия с выбором способа действия;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; функцию знания, связывающую эффективность выбора с другими параметрами ситуации выбора;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; функцию стремления, связывающую удельную ценность результата с другими параметрами ситуации выбора.</p>
+<p>На процесс поведения большое влияние оказывает ожидание ценности результата. Мерой его является критерий удовлетворенности: при получении результата со значением удельной ценности меньше этой величины ЦА возвращается к проблеме, иначе он считает ее решенной.</p>
+<p>В принципе, минимально приемлемый результат &ndash; точка удовлетворенности &ndash; это функция от предполагаемых затрат ЦА, связанных с пересмотром проблемы, и от связанных с этим потенциальных доходов. Таким образом, точка удовлетворенности &ndash; это минимальная удельная ценность результата, причем превышение этого уровня, по мнению ЦА, не оправдывает затраты на то, чтобы начать все сначала.</p>
+<p>Для удовлетворенности больше характерно стремление субъекта сохранить ситуацию, чем изменить ее. Если же появляются результаты ниже уровня удовлетворенности, ЦА стремится их изменить.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Новиков Д.А. Теория управления организационными системами: вводный курс. М.: МПСИ, 2005.</p>
+<p>2.&nbsp;&nbsp; Акофф Р., Эмери Ф. О целеустремленных системах. М.: Сов. радио, 1974.</p>
+<p>3.&nbsp;&nbsp; Саймон Г. Науки об искусственном. М.: УРСС, 2004.</p>
+<p>4.&nbsp;&nbsp; Kahneman D., Tversky A. Judgment under uncertainty: heuristics and basis. Cambridge: Cambridge University Press, 1983.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2557</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2557">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 3 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=91">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

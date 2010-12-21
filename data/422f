@@ -1,0 +1,1182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Gmail/Googlemail адреса" />
+	<meta name="keywords" content="PHP, MySQL, bulletin, board, free, open, source, smf, simple, machines, forum" />
+	<script language="JavaScript" type="text/javascript" src="http://forum.ubuntu.ru/Themes/default/script.js"></script>
+	<script language="JavaScript" type="text/javascript"><!--
+		var smf_theme_url = "http://forum.ubuntu.ru/Themes/firefox_ro";
+		var smf_images_url = "http://forum.ubuntu.ru/Themes/firefox_ro/images";
+	// --></script>
+	<title>Gmail/Googlemail адреса</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="http://forum.ubuntu.ru/Themes/firefox_ro/style.css" />
+	<link rel="help" href="http://forum.ubuntu.ru/index.php?action=help" target="_blank" />
+	<link rel="contents" href="http://forum.ubuntu.ru/index.php" />
+	<link rel="alternate" type="application/rss+xml" title="Русскоязычное сообщество Ubuntu Linux - RSS" href="http://forum.ubuntu.ru/index.php?type=rss2;limit=10;action=.xml" />
+	<link rel="prev" href="http://forum.ubuntu.ru/index.php?action=;topic=422.0;prev_next=prev" />
+	<link rel="next" href="http://forum.ubuntu.ru/index.php?action=;topic=422.0;prev_next=next" />
+	<link rel="index" href="http://forum.ubuntu.ru/index.php?action=;board=17.0" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<style type="text/css">
+	a img{
+	border: 0;
+	}
+	</style>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		var smf_scripturl = "http://forum.ubuntu.ru/index.php";
+	// ]]></script>
+
+	<script language="JavaScript" type="text/javascript"><!--
+		var current_header = false;
+
+		function shrinkHeader(mode)
+		{
+			document.cookie = "upshrink=" + (mode ? 1 : 0);
+			document.getElementById("upshrink").src = smf_images_url + (mode ? "/upshrink2.gif" : "/upshrink.gif");
+
+			document.getElementById("upshrinkHeader").style.display = mode ? "none" : "";
+
+			current_header = mode;
+		}
+	// --></script>
+</head>
+<body>
+<div style="padding: 20px 20px 4px 20px;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-image: url(http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_middle.gif);">
+  <tr>
+    <td width="1" rowspan="2"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_left.gif" alt="" /></td>
+    <td width="70%" align="left" id="search"><script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try {var pageTracker = _gat._getTracker("UA-4515300-5");pageTracker._trackPageview();} catch(err) {}</script>
+<form method="get" action="http://www.google.ru/search" target="_blank">
+<label><b>Поиск: </b></label>
+<input type="text" name="q" value="" size="20" maxlength="64" id="infield"/>&nbsp;
+<input type="submit" name="submit" value="Поиск" id="submit"/>
+<input type="hidden" name="sitesearch" value="ubuntu.ru"/>
+<input type="hidden" name="hl" value="ru"/></form>
+    </td>
+    <td width="30%" rowspan="2" align="center" class="hdrtitle">
+	Русскоязычное сообщество Ubuntu Linux
+    </td>
+    <td width="1" rowspan="2"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_right.gif" alt="" /></td>
+  </tr>
+  <tr>
+    <td width="70%" valign="bottom" align="left">
+  	<div id="tabs">
+ 	  <ul>
+ 	   <li id="current"><a href="http://forum.ubuntu.ru/index.php">Начало</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?board=35.0">Правила</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=help" target="_blank">Помощь</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=calendar">Календарь</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=register">Регистрация</a></li>
+ 	  </ul>
+  	</div>
+    </td>
+  </tr>
+</table>
+<a href="#" onclick="shrinkHeader(!current_header); return false;"><img id="upshrink" src="http://forum.ubuntu.ru/Themes/firefox_ro/images/upshrink.gif" alt="*" title="Свернуть/Развернуть." style="margin: 2px 0;" border="0" /></a><img id="upshrinkTemp" src="http://forum.ubuntu.ru/Themes/firefox_ro/images/blank.gif" alt="" style="margin-right: 2ex;" />
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id="upshrinkHeader">
+  <tr>
+    <td width="50%" class="smalltext" valign="top">
+	<br />Добро пожаловать, <b>Гость</b>. Пожалуйста, <a href="http://forum.ubuntu.ru/index.php?action=login">войдите</a> или <a href="http://forum.ubuntu.ru/index.php?action=register">зарегистрируйтесь</a>.<br />Вам не пришло <a href="http://forum.ubuntu.ru/index.php?action=activate">письмо с кодом активации?</a><br />
+	Войти<br /><br />
+	<form action="http://forum.ubuntu.ru/index.php?action=login2" method="post">
+	  <input type="text" name="user" size="8" /> <input type="password" name="passwrd" size="8" />
+	   <select name="cookielength">
+		<option value="60">1 час</option>
+		<option value="1440">1 день</option>
+		<option value="10080">1 неделя</option>
+		<option value="302400">1 месяц</option>
+		<option value="-1" selected="selected">Навсегда</option>
+	   </select>
+	  <input type="submit" value="Войти" />
+	</form>
+    </td>
+    <td valign="top">
+    <div style="text-align:center;padding:10px;color:#bb2211;font-weight:bold;background-color:#ffffff;border: #D4C2A6 1px solid;">
+    &nbsp;Получить помощь вы также можете в нашем списке рассылки:<br /><a href="http://lists.ubuntu.com/mailman/listinfo/ubuntu-ru" target="_blank">ubuntu-ru@lists.ubuntu.com</a>
+    </div>
+
+    </td>
+  </tr>
+</table>
+</div>
+
+
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding: 0.5ex 20px 2ex 20px;">
+<a name="top"></a>
+<a name="msg2756"></a>
+<div><span class="nav" style="font-size: smaller;"><b><a href="http://forum.ubuntu.ru/index.php" class="nav">Русскоязычное сообщество Ubuntu Linux</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php#8" class="nav">Разное</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php?board=17.0" class="nav">Разговоры обо всём</a></b> (Модераторы: <a href="http://forum.ubuntu.ru/index.php?action=profile;u=9606" title="Модератор">andrew_bye</a>, <a href="http://forum.ubuntu.ru/index.php?action=profile;u=17526" title="Модератор">lucky-m</a>) &nbsp;|&nbsp; Тема: <b><a href="http://forum.ubuntu.ru/index.php?topic=422.0" class="nav">Gmail/Googlemail адреса</a></b></span></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="middletext" valign="bottom" style="padding-bottom: 4px;">Страниц: [<b>1</b>] <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=422.15">2</a> <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=422.30">3</a> &nbsp;<a href="http://forum.ubuntu.ru/index.php?topic=422.0;all">Все</a>   &nbsp;&nbsp;<a href="#lastPost"><b>Вниз</b></a></td>
+		<td align="right" style="padding-right: 1ex;">
+			<div class="nav" style="margin-bottom: 2px;"> <a href="http://forum.ubuntu.ru/index.php?topic=422.0;prev_next=prev#new">&laquo; предыдущая тема</a> <a href="http://forum.ubuntu.ru/index.php?topic=422.0;prev_next=next#new">следующая тема &raquo;</a></div>
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					
+		<td ><a href="http://forum.ubuntu.ru/index.php?action=printpage;topic=422.0" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/russian-utf8/print.gif" alt="Печать" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="0" border="0" class="tborder" style="border-bottom: 0;">
+		<tr class="catbg3">
+				<td valign="middle" width="2%" style="padding-left: 6px;">
+						<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/topic/veryhot_post_locked.gif" align="bottom" alt="" />
+				</td>
+				<td width="13%"> Автор</td>
+				<td valign="middle" width="85%" style="padding-left: 6px;" id="top_subject">
+						Тема: Gmail/Googlemail адреса &nbsp;(Прочитано 7768 раз)
+				</td>
+		</tr>
+		<tr>
+				<td colspan="3" class="smalltext">0 Пользователей и 1 Гость смотрят эту тему.
+				</td>
+		</tr>
+</table>
+<form action="http://forum.ubuntu.ru/index.php?action=quickmod2;topic=422.0" method="post" accept-charset="UTF-8" name="quickModForm" id="quickModForm" style="margin: 0;" onsubmit="return in_edit_mode == 1 ? modify_save('71c75d7d8ca13224b1693410973b19fb') : confirm('Вы уверены?');">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="bordercolor">
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=244" title="Просмотр профиля aledie">aledie</a></b>
+							<div class="smalltext"><span style="color:#BB2211; font-weight:bold"> Автор темы </span><br />
+								Alexander Dietz<br />
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 406<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=169;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=93232431" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=93232431" alt="93232431" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=244"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:aledie@web.de"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg2756#msg2756"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2756">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg2756#msg2756">Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b> :</b> 08 Июля 2005, 12:01:43 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">&quot;КНЖДОМУ ПОЛЬЗОВНТЕЛЮ Ubuntu - ПО GMAIL&#039;u&quot;<br /><br />Кто не знает Gmail, почитайте описание: <a href="http://www.gmail.com" target="_blank">www.gmail.com</a>&nbsp; или mail.google.com<br /><br />Коротко:<br />- у вас 2,6 Гигабайта места бесплатно<br />- Нет рекламных банеров<br />- POP и SMTP<br />- Antispam<br />- поддерживает русский интерфейс<br />- Возможность использования как virtual drive<br /><br /><b>!!!Ниже в стом разделе постст лишь те, кто может/хочет поделиться приглашенисми!!!</b><br /><b>!!!Кому нужно приглашение - посылайте одному из нас PM (ЛС), пригласим!!!</b><br /><br /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2756">
+									&#171; <i>Последнее редактирование: 30 Ноября 2005, 02:47:56 от aledie</i> &#187;
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2760"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=37" title="Просмотр профиля cargo">cargo</a></b>
+							<div class="smalltext">
+								Roman Kalashnikov<br />
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 745<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://cargo200.nm.ru/cargo.gif" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=1503536" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=1503536" alt="1503536" width="18" height="18" border="0" /></a>
+								
+								
+								<a href="xmpp:cargo200@gmail.com" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/jabber.png" alt="cargo200@gmail.com" border="0" /></a>
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=37"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg2760#msg2760"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2760">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg2760#msg2760">Re: Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #1 :</b> 08 Июля 2005, 13:10:07 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">хехе, у меня кстати тоже 50 приглашений имеется как оказалсь  <img src="http://forum.ubuntu.ru/Smileys/webby/wink.gif" alt="Wink" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2760">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2762"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=189" title="Просмотр профиля Stalwart">Stalwart</a></b>
+							<div class="smalltext">
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 1189<br />
+								<br />
+								All Your Base...<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=189"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:stlwrt@gmail.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg2762#msg2762"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2762">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg2762#msg2762">Re: Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #2 :</b> 08 Июля 2005, 13:15:59 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">&nbsp;И у менс</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2762">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2768"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=277" title="Просмотр профиля MaHeTa">MaHeTa</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 14<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=699245" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=699245" alt="699245" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=277"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:admin@sumgum.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg2768#msg2768"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2768">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg2768#msg2768">Re: Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #3 :</b> 08 Июля 2005, 14:06:15 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">у меня тоже имеется <img src="http://forum.ubuntu.ru/Smileys/webby/laugh.gif" alt="laugh" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2768">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2791"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=3" title="Просмотр профиля clx">clx</a></b>
+							<div class="smalltext">
+								Ilya Uralskiy<br />
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 1205<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=1444;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=3"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:clx.mini@gmail.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg2791#msg2791"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2791">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg2791#msg2791">Re: Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #4 :</b> 08 Июля 2005, 17:05:07 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Кому нужно, обращайтесь - 50 приглашений также имеются <img src="http://forum.ubuntu.ru/Smileys/webby/smiley.gif" alt="Smiley" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2791">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2808"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=254" title="Просмотр профиля PPA">PPA</a></b>
+							<div class="smalltext">
+								Любитель<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 74<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=10596;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=46403100" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=46403100" alt="46403100" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=254"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="http://www.flylinkdc.ru/" title="FlylinkDC++" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/www_sm.gif" alt="WWW" border="0" /></a>
+								<a href="mailto:pavel.pimenov@gmail.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg2808#msg2808"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2808">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg2808#msg2808">Re: Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #5 :</b> 08 Июля 2005, 20:48:38 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg2791#msg2791">Цитата: clx от 08 Июля 2005, 17:05:07</a></div><div class="quote">Кому нужно, обращайтесь - 50 приглашений также имеются <img src="http://forum.ubuntu.ru/Smileys/webby/smiley.gif" alt="Smiley" border="0" /><br /></div>они увеличивают это число по мере закупания винтов )<br />когда подключался было только 6 инвайтов доступно&nbsp; позже оказалось 50<br />также если кому приглашение вышлешь оно уменьшается но не надолго<br />у меня недельку назад 46 инвайтов в остатке было - а сегодня опсть 50<br /><br />но в любом случае гугл рулит пока во всем <br />уделал всех конкуррентов!</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2808">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3109"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=307" title="Просмотр профиля glazs">glazs</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 40<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=3971;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=1235353" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=1235353" alt="1235353" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=307"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:admin@nskrock.ru"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg3109#msg3109"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3109">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg3109#msg3109">Re: Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #6 :</b> 20 Июля 2005, 20:56:20 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Чуваки гмыло рулит!! Йа оже там, <a href="mailto:konoplevod@gmail.com">konoplevod@gmail.com</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3109">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg7212"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=253" title="Просмотр профиля shock">shock</a></b>
+							<div class="smalltext">
+								Участник<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 133<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=10214;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=7330000" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=7330000" alt="7330000" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=253"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg7212#msg7212"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_7212">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg7212#msg7212">Re: Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #7 :</b> 01 Ноября 2005, 21:50:17 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg7209#msg7209">Цитата: Странник от 01 Ноября 2005, 21:15:52</a></div><div class="quote">А мне можно?<br /></div><br />Выслал, 99 осталось, кто-нибудь ещё? <img src="http://forum.ubuntu.ru/Smileys/webby/smiley.gif" alt="Smiley" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_7212">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg7490"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=629" title="Просмотр профиля StenogriZ">StenogriZ</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 2<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=1146;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=127161448" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=127161448" alt="127161448" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=629"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="http://stenogriz.livejournal.com" title="stenogriz.livejournal.com" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg7490#msg7490"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_7490">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg7490#msg7490">Re: Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #8 :</b> 08 Ноября 2005, 10:02:26 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Огромное спасибо, Stalwart!!!! <img src="http://forum.ubuntu.ru/Smileys/webby/cheesy.gif" alt="Cheesy" border="0" /> В свою очередь могу тоже кого-нть пригласить. &quot;Каждому пользователю Linux по GMail&#039;у&quot;&nbsp; <img src="http://forum.ubuntu.ru/Smileys/webby/grin.gif" alt="Grin" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_7490">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg7493"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=42" title="Просмотр профиля sorib">sorib</a></b>
+							<div class="smalltext">
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 294<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=19;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=42"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:u.sorib@gmail.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg7493#msg7493"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_7493">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg7493#msg7493">Re: Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #9 :</b> 08 Ноября 2005, 10:30:16 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Легко - только давайте запросы в ЛС(aka PM) оставившим в &nbsp;этой теме сообщения.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_7493">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg8257"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=1" title="Просмотр профиля skyrider">skyrider</a></b>
+							<div class="smalltext">
+								Alexey Molchanov<br />
+								Администратор<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/staradmin.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/staradmin.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/staradmin.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/staradmin.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/staradmin.gif" alt="*" border="0" /><br />
+								Сообщений: 198<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=26;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=103195540" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=103195540" alt="103195540" width="18" height="18" border="0" /></a>
+								
+								
+								<a href="xmpp:skyrider@jabber.ru" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/jabber.png" alt="skyrider@jabber.ru" border="0" /></a>
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=1"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg8257#msg8257"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_8257">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg8257#msg8257">Re: Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #10 :</b> 29 Ноября 2005, 02:18:24 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Есть полторы сотни инвайтов. <img src="http://forum.ubuntu.ru/Smileys/webby/cool.gif" alt="Cool" border="0" /><br />Обращайтесь.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_8257">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg8261"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=37" title="Просмотр профиля cargo">cargo</a></b>
+							<div class="smalltext">
+								Roman Kalashnikov<br />
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 745<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://cargo200.nm.ru/cargo.gif" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=1503536" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=1503536" alt="1503536" width="18" height="18" border="0" /></a>
+								
+								
+								<a href="xmpp:cargo200@gmail.com" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/jabber.png" alt="cargo200@gmail.com" border="0" /></a>
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=37"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg8261#msg8261"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_8261">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg8261#msg8261">Re: Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #11 :</b> 29 Ноября 2005, 09:25:14 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">только <span style="color: Red;">обращайтесь в ПМ</span>! а не в эту тему!  <img src="http://forum.ubuntu.ru/Smileys/webby/knuppel2.gif" alt="knuppel2" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_8261">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg8465"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=719" title="Просмотр профиля Dmitri">Dmitri</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 4<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=719"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:alkor_dbv@yahoo.ca"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg8465#msg8465"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_8465">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg8465#msg8465">Re: Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #12 :</b> 02 Декабря 2005, 22:48:00 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">У меня тоже 100 инваитов есть, кому надо, обращаитесь в ПМ. <img src="http://forum.ubuntu.ru/Smileys/webby/smiley.gif" alt="Smiley" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_8465">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg8601"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=581" title="Просмотр профиля isus">isus</a></b>
+							<div class="smalltext">
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 250<br />
+								<br />
+								Заседание продолжаетсс.<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=581"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:isus@actcom.net.il"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg8601#msg8601"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_8601">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg8601#msg8601">Re: Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #13 :</b> 06 Декабря 2005, 22:29:15 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Stalwart - огромное спасибо!</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_8601">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg10501"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=944" title="Просмотр профиля JenFA">JenFA</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 1<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=310003131" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=310003131" alt="310003131" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=944"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:jenfa2005@gmail.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=422.msg10501#msg10501"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_10501">
+										<a href="http://forum.ubuntu.ru/index.php?topic=422.msg10501#msg10501">Re: Gmail/Googlemail адреса</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #14 :</b> 23 Января 2006, 04:10:08 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Есть 88 инвайтов. Если кому-нибудь надо - в ПМ</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_10501">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 0 0 1px 0;"></td></tr>
+</table>
+<a name="lastPost"></a>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="middletext">Страниц: [<b>1</b>] <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=422.15">2</a> <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=422.30">3</a> &nbsp;<a href="http://forum.ubuntu.ru/index.php?topic=422.0;all">Все</a>   &nbsp;&nbsp;<a href="#top"><b>Вверх</b></a></td>
+		<td align="right" style="padding-right: 1ex;">
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					
+		<td ><a href="http://forum.ubuntu.ru/index.php?action=printpage;topic=422.0" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/russian-utf8/print.gif" alt="Печать" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<script language="JavaScript" type="text/javascript" src="http://forum.ubuntu.ru/Themes/default/xml_topic.js"></script>
+<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+	quickReplyCollapsed = true;
+
+	smf_topic = 422;
+	smf_start = 0;
+	smf_show_modify = 1;
+
+	// On quick modify, this is what the body will look like.
+	var smf_template_body_edit = '<div id="error_box" style="padding: 4px; color: red;"></div><textarea class="editor" name="message" rows="12" style="width: 94%; margin-bottom: 10px;">%body%</textarea><br /><input type="hidden" name="sc" value="71c75d7d8ca13224b1693410973b19fb" /><input type="hidden" name="topic" value="422" /><input type="hidden" name="msg" value="%msg_id%" /><div style="text-align: center;"><input type="submit" name="post" value="Сохранить" onclick="return modify_save(\'71c75d7d8ca13224b1693410973b19fb\');" accesskey="s" />&nbsp;&nbsp;<input type="submit" name="cancel" value="Отменить" onclick="return modify_cancel();" /></div>';
+
+	// And this is the replacement for the subject.
+	var smf_template_subject_edit = '<input type="text" name="subject" value="%subject%" size="60" style="width: 99%;"  maxlength="80" />';
+
+	// Restore the message to this after editing.
+	var smf_template_body_normal = '%body%';
+	var smf_template_subject_normal = '<a href="http://forum.ubuntu.ru/index.php?topic=422.msg%msg_id%#msg%msg_id%">%subject%</a>';
+	var smf_template_top_subject = "Тема: %subject% &nbsp;(Прочитано 7768 раз)"
+
+	if (window.XMLHttpRequest)
+		showModifyButtons();
+// ]]></script>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 1ex;">
+		<tr>
+				<td valign="top"><span class="nav" style="font-size: smaller;"><b><a href="http://forum.ubuntu.ru/index.php" class="nav">Русскоязычное сообщество Ubuntu Linux</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php#8" class="nav">Разное</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php?board=17.0" class="nav">Разговоры обо всём</a></b> (Модераторы: <a href="http://forum.ubuntu.ru/index.php?action=profile;u=9606" title="Модератор">andrew_bye</a>, <a href="http://forum.ubuntu.ru/index.php?action=profile;u=17526" title="Модератор">lucky-m</a>) &nbsp;|&nbsp; Тема: <b><a href="http://forum.ubuntu.ru/index.php?topic=422.0" class="nav">Gmail/Googlemail адреса</a></b></span></td> 
+				<td valign="top" align="right" class="nav"> <a href="http://forum.ubuntu.ru/index.php?topic=422.0;prev_next=prev#new">&laquo; предыдущая тема</a> <a href="http://forum.ubuntu.ru/index.php?topic=422.0;prev_next=next#new">следующая тема &raquo;</a></td>
+		</tr>
+</table>
+	<table cellpadding="0" cellspacing="0" border="0" style="margin-left: 1ex;">
+		<tr>
+			
+		<td ></td>
+		</tr>
+	</table>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		document.getElementById("quickmodSubmit").style.display = "none";
+	// ]]></script>
+</form>
+<div class="tborder"><div class="titlebg2" style="padding: 4px;" align="right">
+	<form action="http://forum.ubuntu.ru/index.php" method="get" accept-charset="UTF-8" style="padding:0; margin: 0;">
+		<span class="smalltext">Перейти в:</span>
+		<select name="jumpto" id="jumpto" onchange="if (this.selectedIndex > 0 &amp;&amp; this.options[this.selectedIndex].value) window.location.href = smf_scripturl + this.options[this.selectedIndex].value.substr(smf_scripturl.indexOf('?') == -1 || this.options[this.selectedIndex].value.substr(0, 1) != '?' ? 0 : 1);">
+			<option value="">Пожалуйста, выберите назначение:</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#7">Новости</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=10.0"> => Новости и анонсы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=11.0"> => Общие вопросы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=12.0"> => Встречи</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=13.0"> => Сборка пакетов</option>
+			<option value="?board=14.0"> => Локализация</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=15.0"> => Обсуждение форума</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=17.0" selected="selected"> => Разговоры обо всём</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=18.0"> => How-To и F.A.Q</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=19.0"> => Распространение Ubuntu</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=20.0"> => Коллективный bug report</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#9">Галерея</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=21.0"> => Скриншоты</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#7">Новости</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=23.0"> => Новости из мира *NIX</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#9">Галерея</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=24.0"> => Интересные картинки</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=25.0"> => Железо</option>
+			<option value="?board=26.0"> => Мультимедиа</option>
+			<option value="?board=27.0"> => Сети/Интернет</option>
+			<option value="?board=28.0"> => Установка Ubuntu</option>
+			<option value="?board=29.0"> => GUI</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=31.0"> => Программирование</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=32.0"> ===> GNOME</option>
+			<option value="?board=33.0"> ===> XFCE</option>
+			<option value="?board=34.0"> ===> KDE</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#10">Правила форума</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=35.0"> => Правила...</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=37.0"> ===> Юмор</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=38.0"> => Обсуждение ubuntu.ru</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=39.0"> => Linux в организациях</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=40.0"> => Тестирование Ubuntu</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=41.0"> => Виртуальные сервера и эмуляторы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=42.0"> => Обсуждение IRC и Jabber конференций</option>
+			<option value="?board=44.0"> => Русскоязычная команда Ubuntu</option>
+			<option value="?board=50.0"> => Обсуждение help.ubuntu.ru</option>
+		</select>&nbsp;
+		<input type="button" value="да" onclick="if (this.form.jumpto.options[this.form.jumpto.selectedIndex].value) window.location.href = 'http://forum.ubuntu.ru/index.php' + this.form.jumpto.options[this.form.jumpto.selectedIndex].value;" />
+	</form>
+</div></div><br />
+            </td>
+          </tr>
+	</table>
+<hr style="background-color: #CCCCCC; width: 95%;" />
+<table cellspacing="0" cellpadding="3" border="0" align="center" width="100%">
+  <tr>
+    <td width="28%" valign="middle" align="center">
+    <!--a href="http://validator.w3.org/check/referer" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/valid-xhtml10.gif" alt="Valid XHTML 1.0!" style="margin: 4px;" border="0" /></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/valid-css.gif" alt="Valid CSS!" style="margin: 4px;" border="0" /></a-->
+    <a href="http://www.mysql.com/" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/powered-mysql.gif" alt="Powered by MySQL" style="margin: 4px;" border="0"  /></a>
+    <a href="http://www.php.net/" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/powered-php.gif" alt="Powered by PHP" style="margin: 4px;" border="0" /></a>
+    </td>
+    <td valign="middle" align="center" style="white-space: nowrap;">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">Powered by SMF 1.1.12</a> | 
+<a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">SMF &copy; 2006, Simple Machines LLC</a>
+		</span></td>
+    <td width="28%" valign="middle" align="center">
+     <a href="http://www.best-hosting.ru/dedicated_server.asp" title="Хостинг предоставлен компанией Best Hosting"><img src="http://s.ubuntu.ru/bhlogo.png" alt="Best Hosting" style="padding-bottom:6px;" /></a><br />
+     <a href="http://www.best-hosting.ru/dedicated_server.asp" style="color:#333;font:9px/9px sans">Серверы на Ubuntu</a>
+    </td>
+
+  </tr>
+</table>
+		<span class="smalltext">Страница сгенерирована за 0.216 секунд. Запросов: 18.</span>
+</body>
+</html>

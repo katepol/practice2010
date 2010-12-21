@@ -1,0 +1,1117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="На рабочем столе не появляются иконки подключенных же" />
+	<meta name="keywords" content="PHP, MySQL, bulletin, board, free, open, source, smf, simple, machines, forum" />
+	<script language="JavaScript" type="text/javascript" src="http://forum.ubuntu.ru/Themes/default/script.js"></script>
+	<script language="JavaScript" type="text/javascript"><!--
+		var smf_theme_url = "http://forum.ubuntu.ru/Themes/firefox_ro";
+		var smf_images_url = "http://forum.ubuntu.ru/Themes/firefox_ro/images";
+	// --></script>
+	<title>На рабочем столе не появляются иконки подключенных же</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="http://forum.ubuntu.ru/Themes/firefox_ro/style.css" />
+	<link rel="help" href="http://forum.ubuntu.ru/index.php?action=help" target="_blank" />
+	<link rel="contents" href="http://forum.ubuntu.ru/index.php" />
+	<link rel="alternate" type="application/rss+xml" title="Русскоязычное сообщество Ubuntu Linux - RSS" href="http://forum.ubuntu.ru/index.php?type=rss2;limit=10;action=.xml" />
+	<link rel="prev" href="http://forum.ubuntu.ru/index.php?action=;topic=458.0;prev_next=prev" />
+	<link rel="next" href="http://forum.ubuntu.ru/index.php?action=;topic=458.0;prev_next=next" />
+	<link rel="index" href="http://forum.ubuntu.ru/index.php?action=;board=25.0" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<style type="text/css">
+	a img{
+	border: 0;
+	}
+	</style>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		var smf_scripturl = "http://forum.ubuntu.ru/index.php";
+	// ]]></script>
+
+	<script language="JavaScript" type="text/javascript"><!--
+		var current_header = false;
+
+		function shrinkHeader(mode)
+		{
+			document.cookie = "upshrink=" + (mode ? 1 : 0);
+			document.getElementById("upshrink").src = smf_images_url + (mode ? "/upshrink2.gif" : "/upshrink.gif");
+
+			document.getElementById("upshrinkHeader").style.display = mode ? "none" : "";
+
+			current_header = mode;
+		}
+	// --></script>
+</head>
+<body>
+<div style="padding: 20px 20px 4px 20px;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-image: url(http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_middle.gif);">
+  <tr>
+    <td width="1" rowspan="2"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_left.gif" alt="" /></td>
+    <td width="70%" align="left" id="search"><script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try {var pageTracker = _gat._getTracker("UA-4515300-5");pageTracker._trackPageview();} catch(err) {}</script>
+<form method="get" action="http://www.google.ru/search" target="_blank">
+<label><b>Поиск: </b></label>
+<input type="text" name="q" value="" size="20" maxlength="64" id="infield"/>&nbsp;
+<input type="submit" name="submit" value="Поиск" id="submit"/>
+<input type="hidden" name="sitesearch" value="ubuntu.ru"/>
+<input type="hidden" name="hl" value="ru"/></form>
+    </td>
+    <td width="30%" rowspan="2" align="center" class="hdrtitle">
+	Русскоязычное сообщество Ubuntu Linux
+    </td>
+    <td width="1" rowspan="2"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_right.gif" alt="" /></td>
+  </tr>
+  <tr>
+    <td width="70%" valign="bottom" align="left">
+  	<div id="tabs">
+ 	  <ul>
+ 	   <li id="current"><a href="http://forum.ubuntu.ru/index.php">Начало</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?board=35.0">Правила</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=help" target="_blank">Помощь</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=calendar">Календарь</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=register">Регистрация</a></li>
+ 	  </ul>
+  	</div>
+    </td>
+  </tr>
+</table>
+<a href="#" onclick="shrinkHeader(!current_header); return false;"><img id="upshrink" src="http://forum.ubuntu.ru/Themes/firefox_ro/images/upshrink.gif" alt="*" title="Свернуть/Развернуть." style="margin: 2px 0;" border="0" /></a><img id="upshrinkTemp" src="http://forum.ubuntu.ru/Themes/firefox_ro/images/blank.gif" alt="" style="margin-right: 2ex;" />
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id="upshrinkHeader">
+  <tr>
+    <td width="50%" class="smalltext" valign="top">
+	<br />Добро пожаловать, <b>Гость</b>. Пожалуйста, <a href="http://forum.ubuntu.ru/index.php?action=login">войдите</a> или <a href="http://forum.ubuntu.ru/index.php?action=register">зарегистрируйтесь</a>.<br />Вам не пришло <a href="http://forum.ubuntu.ru/index.php?action=activate">письмо с кодом активации?</a><br />
+	Войти<br /><br />
+	<form action="http://forum.ubuntu.ru/index.php?action=login2" method="post">
+	  <input type="text" name="user" size="8" /> <input type="password" name="passwrd" size="8" />
+	   <select name="cookielength">
+		<option value="60">1 час</option>
+		<option value="1440">1 день</option>
+		<option value="10080">1 неделя</option>
+		<option value="302400">1 месяц</option>
+		<option value="-1" selected="selected">Навсегда</option>
+	   </select>
+	  <input type="submit" value="Войти" />
+	</form>
+    </td>
+    <td valign="top">
+    <div style="text-align:center;padding:10px;color:#bb2211;font-weight:bold;background-color:#ffffff;border: #D4C2A6 1px solid;">
+    &nbsp;Общаться с другими пользователями Ubuntu можно в Jabber конференции<br /><a href="xmpp://ubuntu@conference.jabber.ru" target="_blank">ubuntu@conference.jabber.ru</a>
+    </div>
+
+    </td>
+  </tr>
+</table>
+</div>
+
+
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding: 0.5ex 20px 2ex 20px;">
+<a name="top"></a>
+<a name="msg3038"></a>
+<div><span class="nav" style="font-size: smaller;"><b><a href="http://forum.ubuntu.ru/index.php" class="nav">Русскоязычное сообщество Ubuntu Linux</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php#4" class="nav">Поддержка</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php?board=25.0" class="nav">Железо</a></b> &nbsp;|&nbsp; Тема: <b><a href="http://forum.ubuntu.ru/index.php?topic=458.0" class="nav">На рабочем столе не появляются иконки подключенных же</a></b></span></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="middletext" valign="bottom" style="padding-bottom: 4px;">Страниц: [<b>1</b>] <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=458.15">2</a> &nbsp;<a href="http://forum.ubuntu.ru/index.php?topic=458.0;all">Все</a>   &nbsp;&nbsp;<a href="#lastPost"><b>Вниз</b></a></td>
+		<td align="right" style="padding-right: 1ex;">
+			<div class="nav" style="margin-bottom: 2px;"> <a href="http://forum.ubuntu.ru/index.php?topic=458.0;prev_next=prev#new">&laquo; предыдущая тема</a> <a href="http://forum.ubuntu.ru/index.php?topic=458.0;prev_next=next#new">следующая тема &raquo;</a></div>
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					
+		<td ><a href="http://forum.ubuntu.ru/index.php?action=printpage;topic=458.0" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/russian-utf8/print.gif" alt="Печать" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="0" border="0" class="tborder" style="border-bottom: 0;">
+		<tr class="catbg3">
+				<td valign="middle" width="2%" style="padding-left: 6px;">
+						<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/topic/hot_post_locked.gif" align="bottom" alt="" />
+				</td>
+				<td width="13%"> Автор</td>
+				<td valign="middle" width="85%" style="padding-left: 6px;" id="top_subject">
+						Тема: На рабочем столе не появляются иконки подключенных же &nbsp;(Прочитано 4585 раз)
+				</td>
+		</tr>
+		<tr>
+				<td colspan="3" class="smalltext">0 Пользователей и 1 Гость смотрят эту тему.
+				</td>
+		</tr>
+</table>
+<form action="http://forum.ubuntu.ru/index.php?action=quickmod2;topic=458.0" method="post" accept-charset="UTF-8" name="quickModForm" id="quickModForm" style="margin: 0;" onsubmit="return in_edit_mode == 1 ? modify_save('a9e4d105f17a9f315d2b6431f05475eb') : confirm('Вы уверены?');">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="bordercolor">
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b>igor4u</b>
+							<div class="smalltext"><span style="color:#BB2211; font-weight:bold"> Автор темы </span><br />
+								Гость<br />
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3038#msg3038"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3038">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3038#msg3038">На рабочем столе не появляются иконки подключенных же</a>
+									</div>
+									<div class="smalltext">&#171; <b> :</b> 15 Июля 2005, 19:02:02 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Через fstab подключил 2 диска. Один NTFS, другой EXT 3.&nbsp; <br />Монтируются хорошо,&nbsp; только на рабочем столе&nbsp; не появляюсс их иконки.<br /><br />Как лечить?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3038">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3039"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=244" title="Просмотр профиля aledie">aledie</a></b>
+							<div class="smalltext">
+								Alexander Dietz<br />
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 406<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=169;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=93232431" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=93232431" alt="93232431" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=244"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:aledie@web.de"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3039#msg3039"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3039">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3039#msg3039">Re: На рабочем столе не появляются иконки подключенных </a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #1 :</b> 15 Июля 2005, 19:11:59 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Иконки смонтированных Виндоус партиций (в отличие от удалсемых устройств как например Диски) не появляются на рабочем столе и в &quot;Computer&quot; в результате бага, который описан здесь:<br /><a href="https://bugzilla.ubuntu.com/show_bug.cgi?id=7641" target="_blank">https://bugzilla.ubuntu.com/show_bug.cgi?id=7641</a><br /><br />1. У тебс есть возможност перестартовать dbus, тогда они посвстсс:<br />sudo /etc/init.d/dbus-1 restart<br /><br />Если же проблема постоснна и после перестартовки GNOMA опсть иконок нет, или же повтори шаг 1., или же просто создай линк на десктопе вручную:<br /><br />2. маркируй смонтированную папку левой кнопкой мыши+Ctrl/Shift и тсни ее на рабочий стол</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3039">
+									&#171; <i>Последнее редактирование: 15 Июля 2005, 19:55:41 от aledie</i> &#187;
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3040"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b>igor4u</b>
+							<div class="smalltext"><span style="color:#BB2211; font-weight:bold"> Автор темы </span><br />
+								Гость<br />
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3040#msg3040"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3040">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3040#msg3040">Re: На рабочем столе не появляются иконки подключенных </a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #2 :</b> 15 Июля 2005, 19:50:52 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Нашел еще один способ в неофициальном гиде:<br /><br />Q: Как обновить меню Places в GNOME (если не показываются указанные в /etc/fstab устройства, смонтированные в /media/?<br /><br />&nbsp; &nbsp;sudo /etc/init.d/dbus-1 restart<br /><br /><br />Вроде помогло&nbsp; <img src="http://forum.ubuntu.ru/Smileys/webby/wink.gif" alt="Wink" border="0" /><br /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3040">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3041"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=244" title="Просмотр профиля aledie">aledie</a></b>
+							<div class="smalltext">
+								Alexander Dietz<br />
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 406<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=169;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=93232431" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=93232431" alt="93232431" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=244"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:aledie@web.de"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3041#msg3041"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3041">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3041#msg3041">Re: На рабочем столе не появляются иконки подключенных </a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #3 :</b> 15 Июля 2005, 20:01:47 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Ну ты быстрый... пока с писал ты сам нашел <img src="http://forum.ubuntu.ru/Smileys/webby/wink.gif" alt="Wink" border="0" /> Это должно работать и с устройствами, смонтированными в /mnt/<br />Проблема, что после перестартовки компьютера иконки исчезают опсть, то есть тебе dbus снова каждый раз перестартовывать нужно будет. Наверное легче будет просто создать линк на десктопе вручную. Или искать другой выход.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3041">
+									&#171; <i>Последнее редактирование: 15 Июля 2005, 20:12:59 от aledie</i> &#187;
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3042"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=244" title="Просмотр профиля aledie">aledie</a></b>
+							<div class="smalltext">
+								Alexander Dietz<br />
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 406<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=169;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=93232431" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=93232431" alt="93232431" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=244"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:aledie@web.de"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3042#msg3042"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3042">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3042#msg3042">Re: На рабочем столе не появляются иконки подключенных </a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #4 :</b> 15 Июля 2005, 21:42:08 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Очень странное решение проблемы нашел на одном форуме: <a href="http://ubuntuforums.org/showthread.php?t=21508&amp;page=3&amp;pp=10" target="_blank">http://ubuntuforums.org/showthread.php?t=21508&amp;page=3&amp;pp=10</a><br />&quot;i have a tricky way to show up windows drivers on your desktop in Hoary. What you can do is that<br />remove &#039;/&#039; in front of dev of your windows partition.&quot;<br /><br />Я подумал, ну да,... а кто его знает <img src="http://forum.ubuntu.ru/Smileys/webby/wink.gif" alt="Wink" border="0" /> открыл свой /etc/fstab и убрал этот самый слсш, получилось<br />dev/hda5&nbsp; &nbsp; &nbsp; &nbsp;/media/windows&nbsp; vfat&nbsp; &nbsp; umask=000&nbsp; &nbsp; &nbsp; &nbsp;0&nbsp; &nbsp; &nbsp; &nbsp;0<br /><br />Сейчас иконки виндоус партиций везде и не исчезают. Единственное решение, которое саботало без перестартовки dbus-1 на каждой сессии. Может кто обсснит, как этот самый &quot;/&quot; проблему решить смог? <img src="http://forum.ubuntu.ru/Smileys/webby/rolleyes.gif" alt="Roll Eyes" border="0" /> Ума не приложу...</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3042">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3050"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b>igor4u</b>
+							<div class="smalltext"><span style="color:#BB2211; font-weight:bold"> Автор темы </span><br />
+								Гость<br />
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3050#msg3050"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3050">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3050#msg3050">Re: На рабочем столе не появляются иконки подключенных </a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #5 :</b> 16 Июля 2005, 10:27:10 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Я переформатил NTFS на EXT3. Теперь все иконки дисков появляются на столе. <br />Возникла другая проблема - иконка флешки не появляется&nbsp; <img src="http://forum.ubuntu.ru/Smileys/webby/cry.gif" alt="Cry" border="0" /><br /><br />Я смотрел fstab там нет строки насчет флешки. Может надо добавить?<br />В каталоге media тоже нет папок для флешки.<br /><br />Плиз скажите содержание ваших fstab и каталога media. Может с что-то случайно потер. <br />Если можете пришлите мне в аттачменте fstab и каталог media<br /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3050">
+									&#171; <i>Последнее редактирование: 16 Июля 2005, 11:13:48 от igor4u</i> &#187;
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3051"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=253" title="Просмотр профиля shock">shock</a></b>
+							<div class="smalltext">
+								Участник<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 133<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=10214;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=7330000" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=7330000" alt="7330000" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=253"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3051#msg3051"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3051">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3051#msg3051">Re: На рабочем столе не появляются иконки подключенных </a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #6 :</b> 16 Июля 2005, 13:26:06 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Действительно странное решение, но помогло <img src="http://forum.ubuntu.ru/Smileys/webby/smiley.gif" alt="Smiley" border="0" /><br /><br />А за флешки разве fstab отвечает вообще, это вроде на нечно hotplug ковырсть, меня сейчас поправст и дополнст с думаю, но всё же</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3051">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3052"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=244" title="Просмотр профиля aledie">aledie</a></b>
+							<div class="smalltext">
+								Alexander Dietz<br />
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 406<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=169;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=93232431" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=93232431" alt="93232431" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=244"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:aledie@web.de"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3052#msg3052"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3052">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3052#msg3052">Re: На рабочем столе не появляются иконки подключенных </a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #7 :</b> 16 Июля 2005, 14:00:48 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Flash через USB или встроенный SDCard plug подключаешь? Я думал тоже без fstab автоматически распознаваться должно. Сам не пробовал, камеру напрямую подключаю через USB и проблем не было. Пара советов по поводу USB Flash со строкой для fstab найдешь здесь, может поможет: <a href="http://blog.gmane.org/gmane.linux.ubuntu.user.russian/month=20050201" target="_blank">http://blog.gmane.org/gmane.linux.ubuntu.user.russian/month=20050201</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3052">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3090"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b>igor4u</b>
+							<div class="smalltext"><span style="color:#BB2211; font-weight:bold"> Автор темы </span><br />
+								Гость<br />
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3090#msg3090"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3090">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3090#msg3090">Re: На рабочем столе не появляются иконки подключенных </a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #8 :</b> 20 Июля 2005, 12:20:40 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Спасибо aledie.<br />Все сделал как ты сказал. Почти все получилось.<br />Прописал строку в fstab, сделал рестарт dbus. Наверно придется сделать стартовый скрипт.<br /><br />Сейчас с поставил себе гномовский апплет дисков. Тоже удобно</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3090">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3422"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=101" title="Просмотр профиля Envel">Envel</a></b>
+							<div class="smalltext">
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 701<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=304678933" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=304678933" alt="304678933" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=101"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3422#msg3422"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3422">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3422#msg3422">Re: На рабочем столе не появляются иконки подключенных </a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #9 :</b> 05 Августа 2005, 02:43:49 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Странно... А мне наоборот казалось, что лучше, когда нет иконок виндовых разделов на рабочем столе... На одном моем компьютере они не появляются вообще никогда, на другом - периодически. Убираю их перезапуском gdm и hald. Очень странно все... <img src="http://forum.ubuntu.ru/Smileys/webby/idiot2.gif" alt="idiot2" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3422">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3425"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=37" title="Просмотр профиля cargo">cargo</a></b>
+							<div class="smalltext">
+								Roman Kalashnikov<br />
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 745<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://cargo200.nm.ru/cargo.gif" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=1503536" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=1503536" alt="1503536" width="18" height="18" border="0" /></a>
+								
+								
+								<a href="xmpp:cargo200@gmail.com" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/jabber.png" alt="cargo200@gmail.com" border="0" /></a>
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=37"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3425#msg3425"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3425">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3425#msg3425">Re: На рабочем столе не появляются иконки подключенных </a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #10 :</b> 05 Августа 2005, 10:57:36 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">да ладно, господа, потерпите до выхода breezy - там с иконками дисков всё ОК  <img src="http://forum.ubuntu.ru/Smileys/webby/wink.gif" alt="Wink" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3425">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3437"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b>bobrik</b>
+							<div class="smalltext"><span style="color:#BB2211; font-weight:bold"> Автор темы </span><br />
+								Гость<br />
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3437#msg3437"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3437">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3437#msg3437">Re: На рабочем столе не появляются иконки подключенных </a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #11 :</b> 06 Августа 2005, 10:49:26 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">С картрадером, фотиком и 4 виндовымиразделами помогло, но в суть с не въеду <img src="http://forum.ubuntu.ru/Smileys/webby/shocked.gif" alt="Shocked" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3437">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3455"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=244" title="Просмотр профиля aledie">aledie</a></b>
+							<div class="smalltext">
+								Alexander Dietz<br />
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 406<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=169;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=93232431" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=93232431" alt="93232431" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=244"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:aledie@web.de"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3455#msg3455"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3455">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3455#msg3455">Re: На рабочем столе не появляются иконки подключенных </a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #12 :</b> 06 Августа 2005, 18:14:11 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3437#msg3437">Цитата: bobrik от 06 Августа 2005, 10:49:26</a></div><div class="quote">С картрадером, фотиком и 4 виндовымиразделами помогло, но в суть с не въеду <img src="http://forum.ubuntu.ru/Smileys/webby/shocked.gif" alt="Shocked" border="0" /><br /></div><br />Перевод: Суть в том что bug это старый, что автоматически не показывает иконки. На бризи его не будет, надеюсь.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3455">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3485"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=101" title="Просмотр профиля Envel">Envel</a></b>
+							<div class="smalltext">
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 701<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=304678933" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=304678933" alt="304678933" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=101"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3485#msg3485"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3485">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3485#msg3485">Re: На рабочем столе не появляются иконки подключенных </a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #13 :</b> 08 Августа 2005, 00:36:43 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3455#msg3455">Цитата: aledie от 06 Августа 2005, 18:14:11</a></div><div class="quote"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3437#msg3437">Цитата: bobrik от 06 Августа 2005, 10:49:26</a></div><div class="quote">С картрадером, фотиком и 4 виндовымиразделами помогло, но в суть с не въеду <img src="http://forum.ubuntu.ru/Smileys/webby/shocked.gif" alt="Shocked" border="0" /><br /></div><br />Перевод: Суть в том что bug это старый, что автоматически не показывает иконки. На бризи его не будет, надеюсь.<br /></div>Вообще, там совершенно о другом говорится (на bugzilla). Эту проблему легко обойти, разрешив пользователю монтировать/размонтировать разделы.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3485">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3494"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b>bobrik</b>
+							<div class="smalltext"><span style="color:#BB2211; font-weight:bold"> Автор темы </span><br />
+								Гость<br />
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=458.msg3494#msg3494"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3494">
+										<a href="http://forum.ubuntu.ru/index.php?topic=458.msg3494#msg3494">Re: На рабочем столе не появляются иконки подключенных </a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #14 :</b> 08 Августа 2005, 12:11:45 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Мой узер со всеми правами.<br />Это с тебе о другом. Без усб-девайсов все нормально показывает</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3494">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 0 0 1px 0;"></td></tr>
+</table>
+<a name="lastPost"></a>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="middletext">Страниц: [<b>1</b>] <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=458.15">2</a> &nbsp;<a href="http://forum.ubuntu.ru/index.php?topic=458.0;all">Все</a>   &nbsp;&nbsp;<a href="#top"><b>Вверх</b></a></td>
+		<td align="right" style="padding-right: 1ex;">
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					
+		<td ><a href="http://forum.ubuntu.ru/index.php?action=printpage;topic=458.0" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/russian-utf8/print.gif" alt="Печать" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<script language="JavaScript" type="text/javascript" src="http://forum.ubuntu.ru/Themes/default/xml_topic.js"></script>
+<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+	quickReplyCollapsed = true;
+
+	smf_topic = 458;
+	smf_start = 0;
+	smf_show_modify = 1;
+
+	// On quick modify, this is what the body will look like.
+	var smf_template_body_edit = '<div id="error_box" style="padding: 4px; color: red;"></div><textarea class="editor" name="message" rows="12" style="width: 94%; margin-bottom: 10px;">%body%</textarea><br /><input type="hidden" name="sc" value="a9e4d105f17a9f315d2b6431f05475eb" /><input type="hidden" name="topic" value="458" /><input type="hidden" name="msg" value="%msg_id%" /><div style="text-align: center;"><input type="submit" name="post" value="Сохранить" onclick="return modify_save(\'a9e4d105f17a9f315d2b6431f05475eb\');" accesskey="s" />&nbsp;&nbsp;<input type="submit" name="cancel" value="Отменить" onclick="return modify_cancel();" /></div>';
+
+	// And this is the replacement for the subject.
+	var smf_template_subject_edit = '<input type="text" name="subject" value="%subject%" size="60" style="width: 99%;"  maxlength="80" />';
+
+	// Restore the message to this after editing.
+	var smf_template_body_normal = '%body%';
+	var smf_template_subject_normal = '<a href="http://forum.ubuntu.ru/index.php?topic=458.msg%msg_id%#msg%msg_id%">%subject%</a>';
+	var smf_template_top_subject = "Тема: %subject% &nbsp;(Прочитано 4585 раз)"
+
+	if (window.XMLHttpRequest)
+		showModifyButtons();
+// ]]></script>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 1ex;">
+		<tr>
+				<td valign="top"><span class="nav" style="font-size: smaller;"><b><a href="http://forum.ubuntu.ru/index.php" class="nav">Русскоязычное сообщество Ubuntu Linux</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php#4" class="nav">Поддержка</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php?board=25.0" class="nav">Железо</a></b> &nbsp;|&nbsp; Тема: <b><a href="http://forum.ubuntu.ru/index.php?topic=458.0" class="nav">На рабочем столе не появляются иконки подключенных же</a></b></span></td> 
+				<td valign="top" align="right" class="nav"> <a href="http://forum.ubuntu.ru/index.php?topic=458.0;prev_next=prev#new">&laquo; предыдущая тема</a> <a href="http://forum.ubuntu.ru/index.php?topic=458.0;prev_next=next#new">следующая тема &raquo;</a></td>
+		</tr>
+</table>
+	<table cellpadding="0" cellspacing="0" border="0" style="margin-left: 1ex;">
+		<tr>
+			
+		<td ></td>
+		</tr>
+	</table>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		document.getElementById("quickmodSubmit").style.display = "none";
+	// ]]></script>
+</form>
+<div class="tborder"><div class="titlebg2" style="padding: 4px;" align="right">
+	<form action="http://forum.ubuntu.ru/index.php" method="get" accept-charset="UTF-8" style="padding:0; margin: 0;">
+		<span class="smalltext">Перейти в:</span>
+		<select name="jumpto" id="jumpto" onchange="if (this.selectedIndex > 0 &amp;&amp; this.options[this.selectedIndex].value) window.location.href = smf_scripturl + this.options[this.selectedIndex].value.substr(smf_scripturl.indexOf('?') == -1 || this.options[this.selectedIndex].value.substr(0, 1) != '?' ? 0 : 1);">
+			<option value="">Пожалуйста, выберите назначение:</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#7">Новости</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=10.0"> => Новости и анонсы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=11.0"> => Общие вопросы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=12.0"> => Встречи</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=13.0"> => Сборка пакетов</option>
+			<option value="?board=14.0"> => Локализация</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=15.0"> => Обсуждение форума</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=17.0"> => Разговоры обо всём</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=18.0"> => How-To и F.A.Q</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=19.0"> => Распространение Ubuntu</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=20.0"> => Коллективный bug report</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#9">Галерея</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=21.0"> => Скриншоты</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#7">Новости</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=23.0"> => Новости из мира *NIX</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#9">Галерея</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=24.0"> => Интересные картинки</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=25.0" selected="selected"> => Железо</option>
+			<option value="?board=26.0"> => Мультимедиа</option>
+			<option value="?board=27.0"> => Сети/Интернет</option>
+			<option value="?board=28.0"> => Установка Ubuntu</option>
+			<option value="?board=29.0"> => GUI</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=31.0"> => Программирование</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=32.0"> ===> GNOME</option>
+			<option value="?board=33.0"> ===> XFCE</option>
+			<option value="?board=34.0"> ===> KDE</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#10">Правила форума</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=35.0"> => Правила...</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=37.0"> ===> Юмор</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=38.0"> => Обсуждение ubuntu.ru</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=39.0"> => Linux в организациях</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=40.0"> => Тестирование Ubuntu</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=41.0"> => Виртуальные сервера и эмуляторы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=42.0"> => Обсуждение IRC и Jabber конференций</option>
+			<option value="?board=44.0"> => Русскоязычная команда Ubuntu</option>
+			<option value="?board=50.0"> => Обсуждение help.ubuntu.ru</option>
+		</select>&nbsp;
+		<input type="button" value="да" onclick="if (this.form.jumpto.options[this.form.jumpto.selectedIndex].value) window.location.href = 'http://forum.ubuntu.ru/index.php' + this.form.jumpto.options[this.form.jumpto.selectedIndex].value;" />
+	</form>
+</div></div><br />
+            </td>
+          </tr>
+	</table>
+<hr style="background-color: #CCCCCC; width: 95%;" />
+<table cellspacing="0" cellpadding="3" border="0" align="center" width="100%">
+  <tr>
+    <td width="28%" valign="middle" align="center">
+    <!--a href="http://validator.w3.org/check/referer" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/valid-xhtml10.gif" alt="Valid XHTML 1.0!" style="margin: 4px;" border="0" /></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/valid-css.gif" alt="Valid CSS!" style="margin: 4px;" border="0" /></a-->
+    <a href="http://www.mysql.com/" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/powered-mysql.gif" alt="Powered by MySQL" style="margin: 4px;" border="0"  /></a>
+    <a href="http://www.php.net/" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/powered-php.gif" alt="Powered by PHP" style="margin: 4px;" border="0" /></a>
+    </td>
+    <td valign="middle" align="center" style="white-space: nowrap;">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">Powered by SMF 1.1.12</a> | 
+<a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">SMF &copy; 2006, Simple Machines LLC</a>
+		</span></td>
+    <td width="28%" valign="middle" align="center">
+     <a href="http://www.best-hosting.ru/dedicated_server.asp" title="Хостинг предоставлен компанией Best Hosting"><img src="http://s.ubuntu.ru/bhlogo.png" alt="Best Hosting" style="padding-bottom:6px;" /></a><br />
+     <a href="http://www.best-hosting.ru/dedicated_server.asp" style="color:#333;font:9px/9px sans">Серверы на Ubuntu</a>
+    </td>
+
+  </tr>
+</table>
+		<span class="smalltext">Страница сгенерирована за 0.201 секунд. Запросов: 18.</span>
+</body>
+</html>

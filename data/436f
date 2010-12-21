@@ -1,0 +1,1174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="IrDA USB" />
+	<meta name="keywords" content="PHP, MySQL, bulletin, board, free, open, source, smf, simple, machines, forum" />
+	<script language="JavaScript" type="text/javascript" src="http://forum.ubuntu.ru/Themes/default/script.js"></script>
+	<script language="JavaScript" type="text/javascript"><!--
+		var smf_theme_url = "http://forum.ubuntu.ru/Themes/firefox_ro";
+		var smf_images_url = "http://forum.ubuntu.ru/Themes/firefox_ro/images";
+	// --></script>
+	<title>IrDA USB</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="http://forum.ubuntu.ru/Themes/firefox_ro/style.css" />
+	<link rel="help" href="http://forum.ubuntu.ru/index.php?action=help" target="_blank" />
+	<link rel="contents" href="http://forum.ubuntu.ru/index.php" />
+	<link rel="alternate" type="application/rss+xml" title="Русскоязычное сообщество Ubuntu Linux - RSS" href="http://forum.ubuntu.ru/index.php?type=rss2;limit=10;action=.xml" />
+	<link rel="prev" href="http://forum.ubuntu.ru/index.php?action=;topic=436.0;prev_next=prev" />
+	<link rel="next" href="http://forum.ubuntu.ru/index.php?action=;topic=436.0;prev_next=next" />
+	<link rel="index" href="http://forum.ubuntu.ru/index.php?action=;board=25.0" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<style type="text/css">
+	a img{
+	border: 0;
+	}
+	</style>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		var smf_scripturl = "http://forum.ubuntu.ru/index.php";
+	// ]]></script>
+
+	<script language="JavaScript" type="text/javascript"><!--
+		var current_header = false;
+
+		function shrinkHeader(mode)
+		{
+			document.cookie = "upshrink=" + (mode ? 1 : 0);
+			document.getElementById("upshrink").src = smf_images_url + (mode ? "/upshrink2.gif" : "/upshrink.gif");
+
+			document.getElementById("upshrinkHeader").style.display = mode ? "none" : "";
+
+			current_header = mode;
+		}
+	// --></script>
+</head>
+<body>
+<div style="padding: 20px 20px 4px 20px;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-image: url(http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_middle.gif);">
+  <tr>
+    <td width="1" rowspan="2"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_left.gif" alt="" /></td>
+    <td width="70%" align="left" id="search"><script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try {var pageTracker = _gat._getTracker("UA-4515300-5");pageTracker._trackPageview();} catch(err) {}</script>
+<form method="get" action="http://www.google.ru/search" target="_blank">
+<label><b>Поиск: </b></label>
+<input type="text" name="q" value="" size="20" maxlength="64" id="infield"/>&nbsp;
+<input type="submit" name="submit" value="Поиск" id="submit"/>
+<input type="hidden" name="sitesearch" value="ubuntu.ru"/>
+<input type="hidden" name="hl" value="ru"/></form>
+    </td>
+    <td width="30%" rowspan="2" align="center" class="hdrtitle">
+	Русскоязычное сообщество Ubuntu Linux
+    </td>
+    <td width="1" rowspan="2"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_right.gif" alt="" /></td>
+  </tr>
+  <tr>
+    <td width="70%" valign="bottom" align="left">
+  	<div id="tabs">
+ 	  <ul>
+ 	   <li id="current"><a href="http://forum.ubuntu.ru/index.php">Начало</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?board=35.0">Правила</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=help" target="_blank">Помощь</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=calendar">Календарь</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=register">Регистрация</a></li>
+ 	  </ul>
+  	</div>
+    </td>
+  </tr>
+</table>
+<a href="#" onclick="shrinkHeader(!current_header); return false;"><img id="upshrink" src="http://forum.ubuntu.ru/Themes/firefox_ro/images/upshrink.gif" alt="*" title="Свернуть/Развернуть." style="margin: 2px 0;" border="0" /></a><img id="upshrinkTemp" src="http://forum.ubuntu.ru/Themes/firefox_ro/images/blank.gif" alt="" style="margin-right: 2ex;" />
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id="upshrinkHeader">
+  <tr>
+    <td width="50%" class="smalltext" valign="top">
+	<br />Добро пожаловать, <b>Гость</b>. Пожалуйста, <a href="http://forum.ubuntu.ru/index.php?action=login">войдите</a> или <a href="http://forum.ubuntu.ru/index.php?action=register">зарегистрируйтесь</a>.<br />Вам не пришло <a href="http://forum.ubuntu.ru/index.php?action=activate">письмо с кодом активации?</a><br />
+	Войти<br /><br />
+	<form action="http://forum.ubuntu.ru/index.php?action=login2" method="post">
+	  <input type="text" name="user" size="8" /> <input type="password" name="passwrd" size="8" />
+	   <select name="cookielength">
+		<option value="60">1 час</option>
+		<option value="1440">1 день</option>
+		<option value="10080">1 неделя</option>
+		<option value="302400">1 месяц</option>
+		<option value="-1" selected="selected">Навсегда</option>
+	   </select>
+	  <input type="submit" value="Войти" />
+	</form>
+    </td>
+    <td valign="top">
+    <div style="text-align:center;padding:10px;color:#bb2211;font-weight:bold;background-color:#ffffff;border: #D4C2A6 1px solid;">
+    &nbsp;Вы - новичок и не знаете, как начать работу в Ubuntu?<br />Прочитайте руководство: <a href="http://help.ubuntu.ru/manual/" target="_blank">http://help.ubuntu.ru/manual/</a>
+    </div>
+
+    </td>
+  </tr>
+</table>
+</div>
+
+
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding: 0.5ex 20px 2ex 20px;">
+<a name="top"></a>
+<a name="msg2851"></a>
+<div><span class="nav" style="font-size: smaller;"><b><a href="http://forum.ubuntu.ru/index.php" class="nav">Русскоязычное сообщество Ubuntu Linux</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php#4" class="nav">Поддержка</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php?board=25.0" class="nav">Железо</a></b> &nbsp;|&nbsp; Тема: <b><a href="http://forum.ubuntu.ru/index.php?topic=436.0" class="nav">IrDA USB</a></b></span></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="middletext" valign="bottom" style="padding-bottom: 4px;">Страниц: [<b>1</b>] <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=436.15">2</a> <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=436.30">3</a> &nbsp;<a href="http://forum.ubuntu.ru/index.php?topic=436.0;all">Все</a>   &nbsp;&nbsp;<a href="#lastPost"><b>Вниз</b></a></td>
+		<td align="right" style="padding-right: 1ex;">
+			<div class="nav" style="margin-bottom: 2px;"> <a href="http://forum.ubuntu.ru/index.php?topic=436.0;prev_next=prev#new">&laquo; предыдущая тема</a> <a href="http://forum.ubuntu.ru/index.php?topic=436.0;prev_next=next#new">следующая тема &raquo;</a></div>
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					
+		<td ><a href="http://forum.ubuntu.ru/index.php?action=printpage;topic=436.0" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/russian-utf8/print.gif" alt="Печать" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="0" border="0" class="tborder" style="border-bottom: 0;">
+		<tr class="catbg3">
+				<td valign="middle" width="2%" style="padding-left: 6px;">
+						<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/topic/veryhot_post_locked.gif" align="bottom" alt="" />
+				</td>
+				<td width="13%"> Автор</td>
+				<td valign="middle" width="85%" style="padding-left: 6px;" id="top_subject">
+						Тема: IrDA USB &nbsp;(Прочитано 12352 раз)
+				</td>
+		</tr>
+		<tr>
+				<td colspan="3" class="smalltext">0 Пользователей и 1 Гость смотрят эту тему.
+				</td>
+		</tr>
+</table>
+<form action="http://forum.ubuntu.ru/index.php?action=quickmod2;topic=436.0" method="post" accept-charset="UTF-8" name="quickModForm" id="quickModForm" style="margin: 0;" onsubmit="return in_edit_mode == 1 ? modify_save('176acd56b2db5f4323ef3883b23ce443') : confirm('Вы уверены?');">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="bordercolor">
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=285" title="Просмотр профиля cornelius">cornelius</a></b>
+							<div class="smalltext"><span style="color:#BB2211; font-weight:bold"> Автор темы </span><br />
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 38<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=275993202" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=275993202" alt="275993202" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=285"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg2851#msg2851"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/question.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2851">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg2851#msg2851">IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b> :</b> 10 Июля 2005, 13:32:42 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Не могу заставить работать IrDA USB адаптер.<br />Проблема в том, что при его подключении, устройство не определсется:<br /><div class="quoteheader">Цитата</div><div class="quote">andrey@cornelius:~$ lsusb<br />Bus 004 Device 001: ID 0000:0000<br />Bus 003 Device 001: ID 0000:0000<br />Bus 002 Device 001: ID 0000:0000<br />Bus 001 Device 007: ID 9710:7780<br />Bus 001 Device 006: ID 0458:0039 KYE Systems Corp. (Mouse Systems)<br />Bus 001 Device 001: ID 0000:0000<br /></div>Device 007 это и есть мой инфракрасник.<br />Что делать ? <br /><br />PS: установлен пакет irda-utils, модуль irda-usb загружен</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2851">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2853"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=3" title="Просмотр профиля clx">clx</a></b>
+							<div class="smalltext">
+								Ilya Uralskiy<br />
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 1205<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=1444;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=3"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:clx.mini@gmail.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg2853#msg2853"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2853">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg2853#msg2853">Re: IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #1 :</b> 10 Июля 2005, 14:29:06 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Какас модель irda usb ?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2853">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2855"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=285" title="Просмотр профиля cornelius">cornelius</a></b>
+							<div class="smalltext"><span style="color:#BB2211; font-weight:bold"> Автор темы </span><br />
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 38<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=275993202" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=275993202" alt="275993202" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=285"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg2855#msg2855"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2855">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg2855#msg2855">Re: IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #2 :</b> 10 Июля 2005, 14:38:51 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg2853#msg2853">Цитата: clx от 10 Июля 2005, 14:29:06</a></div><div class="quote">Какас модель irda usb ?<br /></div>Хм...китайскас <img src="http://forum.ubuntu.ru/Smileys/webby/smiley.gif" alt="Smiley" border="0" /><br />Производитель - ST Lab<br />Модель - USB-IRDA-4 (U-244)</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2855">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2856"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=244" title="Просмотр профиля aledie">aledie</a></b>
+							<div class="smalltext">
+								Alexander Dietz<br />
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 406<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=169;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=93232431" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=93232431" alt="93232431" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=244"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:aledie@web.de"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg2856#msg2856"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2856">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg2856#msg2856">Re: IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #3 :</b> 10 Июля 2005, 14:59:53 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg2855#msg2855">Цитата: cornelius от 10 Июля 2005, 14:38:51</a></div><div class="quote"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg2853#msg2853">Цитата: clx от 10 Июля 2005, 14:29:06</a></div><div class="quote">Какас модель irda usb ?<br /></div>Хм...китайскас <img src="http://forum.ubuntu.ru/Smileys/webby/smiley.gif" alt="Smiley" border="0" /><br />Производитель - ST Lab<br />Модель - USB-IRDA-4 (U-244)<br /></div><br />В инете имели ввиду что чип на ST Lab USB-IRDA должен быть что и moschip mcs 7780. Подтверди информацию, если так, то на счет стого описание и драйверы здесь:<br /><a href="http://www.gossamer-threads.com/lists/linux/kernel/542086" target="_blank">http://www.gossamer-threads.com/lists/linux/kernel/542086</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2856">
+									&#171; <i>Последнее редактирование: 10 Июля 2005, 22:21:59 от aledie</i> &#187;
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2857"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=285" title="Просмотр профиля cornelius">cornelius</a></b>
+							<div class="smalltext"><span style="color:#BB2211; font-weight:bold"> Автор темы </span><br />
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 38<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=275993202" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=275993202" alt="275993202" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=285"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg2857#msg2857"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2857">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg2857#msg2857">Re: IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #4 :</b> 10 Июля 2005, 15:19:04 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg2856#msg2856">Цитата: aledie от 10 Июля 2005, 14:59:53</a></div><div class="quote">Кто-то в вебе имел ввиду что чип на ST Lab УСБ-ИРДA должен быть что и moschip , на счет которого описание здесь:<br /><a href="http://www.gossamer-threads.com/lists/linux/kernel/542086" target="_blank">http://www.gossamer-threads.com/lists/linux/kernel/542086</a><br /></div>Как с понял, там исходники для сборки модулс mcs7780. На данном стапе модуль для меня значения не имеет, если с правильно все понимаю. У меня не распознается тип устройства при подключении - надо с этим как-то бороться. </div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2857">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2860"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=141" title="Просмотр профиля dbk">dbk</a></b>
+							<div class="smalltext">
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 299<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=141"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg2860#msg2860"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2860">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg2860#msg2860">Re: IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #5 :</b> 10 Июля 2005, 20:41:35 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Первое, что нужно - определить чипсет,если поддержки его в сдре нет,то искать драйвера и компилировать модуль.<br />Если поддержка в сдре есть, то все относительно просто. Должны быть подгружены модули ircomm,ircomm-tty.<br />По поводу модулс irda-usb - он не всегда должен быть подгружен,а чаще вообще должно быть сделано что-то типа<br />alias irda-usb off. Этот модуль конфликтует со многими модулсми(напр.stir4200), включенными в ядро.Постому в каждом конкретном случае нужно будет брать документацию и разбираться. Готового решения для неведомых зверушек нет.<br />Удачи!</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2860">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3008"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=254" title="Просмотр профиля PPA">PPA</a></b>
+							<div class="smalltext">
+								Любитель<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 74<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=10596;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=46403100" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=46403100" alt="46403100" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=254"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="http://www.flylinkdc.ru/" title="FlylinkDC++" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/www_sm.gif" alt="WWW" border="0" /></a>
+								<a href="mailto:pavel.pimenov@gmail.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg3008#msg3008"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3008">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg3008#msg3008">Re: IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #6 :</b> 14 Июля 2005, 22:13:54 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg2855#msg2855">Цитата: cornelius от 10 Июля 2005, 14:38:51</a></div><div class="quote"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg2853#msg2853">Цитата: clx от 10 Июля 2005, 14:29:06</a></div><div class="quote">Какас модель irda usb ?<br /></div>Хм...китайскас <img src="http://forum.ubuntu.ru/Smileys/webby/smiley.gif" alt="Smiley" border="0" /><br />Производитель - ST Lab<br />Модель - USB-IRDA-4 (U-244)<br /></div><br />Если получится подключить сообщи пожалуйста в форум<br />у меня такойже и не пашет</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3008">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg6069"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=491" title="Просмотр профиля Andrew_Crush">Andrew_Crush</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 2<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=491"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:crush_override@mail.ru"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg6069#msg6069"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_6069">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg6069#msg6069">Re: IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #7 :</b> 03 Октября 2005, 21:03:28 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Помогите, пожалуйста чайнику в Линуксе. Скачал IRDA-utils. Но никак не могу установить. Если можно, объясните на &quot;соплсх и пальцах&quot; как это установить... И заставить работать.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_6069">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg6072"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=3" title="Просмотр профиля clx">clx</a></b>
+							<div class="smalltext">
+								Ilya Uralskiy<br />
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 1205<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=1444;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=3"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:clx.mini@gmail.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg6072#msg6072"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_6072">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg6072#msg6072">Re: IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #8 :</b> 03 Октября 2005, 21:30:15 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg6069#msg6069">Цитата: Andrew_Crush от 03 Октября 2005, 21:03:28</a></div><div class="quote">Помогите, пожалуйста чайнику в Линуксе. Скачал IRDA-utils. Но никак не могу установить. Если можно, объясните на &quot;соплсх и пальцах&quot; как это установить... И заставить работать.<br /></div><br />Зачем постить 2 раза один и тотже вопрос, но в разных топиках ?!<br /><a href="http://forum.ubuntu.ru/index.php?topic=871.msg6071#msg6071" target="_blank">http://forum.ubuntu.ru/index.php?topic=871.msg6071#msg6071</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_6072">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg6081"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=491" title="Просмотр профиля Andrew_Crush">Andrew_Crush</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 2<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=491"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:crush_override@mail.ru"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg6081#msg6081"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_6081">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg6081#msg6081">Re: IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #9 :</b> 04 Октября 2005, 20:18:33 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg6074#msg6074">Цитата: bobrik от 04 Октября 2005, 15:49:57</a></div><div class="quote">Что скачали-то?<br /></div>Я скачал: irda-utils-0.9.16.tar.gz; girda_applet-2.0.3.tar.gz; girda-0.3.tar.gz; girda-0.3-2.i386.rpm; girda-0.3-2.src.rpm. И не могу разобраться как и что надо мне установить.<br /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_6081">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg6084"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=244" title="Просмотр профиля aledie">aledie</a></b>
+							<div class="smalltext">
+								Alexander Dietz<br />
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 406<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=169;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=93232431" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=93232431" alt="93232431" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=244"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:aledie@web.de"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg6084#msg6084"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_6084">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg6084#msg6084">Re: IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #10 :</b> 04 Октября 2005, 21:40:43 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg6081#msg6081">Цитата: Andrew_Crush от 04 Октября 2005, 20:18:33</a></div><div class="quote">Я скачал: irda-utils-0.9.16.tar.gz; girda_applet-2.0.3.tar.gz; girda-0.3.tar.gz; girda-0.3-2.i386.rpm; girda-0.3-2.src.rpm. И не могу разобраться как и что надо мне установить.<br /></div>irda-utils: Зачем скачивать то, что уже в Ubuntu репозитариях, да еще исходники? С терминала:<br /><div class="codeheader">Код:</div><div class="code">sudo apt-get install irda-utils</div></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_6084">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg6111"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=506" title="Просмотр профиля no-one">no-one</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 5<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=506"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:no-one@takoe.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg6111#msg6111"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_6111">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg6111#msg6111">Re: IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #11 :</b> 05 Октября 2005, 16:46:27 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Такас же лажа не могу настроить irda usb tekram 410w, и еще потом желатьльно бы соединить через него мобильник с компом чтобы пользоваться gprs`ом. Если у кого получалось настроить такие железки помогите!</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_6111">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg6113"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=3" title="Просмотр профиля clx">clx</a></b>
+							<div class="smalltext">
+								Ilya Uralskiy<br />
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 1205<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=1444;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=3"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:clx.mini@gmail.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg6113#msg6113"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_6113">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg6113#msg6113">Re: IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #12 :</b> 05 Октября 2005, 18:08:54 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg6111#msg6111">Цитата: no-one от 05 Октября 2005, 16:46:27</a></div><div class="quote">Такас же лажа не могу настроить irda usb tekram 410w, и еще потом желатьльно бы соединить через него мобильник с компом чтобы пользоваться gprs`ом. Если у кого получалось настроить такие железки помогите!<br /></div>А что за телефон?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_6113">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg6131"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=506" title="Просмотр профиля no-one">no-one</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 5<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=506"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:no-one@takoe.com"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg6131#msg6131"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_6131">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg6131#msg6131">Re: IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #13 :</b> 06 Октября 2005, 17:28:15 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">sonyerricson k500i, с вообще с линухом 2 днс, хочу как мне вообще настроить ирду чтобы замигал); lsusb отображает sigmatel 4200 и тд. пишу irattach irda0 -s результата 0. с нормально поставил все пакеты, в чем проблема?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_6131">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg6133"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=141" title="Просмотр профиля dbk">dbk</a></b>
+							<div class="smalltext">
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 299<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=141"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=436.msg6133#msg6133"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_6133">
+										<a href="http://forum.ubuntu.ru/index.php?topic=436.msg6133#msg6133">Re: IrDA USB</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #14 :</b> 06 Октября 2005, 20:13:26 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">no-one писал(а)<br />Если все необходимые программы установлены,то примерно так<br />1./etc/default//irda-utils (Поправил, а то сначала написал расположение для Gentoo )<br />ENABLE=&quot;true&quot;<br />DEVICE=&quot;irda0&quot;<br />DISCOVERY=&quot;true&quot;<br />DONGLE=&quot;none&quot;<br />2.Если используешь gnokii<br />/etc/gnokiirc<br />[global]<br />port = /dev/ircomm0<br />model = AT #(Это для моего телефона,для своего читай /usr/share/doc/gnokii-?.?.?/FAQ.gz)<br />connection = irda<br />3.<br />#modprobe ircomm<br />#modprobe ircomm-tty<br />4.#chmod 666 /dev/ir*<br />Пункт 3 и 4 - это на всякий случай,в UBU все сделано нормально. <br />5.$lsmod - должен увидеть,что-то похожее<br />Module Size Used by<br />ircomm_tty 34440 0<br />ircomm 19076 1 ircomm_tty<br /><br />stir4200 10884 0<br />irda 182716 3 ircomm_tty,ircomm,stir4200<br /><br />uhci_hcd 28944 0<br />usb_storage 28544 0<br />usbhid 33536 0<br />ehci_hcd 29704 0<br />usbcore 104184 6 stir4200,uhci_hcd,usb_storage,usbhid,ehci_hcd<br />Тут важны не цифры,а названия модулей,которые загружены.<br />5.echo 115200 &gt; /proc/sys/net/irda/max_baud_rate<br />6.#irattach irda0 -s<br />7.#irdadump - можешь посмотреть дамп обмена<br />Команду #irattach irda0 -s нужно будет выполнсть каждый раз<br />8.С помощью minicom можно настроить /dev/ircomm0 и пользоваться миникомом.Есть еще масса других программ, но это зависит от целей.<br />$minicom -s<br />вместо /dev/ttySx поставь /dev/ircomm0<br />скорость больше 19200 ставить не рекомендую <br /><br /><br /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_6133">
+									&#171; <i>Последнее редактирование: 06 Октября 2005, 20:45:26 от dbk</i> &#187;
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 0 0 1px 0;"></td></tr>
+</table>
+<a name="lastPost"></a>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="middletext">Страниц: [<b>1</b>] <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=436.15">2</a> <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=436.30">3</a> &nbsp;<a href="http://forum.ubuntu.ru/index.php?topic=436.0;all">Все</a>   &nbsp;&nbsp;<a href="#top"><b>Вверх</b></a></td>
+		<td align="right" style="padding-right: 1ex;">
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					
+		<td ><a href="http://forum.ubuntu.ru/index.php?action=printpage;topic=436.0" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/russian-utf8/print.gif" alt="Печать" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<script language="JavaScript" type="text/javascript" src="http://forum.ubuntu.ru/Themes/default/xml_topic.js"></script>
+<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+	quickReplyCollapsed = true;
+
+	smf_topic = 436;
+	smf_start = 0;
+	smf_show_modify = 1;
+
+	// On quick modify, this is what the body will look like.
+	var smf_template_body_edit = '<div id="error_box" style="padding: 4px; color: red;"></div><textarea class="editor" name="message" rows="12" style="width: 94%; margin-bottom: 10px;">%body%</textarea><br /><input type="hidden" name="sc" value="176acd56b2db5f4323ef3883b23ce443" /><input type="hidden" name="topic" value="436" /><input type="hidden" name="msg" value="%msg_id%" /><div style="text-align: center;"><input type="submit" name="post" value="Сохранить" onclick="return modify_save(\'176acd56b2db5f4323ef3883b23ce443\');" accesskey="s" />&nbsp;&nbsp;<input type="submit" name="cancel" value="Отменить" onclick="return modify_cancel();" /></div>';
+
+	// And this is the replacement for the subject.
+	var smf_template_subject_edit = '<input type="text" name="subject" value="%subject%" size="60" style="width: 99%;"  maxlength="80" />';
+
+	// Restore the message to this after editing.
+	var smf_template_body_normal = '%body%';
+	var smf_template_subject_normal = '<a href="http://forum.ubuntu.ru/index.php?topic=436.msg%msg_id%#msg%msg_id%">%subject%</a>';
+	var smf_template_top_subject = "Тема: %subject% &nbsp;(Прочитано 12352 раз)"
+
+	if (window.XMLHttpRequest)
+		showModifyButtons();
+// ]]></script>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 1ex;">
+		<tr>
+				<td valign="top"><span class="nav" style="font-size: smaller;"><b><a href="http://forum.ubuntu.ru/index.php" class="nav">Русскоязычное сообщество Ubuntu Linux</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php#4" class="nav">Поддержка</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php?board=25.0" class="nav">Железо</a></b> &nbsp;|&nbsp; Тема: <b><a href="http://forum.ubuntu.ru/index.php?topic=436.0" class="nav">IrDA USB</a></b></span></td> 
+				<td valign="top" align="right" class="nav"> <a href="http://forum.ubuntu.ru/index.php?topic=436.0;prev_next=prev#new">&laquo; предыдущая тема</a> <a href="http://forum.ubuntu.ru/index.php?topic=436.0;prev_next=next#new">следующая тема &raquo;</a></td>
+		</tr>
+</table>
+	<table cellpadding="0" cellspacing="0" border="0" style="margin-left: 1ex;">
+		<tr>
+			
+		<td ></td>
+		</tr>
+	</table>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		document.getElementById("quickmodSubmit").style.display = "none";
+	// ]]></script>
+</form>
+<div class="tborder"><div class="titlebg2" style="padding: 4px;" align="right">
+	<form action="http://forum.ubuntu.ru/index.php" method="get" accept-charset="UTF-8" style="padding:0; margin: 0;">
+		<span class="smalltext">Перейти в:</span>
+		<select name="jumpto" id="jumpto" onchange="if (this.selectedIndex > 0 &amp;&amp; this.options[this.selectedIndex].value) window.location.href = smf_scripturl + this.options[this.selectedIndex].value.substr(smf_scripturl.indexOf('?') == -1 || this.options[this.selectedIndex].value.substr(0, 1) != '?' ? 0 : 1);">
+			<option value="">Пожалуйста, выберите назначение:</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#7">Новости</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=10.0"> => Новости и анонсы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=11.0"> => Общие вопросы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=12.0"> => Встречи</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=13.0"> => Сборка пакетов</option>
+			<option value="?board=14.0"> => Локализация</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=15.0"> => Обсуждение форума</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=17.0"> => Разговоры обо всём</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=18.0"> => How-To и F.A.Q</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=19.0"> => Распространение Ubuntu</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=20.0"> => Коллективный bug report</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#9">Галерея</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=21.0"> => Скриншоты</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#7">Новости</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=23.0"> => Новости из мира *NIX</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#9">Галерея</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=24.0"> => Интересные картинки</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=25.0" selected="selected"> => Железо</option>
+			<option value="?board=26.0"> => Мультимедиа</option>
+			<option value="?board=27.0"> => Сети/Интернет</option>
+			<option value="?board=28.0"> => Установка Ubuntu</option>
+			<option value="?board=29.0"> => GUI</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=31.0"> => Программирование</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=32.0"> ===> GNOME</option>
+			<option value="?board=33.0"> ===> XFCE</option>
+			<option value="?board=34.0"> ===> KDE</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#10">Правила форума</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=35.0"> => Правила...</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=37.0"> ===> Юмор</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=38.0"> => Обсуждение ubuntu.ru</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=39.0"> => Linux в организациях</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=40.0"> => Тестирование Ubuntu</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=41.0"> => Виртуальные сервера и эмуляторы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=42.0"> => Обсуждение IRC и Jabber конференций</option>
+			<option value="?board=44.0"> => Русскоязычная команда Ubuntu</option>
+			<option value="?board=50.0"> => Обсуждение help.ubuntu.ru</option>
+		</select>&nbsp;
+		<input type="button" value="да" onclick="if (this.form.jumpto.options[this.form.jumpto.selectedIndex].value) window.location.href = 'http://forum.ubuntu.ru/index.php' + this.form.jumpto.options[this.form.jumpto.selectedIndex].value;" />
+	</form>
+</div></div><br />
+            </td>
+          </tr>
+	</table>
+<hr style="background-color: #CCCCCC; width: 95%;" />
+<table cellspacing="0" cellpadding="3" border="0" align="center" width="100%">
+  <tr>
+    <td width="28%" valign="middle" align="center">
+    <!--a href="http://validator.w3.org/check/referer" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/valid-xhtml10.gif" alt="Valid XHTML 1.0!" style="margin: 4px;" border="0" /></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/valid-css.gif" alt="Valid CSS!" style="margin: 4px;" border="0" /></a-->
+    <a href="http://www.mysql.com/" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/powered-mysql.gif" alt="Powered by MySQL" style="margin: 4px;" border="0"  /></a>
+    <a href="http://www.php.net/" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/powered-php.gif" alt="Powered by PHP" style="margin: 4px;" border="0" /></a>
+    </td>
+    <td valign="middle" align="center" style="white-space: nowrap;">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">Powered by SMF 1.1.12</a> | 
+<a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">SMF &copy; 2006, Simple Machines LLC</a>
+		</span></td>
+    <td width="28%" valign="middle" align="center">
+     <a href="http://www.best-hosting.ru/dedicated_server.asp" title="Хостинг предоставлен компанией Best Hosting"><img src="http://s.ubuntu.ru/bhlogo.png" alt="Best Hosting" style="padding-bottom:6px;" /></a><br />
+     <a href="http://www.best-hosting.ru/dedicated_server.asp" style="color:#333;font:9px/9px sans">Серверы на Ubuntu</a>
+    </td>
+
+  </tr>
+</table>
+		<span class="smalltext">Страница сгенерирована за 0.204 секунд. Запросов: 18.</span>
+</body>
+</html>

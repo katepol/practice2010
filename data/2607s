@@ -1,0 +1,560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Моделирование полета космического аппарата по околоземной орбите в космическом тренажерном комплексе</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Моделирование полета космического аппарата по околоземной орбите в космическом тренажерном комплексе</h2><div style="margin-bottom:10px"><strong>Near-earth orbit flight simulation in a space training system</strong></div>Статья опубликована в выпуске журнала № 4 за 2010 год. [ 09.12.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">В данной работе предлагается алгоритм вычисления положения и ориентации модели Земли относительно системы координат, жестко связанной с космическим аппаратом, если известны параметры кеплеровской орбиты космического аппарата в абсолютной геоцентрической системе координат. Такой подход позволяет более точно моделировать процессы стыковки космических аппаратов в имитационно-тренажерных комплексах.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">The paper describes an algorithm of Earth model position and orientation calculation relative to the coordinate system fixed to a space vehicle (SV) given it’s Kepler orbit elements defined in the geocentric reference frame are known. The approach enables more accurate SV docking modelling in space simulators.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Автор: </b><a href="index.php?page=infou&id=5927">Тимохин П.Ю. ()</a> -    </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1762">система визуализации</a>, <a href="index.php?page=infotg&id=14">моделирование</a>, <a href="index.php?page=infotg&id=1608">космический аппарат</a>, <a href="index.php?page=infotg&id=1763">кеплеровская орбита</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1762"></a>, <a href="index.php?page=infotg&id=14">modeling</a>, <a href="index.php?page=infotg&id=1608">spacecraft</a>, <a href="index.php?page=infotg&id=1763"></a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 39<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2607">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>При подготовке космонавтов активно используются тренажерные комплексы. Одной из важных задач при разработке многих комплексов является моделирование вида земной поверхности, наблюдаемого космонавтом из космического аппарата (КА), летящего по околоземной орбите. В тренажерном комплексе это достигается с помощью подсистемы моделирования и подсистемы визуализации. В подсистему визуализации предварительно загружается виртуальная сцена, которая содержит трехмерные модели КА и Земли, а также виртуальную камеру, связанную с КА. Подсистема моделирования периодически (например, каждые 40 мс) рассчитывает в некоторой системе координат положение и ориентацию динамических объектов и передает их по информационному протоколу в подсистему визуализации. В подсистеме визуализации по полученным данным производится установка трехмерных моделей в виртуальной сцене, а затем вся сцена отображается на дисплей средства наблюдения космонавта [1].</p>
+<p>&nbsp;</p>
+<p>В качестве базовой системы координат для расчета параметров движения динамических объектов можно выбрать геоцентрическую систему, однако часто в системах визуализации выбирают систему координат, жестко связанную с КА. В этом случае КА считается неподвижным, а движение Земли моделируется относительно КА. При этом модель Земли располагается и ориентируется таким образом, чтобы наблюдаемая из КА область земной поверхности совпадала с областью, которую видел бы наблюдатель, если бы начало базовой системы координат располагалось в центре Земли, а КА двигался по орбите вокруг нее. Данная статья посвящена вычислениям положения и ориентации (задаваемой углами Эйлера&ndash;Крылова) модели Земли в системе координат, жестко связанной с КА, исходя из заданных параметров околоземной орбиты КА.</p>
+<p>Моделирование движения КА  по орбите</p>
+<p>На околоземном внеатмосферном участке полета КА его центр масс двигается в основном под действием силы притяжения Земли (при условии, что двигатели КА выключены). Если принять, что Земля сферическая и неподвижная, а масса КА пренебрежимо мала по отношению к массе Земли, то движение центра масс КА в гравитационном поле Земли можно смоделировать кеплеровским движением, то есть по кеплеровской траекто- рии [2]. В данной статье рассматривается движение КА по эллиптической траектории (орбите), один из фокусов которой совпадает с центром Земли (рис. 1).</p>
+<p>Чтобы полностью определить кеплеровское движение КА, то есть положение и скорость КА в любой момент, в теорию полета вводится набор из 6 независимых параметров, называемых элементами кеплеровской траектории. Это долгота восходящего узла W, наклонение плоскости орбиты к плоскости экватора i, аргумент перигея w, эксцентриситет e, фокальный параметр p, а также время прохождения КА через перигей П орбиты tp. При невозмущенном кеплеровском движении эти параметры остаются постоянными на протяжении всего времени полета КА.</p>
+<p>Для определения параметров кеплеровской траектории движения КА в трехмерном пространстве используется абсолютная геоцентрическая система координат EАГ (рис. 1). Начало системы координат OАГ расположено в центре Земли. Ось OАГZАГ совпадает с осью вращения Земли и направлена на Северный полюс. Ось OАГXАГ перпендикулярна ей и направлена в точку весеннего равноденствия V. Ось OАГYАГ дополняет систему координат до правосторонней.</p>
+<p>Положение КА в плоскости эллиптической орбиты в момент t задается углом J (истинная аномалия) и длиной r радиус-вектора <img src="uploaded/image/2010-4/image255.gif" border="0" alt="" width="12" height="16" />, направленного из центра Земли в центр масс КА. Вычисление J и r в момент t по заданным параметрам орбиты приводится в [2&ndash;4].</p>
+<p>Движение КА как твердого тела можно смоделировать, определив в каждый момент его положение и ориентацию в системе координат EАГ. В теории полета положение центра масс КА в системе EАГ определяется с помощью сопровождающей системы координат EС. Начало координат OС совпадает с OАГ. Ось OСXC совпадает по направлению с текущим радиус-вектором <img src="uploaded/image/2010-4/image255.gif" border="0" alt="" width="12" height="16" />, ось OСZC &ndash; с векторной константой площадей <img src="uploaded/image/2010-4/image258.gif" border="0" alt="" width="13" height="20" />&nbsp;(рис. 1), а ось OСYC дополняет эти оси до правосторонней системы координат (рис. 2). В этой системе координат центр масс КА всегда имеет координаты  (r, 0, 0, 1). Введем дополнительную систему координат EКА, жестко связанную с КА, то есть при движении КА координаты его точек в системе EКА не меняются. Начало координат OКА расположим в центре масс КА, а оси координат направим так же, как в системе EС. Тогда положение и ориентацию КА в системе EАГ можно определить, вычислив матрицу преобразования координат точек КА из системы EКА в систему EАГ.</p>
+<p>Из линейной алгебры известно: если в аффинном пространстве имеются системы координат <img src="uploaded/image/2010-4/image260.gif" border="0" alt="" width="99" height="24" />&nbsp;и <img src="uploaded/image/2010-4/image262.gif" border="0" alt="" width="105" height="24" />, где <img src="uploaded/image/2010-4/image264.gif" border="0" alt="" width="13" height="20" />&nbsp;и <img src="uploaded/image/2010-4/image266.gif" border="0" alt="" width="15" height="20" />&nbsp;&ndash; ортонормированные векторы базисов, а O и O&cent; &ndash; начала соответствующих систем координат и E переводится в E&cent; с помощью произвольной последовательности поворотов и переносов, последовательно совмещаясь с промежуточными системами координат E1,&hellip;, Ek-1, то имеют место следующие соотношения:</p>
+<p><img src="uploaded/image/2010-4/image268.gif" border="0" alt="" width="188" height="65" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+<p>где P &ndash; координаты точки P в системе E; P&cent; &ndash; координаты точки P в системе E&cent;; Mi &ndash; матрица, переводящая систему Ei-1 в систему Ei либо путем поворота Ei-1 вокруг оси <img src="uploaded/image/2010-4/image270.gif" border="0" alt="" width="24" height="21" />&nbsp;на угол a (<img src="uploaded/image/2010-4/image272.gif" border="0" alt="" width="33" height="23" />), или вокруг <img src="uploaded/image/2010-4/image274.gif" border="0" alt="" width="24" height="21" />&nbsp;на угол b (<img src="uploaded/image/2010-4/image276.gif" border="0" alt="" width="33" height="23" />), или вокруг оси <img src="uploaded/image/2010-4/image278.gif" border="0" alt="" width="24" height="21" />&nbsp;на угол g (<img src="uploaded/image/2010-4/image280.gif" border="0" alt="" width="32" height="23" />) (положительным считается поворот системы координат по часовой стрелке, если смотреть с конца вектора, вокруг которого осуществляется поворот), либо путем переноса Ei на вектор <img src="uploaded/image/2010-4/image282.gif" border="0" alt="" width="63" height="20" />&nbsp;(<img src="uploaded/image/2010-4/image284.gif" border="0" alt="" width="28" height="21" />). Матрицы <img src="uploaded/image/2010-4/image272.gif" border="0" alt="" width="33" height="23" />, <img src="uploaded/image/2010-4/image276.gif" border="0" alt="" width="33" height="23" />, <img src="uploaded/image/2010-4/image280.gif" border="0" alt="" width="32" height="23" />&nbsp;и <img src="uploaded/image/2010-4/image284.gif" border="0" alt="" width="28" height="21" />&nbsp;имеют вид</p>
+<p><img src="uploaded/image/2010-4/image290.gif" border="0" alt="" width="181" height="83" /></p>
+<p><img src="uploaded/image/2010-4/image292.gif" alt="Подпись:  
+Рис. 2. Моделирование движения КА 
+в неподвижной системе координат ЕАГ" width="295" height="322" align="left" /><img src="uploaded/image/2010-4/image294.gif" border="0" alt="" width="179" height="83" /></p>
+<p><img src="uploaded/image/2010-4/image296.gif" border="0" alt="" width="177" height="83" /></p>
+<p><img src="uploaded/image/2010-4/image298.gif" border="0" alt="" width="169" height="84" />&nbsp;</p>
+<p>Матрицы <img src="uploaded/image/2010-4/image300.gif" border="0" alt="" width="31" height="25" />, <img src="uploaded/image/2010-4/image302.gif" border="0" alt="" width="31" height="25" />, <img src="uploaded/image/2010-4/image304.gif" border="0" alt="" width="31" height="25" />&nbsp;и <img src="uploaded/image/2010-4/image306.gif" border="0" alt="" width="28" height="25" />&nbsp;обозначаются в данной статье как <img src="uploaded/image/2010-4/image308.gif" border="0" alt="" width="31" height="23" />, <img src="uploaded/image/2010-4/image310.gif" border="0" alt="" width="31" height="23" />, <img src="uploaded/image/2010-4/image312.gif" border="0" alt="" width="29" height="23" />&nbsp;и <img src="uploaded/image/2010-4/image314.gif" border="0" alt="" width="23" height="21" />&nbsp;соответственно.</p>
+<p>Таким образом, преобразование PКА в PАГ можно получить, если мысленно совместить систему EКА с системой EС, а затем с системой EАГ с помощью последовательного переноса и поворотов системы EКА (рис. 2):</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; перенос на вектор <img src="uploaded/image/2010-4/image316.gif" border="0" alt="" width="84" height="23" />&nbsp;вдоль оси OXКА;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; поворот на угол u вокруг оси OZC, где u &ndash; аргумент широты, u = w + J;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; поворот на угол i вокруг оси <img src="uploaded/image/2010-4/image318.gif" border="0" alt="" width="31" height="20" />, полученной после первого поворота EС;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; поворот на угол W вокруг оси <img src="uploaded/image/2010-4/image320.gif" border="0" alt="" width="31" height="20" />, полученной после второго поворота EС.</p>
+<p>По формуле (1) результирующий перевод системы EКА в систему EАГ имеет следующий матричный вид: <img src="uploaded/image/2010-4/image322.gif" border="0" alt="" width="197" height="21" />, а преобразование координат PКА в PАГ вид</p>
+<p><img src="uploaded/image/2010-4/image324.gif" border="0" alt="" width="180" height="21" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)</p>
+<p>Имитация движения КА по орбите в подсистеме визуализации</p>
+<p>Как отмечалось ранее, движение КА в подсистеме визуализации имитируется путем переноса и ориентации в виртуальной сцене модели Земли относительно неподвижной модели КА (рис. 3).</p>
+<p>Модель Земли задается в гринвичской системе координат EГ. Ее начало координат OГ расположено в центре Земли, ось OГXГ направлена в точку пересечения Гринвичского меридиана с экватором, ось OГZГ совпадает с осью вращения Земли и направлена на Северный полюс Земли, а ось OГYГ дополняет оси до правосторонней системы координат. Таким образом, система EГ перемещается и поворачивается вместе с моделью Земли.</p>
+<p>Рассматриваемая модель КА в подсистеме визуализации задается в системе координат EКА,В, которая, как и система EКА, жестко связана с КА. В виртуальной сцене система EКА,В остается неподвижной, а виртуальная камера так же, как и EКА,В, жестко связывается с КА.</p>
+<p>Пусть в некоторый момент КА расположен и ориентирован относительно неподвижной системы координат EАГ в соответствии с параметрами, задающими его орбиту, и в камере виден некоторый участок земной поверхности. Задача подсистемы визуализации состоит в том, чтобы в виртуальной сцене установить и ориентировать модель Земли (то есть систему координат EГ) относительно неподвижной модели КА (то есть системы EКА,В) так, чтобы в камере был виден в точности тот же участок Земли. Так как камера жестко связана с КА, математически это условие означает, что любая точка P модели Земли будет иметь в системе EКА,В одни и те же координаты PКА,В независимо от того, будет ли расположена и ориентирована EКА относительно EАГ или EГ относительно EКА,В.</p>
+<p>В первом случае, согласно (1), координаты PКА,В можно вычислить следующим образом:</p>
+<p><img src="uploaded/image/2010-4/image326.gif" border="0" alt="" width="185" height="47" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p><img src="uploaded/image/2010-4/image328.gif" alt="Подпись:  
+Рис. 3. Имитация движения КА в подсистеме 
+визуализации" width="304" height="282" align="left" />где PГ &ndash; исходные координаты точки P в системе EГ; <img src="uploaded/image/2010-4/image330.gif" border="0" alt="" width="40" height="21" />&nbsp;&ndash; матрица преобразования координат точки P из системы координат EГ в систему EАГ; <img src="uploaded/image/2010-4/image332.gif" border="0" alt="" width="47" height="21" />&nbsp;&ndash; из EАГ в EКА; <img src="uploaded/image/2010-4/image334.gif" border="0" alt="" width="55" height="23" />&nbsp;&ndash; из EКА в EКА,В. Выражение (3) также можно записать в следующем виде: <img src="uploaded/image/2010-4/image336.gif" border="0" alt="" width="163" height="23" />, где матрица <img src="uploaded/image/2010-4/image338.gif" border="0" alt="" width="40" height="21" />, с одной стороны, определяет результирующее преобразование координат PГ из системы EГ в систему EКА, а с другой &ndash; задает положение и ориентацию модели Земли в системе координат EКА. Вычислив <img src="uploaded/image/2010-4/image338.gif" border="0" alt="" width="40" height="21" />, из нее можно найти вектор переноса и углы Эйлера&ndash;Крылова, устанавливающие модель Земли в системе координат EКА, а затем с помощью матрицы <img src="uploaded/image/2010-4/image334.gif" border="0" alt="" width="55" height="23" />&nbsp;перевести координаты точек модели Земли из системы EКА в систему EКА,В. Рассмотрим эти этапы более подробно.</p>
+<p>Вычисление матриц преобразования координат точек модели Земли. Согласно выражению (3), чтобы определить координаты любой точки модели Земли в системе координат EКА,В, необходимо вычислить матрицы <img src="uploaded/image/2010-4/image330.gif" border="0" alt="" width="40" height="21" />, <img src="uploaded/image/2010-4/image332.gif" border="0" alt="" width="47" height="21" />&nbsp;и <img src="uploaded/image/2010-4/image334.gif" border="0" alt="" width="55" height="23" />.</p>
+<p>Найдем вначале матрицу <img src="uploaded/image/2010-4/image330.gif" border="0" alt="" width="40" height="21" />. Для этого рассмотрим, как взаимосвязаны системы координат EГ и EАГ. У этих систем оси OГZГ и OАГZАГ совпадают, а часовой угол s между осями OАГXАГ и OГXГ определяется как гринвичское звездное время: <img src="uploaded/image/2010-4/image346.gif" border="0" alt="" width="112" height="23" />, где s0 &ndash; часовой угол (звездное время) в гринвичскую полночь (находится из Астрономического ежегодника); wЗ &ndash; угловая скорость вращения Земли; <img src="uploaded/image/2010-4/image348.gif" border="0" alt="" width="19" height="23" />&nbsp;&ndash; время наступления гринвичской полночи по Москве; t &ndash; текущее время по Москве. Согласно (1) координаты PАГ любой точки P модели Земли в системе EАГ находятся как</p>
+<p><img src="uploaded/image/2010-4/image350.gif" border="0" alt="" width="81" height="21" />, то есть <img src="uploaded/image/2010-4/image352.gif" border="0" alt="" width="77" height="23" />.&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)</p>
+<p>Матрицу <img src="uploaded/image/2010-4/image332.gif" border="0" alt="" width="47" height="21" />&nbsp;нетрудно найти, приведя соотношение (2) к виду</p>
+<p><img src="uploaded/image/2010-4/image355.gif" border="0" alt="" width="201" height="31" />, отсюда</p>
+<p><img src="uploaded/image/2010-4/image357.gif" border="0" alt="" width="209" height="55" />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5)</p>
+<p>Наконец, из рисунка 3 легко видеть, что система координат EКА совмещается с системой EКА,В поворотом EКА по часовой стрелке сначала вокруг оси OКАZКА на p радиан, а затем вокруг оси OКАYКА на p/2 радиан. Согласно (1) координаты точки P в этих системах соотносятся следующим образом:</p>
+<p><img src="uploaded/image/2010-4/image359.gif" border="0" alt="" width="137" height="21" />,</p>
+<p>то есть <img src="uploaded/image/2010-4/image361.gif" border="0" alt="" width="133" height="23" />.&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6)</p>
+<p><img src="uploaded/image/2010-4/image363.gif" alt="Подпись:  
+Рис. 4. Ориентация КА относительно Земли" width="294" height="312" align="left" />Подставив (4), (5) и (6) в выражение (3), получим:</p>
+<p><img src="uploaded/image/2010-4/image365.gif" border="0" alt="" width="171" height="21" />,</p>
+<p>где <img src="uploaded/image/2010-4/image367.gif" border="0" alt="" width="208" height="23" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (7)</p>
+<p><img src="uploaded/image/2010-4/image369.gif" border="0" alt="" width="262" height="84" /></p>
+<p><img src="uploaded/image/2010-4/image371.gif" border="0" alt="" width="247" height="84" /></p>
+<p><img src="uploaded/image/2010-4/image373.gif" border="0" alt="" width="97" height="83" />.</p>
+<p>Восстановление вектора переноса и углов Эйлера&ndash;Крылова. Согласно (7) матрицу MГ-КА можно представить в виде произведения двух матриц:</p>
+<p><img src="uploaded/image/2010-4/image375.gif" border="0" alt="" width="83" height="20" />, <img src="uploaded/image/2010-4/image377.gif" border="0" alt="" width="40" height="21" />, <img src="uploaded/image/2010-4/image379.gif" border="0" alt="" width="84" height="23" /><img src="uploaded/image/2010-4/image381.gif" border="0" alt="" width="64" height="23" />.</p>
+<p>Матрица T определяет положение Земли в системе координат EКА, так как она преобразует координаты PГ в координаты PКА, когда система EГ совмещается с системой EКА только путем параллельного переноса. Вектор <img src="uploaded/image/2010-4/image383.gif" border="0" alt="" width="79" height="23" />&nbsp;является искомым вектором, задающим положение центра Земли в системе EКА.</p>
+<p>Матрица R задает ориентацию Земли в системе координат EКА, так как она переводит координаты PГ в координаты PКА, когда система EГ совмещается с системой EКА путем последовательных поворотов вокруг своих осей координат.</p>
+<p>Чтобы восстановить из матрицы R углы Эйлера&ndash;Крылова, задающие ориентацию Земли в системе EКА, представим последовательность поворотов по этим углам в виде матрицы ориентации Земли R&cent; и из равенства R&cent;=R найдем искомые углы Эйлера&ndash;Крылова.</p>
+<p>В подсистеме визуализации для ориентации Земли выбирается такая схема поворотов системы EГ на углы Эйлера&ndash;Крылова q, y и j, при которой углы j и y сохраняют связь с геоцентрической долготой lГ и широтой yГ положения КА.</p>
+<p>Чтобы найти такую схему поворотов, рассмотрим перевод системы координат EГ в систему EКА. Для этого сначала осуществим поворот вокруг оси OГZГ на угол j=-lГ(-p&pound;lГ&pound;p), затем вокруг оси OГYГ, полученной после первого поворота EГ, на угол y=yГ(-p/2&pound;yГ&pound;p/2) и, наконец, вокруг оси OГXГ, полученной после второго поворота EГ, на некоторый угол m (рис. 4). Напомним, что положительным считается поворот по часовой стрелке, если смотреть из конца вектора, вокруг которого осуществляется поворот, чем объясняется знак &laquo;&ndash;&raquo; в выражении j= &ndash;lГ. Согласно (1) система EГ переводится в EКА с помощью следующего матричного преобразования:</p>
+<p><img src="uploaded/image/2010-4/image385.gif" border="0" alt="" width="177" height="24" />.</p>
+<p>Из данного выражения получаем:</p>
+<p><img src="uploaded/image/2010-4/image387.gif" border="0" alt="" width="189" height="49" />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (8)</p>
+<p>что соответствует ориентации системы EГ (жестко связанной с Землей) относительно системы EКА (жестко связанной с КА). Считаем, что углы Эйлера&ndash;Крылова &ndash; это повороты системы координат вокруг базисных векторов по часовой стрелке, если смотреть из конца вектора, вокруг которого выполняется поворот. Поэтому из (8) получаем следующую схему поворотов по углам Эйлера&ndash;Кры&shy;лова:</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; поворот на угол q=&ndash;m вокруг оси OКАXКА;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; поворот на угол y=&ndash;yГ вокруг оси OКАYКА, полученной после первого поворота EКА;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; поворот на угол j=lГ вокруг оси OКАZКА, полученной после второго поворота EКА.</p>
+<p>Согласно (1) из соотношения (8) выводится преобразование координат точки P из системы EКА в систему EГ: <img src="uploaded/image/2010-4/image389.gif" border="0" alt="" width="171" height="24" />, откуда легко найти, что</p>
+<p><img src="uploaded/image/2010-4/image391.gif" border="0" alt="" width="189" height="49" /></p>
+<p><img src="uploaded/image/2010-4/image393.gif" border="0" alt="" width="187" height="105" /></p>
+<p><img src="uploaded/image/2010-4/image395.gif" border="0" alt="" width="263" height="81" />.</p>
+<p>Здесь необходимо отметить, что в случае, когда y=p/2, матрица R&cent; принимает следующий вид:</p>
+<p><img src="uploaded/image/2010-4/image397.gif" border="0" alt="" width="228" height="83" />.</p>
+<p>Как видно, R&cent; зависит лишь от разности углов j и q, а не от их конкретных значений, то есть теряется одна степень свободы. Аналогичная ситуация возникает при y=&ndash;p/2. Таким образом, при y=&plusmn;p/2 по матрице невозможно однозначно определить остальные углы Эйлера&ndash;Крылова. Будем считать, что рассматриваемая орбита не является полярной (i&sup1;p/2), то есть y&sup1;&plusmn;p/2 и cosy&sup1;0.</p>
+<p>Приравняв R&cent; к R, получим следующую систему уравнений:</p>
+<p><img src="uploaded/image/2010-4/image399.gif" border="0" alt="" width="191" height="161" /></p>
+<p>Отсюда следует:</p>
+<p><img src="uploaded/image/2010-4/image401.gif" border="0" alt="" width="128" height="132" /></p>
+<p>Знак &laquo;+&raquo; перед квадратным корнем объясняется тем, что &ndash;p/2</p>
+<p>&nbsp;</p>
+<p>Начало.</p>
+<p>1.&nbsp;&nbsp; Вычислить угол y:</p>
+<p><img src="uploaded/image/2010-4/image403.gif" border="0" alt="" width="67" height="20" />; <img src="uploaded/image/2010-4/image405.gif" border="0" alt="" width="117" height="27" />;</p>
+<p><img src="uploaded/image/2010-4/image407.gif" border="0" alt="" width="97" height="24" />, так как <img src="uploaded/image/2010-4/image409.gif" border="0" alt="" width="97" height="19" />.</p>
+<p>2.&nbsp;&nbsp; Вычислить угол j:</p>
+<p><img src="uploaded/image/2010-4/image411.gif" border="0" alt="" width="97" height="20" />&nbsp;<img src="uploaded/image/2010-4/image413.gif" border="0" alt="" width="95" height="20" />;</p>
+<p><img src="uploaded/image/2010-4/image415.gif" border="0" alt="" width="124" height="24" />;</p>
+<p>Если <img src="uploaded/image/2010-4/image417.gif" border="0" alt="" width="63" height="23" />, то j = &ndash;j.</p>
+<p>3.&nbsp;&nbsp; Вычислить угол q:</p>
+<p><img src="uploaded/image/2010-4/image419.gif" border="0" alt="" width="92" height="20" />; <img src="uploaded/image/2010-4/image421.gif" border="0" alt="" width="93" height="20" />;</p>
+<p><img src="uploaded/image/2010-4/image423.gif" border="0" alt="" width="123" height="24" />;</p>
+<p>Если <img src="uploaded/image/2010-4/image425.gif" border="0" alt="" width="61" height="23" />, то q = &ndash;q.</p>
+<p>Конец.</p>
+<p>Программируя данный алгоритм, при проверке неравенств необходимо также учесть машинную погрешность представления действительных чисел.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Михайлюк М.В., Торгашев М.А. Система &laquo;GLView&raquo; визуализации для комплексов виртуального окружения // MEDIAS-2009: тр. Междунар. науч. конф. (10&ndash;15 мая 2009 г., Лимассол. Кипр). М.&ndash;Протвино: ИФТИ, 2009.</p>
+<p>2.&nbsp;&nbsp; Дубошин Г.Н. Справочное руководство по небесной механике и астродинамике. М.: Наука, 1976.</p>
+<p>3.&nbsp;&nbsp; Михайлюк М.В., Тимохин П.Ю. Имитация движения космического аппарата по орбите путем моделирования ориентации земной поверхности: сб. тр. М.: НИИСИ РАН, 2009.</p>
+<p>4.&nbsp;&nbsp; Meeus J. Astronomical algorithms // Willmann-Bell, 1st Edition, Richmond, Virginia, USA, 1991.</p>
+<p>5.&nbsp;&nbsp; Михайлюк М.В. Основы компьютерной графики. М.: МАТИ, 2002.</p>
+<p>6.&nbsp;&nbsp; Ken Shoemake. Animating rotation with quaternion calculus. In ACM SIGGRAPH Course Notes 10: Computer Animation: 3-D Motion, Specification, and Control. Anaheim, California, 1987. July 27&ndash;31.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2607</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2607">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 4 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=92">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>
