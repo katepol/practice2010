@@ -1,0 +1,5 @@
+true        forum        livejournal        news        science article        
+forum       100       0       0       0       
+livejournal       1       99       0       0       
+news       6       0       94       0       
+science article       23       0       0       77       
