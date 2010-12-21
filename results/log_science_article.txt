@@ -1,0 +1,426 @@
+Started at 15:57:53
+Written file is /home/kate/APTU/Practice/data2/2463s
+http://swsys.ru/index.php?page=article&id=2463
+Written file is /home/kate/APTU/Practice/data2/2464s
+http://swsys.ru/index.php?page=article&id=2464
+Written file is /home/kate/APTU/Practice/data2/2465s
+http://swsys.ru/index.php?page=article&id=2465
+Written file is /home/kate/APTU/Practice/data2/2466s
+http://swsys.ru/index.php?page=article&id=2466
+    file id 2466 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2466s
+Written file is /home/kate/APTU/Practice/data2/2467s
+http://swsys.ru/index.php?page=article&id=2467
+    file id 2467 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2467s
+Written file is /home/kate/APTU/Practice/data2/2468s
+http://swsys.ru/index.php?page=article&id=2468
+    file id 2468 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2468s
+Written file is /home/kate/APTU/Practice/data2/2469s
+http://swsys.ru/index.php?page=article&id=2469
+    file id 2469 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2469s
+Written file is /home/kate/APTU/Practice/data2/2470s
+http://swsys.ru/index.php?page=article&id=2470
+    file id 2470 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2470s
+Written file is /home/kate/APTU/Practice/data2/2471s
+http://swsys.ru/index.php?page=article&id=2471
+    file id 2471 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2471s
+Written file is /home/kate/APTU/Practice/data2/2472s
+http://swsys.ru/index.php?page=article&id=2472
+    file id 2472 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2472s
+Written file is /home/kate/APTU/Practice/data2/2473s
+http://swsys.ru/index.php?page=article&id=2473
+    file id 2473 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2473s
+Written file is /home/kate/APTU/Practice/data2/2474s
+http://swsys.ru/index.php?page=article&id=2474
+    file id 2474 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2474s
+Written file is /home/kate/APTU/Practice/data2/2475s
+http://swsys.ru/index.php?page=article&id=2475
+    file id 2475 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2475s
+Written file is /home/kate/APTU/Practice/data2/2476s
+http://swsys.ru/index.php?page=article&id=2476
+    file id 2476 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2476s
+Written file is /home/kate/APTU/Practice/data2/2477s
+http://swsys.ru/index.php?page=article&id=2477
+    file id 2477 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2477s
+Written file is /home/kate/APTU/Practice/data2/2478s
+http://swsys.ru/index.php?page=article&id=2478
+    file id 2478 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2478s
+Written file is /home/kate/APTU/Practice/data2/2479s
+http://swsys.ru/index.php?page=article&id=2479
+    file id 2479 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2479s
+Written file is /home/kate/APTU/Practice/data2/2480s
+http://swsys.ru/index.php?page=article&id=2480
+    file id 2480 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2480s
+Written file is /home/kate/APTU/Practice/data2/2481s
+http://swsys.ru/index.php?page=article&id=2481
+    file id 2481 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2481s
+Written file is /home/kate/APTU/Practice/data2/2482s
+http://swsys.ru/index.php?page=article&id=2482
+    file id 2482 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2482s
+Written file is /home/kate/APTU/Practice/data2/2483s
+http://swsys.ru/index.php?page=article&id=2483
+    file id 2483 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2483s
+Written file is /home/kate/APTU/Practice/data2/2484s
+http://swsys.ru/index.php?page=article&id=2484
+    file id 2484 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2484s
+Written file is /home/kate/APTU/Practice/data2/2485s
+http://swsys.ru/index.php?page=article&id=2485
+    file id 2485 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2485s
+Written file is /home/kate/APTU/Practice/data2/2486s
+http://swsys.ru/index.php?page=article&id=2486
+    file id 2486 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2486s
+Written file is /home/kate/APTU/Practice/data2/2487s
+http://swsys.ru/index.php?page=article&id=2487
+    file id 2487 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2487s
+Written file is /home/kate/APTU/Practice/data2/2488s
+http://swsys.ru/index.php?page=article&id=2488
+    file id 2488 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2488s
+Written file is /home/kate/APTU/Practice/data2/2489s
+http://swsys.ru/index.php?page=article&id=2489
+    file id 2489 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2489s
+Written file is /home/kate/APTU/Practice/data2/2490s
+http://swsys.ru/index.php?page=article&id=2490
+    file id 2490 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2490s
+Written file is /home/kate/APTU/Practice/data2/2491s
+http://swsys.ru/index.php?page=article&id=2491
+    file id 2491 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2491s
+Written file is /home/kate/APTU/Practice/data2/2492s
+http://swsys.ru/index.php?page=article&id=2492
+    file id 2492 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2492s
+Written file is /home/kate/APTU/Practice/data2/2493s
+http://swsys.ru/index.php?page=article&id=2493
+    file id 2493 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2493s
+Written file is /home/kate/APTU/Practice/data2/2494s
+http://swsys.ru/index.php?page=article&id=2494
+    file id 2494 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2494s
+Written file is /home/kate/APTU/Practice/data2/2495s
+http://swsys.ru/index.php?page=article&id=2495
+    file id 2495 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2495s
+Written file is /home/kate/APTU/Practice/data2/2496s
+http://swsys.ru/index.php?page=article&id=2496
+    file id 2496 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2496s
+Written file is /home/kate/APTU/Practice/data2/2497s
+http://swsys.ru/index.php?page=article&id=2497
+    file id 2497 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2497s
+Written file is /home/kate/APTU/Practice/data2/2498s
+http://swsys.ru/index.php?page=article&id=2498
+    file id 2498 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2498s
+Written file is /home/kate/APTU/Practice/data2/2499s
+http://swsys.ru/index.php?page=article&id=2499
+    file id 2499 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2499s
+Written file is /home/kate/APTU/Practice/data2/2500s
+http://swsys.ru/index.php?page=article&id=2500
+Written file is /home/kate/APTU/Practice/data2/2501s
+http://swsys.ru/index.php?page=article&id=2501
+Written file is /home/kate/APTU/Practice/data2/2502s
+http://swsys.ru/index.php?page=article&id=2502
+Written file is /home/kate/APTU/Practice/data2/2503s
+http://swsys.ru/index.php?page=article&id=2503
+Written file is /home/kate/APTU/Practice/data2/2504s
+http://swsys.ru/index.php?page=article&id=2504
+Written file is /home/kate/APTU/Practice/data2/2505s
+http://swsys.ru/index.php?page=article&id=2505
+Written file is /home/kate/APTU/Practice/data2/2506s
+http://swsys.ru/index.php?page=article&id=2506
+Written file is /home/kate/APTU/Practice/data2/2507s
+http://swsys.ru/index.php?page=article&id=2507
+Written file is /home/kate/APTU/Practice/data2/2508s
+http://swsys.ru/index.php?page=article&id=2508
+Written file is /home/kate/APTU/Practice/data2/2509s
+http://swsys.ru/index.php?page=article&id=2509
+Written file is /home/kate/APTU/Practice/data2/2510s
+http://swsys.ru/index.php?page=article&id=2510
+Written file is /home/kate/APTU/Practice/data2/2511s
+http://swsys.ru/index.php?page=article&id=2511
+Written file is /home/kate/APTU/Practice/data2/2512s
+http://swsys.ru/index.php?page=article&id=2512
+Written file is /home/kate/APTU/Practice/data2/2513s
+http://swsys.ru/index.php?page=article&id=2513
+Written file is /home/kate/APTU/Practice/data2/2514s
+http://swsys.ru/index.php?page=article&id=2514
+Written file is /home/kate/APTU/Practice/data2/2515s
+http://swsys.ru/index.php?page=article&id=2515
+Written file is /home/kate/APTU/Practice/data2/2516s
+http://swsys.ru/index.php?page=article&id=2516
+Written file is /home/kate/APTU/Practice/data2/2517s
+http://swsys.ru/index.php?page=article&id=2517
+Written file is /home/kate/APTU/Practice/data2/2518s
+http://swsys.ru/index.php?page=article&id=2518
+Written file is /home/kate/APTU/Practice/data2/2519s
+http://swsys.ru/index.php?page=article&id=2519
+Written file is /home/kate/APTU/Practice/data2/2520s
+http://swsys.ru/index.php?page=article&id=2520
+Written file is /home/kate/APTU/Practice/data2/2521s
+http://swsys.ru/index.php?page=article&id=2521
+Written file is /home/kate/APTU/Practice/data2/2522s
+http://swsys.ru/index.php?page=article&id=2522
+Written file is /home/kate/APTU/Practice/data2/2523s
+http://swsys.ru/index.php?page=article&id=2523
+Written file is /home/kate/APTU/Practice/data2/2524s
+http://swsys.ru/index.php?page=article&id=2524
+Written file is /home/kate/APTU/Practice/data2/2525s
+http://swsys.ru/index.php?page=article&id=2525
+Written file is /home/kate/APTU/Practice/data2/2526s
+http://swsys.ru/index.php?page=article&id=2526
+Written file is /home/kate/APTU/Practice/data2/2527s
+http://swsys.ru/index.php?page=article&id=2527
+Written file is /home/kate/APTU/Practice/data2/2528s
+http://swsys.ru/index.php?page=article&id=2528
+Written file is /home/kate/APTU/Practice/data2/2529s
+http://swsys.ru/index.php?page=article&id=2529
+Written file is /home/kate/APTU/Practice/data2/2530s
+http://swsys.ru/index.php?page=article&id=2530
+Written file is /home/kate/APTU/Practice/data2/2531s
+http://swsys.ru/index.php?page=article&id=2531
+Written file is /home/kate/APTU/Practice/data2/2532s
+http://swsys.ru/index.php?page=article&id=2532
+Written file is /home/kate/APTU/Practice/data2/2533s
+http://swsys.ru/index.php?page=article&id=2533
+Written file is /home/kate/APTU/Practice/data2/2534s
+http://swsys.ru/index.php?page=article&id=2534
+Written file is /home/kate/APTU/Practice/data2/2535s
+http://swsys.ru/index.php?page=article&id=2535
+Written file is /home/kate/APTU/Practice/data2/2536s
+http://swsys.ru/index.php?page=article&id=2536
+Written file is /home/kate/APTU/Practice/data2/2537s
+http://swsys.ru/index.php?page=article&id=2537
+Written file is /home/kate/APTU/Practice/data2/2538s
+http://swsys.ru/index.php?page=article&id=2538
+Written file is /home/kate/APTU/Practice/data2/2539s
+http://swsys.ru/index.php?page=article&id=2539
+Written file is /home/kate/APTU/Practice/data2/2540s
+http://swsys.ru/index.php?page=article&id=2540
+    file id 2540 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2540s
+Written file is /home/kate/APTU/Practice/data2/2541s
+http://swsys.ru/index.php?page=article&id=2541
+    file id 2541 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2541s
+Written file is /home/kate/APTU/Practice/data2/2542s
+http://swsys.ru/index.php?page=article&id=2542
+    file id 2542 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2542s
+Written file is /home/kate/APTU/Practice/data2/2543s
+http://swsys.ru/index.php?page=article&id=2543
+    file id 2543 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2543s
+Written file is /home/kate/APTU/Practice/data2/2544s
+http://swsys.ru/index.php?page=article&id=2544
+    file id 2544 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2544s
+Written file is /home/kate/APTU/Practice/data2/2545s
+http://swsys.ru/index.php?page=article&id=2545
+    file id 2545 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2545s
+Written file is /home/kate/APTU/Practice/data2/2546s
+http://swsys.ru/index.php?page=article&id=2546
+    file id 2546 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2546s
+Written file is /home/kate/APTU/Practice/data2/2547s
+http://swsys.ru/index.php?page=article&id=2547
+    file id 2547 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2547s
+Written file is /home/kate/APTU/Practice/data2/2548s
+http://swsys.ru/index.php?page=article&id=2548
+    file id 2548 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2548s
+Written file is /home/kate/APTU/Practice/data2/2549s
+http://swsys.ru/index.php?page=article&id=2549
+    file id 2549 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2549s
+Written file is /home/kate/APTU/Practice/data2/2550s
+http://swsys.ru/index.php?page=article&id=2550
+Written file is /home/kate/APTU/Practice/data2/2551s
+http://swsys.ru/index.php?page=article&id=2551
+Written file is /home/kate/APTU/Practice/data2/2552s
+http://swsys.ru/index.php?page=article&id=2552
+Written file is /home/kate/APTU/Practice/data2/2553s
+http://swsys.ru/index.php?page=article&id=2553
+Written file is /home/kate/APTU/Practice/data2/2554s
+http://swsys.ru/index.php?page=article&id=2554
+Written file is /home/kate/APTU/Practice/data2/2555s
+http://swsys.ru/index.php?page=article&id=2555
+Written file is /home/kate/APTU/Practice/data2/2556s
+http://swsys.ru/index.php?page=article&id=2556
+Written file is /home/kate/APTU/Practice/data2/2557s
+http://swsys.ru/index.php?page=article&id=2557
+Written file is /home/kate/APTU/Practice/data2/2558s
+http://swsys.ru/index.php?page=article&id=2558
+Written file is /home/kate/APTU/Practice/data2/2559s
+http://swsys.ru/index.php?page=article&id=2559
+Written file is /home/kate/APTU/Practice/data2/2560s
+http://swsys.ru/index.php?page=article&id=2560
+Written file is /home/kate/APTU/Practice/data2/2561s
+http://swsys.ru/index.php?page=article&id=2561
+Written file is /home/kate/APTU/Practice/data2/2562s
+http://swsys.ru/index.php?page=article&id=2562
+Written file is /home/kate/APTU/Practice/data2/2563s
+http://swsys.ru/index.php?page=article&id=2563
+Written file is /home/kate/APTU/Practice/data2/2564s
+http://swsys.ru/index.php?page=article&id=2564
+Written file is /home/kate/APTU/Practice/data2/2565s
+http://swsys.ru/index.php?page=article&id=2565
+Written file is /home/kate/APTU/Practice/data2/2566s
+http://swsys.ru/index.php?page=article&id=2566
+Written file is /home/kate/APTU/Practice/data2/2567s
+http://swsys.ru/index.php?page=article&id=2567
+Written file is /home/kate/APTU/Practice/data2/2568s
+http://swsys.ru/index.php?page=article&id=2568
+Written file is /home/kate/APTU/Practice/data2/2569s
+http://swsys.ru/index.php?page=article&id=2569
+Written file is /home/kate/APTU/Practice/data2/2570s
+http://swsys.ru/index.php?page=article&id=2570
+Written file is /home/kate/APTU/Practice/data2/2571s
+http://swsys.ru/index.php?page=article&id=2571
+Written file is /home/kate/APTU/Practice/data2/2572s
+http://swsys.ru/index.php?page=article&id=2572
+Written file is /home/kate/APTU/Practice/data2/2573s
+http://swsys.ru/index.php?page=article&id=2573
+Written file is /home/kate/APTU/Practice/data2/2574s
+http://swsys.ru/index.php?page=article&id=2574
+Written file is /home/kate/APTU/Practice/data2/2575s
+http://swsys.ru/index.php?page=article&id=2575
+Written file is /home/kate/APTU/Practice/data2/2576s
+http://swsys.ru/index.php?page=article&id=2576
+Written file is /home/kate/APTU/Practice/data2/2577s
+http://swsys.ru/index.php?page=article&id=2577
+Written file is /home/kate/APTU/Practice/data2/2578s
+http://swsys.ru/index.php?page=article&id=2578
+Written file is /home/kate/APTU/Practice/data2/2579s
+http://swsys.ru/index.php?page=article&id=2579
+Written file is /home/kate/APTU/Practice/data2/2580s
+http://swsys.ru/index.php?page=article&id=2580
+Written file is /home/kate/APTU/Practice/data2/2581s
+http://swsys.ru/index.php?page=article&id=2581
+Written file is /home/kate/APTU/Practice/data2/2582s
+http://swsys.ru/index.php?page=article&id=2582
+Written file is /home/kate/APTU/Practice/data2/2583s
+http://swsys.ru/index.php?page=article&id=2583
+Written file is /home/kate/APTU/Practice/data2/2584s
+http://swsys.ru/index.php?page=article&id=2584
+Written file is /home/kate/APTU/Practice/data2/2585s
+http://swsys.ru/index.php?page=article&id=2585
+Written file is /home/kate/APTU/Practice/data2/2586s
+http://swsys.ru/index.php?page=article&id=2586
+Written file is /home/kate/APTU/Practice/data2/2587s
+http://swsys.ru/index.php?page=article&id=2587
+Written file is /home/kate/APTU/Practice/data2/2588s
+http://swsys.ru/index.php?page=article&id=2588
+    file id 2588 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2588s
+Written file is /home/kate/APTU/Practice/data2/2589s
+http://swsys.ru/index.php?page=article&id=2589
+    file id 2589 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2589s
+Written file is /home/kate/APTU/Practice/data2/2590s
+http://swsys.ru/index.php?page=article&id=2590
+    file id 2590 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2590s
+Written file is /home/kate/APTU/Practice/data2/2591s
+http://swsys.ru/index.php?page=article&id=2591
+    file id 2591 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2591s
+Written file is /home/kate/APTU/Practice/data2/2592s
+http://swsys.ru/index.php?page=article&id=2592
+    file id 2592 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2592s
+Written file is /home/kate/APTU/Practice/data2/2593s
+http://swsys.ru/index.php?page=article&id=2593
+    file id 2593 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2593s
+Written file is /home/kate/APTU/Practice/data2/2594s
+http://swsys.ru/index.php?page=article&id=2594
+    file id 2594 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2594s
+Written file is /home/kate/APTU/Practice/data2/2595s
+http://swsys.ru/index.php?page=article&id=2595
+    file id 2595 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2595s
+Written file is /home/kate/APTU/Practice/data2/2596s
+http://swsys.ru/index.php?page=article&id=2596
+    file id 2596 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2596s
+Written file is /home/kate/APTU/Practice/data2/2597s
+http://swsys.ru/index.php?page=article&id=2597
+    file id 2597 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2597s
+Written file is /home/kate/APTU/Practice/data2/2598s
+http://swsys.ru/index.php?page=article&id=2598
+    file id 2598 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2598s
+Written file is /home/kate/APTU/Practice/data2/2599s
+http://swsys.ru/index.php?page=article&id=2599
+    file id 2599 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/2599s
+Written file is /home/kate/APTU/Practice/data2/2600s
+http://swsys.ru/index.php?page=article&id=2600
+Written file is /home/kate/APTU/Practice/data2/2601s
+http://swsys.ru/index.php?page=article&id=2601
+Written file is /home/kate/APTU/Practice/data2/2602s
+http://swsys.ru/index.php?page=article&id=2602
+Written file is /home/kate/APTU/Practice/data2/2603s
+http://swsys.ru/index.php?page=article&id=2603
+Written file is /home/kate/APTU/Practice/data2/2604s
+http://swsys.ru/index.php?page=article&id=2604
+Written file is /home/kate/APTU/Practice/data2/2605s
+http://swsys.ru/index.php?page=article&id=2605
+Written file is /home/kate/APTU/Practice/data2/2606s
+http://swsys.ru/index.php?page=article&id=2606
+Written file is /home/kate/APTU/Practice/data2/2607s
+http://swsys.ru/index.php?page=article&id=2607
+Written file is /home/kate/APTU/Practice/data2/2608s
+http://swsys.ru/index.php?page=article&id=2608
+Written file is /home/kate/APTU/Practice/data2/2609s
+http://swsys.ru/index.php?page=article&id=2609
+Written file is /home/kate/APTU/Practice/data2/2610s
+http://swsys.ru/index.php?page=article&id=2610
+Written file is /home/kate/APTU/Practice/data2/2611s
+http://swsys.ru/index.php?page=article&id=2611
+Written file is /home/kate/APTU/Practice/data2/2612s
+http://swsys.ru/index.php?page=article&id=2612
+Written file is /home/kate/APTU/Practice/data2/2613s
+http://swsys.ru/index.php?page=article&id=2613
+Written file is /home/kate/APTU/Practice/data2/2614s
+http://swsys.ru/index.php?page=article&id=2614
+Written file is /home/kate/APTU/Practice/data2/2615s
+http://swsys.ru/index.php?page=article&id=2615
+Written file is /home/kate/APTU/Practice/data2/2616s
+http://swsys.ru/index.php?page=article&id=2616
+Written file is /home/kate/APTU/Practice/data2/2617s
+http://swsys.ru/index.php?page=article&id=2617
+Written file is /home/kate/APTU/Practice/data2/2618s
+http://swsys.ru/index.php?page=article&id=2618
+Finished at 15:58:42
