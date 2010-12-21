@@ -1,0 +1,590 @@
+Started at 15:57:1
+Written file is /home/kate/APTU/Practice/data2/400f
+http://forum.ubuntu.ru/index.php?topic=400
+Written file is /home/kate/APTU/Practice/data2/401f
+http://forum.ubuntu.ru/index.php?topic=401
+    file id 401 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/401f
+Written file is /home/kate/APTU/Practice/data2/402f
+http://forum.ubuntu.ru/index.php?topic=402
+Written file is /home/kate/APTU/Practice/data2/403f
+http://forum.ubuntu.ru/index.php?topic=403
+    file id 403 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/403f
+Written file is /home/kate/APTU/Practice/data2/404f
+http://forum.ubuntu.ru/index.php?topic=404
+Written file is /home/kate/APTU/Practice/data2/405f
+http://forum.ubuntu.ru/index.php?topic=405
+Written file is /home/kate/APTU/Practice/data2/406f
+http://forum.ubuntu.ru/index.php?topic=406
+    file id 406 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/406f
+Written file is /home/kate/APTU/Practice/data2/407f
+http://forum.ubuntu.ru/index.php?topic=407
+    file id 407 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/407f
+Written file is /home/kate/APTU/Practice/data2/408f
+http://forum.ubuntu.ru/index.php?topic=408
+    file id 408 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/408f
+Written file is /home/kate/APTU/Practice/data2/409f
+http://forum.ubuntu.ru/index.php?topic=409
+    file id 409 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/409f
+Written file is /home/kate/APTU/Practice/data2/410f
+http://forum.ubuntu.ru/index.php?topic=410
+    file id 410 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/410f
+Written file is /home/kate/APTU/Practice/data2/411f
+http://forum.ubuntu.ru/index.php?topic=411
+Written file is /home/kate/APTU/Practice/data2/412f
+http://forum.ubuntu.ru/index.php?topic=412
+    file id 412 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/412f
+Written file is /home/kate/APTU/Practice/data2/413f
+http://forum.ubuntu.ru/index.php?topic=413
+    file id 413 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/413f
+Written file is /home/kate/APTU/Practice/data2/414f
+http://forum.ubuntu.ru/index.php?topic=414
+    file id 414 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/414f
+Written file is /home/kate/APTU/Practice/data2/415f
+http://forum.ubuntu.ru/index.php?topic=415
+Written file is /home/kate/APTU/Practice/data2/416f
+http://forum.ubuntu.ru/index.php?topic=416
+Written file is /home/kate/APTU/Practice/data2/417f
+http://forum.ubuntu.ru/index.php?topic=417
+    file id 417 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/417f
+Written file is /home/kate/APTU/Practice/data2/418f
+http://forum.ubuntu.ru/index.php?topic=418
+    file id 418 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/418f
+Written file is /home/kate/APTU/Practice/data2/419f
+http://forum.ubuntu.ru/index.php?topic=419
+    file id 419 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/419f
+Written file is /home/kate/APTU/Practice/data2/420f
+http://forum.ubuntu.ru/index.php?topic=420
+Written file is /home/kate/APTU/Practice/data2/421f
+http://forum.ubuntu.ru/index.php?topic=421
+Written file is /home/kate/APTU/Practice/data2/422f
+http://forum.ubuntu.ru/index.php?topic=422
+Written file is /home/kate/APTU/Practice/data2/423f
+http://forum.ubuntu.ru/index.php?topic=423
+Written file is /home/kate/APTU/Practice/data2/424f
+http://forum.ubuntu.ru/index.php?topic=424
+Written file is /home/kate/APTU/Practice/data2/425f
+http://forum.ubuntu.ru/index.php?topic=425
+Written file is /home/kate/APTU/Practice/data2/426f
+http://forum.ubuntu.ru/index.php?topic=426
+    file id 426 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/426f
+Written file is /home/kate/APTU/Practice/data2/427f
+http://forum.ubuntu.ru/index.php?topic=427
+Written file is /home/kate/APTU/Practice/data2/428f
+http://forum.ubuntu.ru/index.php?topic=428
+    file id 428 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/428f
+Written file is /home/kate/APTU/Practice/data2/429f
+http://forum.ubuntu.ru/index.php?topic=429
+Written file is /home/kate/APTU/Practice/data2/430f
+http://forum.ubuntu.ru/index.php?topic=430
+Written file is /home/kate/APTU/Practice/data2/431f
+http://forum.ubuntu.ru/index.php?topic=431
+Written file is /home/kate/APTU/Practice/data2/432f
+http://forum.ubuntu.ru/index.php?topic=432
+    file id 432 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/432f
+Written file is /home/kate/APTU/Practice/data2/433f
+http://forum.ubuntu.ru/index.php?topic=433
+Written file is /home/kate/APTU/Practice/data2/434f
+http://forum.ubuntu.ru/index.php?topic=434
+Written file is /home/kate/APTU/Practice/data2/435f
+http://forum.ubuntu.ru/index.php?topic=435
+    file id 435 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/435f
+Written file is /home/kate/APTU/Practice/data2/436f
+http://forum.ubuntu.ru/index.php?topic=436
+Written file is /home/kate/APTU/Practice/data2/437f
+http://forum.ubuntu.ru/index.php?topic=437
+Written file is /home/kate/APTU/Practice/data2/438f
+http://forum.ubuntu.ru/index.php?topic=438
+Written file is /home/kate/APTU/Practice/data2/439f
+http://forum.ubuntu.ru/index.php?topic=439
+    file id 439 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/439f
+Written file is /home/kate/APTU/Practice/data2/440f
+http://forum.ubuntu.ru/index.php?topic=440
+Written file is /home/kate/APTU/Practice/data2/441f
+http://forum.ubuntu.ru/index.php?topic=441
+Written file is /home/kate/APTU/Practice/data2/442f
+http://forum.ubuntu.ru/index.php?topic=442
+    file id 442 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/442f
+Written file is /home/kate/APTU/Practice/data2/443f
+http://forum.ubuntu.ru/index.php?topic=443
+Written file is /home/kate/APTU/Practice/data2/444f
+http://forum.ubuntu.ru/index.php?topic=444
+Written file is /home/kate/APTU/Practice/data2/445f
+http://forum.ubuntu.ru/index.php?topic=445
+    file id 445 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/445f
+Written file is /home/kate/APTU/Practice/data2/446f
+http://forum.ubuntu.ru/index.php?topic=446
+Written file is /home/kate/APTU/Practice/data2/447f
+http://forum.ubuntu.ru/index.php?topic=447
+Written file is /home/kate/APTU/Practice/data2/448f
+http://forum.ubuntu.ru/index.php?topic=448
+Written file is /home/kate/APTU/Practice/data2/449f
+http://forum.ubuntu.ru/index.php?topic=449
+    file id 449 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/449f
+Written file is /home/kate/APTU/Practice/data2/450f
+http://forum.ubuntu.ru/index.php?topic=450
+Written file is /home/kate/APTU/Practice/data2/451f
+http://forum.ubuntu.ru/index.php?topic=451
+Written file is /home/kate/APTU/Practice/data2/452f
+http://forum.ubuntu.ru/index.php?topic=452
+    file id 452 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/452f
+Written file is /home/kate/APTU/Practice/data2/453f
+http://forum.ubuntu.ru/index.php?topic=453
+    file id 453 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/453f
+Written file is /home/kate/APTU/Practice/data2/454f
+http://forum.ubuntu.ru/index.php?topic=454
+    file id 454 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/454f
+Written file is /home/kate/APTU/Practice/data2/455f
+http://forum.ubuntu.ru/index.php?topic=455
+    file id 455 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/455f
+Written file is /home/kate/APTU/Practice/data2/456f
+http://forum.ubuntu.ru/index.php?topic=456
+Written file is /home/kate/APTU/Practice/data2/457f
+http://forum.ubuntu.ru/index.php?topic=457
+Written file is /home/kate/APTU/Practice/data2/458f
+http://forum.ubuntu.ru/index.php?topic=458
+Written file is /home/kate/APTU/Practice/data2/459f
+http://forum.ubuntu.ru/index.php?topic=459
+Written file is /home/kate/APTU/Practice/data2/460f
+http://forum.ubuntu.ru/index.php?topic=460
+Written file is /home/kate/APTU/Practice/data2/461f
+http://forum.ubuntu.ru/index.php?topic=461
+    file id 461 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/461f
+Written file is /home/kate/APTU/Practice/data2/462f
+http://forum.ubuntu.ru/index.php?topic=462
+    file id 462 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/462f
+Written file is /home/kate/APTU/Practice/data2/463f
+http://forum.ubuntu.ru/index.php?topic=463
+    file id 463 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/463f
+Written file is /home/kate/APTU/Practice/data2/464f
+http://forum.ubuntu.ru/index.php?topic=464
+    file id 464 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/464f
+Written file is /home/kate/APTU/Practice/data2/465f
+http://forum.ubuntu.ru/index.php?topic=465
+Written file is /home/kate/APTU/Practice/data2/466f
+http://forum.ubuntu.ru/index.php?topic=466
+Written file is /home/kate/APTU/Practice/data2/467f
+http://forum.ubuntu.ru/index.php?topic=467
+Written file is /home/kate/APTU/Practice/data2/468f
+http://forum.ubuntu.ru/index.php?topic=468
+    file id 468 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/468f
+Written file is /home/kate/APTU/Practice/data2/469f
+http://forum.ubuntu.ru/index.php?topic=469
+    file id 469 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/469f
+Written file is /home/kate/APTU/Practice/data2/470f
+http://forum.ubuntu.ru/index.php?topic=470
+    file id 470 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/470f
+Written file is /home/kate/APTU/Practice/data2/471f
+http://forum.ubuntu.ru/index.php?topic=471
+Written file is /home/kate/APTU/Practice/data2/472f
+http://forum.ubuntu.ru/index.php?topic=472
+Written file is /home/kate/APTU/Practice/data2/473f
+http://forum.ubuntu.ru/index.php?topic=473
+Written file is /home/kate/APTU/Practice/data2/474f
+http://forum.ubuntu.ru/index.php?topic=474
+Written file is /home/kate/APTU/Practice/data2/475f
+http://forum.ubuntu.ru/index.php?topic=475
+Written file is /home/kate/APTU/Practice/data2/476f
+http://forum.ubuntu.ru/index.php?topic=476
+    file id 476 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/476f
+Written file is /home/kate/APTU/Practice/data2/477f
+http://forum.ubuntu.ru/index.php?topic=477
+    file id 477 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/477f
+Written file is /home/kate/APTU/Practice/data2/478f
+http://forum.ubuntu.ru/index.php?topic=478
+Written file is /home/kate/APTU/Practice/data2/479f
+http://forum.ubuntu.ru/index.php?topic=479
+Written file is /home/kate/APTU/Practice/data2/480f
+http://forum.ubuntu.ru/index.php?topic=480
+    file id 480 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/480f
+Written file is /home/kate/APTU/Practice/data2/481f
+http://forum.ubuntu.ru/index.php?topic=481
+    file id 481 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/481f
+Written file is /home/kate/APTU/Practice/data2/482f
+http://forum.ubuntu.ru/index.php?topic=482
+    file id 482 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/482f
+Written file is /home/kate/APTU/Practice/data2/483f
+http://forum.ubuntu.ru/index.php?topic=483
+Written file is /home/kate/APTU/Practice/data2/484f
+http://forum.ubuntu.ru/index.php?topic=484
+    file id 484 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/484f
+Written file is /home/kate/APTU/Practice/data2/485f
+http://forum.ubuntu.ru/index.php?topic=485
+    file id 485 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/485f
+Written file is /home/kate/APTU/Practice/data2/486f
+http://forum.ubuntu.ru/index.php?topic=486
+Written file is /home/kate/APTU/Practice/data2/487f
+http://forum.ubuntu.ru/index.php?topic=487
+Written file is /home/kate/APTU/Practice/data2/488f
+http://forum.ubuntu.ru/index.php?topic=488
+Written file is /home/kate/APTU/Practice/data2/489f
+http://forum.ubuntu.ru/index.php?topic=489
+    file id 489 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/489f
+Written file is /home/kate/APTU/Practice/data2/490f
+http://forum.ubuntu.ru/index.php?topic=490
+    file id 490 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/490f
+Written file is /home/kate/APTU/Practice/data2/491f
+http://forum.ubuntu.ru/index.php?topic=491
+    file id 491 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/491f
+Written file is /home/kate/APTU/Practice/data2/492f
+http://forum.ubuntu.ru/index.php?topic=492
+    file id 492 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/492f
+Written file is /home/kate/APTU/Practice/data2/493f
+http://forum.ubuntu.ru/index.php?topic=493
+    file id 493 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/493f
+Written file is /home/kate/APTU/Practice/data2/494f
+http://forum.ubuntu.ru/index.php?topic=494
+Written file is /home/kate/APTU/Practice/data2/495f
+http://forum.ubuntu.ru/index.php?topic=495
+    file id 495 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/495f
+Written file is /home/kate/APTU/Practice/data2/496f
+http://forum.ubuntu.ru/index.php?topic=496
+    file id 496 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/496f
+Written file is /home/kate/APTU/Practice/data2/497f
+http://forum.ubuntu.ru/index.php?topic=497
+    file id 497 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/497f
+Written file is /home/kate/APTU/Practice/data2/498f
+http://forum.ubuntu.ru/index.php?topic=498
+    file id 498 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/498f
+Written file is /home/kate/APTU/Practice/data2/499f
+http://forum.ubuntu.ru/index.php?topic=499
+    file id 499 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/499f
+Written file is /home/kate/APTU/Practice/data2/500f
+http://forum.ubuntu.ru/index.php?topic=500
+    file id 500 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/500f
+Written file is /home/kate/APTU/Practice/data2/501f
+http://forum.ubuntu.ru/index.php?topic=501
+    file id 501 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/501f
+Written file is /home/kate/APTU/Practice/data2/502f
+http://forum.ubuntu.ru/index.php?topic=502
+    file id 502 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/502f
+Written file is /home/kate/APTU/Practice/data2/503f
+http://forum.ubuntu.ru/index.php?topic=503
+Written file is /home/kate/APTU/Practice/data2/504f
+http://forum.ubuntu.ru/index.php?topic=504
+    file id 504 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/504f
+Written file is /home/kate/APTU/Practice/data2/505f
+http://forum.ubuntu.ru/index.php?topic=505
+Written file is /home/kate/APTU/Practice/data2/506f
+http://forum.ubuntu.ru/index.php?topic=506
+Written file is /home/kate/APTU/Practice/data2/507f
+http://forum.ubuntu.ru/index.php?topic=507
+    file id 507 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/507f
+Written file is /home/kate/APTU/Practice/data2/508f
+http://forum.ubuntu.ru/index.php?topic=508
+Written file is /home/kate/APTU/Practice/data2/509f
+http://forum.ubuntu.ru/index.php?topic=509
+Written file is /home/kate/APTU/Practice/data2/510f
+http://forum.ubuntu.ru/index.php?topic=510
+    file id 510 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/510f
+Written file is /home/kate/APTU/Practice/data2/511f
+http://forum.ubuntu.ru/index.php?topic=511
+Written file is /home/kate/APTU/Practice/data2/512f
+http://forum.ubuntu.ru/index.php?topic=512
+    file id 512 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/512f
+Written file is /home/kate/APTU/Practice/data2/513f
+http://forum.ubuntu.ru/index.php?topic=513
+    file id 513 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/513f
+Written file is /home/kate/APTU/Practice/data2/514f
+http://forum.ubuntu.ru/index.php?topic=514
+Written file is /home/kate/APTU/Practice/data2/515f
+http://forum.ubuntu.ru/index.php?topic=515
+    file id 515 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/515f
+Written file is /home/kate/APTU/Practice/data2/516f
+http://forum.ubuntu.ru/index.php?topic=516
+Written file is /home/kate/APTU/Practice/data2/517f
+http://forum.ubuntu.ru/index.php?topic=517
+    file id 517 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/517f
+Written file is /home/kate/APTU/Practice/data2/518f
+http://forum.ubuntu.ru/index.php?topic=518
+    file id 518 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/518f
+Written file is /home/kate/APTU/Practice/data2/519f
+http://forum.ubuntu.ru/index.php?topic=519
+Written file is /home/kate/APTU/Practice/data2/520f
+http://forum.ubuntu.ru/index.php?topic=520
+    file id 520 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/520f
+Written file is /home/kate/APTU/Practice/data2/521f
+http://forum.ubuntu.ru/index.php?topic=521
+Written file is /home/kate/APTU/Practice/data2/522f
+http://forum.ubuntu.ru/index.php?topic=522
+Written file is /home/kate/APTU/Practice/data2/523f
+http://forum.ubuntu.ru/index.php?topic=523
+    file id 523 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/523f
+Written file is /home/kate/APTU/Practice/data2/524f
+http://forum.ubuntu.ru/index.php?topic=524
+Written file is /home/kate/APTU/Practice/data2/525f
+http://forum.ubuntu.ru/index.php?topic=525
+Written file is /home/kate/APTU/Practice/data2/526f
+http://forum.ubuntu.ru/index.php?topic=526
+    file id 526 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/526f
+Written file is /home/kate/APTU/Practice/data2/527f
+http://forum.ubuntu.ru/index.php?topic=527
+    file id 527 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/527f
+Written file is /home/kate/APTU/Practice/data2/528f
+http://forum.ubuntu.ru/index.php?topic=528
+    file id 528 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/528f
+Written file is /home/kate/APTU/Practice/data2/529f
+http://forum.ubuntu.ru/index.php?topic=529
+    file id 529 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/529f
+Written file is /home/kate/APTU/Practice/data2/530f
+http://forum.ubuntu.ru/index.php?topic=530
+    file id 530 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/530f
+Written file is /home/kate/APTU/Practice/data2/531f
+http://forum.ubuntu.ru/index.php?topic=531
+    file id 531 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/531f
+Written file is /home/kate/APTU/Practice/data2/532f
+http://forum.ubuntu.ru/index.php?topic=532
+Written file is /home/kate/APTU/Practice/data2/533f
+http://forum.ubuntu.ru/index.php?topic=533
+    file id 533 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/533f
+Written file is /home/kate/APTU/Practice/data2/534f
+http://forum.ubuntu.ru/index.php?topic=534
+    file id 534 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/534f
+Written file is /home/kate/APTU/Practice/data2/535f
+http://forum.ubuntu.ru/index.php?topic=535
+Written file is /home/kate/APTU/Practice/data2/536f
+http://forum.ubuntu.ru/index.php?topic=536
+Written file is /home/kate/APTU/Practice/data2/537f
+http://forum.ubuntu.ru/index.php?topic=537
+Written file is /home/kate/APTU/Practice/data2/538f
+http://forum.ubuntu.ru/index.php?topic=538
+Written file is /home/kate/APTU/Practice/data2/539f
+http://forum.ubuntu.ru/index.php?topic=539
+    file id 539 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/539f
+Written file is /home/kate/APTU/Practice/data2/540f
+http://forum.ubuntu.ru/index.php?topic=540
+Written file is /home/kate/APTU/Practice/data2/541f
+http://forum.ubuntu.ru/index.php?topic=541
+Written file is /home/kate/APTU/Practice/data2/542f
+http://forum.ubuntu.ru/index.php?topic=542
+Written file is /home/kate/APTU/Practice/data2/543f
+http://forum.ubuntu.ru/index.php?topic=543
+Written file is /home/kate/APTU/Practice/data2/544f
+http://forum.ubuntu.ru/index.php?topic=544
+    file id 544 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/544f
+Written file is /home/kate/APTU/Practice/data2/545f
+http://forum.ubuntu.ru/index.php?topic=545
+Written file is /home/kate/APTU/Practice/data2/546f
+http://forum.ubuntu.ru/index.php?topic=546
+    file id 546 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/546f
+Written file is /home/kate/APTU/Practice/data2/547f
+http://forum.ubuntu.ru/index.php?topic=547
+    file id 547 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/547f
+Written file is /home/kate/APTU/Practice/data2/548f
+http://forum.ubuntu.ru/index.php?topic=548
+    file id 548 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/548f
+Written file is /home/kate/APTU/Practice/data2/549f
+http://forum.ubuntu.ru/index.php?topic=549
+Written file is /home/kate/APTU/Practice/data2/550f
+http://forum.ubuntu.ru/index.php?topic=550
+Written file is /home/kate/APTU/Practice/data2/551f
+http://forum.ubuntu.ru/index.php?topic=551
+    file id 551 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/551f
+Written file is /home/kate/APTU/Practice/data2/552f
+http://forum.ubuntu.ru/index.php?topic=552
+Written file is /home/kate/APTU/Practice/data2/553f
+http://forum.ubuntu.ru/index.php?topic=553
+    file id 553 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/553f
+Written file is /home/kate/APTU/Practice/data2/554f
+http://forum.ubuntu.ru/index.php?topic=554
+Written file is /home/kate/APTU/Practice/data2/555f
+http://forum.ubuntu.ru/index.php?topic=555
+Written file is /home/kate/APTU/Practice/data2/556f
+http://forum.ubuntu.ru/index.php?topic=556
+    file id 556 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/556f
+Written file is /home/kate/APTU/Practice/data2/557f
+http://forum.ubuntu.ru/index.php?topic=557
+Written file is /home/kate/APTU/Practice/data2/558f
+http://forum.ubuntu.ru/index.php?topic=558
+Written file is /home/kate/APTU/Practice/data2/559f
+http://forum.ubuntu.ru/index.php?topic=559
+    file id 559 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/559f
+Written file is /home/kate/APTU/Practice/data2/560f
+http://forum.ubuntu.ru/index.php?topic=560
+Written file is /home/kate/APTU/Practice/data2/561f
+http://forum.ubuntu.ru/index.php?topic=561
+Written file is /home/kate/APTU/Practice/data2/562f
+http://forum.ubuntu.ru/index.php?topic=562
+    file id 562 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/562f
+Written file is /home/kate/APTU/Practice/data2/563f
+http://forum.ubuntu.ru/index.php?topic=563
+Written file is /home/kate/APTU/Practice/data2/564f
+http://forum.ubuntu.ru/index.php?topic=564
+    file id 564 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/564f
+Written file is /home/kate/APTU/Practice/data2/565f
+http://forum.ubuntu.ru/index.php?topic=565
+    file id 565 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/565f
+Written file is /home/kate/APTU/Practice/data2/566f
+http://forum.ubuntu.ru/index.php?topic=566
+Written file is /home/kate/APTU/Practice/data2/567f
+http://forum.ubuntu.ru/index.php?topic=567
+    file id 567 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/567f
+Written file is /home/kate/APTU/Practice/data2/568f
+http://forum.ubuntu.ru/index.php?topic=568
+    file id 568 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/568f
+Written file is /home/kate/APTU/Practice/data2/569f
+http://forum.ubuntu.ru/index.php?topic=569
+Written file is /home/kate/APTU/Practice/data2/570f
+http://forum.ubuntu.ru/index.php?topic=570
+    file id 570 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/570f
+Written file is /home/kate/APTU/Practice/data2/571f
+http://forum.ubuntu.ru/index.php?topic=571
+    file id 571 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/571f
+Written file is /home/kate/APTU/Practice/data2/572f
+http://forum.ubuntu.ru/index.php?topic=572
+Written file is /home/kate/APTU/Practice/data2/573f
+http://forum.ubuntu.ru/index.php?topic=573
+    file id 573 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/573f
+Written file is /home/kate/APTU/Practice/data2/574f
+http://forum.ubuntu.ru/index.php?topic=574
+    file id 574 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/574f
+Written file is /home/kate/APTU/Practice/data2/575f
+http://forum.ubuntu.ru/index.php?topic=575
+    file id 575 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/575f
+Written file is /home/kate/APTU/Practice/data2/576f
+http://forum.ubuntu.ru/index.php?topic=576
+    file id 576 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/576f
+Written file is /home/kate/APTU/Practice/data2/577f
+http://forum.ubuntu.ru/index.php?topic=577
+    file id 577 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/577f
+Written file is /home/kate/APTU/Practice/data2/578f
+http://forum.ubuntu.ru/index.php?topic=578
+Written file is /home/kate/APTU/Practice/data2/579f
+http://forum.ubuntu.ru/index.php?topic=579
+Written file is /home/kate/APTU/Practice/data2/580f
+http://forum.ubuntu.ru/index.php?topic=580
+Written file is /home/kate/APTU/Practice/data2/581f
+http://forum.ubuntu.ru/index.php?topic=581
+Written file is /home/kate/APTU/Practice/data2/582f
+http://forum.ubuntu.ru/index.php?topic=582
+    file id 582 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/582f
+Written file is /home/kate/APTU/Practice/data2/583f
+http://forum.ubuntu.ru/index.php?topic=583
+    file id 583 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/583f
+Written file is /home/kate/APTU/Practice/data2/584f
+http://forum.ubuntu.ru/index.php?topic=584
+Written file is /home/kate/APTU/Practice/data2/585f
+http://forum.ubuntu.ru/index.php?topic=585
+    file id 585 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/585f
+Written file is /home/kate/APTU/Practice/data2/586f
+http://forum.ubuntu.ru/index.php?topic=586
+    file id 586 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/586f
+Written file is /home/kate/APTU/Practice/data2/587f
+http://forum.ubuntu.ru/index.php?topic=587
+Written file is /home/kate/APTU/Practice/data2/588f
+http://forum.ubuntu.ru/index.php?topic=588
+Written file is /home/kate/APTU/Practice/data2/589f
+http://forum.ubuntu.ru/index.php?topic=589
+Written file is /home/kate/APTU/Practice/data2/590f
+http://forum.ubuntu.ru/index.php?topic=590
+    file id 590 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/590f
+Written file is /home/kate/APTU/Practice/data2/591f
+http://forum.ubuntu.ru/index.php?topic=591
+Written file is /home/kate/APTU/Practice/data2/592f
+http://forum.ubuntu.ru/index.php?topic=592
+Written file is /home/kate/APTU/Practice/data2/593f
+http://forum.ubuntu.ru/index.php?topic=593
+Written file is /home/kate/APTU/Practice/data2/594f
+http://forum.ubuntu.ru/index.php?topic=594
+    file id 594 error: FILE SEEMS TO BE EMPTY. SKIP.
+       Deleted file /home/kate/APTU/Practice/data2/594f
+Written file is /home/kate/APTU/Practice/data2/595f
+http://forum.ubuntu.ru/index.php?topic=595
+Written file is /home/kate/APTU/Practice/data2/596f
+http://forum.ubuntu.ru/index.php?topic=596
+Finished at 15:57:53
