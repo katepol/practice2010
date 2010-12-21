@@ -16,38 +16,31 @@
 using std::string;
 using std::ofstream;
 
-// singletone
 class Downloader
 {
 private:
-    static Downloader * instance_;
-
+    int minFileSize_;
+    int faultLimit_;
     string extention_;
     string srcUrl_;
     ofstream log_;
 
     static size_t writeData(void *ptr, size_t size, size_t nmemb, FILE *myStream);
-    int downloadFile (CURL *curl, int id, FILE* f, int minFileSize);
+    int downloadFile (CURL *curl, int id, FILE* f);
     void printTime (string const & p);
 
-    Downloader() {}
-    ~Downloader() { if (instance_!=0) delete instance_; }
-    Downloader (Downloader const & d);
-    Downloader & operator= (Downloader const & d);
-
 public:
-    //Downloader (int minimumFileSize, int faultsLimit): minFileSize_(minimumFileSize), faultLimit_(faultsLimit) {}
-    static int download (ofstream * res,
-                  string const & category,
-                  string const & ext,
-                  string const & su,
-                  string const & td,
-                  string const & lfn,
-                  int startNum,
-                  int cnt,
-                  int minFileSize,
-                  int faultLimit
-    );
+    Downloader () {}
+    int download(ofstream * res,
+                 string const & category,
+                 string const & ext,
+                 string const & su,
+                 string const & td,
+                 string const & lfn,
+                 int startNum,
+                 int cnt,
+                 int minFileSize,
+                 int faultLimit);
 };
 
 #endif
