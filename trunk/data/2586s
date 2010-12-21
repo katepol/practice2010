@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Построение кодовых слов пространственно-частотно-временных кодов</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Построение кодовых слов пространственно-частотно-временных кодов</h2><div style="margin-bottom:10px"><strong>Construction codewords of space-time-frequency codes</strong></div>Статья опубликована в выпуске журнала № 3 за 2010 год. [ 07.09.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Предложен сравнительно несложный метод построения кодовых слов пространственно-частотно-временных кодов, приведено его обоснование и рассмотрен пример построения кодового слова пространственно-частотно-временного кода в соответствии с данным методом. Основная идея заключается в построении порождающей матрицы кода по основным характеристикам MIMO-системы. </em><br /><strong>Abstract:</strong><em style="font-size:8pt">The paper deals with a new method of constructing codeword of space-time-frequency (STF) codes that is less complex compared. The author presents the substantiation of the method and considers the example of constructing a codeword of STF code in accordance with the method proposed. The general idea is to construct a generating matrix code to the main characteristics of the MIMO-systems.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Автор: </b><a href="index.php?page=infou&id=5917">Гофман М.В. (maxgof@gmail.com)</a> - Петербургский государственный университет путей сообщения   </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1720">пространственно-частотно-временной код</a>, <a href="index.php?page=infotg&id=1721">порождающая матрица</a>, <a href="index.php?page=infotg&id=1722">mimo-система</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1720">space-time-frequency code</a>, <a href="index.php?page=infotg&id=1721">generator matrix</a>, <a href="index.php?page=infotg&id=1722">MIMO-system</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 170<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2586">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Методика построения кодового слова для  кодов, ориентированных на использование в MIMO-системах, представленная в [1], основана на построении кодовых слов путем объединения независимо кодируемых частей, называемых слоями. Слой представляет собой вектор из комплексных чисел, а кодовое слово &ndash; матрицу, каждый элемент которой принадлежит некоторому слою. При объединении слоев в кодовое слово элемент каждого слоя передается в каждый  промежуток времени так, что частоты использования каждой передающей антенны (в передаче элементов слоя) равны. Далее методику построения кодовых слов будем называть методикой слоения.</p>
+<p>&nbsp;</p>
+<p>Методика слоения была использована в [2] для построения кодовых слов пространственно-частотно-временного кода. Каждое кодовое слово этого кода состоит из нескольких независимо кодируемых блоков. Каждый такой блок строится на основе методики слоения. В дальнейшем, говоря о коде и методике, будем подразумевать под ними пространственно-частотно-временной код и методику построения его кодовых слов (см. [2]).</p>
+<p>Методика построения пространственно-час&shy;тотно-временного кодового слова включает выполнение двух действий: построение блоков кодового слова и объединение этих блоков в одно кодовое слово. Покажем, как построить матрицу этих действий, которую назовем порождающей матрицей.</p>
+<p>Введем следующие обозначения: <img src="uploaded/image/2010-3/image1496.png" border="0" alt="" width="15" height="17" />&nbsp;&ndash; множество положительных целых чисел; <img src="uploaded/image/2010-3/image1498.png" border="0" alt="" width="15" height="15" />&nbsp;&ndash; кольцо целых чисел; <img src="uploaded/image/2010-3/image1500.png" border="0" alt="" width="16" height="17" />&nbsp;&ndash; поле рациональных чисел; <img src="uploaded/image/2010-3/image1498.png" border="0" alt="" width="15" height="15" />&nbsp;&ndash; поле комплексных чисел; символом j обозначим <img src="uploaded/image/2010-3/image1503.png" border="0" alt="" width="29" height="20" />; <img src="uploaded/image/2010-3/image1505.png" border="0" alt="" width="12" height="17" />&nbsp;&ndash; вектор-столбец a; T, H &ndash; обычное транспонирование и транспонирование с сопряжением соответственно; &euml;x&ucirc;, &eacute;x&ugrave; &ndash; наибольшее целое число, меньшее или равное x, и наименьшее целое число, большее или равное x, соответственно; diag(x0, x1, &hellip;, xN-1) &ndash; диагональная матрица размера N&acute;N с диагональными элементами, равными x0 x1 &hellip; xN-1, если xn &ndash; это скаляр, или блоковая диагональная матрица размера NM&acute;NM с матрицами размера M&acute;M на главной диагонали, если xn &ndash; это матрица размера M&acute;M, где n=0, 1, &hellip; N-1.</p>
+<p>Характеристики MIMO-системы: Nt &ndash; число передающих антенн; Nb &ndash; число блоков замираний [1], в течение которых будет передаваться кодовое слово; L &ndash; число лучей при распространении сигнала от каждой антенны (будем предполагать, что на каждом из лучей соответствующие задержки во времени одинаковы для всех антенн).</p>
+<p>Опишем методику построения кодового слова пространственно-частотно-временного кода. Допустим, что имеется некоторый комплексный вектор определенной длины, который необходимо преобразовать в кодовое слово. По методике этот вектор разделяется на части, также представляющие собой векторы. Эти векторы подвергаются одинаковому матричному преобразованию. В результате каждого такого преобразования получается вектор, который определяет блок кодового слова. Если обозначить такой блок через <img src="uploaded/image/2010-3/image1507.png" border="0" alt="" width="15" height="20" />, структура кодового слова <img src="uploaded/image/2010-3/image1509.png" border="0" alt="" width="12" height="20" />&nbsp;примет вид</p>
+<p><img src="uploaded/image/2010-3/image1511.png" border="0" alt="" width="110" height="29" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+<p>где J &ndash; число блоков в кодовом слове.</p>
+<p>Предположим, что нужно закодировать Ns=NLNqNtNbJ информационных символов из алфавита <img src="uploaded/image/2010-3/image1513.png" border="0" alt="" width="55" height="23" />, где <img src="uploaded/image/2010-3/image1515.png" border="0" alt="" width="71" height="25" />&nbsp;и <img src="uploaded/image/2010-3/image1517.png" border="0" alt="" width="74" height="25" />. Пусть <img src="uploaded/image/2010-3/image1519.png" border="0" alt="" width="45" height="20" />&nbsp;&ndash; информационный вектор, составленный из информационных символов. Если представить информационный вектор <img src="uploaded/image/2010-3/image1521.png" border="0" alt="" width="12" height="17" />&nbsp;в виде <img src="uploaded/image/2010-3/image1523.png" border="0" alt="" width="108" height="29" />, то по методике [1] вектор <img src="uploaded/image/2010-3/image1525.png" border="0" alt="" width="13" height="20" />&nbsp;(i=1, &hellip;, J) используется для построения i-го блока кодового слова; а если вектор <img src="uploaded/image/2010-3/image1525.png" border="0" alt="" width="13" height="20" />&nbsp;представить в виде <img src="uploaded/image/2010-3/image1528.png" border="0" alt="" width="121" height="32" />, то вектор <img src="uploaded/image/2010-3/image1530.png" border="0" alt="" width="19" height="22" />&nbsp;можно использовать для построения j-го слоя блока кодового слова.</p>
+<p>По методике построения каждый вектор <img src="uploaded/image/2010-3/image1530.png" border="0" alt="" width="19" height="22" />&nbsp;преобразуется в вектор <img src="uploaded/image/2010-3/image1533.png" border="0" alt="" width="20" height="22" />&nbsp;путем умножения справа на матрицу <img src="uploaded/image/2010-3/image1535.png" border="0" alt="" width="107" height="25" />, то есть</p>
+<p><img src="uploaded/image/2010-3/image1537.png" border="0" alt="" width="64" height="22" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)</p>
+<p>Прежде чем дать определение матрицы Qj, сделаем ряд допущений. Пусть FM &ndash; матрица дискретного преобразования Фурье размера M&acute;M, где <img src="uploaded/image/2010-3/image1539.png" border="0" alt="" width="96" height="21" />. Пусть Y &ndash; комплексная матрица вида Y=<img src="uploaded/image/2010-3/image1541.png" border="0" alt="" width="19" height="21" />diag(1 j &hellip; jM-1), где <img src="uploaded/image/2010-3/image1543.png" border="0" alt="" width="47" height="31" />. Пусть K &ndash; расширение поля <img src="uploaded/image/2010-3/image1500.png" border="0" alt="" width="16" height="17" />, которое содержит все элементы Y, алфавит <img src="uploaded/image/2010-3/image1513.png" border="0" alt="" width="55" height="23" />, величины <img src="uploaded/image/2010-3/image1547.png" border="0" alt="" width="47" height="20" />, где tl &ndash; задержка l-го луча (l=1, &hellip;, L); Ts &ndash; время передачи сигнала. Пусть f &ndash; алгебраическое число порядка как минимум NLNqNb над полем K.</p>
+<p>Теперь определим матрицу Qj как матрицу, получаемую путем вырезания первых NLNtNb строк и столбцов из матрицы Yj=Yfj-1.</p>
+<p>Объединим множество слоев <img src="uploaded/image/2010-3/image1549.png" border="0" alt="" width="45" height="33" />, полученных с помощью (2), в вектор</p>
+<p><img src="uploaded/image/2010-3/image1551.png" border="0" alt="" width="124" height="32" />. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p>Далее, говоря об элементе вектора <img src="uploaded/image/2010-3/image1553.png" border="0" alt="" width="15" height="20" />, будем подразумевать любой элемент некоторого слоя. Итак, по методике, вектор <img src="uploaded/image/2010-3/image1553.png" border="0" alt="" width="15" height="20" />&nbsp;преобразуется в вектор <img src="uploaded/image/2010-3/image1507.png" border="0" alt="" width="15" height="20" />&nbsp;путем перестановок своих элементов. Но положение конкретного элемента вектора <img src="uploaded/image/2010-3/image1553.png" border="0" alt="" width="15" height="20" />&nbsp;в векторе <img src="uploaded/image/2010-3/image1507.png" border="0" alt="" width="15" height="20" />&nbsp;зависит как от слоя, к которому он принадлежит, так и от положения этого элемента в слое.</p>
+<p>Для построения кодового слова удобно воспользоваться двумя вспомогательными векторами, элемент первого будет показывать номер слоя (вектор слоев), а элемент второго &ndash; положение в слое (вектор смещений).</p>
+<p>Обозначим <img src="uploaded/image/2010-3/image1556.png" border="0" alt="" width="13" height="20" />&nbsp;вектор слоев, а <img src="uploaded/image/2010-3/image1558.png" border="0" alt="" width="13" height="20" />&nbsp;&ndash; вектор смещений. Число элементов в векторе <img src="uploaded/image/2010-3/image1553.png" border="0" alt="" width="15" height="20" />&nbsp;равно NLNqNtNb, поэтому <img src="uploaded/image/2010-3/image1560.png" border="0" alt="" width="77" height="25" />&nbsp;и <img src="uploaded/image/2010-3/image1562.png" border="0" alt="" width="73" height="25" />. Если элемент вектора <img src="uploaded/image/2010-3/image1558.png" border="0" alt="" width="13" height="20" />&nbsp;обозначить как hk, а элемент вектора <img src="uploaded/image/2010-3/image1556.png" border="0" alt="" width="13" height="20" />&nbsp;через mk, то на основе значений этих элементов можно построить матрицу <img src="uploaded/image/2010-3/image1564.png" border="0" alt="" width="116" height="21" />, выполняющую преобразование вектора <img src="uploaded/image/2010-3/image1553.png" border="0" alt="" width="15" height="20" />&nbsp;в вектор <img src="uploaded/image/2010-3/image1507.png" border="0" alt="" width="15" height="20" />. Элемент матрицы P (обозначим его pm,k) может принимать значения либо 0, либо 1 в зависимости от значений элементов hk и mk по следующему правилу:</p>
+<p><img src="uploaded/image/2010-3/image1566.png" border="0" alt="" width="246" height="45" />&nbsp;(4)</p>
+<p>где m=1,&hellip;,NLNqNtNb.</p>
+<p>После определения матрицы P весь процесс перестановок элементов вектора <img src="uploaded/image/2010-3/image1553.png" border="0" alt="" width="15" height="20" />, в результате которого получается вектор <img src="uploaded/image/2010-3/image1507.png" border="0" alt="" width="15" height="20" />, можно заменить умножением справа на эту матрицу.</p>
+<p>В результате получается, что</p>
+<p><img src="uploaded/image/2010-3/image1568.png" border="0" alt="" width="49" height="20" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5)</p>
+<p>Зная множество векторов <img src="uploaded/image/2010-3/image1570.png" border="0" alt="" width="40" height="27" />&nbsp;и основываясь на выражении (1), можно получить кодовое слово <img src="uploaded/image/2010-3/image1509.png" border="0" alt="" width="12" height="20" />.</p>
+<p>Построение порождающей матрицы</p>
+<p>Завершив описание методики построения кодового слова, покажем, как построить порождающую матрицу кода. На основе формул (2) и (5) построим матрицу Gi вида Gi=P&times;diag(Q1 Q2 &hellip; QNq),  с помощью которой можно заменить весь процесс построения вектора <img src="uploaded/image/2010-3/image1507.png" border="0" alt="" width="15" height="20" />&nbsp;умножением справа вектора <img src="uploaded/image/2010-3/image1525.png" border="0" alt="" width="13" height="20" />&nbsp;на матрицу Gi. Если через Gcodeword обозначить матрицу вида</p>
+<p>Gcodeword=diag(G1, &hellip;, GJ),&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6)</p>
+<p>процесс построения кодового слова можно заменить умножением информационного вектора <img src="uploaded/image/2010-3/image1521.png" border="0" alt="" width="12" height="17" />&nbsp;справа на Gcodeword, то есть <img src="uploaded/image/2010-3/image1575.png" border="0" alt="" width="77" height="20" />.</p>
+<p>Матрица Gcodeword называется порождающей матрицей кода.</p>
+<p>В теории кодов, ориентированных на использование в MIMO-системах, кодовые слова традиционно представляют в виде матриц. Поэтому, чтобы завершить описание рассматриваемого кода, необходимо упомянуть об элементе, называемом форматировщиком, который и выполняет соответствующее преобразование кодового вектора <img src="uploaded/image/2010-3/image1509.png" border="0" alt="" width="12" height="20" />&nbsp;в кодовую матрицу Y. В данном случае он создает кодовую матрицу построчно, последовательно обозначая каждые NtNb символов вектора <img src="uploaded/image/2010-3/image1509.png" border="0" alt="" width="12" height="20" />&nbsp;строкой кодовой матрицы.</p>
+<p>Пример. Параметры MIMO-системы: Nt=2, Nb=2, L=2. Пусть J=2, тогда Ns=NLNqNtNbJ= =2&times;2&times;2&times;2&times;2=32. Предположим, что необходимо закодировать вектор <img src="uploaded/image/2010-3/image1578.png" border="0" alt="" width="100" height="25" />, тогда вектор <img src="uploaded/image/2010-3/image1580.png" border="0" alt="" width="141" height="33" />, где i=1, &hellip;, J.</p>
+<p>Обозначим k-й элемент вектора <img src="uploaded/image/2010-3/image1582.png" border="0" alt="" width="20" height="21" />&nbsp;через xi,j(k)fj-1.</p>
+<p>Воспользовавшись выражением (3), получим</p>
+<p><img src="uploaded/image/2010-3/image1584.png" border="0" alt="" width="283" height="27" /></p>
+<p>и <img src="uploaded/image/2010-3/image1586.png" border="0" alt="" width="273" height="26" />.</p>
+<p>Объединив <img src="uploaded/image/2010-3/image1588.png" border="0" alt="" width="16" height="20" />&nbsp;и <img src="uploaded/image/2010-3/image1590.png" border="0" alt="" width="16" height="20" />, получим</p>
+<p><img src="uploaded/image/2010-3/image1592.png" border="0" alt="" width="283" height="29" />.</p>
+<p>Если предположить, что вектор слоев</p>
+<p><img src="uploaded/image/2010-3/image1594.png" border="0" alt="" width="290" height="23" />и вектор смещений</p>
+<p><img src="uploaded/image/2010-3/image1596.png" border="0" alt="" width="287" height="22" />, тогда на основе (4) получим матрицу P.</p>
+<p><img src="uploaded/image/2010-3/image1598.png" border="0" alt="" width="276" height="254" /></p>
+<p>Используя <img src="uploaded/image/2010-3/image1588.png" border="0" alt="" width="16" height="20" />, <img src="uploaded/image/2010-3/image1590.png" border="0" alt="" width="16" height="20" />, P и выражение (5), получим определяющие блоки кодового слова</p>
+<p><img src="uploaded/image/2010-3/image1602.png" border="0" alt="" width="210" height="25" /></p>
+<p>и <img src="uploaded/image/2010-3/image1604.png" border="0" alt="" width="213" height="25" />.</p>
+<p>Объединив <img src="uploaded/image/2010-3/image1606.png" border="0" alt="" width="16" height="20" />&nbsp;и <img src="uploaded/image/2010-3/image1608.png" border="0" alt="" width="17" height="20" />, из 32 компонент получим кодовый вектор:</p>
+<p><img src="uploaded/image/2010-3/image1610.png" border="0" alt="" width="258" height="25" />.</p>
+<p>Применив форматировщик, настроенный на длину строки, равную 4 элементам, к вектору <img src="uploaded/image/2010-3/image1509.png" border="0" alt="" width="12" height="20" />, получим кодовую матрицу Y размером 8&acute;4.</p>
+<p><img src="uploaded/image/2010-3/image1613.png" border="0" alt="" width="269" height="165" /></p>
+<p>Матрица Y соответствует пространственно-частотно-временному кодовому слову для 8 подканалов.</p>
+<p>Знание порождающей матрицы (6) позволило сократить число действий, необходимых для  построения кодового слова пространственно-час&shy;тотно-временного кода, представленного в [2].  В общем, число действий сократилось до одного умножения справа информационного вектора на порождающую матрицу.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Gamal H.El., Damen M.O. Universal Space&ndash;Time Coding // IEEE Transactions on Information Theory, V. 49, № 5, pp. 1097&ndash;1119, may 2003.</p>
+<p>2.&nbsp;&nbsp; Zhang Wei, Xiang-Gen Xia, Ching P.C. High-Rate Full-Diversity Space&ndash;Time&ndash;Frequency Codes for Broadband MIMO Block-Fading Channels // IEEE Transactions on Communications, V. 55, № 1, january 2007.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2586</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2586">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 3 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=91">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

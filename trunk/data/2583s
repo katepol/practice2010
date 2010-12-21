@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Программный комплекс алгоритмов прогноза и повышения нефтеотдачи пласта</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Программный комплекс алгоритмов прогноза и повышения нефтеотдачи пласта</h2><div style="margin-bottom:10px"><strong>Program complex of algorithms for increase and forecast of petroreturn of a layer </strong></div>Статья опубликована в выпуске журнала № 3 за 2010 год. [ 07.09.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Рассматривается разработка комплекс-программ, базирующихся на трехэтапном последовательном алгоритме для повышения нефтеотдачи пласта путем выбранного метода воздействия. Программный комплекс разработан в DELPHI 7.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">In the paper the complexes-programs which are based on the consecutive algorithm, consisted of three stages, for increase of petroreturn of a layer by the chosen method of influence is considered. The program complex is developed in DELPHI 7.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=5870">Кулиев Р.А. (movludf@mail.ru)</a> - Азербайджанский государственный экономический университет, г. Баку Кандидат технический наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=31">прогнозирование</a>, <a href="index.php?page=infotg&id=1733">нечеткие модели классификации и прогнозирования</a>, <a href="index.php?page=infotg&id=1736">нефтеотдача пласта</a>, <a href="index.php?page=infotg&id=1734">методы воздействия на пласт</a>, <a href="index.php?page=infotg&id=1731">кластер-анализ</a>, <a href="index.php?page=infotg&id=1735">засоленные и незасоленные состояния скважин</a>, <a href="index.php?page=infotg&id=1732">автоматическая классификация</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=31">forecasting</a>, <a href="index.php?page=infotg&id=1733">fuzzy models of classification and forecasting</a>, <a href="index.php?page=infotg&id=1736">the salted and not salted conditions of oil wells</a>, <a href="index.php?page=infotg&id=1734">influence methods on a layer</a>, <a href="index.php?page=infotg&id=1731">cluster-analysis</a>, <a href="index.php?page=infotg&id=1735">the salted and not salted</a>, <a href="index.php?page=infotg&id=1732">automatic classification</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 154<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2583">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Большинство месторождений Азербайджана находится на поздней стадии разработки, для которой характерно осложнение добычи высокой обводненностью и коррозионной активностью продукции скважин, образованием стойких эмульсий, отложением солей, асфальто-смоло-парафи&shy;новых соединений. Дебит большинства нефтяных скважин сократился до такой степени, что они стали нерентабельными, выведены из эксплуатации и закрыты. При этом остаток нефти в некоторых скважинах составляет более 70&nbsp;%.</p>
+<p>&nbsp;</p>
+<p>Одной из основных проблем нефтедобывающей отрасли является увеличение количества скважин с трудноизвлекаемыми запасами. Эффективность разработки низкопродуктивных залежей нефти зависит от качественной и бесперебойной эксплуатации добывающих скважин, работа которых во многом определяется состоянием призабойной зоны пласта. Наличие наибольшей информации по текущему состоянию призабойной зоны пласта позволяет эффективно воздействовать на восстановление и повышение продуктивности нефтедобывающих скважин. При истощении запасов в старом месторождении использование традиционных методов добычи зачастую становится неэффективным.</p>
+<p>На нефтяных и нефтегазовых месторождениях Азербайджана для предотвращения осложнений используется комплекс технологий, увеличивающих нефтеотдачу пластов, который реализуется с помощью гидродинамических, газовых, физико-химических и биологических методов воздействия на продуктивные горизонты.</p>
+<p>Для современного этапа развития нефтегазодобывающей промышленности республики в условиях истощенности крупных месторождений характерна добыча нефти за счет интенсификации и регулирования отборов, открытия и ускоренного ввода в эксплуатацию средних и мелких месторождений, уменьшения нефтеотдачи пластов, а также внедрения в практику передовых методик и достижений науки.</p>
+<p>Эксплуатационные работы ведутся, как правило, не в отдельных скважинах, а по участкам месторождений и целыми пластами. И проблема повышения нефтеотдачи скважин сводится к повышению нефтеотдачи пласта. Поэтому на выделенных участках пласта подробно изучаются структура и распределение остаточных запасов нефти, динамика основных показателей разработки, типы осложнений, уточняются геолого-физико-химические состояния. На основе обобщения полученной информации на практике реализуются принятые геолого-технические мероприятия для конкретного участка.</p>
+<p>Решение рассматриваемой задачи сводится к решению следующих подзадач в среде неопределенности:</p>
+<p>-&nbsp;выбор информативных признаков, описывающих состояния нефтяных скважин;</p>
+<p>-&nbsp;диагностика состояний нефтяных скважин;</p>
+<p>-&nbsp;прогнозирование состояний нефтяных скважин по осложнениям (засоленные, незасоленные);</p>
+<p>-&nbsp;выбор метода или методов повышения нефтеотдачи пласта на основе двух критериев, а именно по времени и стоимости [1,&nbsp;2].</p>
+<p>Можно совместно использовать методы отбора наиболее информативных показателей и многомерную классификацию, причем этот процесс может быть итеративным: на первом этапе отбираются информативные показатели, на их основе проводится многомерная классификация, затем повторно отбираются информативные показатели, и все объекты вновь классифицируются. Предполагается, что каждая скважина описывается шестнадцатью эксплуатационными признаками, которые даны в шапке таблицы 1.</p>
+<p>В каждом временном сечении интервала предыстории [t0, tp] решается задача оптимальной классификации Kl. В работе используется идея итеративного алгоритма классификации, основанная на вычислении оценок.</p>
+<p>Исследуются состояния объектов xi(tk), i&Icirc;Im, k&Icirc;IT, в каждом временном сечении t0, t1, &hellip;, tT, каждому объекту будут соответствовать точки, геометрическое место которых образует траекторию изменения состояния объекта. Требуется  построить продолжения этих траекторий на интервале [tp+1, tT]. В работе использовано двухпараметрическое семейство алгоритмов прогнозирования An(p1, a). В этом методе важную роль играет параметр сглаживания a. Наблюдению, осу- ществленному в момент <img src="uploaded/image/2010-3/image1435.png" border="0" alt="" width="37" height="25" />&nbsp;придаются веса  p1(1-a)p2, последовательность которых убывает экспоненциально. В моменты <img src="uploaded/image/2010-3/image1437.png" border="0" alt="" width="113" height="23" />&nbsp;интервала проводится обучение алгоритма прогнозированию, то есть определяется оптимальное значение параметра a из максимума функционала j(An)=<img src="uploaded/image/2010-3/image1439.png" border="0" alt="" width="21" height="36" />, где m&cent; &ndash; число правильно распознанных объектов. Для прогнозирования состояний объектов применена рекурсивная формула экспоненциального сглаживания в нечеткой среде St=a&times;Xt+(1-a)&times;St-1, так как a=0,3.</p>
+<p>&nbsp;</p>
+<p><img src="uploaded/image/2010-3/image1442.png" alt="Подпись:  
+Функциональная схема программного комплекса" width="300" height="240" align="left" />Для решения задачи разработан программный комплекс на DELPHI 7, схема работы которого изображена на рисунке.</p>
+<p>Блок 1 предусматривает проведение диагностики состояний нефтяных скважин по осложнениям (засоленность) на базе алгоритмов автоматической классификации &ndash; кластерного анализа (модель вычисления оценок в нечеткой среде), где  K1 &ndash; класс засоленных скважин; K2 &ndash; класс незасоленных скважин; K3 &ndash; класс неопознанных  алгоритмом скважин [3,&nbsp;4]. Блок 2 прогнозирует состояние нефтяных скважин по осложнениям, то есть выбор обьекта и времени воздействия на пласт (нечеткие модели прогнозирования) [5,&nbsp;6].  В блоке 3 осуществляется выбор альтернатив, воздействующих на скважины для повышения нефтеотдачи пласта [1,&nbsp;7].</p>
+<p>В таблице 2 даны результаты вычислительных экспериментов для классификации выбранных скважин месторождения Палчыг Тепе (Азербайджан).</p>
+<p>Таблица 2</p>
+<p>Результаты вычислительных экспериментов  для месторождения Палчыг Тепе</p>
+<table border="1" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr>
+<td width="19">
+<p>№</p>
+</td>
+<td width="86">
+<p>(e, dk, ds)</p>
+</td>
+<td width="113">
+<p>Классы</p>
+</td>
+<td width="76">
+<p>Количество   классов</p>
+</td>
+</tr>
+<tr>
+<td width="19">
+<p>1.</p>
+</td>
+<td width="86">
+<p>(2.96*10-2,    6.5*10-2, 2*10-2)</p>
+</td>
+<td width="113" valign="top">
+<p>I-1,2,6,7,8,9,10,11, 12,13, 14,15,16,17,18</p>
+<p>II-3,4,5</p>
+</td>
+<td width="76">
+<p>2</p>
+</td>
+</tr>
+<tr>
+<td width="19">
+<p>2.</p>
+</td>
+<td width="86">
+<p>(2.34*10-2, 4.16*10-1, 2.56*10-2)</p>
+</td>
+<td width="113" valign="top">
+<p>I-1,2,13,16,18,19</p>
+<p>II-3,4,5,10,11,15</p>
+<p>III-6,7,14,17</p>
+<p>IV- 8,9,12</p>
+</td>
+<td width="76">
+<p>4</p>
+</td>
+</tr>
+<tr>
+<td width="19">
+<p>3.</p>
+</td>
+<td width="86">
+<p>(1.32*10-2, 4.14*10-1, 2.55*10-2)</p>
+</td>
+<td width="113" valign="top">
+<p>I-1,2,13,16,19</p>
+<p>II-3,4,5,10,11,15,18</p>
+<p>III-6,7</p>
+<p>IV- 8,12,14,17</p>
+<p>V-9</p>
+</td>
+<td width="76">
+<p>5</p>
+</td>
+</tr>
+<tr>
+<td width="19">
+<p>4.</p>
+</td>
+<td width="86">
+<p>(1.05*10-2,    2.8*10-1,   2.26*10-2)</p>
+</td>
+<td width="113" valign="top">
+<p>I-1,2,6,10,19</p>
+<p>II-3,4,5,11,13,15,18</p>
+<p>III-7,8,12</p>
+<p>IV- 9</p>
+<p>V-14,17</p>
+<p>VI-16</p>
+</td>
+<td width="76">
+<p>6</p>
+</td>
+</tr>
+<tr>
+<td width="19">
+<p>5.</p>
+</td>
+<td width="86">
+<p>(6*10-3,    6.5*10-2, 2*10-2)</p>
+</td>
+<td width="113" valign="top">
+<p>I-1,2,6,7,8,9,10,12, 14,15, 16,17,19</p>
+<p>II- 3,4,11,18</p>
+<p>III-5,13</p>
+</td>
+<td width="76">
+<p>3</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Из таблицы видно, что при разных значениях порогового вектора (e, dk, ds) для столбца &laquo;количество классов&raquo; получаются разные значения. Эксперименты показали, что при некоторых значениях получается тривиальная нецелесообразная классификация, то есть либо все объекты входят в один класс, либо каждый объект образует отдельный класс.</p>
+<p>В работе предложен программный комплекс повышения нефтеотдачи пласта. Комплекс апробирован как в нескольких модельных задачах, где достигнут стопроцентный результат, так и с использованием реальных данных, относящихся к месторождениям Азербайджана Банк Дарвина, Гум адасы и Палчыг Тепе. На этих месторождениях достигнута реализация свыше 90&nbsp;%.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Кулиев Р.А. Об одном подходе к проектированию интеллектуальной системы оптимального выбора объема и технологии повышения нефтеотдачи // Междунар. конф. по мягким вычислениям и измерениям (27&ndash;29 июня 2005 г., Санкт-Петербург). СПб: 2005. С. 132&ndash;135.</p>
+<p>2.&nbsp;&nbsp; Kuliev R.A. Diagnostic neural network system of states of the oil well functioning / First International Conference on Soft Computing Technologies in Economy, ICSCTE-2007. Baku, Azerbaijan. November 19&ndash;20, 2007, pp. 17&ndash;20.</p>
+<p>3.&nbsp;&nbsp; Журавлев Ю.И., Никифоров В.В. Алгоритмы распознавания, основанные на вычислении оценок // Кибернетика. 1971. № 3. С. 1&ndash;11.</p>
+<p>4.&nbsp;&nbsp; Зенкин А.А., Зенкин А.И. Задача построения оптимальных классификаций: сб. работ по мат. киберн. ВЦ АН СССР. М., 1981. С. 20&ndash;33.</p>
+<p>5.&nbsp;&nbsp; Керимов А.К., Ширинов К.Ф., Кулиев Р.А. Об одной прогнозной модели для временных рядов // Изв. НАН Азербайджана: сер. физ.-тех. и мат. наук. 2004. № 3. С. 120&ndash;122.</p>
+<p>6.&nbsp;&nbsp; Кулиев Р.А. Нечеткое прогнозирование состояния нефтяных скважин по отношению к солеобразованию // Междунар. конф. по мягким вычислениям и измерениям  (25&ndash;27 июня 2007 г., Санкт-Петербург). СПб: 2007. С. 148&ndash;150.</p>
+<p>7.&nbsp;&nbsp; Кулиев Р.А. Нечетко-гарантированный подход к проблеме выбора методом повышения нефтеотдачи пластов //  Там же (17&ndash;19 июня 2004 г., Санкт-Петербург). СПб: 2004.  С. 89&ndash;90.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2583</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2583">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 3 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=91">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

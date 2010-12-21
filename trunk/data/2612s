@@ -1,0 +1,702 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Абдуктивный вывод versus дедукция</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Абдуктивный вывод versus дедукция</h2><div style="margin-bottom:10px"><strong>Abduction versus deduction</strong></div>Статья опубликована в выпуске журнала № 4 за 2010 год. [ 09.12.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">В интеллектуальных системах очень важную роль стал играть абдуктивный вывод, цель которого заключается в выводе причины для наблюдаемого события. Дедукция играет немалую роль в организации абдуктивного вывода. Именно дедуктивные свойства абдукции являются центральной темой данной статьи. Рассматривается алгоритм ImpAA, осуществляющий поиск минимальных абдуктивных объяснений с помощью первичных импликат. Рассмат-ривается алгоритм SOL-резолюции для нахождения множества первичных импликат и предлагается эвристика для сокращения поискового пространства в этом алгоритме.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">Recently abductive inference, the goal of which is to derive a reason for an observed event, began to play the important role in intelligent systems. Deduction serves a huge role in organization of abductive inference. The deductive properties of abduction are the central theme of the paper. Algorithm ImpAA is discussed, that finds minimal abductive explanations with the help of primary implicates. Algorithm SOL-resolution is discussed, that finds the set of primary implicates and heuristics for that algorithm for reducing the search space is proposed.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=3922">Вагин В.Н. (eremeev@appmat.ru)</a> - Московский энергетический институт (технический университет) Доктор технический наук Ph.D., <a href="index.php?page=infou&id=5928">Хотимчук К.Ю. ()</a> -    </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=94">принятие решений</a>, <a href="index.php?page=infotg&id=1774">первичная импликата</a>, <a href="index.php?page=infotg&id=1775">минимальное абдуктивное объяснение</a>, <a href="index.php?page=infotg&id=76">интеллектуальные системы</a>, <a href="index.php?page=infotg&id=1773">импликата</a>, <a href="index.php?page=infotg&id=77">дедукция</a>, <a href="index.php?page=infotg&id=1772">абдукция</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=94">decision making</a>, <a href="index.php?page=infotg&id=1774"></a>, <a href="index.php?page=infotg&id=1775"></a>, <a href="index.php?page=infotg&id=76">intelligent systems</a>, <a href="index.php?page=infotg&id=1773"></a>, <a href="index.php?page=infotg&id=77"></a>, <a href="index.php?page=infotg&id=1772"></a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 27<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2612">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>В настоящее время разработка формальных моделей разных форм рассуждения играет ключевую роль в создании интеллектуальных систем различного назначения. Известно, что индуктивный вывод &ndash; это вывод от частного к общему, в то время как абдуктивный заключается в выводе причины из наблюдаемого события и является выводом от частного к частному. Вывод по абдукции успешно применяется для решения задач диагностики [1], понимания естественного языка [2], распознавания, накопления знаний, составления расписаний и, несомненно, является очень важной составляющей интеллектуальных систем.</p>
+<p>&nbsp;</p>
+<p>В данной работе рассматриваются понятия первичной импликаты и минимального абдуктивного объяснения, после чего изложен принцип нахождения множества минимальных абдуктивных объяснений с помощью первичных импликат, приводятся алгоритм SOL-резолюции (skipping ordered linear &ndash; линейная упорядоченная резолюция с перемещением) для нахождения первичных импликат и алгоритм ImpAA для нахождения  минимальных абдуктивных объяснений. Кроме того, предожен эвристический метод для сокращения поискового пространства в алгоритме  SOL-резолюции, названный авторами методом выбора начального порядка литер в исходных дизъюнктах.</p>
+<p>Первичные импликаты</p>
+<p>Для организации абдуктивного вывода используется метод импликат, где под импликатой понимается следствие из формулы. Используются модификации этого понятия: -импликата и -первичная импликата [3].</p>
+<p>Определение 1. Пусть L &ndash; конечное подмножество литер; S &ndash; некоторая формула; Ф &ndash; конъюнкция формул логики предикатов первого порядка (ЛП1П); Lit(d) &ndash; множество литер дизъюнкта d.</p>
+<p>Дизъюнкт p является -импликатой S, если Ф&Ugrave;S&frac12;=p, Ф&frac12;&sup1;p и Lit(p)&Iacute;L.</p>
+<p>Дизъюнкт p является -первичной импликатой S, если p &ndash; -импликата S; и для всех -импликат &pi;' формулы S выполняется {p'╞p}&THORN;{p╞p'}.</p>
+<p>Множество всех -первичных импликат формулы S будем обозначать как PILФ(S).</p>
+<p>Пример 1. Пусть S=(a&reg;b), Ф=(b&reg;c)&Ugrave; &Ugrave;(c&Ugrave;&Oslash;b&reg;d), L={&Oslash;a, b, d}. Тогда &Oslash;a&Uacute;b, &Oslash;a&Uacute;b&Uacute;d являются -импликатами формулы S.</p>
+<p>Пример 2. Пусть S=(a&reg;b), Ф=(b&reg;c)&Ugrave;  &Ugrave; (c&Ugrave;&Oslash;b&reg;d), L={&Oslash;a, b, d}. Тогда &Oslash;a&Uacute;b является -первичной импликатой формулы S; &Oslash;a&Uacute;b&Uacute;d не является -первичной импликатой формулы S.</p>
+<p>Решение задачи абдукции  с помощью первичных импликат</p>
+<p>Определение 2. Пусть Ф &ndash; конъюнкция формул ЛП1П; H &ndash; конечное множество фактов, называемых предположениями (гипотезами); упорядоченная пара T=&lt;Ф, Н&gt; &ndash; теория, построенная на предположениях [3].</p>
+<p>Определение 3 (абдуктивного вывода). Пусть T=&lt;Ф, Н&gt; &ndash; теория, построенная на предположениях. Абдуктивный вывод заключается в выводе объяснения для наблюдаемого события &delta; как подмножества &gamma;&Iacute;H, такое, что Ф &amp; &gamma;╞&delta; [3].</p>
+<p>Заметим, что на &gamma; в определении 2 накладывается синтаксическое ограничение &ndash; &gamma; представляет собой конъюнкцию фактов.</p>
+<p>Определение 4. Пусть Т=&lt;Ф, Н&gt; &ndash; теория,  основанная на предположениях; &delta; &ndash; формула ЛП1П. Конъюнктивно интерпретируемое подмножество &gamma;&Iacute;H назовем абдуктивным объяснением &delta; относительно Т, если Ф&amp;&gamma;╞ &delta; и если Ф&amp;&gamma; выполнимо.</p>
+<p>Пример 3. Пусть Т=&lt;Ф, Н&gt;, где Ф="x (Студент(x)&reg;Юн(x)), &delta;=Юн(Петров). Пусть H={Сту&shy;дент(x1), Рабочий(x2)}. Тогда Студент(Петров), Студент(Петров) &amp; Рабочий(Иванов) являются абдуктивными объяснениями &delta; относительно T.</p>
+<p>Заметим, что абдуктивное объяснение не должно быть противоречивым. В примере 1 Студент(Петров) &amp; &Oslash;Юн(Петров) не является абдуктивным объяснением &delta; относительно T в силу противоречивости.</p>
+<p>Определение 5. Пусть Т=&lt;Ф, Н&gt; &ndash; теория, основанная на предположениях; d &ndash; формула ЛП1П. Конъюнктивно интерпретируемое подмножество &gamma;&Iacute;H назовем минимальным абдуктивным объяснением &delta; относительно Т, если &gamma; &ndash; абдуктивное объяснение для &delta; относительно Т; для любого абдуктивного объяснения &gamma;' для &delta; относительно Т выполняется (&gamma;&Iacute;&gamma;')&reg;( &gamma;'&Iacute;&gamma;) [3].</p>
+<p>Пример 4. Пусть Т=&lt;Ф, Н&gt;, где Ф = "x (Студент(x)&reg;Юн(x)), &delta;=Юн(Петров). Пусть H={Сту&shy;дент(x1), Рабочий(x2)}. Тогда Студент(Петров) является минимальным абдуктивным объяснением &delta; относительно T. Студент(Петров) &amp; Рабочий (Иванов) не является минимальным абдуктивным объяснением &delta; относительно T.</p>
+<p>Существуют различные методы решения задачи абдукции. В данном случае рассматривается метод решения с помощью первичных импликат. В основе этого метода лежит принцип абдукции через дедукцию [4]: Ф, &gamma;╞ &delta;; применяя теорему о дедукции и аксиому контрпозиции, получаем Ф, &Oslash;&delta;╞&Oslash; &gamma;.</p>
+<p>Доказана справедливость следующего утверждения [3].</p>
+<p>Утверждение. Пусть T=&lt;Ф, H&gt; &ndash; теория, основанная на предположениях, и пусть &delta; &ndash; формула; &gamma; &ndash; минимальное абдуктивное объяснение для &delta; относительно T тогда и только тогда, когда &Oslash;&gamma; является &lt;Ф, &Oslash;H&gt;-первичной импликатой формулы &Oslash;&delta;.</p>
+<p>Замечание: &Oslash;H означает &lt;&Oslash;h1, &Oslash;h2, &hellip;, &Oslash;hN&gt;.</p>
+<p>Пример 5. Пусть Т=&lt;&Oslash;a&Uacute;b, {a, &Oslash;a, b, &Oslash;b}&gt; &ndash; теория, основанная на предположениях. Пусть наблюдается факт &delta;=b.</p>
+<p>Сведем задачу нахождения минимальных абдуктивных объяснений для &delta;=b относительно Т к задаче нахождения множества &lt;&Oslash;H, Ф&gt;-первич&shy;ных импликат формулы &Oslash;&delta;: &Oslash;&delta;=&Oslash;b; Ф=&Oslash;a&Uacute;b; &Oslash;Н={&Oslash;a, a, &Oslash;b, b}.</p>
+<p>Формулы &Oslash;a, &Oslash;b являются &lt;&Oslash;H, Ф&gt;-первич&shy;ными импликатами формулы &Oslash;&delta;. Для каждой из этих двух формул получаем соответствующее минимальное абдуктивное объяснение путем взятия отрицания a и b.</p>
+<p>Алгоритм ImpAA</p>
+<p>Для нахождения множества -первич&shy;ных импликат формулы S применяется алгоритм SOL-резолюции, основанный на работах Ковальски и Кунера [5]. Неформально суть его такова: пусть формула Ф допускает дизъюнктивное представление S, тогда последовательно осуществляется резолюция формулы S с дизъюнктами из S до того момента, пока не окажется, что полученный к данному моменту дизъюнкт D уже нельзя прорезольвировать ни с одним из дизъюнктов S. Для того чтобы не допустить вывод дизъюнктов, не являющихся первичными импликатами, в алгоритме используется механизм обрамления литеры, по которой имело место резольвирование [6].</p>
+<p>SOL-резолюция оперирует расширенными и структурными дизъюнктами.</p>
+<p>Определение 6. Пусть LPS &ndash; множество литер ЛП1П. Расширенным дизъюнктом называется упорядоченный дизъюнкт, литеры которого берутся из множества LPS&Egrave;{[r], r&Icirc;LPS}, где {[r], r&Icirc;LPS} &ndash; это множество так называемых обрамленных литер.</p>
+<p>Обрамление литеры является способом запомнить, что по данной литере резольвирование уже было. Таким образом, если дизъюнкт содержит обрамленную литеру [r], то это означает, что один из его родительских дизъюнктов содержит r. С логической точки зрения расширенный дизъюнкт не зависит от его обрамленных литер, то есть представляет собой дизъюнкт, составленный только из необрамленных литер данного. Целью обрамления являются организация последовательного поиска и обеспечение вывода только первичных импликат: резольвирование дизъюнкта с дизъюнктами из Ф, содержащими литеру, по которой производилось резольвирование выше, бесполезно.</p>
+<p>Определение 7. Структурным дизъюнктом называется упорядоченная пара , где d &ndash; дизъюнкт, e &ndash;&nbsp; расширенный дизъюнкт.</p>
+<p>Структурный дизъюнкт в SOL-резолюции логически означает некоторый дизъюнкт, уже являющийся первичной импликатой формулы S, то есть  означает дизъюнкт, составленный из литер дизъюнкта d и необрамленных литер расширенного дизъюнкта e. Разделение на d и e необходимо для четкого определения части, которую надо резольвировать (e), и части, от резольвирования которой уже нельзя получить новые импликаты (d), &ndash; тем самым реализуется последовательный перебор.</p>
+<p>Опишем кратко сам алгоритм. Первоначально из исходного дизъюнкта составляется структурный дизъюнкт, левая компонента которого является пустым множеством, а правая состоит из множества литер исходного дизъюнкта. Построенный структурный дизъюнкт подается на вход алгоритма SOL-резолюции, на выходе которого получается множество первичных импликат.</p>
+<p>Опишем действие алгоритма SOL-резолюции для произвольного узла дерева вывода. Со структурным дизъюнктом, связанным с этим узлом, можно выполнить два действия: переместить первую литеру из второй компоненты в первую (Skip) и прорезольвировать по первой литере со всеми подходящими дизъюнктами из базы правил, объединенной с начальным дизъюнктом (Resolve).</p>
+<p>Процедура Skip перемещает первую литеру из второй компоненты в первую, после чего вызывается процедура Reduce, которая редуцирует вторую компоненту.</p>
+<p>Процедура Resolve перебирает все дизъюнкты из базы правил, объединенной с исходным дизъюнктом, если находит подходящий для резольвирования дизъюнкт, то осуществляются резолюция и редуцирование Reduce.</p>
+<p>Процедура Reduce удаляет из структурного дизъюнкта повторные литеры, а также все обрамленные литеры второй компоненты структурного дизъюнкта, которым не предшествует ни одна необрамленная литера.</p>
+<p>Алгоритм ImpAA</p>
+<p>Исходные данные: clauses &ndash; исходное множество дизъюнктов, observed &ndash; наблюдаемый конъюнкт.</p>
+<p>Выходные данные: result &ndash; множество абдуктивных объяснений для observed (результирующее множество конъюнктов).</p>
+<p>Начало.</p>
+<p>Шаг 1.&nbsp; Создаем дизъюнкт clause=<img src="uploaded/image/2010-4/image594.gif" border="0" alt="" width="16" height="11" />observed.</p>
+<p>Шаг 2.&nbsp; Обращаемся к процедуре SOLSolve с параметрами clause, clauses, Lit(clause)<img src="uploaded/image/2010-4/image596.gif" border="0" alt="" width="17" height="13" />Lit(claus&shy;es), где Lit(clause) / Lit(clauses) &ndash; множество литер, встречающихся в дизъюнкте/дизъюнктах. Результат выполнения процедуры &ndash; множество impli&shy;cates.</p>
+<p>Шаг 3.&nbsp; Для каждого дизъюнкта implicate из implicates создаем конъюнкт explanation=<img src="uploaded/image/2010-4/image594.gif" border="0" alt="" width="16" height="11" />impli&shy;cate. Добавляем explanation к result.</p>
+<p>Конец.</p>
+<p>Алгоритм SOLSolve</p>
+<p>Исходные данные: clause &ndash; дизъюнкт, для которого требуется найти множество -пер&shy;вичных импликат; ruleBase &ndash; имеющаяся база правил; lit &ndash; множество литер, которые могут присутствовать в выводимых дизъюнктах.</p>
+<p>Выходные данные: result &ndash; множество -первичных импликат.</p>
+<p>Начало.</p>
+<p>Шаг 1.&nbsp; Образование начального центрального структурного дизъюнкта topClause=&lt;&lt;&AElig;&gt;, &gt;. В качестве базы правил нужно взять имеющуюся базу правил, объединенную с clause.</p>
+<p>Шаг 2.&nbsp; Поиск всех первичных импликат с помощью выполнения шага 4.</p>
+<p>Шаг 3.&nbsp; Выбор из полученного на предыдущем шаге множества неповторяющихся дизъюнктов и запись их в result. Конец.</p>
+<p>Шаг 4.&nbsp; Поиск множества первичных импликат для поступающего на вход узла (структурного дизъюнкта). Возвращается множество дизъюнктов, которые являются первичными импликатами дизъюнкта, образованного из необрамленных литер родительского структурного дизъюнкта topClause, и где резольвировать можно только по литерам из второй компоненты topClause.</p>
+<p>Для узла, в котором произошел вызов данного шага, выполнить шаг 5, получив множество дизъюнктов s1, и шаг 6, получив множество дизъюнктов s2.</p>
+<p>Возвратить s1&Egrave;s2.</p>
+<p>Шаг 5.&nbsp; Рассмотрение 1 &ndash; первой литеры из второй компоненты topClause. Если l&Icirc;lit, необходимо осуществить перенос (правило Skip) литеры из второй компоненты topClause в первую, иначе Конец. Осуществить редукцию (шаг 7).</p>
+<p>Если вторая компонента topClause пуста, возвратить дизъюнкт, полученный из литер левой компоненты topClause.</p>
+<p>Иначе продолжить рекурсивный поиск для topClause &ndash; выполнить шаг 4.</p>
+<p>Шаг 6.&nbsp; Резолюция (правило Resolve) первой литеры из второй компоненты со всевозможными дизъюнктами из базы правил.</p>
+<p>Пусть входной структурный дизъюнкт на данном этапе имеет вид &lt;, &gt;, а подходящее правило rule=l&rsquo;1, &hellip;, l&rsquo;t, &Oslash;l, l&rsquo;t+1, l&rsquo;p, тогда резольвента примет вид &lt;, &lt; sl&rsquo;1, &hellip;, sl&rsquo;t, sl&rsquo;t+1, sl&rsquo;p, [sl], sl1, &hellip;, sln&gt;&gt;. При выборе подходящего правила нужно соблюдать условие lit(rule)&Ccedil;framed({l, l1, &hellip;, ln})=&AElig;.</p>
+<p>Осуществить редукцию (шаг 7) всех полученных резольвент и с ними перейти к шагу 4.</p>
+<p>Шаг 7.&nbsp; Редукция поступающего на вход структурного дизъюнкта (правило Reduce).</p>
+<p>Если в l1, &hellip;, ln литера l встречается дважды, то удаляется ее самое левое вхождение. Получаем l11, l12, &hellip;, l1n1.</p>
+<p>Если какая-либо литера из a1, a2, &hellip;, ak совпадает с некоторыми литерами из l11, l12, &hellip; l1n1, то удаляем из последнего множества эти литеры. Получаем l21, l22, &hellip; l2n2.</p>
+<p>Удалить все обрамленные литеры из , которым не предшествует обрамленная литера.</p>
+<p>Конец.</p>
+<p>Пример работы алгоритма  SOL-резолюции</p>
+<p>Пример 6. Пусть Ф представима как {(1) &Oslash;a&Uacute;d, (2) &Oslash;d&Uacute;e, (3) &Oslash;a&Uacute;f, (4) &Oslash;f&Uacute;e, (5) &Oslash;e&Uacute;g}; S=a&Uacute;b&Uacute;c; L &ndash; множество всех встречающихся в данном примере литер. Тогда дерево вывода множества -первичных импликат формулы S имеет следующий вид (здесь номер шага в квадратных скобках означает, что на этом шаге выведена первичная импликата):</p>
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&lt;&lt;&AElig;&gt;, &gt;,</p>
+<p>2.&nbsp;&nbsp;&nbsp;&nbsp;&lt;<a>, &gt; (правило Skip для п. 1),</a></p>
+<p><a> </a></p>
+<p><a>3.&nbsp;&nbsp;&nbsp;&nbsp;&lt;&lt;&AElig;&gt;, &gt; (правило Resolve для п. 1 с (1)),</a></p>
+<p><a> </a></p>
+<p><a>4.&nbsp;&nbsp;&nbsp;&nbsp;&lt;&lt;&AElig;&gt;, &gt; (правило Resolve для п. 1 с (3)),</a></p>
+<p><a> </a></p>
+<p><a>5.&nbsp;&nbsp;&nbsp;&nbsp;&lt;, &gt; (правило Skip для п. 2),</a></p>
+<p><a> </a></p>
+<p><a>6.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 2 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>7.&nbsp;&nbsp;&nbsp;&nbsp;&lt; &gt; (правило Skip для п. 3),</a></p>
+<p><a> </a></p>
+<p><a>8.&nbsp;&nbsp;&nbsp;&nbsp;&lt;&lt;&AElig;&gt;, &gt; (правило Resolve для п. 3 с (2)),</a></p>
+<p><a> </a></p>
+<p><a>9.&nbsp;&nbsp;&nbsp;&nbsp;&lt; &gt; (правило Skip для п. 4),</a></p>
+<p><a> </a></p>
+<p><a>10.&nbsp;&nbsp;&nbsp;&lt;&lt;&AElig;&gt;, &gt; (правило Resolve для п. 4 с (4)),</a></p>
+<p><a> </a></p>
+<p><a>[11].&nbsp;&nbsp;&lt;, &lt;&AElig;&gt;&gt; = a &Uacute; b &Uacute; c (правило Skip для п. 5),</a></p>
+<p><a> </a></p>
+<p><a>12.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 5 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>13.&nbsp;&nbsp;&nbsp;&nbsp;&lt;, &gt; (правило Skip для п. 7),</a></p>
+<p><a> </a></p>
+<p><a>14.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 7 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>15.&nbsp;&nbsp;&nbsp;&nbsp;&lt;, &gt; (правило Skip для п. 8),</a></p>
+<p><a> </a></p>
+<p><a>16.&nbsp;&nbsp;&nbsp;&nbsp;&lt;&lt;&AElig;&gt;, &gt; (правило Resolve для п. 8 с (5)),</a></p>
+<p><a> </a></p>
+<p><a>17.&nbsp;&nbsp;&nbsp;&nbsp;&lt;, &gt; (правило Skip для п. 9),</a></p>
+<p><a> </a></p>
+<p><a>18.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 9 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>19.&nbsp;&nbsp;&nbsp;&nbsp;&lt;, &gt; (правило Skip для п. 10),</a></p>
+<p><a> </a></p>
+<p><a>20.&nbsp;&nbsp;&nbsp;&nbsp;&lt;&lt;&AElig;&gt;, &gt; (правило Resolve для п. 10 с (5)),</a></p>
+<p><a> </a></p>
+<p><a>[21].&nbsp;&nbsp;&lt;, &lt;&AElig;&gt;&gt; = b &Uacute; c &Uacute; d (правило Skip для п. 13),</a></p>
+<p><a> </a></p>
+<p><a>22.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 13 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>23.&nbsp;&nbsp;&nbsp;&nbsp;&lt;, &gt; (правило Skip для п. 15),</a></p>
+<p><a> </a></p>
+<p><a>24.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 15 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>25.&nbsp;&nbsp;&nbsp;&nbsp;&lt;, &gt; (правило Skip для п. 16),</a></p>
+<p><a> </a></p>
+<p><a>26.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 16 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>[27].&nbsp;&nbsp;&lt;, &lt;&AElig;&gt;&gt; = b &Uacute; c &Uacute; f (правило Skip для п. 17),</a></p>
+<p><a> </a></p>
+<p><a>28.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 17 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>29.&nbsp;&nbsp;&nbsp;&nbsp;&lt;, &gt; (правило Skip для п. 19),</a></p>
+<p><a> </a></p>
+<p><a>30.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 19 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>31.&nbsp;&nbsp;&nbsp;&nbsp;&lt;, &gt; (правило Skip для п. 20),</a></p>
+<p><a> </a></p>
+<p><a>32.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 20 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>[33.]&nbsp;&nbsp;&nbsp;&nbsp;&lt;, &lt;&AElig;&gt;&gt; = b &Uacute; c &Uacute; e (правило Skip для п. 23),</a></p>
+<p><a> </a></p>
+<p><a>34.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 23 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>35.&nbsp;&nbsp;&nbsp;&nbsp;&lt;, &gt; (правило Skip для п. 25),</a></p>
+<p><a> </a></p>
+<p><a>36.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 25 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>[37].&nbsp;&nbsp;&lt;, &lt;&AElig;&gt;&gt; = b &Uacute; c &Uacute; e (правило Skip для п. 29),</a></p>
+<p><a> </a></p>
+<p><a>38.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 29 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>39.&nbsp;&nbsp;&nbsp;&nbsp;&lt;, &gt; (правило Skip для п. 31),</a></p>
+<p><a> </a></p>
+<p><a>40.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 31 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>[41].&nbsp;&nbsp;&lt;, &lt;&AElig;&gt;&gt; = b &Uacute; c &Uacute; g (правило Skip для п. 35),</a></p>
+<p><a> </a></p>
+<p><a>42.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 35 невыполнимо),</a></p>
+<p><a> </a></p>
+<p><a>[43].&nbsp;&nbsp;&lt;, &lt;&AElig;&gt;&gt; = b &Uacute; c &Uacute; g (правило Skip для п. 39),</a></p>
+<p><a> </a></p>
+<p><a>44.&nbsp;&nbsp;&nbsp;&nbsp;&AElig; (правило Resolve для п. 39 невыполнимо).</a></p>
+<p><a> </a></p>
+<p><a>Ответ: a&Uacute;b&Uacute;c, b&Uacute;c&Uacute;d, b&Uacute;c&Uacute;f, b&Uacute;c&Uacute;e, b&Uacute;c&Uacute;g, решение получено за 44 шага.</a></p>
+<p><a> </a></p>
+<p><a>Эвристический метод выбора начального  порядка литер в исходных дизъюнктах  в алгоритме SOL-резолюции</a></p>
+<p><a> </a></p>
+<p><a>Заметим, что уменьшение количества выведенных повторных дизъюнктов в алгоритме SOL-резолюции возможно за счет варьирования порядка литер в исходных дизъюнктах. На этом наблюдении основывается эвристический метод выбора начального порядка литер в исходных дизъюнктах. Метод заключается в упорядочении литер в дизъюнкте по возрастанию функции Rank, действующей из декартова произведения множества литер и множества множеств дизъюнктов во множество целых чисел. Пусть RuleBase&nbsp;&ndash; множество дизъюнктов. Тогда ранг литеры r&nbsp;в RuleBase определяется следующим образом. Находятся дизъюнкты d1, &hellip; dn, содержащие &Oslash;r. Тогда</a></p>
+<p><a> </a></p>
+<p><a><img src="uploaded/image/2010-4/image602.gif" border="0" alt="" width="273" height="112" /></a></p>
+<p><a> </a></p>
+<p><a>Пример 7. Рассмотрим множество из 3 дизъюнктов {(1) a&Uacute;b&Uacute;с, (2) &Oslash;a&Uacute;b, (3) &Oslash;b&Uacute;с}. Вычислим значения функции Rank для литер a, &Oslash;a, b, &Oslash;b, c.</a></p>
+<p><a> </a></p>
+<p><a>Rank(a, (1, 2, 3))=1+Rank(b, (1, 3))=1+1+Rank(c, (1))=2,</a></p>
+<p><a> </a></p>
+<p><a>Rank(b, (1, 2, 3))=1+Rank(c, (1, 2))=1,</a></p>
+<p><a> </a></p>
+<p><a>Rank(&Oslash;a, (1, 2, 3))=1+Rank(b, (2, 3))+Rank(c, (2, 3))=1+1=2,</a></p>
+<p><a> </a></p>
+<p><a>Rank(&Oslash;b, (1, 2, 3))=1+Rank(a, (2, 3))+Rank(c, (2, 3))+</a></p>
+<p><a> </a></p>
+<p><a>+Rank(&Oslash;a, (1, 3))=1+1+Rank(b, (3))+0+1+</a></p>
+<p><a> </a></p>
+<p><a>+Rank(b, (3))+Rank(c, (3))=3+2=5,</a></p>
+<p><a> </a></p>
+<p><a>Rank(c, (1, 2, 3))=0.</a></p>
+<p><a> </a></p>
+<p><a>Таким образом, на первых местах во второй компоненте расширенного дизъюнкта оказываются литеры, которые, по оценке авторов, приведут к порождению наименьшего числа дизъюнктов. Ранг 0 имеет та литера, по которой резольвирование вообще не происходит.</a></p>
+<p><a> </a></p>
+<p><a>Пример 8. Изменяем порядок следования литер согласно эвристическому методу выбора начального порядка литер в исходных дизъюнктах; Ф представима как {(1) &Oslash;a&Uacute;d, (2) e&Uacute;&Oslash;d, (3) &Oslash;a&Uacute;f, (4) e&Uacute;&Oslash;f, (5) g&Uacute;&Oslash;e}, а S=b&Uacute;c&Uacute;a. В этом случае решение получается уже за 20 шагов.</a></p>
+<p><a> </a></p>
+<p><a>1. &lt;&lt;&AElig;&gt;, &gt;,</a></p>
+<p><a> </a></p>
+<p><a>2. &lt;<strong>, &gt; (правило Skip для п. 1),</strong></a></p>
+<p><a><strong> </strong></a></p>
+<p><a><strong>3. &AElig; (правило Resolve для п. 1 невыполнимо),</strong></a></p>
+<p><a><strong> </strong></a></p>
+<p><a><strong>4. &lt;, </strong></a><a><strong>&gt; (правило Skip для п. 2),</strong></a></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>5. &AElig; (правило Resolve для п. 2 невыполнимо),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>[6]. &lt;, &lt;&AElig;&gt;&gt; = a &Uacute; b &Uacute; c (правило Skip для п. 4),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>7. &lt;, &gt; (правило Resolve для п. 4 с (1)),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>8. &lt;, &gt; (правило Resolve для п. 4 с (3)),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>[9]. &lt;, &lt;&AElig;&gt;&gt; = b &Uacute; c &Uacute; d (правило Skip для п. 7),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>10. &lt;, &gt; (правило Resolve для п. 7 с (2)),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>[11]. &lt; &lt;&AElig;&gt;&gt; = b &Uacute; c &Uacute; f (правило Skip для п. 8),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>12. &lt;, &gt; (правило Resolve для п. 8 с (4)),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>[13]. &lt;, &lt;&AElig;&gt;&gt; = b &Uacute; c &Uacute; e (правило Skip для п. 10),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>14. &lt;, &gt; (правило Resolve для п. 10 с (5)),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>[15]. &lt;, &lt;&AElig;&gt;&gt; = b &Uacute; c &Uacute; e (правило Skip для п. 12),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>16. &lt;, &gt; (правило Resolve для п. 12 с (5)),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>[17]. &lt;, &lt;&AElig;&gt;&gt; = b &Uacute; c &Uacute; g (правило Skip для п. 14),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>18. &AElig; (правило Resolve для п. 14 невыполнимо),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>[19]. &lt;, &lt;&AElig;&gt;&gt; = b &Uacute; c &Uacute; g (правило Skip для п. 16),</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>20. &AElig; (правило Resolve для п. 16 невыполнимо).</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>Ответ: a&Uacute;b&Uacute;c, b&Uacute;c&Uacute;d, b&Uacute;c&Uacute;f, b&Uacute;c&Uacute;e, b&Uacute;c&Uacute;g.</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>В заключение отметим, что абдуктивный вывод широко применяется в интеллектуальных системах различного назначения. В работе рассмотрен алгоритм ImpAA решения задачи абдукции с помощью -первичных импликат. Собственно нахождение -первичных импликат осуществляется по алгоритму SOL-резолюции. Недостатками этого алгоритма являются, во-первых, полный перебор, а во-вторых, в общем случае он находит повторные дизъюнкты. Авторы предложили эвристический метод выбора начального порядка литер в исходных дизъюнктах для сокращения поискового пространства.</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>Литература</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>1.&nbsp;&nbsp; Cox P.T. and Pietrzykowski T. General diagnosis by abductive inference // Proc. IEEE Sympos. Logic Programming. San Francisco. 1987, pp. 183&ndash;189.</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>2.&nbsp;&nbsp; Hobbs J., Stickel M.E., Appelt D. [et al.]. Interpretation as abduction // Artificial Intelligence. 1993. № 63 (1&ndash;2), pp. 69&ndash;142.</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>3.&nbsp;&nbsp; Marquis P. Consequence finding algorithms // Handbook for Defeasible Reasoning and Uncertain Management Systems [eds. D.M. Gabbay and P. Smets]. 2000. Vol. 5, pp. 41&ndash;145.</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>4.&nbsp;&nbsp; Kakas A.C., Kowalski R.A., Toni F. The role of abduction in logic programming // Handbook of Logic in Artificial Intelligence and Logic Programming [Ed. Gabbay D.M., Hogger C.J. and Robinson J.A.]. Oxford. Oxford University Press. 1998, pp. 235&ndash;324.</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p><strong><a>5.&nbsp;&nbsp; Kowalski R., Kuhner D. Linear resolution with selection function // Artificial Intelligence. 1971. Vol. 2, pp. 227&ndash;260.</a></strong></p>
+<p><strong><a> </a></strong></p>
+<p style="margin-left:53.45pt;mso-add-space:auto;text-indent: -18.0pt;line-height:150%;tab-stops:list 1.0cm"><strong><a>Вагин В.Н. [и др.]. Достоверный и правдоподобный вывод в интеллектуальных системах: 2-е изд. [под ред.  В.Н. Вагина и Д.А. Поспелова]. М.: Физматлит, 2008. 712 c.</a></strong></p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2612</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2612">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 4 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=92">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

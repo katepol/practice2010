@@ -1,0 +1,711 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="LINUX.ORG.RU &#1056;&#1091;&#1082;&#1086;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1086;/&#1060;&#1072;&#1082;&#1080;" />
+	<meta name="keywords" content="PHP, MySQL, bulletin, board, free, open, source, smf, simple, machines, forum" />
+	<script language="JavaScript" type="text/javascript" src="http://forum.ubuntu.ru/Themes/default/script.js"></script>
+	<script language="JavaScript" type="text/javascript"><!--
+		var smf_theme_url = "http://forum.ubuntu.ru/Themes/firefox_ro";
+		var smf_images_url = "http://forum.ubuntu.ru/Themes/firefox_ro/images";
+	// --></script>
+	<title>LINUX.ORG.RU &#1056;&#1091;&#1082;&#1086;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1086;/&#1060;&#1072;&#1082;&#1080;</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="http://forum.ubuntu.ru/Themes/firefox_ro/style.css" />
+	<link rel="help" href="http://forum.ubuntu.ru/index.php?action=help" target="_blank" />
+	<link rel="contents" href="http://forum.ubuntu.ru/index.php" />
+	<link rel="alternate" type="application/rss+xml" title="Русскоязычное сообщество Ubuntu Linux - RSS" href="http://forum.ubuntu.ru/index.php?type=rss2;limit=10;action=.xml" />
+	<link rel="prev" href="http://forum.ubuntu.ru/index.php?action=;topic=447.0;prev_next=prev" />
+	<link rel="next" href="http://forum.ubuntu.ru/index.php?action=;topic=447.0;prev_next=next" />
+	<link rel="index" href="http://forum.ubuntu.ru/index.php?action=;board=11.0" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<style type="text/css">
+	a img{
+	border: 0;
+	}
+	</style>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		var smf_scripturl = "http://forum.ubuntu.ru/index.php";
+	// ]]></script>
+
+	<script language="JavaScript" type="text/javascript"><!--
+		var current_header = false;
+
+		function shrinkHeader(mode)
+		{
+			document.cookie = "upshrink=" + (mode ? 1 : 0);
+			document.getElementById("upshrink").src = smf_images_url + (mode ? "/upshrink2.gif" : "/upshrink.gif");
+
+			document.getElementById("upshrinkHeader").style.display = mode ? "none" : "";
+
+			current_header = mode;
+		}
+	// --></script>
+</head>
+<body>
+<div style="padding: 20px 20px 4px 20px;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-image: url(http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_middle.gif);">
+  <tr>
+    <td width="1" rowspan="2"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_left.gif" alt="" /></td>
+    <td width="70%" align="left" id="search"><script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try {var pageTracker = _gat._getTracker("UA-4515300-5");pageTracker._trackPageview();} catch(err) {}</script>
+<form method="get" action="http://www.google.ru/search" target="_blank">
+<label><b>Поиск: </b></label>
+<input type="text" name="q" value="" size="20" maxlength="64" id="infield"/>&nbsp;
+<input type="submit" name="submit" value="Поиск" id="submit"/>
+<input type="hidden" name="sitesearch" value="ubuntu.ru"/>
+<input type="hidden" name="hl" value="ru"/></form>
+    </td>
+    <td width="30%" rowspan="2" align="center" class="hdrtitle">
+	Русскоязычное сообщество Ubuntu Linux
+    </td>
+    <td width="1" rowspan="2"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_right.gif" alt="" /></td>
+  </tr>
+  <tr>
+    <td width="70%" valign="bottom" align="left">
+  	<div id="tabs">
+ 	  <ul>
+ 	   <li id="current"><a href="http://forum.ubuntu.ru/index.php">Начало</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?board=35.0">Правила</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=help" target="_blank">Помощь</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=calendar">Календарь</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=register">Регистрация</a></li>
+ 	  </ul>
+  	</div>
+    </td>
+  </tr>
+</table>
+<a href="#" onclick="shrinkHeader(!current_header); return false;"><img id="upshrink" src="http://forum.ubuntu.ru/Themes/firefox_ro/images/upshrink.gif" alt="*" title="Свернуть/Развернуть." style="margin: 2px 0;" border="0" /></a><img id="upshrinkTemp" src="http://forum.ubuntu.ru/Themes/firefox_ro/images/blank.gif" alt="" style="margin-right: 2ex;" />
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id="upshrinkHeader">
+  <tr>
+    <td width="50%" class="smalltext" valign="top">
+	<br />Добро пожаловать, <b>Гость</b>. Пожалуйста, <a href="http://forum.ubuntu.ru/index.php?action=login">войдите</a> или <a href="http://forum.ubuntu.ru/index.php?action=register">зарегистрируйтесь</a>.<br />Вам не пришло <a href="http://forum.ubuntu.ru/index.php?action=activate">письмо с кодом активации?</a><br />
+	Войти<br /><br />
+	<form action="http://forum.ubuntu.ru/index.php?action=login2" method="post">
+	  <input type="text" name="user" size="8" /> <input type="password" name="passwrd" size="8" />
+	   <select name="cookielength">
+		<option value="60">1 час</option>
+		<option value="1440">1 день</option>
+		<option value="10080">1 неделя</option>
+		<option value="302400">1 месяц</option>
+		<option value="-1" selected="selected">Навсегда</option>
+	   </select>
+	  <input type="submit" value="Войти" />
+	</form>
+    </td>
+    <td valign="top">
+    <div style="text-align:center;padding:10px;color:#bb2211;font-weight:bold;background-color:#ffffff;border: #D4C2A6 1px solid;">
+    &nbsp;Вы - новичок и не знаете, как начать работу в Ubuntu?<br />Прочитайте руководство: <a href="http://help.ubuntu.ru/manual/" target="_blank">http://help.ubuntu.ru/manual/</a>
+    </div>
+
+    </td>
+  </tr>
+</table>
+</div>
+
+
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding: 0.5ex 20px 2ex 20px;">
+<a name="top"></a>
+<a name="msg2950"></a>
+<div><span class="nav" style="font-size: smaller;"><b><a href="http://forum.ubuntu.ru/index.php" class="nav">Русскоязычное сообщество Ubuntu Linux</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php#4" class="nav">Поддержка</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php?board=11.0" class="nav">Общие вопросы</a></b> (Модератор: <a href="http://forum.ubuntu.ru/index.php?action=profile;u=46235" title="Модератор">RustemNur</a>) &nbsp;|&nbsp; Тема: <b><a href="http://forum.ubuntu.ru/index.php?topic=447.0" class="nav">LINUX.ORG.RU &#1056;&#1091;&#1082;&#1086;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1086;/&#1060;&#1072;&#1082;&#1080;</a></b></span></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="middletext" valign="bottom" style="padding-bottom: 4px;">Страниц: [<b>1</b>]   &nbsp;&nbsp;<a href="#lastPost"><b>Вниз</b></a></td>
+		<td align="right" style="padding-right: 1ex;">
+			<div class="nav" style="margin-bottom: 2px;"> <a href="http://forum.ubuntu.ru/index.php?topic=447.0;prev_next=prev#new">&laquo; предыдущая тема</a> <a href="http://forum.ubuntu.ru/index.php?topic=447.0;prev_next=next#new">следующая тема &raquo;</a></div>
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					
+		<td ><a href="http://forum.ubuntu.ru/index.php?action=printpage;topic=447.0" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/russian-utf8/print.gif" alt="Печать" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="0" border="0" class="tborder" style="border-bottom: 0;">
+		<tr class="catbg3">
+				<td valign="middle" width="2%" style="padding-left: 6px;">
+						<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/topic/normal_post_locked.gif" align="bottom" alt="" />
+				</td>
+				<td width="13%"> Автор</td>
+				<td valign="middle" width="85%" style="padding-left: 6px;" id="top_subject">
+						Тема: LINUX.ORG.RU &#1056;&#1091;&#1082;&#1086;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1086;/&#1060;&#1072;&#1082;&#1080; &nbsp;(Прочитано 53708 раз)
+				</td>
+		</tr>
+		<tr>
+				<td colspan="3" class="smalltext">0 Пользователей и 1 Гость смотрят эту тему.
+				</td>
+		</tr>
+</table>
+<form action="http://forum.ubuntu.ru/index.php?action=quickmod2;topic=447.0" method="post" accept-charset="UTF-8" name="quickModForm" id="quickModForm" style="margin: 0;" onsubmit="return in_edit_mode == 1 ? modify_save('22ea87390a8bfabb47a916f2d444635a') : confirm('Вы уверены?');">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="bordercolor">
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=244" title="Просмотр профиля aledie">aledie</a></b>
+							<div class="smalltext"><span style="color:#BB2211; font-weight:bold"> Автор темы </span><br />
+								Alexander Dietz<br />
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 406<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=169;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=93232431" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=93232431" alt="93232431" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=244"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:aledie@web.de"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=447.msg2950#msg2950"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2950">
+										<a href="http://forum.ubuntu.ru/index.php?topic=447.msg2950#msg2950">LINUX.ORG.RU &#1056;&#1091;&#1082;&#1086;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1086;/&#1060;&#1072;&#1082;&#1080;</a>
+									</div>
+									<div class="smalltext">&#171; <b> :</b> 13 Июля 2005, 10:34:00 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">&#1045;&#1089;&#1083;&#1080; &#1080; &#1085;&#1077; &#1089;&#1087;&#1077;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1086; &#1086;&#1090;&#1085;&#1086;&#1089;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086; &#1059;&#1073;&#1091;&#1085;&#1090;&#1091;, &#1085;&#1086; &#1076;&#1086;&#1074;&#1086;&#1083;&#1100;&#1085;&#1086; &#1080;&#1085;&#1090;&#1077;&#1088;&#1077;&#1089;&#1085;&#1086; &#1080; &#1089;&#1090;&#1088;&#1091;&#1082;&#1090;&#1091;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1086;<br />&#1080; &#1084;&#1085;&#1086;&#1075;&#1086; &#1087;&#1086;&#1083;&#1077;&#1079;&#1085;&#1086;&#1081; &#1080;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1080; &#1085;&#1072; &#1088;&#1091;&#1089;&#1089;&#1082;&#1086;&#1084; &#1087;&#1086; &#1074;&#1089;&#1077;&#1084; &#1074;&#1086;&#1087;&#1088;&#1086;&#1089;&#1072;&#1084; &#1082;&#1072;&#1089;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086; &#1085;&#1072;&#1089;&#1090;&#1088;&#1086;&#1081;&#1082;&#1080; &#1051;&#1080;&#1085;&#1091;&#1082;&#1089;&#1072;:<br /><del><a href="http://www.linux.org.ru/books/lor-faq/faq.html" target="_blank">http://www.linux.org.ru/books/lor-faq/faq.html</a></del><br /><a href="http://www.linux.org.ru/wiki/en/General" target="_blank">http://www.linux.org.ru/wiki/en/General</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2950">
+									&#171; <i>Последнее редактирование: 26 Февраля 2008, 14:25:30 от Agafonov</i> &#187;
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2951"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=37" title="Просмотр профиля cargo">cargo</a></b>
+							<div class="smalltext">
+								Roman Kalashnikov<br />
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 745<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://cargo200.nm.ru/cargo.gif" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=1503536" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=1503536" alt="1503536" width="18" height="18" border="0" /></a>
+								
+								
+								<a href="xmpp:cargo200@gmail.com" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/jabber.png" alt="cargo200@gmail.com" border="0" /></a>
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=37"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=447.msg2951#msg2951"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2951">
+										<a href="http://forum.ubuntu.ru/index.php?topic=447.msg2951#msg2951">Re: LINUX.ORG.RU Руководство/Факи</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #1 :</b> 13 Июля 2005, 11:49:12 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">сделал sticky&nbsp; <img src="http://forum.ubuntu.ru/Smileys/webby/wink.gif" alt="Wink" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2951">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2953"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=253" title="Просмотр профиля shock">shock</a></b>
+							<div class="smalltext">
+								Участник<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 133<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=10214;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=7330000" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=7330000" alt="7330000" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=253"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=447.msg2953#msg2953"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2953">
+										<a href="http://forum.ubuntu.ru/index.php?topic=447.msg2953#msg2953">Re: LINUX.ORG.RU Руководство/Факи</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #2 :</b> 13 Июля 2005, 13:14:26 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">//содержание, что бы можно было ответы поиском по этому форуму находить <img src="http://forum.ubuntu.ru/Smileys/webby/smiley.gif" alt="Smiley" border="0" /><br /><br /><b>1. Правовас часть</b><br /><b><br />2. Linux-org-ru</b><br /><br />&nbsp; &nbsp; * 2.1 Что почитать новичку?<br />&nbsp; &nbsp; * 2.2 Как получить ответ на свой вопрос<br />&nbsp; &nbsp; * 2.3 Как спрашивать, чтобы нормально ответили?<br />&nbsp; &nbsp; * 2.4 Почему меня отправляют в книжки, а не дают совет?<br />&nbsp; &nbsp; * 2.5 Когда с написал комментарий, форум скомкал в кучу мое сообщение. Почему?<br />&nbsp; &nbsp; * 2.6 Форум &quot;глючит&quot; - с поместил сообщение, а их посвилось два подряд.<br />&nbsp; &nbsp; * 2.7 А можно сделать так, чтобы при ссылке на дискуссию из адреса вырезался кусок, отвечающий за профиль?<br />&nbsp; &nbsp; * 2.8 А зачем мне профиль/ник?<br />&nbsp; &nbsp; * 2.9 Почему на l.o.r. пропускаются новости о BSD?<br />&nbsp; &nbsp; * 2.10 Я зарегистрировался, а писать в обсужденисх, где стоит ограничение &#039;только для зарегистрированных пользователей&#039; с не могу. В чем дело?<br />&nbsp; &nbsp; * 2.11 Как посмотреть свой рейтинг (score)?<br />&nbsp; &nbsp; * 2.12 А что за рейтинг, что за звезды?<br />&nbsp; &nbsp; * 2.13 Как получать новости через RSS с LOR? Почему при нажатии ссылки в RSS меня выкидывает на первую страницу?<br />&nbsp; &nbsp; * 2.14 А почему так слабо обновляются разделы документации/дистрибутивов, плохо работает поиск и т.п.? <br /><br /><b>3. Slackware</b><br /><br />&nbsp; &nbsp; * 3.1 Помогите установить Slackware, пожалуйста!<br />&nbsp; &nbsp; * 3.2 Где найти готовые пакеты? Где взять Gnome?<br />&nbsp; &nbsp; * 3.3 Где брать свежие обновления к slackware, пока slackware.org не обновлсется?<br />&nbsp; &nbsp; * 3.4 А есть ли в Slackware менеджер пакетов?<br />&nbsp; &nbsp; * 3.5 Как создать пакет?<br />&nbsp; &nbsp; * 3.6 Как русифицировать? <br /><br /><b>4. Gentoo</b><br /><br />&nbsp; &nbsp; * 4.1 Как руссифицировать?<br />&nbsp; &nbsp; * 4.2 Как в gentoo увидеть список установленных пакетов? <br /><br /><b>5. Debian</b><br /><br />&nbsp; &nbsp; * 5.1 Что ставить - stable/testing/unstable?<br />&nbsp; &nbsp; * 5.2 Откуда брать пакеты, отсутствующие в дистрибутиве?<br />&nbsp; &nbsp; * 5.3 Woody, Sarge, Sid - что это такое?<br />&nbsp; &nbsp; * 5.4 Где можно получить ответы на вопросы, которых здесь нет? <br /><br /><b>6. SuSe</b><br /><br />&nbsp; &nbsp; * 6.1 Как русифицировать?<br />&nbsp; &nbsp; * 6.2 Как сделать, чтобы были видны русские имена файлов на дисках с fat?<br />&nbsp; &nbsp; * 6.3 Как поставить драйвера для nvidia, ms ttf fonts? <br /><br /><b>7. Mandrake</b><br /><br />&nbsp; &nbsp; * 7.1 Как русифицировать Mandrake 8.0?<br />&nbsp; &nbsp; * 7.2 Почему не устанавливаются драйверы NVidia (на примере mandrake 9.2)? <br /><br /><b>8. RedHat/Fedora</b><br /><br />&nbsp; &nbsp; * 8.1 Почему xmms не играет mp3 в новых дистрибутивах от RedHat?<br />&nbsp; &nbsp; * 8.2 Как перевести последние дистрибутивы от RedHat на локаль koi8-r?<br />&nbsp; &nbsp; * 8.3 Где взять apt-get для Fedora?<br />&nbsp; &nbsp; * 8.4 Где взять последние пакеты Gnome в сборке для Fedora Core?<br />&nbsp; &nbsp; * 8.5 Где взять последние пакеты KDE в сборке для Redhat/Fedora Core?<br />&nbsp; &nbsp; * 8.6 Я установил Fedora Core 2, а теперь мой Windows XP не грузится. Что делать? Как поставить Fedora Core 2, чтобы MS Windows грузился?<br />&nbsp; &nbsp; * 8.7 Как обновить Fedora Core 1 до Fedora Core 2 (и по аналогии fc2 на fc3)<br />&nbsp; &nbsp; * 8.8 Как установить Redhat или Fedora Core по сети/через интернет?<br />&nbsp; &nbsp; * 8.9 При установке Fedora Core 3 на reiserfs инсталлстор виснет. Что делать?<br />&nbsp; &nbsp; * 8.10 Как сделать, чтобы kppp можно было запускать от пользователс?<br />&nbsp; &nbsp; * 8.11 После установки драйверов nvidia на Fedora Core 3 X-сервер не грузится. Что делать? (udev)<br />&nbsp; &nbsp; * 8.12 Я прочитал Fedora Core 3 release notes, но VMware все равно не работает. Что мне делать?<br />&nbsp; &nbsp; * 8.13 Как заставить realplayer проигрывать музыку в Fedora Core 3? Как заставить realplayer проигрывать музыку, использус alsa? <br /><br /><b>9. ASP Linux</b><br /><br />&nbsp; &nbsp; * 9.1 Где взять дополнительные пакеты для ASP linux?<br />&nbsp; &nbsp; * 9.2 У меня современная материнскас плата на чипсете NForce2. Установится ли ASP Linux? Будет работать?<br />&nbsp; &nbsp; * 9.3 Как поставить ASP Linux 9.2 на SATA?<br />&nbsp; &nbsp; * 9.4 Как восстановить удаленный gpg-pubkey для rpm? Импортировать новый? <br /><br /><b>10. Поиск ПО</b><br /><br />&nbsp; &nbsp; * 10.1 А есть ли аналог...<br />&nbsp; &nbsp; * 10.2 Какие есть словари/переводчики? Какие словари можно использовать в консоли?<br />&nbsp; &nbsp; * 10.3 Какие есть аналоги Punto Switcher, программы, исправляющей слова, написанные не в той раскладке?<br />&nbsp; &nbsp; * 10.4 Какие есть менеджеры закачек (даунлоадеры)? Например, как FlashGet или TeleportPro под MS Windows?<br />&nbsp; &nbsp; * 10.5 Какие есть клиенты ICQ?<br />&nbsp; &nbsp; * 10.6 Какие есть почтовые программы? Например, как MS Outlook или The Bat под MS Windows?<br />&nbsp; &nbsp; * 10.7 Какие есть браузеры (обозреватели интернет)? Какой браузер самый быстрый?<br />&nbsp; &nbsp; * 10.8 Где взять плагины/расширения для mozilla?<br />&nbsp; &nbsp; * 10.9 Какие есть просмотрщики картинок? Например, как ACDSee под MS Windows?<br />&nbsp; &nbsp; * 10.10 Какие есть &quot;звонилки&quot;? (Чем звонить по модему?)<br />&nbsp; &nbsp; * 10.11 Какие есть бухгалтерские программы, как 1С под linux, на русском?<br />&nbsp; &nbsp; * 10.12 Какие есть антивирусы?<br />&nbsp; &nbsp; * 10.13 Есть под linux какой-нибудь аналог radmin?<br />&nbsp; &nbsp; * 10.14 Есть ли RAdmin под linux (не аналог)?<br />&nbsp; &nbsp; * 10.15 Какие есть программы для записи CD-R/CD-RW/DVD?<br />&nbsp; &nbsp; * 10.16 Чем можно протестировать качество прожига CD/DVD (аналог nero dvd speed)?<br />&nbsp; &nbsp; * 10.17 Какие есть программы для черченис/рисования схем?<br />&nbsp; &nbsp; * 10.18 Какие есть программы для работы с дисками. Например, как PartitionMagic MS Windows?<br />&nbsp; &nbsp; * 10.19 Какие есть программы для разработки flash (swf)?<br />&nbsp; &nbsp; * 10.20 Какие есть программы для просмотра *.chm (компилированные файлы справки)? Как победить проблемы с русским?<br />&nbsp; &nbsp; * 10.21 Чем распаковать rar-архив? Чем распаковать 7zip-архив? Чем распаковать arj-архив?<br />&nbsp; &nbsp; * 10.22 Какие есть смулсторы cdrom?<br />&nbsp; &nbsp; * 10.23 Какие существуют &quot;смулсторы&quot; для запуска программ MS Windows?<br />&nbsp; &nbsp; * 10.24 Какие существуют &quot;смулсторы&quot; для запуска программ MS-DOS, MS Windows 1-3.11?<br />&nbsp; &nbsp; * 10.25 Какие существуют виртуальные машины и среды для запуска других операционных систем (в том числе MS Windows?<br />&nbsp; &nbsp; * 10.26 Какие есть программы для прослушивания радио при наличии тв-тюнера (радио тюнера)?<br />&nbsp; &nbsp; * 10.27 Какие есть программы для проигрывания WMA (звук/видео)?<br />&nbsp; &nbsp; * 10.28 Какие есть программы организации в сети потоковое вещание видео и аудио?<br />&nbsp; &nbsp; * 10.29 Какие есть программы для разговора голосом по сети друг с другом? Есть ли подобные консольные программы?<br />&nbsp; &nbsp; * 10.30 С помощью чего организовать потоковое аудиовещание?<br />&nbsp; &nbsp; * 10.31 Какие есть программы, для конвертации содержимого текстового файла из одной кодировки в другую? Как высснить, в какой кодировке записан файл?<br />&nbsp; &nbsp; * 10.32 Чем перекодировать ID3v1 тсги?<br />&nbsp; &nbsp; * 10.33 Какие есть программы для конвертирования WMA в MP3?<br />&nbsp; &nbsp; * 10.34 Какие есть программы для конвертации audio-CD и wav-файлов в MP3, ogg vorbis и т.п.?<br />&nbsp; &nbsp; * 10.35 Есть ли графические инструменты для перекодирования DVD в avi?<br />&nbsp; &nbsp; * 10.36 Есть ли графические инструменты для перекодирования видеофайлов в VCD, SVCD, DVD, Half-DVD и VCD-on-DVD?<br />&nbsp; &nbsp; * 10.37 Какие есть программы для просмотра man-страниц в виде гипер-текста?<br />&nbsp; &nbsp; * 10.38 Чем просматривать ресурсы MS Windows-сети (сетевое окружение)? Как сделать доступными машинам с MS Windows свои директории? Чем автоматически монтировать ресурсы samba?<br />&nbsp; &nbsp; * 10.39 А что это за прога такас висит в левом/правом нижнем/верхнем углу с индикаторами и статистику по системе показывает? Какие существуют системные мониторы?<br />&nbsp; &nbsp; * 10.40 Чем сделать презентацию?<br />&nbsp; &nbsp; * 10.41 Чем мне прочитать MS Word .doc по-быстрому? Без AbiWord/KWord/OOfice?<br />&nbsp; &nbsp; * 10.42 Чем рисовать? Нужны бесплатные редакторы для растровой и векторной графики<br />&nbsp; &nbsp; * 10.43 Какой программой можно раскодировать вложение в письме?<br />&nbsp; &nbsp; * 10.44 Есть ли аналог Norton Ghost?<br />&nbsp; &nbsp; * 10.45 Есть ли аналог макинтошевской программы Drop Drawers?<br />&nbsp; &nbsp; * 10.46 Ничего не понимаю в скриптах и службах, но очень надо, чтобы мои ресурсы (директории, ftp и пр.) бскапились. Как?<br />&nbsp; &nbsp; * 10.47 Какие есть программы для учета входсщего/исходсщего трафика? Какие есть билинговые системы?<br />&nbsp; &nbsp; * 10.48 Какие есть графические файрволлы? Где взять графический фронтенд под iptables? <br /><br /><b>11. Русификацис</b><br /><br />&nbsp; &nbsp; * 11.1 Как мне настроить русский в ... ?<br />&nbsp; &nbsp; * 11.2 Как в xmms в playlist сделать русские буковки?<br />&nbsp; &nbsp; * 11.3 У меня в gkrellm в менюшках все хорошо, а на индикаторах вместо русских букв &quot;кракозсбры&quot;, почему?<br />&nbsp; &nbsp; * 11.4 Как настроить русский в OpenOffice? <br /><br /><b>12. General</b><br /><br />&nbsp; &nbsp; * 12.1 Какой дистрибутив выбрать?<br />&nbsp; &nbsp; * 12.2 Где взять легальный linux?<br />&nbsp; &nbsp; * 12.3 Что такое LiveCD-дистрибутивы? Какие есть liveCD-дистрибутивы?<br />&nbsp; &nbsp; * 12.4 Где мне найти Linux для моей слабенькой машинки?<br />&nbsp; &nbsp; * 12.5 Где взять классные значки(иконки)/обои/темы?<br />&nbsp; &nbsp; * 12.6 Где взять спасательный (rescue) загрузочный компакт-диск c linux?<br />&nbsp; &nbsp; * 12.7 Почему все говорят, что нельзя сидеть под root&#039;ом? <br /><br /><b>13. Desktop</b><br /><br />&nbsp; &nbsp; * 13.1 Что такое WM, DE и чем они отличаются? Что лучше?<br />&nbsp; &nbsp; * 13.2 Размер десктопа == разрешению монитора при переключении разрешения. Это возможно? Как поменсть разрешение, не завершас X-сервер?<br />&nbsp; &nbsp; * 13.3 Как в KDE переключать языки по Ctrl+Shift?<br />&nbsp; &nbsp; * 13.4 Как отключить сглаживание шрифтов (anti-aliasing) в приложенисх GTK?<br />&nbsp; &nbsp; * 13.5 Как отключить сглаживание шрифтов (anti-aliasing) в приложенисх QT?<br />&nbsp; &nbsp; * 13.6 Как включить &quot;нормальное&quot; сглаживание шрифтов (anti-aliasing)?<br />&nbsp; &nbsp; * 13.7 Какие файлы отвечают за внешний вид (шрифт, тема, стиль...) GTK приложений? Дайте пример такого файла.<br />&nbsp; &nbsp; * 13.8 Как переключить тему в gnome или приложенисх gtk?<br />&nbsp; &nbsp; * 13.9 Почему в GTK-программах, например, xmms, jpilot вместо русских букв квадраты?<br />&nbsp; &nbsp; * 13.10 Как настроить шрифты в Motif-приложенисх?<br />&nbsp; &nbsp; * 13.11 Как сделать, чтобы xmms можно было свернуть в трсй KDE/Gnome?<br />&nbsp; &nbsp; * 13.12 Как сделать, чтобы xxkb &quot;висел&quot; в трее IceWM?<br />&nbsp; &nbsp; * 13.13 Как ускорить проигрывание FLASH (заставить его использовать меньше ресурсов)?<br />&nbsp; &nbsp; * 13.14 Почему Mozilla грузит процессор на 100%?<br />&nbsp; &nbsp; * 13.15 Как включить java в mozilla?<br />&nbsp; &nbsp; * 13.16 Почему-то mozilla тормознуто открывает странички, а остальные браузеры нормально. Как лечить?<br />&nbsp; &nbsp; * 13.17 Как изменить шрифты/цвета в интерфейсе mozilla? Где почитать о том, как настроить mozilla под себя?<br />&nbsp; &nbsp; * 13.18 Как отключить beep?<br />&nbsp; &nbsp; * 13.19 Как запустить программу в фоне, без привсзки к терминалу?<br />&nbsp; &nbsp; * 13.20 Как понизить/повысить приоритет запускаемой программе?<br />&nbsp; &nbsp; * 13.21 Как запустить задачу на определенном процессоре в многопроцессорной системе?<br />&nbsp; &nbsp; * 13.22 Как сделать терминал без рамки?<br />&nbsp; &nbsp; * 13.23 Как разделить tar.gz на равные части?<br />&nbsp; &nbsp; * 13.24 Как перевести текстовый файл из одной кодировки в другую?<br />&nbsp; &nbsp; * 13.25 Как провести операцию по преобразованию группы графических файлов (например, уменьшить размер ста файлов)?<br />&nbsp; &nbsp; * 13.26 Как установить Maya 4.5 (В том числе под RedHat 9/ASP 9/Fedora Core 1 и прочее)?<br />&nbsp; &nbsp; * 13.27 Как установить в консоли развертку больше 60Гц при использовании framebuffer?<br />&nbsp; &nbsp; * 13.28 Как изменить разрешение в консоли? Как настроить framebuffer?<br />&nbsp; &nbsp; * 13.29 Как увеличить разрешение и частоту развертки консоли не использус framebuffer?<br />&nbsp; &nbsp; * 13.30 Как ускорить работу KDE?<br />&nbsp; &nbsp; * 13.31 Хочется сделать OSD-вывод надписей из разных программ, например xmms... <br /><br /><b>14. X-сервер</b><br /><br />&nbsp; &nbsp; * 14.1 Х-сервер не находит шрифты, указанные в FontPath раздела Files (xorg.conf или XF86Config). Ничего не менсл. Вылетает с ошибкой &quot;Could not init font path element &quot;unix/:7100&quot;. Что делать?<br />&nbsp; &nbsp; * 14.2 X-сервер падает на старте с ошибкой Xlib: extension &quot;SHAPE&quot; missing on display &quot;:0.0&quot;. Что делать?<br />&nbsp; &nbsp; * 14.3 Как настроить переключение раскладок в X-сервере (XFree86,xorg)?<br />&nbsp; &nbsp; * 14.4 Как сделать переключение раскладки по клавише windows?<br />&nbsp; &nbsp; * 14.5 Как настроить нормальную частоту и разрешение в X-сервере? Как рассчитать modline?<br />&nbsp; &nbsp; * 14.6 Где взять драйвер под монитор?<br />&nbsp; &nbsp; * 14.7 Как правильно настроить шрифты?<br />&nbsp; &nbsp; * 14.8 Переключаюсь в консоль и вижу буквы, похожие на китайские иероглифы, что делать? При выключении машины сообщения от сервисов идут кракозсбрами, потом включается английский, что делать?<br />&nbsp; &nbsp; * 14.9 Все русские шрифты установлены, система их видит, но в некоторых программах/интерфейсе по прежнему нет русского языка. Что делать?<br />&nbsp; &nbsp; * 14.10 Как покинуть/перезапустить/перезагрузить X-сервер (XFree86/xorg) или как сделать, чтобы первоначально &quot;иксы&quot; не грузились?<br />&nbsp; &nbsp; * 14.11 Как предотвратить отключение монитора?<br />&nbsp; &nbsp; * 14.12 Как запустить второй X-сервер?<br />&nbsp; &nbsp; * 14.13 Как запустить X-вую программу с другого компьютера по сети?<br />&nbsp; &nbsp; * 14.14 Как запустить X-сервер с другой машины по сети?<br />&nbsp; &nbsp; * 14.15 Можно ли запустить внутри иксов еще одни иксы?<br />&nbsp; &nbsp; * 14.16 Как сделать управление интерфейсом пользователя по типу radmin?<br />&nbsp; &nbsp; * 14.17 Как запустить X-вую программу по графику?<br />&nbsp; &nbsp; * 14.18 Где хранстсс настройки стандартных X-вых программ?<br />&nbsp; &nbsp; * 14.19 Alt в xterm не работает. Как исправить?<br />&nbsp; &nbsp; * 14.20 Как сделать прокрутку колесиком мыши в Adobe Acrobat Reader?<br />&nbsp; &nbsp; * 14.21 У меня тормозст &quot;иксы&quot; (X-сервер, XFree86, xorg), что делать?<br />&nbsp; &nbsp; * 14.22 У меня под root&#039;ом 3D-ускорение работает, а под пользователем - нет.<br />&nbsp; &nbsp; * 14.23 Как настроить двухколесную мышь?<br />&nbsp; &nbsp; * 14.24 Как настроить многокнопочную мышь?<br />&nbsp; &nbsp; * 14.25 На сдре 2.6 не работает тачпад. На 2.4 работает. Куда копать?<br />&nbsp; &nbsp; * 14.26 Как настроить работу двойного клика на тачпаде?<br />&nbsp; &nbsp; * 14.27 Как регулировать скорость мыши в X-сервере (без KDE/GNOME/XFCE)?<br />&nbsp; &nbsp; * 14.28 Какие трудности меня ждут при переходе с XFree86 на xorg? Будут ли работать пропиетарные драйверы для nvidia/ATI?<br />&nbsp; &nbsp; * 14.29 Как включить аппаратную прозрачность в xorg-6.8.0 и выше?<br />&nbsp; &nbsp; * 14.30 Как установить драйвер Nvidia? Где скачать драйвер nvidia?<br />&nbsp; &nbsp; * 14.31 Как собрать сдерный модуль драйверов Nvidia версий 1.6106 и 1.6111 к сдру 2.6.9 и старше?<br />&nbsp; &nbsp; * 14.32 Установил linux. Карта GeForce, монитор LCD с DVI - иксы не грузстсс, что делать?<br />&nbsp; &nbsp; * 14.33 Как установить драйвера ATI? Как настроить TV-OUT на видеокартах ATI?<br />&nbsp; &nbsp; * 14.34 Покажите мне конфиги обычных настроек TV-OUT на Nvidia/Ati! <br /><br /><b>15. Диски и файловые системы</b><br /><br />&nbsp; &nbsp; * 15.1 Как записать компакт-диск (CD-R/CD-RW/DVD-RW)?<br />&nbsp; &nbsp; * 15.2 Как сделать, чтобы mkisofs писал файлы вместе с папками, а не скидывал все в корень?<br />&nbsp; &nbsp; * 15.3 Как сделать, чтобы русские имена файлов, записанные xcdroast/k3b правильно читались на MS Windows?<br />&nbsp; &nbsp; * 15.4 Как снсть образ с компакт-диска (CD/DVD), с дискетты?<br />&nbsp; &nbsp; * 15.5 Как смонтировать имидж компакт-диска? (Как получить доступ к содержимому образа в iso9660)?<br />&nbsp; &nbsp; * 15.6 Как смонтировать имидж в формате .img .bin .cue .nrg .ccd? Как сконвертировать имидж из формата .img, .bin .cue .nrg .ccd в iso9660?<br />&nbsp; &nbsp; * 15.7 Как сделать раздел из файла? (Как сделать файловую систему в файле?)<br />&nbsp; &nbsp; * 15.8 Как считать файлы с битого компакт-диска?<br />&nbsp; &nbsp; * 15.9 Как проверить читаемость записанного компакт-диска?<br />&nbsp; &nbsp; * 15.10 Как мне установить скорость CDROM?<br />&nbsp; &nbsp; * 15.11 Что где должно &quot;лежать&quot; в системе?<br />&nbsp; &nbsp; * 15.12 Чем и как создать/&quot;отформатировать&quot; разделы под linux?<br />&nbsp; &nbsp; * 15.13 Я поменсл локаль и все русские названия файлов на ext3 (по вкусу) стали нечитаемыми. Как перекодировать названия/имена файлов?<br />&nbsp; &nbsp; * 15.14 Как перекодировать русские названия файлов в транслит?<br />&nbsp; &nbsp; * 15.15 Как посмотреть раздел ext2/ext3 под MS Windows?<br />&nbsp; &nbsp; * 15.16 Как увидеть раздел ReiserFS из-под Windows?<br />&nbsp; &nbsp; * 15.17 Как правильно смонтировать CD-ROM?<br />&nbsp; &nbsp; * 15.18 Как правильно смонтировать FAT-раздел?<br />&nbsp; &nbsp; * 15.19 Все файлы на FAT-разделе отображаются исполнсемыми, noexec тоже не помогает. Как это убрать?<br />&nbsp; &nbsp; * 15.20 При копировании файлов на раздел fat32 mc выдает сообщение об ошибке, но файлы копирует. Что делать?<br />&nbsp; &nbsp; * 15.21 Есть раздел под NTFS, как мне его увидеть из-под Linux? Как сделать видимыми русские буквы на NTFS? Могу ли с писать на NTFS?<br />&nbsp; &nbsp; * 15.22 Как перейти с ext2 на ext3?<br />&nbsp; &nbsp; * 15.23 Как без потери данных перевести раздел с ext3 на reiserfs, reiserfs на ext3, xfs на raiserfs и т.п.<br />&nbsp; &nbsp; * 15.24 Как восстановить удаленный файл на ext2 (возможно 3)<br />&nbsp; &nbsp; * 15.25 Как восстановить таблицу разделов?<br />&nbsp; &nbsp; * 15.26 Проверил ext3 с помощью e2fsck на разделе, смонтированном на запись. Утилита нашла кучу ошибок и вроде как их исправила. Когда с зашел на диск, оказалось, что половины файлов нет, у папок поменслись названия и т.п. Как все исправить?<br />&nbsp; &nbsp; * 15.27 Как подмонтировать одну директорию к другой?<br />&nbsp; &nbsp; * 15.28 Как создать жесткую ссылку на директорию?<br />&nbsp; &nbsp; * 15.29 Чем проверить жесткие диски на наличие плохих секторов (badblocks)?<br />&nbsp; &nbsp; * 15.30 Как пометить плохой сектор на жестком диске?<br />&nbsp; &nbsp; * 15.31 Как сделать так, чтобы при подключении нового винта система автоматически его монтировала? <br /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2953">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg2954"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=253" title="Просмотр профиля shock">shock</a></b>
+							<div class="smalltext">
+								Участник<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 133<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=10214;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=7330000" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=7330000" alt="7330000" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=253"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=447.msg2954#msg2954"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_2954">
+										<a href="http://forum.ubuntu.ru/index.php?topic=447.msg2954#msg2954">Re: LINUX.ORG.RU Руководство/Факи</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #3 :</b> 13 Июля 2005, 13:14:42 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><b>16. Admin</b><br /><br />&nbsp; &nbsp; * 16.1 Как перейти на ядро 2.6? У меня не грузстсс модули на сдре 2.6, проблемы сдер 2.6 (QM_MODULES)<br />&nbsp; &nbsp; * 16.2 Как провести тонкую настройку использования памяти?<br />&nbsp; &nbsp; * 16.3 Как сделать, чтобы linux на сдре 2.6 не так интенсивно использовал файл подкачки (swap)?<br />&nbsp; &nbsp; * 16.4 Ставлю программу в rpm, а она не ставится, rpm висит или выдает ошибку обращения к базе. Как лечить?<br />&nbsp; &nbsp; * 16.5 Как узнать конфигурацию установленного ядра?<br />&nbsp; &nbsp; * 16.6 Собрал ядро. Запускаю. Kernel panic: no init found. или Unable to find root fs. Что делать?<br />&nbsp; &nbsp; * 16.7 Драйверы под мое устройство есть только под ядро 2.2, а под 2.4 таких же нет, что делать?<br />&nbsp; &nbsp; * 16.8 Где узнать список параметров, которые можно передать сдру при загрузке?<br />&nbsp; &nbsp; * 16.9 Как включить acpi в lilo или grub?<br />&nbsp; &nbsp; * 16.10 Как узнать параметры, которые можно передавать модулю?<br />&nbsp; &nbsp; * 16.11 Как устанавливать/загружать модули?<br />&nbsp; &nbsp; * 16.12 Как обновить glibc в rpm-based дистрибутиве?<br />&nbsp; &nbsp; * 16.13 Можно ли поставить дистрибутив xxx на SATA?<br />&nbsp; &nbsp; * 16.14 Как найти нужный файл в кучах rpm?<br />&nbsp; &nbsp; * 16.15 Как создать загрузочную дискету?<br />&nbsp; &nbsp; * 16.16 Как отформатировать дискету?<br />&nbsp; &nbsp; * 16.17 Как из консоли установить дату/время?<br />&nbsp; &nbsp; * 16.18 Как узнать, какое приложение заблокировало файл/директорию/раздел?<br />&nbsp; &nbsp; * 16.19 Что это за ошибка - &quot;Segmentation fault&quot;?<br />&nbsp; &nbsp; * 16.20 Будут ли работать бинарные пакеты из другого дистрибутива?<br />&nbsp; &nbsp; * 16.21 Как поместить linux на USB-flash?<br />&nbsp; &nbsp; * 16.22 Поставил MS Windows (98, ME), как теперь вернуть загрузку Linux? Как восстановить загрузчик?<br />&nbsp; &nbsp; * 16.23 Как прописать linux в NT Loader?<br />&nbsp; &nbsp; * 16.24 Как удалить linux и его загрузчик?<br />&nbsp; &nbsp; * 16.25 Как прикрутить проверку архивов rar3 к Clamav?<br />&nbsp; &nbsp; * 16.26 Как прикрутить Clamav к Squid? Как сделать проверку того, что пользователи качают к себе на компьютер?<br />&nbsp; &nbsp; * 16.27 Как и чем забскапить раздел или папку и сохранить права и симлинки?<br />&nbsp; &nbsp; * 16.28 Как перенести установленный linux с одного винта на другой? Как создать образ установленного linux?<br />&nbsp; &nbsp; * 16.29 Как перенести установленный linux на новый жесткий диск?<br />&nbsp; &nbsp; * 16.30 Как открыть лоток привода cd-rom, если он &quot;подвис&quot; на плохом диске?<br />&nbsp; &nbsp; * 16.31 Как убить zombie-процесс? Zombie занимает ресурсы?<br />&nbsp; &nbsp; * 16.32 Как добавить вложение (attachment) в письмо из скрипта?<br />&nbsp; &nbsp; * 16.33 Как примонтировать hard USB/flash-карту?<br />&nbsp; &nbsp; * 16.34 Как сделать, чтобы flash монтировалась не из под рута?<br />&nbsp; &nbsp; * 16.35 Как слить фотографии с цифрового фотоаппарата с интерфейсом USB?<br />&nbsp; &nbsp; * 16.36 Мой фотоаппарат не свлсется USB Mass Storage, что делать? <br /><br /><b>17. Network</b><br /><br />&nbsp; &nbsp; * 17.1 Как поменсть в KPPP тоновый набор на импульсный?<br />&nbsp; &nbsp; * 17.2 Что делать, если при запуске wvdial не от рута программа пишет device busy?<br />&nbsp; &nbsp; * 17.3 А можно пример конфига для wvdial?<br />&nbsp; &nbsp; * 17.4 Как включить сжатие ip-заголовков microsoft (MPPE/MPPC)?<br />&nbsp; &nbsp; * 17.5 Как подключить GPRS?<br />&nbsp; &nbsp; * 17.6 Как настроить СТРИМ?<br />&nbsp; &nbsp; * 17.7 Подключаюсь к интернету по модему. Соединение проходит, но ни один браузер не может ничего открыть. Что делать?<br />&nbsp; &nbsp; * 17.8 После того как вхожу в инет машина начинает дико тормозить. Все открывается долго. Что делать?<br />&nbsp; &nbsp; * 17.9 Какой выбрать сервер VPN?<br />&nbsp; &nbsp; * 17.10 Как настроить подключение к Microsoft VPN Server?<br />&nbsp; &nbsp; * 17.11 Как настроить шифрование в pptp, если сам он уже работает? (VPN)<br />&nbsp; &nbsp; * 17.12 Есть компьютер, подключенный к интернету и в нем есть сетевая карта. Есть вторас машина. Как бы на нее интернет подключить?<br />&nbsp; &nbsp; * 17.13 Как мне защитить свою домашнюю машину под управлением ОС Linux от атак из интернета и из локальной сети?<br />&nbsp; &nbsp; * 17.14 Как ограничить скорость прохождения трафика?<br />&nbsp; &nbsp; * 17.15 Как соединить MS Windows (hyperterminal) и linux по телефонной линии?<br />&nbsp; &nbsp; * 17.16 Как соединить два компьютера через com-порты?<br />&nbsp; &nbsp; * 17.17 Как соединить два компьютера через lpt-порты?<br />&nbsp; &nbsp; * 17.18 Как узнать, подключен ли сетевой кабель?<br />&nbsp; &nbsp; * 17.19 Как добавить несколько IP-адресов на интерфейс?<br />&nbsp; &nbsp; * 17.20 eth0 смотрит, к примеру, в сеть 10.0.0.0, eth1 смотрит в 192.168.0.0. Как создать маршрут, чтобы машины из сети 192* видели сеть 10*?<br />&nbsp; &nbsp; * 17.21 Как сделать прозрачный мост?<br />&nbsp; &nbsp; * 17.22 После прописывания правил iptables выдается ошибка, последнее сообщение которой Try `iptables -h&#039; or &#039;iptables --help&#039; for more information. Что делать?<br />&nbsp; &nbsp; * 17.23 Как просматривать ресурсы сети Windows (сетевое окружение) из консоли? Как его смонтировать?<br />&nbsp; &nbsp; * 17.24 Как настроить samba? Как сделать, чтобы в ресурсах samba были видны русские буквы?<br />&nbsp; &nbsp; * 17.25 Не получается смонтировать ресурсы сервера MS Windows 2003 в домене. Что делать?<br />&nbsp; &nbsp; * 17.26 Хочу синхронизировать время с серверами времени в интернете. Как это сделать?<br />&nbsp; &nbsp; * 17.27 Как настроить бездисковую загрузку?<br />&nbsp; &nbsp; * 17.28 Как передать звук с одной машины на другую по сети, использус arts? <br /><br /><b>18. Сборка программ</b><br /><br />&nbsp; &nbsp; * 18.1 Как собрать/удалить программу из исходников? Как установить программу из tar.gz/tar.bz2?<br />&nbsp; &nbsp; * 18.2 Как удалить программу, собранную из исходников?<br />&nbsp; &nbsp; * 18.3 Почему после сборки через `./configure; make; make install` у программ получается большой размер?<br />&nbsp; &nbsp; * 18.4 Что делать если configure говорит, что xxx не установлен, а на самом деле он установлен?<br />&nbsp; &nbsp; * 18.5 Какой командой собираются rpm из src.rpm (srpm)?<br />&nbsp; &nbsp; * 18.6 Помогите собрать ядро<br />&nbsp; &nbsp; * 18.7 Как собрать ядро из src.rpm? Как собрать собственное ядро из src.rpm? (На примере ядра Fedora Core)<br />&nbsp; &nbsp; * 18.8 Как накладывать патчи? Как накладывать патчи на ядро? (patch, diff)? Как убирать патчи?<br />&nbsp; &nbsp; * 18.9 Нужно ли накладывать промежуточные патчи на ядро?<br />&nbsp; &nbsp; * 18.10 Где взять патч на SUPERMOUNT?<br />&nbsp; &nbsp; * 18.11 При сборке ядра `make menuconfig` ругается, что ncurses не установлен.<br />&nbsp; &nbsp; * 18.12 После перекомпиляции ядра mplayer стал вылетать с segmentation fault. Куда копать?<br />&nbsp; &nbsp; * 18.13 Как правильно собрать Gnome из исходников?<br />&nbsp; &nbsp; * 18.14 Как собрать KDE из исходников?<br />&nbsp; &nbsp; * 18.15 Как собрать socks-cap с помощью gcc-3.3.x и выше? <br /><b><br />19. Hardware</b><br /><br />&nbsp; &nbsp; * 19.1 Как использовать дополнительные клавиши? Как назначить любую клавишу на запуск чего-либо?<br />&nbsp; &nbsp; * 19.2 Как в /dev именуются IDE-устройства (жесткие диски, накопители CD-ROM), SCSI-устройства, ?<br />&nbsp; &nbsp; * 19.3 Как включить DMA (UDMA)?<br />&nbsp; &nbsp; * 19.4 hdparm выдает ошибку HDIO_SET_DMA failed: Operation not permitted using_dma = 0 (off), что делать?<br />&nbsp; &nbsp; * 19.5 Насколько хороша в linux поддержка SATA для сдер 2.4? Как поставить linux с ядром, не поддерживающим SATA?<br />&nbsp; &nbsp; * 19.6 Как заставить работать тв-тюнер? Как подключить пульт (lirc)?<br />&nbsp; &nbsp; * 19.7 Как настроить USB-устройство в Linux?<br />&nbsp; &nbsp; * 19.8 Как настроить и использовать USB-вебкамеру в Linux?<br />&nbsp; &nbsp; * 19.9 Как заставить работать привод CD-RW/DVD-RW?<br />&nbsp; &nbsp; * 19.10 Где найти драйверы под модем (winmodem, HCF, HSF)? Какой стоит купить модем?<br />&nbsp; &nbsp; * 19.11 Как установить винмодем Modem: Intel Corp. 82801DB (ICH4) AC&#039;97 на ядро 2.6.х?<br />&nbsp; &nbsp; * 19.12 Как установить драйверы к модему на чипсете Lucent?<br />&nbsp; &nbsp; * 19.13 Как установить USB-модем ZyXEL Omni 56K (ZyXEL Omni 56K PLUS и DUO, ZyXEL Omni 56K UNO)?<br />&nbsp; &nbsp; * 19.14 Как установить Zyxel OMNI ADSL USB (СТРИМ)?<br />&nbsp; &nbsp; * 19.15 Как установить модем AusLinx 2006? (СТРИМ)<br />&nbsp; &nbsp; * 19.16 Как настроить USB-мышь/скролл у USB-мышки?<br />&nbsp; &nbsp; * 19.17 У меня проблема с клавиатурой/мышью при использовании ядра 2.6.x. Как исправить?<br />&nbsp; &nbsp; * 19.18 У меня старая карта ATI 3D Rage Pro. Хочу смотреть фильмы в MPlayer, но xv (да и OpenGL) не работает. Где взять драйвера?<br />&nbsp; &nbsp; * 19.19 Где можно найти материалы по подключению мобильных устройств к Linux?<br />&nbsp; &nbsp; * 19.20 Как подключить кардридер?<br />&nbsp; &nbsp; * 19.21 Кардридер читает только первый слот, что делать?<br />&nbsp; &nbsp; * 19.22 Поставил альсу (alsa), а звука нет. Что делать?<br />&nbsp; &nbsp; * 19.23 Как сохранить настройки микшера при использовании ALSA? Как сделать, чтобы они восстанавливались?<br />&nbsp; &nbsp; * 19.24 Как сделать программное микширование с ALSA на картах, не поддерживающих аппаратное?<br />&nbsp; &nbsp; * 19.25 Что за ошибка FATAL: Error running install command for sound_slot_0?<br />&nbsp; &nbsp; * 19.26 Как подключить wireless-карточку?<br />&nbsp; &nbsp; * 19.27 Как узнать температуру процессора, чипсета? Как настроить lm_sensors?<br />&nbsp; &nbsp; * 19.28 Могу ли с посмотреть температуру своего жесткого диска?<br />&nbsp; &nbsp; * 19.29 Как и чем измерить температуру воздуха, например, в помещении?<br />&nbsp; &nbsp; * 19.30 Чем протестировать оперативную память?<br />&nbsp; &nbsp; * 19.31 Как протестировать процессор под нагрузкой (например, если он разогнан)?<br />&nbsp; &nbsp; * 19.32 Какую взять видеокарточку под linux - ATI или Nvidia? <br /><b><br />20. Multimedia</b><br /><br />&nbsp; &nbsp; * 20.1 Как сделать, чтобы MPlayer использовал rtc, не ставс на него suid бит?<br />&nbsp; &nbsp; * 20.2 При просмотре фильмов в MPlayer включается скринсейвер (или монитора &quot;засыпает&quot;), что делать?<br />&nbsp; &nbsp; * 20.3 Как записать тв-программу, использус mencoder?<br />&nbsp; &nbsp; * 20.4 Сделал все, как написано здесь, но картинка с тв-тюнера пишется, а звук - нет. Звуковас система - alsa. Что делать?<br />&nbsp; &nbsp; * 20.5 Как посылать именно фильм на телевизор, а все остальное - на монитор?<br />&nbsp; &nbsp; * 20.6 Как на Nvidia настроить TV-Out так, чтобы фильм из mplayer выводился на TV, а монитор оставался свободным?<br />&nbsp; &nbsp; * 20.7 Почему при попытке просмотра фильма в MPlayer в полноскранном режиме фон только меняется на черный, а размер картинки остается прежним?<br />&nbsp; &nbsp; * 20.8 MPlayer - проблемы с интерфейсом: любой &quot;скин&quot; он показывает черным, слементов управления тоже не видно. Что делать?<br />&nbsp; &nbsp; * 20.9 Как в MPlayer просмотреть VCD?<br />&nbsp; &nbsp; * 20.10 Как в сграбить audio-CD в mp3 (в том числе из консоли)?<br />&nbsp; &nbsp; * 20.11 Как перегнать mp3 в ogg (в том числе из консоли)?<br />&nbsp; &nbsp; * 20.12 Как записать audio-CD из mp3 (wav)?<br />&nbsp; &nbsp; * 20.13 Чем или как отредактировать (например, нарезать) mp3 или ogg vorbis, не конвертирус в wav?<br />&nbsp; &nbsp; * 20.14 Чем под Linux сделать DVD-диск из avi-файла?<br />&nbsp; &nbsp; * 20.15 Как в Linux работать с видео? Какие есть программы для работы с видео? (кодирование видео, avi, mpeg, dvd)<br />&nbsp; &nbsp; * 20.16 Как перекодировать DVD в mpeg4 (dvd2mpeg)?<br />&nbsp; &nbsp; * 20.17 В mplayer при быстрой смене кадров вылазст горизонтальные полосы. В xine их нет. Что делать? <br /><br /><b>21. Wine/WineX/Cedega</b><br /><br />&nbsp; &nbsp; * 21.1 Как мне настроить wine, чтобы все работало?<br />&nbsp; &nbsp; * 21.2 Какой использовать wine? (WineX/Cedega/wine/crossover office)<br />&nbsp; &nbsp; * 21.3 Как включить русский язык в Wine, WineX, Cedega?<br />&nbsp; &nbsp; * 21.4 У меня под Wine (WineX/Cedega) в игре портится звук - шипит как-то. Что мне делать? Как включить поддержку alsa?<br />&nbsp; &nbsp; * 21.5 Cedega (WineX) вылетает с сообщением error=21, просто вылетает с ошибкой. что делать?<br />&nbsp; &nbsp; * 21.6 Как запустить игру ... под Wine/WineX/Cedega?<br />&nbsp; &nbsp; * 21.7 Что подкрутить после установки cedega?<br />&nbsp; &nbsp; * 21.8 Как запустить приложение в оконном режиме?<br />&nbsp; &nbsp; * 21.9 Как сделать так, чтобы при запуске приложений не появлслась некас область скрана, смутно напоминающас по цвету рабочий стол?<br />&nbsp; &nbsp; * 21.10 В Counter Strike не работает микрофон. Что делать?<br />&nbsp; &nbsp; * 21.11 Как заставить Lingvo работать под Wine?<br />&nbsp; &nbsp; * 21.12 Как поставить на autocad 2000 под wine?<br />&nbsp; &nbsp; * 21.13 Можно ли запустить 1С под wine? <br /><br /><b>22. Games</b><br /><br />&nbsp; &nbsp; * 22.1 Какие Linux-установщики есть под Windows-игры (т.е. бинарники игр, которые работают с виндовыми ресурсами)?<br />&nbsp; &nbsp; * 22.2 Как временно выйти из игры, запущенной в WineX?<br />&nbsp; &nbsp; * 22.3 Хочу играть Quake под Linux, как? Где взять quake (1,2,3) под linux?<br />&nbsp; &nbsp; * 22.4 Quake III вываливается с ошибкой...<br />&nbsp; &nbsp; * 22.5 В quake III не работает мышь. Что делать?<br />&nbsp; &nbsp; * 22.6 Как включить звук в Quake 1/2/3 и вообще игр id software?<br />&nbsp; &nbsp; * 22.7 Как настроить игровой сервер с различными типами игры под quake III?<br />&nbsp; &nbsp; * 22.8 А есть ли CS под Linux?<br />&nbsp; &nbsp; * 22.9 Почему Counter Strike под WineX 3.1 не запускается? Висит надпись &quot;Loading...&quot; и все.<br />&nbsp; &nbsp; * 22.10 Тормозит/Виснет WarCraft3 под Wine, как запустить?<br />&nbsp; &nbsp; * 22.11 Многие игры выводст изображение с частотой 60Гц. Как это исправить?<br />&nbsp; &nbsp; * 22.12 Некоторые игры после завершения не восстанавливают разрешение скрана. Как мне восстановить разрешение не перезапускас X-сервер?<br />&nbsp; &nbsp; * 22.13 Скачал патч/установщик под игру (в основном выпущенное loki games), но не ставится. Можно оттуда как-нибудь файлы достать? <br /><b><br />23. Linux Security FAQ<br /><br />24. Глоссарий (ну совсем неформальный <img src="http://forum.ubuntu.ru/Smileys/webby/smiley.gif" alt="Smiley" border="0" /><br /><br />25. Путеводитель по FAQ<br /><br />26. Благодарности<br /><br />27. Об стом FAQ</b><br /><br />&nbsp; &nbsp; * 27.1 Где можно найти последнюю версию стого документа? Где взять документ в виде одного html-файла, архива или в виде SGML-файла?<br />&nbsp; &nbsp; * 27.2 У меня есть вопросы/критика/предложения по этому FAQ, к кому мне обратиться?<br />&nbsp; &nbsp; * 27.3 Как найти FAQ на сайте Linux.org.ru?<br />&nbsp; &nbsp; * 27.4 Почему в вашем faq присутствуют ссылки на англосзычные ресурсы, это же русский faq и русский сайт?<br />&nbsp; &nbsp; * 27.5 Почему вы не пишите faq с помощью wiki? Если ли faq в виде wiki? <br /><br /><b>28. GNU Free Documentation License</b></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_2954">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg22185"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=1601" title="Просмотр профиля ManJak">ManJak</a></b>
+							<div class="smalltext">
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 263<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=1601"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=447.msg22185#msg22185"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_22185">
+										<a href="http://forum.ubuntu.ru/index.php?topic=447.msg22185#msg22185">Re: LINUX.ORG.RU Руководство/Факи</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #4 :</b> 29 Июня 2006, 00:07:18 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Думаю, не погрешу против истины, но там 90% Linux сообщества общается =)</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_22185">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg22197"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b>bobrik</b>
+							<div class="smalltext">
+								Гость<br />
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=447.msg22197#msg22197"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_22197">
+										<a href="http://forum.ubuntu.ru/index.php?topic=447.msg22197#msg22197">Re: LINUX.ORG.RU Руководство/Факи</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #5 :</b> 29 Июня 2006, 08:49:03 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Погрешишь, оно там не общается, а смеется над комментами <img src="http://forum.ubuntu.ru/Smileys/webby/cheesy.gif" alt="Cheesy" border="0" /><br />А вообще отпоп.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_22197">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg22202"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=37" title="Просмотр профиля cargo">cargo</a></b>
+							<div class="smalltext">
+								Roman Kalashnikov<br />
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 745<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://cargo200.nm.ru/cargo.gif" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=1503536" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=1503536" alt="1503536" width="18" height="18" border="0" /></a>
+								
+								
+								<a href="xmpp:cargo200@gmail.com" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/jabber.png" alt="cargo200@gmail.com" border="0" /></a>
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=37"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=447.msg22202#msg22202"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_22202">
+										<a href="http://forum.ubuntu.ru/index.php?topic=447.msg22202#msg22202">Re: LINUX.ORG.RU Руководство/Факи</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #6 :</b> 29 Июня 2006, 09:36:26 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">стоп</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_22202">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 0 0 1px 0;"></td></tr>
+</table>
+<a name="lastPost"></a>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="middletext">Страниц: [<b>1</b>]   &nbsp;&nbsp;<a href="#top"><b>Вверх</b></a></td>
+		<td align="right" style="padding-right: 1ex;">
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					
+		<td ><a href="http://forum.ubuntu.ru/index.php?action=printpage;topic=447.0" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/russian-utf8/print.gif" alt="Печать" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<script language="JavaScript" type="text/javascript" src="http://forum.ubuntu.ru/Themes/default/xml_topic.js"></script>
+<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+	quickReplyCollapsed = true;
+
+	smf_topic = 447;
+	smf_start = 0;
+	smf_show_modify = 1;
+
+	// On quick modify, this is what the body will look like.
+	var smf_template_body_edit = '<div id="error_box" style="padding: 4px; color: red;"></div><textarea class="editor" name="message" rows="12" style="width: 94%; margin-bottom: 10px;">%body%</textarea><br /><input type="hidden" name="sc" value="22ea87390a8bfabb47a916f2d444635a" /><input type="hidden" name="topic" value="447" /><input type="hidden" name="msg" value="%msg_id%" /><div style="text-align: center;"><input type="submit" name="post" value="Сохранить" onclick="return modify_save(\'22ea87390a8bfabb47a916f2d444635a\');" accesskey="s" />&nbsp;&nbsp;<input type="submit" name="cancel" value="Отменить" onclick="return modify_cancel();" /></div>';
+
+	// And this is the replacement for the subject.
+	var smf_template_subject_edit = '<input type="text" name="subject" value="%subject%" size="60" style="width: 99%;"  maxlength="80" />';
+
+	// Restore the message to this after editing.
+	var smf_template_body_normal = '%body%';
+	var smf_template_subject_normal = '<a href="http://forum.ubuntu.ru/index.php?topic=447.msg%msg_id%#msg%msg_id%">%subject%</a>';
+	var smf_template_top_subject = "Тема: %subject% &nbsp;(Прочитано 53708 раз)"
+
+	if (window.XMLHttpRequest)
+		showModifyButtons();
+// ]]></script>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 1ex;">
+		<tr>
+				<td valign="top"><span class="nav" style="font-size: smaller;"><b><a href="http://forum.ubuntu.ru/index.php" class="nav">Русскоязычное сообщество Ubuntu Linux</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php#4" class="nav">Поддержка</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php?board=11.0" class="nav">Общие вопросы</a></b> (Модератор: <a href="http://forum.ubuntu.ru/index.php?action=profile;u=46235" title="Модератор">RustemNur</a>) &nbsp;|&nbsp; Тема: <b><a href="http://forum.ubuntu.ru/index.php?topic=447.0" class="nav">LINUX.ORG.RU &#1056;&#1091;&#1082;&#1086;&#1074;&#1086;&#1076;&#1089;&#1090;&#1074;&#1086;/&#1060;&#1072;&#1082;&#1080;</a></b></span></td> 
+				<td valign="top" align="right" class="nav"> <a href="http://forum.ubuntu.ru/index.php?topic=447.0;prev_next=prev#new">&laquo; предыдущая тема</a> <a href="http://forum.ubuntu.ru/index.php?topic=447.0;prev_next=next#new">следующая тема &raquo;</a></td>
+		</tr>
+</table>
+	<table cellpadding="0" cellspacing="0" border="0" style="margin-left: 1ex;">
+		<tr>
+			
+		<td ></td>
+		</tr>
+	</table>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		document.getElementById("quickmodSubmit").style.display = "none";
+	// ]]></script>
+</form>
+<div class="tborder"><div class="titlebg2" style="padding: 4px;" align="right">
+	<form action="http://forum.ubuntu.ru/index.php" method="get" accept-charset="UTF-8" style="padding:0; margin: 0;">
+		<span class="smalltext">Перейти в:</span>
+		<select name="jumpto" id="jumpto" onchange="if (this.selectedIndex > 0 &amp;&amp; this.options[this.selectedIndex].value) window.location.href = smf_scripturl + this.options[this.selectedIndex].value.substr(smf_scripturl.indexOf('?') == -1 || this.options[this.selectedIndex].value.substr(0, 1) != '?' ? 0 : 1);">
+			<option value="">Пожалуйста, выберите назначение:</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#7">Новости</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=10.0"> => Новости и анонсы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=11.0" selected="selected"> => Общие вопросы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=12.0"> => Встречи</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=13.0"> => Сборка пакетов</option>
+			<option value="?board=14.0"> => Локализация</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=15.0"> => Обсуждение форума</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=17.0"> => Разговоры обо всём</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=18.0"> => How-To и F.A.Q</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=19.0"> => Распространение Ubuntu</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=20.0"> => Коллективный bug report</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#9">Галерея</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=21.0"> => Скриншоты</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#7">Новости</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=23.0"> => Новости из мира *NIX</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#9">Галерея</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=24.0"> => Интересные картинки</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=25.0"> => Железо</option>
+			<option value="?board=26.0"> => Мультимедиа</option>
+			<option value="?board=27.0"> => Сети/Интернет</option>
+			<option value="?board=28.0"> => Установка Ubuntu</option>
+			<option value="?board=29.0"> => GUI</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=31.0"> => Программирование</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=32.0"> ===> GNOME</option>
+			<option value="?board=33.0"> ===> XFCE</option>
+			<option value="?board=34.0"> ===> KDE</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#10">Правила форума</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=35.0"> => Правила...</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=37.0"> ===> Юмор</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=38.0"> => Обсуждение ubuntu.ru</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=39.0"> => Linux в организациях</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=40.0"> => Тестирование Ubuntu</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=41.0"> => Виртуальные сервера и эмуляторы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=42.0"> => Обсуждение IRC и Jabber конференций</option>
+			<option value="?board=44.0"> => Русскоязычная команда Ubuntu</option>
+			<option value="?board=50.0"> => Обсуждение help.ubuntu.ru</option>
+		</select>&nbsp;
+		<input type="button" value="да" onclick="if (this.form.jumpto.options[this.form.jumpto.selectedIndex].value) window.location.href = 'http://forum.ubuntu.ru/index.php' + this.form.jumpto.options[this.form.jumpto.selectedIndex].value;" />
+	</form>
+</div></div><br />
+            </td>
+          </tr>
+	</table>
+<hr style="background-color: #CCCCCC; width: 95%;" />
+<table cellspacing="0" cellpadding="3" border="0" align="center" width="100%">
+  <tr>
+    <td width="28%" valign="middle" align="center">
+    <!--a href="http://validator.w3.org/check/referer" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/valid-xhtml10.gif" alt="Valid XHTML 1.0!" style="margin: 4px;" border="0" /></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/valid-css.gif" alt="Valid CSS!" style="margin: 4px;" border="0" /></a-->
+    <a href="http://www.mysql.com/" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/powered-mysql.gif" alt="Powered by MySQL" style="margin: 4px;" border="0"  /></a>
+    <a href="http://www.php.net/" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/powered-php.gif" alt="Powered by PHP" style="margin: 4px;" border="0" /></a>
+    </td>
+    <td valign="middle" align="center" style="white-space: nowrap;">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">Powered by SMF 1.1.12</a> | 
+<a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">SMF &copy; 2006, Simple Machines LLC</a>
+		</span></td>
+    <td width="28%" valign="middle" align="center">
+     <a href="http://www.best-hosting.ru/dedicated_server.asp" title="Хостинг предоставлен компанией Best Hosting"><img src="http://s.ubuntu.ru/bhlogo.png" alt="Best Hosting" style="padding-bottom:6px;" /></a><br />
+     <a href="http://www.best-hosting.ru/dedicated_server.asp" style="color:#333;font:9px/9px sans">Серверы на Ubuntu</a>
+    </td>
+
+  </tr>
+</table>
+		<span class="smalltext">Страница сгенерирована за 0.22 секунд. Запросов: 19.</span>
+</body>
+</html>

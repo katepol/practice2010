@@ -1,0 +1,648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Реализация логических функций в компьютерных коэффициентных методиках</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Реализация логических функций в компьютерных коэффициентных методиках</h2><div style="margin-bottom:10px"><strong>Realisation of logic functions in computer coefficient techniques</strong></div>Статья опубликована в выпуске журнала № 2 за 2010 год. [ 27.05.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Рассматриваются возможности реализации логических функций в компьютерных коэффициентных методиках с изменяемыми весовыми коэффициентами. Приводятся фрагменты коэффициентной методики с изменяемыми весо-выми коэффициентами, реализующие различные логические функции, и пример фрагмента, реализующего форми-рование итоговой оценки «отлично» или «хорошо» при контроле профессиональной подготовки специалиста на основе частных оценок практических навыков и теоретических знаний.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">Realization possibilities in computer coefficient techniques with changeable weight factors of logic functions are considered. Fragments coefficient techniques with the changeable weight factors, realizing various logic functions and an example of the fragment realizing formation of a total estimation «perfectly» or «well» at the control of vocational training of the expert on the basis of private estimations of practical skills and theoretical knowledge are resulted.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=5858">Долгов А.И. (dolgov-ai@yandex.ru)</a> - Ростовский военный институт Ракетных войск Доктор технический наук Ph.D., <a href="index.php?page=infou&id=5859">Мартыненко А.Ф. (dolgov-ai@yandex.ru)</a> - Ростовский военный институт Ракетных войск   , <a href="index.php?page=infou&id=5860">Преснухин В.В. (dolgov-ai@yandex.ru)</a> - Ростовский военный институт Ракетных войск Кандидат технический наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1574">фрагмент</a>, <a href="index.php?page=infotg&id=1571">показатель</a>, <a href="index.php?page=infotg&id=1570">оценка объекта</a>, <a href="index.php?page=infotg&id=1573">логические функции</a>, <a href="index.php?page=infotg&id=1569">коэффициентная методика</a>, <a href="index.php?page=infotg&id=1575">двоичная величина</a>, <a href="index.php?page=infotg&id=1572">весовой коэффициент</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1574">a fragment</a>, <a href="index.php?page=infotg&id=1571">an indicator</a>, <a href="index.php?page=infotg&id=1570">an object estimation</a>, <a href="index.php?page=infotg&id=1573">logic functions</a>, <a href="index.php?page=infotg&id=1569">coefficient a technique</a>, <a href="index.php?page=infotg&id=1575">binary size</a>, <a href="index.php?page=infotg&id=1572">weight factor</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 280<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2523">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Коэффициентные методики оценки объектов, основанные на получении интегрального (выходного) показателя суммированием оцениваемых частных (входных) показателей, умножаемых на соответствующие весовые коэффициенты [1], широко используются в практике оценки объектов, относящихся к самым разнообразным областям деятельности, так как обеспечивают рациональное сочетание оперативности получения результатов с возможностями их количественного обоснования.</p>
+<p>&nbsp;</p>
+<p>Недостатком существующих компьютерных коэффициентных методик является отсутствие возможности реализации логических функций в процессе получения результата.</p>
+<p>В [2] предложена компьютерно реализуемая методика оценки объектов с изменяемыми весовыми коэффициентами, в которой для весовых коэффициентов, умножаемых на соответствующие показатели, используются те или иные из заблаговременно устанавливаемых значений в зависимости от результата сравнения значения каждого показателя с соответствующим ему пороговым значением.</p>
+<p><img src="uploaded/image/2010-2/image495.gif" alt="Подпись:  
+Рис. 1. Получение
+ двоичной величины показателя" width="179" height="153" align="left" />Основным достоинством компьютерной методики оценки объектов с изменяемыми весовыми коэффициентами является возможность учета произвольных логических условий получения промежуточных и выходных показателей на основе реализации логических функций над характеризующими обрабатываемые входные и промежуточные показатели двоичными величинами.</p>
+<p>Теоретические основы применения  логических функций в компьютерных  коэффициентных методиках</p>
+<p>Рассмотрим обработку показателей, представленных вещественными числами. Для таких показателей при реализации логических функций можно ограничиться двоичными величинами <img src="uploaded/image/2010-2/image497.gif" border="0" alt="" width="49" height="25" />, характеризующими соотношение между значением показателя Хi и некоторой выбираемой величиной (a). Здесь &Auml; &ndash; один из знаков: =, &gt;, &lt;, &sup1;, &pound;, &sup3;. Возможные варианты проверяемых альтернативных условий приведеы в таблице.</p>
+<table border="0" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr>
+<td width="78" valign="top">
+<p>Функция</p>
+</td>
+<td width="113" valign="top">
+<p>Условие</p>
+</td>
+<td width="104" valign="top">
+<p>Двоичная      величина</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" width="78" valign="top">
+<p><img src="uploaded/image/2010-2/image499.gif" border="0" alt="" width="47" height="23" /></p>
+</td>
+<td width="113" valign="top">
+<p>Хi=a</p>
+</td>
+<td width="104" valign="top">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="113" valign="top">
+<p>Хi&sup1;a</p>
+</td>
+<td width="104" valign="top">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" width="78" valign="top">
+<p><img src="uploaded/image/2010-2/image501.gif" border="0" alt="" width="47" height="25" /></p>
+</td>
+<td width="113" valign="top">
+<p>Хi&gt;a</p>
+</td>
+<td width="104" valign="top">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="113" valign="top">
+<p>Хi&pound;a</p>
+</td>
+<td width="104" valign="top">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" width="78" valign="top">
+<p><img src="uploaded/image/2010-2/image503.gif" border="0" alt="" width="47" height="25" /></p>
+</td>
+<td width="113" valign="top">
+<p>Хi<a></a></p>
+<a> </a></td>
+<td width="104" valign="top">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="113" valign="top">
+<p>Хi&sup3;a</p>
+</td>
+<td width="104" valign="top">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" width="78" valign="top">
+<p><img src="uploaded/image/2010-2/image505.gif" border="0" alt="" width="47" height="25" /></p>
+</td>
+<td width="113" valign="top">
+<p>Хi&sup1;a</p>
+</td>
+<td width="104" valign="top">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="113" valign="top">
+<p>Хi=a</p>
+</td>
+<td width="104" valign="top">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" width="78" valign="top">
+<p><img src="uploaded/image/2010-2/image507.gif" border="0" alt="" width="47" height="25" /></p>
+</td>
+<td width="113" valign="top">
+<p>Хi&pound;a</p>
+</td>
+<td width="104" valign="top">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="113" valign="top">
+<p>Хi&gt;a</p>
+</td>
+<td width="104" valign="top">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" width="78" valign="top">
+<p><img src="uploaded/image/2010-2/image509.gif" border="0" alt="" width="47" height="25" /></p>
+</td>
+<td width="113" valign="top">
+<p>Хi&sup3;a</p>
+</td>
+<td width="104" valign="top">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="113" valign="top">
+<p>Хi<a></a></p>
+<a> </a></td>
+<td width="104" valign="top">
+<p>0</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>На приводимых рисунках, поясняющих реализацию логических функций в компьютерных коэффициентных методиках с изменяемыми весовыми коэффициентами, операция суммирования рассматриваемых величин обозначается прямоугольником с символом &Sigma;, а операция умножения на весовой коэффициент &ndash; овалом с символическим обозначением весового коэффициента.</p>
+<p>В качестве примера на рисунке 1 иллюстрируется преобразова&shy;ние (соответствующее <img src="uploaded/image/2010-2/image511.gif" border="0" alt="" width="47" height="25" />&nbsp;см. табл.) с использованием изменяемого весового коэффициента V(&gt;a) значения обрабатываемого показателя Хi в двоичную величину <img src="uploaded/image/2010-2/image513.gif" border="0" alt="" width="43" height="24" />.</p>
+<p>С использованием одного изменяемого весового коэффициента можно реализовать логические функции конъюнкции N переменных и дизъюнкции, но лишь двух переменных, а с прибавлением дополнительной единицы &ndash; также функции отрицания, функции отрицания конъюнкции и дизъюнкции N переменных, функции Шеффера и Пирса для двух переменных (рис. 2&ndash;8).</p>
+<p>Фрагмент, реализующий функцию дизъюнкции N переменных, не удается реализовать с одним весовым коэффициентом, но можно это сделать, например, с использованием N+2 весовых коэффициентов, как это показано на рисунке 9.</p>
+<p>Так как дизъюнкция, конъюнкция и отрицание образуют функционально полную систему логических функций, в компьютерных коэффициентных методиках оценки объектов с изменяемыми весовыми коэффициентами возможен учет любых логических условий оценки.</p>
+<p>&nbsp;</p>
+<p><img src="uploaded/image/2010-2/image522.gif" alt="Подпись:  
+ 
+Рис. 2. Функция 
+конъюнкции N переменных	Рис. 3. Функция дизъюнкции
+ 2 переменных
+ 
+ 
+Рис. 4. Функция 
+отрицания	Рис. 5. Функция отрицания
+ конъюнкции N переменных
+ 
+ 
+Рис. 6. Функция 
+отрицания дизъюнкции 
+N переменных	Рис. 7. Функция 
+Шеффера
+ 
+ 
+Рис. 8. Функция Пирса	Рис. 9. Функция конъюнкции 
+N переменных" width="307" height="713" align="left" />Пример практического использования  логических функций</p>
+<p>Использование логических функций в компьютерной коэффициентной методике рассмотрим на примере фрагмента методики оценки профессиональной подготовки специалиста, реализующей выставление итоговой балльной оценки &laquo;отлично&raquo; или &laquo;хорошо&raquo; на основе G частных балльных оценок, из которых k оценок Х1,&hellip;, Хk за практические навыки, а остальные Х(k+1),&hellip;, ХG &ndash; за теоретические знания.</p>
+<p>Логические условия выставления оценок:</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; итоговая оценка &laquo;отлично&raquo; (5) выставляется, если все оценки за практические навыки равны &laquo;отлично&raquo;, а оценки за теоретическую подготовку не ниже &laquo;хорошо&raquo;;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; итоговая оценка &laquo;хорошо&raquo; (4) выставляется, если оценка за практические навыки &ndash; не &laquo;отлично&raquo; и все оценки за практические навыки и теоретическую подготовку не ниже &laquo;хорошо&raquo;.</p>
+<p><img src="uploaded/image/2010-2/image524.gif" alt="Подпись:  
+Рис. 10. Фрагмент методики оценки 
+профессиональной подготовки специалиста" width="754" height="282" align="left" />Реализация указанных условий получения итоговой оценки за профессиональную подготовку специалиста иллюстрируется рисунком 10.</p>
+<p>Для учета логических условий определения итоговой оценки сначала осуществляется преобразование с использованием изменяемых весовых коэффициентов V1(=5) и V2(&lt;4) значений частных оценок (X1,&hellip;, XG) в двоичные величины  (<img src="uploaded/image/2010-2/image526.gif" border="0" alt="" width="21" height="20" />,&hellip;,<img src="uploaded/image/2010-2/image528.gif" border="0" alt="" width="25" height="21" />).</p>
+<p>Затем вычисляются две логические функции с целью проверки условий формирования рассматриваемых оценок.</p>
+<p>Проверка первого условия &ndash; все оценки за практические навыки равны &laquo;отлично&raquo; &ndash; осуществляется по значению функции конъюнкции <img src="uploaded/image/2010-2/image530.gif" border="0" alt="" width="130" height="24" />, реализуемой (см. рис. 10) с использованием изменяемых весовых коэффициентов Wиk.</p>
+<p>Аналогично проверяется второе условие &ndash; все оценки за практические навыки и оценки за теоретическую подготовку должны быть не ниже &laquo;хорошо&raquo; &ndash; по значению функции отрицания дизъюнкции <img src="uploaded/image/2010-2/image532.gif" border="0" alt="" width="103" height="27" />, реализуемой с использованием изменяемого весового коэффициента W не или G.</p>
+<p>Наконец, по вычисленным значениям функций в случае выполнения второго условия формируется итоговая оценка: при выполнении первого условия &ndash; &laquo;отлично&raquo; (5), а при его невыполнении &ndash; &laquo;хорошо&raquo; (4).</p>
+<p>При этом осуществляется переход от двоичных переменных к балльным значениям итоговой оценки в соответствии с соотношением Y=W1&times;Y1+W2&times;Y2, где Y1 и Y2 &ndash; количество двоичных переменных на входах сумматоров &Sigma;4 и &Sigma;5 со значениями, равными 1.</p>
+<p>Выбираются следующие значения изменяемых весовых коэффициентов:</p>
+<p><img src="uploaded/image/2010-2/image534.gif" border="0" alt="" width="148" height="41" /></p>
+<p><img src="uploaded/image/2010-2/image536.gif" border="0" alt="" width="132" height="41" /></p>
+<p>Фрагмент методики, реализующий выставление итоговой оценки &laquo;удовлетворительно&raquo; или &laquo;неудовлетворительно&raquo;, может быть построен аналогично.</p>
+<p>Для наиболее широкой реализации коэффициентных методик с изменяемыми весовыми коэффициентами целесообразно создание программной оболочки, предназначенной для разработки и реализации методик пользователями, не специализирующимися в области вычислительной техники и программирования.</p>
+<p>Созданный с участием авторов вариант программной оболочки получил официальную государственную регистрацию (№ 2008610291 от 14 января 2008 г.) и экспериментально проверен на примере разработки используемой в учебно-воспитательном процессе Ростовского военного института Ракетных войск методики рейтинговой оценки кафедр по итогам обучения за семестр и за учебный год.</p>
+<p>В заключение отметим, что компьютерные коэффициентные методики широко используются в практике оценки объектов, относящихся к разнообразным областям деятельности, так как, обладая простотой используемого математического аппарата, обеспечивают рациональное сочетание оперативности получения результата с возможностью количественного его обоснования.</p>
+<p>Недостатком существующих коэффициентных методик является невозможность реализации логических функций в процессе получения результата. Логические функции в компьютерных коэффициентных методиках реализуются на основе перехода от традиционно используемых постоянных весовых коэффициентов к изменяемым.</p>
+<p>Литература</p>
+<p>1.&nbsp;Долгов А.И., Долгов А.И., Журавлев Ю.П. Методика решения некоторых задач оценки объектов с помощью ЦВМ // Автоматика и вычислительная техника. 1965. № 9.</p>
+<p>2.&nbsp;Долгов А.И., Мартыненко А.Ф., Преснухин В.В. Коэффициентная методика с изменяемыми весовыми коэффициентами // Искусственный интеллект. Донецк. МОН и ИПИИ &laquo;Наука i освiта&raquo;. 2008. Т. 4.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2523</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2523">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 2 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=90">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

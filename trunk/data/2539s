@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Применение метода анализа иерархии для поддержки принятия решения при выборе лекарственных препаратов</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Применение метода анализа иерархии для поддержки принятия решения при выборе лекарственных препаратов</h2><div style="margin-bottom:10px"><strong>Application of analytic hierarchy method  for support decision making at drug choice</strong></div>Статья опубликована в выпуске журнала № 2 за 2010 год. [ 27.05.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Разработана модель поддержки принятия решения для выбора наиболее безопасных лекарственных препаратов. Модель, основанная на методе анализа иерархии, позволяет учитывать индивидуальные особенности конкретного пациента.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">Designed model for support decision making at safety drug choice. Model is based on analytic hierarchy method. Designed model allow to take into consideration individual  specifics of concrete patient.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=5876">Большаков А.Л. (flukov@mail.ru)</a> - Волгоградский государственный технический университет   , <a href="index.php?page=infou&id=5877">Бутенко Д.В. (butenko@vstu.ru)</a> - Волгоградский государственный технический университет Кандидат технический наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1625">принятие решения</a>, <a href="index.php?page=infotg&id=1627">нежелательная побочная реакция</a>, <a href="index.php?page=infotg&id=155">модель</a>, <a href="index.php?page=infotg&id=1626">лекарственное средство</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1625">decision making</a>, <a href="index.php?page=infotg&id=1627">side effect</a>, <a href="index.php?page=infotg&id=155">mathematical model</a>, <a href="index.php?page=infotg&id=1626">drug</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 749<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2539">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Проблема безопасности лекарственных препаратов сегодня является одной из основных в клинической практике. Фармакологический рынок интенсивно развивается, количество лекарственных средств (ЛС) постоянно растет. Врачу необходимо ежедневно читать в среднем около двадцати медицинских статей, чтобы владеть актуальной информацией по своей специальности. Однако время, которое он может уделить чтению на работе, &ndash; менее одного часа в неделю. В связи с этим адекватно оценить безопасность лекарственного препарата для конкретного пациента, а также выбрать наиболее безопасный из них становится для врача все более сложной задачей. Как следствие &ndash; затруднение принятия клинических решений, повышение риска клинических ошибок, необоснованность назначения того или иного препарата.</p>
+<p>&nbsp;</p>
+<p>Разработанная авторами статьи методика принятия решения для поддержки выбора препарата актуальна при автоматизации задач выбора врачом наиболее безопасного ЛС для конкретного пациента в условиях информатизации общества и врачебной практики в частности.</p>
+<p>Принятие врачебного решения традиционно ассоциируют с поиском и связанным с ним перебором вариантов лечения. Процесс принятия врачебного решения можно представить следующим образом:</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; описание состояния пациента (проведение анализов, постановка диагноза);</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; анализ ограничений (наличие аллергии на компоненты препарата, нарушение функции по- чек и т.п.);</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; выбор метода лечения/лекарственного препарата;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; прогноз вариантов результата лечения (оценка безопасности препарата, возможности возникновения нежелательных побочных реакций).</p>
+<p>Теоретически процесс принятия решения сводится к определению множества критериев выбора и альтернатив, алгоритма выбора альтернатив согласно заданным критериям. При выборе наиболее безопасного ЛС руководствуются следующими критериями:</p>
+<p>-&nbsp;&nbsp;&nbsp; диагноз, обусловливающий назначение ЛС (согласно международной классификации болезней);</p>
+<p>-&nbsp;&nbsp;&nbsp; фармакологическая группа ЛС;</p>
+<p>-&nbsp;&nbsp;&nbsp; наличие аллергических реакций на компоненты ЛС.</p>
+<p>По данным критериям отбирается подмножество альтернатив (ЛС из всего множества) для дальнейшего выбора наиболее подходящего ЛС.  В качестве критериев, по которым окончательно выбирается наилучшая альтернатива (ЛС), предлагается использовать вероятность возникновения нежелательного влияния препарата на органы или системы организма пациента.</p>
+<p>Эти критерии могут иметь различную значимость, и их приоритет определяется врачом-экспертом для конкретного пациента после проведения соответствующей диагностики. Например, для пациента с нарушением функций почек и печени критерии, соответствующие этим системам и органам, будут иметь наивысший приоритет среди остальных, так как даже малое поражение этих систем в результате применения ЛС для него недопустимо.</p>
+<p><img src="uploaded/image/2010-2/image896.gif" alt="Подпись:  " width="615" height="169" align="left" />За основу модели поддержки принятия решения был выбран метод анализа иерархии как позволяющий отбирать альтернативы по нескольким критериям, важность которых различна. Общая схема иерархии задачи по поддержке принятия решения о выборе наиболее безопасного ЛС изображена на рисунке.</p>
+<p>На первом уровне иерархии находится цель поддержки принятия решения &ndash; выбор наиболее безопасного ЛС, на втором уровне &ndash; критерии выбора (O1&ndash;On), описывающие состояние органов и систем организма конкретного пациента, где  B1&ndash;Bn &ndash; важность этих критериев в зависимости от состояния тех или иных органов. На третьем уровне находятся альтернативы &ndash; D1&ndash;Dn; Aji &ndash; оценки вероятности нежелательного влияния этих ЛС на системы и органы организма (O1&ndash;On), которые устанавливаются экспертами &ndash; клиническими фармакологами для каждого ЛС в ходе клинических испытаний или практики.</p>
+<p>В общем виде алгоритм выбора наиболее безопасного ЛС по описанной модели поддержки принятия решения состоит из следующих этапов.</p>
+<p>1.&nbsp;&nbsp; Оценка вероятности нежелательного влияния Aji для каждого препарата &ndash; альтернативы на каждую систему и органы пациента.</p>
+<p>2.&nbsp;&nbsp; Расстановка критериев (On) и их важности (Bn) для каждого органа и системы конкретного пациента.</p>
+<p>3.&nbsp;&nbsp; Построение матрицы парных сравнений для критериев On: столбцы и строки матрицы &ndash; критерии On; значения элементов матрицы &ndash; отношения значимости критериев Bni/Bnj.</p>
+<p>4.&nbsp;&nbsp; Построение матрицы парных сравнений альтернатив для каждого критерия On второго уровня, в которых сравниваются значения Aij каждой альтернативы. Столбцы и строки матрицы &ndash; альтернативы Dn; значения элементов матрицы &ndash; отношения Ani/Anj.</p>
+<p>5.&nbsp;&nbsp; Определение для каждой матрицы вектора приоритетов Q=(W1, .., Wn), где Wi рассчитывается по формуле: Wi=qi/r (<img src="uploaded/image/2010-2/image898.gif" border="0" alt="" width="104" height="24" /> и r=q1+ +&hellip;+qn, где ain &ndash; значение матрицы i-й строки n-го столбца).</p>
+<p>6.&nbsp;&nbsp; Расчет показателя безопасности Sj для каждой альтернативы &ndash; препарата: <img src="uploaded/image/2010-2/image900.gif" border="0" alt="" width="79" height="36" />&nbsp;где Wi &ndash; вес i-го критерия; Vji &ndash; важность j-й альтернативы по i-му критерию.</p>
+<p>7.&nbsp;&nbsp; Сортировка альтернативы по возрастанию значения Sj.</p>
+<p>Данную методику поддержки принятия решения планируется использовать при разработке автоматизированной системы поддержки принятия врачебного решения по выбору ЛС.</p>
+<p>Таким образом, оценивая безопасность применения сразу нескольких ЛС с учетом индивидуальных особенностей пациента, врач получает возможность оценить и принять более объективное решение при выборе наиболее безопасного препарата, тем самым снизить риск возникновения нежелательных побочных реакций от приема ЛС и повысить обоснованность их назначения.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Ларичев О.И. Теория и методы принятия решений, а также хроника событий в волшебных странах. М.: Логос, 2000. 296 с.</p>
+<p>2.&nbsp;&nbsp; Большаков А.Л., Бутенко Д.В. Информационно-аналитическая система поддержки принятия решения при выборе лекарственного средства // Вест. новых мед. технологий: темат. вып.: Избранные технологии диагностики и лечения. 2009. № 1. C. 60&ndash;61.</p>
+<p>3.&nbsp;&nbsp; Саати Т. Принятие решения, метод анализа иерархий. М.: Радио и связь, 1993. 278 с.</p>
+<p>4.&nbsp;&nbsp; Бурбелло А.Т. Неблагоприятные побочные реакции лекарственных средств. СПб, 2008. 32 с.</p>
+<p>5.&nbsp;&nbsp; Бутенко Д.В. Концептуальное проектирование как инновационная интеллектуальная технология // Открытое образование: матер. XXXVI Междунар. конф. и дискус. науч. клуба IT+SE`09 (майская сес., Ялта&ndash;Гурзуф). 2009: Прилож. к науч.-практич. журн. Открытое образование. C. 226&ndash;228.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2539</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2539">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 2 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=90">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

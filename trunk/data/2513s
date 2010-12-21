@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Подход к использованию меры возможности при оценке принимаемых решений</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Подход к использованию меры возможности при оценке принимаемых решений</h2><div style="margin-bottom:10px"><strong>The approach to use of the measure of possibility  at the estimation of accepted decisions</strong></div>Статья опубликована в выпуске журнала № 2 за 2010 год. [ 27.05.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Предложены оригинальная трактовка мер возможности и необходимости, а также уточнение основных аксиом теории возможностей при использовании этих мер в оценочном аппарате математического обеспечения АСУ управ-ления организационно-техническими системами.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">The original treatment of measures of possibility and necessity, and also the sentence on specification of the basic axioms of the theory of possibilities are given at use of these measures in the estimated device of a software of the automated control systems organi-zational-technical systems.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=4053">Усков А.А. (andrey@uskov.net)</a> - Смоленский филиал Российского университета кооперации Доктор технический наук Ph.D., <a href="index.php?page=infou&id=5587">Балашов О.В. (andrey@uskov.net)</a> - Российский университет кооперации, г. Смоленск Кандидат технический наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1543">теория принятия решений</a>, <a href="index.php?page=infotg&id=1542">организационно-техническая система</a>, <a href="index.php?page=infotg&id=1541">необходимость</a>, <a href="index.php?page=infotg&id=1540">мера</a>, <a href="index.php?page=infotg&id=1539">логико-лингвистическая шкала</a>, <a href="index.php?page=infotg&id=1538">возможность</a>, <a href="index.php?page=infotg&id=1009">вероятность</a>, <a href="index.php?page=infotg&id=1537">важность</a>, <a href="index.php?page=infotg&id=969">автоматизированная система управления</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1543">decision theory</a>, <a href="index.php?page=infotg&id=1542">organizational-technical system</a>, <a href="index.php?page=infotg&id=1541">necessity</a>, <a href="index.php?page=infotg&id=1540">measure</a>, <a href="index.php?page=infotg&id=1539">logic-linguistic scale</a>, <a href="index.php?page=infotg&id=1538">possibility</a>, <a href="index.php?page=infotg&id=1009">probability</a>, <a href="index.php?page=infotg&id=1537">probability</a>, <a href="index.php?page=infotg&id=969">automatized control system</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 397<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2513">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Одной из важных задач, возникающих при формализации процессов принятия решений, является задача оценки этих решений.</p>
+<p>&nbsp;</p>
+<p>Существуют четыре основные меры, используемые при оценке принимаемых решений в условиях неопределенности: субъективная вероятность, полезность, возможность и необходимость. Рассмотрим физический смысл данных мер и их взаимосвязь при оценке принимаемых человеком решений.</p>
+<p>В настоящее время основными методами, используемыми при оценке принимаемых решений, являются методы теорий вероятностей, полезности и возможностей [1].</p>
+<p>Теория вероятностей при оценке принимаемых решений предполагает использование объективной и субъективной вероятностей [2].</p>
+<p>Отметим, что использование методов получения объективной вероятности при оценке решений, принимаемых человеком на объектах сложной организационно-технической системы (ОТС), некорректно в силу невозможности получить статистику о ранее выполнявшихся подобных решениях.</p>
+<p>Под субъективной вероятностью понимается мера уверенности некоторого человека или группы лиц в том, что данное событие в действительности будет иметь место.</p>
+<p>Субъективная вероятность определяется в результате опроса эксперта или группы экспертов. Существующие методы оценивания субъективной вероятности наиболее полно приведены в [2]. Среди методов оценивания субъективной вероятности выделяются методы, предполагающие использование функции полезности. Данная функция характеризует желательность результата выполнения сформированного человеком решения [2]. Наиболее распространенным аксиоматическим подходом к оценке функции полезности является подход Неймана&ndash;Моргенштерна, при котором из аксиом предпочтения на множестве лотерей с известными вероятностями исходов выводится существование функции полезности. Развитием этого подхода является предложенная Сэвиджем система аксиом, в которой вероятности вместе с функцией полезности выводятся из системы предпочтений. Современная теория полезности содержит как опосредованные методы оценки функции полезности, опирающиеся на аксиоматику Неймана&ndash;Моргенштерна, так и методы непосредственной оценки функции полезности, которые выводятся из данных психофизики.</p>
+<p>Общим для субъективной вероятности и функции полезности является то, что в основе оценивания показателей, выражаемых через данные меры, лежит процесс обработки мнений экспертов. Получение информации от экспертов требует значительных затрат времени на постановку проблемы, сбор данных от экспертов и их обработку. Решение перечисленных задач проблематично при оперативном управлении ОТС, функционирующими в режиме реального времени. Использование субъективной вероятности и функции полезности целесообразно при прогнозировании возможных событий, причем события должны быть в масштабе всей ОТС (например, прогнозирование стратегии возможных действий конкурентов). Иными словами, решение задач оценивания субъективной вероятности и функции полезности больше соответствует задачам стратегического планирования.</p>
+<p>В начале 80-х годов отечественными учеными был предложен подход к оценке реализуемости принимаемых решений на основе меры возмож- ности Л. Заде [3]. Однако современная теория  возможностей не располагает теоретическим аппаратом, в достаточной мере обеспечивающим практическую оценку возможностей выполнения принимаемых человеком решений. Более того, отсутствуют четкие определения основных мер  неопределенности, а также методы для практического использования этих мер. Анализ существующих в теории возможностей определений мер возможности и необходимости позволяет сделать вывод о том, что эти меры выражаются друг через друга [4].</p>
+<p>Каждое решение должно оцениваться на предмет необходимости и возможностей своего выполнения в складывающихся (прогнозируемых) условиях обстановки. Такая постановка предполагает различие в физическом смысле мер, используемых для оценки и, следовательно, методов их оценивания.</p>
+<p>В рамках изложенной постановки задачи оценки принимаемых решений предлагаются следующие определения мер возможности и необходимости.</p>
+<p>Мера возможности характеризует степень реализуемости объектом ОТС сформированного решения в рассматриваемых условиях обстановки. Под степенью реализуемости понимается отношение текущих возможностей объекта ОТС по реализации решения к его потенциальным возможностям.</p>
+<p>Мера необходимости характеризует обязательность выполнения решения в рассматриваемых условиях обстановки.</p>
+<p>Мера возможности объекта П(z) по выполнению решения z предполагает наличие показателя (q), значения которого характеризуют эту возможность, а также наличие модели, позволяющей определить его значение в идеальных (qид) и рассматриваемых (qрас) условиях обстановки (как правило, более сложных):</p>
+<p><img src="uploaded/image/2010-2/image344.gif" border="0" alt="" width="175" height="40" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+<p>Предлагаемый подход к оценке возможностей отличается от подхода, предложенного Л. Заде и развитого в [4], тем, что в нем рассматриваются возможности не каких-то абстрактных событий, а выполнения типовых задач объектами ОТС, и является развитием подхода, предложенного в [5].</p>
+<p>Выражение (1) позволяет определить количественную составляющую П(z). Определение качественной составляющей П(z) предлагается осуществлять с использованием логико-лингвистических шкал (ЛЛШ) оценки возможности объекта выполнять рассматриваемое решение. ЛЛШ разрабатывается на основе мнений экспертов о возможности выполнения рассматриваемого решения объектом ОТС в тех или иных диапазонах количественного значения П(z). Как и модель расчета П(z), ЛЛШ создается на этапе проектирования АСУ объектом ОТС. Количество таких моделей и ЛЛШ определяется количеством задач, которые объект ОТС может выполнять исходя из своего функционального предназначения и по которым принимаются соответствующие решения.</p>
+<p>Возможность выполнения обобщенного решения zj, состав которого образует множество решений {zi}, следующая:</p>
+<p>П(zj)=<img src="uploaded/image/2010-2/image346.gif" border="0" alt="" width="91" height="36" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)</p>
+<p>где aij &ndash; коэффициент, определяющий важность решения zij.</p>
+<p>В простейшем случае в качестве aij может выступать необходимость выполнения решения zij в рассматриваемых условиях обстановки.</p>
+<p>Оценка необходимости N(z) решения z в конкретных условиях обстановки определяется сложившимися условиями. Следовательно, методика определения значений показателя N(z) должна содержать анализ текущих или прогнозируемых значений факторов обстановки. Иными словами, порядок оценивания N(z) также должен быть  связан с подходом к формализованному представлению ОТС и условий ее функционирования (ситуаций). Каждый из множества факторов обстановки y&Icirc;Y имеет конечное множество своих  возможных значений {Тmу}, где m &ndash; количество возможных значений. Каждому значению Тmу ставится в соответствие одно или множество решений {zi} при идентификации Тmу. В основе предлагаемого подхода к оценке N(z) лежит определение важности W(Тmу) каждого из множества значений {Тmу}, соответствующих рассматриваемым условиям обстановки. Оценку значения показателя W(Тmу) предлагается производить посредством оценки влияния значения Тmу на функциональные свойства ОТС (G). При этом важность значений W(Тmу) определяется через важность свойств системы W(G).</p>
+<p>Определение важности свойств системы W(G) предлагается проводить следующим образом. Выбирается множество функциональных подсистем (С), которые образуют структуру ОТС (например, информационная, подсистема управления, исполнительная и подсистема обеспечения), и множество свойств ОТС (например, оперативность, устойчивость, функциональная способность). Каждой функциональной подсистеме ОТС соответствуют свои свойства Gс и множество задач Zс, для выполнения которых она создана исходя из своего функционального предназначения.</p>
+<p>Для примера в таблице приведены оценки для 12 свойств ОТС.</p>
+<p>Оценка взаимной важности  свойств системы, W(G)</p>
+<table border="0" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr>
+<td rowspan="2" width="87">
+<p>Свойства,      G</p>
+</td>
+<td colspan="4" width="208" valign="top">
+<p>Подсистемы,   С</p>
+</td>
+</tr>
+<tr>
+<td width="38" valign="top">
+<p>управления</p>
+</td>
+<td width="57" valign="top">
+<p>информационная</p>
+</td>
+<td width="57" valign="top">
+<p>исполнительная</p>
+</td>
+<td width="57" valign="top">
+<p>обеспечивающая</p>
+</td>
+</tr>
+<tr>
+<td width="87" valign="top">
+<p>Способность</p>
+</td>
+<td width="38" valign="top">
+<p>0,94</p>
+</td>
+<td width="57" valign="top">
+<p>0,82</p>
+</td>
+<td width="57" valign="top">
+<p>0,86</p>
+</td>
+<td width="57" valign="top">
+<p>0,58</p>
+</td>
+</tr>
+<tr>
+<td width="87" valign="top">
+<p>Устойчивость</p>
+</td>
+<td width="38" valign="top">
+<p>0,92</p>
+</td>
+<td width="57" valign="top">
+<p>0,78</p>
+</td>
+<td width="57" valign="top">
+<p>0,85</p>
+</td>
+<td width="57" valign="top">
+<p>0,52</p>
+</td>
+</tr>
+<tr>
+<td width="87" valign="top">
+<p>Оперативность</p>
+</td>
+<td width="38" valign="top">
+<p>0,96</p>
+</td>
+<td width="57" valign="top">
+<p>0,80</p>
+</td>
+<td width="57" valign="top">
+<p>0,76</p>
+</td>
+<td width="57" valign="top">
+<p>0,48</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Логико-лингвистическая шкала оценки важности свойств системы должна создаваться на этапе проектирования АСУ ОТС и корректироваться в процессе ее эксплуатации. В основе построения ЛЛШ лежит обработка мнений экспертов относительно эксплуатации рассматриваемой ОТС. Количественное значение показателя важности W(Gc/С) свойства Gc, проявляемое подсистемой С, оценивается по результатам обработки мнений экспертов о важности тех или иных свойств по соответствующей шкале. В качестве условий оценки важности свойств служит предположение об одновременном проявлении всех свойств ОТС (или необходимости в одновременном решении всех задач). Задача экспертов состоит в ранжировании важности свойств исходя из их физического смысла. Величина W(Gс/С) может иметь как количественную, так и качественную составляющую. Любому значению Тmу каждого фактора обстановки у&Icirc;Y ставится в соответствие множество свойств функциональных подсистем {Wус}, проявляемых ОТС при идентификации значения Тmу. Так как значению каждого фактора обстановки может соответствовать несколько свойств различных подсистем ОТС, оценка важности идентифицированного значения рассматриваемого фактора производится в виде</p>
+<p>W(Тmу) = max(W(Gус/C)).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p>В результате идентификации текущих значений Тmу всех факторов обстановки формируется множество оценок {W(Tmу)}. Так как каждому значению Тmу ставится в соответствие множество решений {zi}, оценка необходимости решения zi из данного множества определяется в виде</p>
+<p>N(zi) = W(Gус/(C/Zi)).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)</p>
+<p>В результате оценки текущих значений факторов обстановки формируется множество решений {zi}, каждому их которых соответствует показатель, характеризующий необходимость его выполнения N(zi).</p>
+<p>Предложенный подход к оценке П(zi) и N(zi) был использован авторами при разработке прототипа системы поддержки принятия решений военного назначения. В основу данного подхода положен метод ситуационного управления. Под фактором обстановки понимается ситуационный признак, а под значениями этого фактора &ndash; значения ситуационного признака.</p>
+<p>Физический смысл показателей П(zi) и N(zi) отличается от смысла таких показателей, как субъективная вероятность P(zi) и функция полезности U(zi). Различие в физическом смысле указанных показателей делает некорректной существующую в теории возможностей аксиому</p>
+<p>N(zi) &lt; P(zi) &lt; П(zi),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5)</p>
+<p>определяющую взаимную связь показателей N(zi), Р(zi) и П(zi). Кроме того, подвергаются сомнению существующие в теории возможностей аксиомы, определяющие неаддитивность мер возможности и необходимости:</p>
+<p>П(zi) + П(<img src="uploaded/image/2010-2/image348.gif" border="0" alt="" width="16" height="23" />) &pound; 1,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6)</p>
+<p>N(zi) + N(<img src="uploaded/image/2010-2/image348.gif" border="0" alt="" width="16" height="23" />) &sup3; 1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (7)</p>
+<p>Изложенная трактовка мер возможности и необходимости позволяет оценить приоритетность V(zi) каждого решения из множества {zi}, выполнение которых соответствует рассматриваемой ситуации.</p>
+<p>Для определения V(zi) могут использоваться различные виды сверток. В простейшем виде значение V(zi) может быть определено как</p>
+<p>V(zi) = N(zi) П(zi) U(zi).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (8)</p>
+<p>Оценка множества альтернатив каждого решения zi и выбор наиболее рациональной альтернативы может проводиться на основе известных методов теории выбора [1].</p>
+<p>Предлагаемый подход позволяет определить область наилучшего применения мер неопределенности, а также методов их оценивания при формализации процессов принятия решений на объектах ОТС.</p>
+<p>Литература</p>
+<p>1.&nbsp;Теория выбора и принятия решений / И.М. Макаров [и др.]. М.: Наука, 1982.</p>
+<p>2.&nbsp;Наумов А.Е., Подиновский А.В., Подиновский В.В. Субъективная вероятность: способы представления и методы получения // Техническая кибернетика. 1991. № 5.</p>
+<p>3.&nbsp;Крумберг О.А. Теория психологической возможности для моделирования выбора в условиях неопределенности // Методы принятия решений в условиях неопределенности. Рига: РПИ, 1980. С. 47&ndash;52.</p>
+<p>4.&nbsp;Дюбуа Д., Прад А. Теория возможностей. Приложения к представлению знаний в информатике. М.: Радио и связь, 1990.</p>
+<p>5.&nbsp;Борисов А.Н., Крумберг О.А., Федоров И.П. Принятие решений на основе нечетких моделей. Примеры использования. Рига, Зинатне, 1990.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2513</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2513">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 2 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=90">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

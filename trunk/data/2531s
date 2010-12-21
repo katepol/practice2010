@@ -1,0 +1,2277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Об одном подходе к идентификации производственной функции</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Об одном подходе к идентификации производственной функции</h2><div style="margin-bottom:10px"><strong>About an approach to identifying production function</strong></div>Статья опубликована в выпуске журнала № 2 за 2010 год. [ 27.05.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Исследуется проблема идентификации производственной функции в условиях нечеткой среды и наблюдений за входными и выходными величинами на уровне «мягких измерений». На примере предприятия, производящего товар одного наименования и комбинирующего свои затраты только по сырью и труду, построена производственная функция с нечеткими параметрами. </em><br /><strong>Abstract:</strong><em style="font-size:8pt">The problem of production function identification in fuzzy environment and supervision over input and output sizes at «soft measurements» level is investigated. Production function with fuzzy parameters is constructed for the example of the firm producing the goods of one type and combining the expenses only by two factors: raw material and labour.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=5870">Кулиев Р.А. (movludf@mail.ru)</a> - Азербайджанский государственный экономический университет, г. Баку Кандидат технический наук Ph.D., <a href="index.php?page=infou&id=5871">Рзаев Р.Р. (raminrza@yahoo.com)</a> - Институт кибернетики Национальной академии наук Азербайджанской Республики, г. Баку Кандидат физико-математических наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1601">производственная функция</a>, <a href="index.php?page=infotg&id=1604">нечеткое множество</a>, <a href="index.php?page=infotg&id=71">нечеткий вывод</a>, <a href="index.php?page=infotg&id=1603">нечеткая производственная кривая безразличия</a>, <a href="index.php?page=infotg&id=1602">изокванта</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1601">production function</a>, <a href="index.php?page=infotg&id=1604">fuzzy set</a>, <a href="index.php?page=infotg&id=71">fuzzy conclusion</a>, <a href="index.php?page=infotg&id=1603">fuzzy industrial indifference curve</a>, <a href="index.php?page=infotg&id=1602">isoquant</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 300<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2531">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>По своей сути производство есть трансформация входов, таких как основное оборудование, рабочая сила и природные ресурсы, в выход &ndash; товары и услуги. При этом роль менеджера заключается в умении эффективно использовать обозначенные входы путем их оптимального распределения и правильного выбора технологии (производственной функции). Формально производственная функция устанавливает связь между физическим уровнем выхода и физическими уровнями затрат (входов), определяемых существующей производственной технологией. То есть производственная функция есть шкала (таблица &ndash; в дискретном, уравнение &ndash; в непрерывном случае), демонстрирующая максимальную величину выхода (выпуска Q), которая может быть произведена путем переработки некоторого оптимального набора входов Xi (объемов затрат по всем факторам) в условиях существующей производственной технологии.</p>
+<p>&nbsp;</p>
+<p>В наиболее общем виде [1] производственную функцию представляют как</p>
+<p>Q=f(X1, X2, &hellip;, Xn).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+<p>Это означает, что фирма может изготовить максимальное количество единиц изделий выпуска Q при комбинации затрат, включающей точно X1 единиц 1-го фактора, X2 единиц 2-го фактора и т.д. Для наглядности ограничимся фирмой, производящей товар одного наименования и комбинирующей свои затраты только по двум факторам: количеству сырья M и затратам труда L:</p>
+<p>Q=f(M, L).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)</p>
+<p>На рисунке 1 точка С отображает оптимальную комбинацию двух выбранных факторов: количество сырья MС и затраты труда LС (чел./час), при которых достигается максимальный выпуск продукции Qmax (точка D). Саму коническую поверхность обычно называют производственной.</p>
+<p>Точки, лежащие на производственной поверхности, обладают следующим свойством. Их расстояние от плоскости LOM, например DC, равно наибольшему возможному выпуску продукции при соответствующем сочетании затрат труда LC и затрат сырья MC. Очевидно, что эта поверхность характеризует производственную функцию двух факторов. Линия на плоскости LOM, соединяющая все точки, в которых сочетания затрат труда и затрат сырья дают равное количество продукции, называется изоквантой, или производственной кривой безразличия. Их можно построить сколько угодно. Изокванта, соответствующая выпуску единицы продукта, называется единичной. Нулевая точка (начало координат) показывает отсутствие тех и других затрат и, следовательно, отсутствие производства. Точно так же все точки на осях L и M указывают на отсутствие производства: продукция не может выпускаться без сырья, сколько бы труда ни было затрачено, и, наоборот, без труда, сколько бы ни было на складе сырья. На плоскости LOM производственные изокванты Q=C (C=const) представляют собой графики неявно заданной функции <img src="uploaded/image/2010-2/image656.gif" border="0" alt="" width="65" height="21" />.</p>
+<p>После преобразования этого выражения изокванту можно задать в виде явной гиперболической зависимости M от L: <img src="uploaded/image/2010-2/image658.gif" border="0" alt="" width="97" height="24" />&nbsp;Тогда производственную поверхность можно представить в виде уравнения <img src="uploaded/image/2010-2/image660.gif" border="0" alt="" width="67" height="23" />, где a1&gt;0, a2&gt;0 и a1+a2=1. Данное уравнение описывает коническую поверхность, для которой, согласно L&gt;0, M=l&times;L (l&gt;0) и <img src="uploaded/image/2010-2/image662.gif" border="0" alt="" width="51" height="23" />, прямая, заданная каноническим уравнением <img src="uploaded/image/2010-2/image664.gif" border="0" alt="" width="103" height="23" />&nbsp;служит образующей и проходит через начало координат.</p>
+<p>В n-мерном пространстве коническую производственную гиперповерхность, а значит, и саму производственную функцию от n факторов можно задать в виде уравнения</p>
+<p><img src="uploaded/image/2010-2/image666.gif" border="0" alt="" width="123" height="24" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p><img src="uploaded/image/2010-2/image668.gif" alt="Подпись:  
+Рис. 1. Производственная поверхность" width="296" height="214" align="left" />где &micro; определяет размерность и зависит от избранной единицы измерения затрат и выпуска;  ai (i=1&divide;n) определяют ту долю в приросте конечного продукта, которую вносит сомножитель Xi, и называются коэффициентами эластичности производства относительно затрат данного ресурса. При a1+a2+&hellip;+an=1 производственная функция будет однородной, то есть возрастающей пропорционально росту количества ресурсов. Однако возможен случай a1+a2+&hellip;+an&gt;1, при котором увеличение затрат приводит к непропорционально большому росту выпуска.</p>
+<p>Проблема идентификации параметров производственной функции занимает ключевое место в общей проблеме управления на микроэкономическом уровне. Возможность ее решения все чаще рассматривают в применении новых информационных технологий, составной частью которых является математический аппарат теории нечетких множеств, позволяющий существенно расширить классы решаемых задач в условиях неопределенности. Особенностью идентификации производственной функции является то, что измерения входных Xi и выходной Q величин модели (3) выполняются на уровне мягких измерений, адекватное представление которых возможно в виде нечетких множеств. В статье рассматривается, как методом нечеткого вывода идентифицируется нечеткая производственная функция, зависящая от двух факторов.</p>
+<p>Постановка задачи</p>
+<p>Пусть при производстве фирмой некоторого товара пространством всевозможных комбинаций затрат будет замкнутое и выпуклое векторное пространство С={X1, X2, &hellip;, Xn)&frac12;Xk&sup3;0, k=1&divide;n}, являющееся слабоупорядоченным и непрерывным. Тогда на множествах ограниченных ресурсов фирмы и рыночных цен на факторы производства из рассматриваемого набора, заданных в виде интервальных оценок, построим производственную функцию и идентифицируем ее параметры.</p>
+<p>Анализ  производственной кривой безразличия  и модель производственного поведения</p>
+<p><img src="uploaded/image/2010-2/image670.gif" alt="Подпись:  
+Рис. 2. Карта производственных кривых безразличия" width="297" height="194" align="left" />Проведем анализ на примере производственной функции от двух факторов. Для удобства спроектируем производственную поверхность на плоскость L0M (рис. 1), сохранив при этом всю необходимую информацию. Это достигается путем введения производственной кривой безразличия, под которой понимается геометрическое место точек всех комбинаций затрат, обеспечивающих одинаковый уровень выпуска. Предположим, что на долгосрочный период фирма рассматривает по одиннадцать возможных уровней (от 0 до 10 единиц) для двух факторов (сырье и труд). Тогда производственную функцию представим в виде таблицы 1. В частности, 7 единиц трудовых ресурсов, комбинируясь с 4 единицами сырья, индуцируют производство 559 единиц выпуска.</p>
+<p>&nbsp;  Таблица 1  &nbsp;  Производственная функция от двух факторов</p>
+<table border="1" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr>
+<td colspan="2" rowspan="2" width="45" valign="top"></td>
+<td colspan="11" width="45" valign="top">
+<p>Единицы   по уровням количества сырья (M)</p>
+</td>
+</tr>
+<tr>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>1</p>
+</td>
+<td width="45" valign="top">
+<p>2</p>
+</td>
+<td width="45" valign="top">
+<p>3</p>
+</td>
+<td width="45" valign="top">
+<p>4</p>
+</td>
+<td width="45" valign="top">
+<p>5</p>
+</td>
+<td width="45" valign="top">
+<p>6</p>
+</td>
+<td width="45" valign="top">
+<p>7</p>
+</td>
+<td width="45" valign="top">
+<p>8</p>
+</td>
+<td width="45" valign="top">
+<p>9</p>
+</td>
+<td width="45" valign="top">
+<p>10</p>
+</td>
+</tr>
+<tr>
+<td rowspan="11" width="45" valign="top">
+<p>Единицы   по уровням затрат труда (L)</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td width="45" valign="top">
+<p>1</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>25</p>
+</td>
+<td width="45" valign="top">
+<p>52</p>
+</td>
+<td width="45" valign="top">
+<p>74</p>
+</td>
+<td width="45" valign="top">
+<p>90</p>
+</td>
+<td width="45" valign="top">
+<p>100</p>
+</td>
+<td width="45" valign="top">
+<p>108</p>
+</td>
+<td width="45" valign="top">
+<p>114</p>
+</td>
+<td width="45" valign="top">
+<p>118</p>
+</td>
+<td width="45" valign="top">
+<p>120</p>
+</td>
+<td width="45" valign="top">
+<p>121</p>
+</td>
+</tr>
+<tr>
+<td width="45" valign="top">
+<p>2</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>55</p>
+</td>
+<td width="45" valign="top">
+<p>112</p>
+</td>
+<td width="45" valign="top">
+<p>162</p>
+</td>
+<td width="45" valign="top">
+<p>198</p>
+</td>
+<td width="45" valign="top">
+<p>224</p>
+</td>
+<td width="45" valign="top">
+<p>242</p>
+</td>
+<td width="45" valign="top">
+<p>252</p>
+</td>
+<td width="45" valign="top">
+<p>258</p>
+</td>
+<td width="45" valign="top">
+<p>262</p>
+</td>
+<td width="45" valign="top">
+<p>264</p>
+</td>
+</tr>
+<tr>
+<td width="45" valign="top">
+<p>3</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>83</p>
+</td>
+<td width="45" valign="top">
+<p>170</p>
+</td>
+<td width="45" valign="top">
+<p>247</p>
+</td>
+<td width="45" valign="top">
+<p>303</p>
+</td>
+<td width="45" valign="top">
+<p>342</p>
+</td>
+<td width="45" valign="top">
+<p>369</p>
+</td>
+<td width="45" valign="top">
+<p>384</p>
+</td>
+<td width="45" valign="top">
+<p>394</p>
+</td>
+<td width="45" valign="top">
+<p>400</p>
+</td>
+<td width="45" valign="top">
+<p>403</p>
+</td>
+</tr>
+<tr>
+<td width="45" valign="top">
+<p>4</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>108</p>
+</td>
+<td width="45" valign="top">
+<p>220</p>
+</td>
+<td width="45" valign="top">
+<p>325</p>
+</td>
+<td width="45" valign="top">
+<p>400</p>
+</td>
+<td width="45" valign="top">
+<p>453</p>
+</td>
+<td width="45" valign="top">
+<p>488</p>
+</td>
+<td width="45" valign="top">
+<p>511</p>
+</td>
+<td width="45" valign="top">
+<p>527</p>
+</td>
+<td width="45" valign="top">
+<p>535</p>
+</td>
+<td width="45" valign="top">
+<p>540</p>
+</td>
+</tr>
+<tr>
+<td width="45" valign="top">
+<p>5</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>125</p>
+</td>
+<td width="45" valign="top">
+<p>258</p>
+</td>
+<td width="45" valign="top">
+<p>390</p>
+</td>
+<td width="45" valign="top">
+<p>478</p>
+</td>
+<td width="45" valign="top">
+<p>543</p>
+</td>
+<td width="45" valign="top">
+<p>590</p>
+</td>
+<td width="45" valign="top">
+<p>631</p>
+</td>
+<td width="45" valign="top">
+<p>653</p>
+</td>
+<td width="45" valign="top">
+<p>663</p>
+</td>
+<td width="45" valign="top">
+<p>670</p>
+</td>
+</tr>
+<tr>
+<td width="45" valign="top">
+<p>6</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>137</p>
+</td>
+<td width="45" valign="top">
+<p>286</p>
+</td>
+<td width="45" valign="top">
+<p>425</p>
+</td>
+<td width="45" valign="top">
+<p>523</p>
+</td>
+<td width="45" valign="top">
+<p>598</p>
+</td>
+<td width="45" valign="top">
+<p>655</p>
+</td>
+<td width="45" valign="top">
+<p>704</p>
+</td>
+<td width="45" valign="top">
+<p>732</p>
+</td>
+<td width="45" valign="top">
+<p>744</p>
+</td>
+<td width="45" valign="top">
+<p>753</p>
+</td>
+</tr>
+<tr>
+<td width="45" valign="top">
+<p>7</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>141</p>
+</td>
+<td width="45" valign="top">
+<p>304</p>
+</td>
+<td width="45" valign="top">
+<p>453</p>
+</td>
+<td width="45" valign="top">
+<p>559</p>
+</td>
+<td width="45" valign="top">
+<p>643</p>
+</td>
+<td width="45" valign="top">
+<p>708</p>
+</td>
+<td width="45" valign="top">
+<p>766</p>
+</td>
+<td width="45" valign="top">
+<p>800</p>
+</td>
+<td width="45" valign="top">
+<p>814</p>
+</td>
+<td width="45" valign="top">
+<p>825</p>
+</td>
+</tr>
+<tr>
+<td width="45" valign="top">
+<p>8</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>143</p>
+</td>
+<td width="45" valign="top">
+<p>314</p>
+</td>
+<td width="45" valign="top">
+<p>474</p>
+</td>
+<td width="45" valign="top">
+<p>587</p>
+</td>
+<td width="45" valign="top">
+<p>679</p>
+</td>
+<td width="45" valign="top">
+<p>753</p>
+</td>
+<td width="45" valign="top">
+<p>818</p>
+</td>
+<td width="45" valign="top">
+<p>857</p>
+</td>
+<td width="45" valign="top">
+<p>873</p>
+</td>
+<td width="45" valign="top">
+<p>885</p>
+</td>
+</tr>
+<tr>
+<td width="45" valign="top">
+<p>9</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>141</p>
+</td>
+<td width="45" valign="top">
+<p>318</p>
+</td>
+<td width="45" valign="top">
+<p>488</p>
+</td>
+<td width="45" valign="top">
+<p>609</p>
+</td>
+<td width="45" valign="top">
+<p>708</p>
+</td>
+<td width="45" valign="top">
+<p>789</p>
+</td>
+<td width="45" valign="top">
+<p>861</p>
+</td>
+<td width="45" valign="top">
+<p>905</p>
+</td>
+<td width="45" valign="top">
+<p>922</p>
+</td>
+<td width="45" valign="top">
+<p>935</p>
+</td>
+</tr>
+<tr>
+<td width="45" valign="top">
+<p>10</p>
+</td>
+<td width="45" valign="top">
+<p>0</p>
+</td>
+<td width="45" valign="top">
+<p>137</p>
+</td>
+<td width="45" valign="top">
+<p>316</p>
+</td>
+<td width="45" valign="top">
+<p>492</p>
+</td>
+<td width="45" valign="top">
+<p>617</p>
+</td>
+<td width="45" valign="top">
+<p>722</p>
+</td>
+<td width="45" valign="top">
+<p>809</p>
+</td>
+<td width="45" valign="top">
+<p>887</p>
+</td>
+<td width="45" valign="top">
+<p>935</p>
+</td>
+<td width="45" valign="top">
+<p>953</p>
+</td>
+<td width="45" valign="top">
+<p>967</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Как видно, существуют, по крайней мере, две комбинации M и L, при которых можно произвести одно и то же количество единиц выпуска. Например, используя труд 1 рабочего и 6 единиц сырья, можно произвести 108 единиц выпуска. Такой же объем выпуска можно получить, комбинируя труд 4 рабочих и вложения 1 единицы капитала. Из таблицы 1 можно выявить и другие комбинации, при которых достигается один и тот же выпуск.</p>
+<p>В непрерывном случае данный эффект иллюстрирует рисунок 2, на котором каждая из производственных кривых безразличия соответствует определенному уровню выпуска. Представленные кривые соответствуют определенному уровню возможных расходов фирмы: чем выше кривая, тем большими ресурсами для выпуска обладает фирма. Однако только в одной точке пересечения производственной кривой безразличия с прямой расходов M достигается максимальный искомый выпуск.</p>
+<p>Рассмотрим собственно модели производственной функции от n факторов. Пусть цена k-го фактора &ndash; Pk и не будет зависеть от производителя. Полагая, что фирма может потратить на приобретение рассматриваемых факторов не более F денежных единиц, ее бюджетное ограничение запишем как</p>
+<p>F&le;P1&times;X1+P2&times;X2+&hellip;+Pn&times;Xn.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)</p>
+<p>Совокупность различных допустимых комбинаций факторов, определяемая этим неравенством, называется бюджетным множеством, а плоскость, задаваемая уравнением</p>
+<p>F=P1&times;X1+P2&times;X2+&hellip;+Pn&times;Xn,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5)</p>
+<p>&ndash; бюджетной гиперплоскостью. В качестве гипотезы производственного поведения примем допущение, что фирма, располагающая расходными средствами в объеме F, при векторе цен на факторы производства P=(P1,&hellip;,Pn) выбирает наиболее предпочтительный набор, удовлетворяющий ограничениям (4). При оптимизации выбора менеджер может пользоваться картой производственных кривых безразличия. В силу выпуклости гиперповерхностей безразличия и ограниченности ресурсов максимум производственной функции достигается на бюджетной гиперповерхности. То есть среди кривых безразличия только одна распола- гает точкой (оптимальной комбинацией), в которой фирмой достигается максимальный выпуск.  В n-мерном пространстве ценовых факторов Pk это точка касания соответствующей производственной кривой безразличия с гиперповерхностью затрат на приобретение факторов (5), используемых фирмой для максимального выпуска Q. Для каждого уровня расходов предприятия (4) оптимальная комбинация факторов производства выявляется путем максимизации нелинейной производственной функции, то есть</p>
+<p>Q=f(X1, X2,&hellip;, Xn)&reg;max.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6)</p>
+<p>Нечеткая модель  производственной функции</p>
+<p>Для определения выпуска в конкретном случае необходимо иметь в виду, что объемы физических единиц используемых в производстве факторов не могут оцениваться однозначно. Как правило, они являются размытыми, варьируются в определенных пределах и на краткосрочном периоде характеризуются усредненными значениями. Поэтому, представляя искомую комбинацию затрат факторов производства в виде вектора нечетких величин <img src="uploaded/image/2010-2/image672.gif" border="0" alt="" width="25" height="23" />&nbsp;модель (5)&ndash;(6) заменим нечетким аналогом</p>
+<p><img src="uploaded/image/2010-2/image674.gif" border="0" alt="" width="147" height="23" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (7)</p>
+<p><img src="uploaded/image/2010-2/image676.gif" border="0" alt="" width="157" height="23" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (8)</p>
+<p>где Pk &ndash; фиксированная цена единицы k-го фактора; <img src="uploaded/image/2010-2/image678.gif" border="0" alt="" width="13" height="19" />&nbsp;&ndash; нечеткий объем расходов на приобретение факторов, которые предприятие старается минимизировать. В данном случае выходом модели является лингвистическая переменная &laquo;выпуск&raquo;, а входами &ndash; лингвистические переменные &laquo;уровни расходуемых единиц факторов производства&raquo;. Саму нечеткую модель сформируем на основе механизма нечеткого вывода [2], где промежуточной задачей является построение семейства нечетких уровней выпуска, дефаззифицированные значения которых будем считать условными альтернативными значениями искомой производственной функции.</p>
+<p>Для нахождения искомой нечеткой комбинации затрат ограничимся рассмотрением производственной функции от двух факторов: <img src="uploaded/image/2010-2/image680.gif" border="0" alt="" width="15" height="19" />&nbsp;&ndash; нечеткий объем труда и <img src="uploaded/image/2010-2/image682.gif" border="0" alt="" width="19" height="19" />&nbsp;&ndash; нечеткий объем сырья. Приведенный пример производственной функции (табл. 1) демонстрирует объемы выпусков, соответствующих различным комбинациям затрат на факторы, градуированных условными уровнями от 0 до 10. В оценке возможных общих денежных затрат предприятия и затрат физических единиц по обоим факторам ограничимся пятью возможными уровнями &ndash; нечеткими терм-множествами: &laquo;низкий&raquo;, &laquo;ниже среднего&raquo;, &laquo;средний&raquo;, &laquo;выше среднего&raquo; и &laquo;высокий&raquo;. Тогда функциональную зависимость между уровнями общих денежных затрат и единиц факторов, с одной стороны, и уровнями выпусков, с другой, построим в виде следующих правил: <img src="uploaded/image/2010-2/image684.gif" border="0" alt="" width="23" height="20" />&nbsp;ЕСЛИ <img src="uploaded/image/2010-2/image686.gif" border="0" alt="" width="36" height="23" />&nbsp;И L=низкий И M=высокий ИЛИ L=ниже среднего И M=выше среднего ИЛИ L=средний И M=средний ИЛИ L=выше среднего И M=ниже среднего ИЛИ L=высокий И M=низкий, ТО <img src="uploaded/image/2010-2/image688.gif" border="0" alt="" width="41" height="23" />, где <img src="uploaded/image/2010-2/image690.gif" border="0" alt="" width="40" height="23" />.</p>
+<p>Таблица 2   Выпуски, соответствующие разным уровням  расходов предприятия</p>
+<table border="0" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr height="1">
+<td width="35" height="1" valign="top">
+<p>F</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>L</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>M</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>Q</p>
+</td>
+<td width="35" height="1" valign="top">
+<p>F</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>L</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>M</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>Q</p>
+</td>
+</tr>
+<tr height="1">
+<td rowspan="10" width="35" valign="top">
+<p>0.1</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.200</p>
+</td>
+<td rowspan="10" width="35" valign="top">
+<p>0.2</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.257</p>
+</td>
+</tr>
+<tr height="1">
+<td width="33" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.205</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.259</p>
+</td>
+</tr>
+<tr height="1">
+<td width="33" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.240</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.266</p>
+</td>
+</tr>
+<tr height="1">
+<td width="33" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.268</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.311</p>
+</td>
+</tr>
+<tr height="1">
+<td width="33" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.303</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.417</p>
+</td>
+</tr>
+<tr height="1">
+<td width="33" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.318</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.426</p>
+</td>
+</tr>
+<tr height="1">
+<td width="33" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.326</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.430</p>
+</td>
+</tr>
+<tr height="1">
+<td width="33" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.258</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.289</p>
+</td>
+</tr>
+<tr height="1">
+<td width="33" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.205</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.259</p>
+</td>
+</tr>
+<tr height="1">
+<td width="33" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.200</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.257</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top">
+<p>0.3</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.305</p>
+</td>
+<td width="35" height="1" valign="top">
+<p>0.4</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.406</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.316</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.402</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.359</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.382</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.390</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.395</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.417</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.437</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.426</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.458</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.430</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.470</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.385</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.389</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.316</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.402</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.305</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.406</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top">
+<p>0.5</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.500</p>
+</td>
+<td width="35" height="1" valign="top">
+<p>0.6</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.594</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.500</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.598</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.500</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.618</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.500</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.605</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.500</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.563</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.500</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.542</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.500</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.530</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.500</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.611</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.500</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.598</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.500</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.594</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top">
+<p>0.7</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.695</p>
+</td>
+<td width="35" height="1" valign="top">
+<p>0.8</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.743</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.684</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.741</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.641</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.734</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.610</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.689</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.583</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.583</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.574</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.574</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.570</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.570</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.615</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.711</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.684</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.741</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.695</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.743</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top">
+<p>0.9</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.800</p>
+</td>
+<td width="35" height="1" valign="top">
+<p>1.0</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.885</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.795</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.865</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.760</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.819</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.732</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.744</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.697</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.707</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.682</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>5</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>6</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.699</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.674</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>4</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>7</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.695</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.742</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>3</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>8</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.772</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.795</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>2</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>9</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.865</p>
+</td>
+</tr>
+<tr height="1">
+<td width="35" height="1" valign="top"></td>
+<td width="33" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="33" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.800</p>
+</td>
+<td width="35" height="1" valign="top"></td>
+<td width="32" height="1" valign="top">
+<p>1</p>
+</td>
+<td width="32" height="1" valign="top">
+<p>10</p>
+</td>
+<td width="47" height="1" valign="top">
+<p>0.885</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Для фаззификации термов воспользуемся гауссовской функцией принадлежности: mA(u)= =exp(&ndash;(u&ndash;<img src="uploaded/image/2010-2/image692.gif" border="0" alt="" width="12" height="16" />)2/s2), где <img src="uploaded/image/2010-2/image692.gif" border="0" alt="" width="12" height="16" />&nbsp;&ndash; середина, а s &ndash; плотность распределения чисел.</p>
+<p>Подобрав для каждого случая эти параметры, реализуем предложенные правила в программной среде MATLAB, где дефаззификация нечетких выводов (нечетких уровней выпуска) осуществлена центроидным методом. Далее на базе полученной функциональной зависимости для каждого уровня расходов предприятия сформируем произвольную выборку из 10 пар вида &laquo;комбинация факторов &ndash; выпуск&raquo;, или <img src="uploaded/image/2010-2/image694.gif" border="0" alt="" width="103" height="25" />, где Lj и Mj обозначают, соответственно, условные уровни затрат труда и сырья при j-м уровне расходов предприятия.</p>
+<p>Полученные посредством Fuzzy Inferences System данные упорядочим в виде таблицы 2. (Жирным шрифтом выделены оптимальные комбинации факторов, соответствующих максимальным дефаззифицированным значениям производственной функции, по рассматриваемым возможным уровням затрат предприятия.)</p>
+<p><img src="uploaded/image/2010-2/image696.gif" alt="Подпись:  
+Примечание: 1 &ndash; степень &alpha;1, 2 &ndash; степень &alpha;2, 3 &ndash; размерность &mu;
+Рис. 3. Динамика изменений коэффициентов 
+эластичности производства" width="754" height="192" align="left" />Как следует из таблицы, через точку (4,7) проходят сразу пять изоквант. Это означает, что при комбинации факторов в пропорции L:M=4:7 достигается максимальный выпуск производства для каждого уровня расходов от 0.1 до 0.5. Для 6-го уровня расходов, комбинируя факторы в пропорции L:M=8:3, можно получить максимальный выпуск и оптимальный набор факторов. Для уровней расходов от 0.7 до 1 максимальный выпуск достигается при комбинации факторов в пропорции десять к одному или наоборот.</p>
+<p>Идентификация параметров  производственной функции от двух факторов</p>
+<p>Рассмотрим производственную функцию от двух факторов L и M в виде</p>
+<p><img src="uploaded/image/2010-2/image698.gif" border="0" alt="" width="81" height="24" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (9)</p>
+<p>Идентификацию ее параметров &micro;, a1 и a2 проведем для каждого возможного уровня расходов предприятия на основе соответствующих совокупностей данных из таблицы 2 и метода наименьших квадратов. Для этого представим функцию (7) в виде</p>
+<p><img src="uploaded/image/2010-2/image700.gif" border="0" alt="" width="103" height="23" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (10)</p>
+<p>где <img src="uploaded/image/2010-2/image702.gif" border="0" alt="" width="51" height="21" />&nbsp;<img src="uploaded/image/2010-2/image704.gif" border="0" alt="" width="45" height="20" />&nbsp;<img src="uploaded/image/2010-2/image706.gif" border="0" alt="" width="48" height="21" />&nbsp;<img src="uploaded/image/2010-2/image708.gif" border="0" alt="" width="55" height="20" />&nbsp;Полученные на основе нечетких правил выборки по 10 пар вида &laquo;набор &ndash; выпуск&raquo; используем для идентификации параметров <img src="uploaded/image/2010-2/image710.gif" border="0" alt="" width="12" height="20" />, a1 и a2 производственной функции (9) при каждом уровне затрат. Для этого воспользуемся методом наименьших квадратов, согласно которому искомые <img src="uploaded/image/2010-2/image710.gif" border="0" alt="" width="12" height="20" />, a1 и a2 для каждого уровня расходов производства (табл. 3) обеспечивают минимизацию ошибки</p>
+<p><img src="uploaded/image/2010-2/image713.gif" border="0" alt="" width="193" height="36" />.</p>
+<p>Таблица 3  Значения параметров производственной функции  &nbsp;</p>
+<table border="1" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr height="8">
+<td rowspan="2" width="87" valign="top">
+<p>Уровень    затрат    производства</p>
+</td>
+<td colspan="3" width="215" height="8" valign="top">
+<p>Параметры   производственной    функции</p>
+</td>
+</tr>
+<tr height="12">
+<td width="85" height="12" valign="top">
+<p>&alpha;1</p>
+</td>
+<td width="66" height="12" valign="top">
+<p>&alpha;2</p>
+</td>
+<td width="64" height="12" valign="top">
+<p>&mu;</p>
+</td>
+</tr>
+<tr>
+<td width="87" valign="top">
+<p>1</p>
+</td>
+<td width="85" valign="bottom">
+<p>0.3896</p>
+</td>
+<td width="66" valign="bottom">
+<p>0.4109</p>
+</td>
+<td width="64" valign="bottom">
+<p>0.074</p>
+</td>
+</tr>
+<tr>
+<td width="87" valign="top">
+<p>2</p>
+</td>
+<td width="85" valign="bottom">
+<p>0.3714</p>
+</td>
+<td width="66" valign="bottom">
+<p>0.4015</p>
+</td>
+<td width="64" valign="bottom">
+<p>0.0963</p>
+</td>
+</tr>
+<tr height="12">
+<td width="87" height="12" valign="top">
+<p>3</p>
+</td>
+<td width="85" height="12" valign="bottom">
+<p>0.2947</p>
+</td>
+<td width="66" height="12" valign="bottom">
+<p>0.309</p>
+</td>
+<td width="64" height="12" valign="bottom">
+<p>0.1453</p>
+</td>
+</tr>
+<tr>
+<td width="87" valign="top">
+<p>4</p>
+</td>
+<td width="85" valign="bottom">
+<p>0.0538</p>
+</td>
+<td width="66" valign="bottom">
+<p>0.0677</p>
+</td>
+<td width="64" valign="bottom">
+<p>0.3444</p>
+</td>
+</tr>
+<tr>
+<td width="87" valign="top">
+<p>5</p>
+</td>
+<td width="85" valign="bottom">
+<p>0</p>
+</td>
+<td width="66" valign="bottom">
+<p>0</p>
+</td>
+<td width="64" valign="bottom">
+<p>0.5</p>
+</td>
+</tr>
+<tr>
+<td width="87" valign="top">
+<p>6</p>
+</td>
+<td width="85" valign="bottom">
+<p>-0.0424</p>
+</td>
+<td width="66" valign="bottom">
+<p>-0.0528</p>
+</td>
+<td width="64" valign="bottom">
+<p>0.675</p>
+</td>
+</tr>
+<tr>
+<td width="87" valign="top">
+<p>7</p>
+</td>
+<td width="85" valign="bottom">
+<p>-0.1641</p>
+</td>
+<td width="66" valign="bottom">
+<p>-0.1733</p>
+</td>
+<td width="64" valign="bottom">
+<p>1.0541</p>
+</td>
+</tr>
+<tr>
+<td width="87" valign="top">
+<p>8</p>
+</td>
+<td width="85" valign="bottom">
+<p>-0.1826</p>
+</td>
+<td width="66" valign="bottom">
+<p>-0.1984</p>
+</td>
+<td width="64" valign="bottom">
+<p>1.2071</p>
+</td>
+</tr>
+<tr>
+<td width="87" valign="top">
+<p>9</p>
+</td>
+<td width="85" valign="bottom">
+<p>-0.1287</p>
+</td>
+<td width="66" valign="bottom">
+<p>-0.1370</p>
+</td>
+<td width="64" valign="bottom">
+<p>1.38</p>
+</td>
+</tr>
+<tr>
+<td width="87" valign="top">
+<p>10</p>
+</td>
+<td width="85" valign="bottom">
+<p>-0.2022</p>
+</td>
+<td width="66" valign="bottom">
+<p>-0.2133</p>
+</td>
+<td width="64" valign="bottom">
+<p>1.4798</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Как видно из таблицы 3, уменьшение величин степенных показателей &alpha;1 и &alpha;2 по мере увеличения расходов на производство демонстрирует квазиэластичное уменьшение долей, привносимых обоими факторами в прирост конечной продукции (рис.&nbsp;3). При этом увеличение затрат приводит к непропорционально меньшему росту выпуска.</p>
+<p>На основании изложенного можно утверждать, что методом нечеткого вывода установлена функциональная зависимость выпуска от двух факторов производства: сырья и трудовых ресурсов. На базе полученной зависимости для каждого выбранного уровня производственных затрат установлены пропорции (комбинации) факторов, при которых достигается максимальный выпуск производства, а также идентифицированы параметры производственной функции от двух факторов.</p>
+&nbsp;
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Баумоль У. Экономическая теория и исследование операций; пер. с англ.; под ред. М.М. Голанского и Ю.Я. Ольсевича. М.: Прогресс, 1965. 496 с.</p>
+<p>2.&nbsp;&nbsp; Fuzzy Sets, Neural Networks, and Soft Computing / Ed. by R.R. Yager, L.A. Zadeh. Van Nostrand Reinhold, 1994, pp. 440.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2531</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2531">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 2 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=90">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

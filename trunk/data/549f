@@ -1,0 +1,1177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="wvdial" />
+	<meta name="keywords" content="PHP, MySQL, bulletin, board, free, open, source, smf, simple, machines, forum" />
+	<script language="JavaScript" type="text/javascript" src="http://forum.ubuntu.ru/Themes/default/script.js"></script>
+	<script language="JavaScript" type="text/javascript"><!--
+		var smf_theme_url = "http://forum.ubuntu.ru/Themes/firefox_ro";
+		var smf_images_url = "http://forum.ubuntu.ru/Themes/firefox_ro/images";
+	// --></script>
+	<title>wvdial</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="http://forum.ubuntu.ru/Themes/firefox_ro/style.css" />
+	<link rel="help" href="http://forum.ubuntu.ru/index.php?action=help" target="_blank" />
+	<link rel="contents" href="http://forum.ubuntu.ru/index.php" />
+	<link rel="alternate" type="application/rss+xml" title="Русскоязычное сообщество Ubuntu Linux - RSS" href="http://forum.ubuntu.ru/index.php?type=rss2;limit=10;action=.xml" />
+	<link rel="prev" href="http://forum.ubuntu.ru/index.php?action=;topic=549.0;prev_next=prev" />
+	<link rel="next" href="http://forum.ubuntu.ru/index.php?action=;topic=549.0;prev_next=next" />
+	<link rel="index" href="http://forum.ubuntu.ru/index.php?action=;board=27.0" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<style type="text/css">
+	a img{
+	border: 0;
+	}
+	</style>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		var smf_scripturl = "http://forum.ubuntu.ru/index.php";
+	// ]]></script>
+
+	<script language="JavaScript" type="text/javascript"><!--
+		var current_header = false;
+
+		function shrinkHeader(mode)
+		{
+			document.cookie = "upshrink=" + (mode ? 1 : 0);
+			document.getElementById("upshrink").src = smf_images_url + (mode ? "/upshrink2.gif" : "/upshrink.gif");
+
+			document.getElementById("upshrinkHeader").style.display = mode ? "none" : "";
+
+			current_header = mode;
+		}
+	// --></script>
+</head>
+<body>
+<div style="padding: 20px 20px 4px 20px;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-image: url(http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_middle.gif);">
+  <tr>
+    <td width="1" rowspan="2"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_left.gif" alt="" /></td>
+    <td width="70%" align="left" id="search"><script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try {var pageTracker = _gat._getTracker("UA-4515300-5");pageTracker._trackPageview();} catch(err) {}</script>
+<form method="get" action="http://www.google.ru/search" target="_blank">
+<label><b>Поиск: </b></label>
+<input type="text" name="q" value="" size="20" maxlength="64" id="infield"/>&nbsp;
+<input type="submit" name="submit" value="Поиск" id="submit"/>
+<input type="hidden" name="sitesearch" value="ubuntu.ru"/>
+<input type="hidden" name="hl" value="ru"/></form>
+    </td>
+    <td width="30%" rowspan="2" align="center" class="hdrtitle">
+	Русскоязычное сообщество Ubuntu Linux
+    </td>
+    <td width="1" rowspan="2"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ff_h_right.gif" alt="" /></td>
+  </tr>
+  <tr>
+    <td width="70%" valign="bottom" align="left">
+  	<div id="tabs">
+ 	  <ul>
+ 	   <li id="current"><a href="http://forum.ubuntu.ru/index.php">Начало</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?board=35.0">Правила</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=help" target="_blank">Помощь</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=calendar">Календарь</a></li>
+ 	   <li><a href="http://forum.ubuntu.ru/index.php?action=register">Регистрация</a></li>
+ 	  </ul>
+  	</div>
+    </td>
+  </tr>
+</table>
+<a href="#" onclick="shrinkHeader(!current_header); return false;"><img id="upshrink" src="http://forum.ubuntu.ru/Themes/firefox_ro/images/upshrink.gif" alt="*" title="Свернуть/Развернуть." style="margin: 2px 0;" border="0" /></a><img id="upshrinkTemp" src="http://forum.ubuntu.ru/Themes/firefox_ro/images/blank.gif" alt="" style="margin-right: 2ex;" />
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id="upshrinkHeader">
+  <tr>
+    <td width="50%" class="smalltext" valign="top">
+	<br />Добро пожаловать, <b>Гость</b>. Пожалуйста, <a href="http://forum.ubuntu.ru/index.php?action=login">войдите</a> или <a href="http://forum.ubuntu.ru/index.php?action=register">зарегистрируйтесь</a>.<br />Вам не пришло <a href="http://forum.ubuntu.ru/index.php?action=activate">письмо с кодом активации?</a><br />
+	Войти<br /><br />
+	<form action="http://forum.ubuntu.ru/index.php?action=login2" method="post">
+	  <input type="text" name="user" size="8" /> <input type="password" name="passwrd" size="8" />
+	   <select name="cookielength">
+		<option value="60">1 час</option>
+		<option value="1440">1 день</option>
+		<option value="10080">1 неделя</option>
+		<option value="302400">1 месяц</option>
+		<option value="-1" selected="selected">Навсегда</option>
+	   </select>
+	  <input type="submit" value="Войти" />
+	</form>
+    </td>
+    <td valign="top">
+    <div style="text-align:center;padding:10px;color:#bb2211;font-weight:bold;background-color:#ffffff;border: #D4C2A6 1px solid;">
+    &nbsp;<a href="http://ubuntu.ru/calendar" target="_blank">Календарь событий Русскоязычного сообщества Ubuntu</a><br />Собрания рабочих групп, мероприятия, конференции, семинары
+    </div>
+
+    </td>
+  </tr>
+</table>
+</div>
+
+
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding: 0.5ex 20px 2ex 20px;">
+<a name="top"></a>
+<a name="msg3596"></a>
+<div><span class="nav" style="font-size: smaller;"><b><a href="http://forum.ubuntu.ru/index.php" class="nav">Русскоязычное сообщество Ubuntu Linux</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php#4" class="nav">Поддержка</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php?board=27.0" class="nav">Сети/Интернет</a></b> (Модератор: <a href="http://forum.ubuntu.ru/index.php?action=profile;u=851" title="Модератор">Дмитрий Бо</a>) &nbsp;|&nbsp; Тема: <b><a href="http://forum.ubuntu.ru/index.php?topic=549.0" class="nav">wvdial</a></b></span></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="middletext" valign="bottom" style="padding-bottom: 4px;">Страниц: [<b>1</b>] <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=549.15">2</a> &nbsp;<a href="http://forum.ubuntu.ru/index.php?topic=549.0;all">Все</a>   &nbsp;&nbsp;<a href="#lastPost"><b>Вниз</b></a></td>
+		<td align="right" style="padding-right: 1ex;">
+			<div class="nav" style="margin-bottom: 2px;"> <a href="http://forum.ubuntu.ru/index.php?topic=549.0;prev_next=prev#new">&laquo; предыдущая тема</a> <a href="http://forum.ubuntu.ru/index.php?topic=549.0;prev_next=next#new">следующая тема &raquo;</a></div>
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					
+		<td ><a href="http://forum.ubuntu.ru/index.php?action=printpage;topic=549.0" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/russian-utf8/print.gif" alt="Печать" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="0" border="0" class="tborder" style="border-bottom: 0;">
+		<tr class="catbg3">
+				<td valign="middle" width="2%" style="padding-left: 6px;">
+						<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/topic/hot_post_locked.gif" align="bottom" alt="" />
+				</td>
+				<td width="13%"> Автор</td>
+				<td valign="middle" width="85%" style="padding-left: 6px;" id="top_subject">
+						Тема: wvdial &nbsp;(Прочитано 3373 раз)
+				</td>
+		</tr>
+		<tr>
+				<td colspan="3" class="smalltext">0 Пользователей и 1 Гость смотрят эту тему.
+				</td>
+		</tr>
+</table>
+<form action="http://forum.ubuntu.ru/index.php?action=quickmod2;topic=549.0" method="post" accept-charset="UTF-8" name="quickModForm" id="quickModForm" style="margin: 0;" onsubmit="return in_edit_mode == 1 ? modify_save('6801c1527ae55f1e26b158bd9aed765d') : confirm('Вы уверены?');">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="bordercolor">
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=306" title="Просмотр профиля Picasso">Picasso</a></b>
+							<div class="smalltext"><span style="color:#BB2211; font-weight:bold"> Автор темы </span><br />
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 8<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=215650434" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=215650434" alt="215650434" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=306"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:picasso80@bk.ru"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg3596#msg3596"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3596">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg3596#msg3596">wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b> :</b> 11 Августа 2005, 08:15:03 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Доброе время суток Уважаемые ! У меня есть несколько вопросов по сабжевой утелите ! <br />Какзделать чтобы wvdial автоматом дозванивался&nbsp; до провайдера&nbsp; даже если линис занета например с интервалом набора номеера в 5 секунд ? ну или вообще без задержки !<br />И второе : Как разрешить своему юзеру&nbsp; пользовать wvdial и модем !<br />Нто как то глупо постоснно юзать root <img src="http://forum.ubuntu.ru/Smileys/webby/sad.gif" alt="Sad" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3596">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3873"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=244" title="Просмотр профиля aledie">aledie</a></b>
+							<div class="smalltext">
+								Alexander Dietz<br />
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 406<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=169;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=93232431" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=93232431" alt="93232431" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=244"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:aledie@web.de"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg3873#msg3873"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3873">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg3873#msg3873">Re: wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #1 :</b> 20 Августа 2005, 18:48:38 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Может не к делу здесь, но может это чем поможет:<br /><a href="http://forum.ubuntu.ru/index.php?topic=585.0" target="_blank">http://forum.ubuntu.ru/index.php?topic=585.0</a><br /><br />Посмотри на скриншоты, по крайней мере несколько из твоих требований <br />там легко настроить можно в графическом режиме.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3873">
+									&#171; <i>Последнее редактирование: 20 Августа 2005, 18:50:47 от aledie</i> &#187;
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg3953"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=101" title="Просмотр профиля Envel">Envel</a></b>
+							<div class="smalltext">
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 701<br />
+								<br />
+								<a href="http://www.icq.com/whitepages/about_me.php?uin=304678933" target="_blank"><img src="http://status.icq.com/online.gif?img=5&amp;icq=304678933" alt="304678933" width="18" height="18" border="0" /></a>
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=101"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg3953#msg3953"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_3953">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg3953#msg3953">Re: wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #2 :</b> 23 Августа 2005, 02:11:47 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg3596#msg3596">Цитата: Picasso от 11 Августа 2005, 08:15:03</a></div><div class="quote">...<br />И второе : Как разрешить своему юзеру&nbsp; пользовать wvdial и модем !<br />...<br /></div>Либо запускай gnome-ppp, предложенный выше, через gksudo gnome-ppp, либо каждый раз после перезагрузки менсй права на /dev/modem (обычно это symlink на твой модем).</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_3953">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg4075"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=371" title="Просмотр профиля Twin_S">Twin_S</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 6<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=371"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg4075#msg4075"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_4075">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg4075#msg4075">Re: wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #3 :</b> 26 Августа 2005, 09:17:35 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Раз уж здесь тема wvdial, то задам свой вопрос здесь.<br /><br />Подскажите, где прописать логин с паролем и телефоном для wvdial ? <img src="http://forum.ubuntu.ru/Smileys/webby/idiot2.gif" alt="idiot2" border="0" /><br />Читал <a href="http://open.nit.ca/wvdial/faq/wvfaq-3.html" target="_blank">http://open.nit.ca/wvdial/faq/wvfaq-3.html</a><br />Почему-то у меня в etc нет файла wvdial.conf !!!<br />И ещё, почему когда запускаю wvdial, то модем откликается(слышно щелчок как перед набором номера), но он не детектится в случае ниже:<br /><br />sasha@ubuntu:~$ sudo wvdialconf wvdial.conf<br />Password:<br />Scanning your serial ports for a modem.<br /><br />ttyS0&lt;*1&gt;: ATQ0 V1 E1 -- failed with 2400 baud, next try: 9600 baud<br />ttyS0&lt;*1&gt;: ATQ0 V1 E1 -- failed with 9600 baud, next try: 115200 baud<br />ttyS0&lt;*1&gt;: ATQ0 V1 E1 -- and failed too at 115200, giving up.<br />ttyS1&lt;*1&gt;: ATQ0 V1 E1 -- failed with 2400 baud, next try: 9600 baud<br />ttyS1&lt;*1&gt;: ATQ0 V1 E1 -- failed with 9600 baud, next try: 115200 baud<br />ttyS1&lt;*1&gt;: ATQ0 V1 E1 -- and failed too at 115200, giving up.<br />Port Scan&lt;*1&gt;: S2&nbsp; &nbsp;S3&nbsp; &nbsp;S4&nbsp; &nbsp;S5&nbsp; &nbsp;S6&nbsp; &nbsp;S7&nbsp; &nbsp;S8&nbsp; &nbsp;S9<br />Port Scan&lt;*1&gt;: S10&nbsp; S11&nbsp; S12&nbsp; S13&nbsp; S14&nbsp; S15&nbsp; S16&nbsp; S17<br />Port Scan&lt;*1&gt;: S18&nbsp; S19&nbsp; S20&nbsp; S21&nbsp; S22&nbsp; S23&nbsp; S24&nbsp; S25<br />Port Scan&lt;*1&gt;: S26&nbsp; S27&nbsp; S28&nbsp; S29&nbsp; S30&nbsp; S31&nbsp; S32&nbsp; S33<br />Port Scan&lt;*1&gt;: S34&nbsp; S35&nbsp; S36&nbsp; S37&nbsp; S38&nbsp; S39&nbsp; S40&nbsp; S41<br />Port Scan&lt;*1&gt;: S42&nbsp; S43&nbsp; S44&nbsp; S45&nbsp; S46&nbsp; S47&nbsp; S48&nbsp; S49<br />Port Scan&lt;*1&gt;: S50&nbsp; S51&nbsp; S52&nbsp; S53<br />ttyUSB0&lt;*1&gt;: ATQ0 V1 E1 -- failed with 2400 baud, next try: 9600 baud<br />ttyUSB0&lt;*1&gt;: ATQ0 V1 E1 -- failed with 9600 baud, next try: 115200 baud<br />ttyUSB0&lt;*1&gt;: ATQ0 V1 E1 -- and failed too at 115200, giving up.<br /><br /><br />Sorry, no modem was detected!&nbsp; Is it in use by another program?<br />Did you configure it properly with setserial?<br /><br />Please read the FAQ at <a href="http://open.nit.ca/wvdial/" target="_blank">http://open.nit.ca/wvdial/</a><br /><br />If you still have problems, send mail to <a href="mailto:wvdial-list@lists.nit.ca">wvdial-list@lists.nit.ca</a>.<br />sasha@ubuntu:~$ <br />---------------------------<br /><br />Что нужно сделать ? А может он там не прописан по дефолту ?<br />Где посмотреть, какое устройство занимает модем(ttyS0,ttyS1...) ?<br />Как из консоли опросить модем ?<br /><br />Вообщем с уже запутался... <img src="http://forum.ubuntu.ru/Smileys/webby/undecided.gif" alt="Undecided" border="0" /><br /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_4075">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg4095"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=371" title="Просмотр профиля Twin_S">Twin_S</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 6<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=371"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg4095#msg4095"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_4095">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg4095#msg4095">Re: wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #4 :</b> 26 Августа 2005, 12:39:18 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Вообщем-то модем уже работает, но не совсем...<br /><br />Вот как всё происходит:<br /><br />sasha@ubuntu:~$ sudo wvdial<br />--&gt; WvDial: Internet dialer version 1.54.0<br />--&gt; Initializing modem.<br />--&gt; Sending: ATZ<br />ATZ<br />OK<br />--&gt; Sending: ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0<br />ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0<br />OK<br />--&gt; Modem initialized.<br />--&gt; Sending: ATDT202020<br />--&gt; Waiting for carrier.<br />ATDT202020<br />CONNECT 50666 NoEC<br />--&gt; Carrier detected.&nbsp; Waiting for prompt.<br /><br />Вот здесь, после набора номера, начинаются чудеса...<br /><br />--&gt; Connected, but carrier signal lost!&nbsp; Retrying...<br />--&gt; Sending: ATDT202020<br />--&gt; Waiting for carrier.<br />NO CARRIER<br />ATDT202020<br />--&gt; No Carrier!&nbsp; Trying again.<br />--&gt; Sending: ATDT202020<br />--&gt; Waiting for carrier.<br />NO CARRIER<br />ATDT202020<br />--&gt; No Carrier!&nbsp; Trying again.<br />--&gt; Sending: ATDT202020<br />--&gt; Waiting for carrier.<br />NO CARRIER<br />ATDT202020<br />--&gt; No Carrier!&nbsp; Trying again.<br />--&gt; Sending: ATDT202020<br />--&gt; Waiting for carrier.<br />NO CARRIER<br />ATDT202020<br />--&gt; No Carrier!&nbsp; Trying again.<br />--&gt; Sending: ATDT202020<br />--&gt; Waiting for carrier.<br />NO CARRIER <br /><br />и так бесконечно...<br /><br /><br />Вот мой wvdial.conf :<br />-----------------------<br />[Dialer Defaults]<br />Modem = /dev/ttyLT0<br />Baud = 115200<br />Init1 = ATZ<br />Init2 = ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0<br />&nbsp;Phone = 202020<br />&nbsp;Username = ***<br />&nbsp;Password = ***<br />-----------------------<br /><br />В чём здесь проблема ?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_4095">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg4111"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=141" title="Просмотр профиля dbk">dbk</a></b>
+							<div class="smalltext">
+								Активист<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 299<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=141"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg4111#msg4111"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_4111">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg4111#msg4111">Re: wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #5 :</b> 26 Августа 2005, 17:31:17 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Наверное, это то, что нужно<br /><a href="http://new.community.asplinux.ru/documents/guide/inet-scripts.html" target="_blank">http://new.community.asplinux.ru/documents/guide/inet-scripts.html</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_4111">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg6217"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=517" title="Просмотр профиля PbI6A">PbI6A</a></b>
+							<div class="smalltext">
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 1511<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=1576;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								просто я так выгляжу!<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=517"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="http://sashakrasnoyarsk.no-ip.org/" title="Жизнь, как она есть. О Linux и обо всём." target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg6217#msg6217"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_6217">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg6217#msg6217">Re: wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #6 :</b> 09 Октября 2005, 07:26:53 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">А у меня вот вопрос - как сделать маршрутизатором по умолчанию соединение ppp0, поднятое с помощью wvdial программой Gnome ppp? Пробовал запускать и от своего юзера, и с правами root-а - не делается маршрутизатором по умолчанию и все тут! Провайдер у меня - Мегафон-Сибирь. Конфигурационные файлы .wvdial.conf в директорсх ~, /root а так же файл /etc/wvdial.conf все одинаковые и вот такие:<br />-------------------------------------------------<br />[Dialer Defaults]<br />Modem = /dev/ttyACM0<br />ISDN = off<br />Modem Type = USB Modem<br />Baud = 460800<br />Init = ATZ<br />Init2 = ATQ0 V1 E1 S0=0<br />Init3 = AT+CGDCONT=1,&quot;IP&quot;,&quot;internet.sib&quot;<br />Init4 = <br />Init5 = <br />Init6 = <br />Init7 = <br />Init8 = <br />Init9 = <br />Phone = *99***1#<br />Phone1 = <br />Phone2 = <br />Phone3 = <br />Phone4 = <br />Dial Prefix = <br />Dial Attempts = 1<br />Dial Command = ATM1L3DT<br />Ask Password = off<br />Password = gprs<br />Username = gprs<br />Auto Reconnect = off<br />Abort on Busy = off<br />Carrier Check = on<br />Check Def Route = on<br />Abort on No Dialtone = on<br />Stupid Mode = off<br />Idle Seconds = 0<br />Auto DNS = on<br />;Minimize = on<br />;Dock = on<br />;Do NOT edit this file by hand!<br />-------------------------------------------------<br />Опция &quot;Check Def Route = on&quot; стоит, как вы можете увидеть. Таблица маршрутизации такас:<br />-------------------------------------------------<br />root@no:/var/log # netstat -nr<br />Kernel IP routing table<br />Destination&nbsp; &nbsp; &nbsp;Gateway&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Genmask&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Flags&nbsp; &nbsp;MSS Window&nbsp; irtt Iface<br />192.168.100.101 0.0.0.0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;255.255.255.255 UH&nbsp; &nbsp; &nbsp; &nbsp; 0 0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 ppp0<br />192.168.225.0&nbsp; &nbsp;0.0.0.0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;255.255.255.0&nbsp; &nbsp;U&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 vmnet1<br />192.168.24.0&nbsp; &nbsp; 0.0.0.0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;255.255.255.0&nbsp; &nbsp;U&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 eth0<br />0.0.0.0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;192.168.24.254&nbsp; 0.0.0.0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;UG&nbsp; &nbsp; &nbsp; &nbsp; 0 0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 eth0<br />root@no:/var/log #<br />-------------------------------------------------<br />Сеть настроена вот так:<br />-------------------------------------------------<br />root@no:/var/log # ifconfig<br />eth0&nbsp; &nbsp; &nbsp; Link encap:Ethernet&nbsp; HWaddr 00:50:BF:E7:1B:F4<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inet addr:192.168.24.250&nbsp; Bcast:192.168.24.255&nbsp; Mask:255.255.255.0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inet6 addr: fe80::250:bfff:fee7:1bf4/64 Scope:Link<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; UP BROADCAST RUNNING MULTICAST&nbsp; MTU:1500&nbsp; Metric:1<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RX packets:0 errors:0 dropped:0 overruns:0 frame:0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TX packets:44 errors:0 dropped:0 overruns:0 carrier:0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; collisions:0 txqueuelen:1000<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RX bytes:0 (0.0 b)&nbsp; TX bytes:2864 (2.7 KiB)<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Interrupt:18 Base address:0xd400<br /><br />lo&nbsp; &nbsp; &nbsp; &nbsp; Link encap:Local Loopback<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inet addr:127.0.0.1&nbsp; Mask:255.0.0.0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inet6 addr: ::1/128 Scope:Host<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; UP LOOPBACK RUNNING&nbsp; MTU:16436&nbsp; Metric:1<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RX packets:16306 errors:0 dropped:0 overruns:0 frame:0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TX packets:16306 errors:0 dropped:0 overruns:0 carrier:0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; collisions:0 txqueuelen:0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RX bytes:1748004 (1.6 MiB)&nbsp; TX bytes:1748004 (1.6 MiB)<br /><br />ppp0&nbsp; &nbsp; &nbsp; Link encap:Point-to-Point Protocol<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inet addr:10.24.244.174&nbsp; P-t-P:192.168.100.101&nbsp; Mask:255.255.255.255<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; UP POINTOPOINT RUNNING NOARP MULTICAST&nbsp; MTU:1500&nbsp; Metric:1<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RX packets:4 errors:0 dropped:0 overruns:0 frame:0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TX packets:6 errors:0 dropped:0 overruns:0 carrier:0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; collisions:0 txqueuelen:3<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RX bytes:64 (64.0 b)&nbsp; TX bytes:119 (119.0 b)<br /><br />vmnet1&nbsp; &nbsp; Link encap:Ethernet&nbsp; HWaddr 00:50:56:C0:00:01<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inet addr:192.168.225.1&nbsp; Bcast:192.168.225.255&nbsp; Mask:255.255.255.0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inet6 addr: fe80::250:56ff:fec0:1/64 Scope:Link<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; UP BROADCAST RUNNING MULTICAST&nbsp; MTU:1500&nbsp; Metric:1<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RX packets:0 errors:0 dropped:0 overruns:0 frame:0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TX packets:5 errors:0 dropped:0 overruns:0 carrier:0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; collisions:0 txqueuelen:1000<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RX bytes:0 (0.0 b)&nbsp; TX bytes:0 (0.0 b)<br /><br />root@no:/var/log #<br />-------------------------------------------------<br />Инет работает, соответственно, лишь когда проключен модем, а сетевуха в состоснии disable. Как сделать, чтобы апдейтилась таблица маршрутизации? Писать скрипт?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_6217">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg6218"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=517" title="Просмотр профиля PbI6A">PbI6A</a></b>
+							<div class="smalltext">
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 1511<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=1576;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								просто я так выгляжу!<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=517"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="http://sashakrasnoyarsk.no-ip.org/" title="Жизнь, как она есть. О Linux и обо всём." target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg6218#msg6218"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_6218">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg6218#msg6218">Re: wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #7 :</b> 09 Октября 2005, 09:05:59 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Мда... Довольно просто решил проблему с роутингом. Дописал в /etc/ppp/ip-up строчку:<br /><br />ip route replace default dev &quot;$1&quot;<br /><br />и все... Правда, при отключении инета роутинг на локалку не восстанавливается, но мне это как-то и не надо, остается роутинг на локальную сеть с ее маской.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_6218">
+									&#171; <i>Последнее редактирование: 10 Октября 2005, 19:11:29 от PbI6A</i> &#187;
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg123244"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=2926" title="Просмотр профиля pehser">pehser</a></b>
+							<div class="smalltext">
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 1268<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=10956;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								sidux 64bit + KDE4 svn<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=2926"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="http://kumir.org.ua" title="Агенство Кумир" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg123244#msg123244"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_123244">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg123244#msg123244">Re: wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #8 :</b> 20 Декабря 2007, 01:11:52 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">я так и не нашол ответа на вопрос<br />Какзделать чтобы wvdial автоматом дозванивался&nbsp; до провайдера&nbsp; даже если линис занета например с интервалом набора номеера в 5 секунд ?<br />уже пробовал и <br />Auto Reconnect = yes<br />и<br />Auto Reconnect = on<br /><br />все рано <br />disabling automatic reconnect.<br />:\</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_123244">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg147047"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=14349" title="Просмотр профиля s0n1k">s0n1k</a></b>
+							<div class="smalltext">
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 510<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=14349"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="mailto:s0n1k@bk.ru"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/email_sm.gif" alt="Email" title="Email" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg147047#msg147047"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_147047">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg147047#msg147047">Re: wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #9 :</b> 13 Февраля 2008, 00:59:51 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader">Цитата</div><div class="quote">sonic@ubuntu:~$ wvdial<br />WvDial&lt;*1&gt;: WvDial: Internet dialer version 1.56<br />WvDial&lt;Err&gt;: Cannot open /dev/modem: No such file or directory<br />WvDial&lt;Err&gt;: Cannot open /dev/modem: No such file or directory<br />WvDial&lt;Err&gt;: Cannot open /dev/modem: No such file or directory<br /></div>GNOME-PPP звонит через прописаный в /home/sonic/.wvdial.conf (/dev/ttyACM0)<br />как сделать тож самое с wvdual? чтобы wvdual брал все настройки из /home/sonic/.wvdial.conf ?</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_147047">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg208995"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=517" title="Просмотр профиля PbI6A">PbI6A</a></b>
+							<div class="smalltext">
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 1511<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=1576;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								просто я так выгляжу!<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=517"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="http://sashakrasnoyarsk.no-ip.org/" title="Жизнь, как она есть. О Linux и обо всём." target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg208995#msg208995"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_208995">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg208995#msg208995">Re: wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #10 :</b> 15 Июня 2008, 19:15:24 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Меню - Система - Администрирование - Сеть. Настроить модем, там есть галочка &quot;попробовать еще раз при разрыве или неудаче соединения&quot;.</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_208995">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg496818"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=24890" title="Просмотр профиля vair">vair</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 34<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=24890"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg496818#msg496818"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_496818">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg496818#msg496818">Re: wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #11 :</b> 29 Августа 2009, 14:36:54 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Привет добрые пользвотели))<br />Возник вопрос по wvdial, где меняються настроики скорости подключения (<br /><br /><div class="codeheader">Код:</div><div class="code">--&gt; Modem initialized.<br />--&gt; Sending: ATDT#777<br />--&gt; Waiting for carrier.<br />ATDT#777<br />CONNECT 115200 <br />--&gt; Carrier detected.&nbsp; Waiting for prompt.</div>Хотя Baud = 9600<br /><br />На скорости порта 9600 модем опрашиваеться, но похоже что диалит он его на скорости уже 115200 <br />Как можно заставить его использвать только 9600? <br />что бы было так : )<br /><br /><div class="codeheader">Код:</div><div class="code">--&gt; Modem initialized.<br />--&gt; Sending: ATDT#777<br />--&gt; Waiting for carrier.<br />ATDT#777<br />CONNECT 9600 <br />--&gt; Carrier detected.&nbsp; Waiting for prompt.</div><br /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_496818">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg496858"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=517" title="Просмотр профиля PbI6A">PbI6A</a></b>
+							<div class="smalltext">
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 1511<br />
+								<br />
+								<div style="overflow: auto; width: 100%;"><img src="http://forum.ubuntu.ru/index.php?action=dlattach;attach=1576;type=avatar" alt="" class="avatar" border="0" /></div><br />
+								просто я так выгляжу!<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=517"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+								<a href="http://sashakrasnoyarsk.no-ip.org/" title="Жизнь, как она есть. О Linux и обо всём." target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/www_sm.gif" alt="WWW" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg496858#msg496858"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_496858">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg496858#msg496858">Re: wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #12 :</b> 29 Августа 2009, 15:41:11 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Зависит от типа модема, обычно если скорость режется, то прописываются специальные команды в строку инициализации. См. в поиске &quot;at команды модема ...&quot;</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_496858">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg497124"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg2">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=29226" title="Просмотр профиля AnrDaemon">AnrDaemon</a></b>
+							<div class="smalltext">
+								Герой<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 7454<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=29226"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg497124#msg497124"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_497124">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg497124#msg497124">Re: wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #13 :</b> 29 Августа 2009, 23:43:17 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post">Похоже, что это мобильник... на них документацию хрен найдешь...</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_497124">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 1px 1px 0 1px;">
+		<a name="msg497248"></a>
+		<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr><td class="windowbg">
+				<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+					<tr>
+						<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+							<b><a href="http://forum.ubuntu.ru/index.php?action=profile;u=24890" title="Просмотр профиля vair">vair</a></b>
+							<div class="smalltext">
+								Новичок<br />
+								<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/star.gif" alt="*" border="0" /><br />
+								Сообщений: 34<br />
+								<br />
+								
+								
+								
+								
+								<br />
+								<a href="http://forum.ubuntu.ru/index.php?action=profile;u=24890"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/icons/profile_sm.gif" alt="Просмотр профиля" title="Просмотр профиля" border="0" /></a>
+							</div>
+						</td>
+						<td valign="top" width="85%" height="100%">
+							<table width="100%" border="0"><tr>
+								<td valign="middle"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg497248#msg497248"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/post/xx.gif" alt="" border="0" /></a></td>
+								<td valign="middle">
+									<div style="font-weight: bold;" id="subject_497248">
+										<a href="http://forum.ubuntu.ru/index.php?topic=549.msg497248#msg497248">Re: wvdial</a>
+									</div>
+									<div class="smalltext">&#171; <b>Ответ #14 :</b> 30 Августа 2009, 06:37:06 &#187;</div></td>
+								<td align="right" valign="bottom" height="20" style="font-size: smaller;">
+								</td>
+							</tr></table>
+							<hr width="100%" size="1" class="hrcolor" />
+							<div class="post"><div class="quoteheader"><a href="http://forum.ubuntu.ru/index.php?topic=549.msg497124#msg497124">Цитата: AnrDaemon от 29 Августа 2009, 23:43:17</a></div><div class="quote">Похоже, что это мобильник... на них документацию хрен найдешь...<br /></div><br />Huawei EC325. модем CDMA<br /><br />....Вопрос закрылься сам с собой. Покупал этот модем для друга, однако когда его подключили в его ноут (Ubuntu 9.04) Network Manager его обнаружил, забили в него user/pass и все заработало...<br />неучто NM работает без /etc/wvdial.conf фаила...?<br /><br />зы так сходу в три клика все заработало -я в шоке <img src="http://forum.ubuntu.ru/Smileys/webby/shocked.gif" alt="Shocked" border="0" /></div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" class="smalltext" width="85%">
+							<table width="100%" border="0" style="table-layout: fixed;"><tr>
+								<td colspan="2" class="smalltext" width="100%">
+								</td>
+							</tr><tr>
+								<td valign="bottom" class="smalltext" id="modified_497248">
+								</td>
+								<td align="right" valign="bottom" class="smalltext">
+									<img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/ip.gif" alt="" border="0" />
+									Записан
+								</td>
+							</tr></table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+	<tr><td style="padding: 0 0 1px 0;"></td></tr>
+</table>
+<a name="lastPost"></a>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="middletext">Страниц: [<b>1</b>] <a class="navPages" href="http://forum.ubuntu.ru/index.php?topic=549.15">2</a> &nbsp;<a href="http://forum.ubuntu.ru/index.php?topic=549.0;all">Все</a>   &nbsp;&nbsp;<a href="#top"><b>Вверх</b></a></td>
+		<td align="right" style="padding-right: 1ex;">
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					
+		<td ><a href="http://forum.ubuntu.ru/index.php?action=printpage;topic=549.0" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/russian-utf8/print.gif" alt="Печать" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<script language="JavaScript" type="text/javascript" src="http://forum.ubuntu.ru/Themes/default/xml_topic.js"></script>
+<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+	quickReplyCollapsed = true;
+
+	smf_topic = 549;
+	smf_start = 0;
+	smf_show_modify = 1;
+
+	// On quick modify, this is what the body will look like.
+	var smf_template_body_edit = '<div id="error_box" style="padding: 4px; color: red;"></div><textarea class="editor" name="message" rows="12" style="width: 94%; margin-bottom: 10px;">%body%</textarea><br /><input type="hidden" name="sc" value="6801c1527ae55f1e26b158bd9aed765d" /><input type="hidden" name="topic" value="549" /><input type="hidden" name="msg" value="%msg_id%" /><div style="text-align: center;"><input type="submit" name="post" value="Сохранить" onclick="return modify_save(\'6801c1527ae55f1e26b158bd9aed765d\');" accesskey="s" />&nbsp;&nbsp;<input type="submit" name="cancel" value="Отменить" onclick="return modify_cancel();" /></div>';
+
+	// And this is the replacement for the subject.
+	var smf_template_subject_edit = '<input type="text" name="subject" value="%subject%" size="60" style="width: 99%;"  maxlength="80" />';
+
+	// Restore the message to this after editing.
+	var smf_template_body_normal = '%body%';
+	var smf_template_subject_normal = '<a href="http://forum.ubuntu.ru/index.php?topic=549.msg%msg_id%#msg%msg_id%">%subject%</a>';
+	var smf_template_top_subject = "Тема: %subject% &nbsp;(Прочитано 3373 раз)"
+
+	if (window.XMLHttpRequest)
+		showModifyButtons();
+// ]]></script>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 1ex;">
+		<tr>
+				<td valign="top"><span class="nav" style="font-size: smaller;"><b><a href="http://forum.ubuntu.ru/index.php" class="nav">Русскоязычное сообщество Ubuntu Linux</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php#4" class="nav">Поддержка</a></b> &nbsp;|&nbsp; <b><a href="http://forum.ubuntu.ru/index.php?board=27.0" class="nav">Сети/Интернет</a></b> (Модератор: <a href="http://forum.ubuntu.ru/index.php?action=profile;u=851" title="Модератор">Дмитрий Бо</a>) &nbsp;|&nbsp; Тема: <b><a href="http://forum.ubuntu.ru/index.php?topic=549.0" class="nav">wvdial</a></b></span></td> 
+				<td valign="top" align="right" class="nav"> <a href="http://forum.ubuntu.ru/index.php?topic=549.0;prev_next=prev#new">&laquo; предыдущая тема</a> <a href="http://forum.ubuntu.ru/index.php?topic=549.0;prev_next=next#new">следующая тема &raquo;</a></td>
+		</tr>
+</table>
+	<table cellpadding="0" cellspacing="0" border="0" style="margin-left: 1ex;">
+		<tr>
+			
+		<td ></td>
+		</tr>
+	</table>
+	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+		document.getElementById("quickmodSubmit").style.display = "none";
+	// ]]></script>
+</form>
+<div class="tborder"><div class="titlebg2" style="padding: 4px;" align="right">
+	<form action="http://forum.ubuntu.ru/index.php" method="get" accept-charset="UTF-8" style="padding:0; margin: 0;">
+		<span class="smalltext">Перейти в:</span>
+		<select name="jumpto" id="jumpto" onchange="if (this.selectedIndex > 0 &amp;&amp; this.options[this.selectedIndex].value) window.location.href = smf_scripturl + this.options[this.selectedIndex].value.substr(smf_scripturl.indexOf('?') == -1 || this.options[this.selectedIndex].value.substr(0, 1) != '?' ? 0 : 1);">
+			<option value="">Пожалуйста, выберите назначение:</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#7">Новости</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=10.0"> => Новости и анонсы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=11.0"> => Общие вопросы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=12.0"> => Встречи</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=13.0"> => Сборка пакетов</option>
+			<option value="?board=14.0"> => Локализация</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=15.0"> => Обсуждение форума</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=17.0"> => Разговоры обо всём</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=18.0"> => How-To и F.A.Q</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=19.0"> => Распространение Ubuntu</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=20.0"> => Коллективный bug report</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#9">Галерея</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=21.0"> => Скриншоты</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#7">Новости</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=23.0"> => Новости из мира *NIX</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#9">Галерея</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=24.0"> => Интересные картинки</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=25.0"> => Железо</option>
+			<option value="?board=26.0"> => Мультимедиа</option>
+			<option value="?board=27.0" selected="selected"> => Сети/Интернет</option>
+			<option value="?board=28.0"> => Установка Ubuntu</option>
+			<option value="?board=29.0"> => GUI</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=31.0"> => Программирование</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=32.0"> ===> GNOME</option>
+			<option value="?board=33.0"> ===> XFCE</option>
+			<option value="?board=34.0"> ===> KDE</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#10">Правила форума</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=35.0"> => Правила...</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#8">Разное</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=37.0"> ===> Юмор</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=38.0"> => Обсуждение ubuntu.ru</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=39.0"> => Linux в организациях</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#5">Разработка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=40.0"> => Тестирование Ubuntu</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#4">Поддержка</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=41.0"> => Виртуальные сервера и эмуляторы</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="#6">Ресурсы сообщества</option>
+			<option value="" disabled="disabled">-----------------------------</option>
+			<option value="?board=42.0"> => Обсуждение IRC и Jabber конференций</option>
+			<option value="?board=44.0"> => Русскоязычная команда Ubuntu</option>
+			<option value="?board=50.0"> => Обсуждение help.ubuntu.ru</option>
+		</select>&nbsp;
+		<input type="button" value="да" onclick="if (this.form.jumpto.options[this.form.jumpto.selectedIndex].value) window.location.href = 'http://forum.ubuntu.ru/index.php' + this.form.jumpto.options[this.form.jumpto.selectedIndex].value;" />
+	</form>
+</div></div><br />
+            </td>
+          </tr>
+	</table>
+<hr style="background-color: #CCCCCC; width: 95%;" />
+<table cellspacing="0" cellpadding="3" border="0" align="center" width="100%">
+  <tr>
+    <td width="28%" valign="middle" align="center">
+    <!--a href="http://validator.w3.org/check/referer" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/valid-xhtml10.gif" alt="Valid XHTML 1.0!" style="margin: 4px;" border="0" /></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/valid-css.gif" alt="Valid CSS!" style="margin: 4px;" border="0" /></a-->
+    <a href="http://www.mysql.com/" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/powered-mysql.gif" alt="Powered by MySQL" style="margin: 4px;" border="0"  /></a>
+    <a href="http://www.php.net/" target="_blank"><img src="http://forum.ubuntu.ru/Themes/firefox_ro/images/powered-php.gif" alt="Powered by PHP" style="margin: 4px;" border="0" /></a>
+    </td>
+    <td valign="middle" align="center" style="white-space: nowrap;">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">Powered by SMF 1.1.12</a> | 
+<a href="http://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">SMF &copy; 2006, Simple Machines LLC</a>
+		</span></td>
+    <td width="28%" valign="middle" align="center">
+     <a href="http://www.best-hosting.ru/dedicated_server.asp" title="Хостинг предоставлен компанией Best Hosting"><img src="http://s.ubuntu.ru/bhlogo.png" alt="Best Hosting" style="padding-bottom:6px;" /></a><br />
+     <a href="http://www.best-hosting.ru/dedicated_server.asp" style="color:#333;font:9px/9px sans">Серверы на Ubuntu</a>
+    </td>
+
+  </tr>
+</table>
+		<span class="smalltext">Страница сгенерирована за 0.57 секунд. Запросов: 18.</span>
+</body>
+</html>

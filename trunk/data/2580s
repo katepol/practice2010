@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Алгоритм оперативного управления ликвидацией чрезвычайной ситуации на объектах уничтожения химического оружия</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Алгоритм оперативного управления ликвидацией чрезвычайной ситуации на объектах уничтожения химического оружия</h2><div style="margin-bottom:10px"><strong>The algorithm of an operational administration for liquidation of emergency consequences and emergency situations on objects of destruction of chemical weapon</strong></div>Статья опубликована в выпуске журнала № 3 за 2010 год. [ 07.09.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">В статье предложен алгоритм оперативного управления ликвидацией последствий аварийных и чрезвычайных ситуаций на объектах уничтожения химического оружия. Осуществлена математическая постановка задачи по расчету оптимальных значений управляющих параметров – средств, имеющихся в системах чрезвычайного реагирования. Разработан алгоритм оперативного управления для случая взрывного разрушения оболочки емкостей и реакторов.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">In the article is offered the algorithm of an operational administration for liquidation of emergency consequences and emergency situations on objects of destruction of chemical weapon. Mathematical statement of the problem by calculation of optimum values of operating parameters - means, on systems of extreme reaction is carried out. The algorithm of an operational administration is developed for a case of explosive destruction of a cover of capacities and reactors.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=4135">Матвеев Ю.Н. (fmas@tstu.tver.ru)</a> - Тверской государственный технический университет Кандидат технический наук Ph.D., <a href="index.php?page=infou&id=5909">Палюх Б.Н. (fmas@tstu.tver.ru)</a> - Тверской государственный технический университет Доктор технический наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1712">токсичное химическое вещество</a>, <a href="index.php?page=infotg&id=1419">оперативное управление</a>, <a href="index.php?page=infotg&id=1711">объекты управления</a>, <a href="index.php?page=infotg&id=1119">математическая модель</a>, <a href="index.php?page=infotg&id=1477">концентрация</a>, <a href="index.php?page=infotg&id=1710">аварийная ситуация</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1712">toxic chemical substance</a>, <a href="index.php?page=infotg&id=1419">forecasting time series</a>, <a href="index.php?page=infotg&id=1711">control's object</a>, <a href="index.php?page=infotg&id=1119">mathematical model</a>, <a href="index.php?page=infotg&id=1477">concentration</a>, <a href="index.php?page=infotg&id=1710">error situation</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 153<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2580">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Одним из основных алгоритмов, обеспечивающих работу системы поддержки принятия решений при ликвидации чрезвычайных ситуаций (ЧС), является алгоритм оперативного управления силами и средствами ликвидации последствий ЧС.</p>
+<p>&nbsp;</p>
+<p>Масштабы последствий ЧС зависят от размеров опасной зоны загрязнения (ОЗЗ) [1], образующейся при распространении облака зараженного воздуха (ОЗВ), поэтому цель функционирования алгоритма оперативного управления &ndash; минимизация пространственных границ проявления поражающего действия ОЗЗ.</p>
+<p>Рассмотрим процесс образования ОЗЗ при взрывном разрушении оболочки как объект управления.</p>
+<p>При взрывном разрушении оболочки аппаратуры (емкостей, реакционных аппаратов) происходит взрывной перевод всей массы токсичных химических веществ (ТХВ) или ее части в аэрозольное состояние с последующим осаждением части вещества на поверхности и постепенным испарением с нее. Оставшаяся часть ТХВ при полном разрушении оболочки прольется на землю или в поддон. Таким образом, при взрывном разрушении оболочки может образоваться ОЗВ в результате мгновенного выброса ТХВ в атмосферу, испарения жидких частиц аэрозолей ТХВ с поверхности осаждения и испарения ТХВ с зеркала пролива.</p>
+<p>Структурная схема процесса образования ОЗЗ при взрывном разрушении оболочки как объекта управления приведена на рисунке 1.</p>
+<p>Итоговая ОЗЗ представляет собой результат взаимодействия следующих процессов (рис. 1):</p>
+<p>1)&nbsp;&nbsp; мгновенного выброса паров ТХВ в атмосферу (блок 2 &ndash; блок 4 &ndash; блок 10);</p>
+<p>2)&nbsp;&nbsp; испарения ТХВ с поверхности осаждения жидких частиц и капель (блок 3 &ndash; блок 5 &ndash; блок 8 &ndash; блок 11);</p>
+<p>3)&nbsp;&nbsp; испарения ТХВ с поверхности его пролива (блок 6 &ndash; блок 7 &ndash; блок 9 &ndash; блок 12).</p>
+<p>Как следует из приведенной структурной схемы, при взрывном разрушении оболочки (блок 1) происходит выброс всей MV или части массы ТХВ (&alpha;ME, 0&pound;&alpha;&pound;1) (блок 2). Это приводит к образованию пароаэрозольного облака (блок 2), часть которого Kd2Mv сконденсируется и осядет на поверхность земли (блок 3), а часть будет распространяться в виде пара и тонкодисперсного и высокодисперсного аэрозолей, образуя первичное ОЗВ (блок 4) с концентрацией C1(x,&nbsp;t) в точке x=(x1, x2, x3)T в момент t. Осевшие капли и аэрозоли ТХВ из пароаэрозольного облака (блок 5) и оставшаяся часть ТХВ, не перешедшая в первичное облако (1-&alpha;)ME (блок 6), будут испаряться (блоки 5, 7), образуя вторичные ОЗВ с концентрацией COC(x, t) (блок 8) и Cпр(x, t) (блок 9).</p>
+<p>Первичное и вторичные ОЗВ, перемещаясь в направлении движения атмосферного воздуха, образуют опасные зоны загрязнения (блоки 10, 11, 12) площадью S1(x1, x2, x3h, t), SOC(x1, x2, x3h, t) и Sпр(x1, x2, x3h, t) соответственно. Результирующая ОЗЗ представляет собой просуммированные по координатам x1, x2 ОЗЗ1, ОЗЗ2 и ОЗЗ3 &ndash; ОЗЗ площадью SS(x1, x2, x3h, t).</p>
+<p><img src="uploaded/image/2010-3/image1257.png" alt="Подпись:  
+Рис. 1" width="608" height="357" align="left" />На рисунке 1 используются следующие обозначения:   
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="138" height="38" bgcolor="white">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td>
+<p><img src="uploaded/image/2010-3/image1259.png" alt="" width="115" height="25" /></p>
+</td>
+</tr>
+</tbody>
+</table>
+&nbsp;</td>
+</tr>
+</tbody>
+</table>
+ME &ndash; масса ТХВ в емкости; &alpha; &ndash; доля ТХВ, переводимого в первичное пароаэрозольное облако; Kd2 &ndash; доля ТХВ, переводимого в первичное пароаэрозольное облако в виде грубодисперсного аэрозоля и аэровзвесей; M1 &ndash; масса ТХВ в первичном ОЗВ, M1=&alpha;(1-Kd2)ME; D0 &ndash; начальная плотность заражения ТХВ поверхности выседания; SOC &ndash; площадь поверхности осаждения; Sпр &ndash; площадь пролива ТХВ; q1 &ndash; производительность начального источника химического загрязнения с поверхности пролива; q2 &ndash; производительность начального источника химического загрязнения с поверхности осаждения; Cпр(x, t) &ndash; концентрация паров ТХВ в ОЗВ от испарения с поверхности пролива в точке x=(x1, x2, x3)T в момент t; COC(x, t) &ndash; концентрация паров ТХВ в ОЗВ от испарения с поверхности осаждения в точке x=(x1, x2, x3)T  в момент t; C1(x, t) &ndash; концентрация паров ТХВ в первичном ОЗВ от выброса пароаэрозольного облака при взрыве в точке x=(x1, x2, x3)T в момент t; U2(SOC), U3(Sпр) &ndash; управляющие воздействия, направленные на уменьшение производительности начального источника химического загрязнения; U1(M1), U4(q2), U5(q1) &ndash; управляющие воздействия, направленные на обеднение ОЗВ; S1(x1, x2, x3h, t) &ndash; площадь ОЗЗ1 с концентрацией паров ТХВ CСОБ на огибающей линии на высоте дыхания (x3=x3h=1,5 м) в момент t от распространения первичного ОЗВ; SOC(x1, x2, x3h, t) &ndash; площадь ОЗЗ2 с концентрацией паров ТХВ CСОБ на огибающей линии на высоте дыхания (x3=x3h=1,5 м) в момент t от распространения ОЗВ, образовавшегося при испарении с поверхности осаждения; Sпр(x1, x2, x3h, t) &ndash; площадь ОЗЗ3 с концентрацией паров ТХВ CСОБ на огибающей линии на высоте дыхания (x3=x3h=1,5 м) в момент t от распространения ОЗВ, образовавшегося при испарении с поверхности пролива; SS(x1, x2, x3h, t) &ndash; площадь результирующей ОЗЗ с концентрацией паров ТХВ CCОБ на огибающей линии на высоте дыхания (x3=x3h= =1,5 м) в момент t.</p>
+<p>Для управления процессами образования и распространения ОЗЗ необходимы применение защитных экранирующих покрытий (сорбенты, защитные пенные экраны, дегазаторы) и эва- куация ТХВ из очага пролива для уменьшения производительности q1, q2 начального источника химического загрязнения U2(SOC) и U3(Sпр), а также постановка жидкостных завес на пути распространения ОЗВ на границе СЗЗ с целью его обеднения (снижения концентрации ТХВ в ОЗВ) в  зависимости от массы ТХВ M1 в первичном ОЗВ &ndash; U1(M1), производительности поверхности осаждения &ndash; U4(q2) и производительности зеркала пролива Sпр &ndash; U5(q1).</p>
+<p>Поскольку результирующая ОЗЗ представляет собой объединение множеств S1, SOC и Sпр, критерий оптимальности управления запишется в виде <img src="uploaded/image/2010-3/image1261.png" border="0" alt="" width="144" height="23" /></p>
+<p><img src="uploaded/image/2010-3/image1263.png" border="0" alt="" width="244" height="47" /></p>
+<p><img src="uploaded/image/2010-3/image1265.png" border="0" alt="" width="260" height="47" />&nbsp; (1)</p>
+<p>при ограничениях:</p>
+<p><img src="uploaded/image/2010-3/image1267.png" border="0" alt="" width="153" height="23" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)</p>
+<p><img src="uploaded/image/2010-3/image1269.png" border="0" alt="" width="100" height="17" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p><img src="uploaded/image/2010-3/image1271.png" border="0" alt="" width="87" height="25" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)</p>
+<p><img src="uploaded/image/2010-3/image1273.png" border="0" alt="" width="81" height="20" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5)</p>
+<p><img src="uploaded/image/2010-3/image1275.png" border="0" alt="" width="71" height="20" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6)</p>
+<p><img src="uploaded/image/2010-3/image1277.png" border="0" alt="" width="128" height="23" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (7)</p>
+<p>и связях</p>
+<p><img src="uploaded/image/2010-3/image1279.png" border="0" alt="" width="170" height="25" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (8)</p>
+<p><img src="uploaded/image/2010-3/image1281.png" border="0" alt="" width="193" height="25" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (9)</p>
+<p><img src="uploaded/image/2010-3/image1283.png" border="0" alt="" width="185" height="25" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (10)</p>
+<p><img src="uploaded/image/2010-3/image1285.png" border="0" alt="" width="136" height="23" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (11)</p>
+<p><img src="uploaded/image/2010-3/image1287.png" border="0" alt="" width="148" height="25" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (12)</p>
+<p><img src="uploaded/image/2010-3/image1289.png" border="0" alt="" width="143" height="25" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (13)</p>
+<p><img src="uploaded/image/2010-3/image1291.png" border="0" alt="" width="92" height="25" />;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (14)</p>
+<p><img src="uploaded/image/2010-3/image1293.png" border="0" alt="" width="96" height="25" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (15)</p>
+<p>где СS(x1, x2, x3h, x30, t) &ndash; значение результирующей концентрации паров ТХВ на множестве точек плоскости x3=x3h=1,5 м; <img src="uploaded/image/2010-3/image1295.png" border="0" alt="" width="21" height="21" />&nbsp;&ndash; момент, в который на высоте слоя дыхания впервые фиксируется значение концентрации ТХВ, превышающее величину нормативного показателя CСОБ в результирующей ОЗЗ; <img src="uploaded/image/2010-3/image1295.png" border="0" alt="" width="21" height="21" />&nbsp;&ndash; время, после которого результирующая ОЗЗ не существует, то есть полностью размывается.</p>
+<p>В соответствии с вышеизложенным общую задачу управления (1)&ndash;(15) можно рассматривать состоящей из трех частных задач минимизации ОЗЗ, образующейся:</p>
+<p>-&nbsp;&nbsp;&nbsp; при мгновенном выбросе паров ТХВ в атмосферу;</p>
+<p>-&nbsp;&nbsp;&nbsp; от испарения с поверхности осаждения жидких частиц и капель ТХВ;</p>
+<p>-&nbsp;&nbsp;&nbsp; от испарения ТХВ с поверхности пролива.</p>
+<p>Поскольку масштабы последствий аварий зависят от размеров ОЗЗ, образующейся при распространении ОЗВ, задача оперативного управления состоит в минимизации пространственных границ проявления поражающего действия ОЗЗ.</p>
+<p>Если по результатам прогнозирования аварийная ситуация не приводит к возникновению ЧС, задачей оперативного управления является локализация начального источника химического загрязнения.</p>
+<p>Если по результатам прогнозирования возможно возникновение ЧС, наряду с локализацией источника загрязнения осуществляется обеднение ОЗВ постановкой на пути его распространения водной завесы [2].</p>
+<p>Блок-схема алгоритма оперативного управления при взрывном разрушении оболочки (емкости) приведена на рисунке 2.</p>
+<p>При возникновении аварийной ситуации (например, при взрывном разрушении оболочки) оператором АРМ поддержки принятия решений ЧС осуществляется запуск алгоритма (блок На- чало) и вводятся данные по аварии (блок 1) и метеорологические данные (блок 2). По полученной информации из блоков 1, 2 и данных из БД  (блок 3) производится расчет момента принудительного прекращения эмиссии с поверхности осаждения <img src="uploaded/image/2010-3/image1297.png" border="0" alt="" width="21" height="21" />&nbsp;по алгоритму локализации начального источника химического загрязнения <img src="uploaded/image/2010-3/image1299.png" alt="Подпись:  
+Рис. 2" width="608" height="872" align="left" />поверхности осаждения части капель ТХВ полным составом (алгоритм 2) (блок 4) и с поверхности пролива <img src="uploaded/image/2010-3/image1301.png" border="0" alt="" width="20" height="20" />&nbsp;по алгоритму локализации участка пролива ТХВ (алгоритм 1) (блок 5).</p>
+<p>Прогнозирование возможности возникновения ЧС (выход ОЗЗ за пределы СЗЗ) осуществляется путем расчета максимальной концентрации паров ТХВ <img src="uploaded/image/2010-3/image1303.png" border="0" alt="" width="27" height="23" />(х,t) в ОЗЗ на границе СЗЗ при x=(x1C3, 0, x3h)T в момент <img src="uploaded/image/2010-3/image1305.png" border="0" alt="" width="45" height="20" />/u1 (блок 9) по величине максимальной концентрации паров ТХВ в ОЗЗ от мгновенного выброса ТХВ <img src="uploaded/image/2010-3/image1307.png" border="0" alt="" width="28" height="21" />, рассчитываемой в момент <img src="uploaded/image/2010-3/image1309.png" border="0" alt="" width="79" height="21" />&nbsp;(блок 6), концентрации паров ТХВ в ОЗЗ от испарения ТХВ с поверхности осаждения CОCC3, рассчитываемой в момент <img src="uploaded/image/2010-3/image1309.png" border="0" alt="" width="79" height="21" />&nbsp;(блок 7), и концентрации паров ТХВ в ОЗЗ от испарения ТХВ с поверхности пролива CпрC3, рассчитываемой в момент <img src="uploaded/image/2010-3/image1309.png" border="0" alt="" width="79" height="21" />&nbsp;(блок 8).</p>
+<p>Рассчитанная суммарная концентрация паров ТХВ на границе СЗЗ <img src="uploaded/image/2010-3/image1313.png" border="0" alt="" width="99" height="23" />&nbsp;(блок 9) сравнивается с величиной нормативного показателя стандарта относительной безопасности (СОБ) &ndash; CСОБ (блок 10).</p>
+<p>Если величина <img src="uploaded/image/2010-3/image1315.png" border="0" alt="" width="32" height="23" /><img src="uploaded/image/2010-3/image1317.png" border="0" alt="" width="41" height="20" />CСОБ (&laquo;ДА&raquo;), то ОЗЗ не выйдет за пределы СЗЗ и на объекте уничтожения химического оружия (УХО) проводятся мероприятия по локализации начальных источников химического загрязнения (блок 9).</p>
+<p>Если <img src="uploaded/image/2010-3/image1315.png" border="0" alt="" width="32" height="23" /><img src="uploaded/image/2010-3/image1320.png" border="0" alt="" width="41" height="20" />&nbsp;CСОБ (&laquo;НЕТ&raquo;), то ОЗЗ выйдет за пределы СЗЗ (ЧС) и необходим прогноз мероприятий по минимизации ОЗЗ.</p>
+<p>В этом случае рассматриваемым алгоритмом предусматривается следующее.</p>
+<p>Осуществляются мероприятия по локализации начальных источников химического загрязнения.</p>
+<p>Поскольку для минимизации ОЗЗ необходимо снижение концентрации паров ТХВ в ОЗВ установкой водной завесы на пути его перемещения, требуется определить интенсивность водной завесы, координаты места ее постановки, а также необходимые технические средства (ТС) и момент прибытия их на место постановки завесы.</p>
+<p>Водную завесу целесообразно устанавливать на территории объекта УХО вблизи границы СЗЗ. В этом случае необходимо определить возможность ее постановки до выхода ОЗЗ за пределы СЗЗ, то есть вычислить время подхода результирующей ОЗЗ к границе СЗЗ <img src="uploaded/image/2010-3/image1322.png" border="0" alt="" width="26" height="23" />, которое должно быть больше времени выдвижения ТС на место установки завесы. Для этого производится расчет времени подхода ОЗЗ от мгновенного выброса паров ТХВ к границе СЗЗ <img src="uploaded/image/2010-3/image1324.png" border="0" alt="" width="20" height="21" />&nbsp;(блок 14), от испарения с поверхности осаждения <img src="uploaded/image/2010-3/image1326.png" border="0" alt="" width="28" height="21" />&nbsp;при td=<img src="uploaded/image/2010-3/image1297.png" border="0" alt="" width="21" height="21" />&nbsp;(блок 15) и от испарения с поверхности пролива <img src="uploaded/image/2010-3/image1329.png" border="0" alt="" width="26" height="31" />&nbsp;при <img src="uploaded/image/2010-3/image1331.png" border="0" alt="" width="44" height="21" />&nbsp;(блок 16). По рассчитанным <img src="uploaded/image/2010-3/image1333.png" border="0" alt="" width="25" height="21" />&nbsp;<img src="uploaded/image/2010-3/image1335.png" border="0" alt="" width="28" height="27" /><img src="uploaded/image/2010-3/image1193.png" border="0" alt="" width="12" height="23" />и <img src="uploaded/image/2010-3/image1329.png" border="0" alt="" width="26" height="31" />&nbsp;определяется время подхода результирующей ОЗЗ к границе СЗЗ <img src="uploaded/image/2010-3/image1338.png" border="0" alt="" width="28" height="28" />как минимальное из <img src="uploaded/image/2010-3/image1340.png" border="0" alt="" width="20" height="31" />, <img src="uploaded/image/2010-3/image1335.png" border="0" alt="" width="28" height="27" />&nbsp;и <img src="uploaded/image/2010-3/image1343.png" border="0" alt="" width="25" height="23" />&nbsp;(блок 17), которое сравнивается со временем <img src="uploaded/image/2010-3/image1345.png" border="0" alt="" width="21" height="21" />&nbsp;(блок 18), необходимым для развертывания ТС на месте их установки (блок 19).</p>
+<p>Если <img src="uploaded/image/2010-3/image1338.png" border="0" alt="" width="28" height="28" />&gt; <img src="uploaded/image/2010-3/image1345.png" border="0" alt="" width="21" height="21" /><img src="uploaded/image/2010-3/image1193.png" border="0" alt="" width="12" height="23" />(&laquo;НЕТ&raquo;), водную завесу можно ставить вблизи границы СЗЗ в точке с координатой x1C3 &ndash; точке пересечения линии границы СЗЗ с осью x1.</p>
+<p>Параметры устанавливаемой водной завесы &ndash; интенсивность, время начала и продолжительность, а также необходимые ТС и момент их прибытия &ndash; определяются следующим образом.</p>
+<p>Рассчитывается максимальная концентрация паров ТХВ в результирующей ОЗЗ <img src="uploaded/image/2010-3/image1315.png" border="0" alt="" width="32" height="23" />(x, t) при х=(х1сз, 0, х3h)Т, <img src="uploaded/image/2010-3/image1350.png" border="0" alt="" width="20" height="21" />=x1сз/u1 (блок 20), по величине которой определяются оптимальное управляющее воздействие fв(t) (блок 21) и оптимальная интенсивность водной завесы IОПТ (блок 22) при рассчитанной продолжительности tв (блок 23) при <img src="uploaded/image/2010-3/image1352.png" border="0" alt="" width="44" height="20" />&nbsp;(время прекращения существования результирующей ОЗЗ на границе СЗЗ) (блок 17);  <img src="uploaded/image/2010-3/image1354.png" border="0" alt="" width="20" height="20" />&nbsp;&ndash; это максимальное время существования результирующей ОЗЗ, определяемое сравнением времени существования ОЗЗ от рассчитанного мгновенного выброса <img src="uploaded/image/2010-3/image1356.png" border="0" alt="" width="19" height="20" />&nbsp;(блок 14), от испарения с поверхности осаждения <img src="uploaded/image/2010-3/image1358.png" border="0" alt="" width="28" height="20" />, рассчитываемого при <img src="uploaded/image/2010-3/image1360.png" border="0" alt="" width="45" height="20" />&nbsp;(блок 15), и от испарения с поверхности пролива <img src="uploaded/image/2010-3/image1362.png" border="0" alt="" width="25" height="23" />&nbsp;при <img src="uploaded/image/2010-3/image1360.png" border="0" alt="" width="45" height="20" />&nbsp;(блок 16). По полученным <img src="uploaded/image/2010-3/image1356.png" border="0" alt="" width="19" height="20" />, <img src="uploaded/image/2010-3/image1358.png" border="0" alt="" width="28" height="20" />&nbsp;и <img src="uploaded/image/2010-3/image1362.png" border="0" alt="" width="25" height="23" />&nbsp;определяется время прекращения существования результирующей ОЗЗ на границе СЗЗ <img src="uploaded/image/2010-3/image1354.png" border="0" alt="" width="20" height="20" />&nbsp;как максимальное из <img src="uploaded/image/2010-3/image1356.png" border="0" alt="" width="19" height="20" />, <img src="uploaded/image/2010-3/image1358.png" border="0" alt="" width="28" height="20" />&nbsp;и <img src="uploaded/image/2010-3/image1362.png" border="0" alt="" width="25" height="23" />&nbsp;(блок 17).</p>
+<p>Расчет потребности в ТС для постановки водной завесы производится в зависимости от интенсивности IОПТ и ширины фронта ШФ завесы, рассчитываемой (блок 24) исходя из производительности единицы ТС по формуле (блок 25):</p>
+<p><img src="uploaded/image/2010-3/image1372.png" border="0" alt="" width="99" height="40" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (16)</p>
+<p>где П &ndash; производительность ТС.</p>
+<p>Если <img src="uploaded/image/2010-3/image1374.png" border="0" alt="" width="53" height="21" />&nbsp;(&laquo;ДА&raquo;), то водная завеса может быть поставлена только за пределами СЗЗ, координата установки которой xв1 определяется по формуле <img src="uploaded/image/2010-3/image1376.png" border="0" alt="" width="145" height="28" />&nbsp;(блок 26).</p>
+<p>Максимальная концентрация паров ТХВ <img src="uploaded/image/2010-3/image1378.png" border="0" alt="" width="75" height="21" />&nbsp;в точке установки водной завесы x1в рассчитывается при <img src="uploaded/image/2010-3/image1380.png" border="0" alt="" width="171" height="21" /> (блок 27), по ее величине рассчитываются оптимальное управляющее воздействие fв(t) (блок 21) и оптимальная интенсивность водной завесы IОПТ (блок 22). Время начала <img src="uploaded/image/2010-3/image1382.png" border="0" alt="" width="21" height="21" />&nbsp;и окончания <img src="uploaded/image/2010-3/image1384.png" border="0" alt="" width="21" height="21" />&nbsp;постановки водной завесы (блок 28) определяется аналогично его определению в блоках 14&ndash;17, а продолжительность ее постановки tв для определения IОПТ рассчитывается по формуле <img src="uploaded/image/2010-3/image1386.png" border="0" alt="" width="76" height="21" />&nbsp;(блок 23).</p>
+<p>Момент начала постановки водной завесы <img src="uploaded/image/2010-3/image1388.png" border="0" alt="" width="47" height="20" />, момент прекращения <img src="uploaded/image/2010-3/image1390.png" border="0" alt="" width="47" height="20" />.</p>
+<p>Время прибытия ТС для установки водной завесы в СЗЗ <img src="uploaded/image/2010-3/image1392.png" border="0" alt="" width="21" height="20" />&nbsp;рассчитывается по формуле <img src="uploaded/image/2010-3/image1394.png" border="0" alt="" width="95" height="40" />&nbsp;(блок 19), за пределами СЗЗ (населенные места) <img src="uploaded/image/2010-3/image1396.png" border="0" alt="" width="25" height="20" />&nbsp;&ndash; по формуле <img src="uploaded/image/2010-3/image1398.png" border="0" alt="" width="77" height="21" />&nbsp;(блок 29).</p>
+<p>По рассчитанным nTC (блок 25), xв1 (блок 26), <img src="uploaded/image/2010-3/image1345.png" border="0" alt="" width="21" height="21" />&nbsp;(блок 19) и <img src="uploaded/image/2010-3/image1401.png" border="0" alt="" width="25" height="21" />&nbsp;(блок 29) формируется задание на постановку водной завесы (блок 30), содержащее следующие данные:</p>
+<p>&minus;&nbsp;&nbsp;&nbsp; оптимальная интенсивность IОПТ;</p>
+<p>-&nbsp;&nbsp;&nbsp; минимальная ширина по фронту ОЗЗ ШФ;</p>
+<p>-&nbsp;&nbsp;&nbsp; координата места установки xв1 (на плане объекта УХО и карте местности);</p>
+<p>-&nbsp;&nbsp;&nbsp; необходимые ТС nTC;</p>
+<p>-&nbsp;&nbsp;&nbsp; момент прибытия ТС tTC;</p>
+<p>-&nbsp;&nbsp;&nbsp; момент начала постановки водной заве- сы <img src="uploaded/image/2010-3/image1403.png" border="0" alt="" width="21" height="20" />;</p>
+<p>-&nbsp;&nbsp;&nbsp; продолжительность постановки tв.</p>
+<p>Алгоритм оперативного управления реализован в виде программного модуля на языке Object Pascal в инструментальной среде Delphi 5.0 в составе программно-технического комплекса поддержки принятия решений.</p>
+<p>Разработанный алгоритм оперативного управления реализован на объекте хранения и уничтожения химического оружия &laquo;Горный&raquo; (Саратовская область).</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Методика прогнозирования развития и последствий аварийных ситуаций на объектах уничтожения химического оружия. ОКР. Шифр &laquo;Система&raquo; (первая редакция). М.: ФГУП ГосНИИОХТ, 2001. 123 с.</p>
+<p>2.&nbsp;&nbsp; Разработка и обоснование перечня мероприятий, осуществляемых при ликвидации последствий чрезвычайных ситуаций, применительно к возможным сценариям их развития / Промежуточный отчет по НИР &laquo;Конда&raquo;: Этап 2. Редкино: ОАО &laquo;РОКБА&raquo;, 2001. 142 с.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2580</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2580">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 3 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=91">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

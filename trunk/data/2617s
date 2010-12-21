@@ -1,0 +1,542 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Алгоритмы формирования управляющих воздействий в распределенных мультиагентных системах</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Алгоритмы формирования управляющих воздействий в распределенных мультиагентных системах</h2><div style="margin-bottom:10px"><strong>Algorithms for formation of control actions in a distributed multi-agent systems</strong></div>Статья опубликована в выпуске журнала № 4 за 2010 год. [ 09.12.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">В работе рассматриваются взаимодействие конкурирующих интеллектуальных агентов в распределенных муль-тиагентных системах обработки информации, различные математические модели их взаимодействия. Приводятся алгоритмы выработки управляющего воздействия.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">This work considers interaction of rival intellectual agents in distributed multi-agent information processing systems and different mathematic models of their interaction. Algorithms of forming the control actions are listed. </em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=4140">Федунец Н.И. ()</a> -    , <a href="index.php?page=infou&id=5932">Приходько М.А. ()</a> -    </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1784">управляющее воздействие</a>, <a href="index.php?page=infotg&id=1785">система обработки информации</a>, <a href="index.php?page=infotg&id=1787">распределенная система</a>, <a href="index.php?page=infotg&id=319">обработка информации</a>, <a href="index.php?page=infotg&id=1786">мальтиагентная система</a>, <a href="index.php?page=infotg&id=1789">контрагент</a>, <a href="index.php?page=infotg&id=1791">конкурирующие агенты</a>, <a href="index.php?page=infotg&id=1790">интеллектуальные агенты</a>, <a href="index.php?page=infotg&id=115">алгоритм</a>, <a href="index.php?page=infotg&id=1788">агент</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1784"></a>, <a href="index.php?page=infotg&id=1785"></a>, <a href="index.php?page=infotg&id=1787"></a>, <a href="index.php?page=infotg&id=319">information processing</a>, <a href="index.php?page=infotg&id=1786"></a>, <a href="index.php?page=infotg&id=1789"></a>, <a href="index.php?page=infotg&id=1791"></a>, <a href="index.php?page=infotg&id=1790"></a>, <a href="index.php?page=infotg&id=115">algorithm</a>, <a href="index.php?page=infotg&id=1788"></a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 25<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2617">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Системы распределенной обработки информации и параллельные вычислительные технологии относятся к базовым средствам XXI столетия, обеспечивающим интенсификацию научно-техни&shy;ческого прогресса. Современные вычислительные системы состоят из огромного количества процессоров (до сотен тысяч), а распределенные системы &ndash; из тысяч компьютеров [1]. Их ресурсы должны эффективно использоваться как при решении одной задачи, так и при одновременном решении множества задач различной сложности (когда для каждой из них не требуется вся система).</p>
+<p>&nbsp;</p>
+<p>Вместе с тем процесс функционирования и сопряжения технического обеспечения (сетевых структур) крупных распределенных систем обработки разнородной информации порождает ряд проблем, вызванных непрогнозируемым изменением объема и характера обрабатываемой информации. Эти проблемы обусловлены появлением фракций контрагентов &ndash; элементарных процессов обработки информации, функционирующих ненадлежащим образом (недостаточно эффективно обрабатывающих информацию, вовсе не обрабатывающих информацию или обрабатывающих ее неправильно). Контрагенты конкурируют с агентами, входящими в состав распределенной мультиагентной системы обработки информации, в борьбе за ресурсы системы и нарушают ее нормальную работу.</p>
+<p>Возникновение таких ситуаций может привести к перегрузке сетевых каналов связи, нерегламентированному перераспределению вычислительных ресурсов между решаемыми задачами, а также к некорректной (ошибочной) обработке информации. Эффективно препятствовать этому может только активное управляющее воздействие, направленное на нормализацию работы распределенной системы. Целью такого управляющего воздействия могут являться самоорганизация агентов, а также изменение природы возникших контрагентов и дальнейшее препятствование их появлению.</p>
+<p>Возможно возникновение нескольких случаев, отличающихся в первую очередь характером распространения контрагентов в системе обработки информации, а также стратегией реализации управляющего воздействия.</p>
+<p>Основные случаи равномерного и экспоненциального возрастания числа контрагентов и агентов, а также экспоненциального возрастания числа контрагентов и равномерного возрастания числа агентов подробно исследованы в [2]. На базе проведенных исследований были разработаны алгоритмы формирования управляющего воздействия, призванного нормализовать функционирование распределенной системы обработки информации в случае выявления распространения фракции контрагентов.</p>
+<p>Нормализация функционирования распределенной системы обработки информации состоит из двух качественно различающихся этапов: обнаружение и анализ переходных процессов, сигнализирующих о распространении фракций контрагентов, и непосредственно выработка и реализация управляющего воздействия.</p>
+<p>О распространении фракций контрагентов могут сигнализировать различные процессы, в первую очередь, имеющие сетевую природу, такие как увеличение энтропии IP-адресов в пакетах, увеличение количества обращений к несуществующим адресам и т.д.</p>
+<p>В данной работе рассматриваются возможные способы выработки управляющих воздействий в предположении, что известен характер увеличения численности контрагентов (равномерный или экспоненциальный).</p>
+<p>Равномерное возрастание  числа контрагентов</p>
+<p>При равномерном увеличении числа контрагентов их общее число в момент t до начала реализации управляющего воздействия и после определяется следующими формулами соответственно:</p>
+<p><img src="uploaded/image/2010-4/image651.gif" border="0" alt="" width="195" height="32" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+<p><img src="uploaded/image/2010-4/image653.gif" border="0" alt="" width="206" height="89" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)</p>
+<p>Численность агентов A в момент <img src="uploaded/image/2010-4/image655.gif" border="0" alt="" width="31" height="16" />, реализующих управляющее воздействие, определяется формулой</p>
+<p>q(t)=a0+a(t&ndash;T).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p>Из нее можно сделать вывод о времени до полного восстановления работоспособности распределенной системы обработки информации: q(t)=N, откуда</p>
+<p><img src="uploaded/image/2010-4/image657.gif" border="0" alt="" width="172" height="39" />,&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)</p>
+<p>где <img src="uploaded/image/2010-4/image659.gif" border="0" alt="" width="60" height="40" />&nbsp;&ndash; относительная скорость увеличения численности агентов.</p>
+<p>Основной результат, полученный в работе о равномерном возрастании числа контрагентов и агентов, позволяет достаточно точно оценить время стабилизации tстабилизации, такое, что при t&gt;tстабилизации число контрагентов убывает, n(t)</p>
+<p><img src="uploaded/image/2010-4/image661.gif" border="0" alt="" width="191" height="95" />,&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5)</p>
+<p>где <img src="uploaded/image/2010-4/image663.gif" border="0" alt="" width="37" height="36" />&nbsp;&ndash; относительная скорость увеличения численности контрагентов.</p>
+<p>Полученные результаты использованы при разработке алгоритма функционирования системы активного управляющего воздействия с целью противодействия распространению контрагентов в неделимой системе обработки информации. В зависимости от значения фиксированных параметров системы найденные оценки позволяют варьировать изменяемые параметры для достижения требуемого результата &ndash; гарантированного времени нормализации работы системы, а также непревышения гарантированного порогового числа (доли) дестабилизированных контрагентами компьютеров.</p>
+<p>Пусть система обработки информации опрашивается с частотой &nu;. По полученному ответу делается вывод о наличии или отсутствии сбоев в ее функционировании. В случае обнаружения сбоя в качестве значения задержки обнаружения T берется худшая оценка:</p>
+<p><img src="uploaded/image/2010-4/image665.gif" border="0" alt="" width="37" height="36" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6)</p>
+<p>Далее производится детальный опрос системы обработки информации с целью определения числа нормально функционирующих компьютеров Nнорм. В качестве значения n(T) также берется худшая оценка:</p>
+<p><img src="uploaded/image/2010-4/image667.gif" border="0" alt="" width="99" height="23" />,&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (7)</p>
+<p>после чего по формуле (1), в предположении, что n0=0, вычисляется скорость увеличения численности контрагентов V:</p>
+<p><img src="uploaded/image/2010-4/image669.gif" border="0" alt="" width="88" height="41" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (8)</p>
+<p>По формуле (3) можно оценить требуемое значение скорости увеличения численности агентов a, исходя из желаемого времени нормализации работы системы обработки информации Tнормализации (в предположении, что a0=0):</p>
+<p><img src="uploaded/image/2010-4/image671.gif" border="0" alt="" width="108" height="41" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (9)</p>
+<p>Полученное значение a используется для вычисления времени стабилизации численности контрагентов tстабилизации и числа дестабилизированных контрагентами компьютеров системы обработки информации к моменту стабилизации. Если данное значение не соответствует требуемым критериям надежности функционирования системы обработки информации (<img src="uploaded/image/2010-4/image673.gif" border="0" alt="" width="70" height="17" />&nbsp;и <img src="uploaded/image/2010-4/image675.gif" border="0" alt="" width="70" height="17" />), формула (2) рассматривается как уравнение относительно переменной a, откуда находится уточненное значение скорости увеличения численности агентов.</p>
+<p>После вычисления всех параметров производится математическое моделирование изменения численности контрагентов и агентов, по результатам которого полученные значения параметров управляющего воздействия при необходимости уточняются. При соответствии результатов моделирования &ndash; времени стабилизации, численности контрагентов к моменту стабилизации, времени нормализации &ndash; заявленным критериям надежности системы обработки информации реализуется управляющее воздействие.</p>
+<p>Математическое моделирование используется и в ходе реализации управляющего воздействия для анализа и подтверждения характера изменения численности контрагентов, а также тонкого уточнения параметров управляющего воздействия. Данный алгоритм в качестве модуля положен в основу программной реализации системы управления функционированием распределенной мультиагентной системы обработки информации в условиях непрогнозируемого изменения объема и характера обрабатываемой информации.</p>
+<p>Экспоненциальное возрастание  числа контрагентов</p>
+<p>В случае экспоненциального возрастания числа контрагентов было найдено следующее решение, описывающее число контрагентов до и после начала реализации управляющего воздействия:</p>
+<p><img src="uploaded/image/2010-4/image677.gif" border="0" alt="" width="159" height="57" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (10)</p>
+<p><img src="uploaded/image/2010-4/image679.gif" border="0" alt="" width="266" height="89" />(11)</p>
+<p>В свою очередь, число агентов A подчиняется дифференциальному уравнению</p>
+<p><img src="uploaded/image/2010-4/image681.gif" border="0" alt="" width="143" height="23" />, откуда</p>
+<p><img src="uploaded/image/2010-4/image683.gif" border="0" alt="" width="85" height="23" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (12)</p>
+<p>Из формулы (12) следует, что время до полного восстановления работоспособности системы обработки информации агентами A определяется условием q(t)=N, откуда</p>
+<p><img src="uploaded/image/2010-4/image685.gif" border="0" alt="" width="131" height="40" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (13)</p>
+<p>Для нахождения времени стабилизации удобно продифференцировать уравнение (11), приравнять его к нулю и ввести новую переменную y: <img src="uploaded/image/2010-4/image687.gif" border="0" alt="" width="77" height="21" /></p>
+<p>Учитывая оценку (13) на максимальное значение t, можно сделать вывод, что y&pound;1<img src="uploaded/image/2010-4/image689.gif" border="0" alt="" width="3" height="16" /></p>
+<p>В новых переменных уравнение для нахождения времени стабилизации примет вид</p>
+<p align="left"><img src="uploaded/image/2010-4/image691.gif" border="0" alt="" width="149" height="68" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (14)</p>
+<p align="left">где <img src="uploaded/image/2010-4/image693.gif" border="0" alt="" width="130" height="32" />.</p>
+<p>Откуда следует, что</p>
+<p><img src="uploaded/image/2010-4/image695.gif" border="0" alt="" width="258" height="71" />. (15)</p>
+<p>Алгоритм функционирования системы активного управляющего воздействия с целью противодействия распространению контрагентов в неделимой системе обработки информации построен по схеме, аналогичной случаю равномерного увеличения числа контрагентов.</p>
+<p>Задержка обнаружения T вычисляется по формуле (6), число контрагентов n(T) &ndash; по формуле (7), после чего из формулы (10), в предположении, что n0=1, вычисляется скорость увеличения численности контрагентов V:</p>
+<p><img src="uploaded/image/2010-4/image697.gif" border="0" alt="" width="167" height="38" /></p>
+<p>По формуле (13) можно оценить требуемое значение скорости увеличения численности агентов a, исходя из желаемого времени нормализации (в предположении, что a0=1): <img src="uploaded/image/2010-4/image699.gif" border="0" alt="" width="99" height="27" /></p>
+<p>Полученное значение a используется для численного решения уравнения (2) и вычисления времени стабилизации и числа дестабилизированных контрагентами компьютеров системы обработки информации к моменту стабилизации. Если данное значение не соответствует требуемым критериям надежности функционирования системы обработки информации, формула (11) рассматривается как уравнение относительно переменной a, откуда находится уточненное значение скорости увеличения численности агентов.</p>
+<p>Дальнейшее функционирование алгоритма аналогично случаю равномерного увеличения числа контрагентов. Алгоритм в качестве модуля положен в основу программной реализации системы управления функционированием распределенной мультиагентной системы обработки информации в условиях непрогнозируемого изменения объема и характера обрабатываемой информации.</p>
+<p>Экспоненциальное возрастание числа  контрагентов и равномерное возрастание  числа агентов</p>
+<p>Особое внимание следует уделить дискриминационному случаю, когда число агентов может возрастать равномерно, а число контрагентов экспоненциально.</p>
+<p>Как уже было показано, число компьютеров с размещенными на них контрагентами до начала реализации активного управляющего воздействия определяется формулой</p>
+<p><img src="uploaded/image/2010-4/image701.gif" border="0" alt="" width="161" height="57" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (16)</p>
+<p>а после введения агентов (в момент <img src="uploaded/image/2010-4/image655.gif" border="0" alt="" width="31" height="16" />) &ndash; формулой</p>
+<p><img src="uploaded/image/2010-4/image703.gif" border="0" alt="" width="260" height="57" />&nbsp;(17)</p>
+<p>Число агентов A определяется выражением</p>
+<p>q(t)=a0+a(t&ndash;T).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (18)</p>
+<p>Из формулы (18) следует, что время до полного восстановления работоспособности системы обработки информации будет</p>
+<p><img src="uploaded/image/2010-4/image657.gif" border="0" alt="" width="172" height="39" />, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (19)</p>
+<p>где <img src="uploaded/image/2010-4/image706.gif" border="0" alt="" width="59" height="40" />&ndash; относительная скорость увеличения численности агентов.</p>
+<p>Для нахождения времени стабилизации применим методику, аналогичную использованной для исследования экспоненциального случая.</p>
+<p><img src="uploaded/image/2010-4/image713.gif" alt="" width="303" height="496" align="left" />Сделаем замену переменной:</p>
+<p><img src="uploaded/image/2010-4/image715.gif" border="0" alt="" width="101" height="40" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (20)</p>
+<p>Учитывая оценку (19), после преобразования и дифференцирования уравнения (17) получаем следующую оценку:</p>
+<p><img src="uploaded/image/2010-4/image717.gif" border="0" alt="" width="197" height="40" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (21)</p>
+<p>Полученные результаты позволяют разработать алгоритм реализации управляющего воздействия с целью противодействия распространению контрагентов. Алгоритм строится по аналогии с ранее рассмотренными случаями.</p>
+<p>Задержка обнаружения T вычисляется по формуле (6). Число контрагентов n(T) вычисляется по формуле (7), после чего из формулы (16), в предположении, что n0=1, вычисляется скорость увеличения численности контрагентов V:</p>
+<p><img src="uploaded/image/2010-4/image719.gif" border="0" alt="" width="161" height="48" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (22)</p>
+<p>По формуле (18) можно оценить требуемое значение скорости увеличения численности агентов a, исходя из желаемого времени нормализации (в предположении, что a0=1):</p>
+<p><img src="uploaded/image/2010-4/image721.gif" border="0" alt="" width="108" height="41" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (23)</p>
+<p>Полученное значение W используется для численного решения уравнения (17), вычисления времени стабилизации и числа дестабилизированных контрагентами компьютеров системы обработки информации к моменту стабилизации. Если данное значение не соответствует требуемым критериям надежности функционирования системы обработки информации, формула (17) рассматривается как уравнение относительно переменной W, откуда находится уточненное значение скорости увеличения численности агентов.</p>
+<p>Дальнейшее функционирование алгоритма аналогично рассмотренным выше случаям (см. рис.). Алгоритм в качестве модуля положен в основу программной реализации системы управления функционированием распределенной мультиагентной системы обработки информации в условиях непрогнозируемого изменения объема и характера обрабатываемой информации.</p>
+<p>Описанные в работе алгоритмы выработки управляющего воздействия в комплексе со средствами анализа характера переходных процессов, протекающих в распределенной системе обработки информации, положены в основу программной реализации системы управления функционированием распределенной мультиагентной системы обработки информации в условиях непрогнозируемого изменения объема и характера обрабатываемой информации. Рассмотренные случаи охватывают широкий класс процессов, возникающих в реальных распределенных системах обработки информации и описывающихся нормальным, экспоненциальным, а также смешанным характером протекания (изменения числа контрагентов и агентов).</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Шпак Г. Распределенный кластер не уступит &laquo;голубому гену&raquo;? // Наука в Сибири. 2005. № 34 (2520). С. 3&ndash;4.</p>
+<p>2.&nbsp;&nbsp; Приходько М.А. Взаимодействие конкурирующих интеллектуальных агентов в распределенных мультиагентных системах обработки информации при экспоненциальном и равномерном возрастании числа контрагентов // Информатизация и управление: сб. ст. М.: 2010 (отдельный вып. Горного информ.-аналит. бюл.).</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2617</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2617">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 4 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=92">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

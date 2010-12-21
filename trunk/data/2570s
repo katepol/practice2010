@@ -1,0 +1,622 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Моделирование парка воздушных судов методом линейного программирования</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Моделирование парка воздушных судов методом линейного программирования</h2><div style="margin-bottom:10px"><strong>Flying stock model by the linear programming method</strong></div>Статья опубликована в выпуске журнала № 3 за 2010 год. [ 07.09.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">В статье обоснован и сформулирован метод определения потребного типа воздушного судна для конкретного маршрута из имеющегося множества при моделировании структуры парка воздушных судов. Метод основан на разработанном алгоритме с применением линейного программирования, а именно симплекс-метода. </em><br /><strong>Abstract:</strong><em style="font-size:8pt">aircrafts, parametrical row, linear programming, simplex-method, economic effectiveness.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=5896">Припадчев А.Д. (aleksejj-pripadchev@rambler.ru)</a> - Оренбургский государственный университет,  Аэрокосмический институт Кандидат технический наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=532">экономическая эффективность</a>, <a href="index.php?page=infotg&id=1686">симплекс-метод</a>, <a href="index.php?page=infotg&id=1684">параметрический ряд</a>, <a href="index.php?page=infotg&id=1685">линейное программирование</a>, <a href="index.php?page=infotg&id=1683">воздушное судно</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=532">economical effectiveness</a>, <a href="index.php?page=infotg&id=1686">simplex-method</a>, <a href="index.php?page=infotg&id=1684">parametrical row</a>, <a href="index.php?page=infotg&id=1685">linear programming</a>, <a href="index.php?page=infotg&id=1683">aircrafts</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 179<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2570">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>В настоящее время авиапредприятия остро нуждаются в современных воздушных судах (ВС). Устаревший парк и новые требования к летно-техническим характеристикам являются основанием для моделирования структуры потребного парка ВС с использованием методов системного анализа и исследования операций [1].</p>
+<p>&nbsp;</p>
+<p>Задача заключается в том, чтобы определить потребное количество ВС, обеспечивающих выполнение объемов пассажирских перевозок в установленные сроки, а также экономически выгодный тип ВС для каждого маршрута. Решение ее даст ответ на вопросы: какой тип ВС экономически эффективен на конкретном маршруте в процессе пассажирских перевозок (под ним понимается транспортировка пассажиров, выполняемая авиапредприятием на ВС за установленную плату в соответствии с условиями договора), а также сколько необходимо ВС для перевозки пассажиров на конкретном маршруте.</p>
+<p>Сущность и особенность предлагаемого метода определения структуры потребного парка ВС на основе критерия производственных расходов ВС заключаются в следующем.</p>
+<p>Методологическая и программная реализация модели &ndash; это определение потребной структуры парка ВС при перевозке из определенного пункта А пассажиров по n маршрутам. Целевой функцией является сумма производственных расходов на все рейсы для всех маршрутов при сохранении (увеличении) показателя дохода и при выполнении системы ограничений-равенств. Получаем задачу линейного программирования, которую решаем симплекс-методом. Переменными являются n &ndash; количество маршрутов и m &ndash; тип ВС. Ограничениями выступает система ограничений-равенств для всех маршрутов.</p>
+<p>Данная задача решается симплекс-методом, так как легко описывается линейной моделью и однозначно выполняется для минимизации целевой функции. Можно решить ее и стохастически, если имеются данные об изменении производственных расходов за неделю, месяц, квартал, год, однако эта информация является коммерческой тайной авиапредприятия.</p>
+<p>Решение задачи линейного программирования симплекс-методом носит итерационный характер. Для его методологического построения математическая модель структуры парка ВС представляется в стандартной форме линейных оптимизационных моделей, при этом все ограничения записываются в виде равенства с неотрицательной правой частью, значения всех переменных модели неотрицательны, целевая функция подлежит минимизации.</p>
+<p>В процессе построения математической модели необходимо четко представлять следующее:</p>
+<p>-&nbsp;&nbsp;&nbsp; для определения каких величин она строится;</p>
+<p>-&nbsp;&nbsp;&nbsp; какие ограничения должны быть наложены на переменные, чтобы выполнялись условия, характерные для моделирующего процесса пассажирских перевозок;</p>
+<p>-&nbsp;&nbsp;&nbsp; в чем цель выбора из всех допустимых значений переменных тех, которые будут соответствовать оптимальному решению задачи.</p>
+<p>Трудность построения математической модели заключается в идентификации переменных и последующем представлении цели и ограничений в виде математических функций этих переменных. Рассмотрим данный случай.</p>
+<p>Каждый маршрут обслуживают ВС всех ти&shy;пов, имеющихся в авиапредприятии.</p>
+<p>Для первого маршрута количество перевозимых пассажиров вычисляем по формуле</p>
+<p><img src="uploaded/image/2010-3/image1029.png" border="0" alt="" width="87" height="27" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+<p>где аi,j &ndash; количество пассажиров, перевозимых за один рейс на i-м маршруте ВС j-го типа, <img src="uploaded/image/2010-3/image272.png" border="0" alt="" width="41" height="21" />, <img src="uploaded/image/2010-3/image1032.png" border="0" alt="" width="45" height="23" />; bi &ndash; количество авиапассажиров, перевозимых по i-му маршруту, <img src="uploaded/image/2010-3/image272.png" border="0" alt="" width="41" height="21" />; Хi,j &ndash; количество рейсов, совершаемых на i-м маршруте ВС j-го типа, <img src="uploaded/image/2010-3/image272.png" border="0" alt="" width="41" height="21" />, <img src="uploaded/image/2010-3/image1032.png" border="0" alt="" width="45" height="23" />.</p>
+<p>Общую сумму расходов на все рейсы всех маршрутов вычисляем как</p>
+<p><img src="uploaded/image/2010-3/image1037.png" border="0" alt="" width="139" height="40" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)</p>
+<p>где сi,j &ndash; расходы на один рейс на i-м маршруте ВС j-го типа, i=1,2,&hellip;,n, j=1,2,&hellip;,m.</p>
+<p>Если необходимо минимизировать общую сумму расходов при выполнении системы ограничений-равенств, получим задачу линейного программирования, то есть этим методом находим Хi,j, где <img src="uploaded/image/2010-3/image272.png" border="0" alt="" width="41" height="21" />, а <img src="uploaded/image/2010-3/image1040.png" border="0" alt="" width="41" height="23" />.</p>
+<p>После определения Хi,j, при <img src="uploaded/image/2010-3/image272.png" border="0" alt="" width="41" height="21" />, <img src="uploaded/image/2010-3/image1032.png" border="0" alt="" width="45" height="23" />, зная расстояние и скорость, определяем потребный парк ВС для узла перевозок А.</p>
+<p>Если к системе ограничений-равенств добавить систему ограничений-равенств (неравенств) по количеству рейсов ВС каждого типа, получим общее количество рейсов на всех маршрутах для каждого типа ВС:</p>
+<p><img src="uploaded/image/2010-3/image1044.png" border="0" alt="" width="63" height="39" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p>Добавляя к системе ограничений систему (3), можно минимизировать общую сумму расходов.  В результате опять получим задачу линейного программирования, которую решаем симплекс-мето&shy;дом. Для решения необходимо задать bi, aij, cij, Kj, <img src="uploaded/image/2010-3/image272.png" border="0" alt="" width="41" height="21" />, <img src="uploaded/image/2010-3/image1032.png" border="0" alt="" width="45" height="23" />.</p>
+<p>На основе метода линейного программирования разработано программное средство для оптимизации парка ВС [2], позволяющее определить экономически выгодное ВС на конкретном маршруте для конкретного авиапредприятия с имеющейся сетью маршрутов и с такими исходными данными, как тип ВС, количество пассажиров в ВС, количество перевезенных пассажиров в месяц, количество рейсов в месяц, крейсерская скорость, дальность полета, расход топлива, выручка в месяц. Кроме того, данное программное средство дает возможность найти гипотетический парк ВС авиапредприятия. Задавая в исходных данных современные типы ВС отечественного и иностранного производства, программа определяет экономически выгодное ВС с учетом вышеперечисленных исходных параметров. За руководителем (менеджером) авиапредприятия остается право выбора того или иного типа ВС.</p>
+<p>Поскольку модель содержит только две переменные, задачу можно решить графическим методом, заключающимся в геометрическом представлении допустимых решений, то есть построении области (допустимых) решений, в которой одновременно удовлетворяются все ограничения модели. В каждой точке, принадлежащей внутренней области, все ограничения выполняются, поэтому решение, соответствующее данным точкам, является допустимым. Пространство решений содержит бесконечное число таких точек, что не мешает найти потребное решение.</p>
+<p>После определения экономически выгодного ВС необходимо вычислить их потребное количество (nпотр) в парке авиапредприятия для осуществления пассажирских перевозок в полном объеме и в установленные сроки по формуле</p>
+<p>nпотр=Q/A,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)</p>
+<p>где Q &ndash; количество перевезенных пассажиров в месяц; А &ndash; производительность ВС.</p>
+<p>Результат определения структуры потребного парка ВС для ФГУП &laquo;Оренбургские авиалинии&raquo; методом линейного программирования представлен в таблице.</p>
+<table border="1" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr>
+<td style="width:29.5%;border:solid black 1.0pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="29%" valign="top">
+<p>Маршрут</p>
+</td>
+<td style="width:19.22%;border:solid black 1.0pt;   border-left:none;mso-border-left-alt:solid black .5pt;mso-border-alt:solid black .5pt;   padding:0cm 1.4pt 0cm 1.4pt" width="19%" valign="top">
+<p>Фактические ВС</p>
+</td>
+<td style="width:22.46%;border:solid black 1.0pt;   border-left:none;mso-border-left-alt:solid black .5pt;mso-border-alt:solid black .5pt;   padding:0cm 1.4pt 0cm 1.4pt" width="22%" valign="top">
+<p>Рекомендуемые ВС</p>
+</td>
+<td style="width:28.82%;border:solid black 1.0pt;   border-left:none;mso-border-left-alt:solid black .5pt;mso-border-alt:solid black .5pt;   padding:0cm 1.4pt 0cm 1.4pt" width="28%" valign="top">
+<p>Потребное количество ВС</p>
+</td>
+</tr>
+<tr>
+<td style="width:29.5%;border:solid black 1.0pt;border-top:none;   mso-border-top-alt:solid black .5pt;mso-border-alt:solid black .5pt;   padding:0cm 1.4pt 0cm 1.4pt" width="29%">
+<p>Оренбург&ndash;Москва&ndash;Оренбург</p>
+</td>
+<td style="width:19.22%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="19%" valign="top">
+<p>Б-737,    Ту-154,    Ту-134</p>
+</td>
+<td style="width:22.46%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="22%" valign="top">
+<p>Б-737</p>
+</td>
+<td style="width:28.82%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="28%" valign="top">
+<p>2,4 (2)</p>
+</td>
+</tr>
+<tr>
+<td style="width:29.5%;border:solid black 1.0pt;border-top:none;   mso-border-top-alt:solid black .5pt;mso-border-alt:solid black .5pt;   padding:0cm 1.4pt 0cm 1.4pt" width="29%">
+<p>Оренбург&ndash;   С.-Петербург&ndash;   Оренбург</p>
+</td>
+<td style="width:19.22%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="19%" valign="top">
+<p>Б-737,    Ту-134</p>
+</td>
+<td style="width:22.46%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="22%" valign="top">
+<p>Б-737</p>
+</td>
+<td style="width:28.82%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="28%" valign="top">
+<p>0,7 (1)</p>
+</td>
+</tr>
+<tr>
+<td style="width:29.5%;border:solid black 1.0pt;border-top:none;   mso-border-top-alt:solid black .5pt;mso-border-alt:solid black .5pt;   padding:0cm 1.4pt 0cm 1.4pt" width="29%">
+<p>Оренбург&ndash;Сочи&ndash;Оренбург</p>
+</td>
+<td style="width:19.22%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="19%" valign="top">
+<p>Б-737</p>
+</td>
+<td style="width:22.46%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="22%" valign="top">
+<p>Б-737</p>
+</td>
+<td style="width:28.82%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="28%" valign="top">
+<p>0,5 (1)</p>
+</td>
+</tr>
+<tr>
+<td style="width:29.5%;border:solid black 1.0pt;border-top:none;   mso-border-top-alt:solid black .5pt;mso-border-alt:solid black .5pt;   padding:0cm 1.4pt 0cm 1.4pt" width="29%">
+<p>Оренбург&ndash;Анапа&ndash;Оренбург</p>
+</td>
+<td style="width:19.22%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="19%" valign="top">
+<p>Ту-134</p>
+</td>
+<td style="width:22.46%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="22%" valign="top">
+<p>Ту-134</p>
+</td>
+<td style="width:28.82%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="28%" valign="top">
+<p>0,7 (1)</p>
+</td>
+</tr>
+<tr>
+<td style="width:29.5%;border:solid black 1.0pt;border-top:none;   mso-border-top-alt:solid black .5pt;mso-border-alt:solid black .5pt;   padding:0cm 1.4pt 0cm 1.4pt" width="29%">
+<p>Оренбург&ndash;Дюссельдорф&ndash;Оренбург</p>
+</td>
+<td style="width:19.22%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="19%" valign="top">
+<p>Б-737</p>
+</td>
+<td style="width:22.46%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="22%" valign="top">
+<p>Ту-134    (Б-737)</p>
+</td>
+<td style="width:28.82%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="28%" valign="top">
+<p>0,3 (0)</p>
+</td>
+</tr>
+<tr>
+<td style="width:29.5%;border:solid black 1.0pt;border-top:none;   mso-border-top-alt:solid black .5pt;mso-border-alt:solid black .5pt;   padding:0cm 1.4pt 0cm 1.4pt" width="29%">
+<p>Оренбург&ndash;Душанбе&ndash;Оренбург</p>
+</td>
+<td style="width:19.22%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="19%" valign="top">
+<p>Б-737,    Ту-154</p>
+</td>
+<td style="width:22.46%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="22%" valign="top">
+<p>Ту-134</p>
+</td>
+<td style="width:28.82%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="28%" valign="top">
+<p>1,6 (2)</p>
+</td>
+</tr>
+<tr>
+<td style="width:29.5%;border:solid black 1.0pt;   border-top:none;mso-border-top-alt:solid black .5pt;mso-border-alt:solid black .5pt;   padding:0cm 1.4pt 0cm 1.4pt" width="29%" valign="top">
+<p>Оренбург&ndash;Худжанд&ndash;Оренбург</p>
+</td>
+<td style="width:19.22%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="19%" valign="top">
+<p>Б-737,    Ту-154</p>
+</td>
+<td style="width:22.46%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="22%" valign="top">
+<p>Ту-154</p>
+</td>
+<td style="width:28.82%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="28%" valign="top">
+<p>0,5 (1)</p>
+</td>
+</tr>
+<tr>
+<td style="width:71.18%;border:solid black 1.0pt;   border-top:none;mso-border-top-alt:solid black .5pt;mso-border-alt:solid black .5pt;   padding:0cm 1.4pt 0cm 1.4pt" colspan="3" width="71%" valign="top">
+<p>Всего</p>
+</td>
+<td style="width:28.82%;border-top:none;border-left:   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;   mso-border-top-alt:solid black .5pt;mso-border-left-alt:solid black .5pt;   mso-border-alt:solid black .5pt;padding:0cm 1.4pt 0cm 1.4pt" width="28%" valign="top">
+<p>6,8   (8)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>На основании изложенного можно выделить следующие отличительные особенности рассмотренного метода, реализация которого предоставляет новые возможности при решении задач по управлению парком ВС авиапредприятий.</p>
+<p>Информация, полученная с помощью симплекс-метода, позволяет дать экономическую интерпретацию итогового решения. В результате решения уравнения (2) с системой ограничений при помощи программного средства выбран наилучший тип ВС из имеющегося парка ВС авиапредприятия на конкретном маршруте. Предлагаемый метод с программным средством для ЭВМ позволяет определить потребный парк ВС как по отдельным авиапредприятиям, так и по федеральным округам. Уравнение (4) дает возможность сформировать потребный парк ВС авиапредприятий из экономически эффективных типов ВС.  В соответствии с таблицей по результатам применения метода линейного программирования потребный парк ВС для ФГУП &laquo;Оренбургские авиалинии&raquo; составляет 8 ВС типа Б737. Экономический эффект от внедрения метода &ndash; увеличение прибыли авиапредприятия в среднем в 1,7 раза за счет уменьшения количества ВС в парке и снижения расхода топлива.</p>
+<p>Результаты работы по определению потребной структуры парка ВС авиапредприятия отражены в научно-методических рекомендациях [3],</p>
+<p>утвержденных к применению Приволжским межрегиональным территориальным управлением воздушного транспорта, ФГУП &laquo;Оренбургские авиалинии&raquo;, Минэкономразвития, промышленной политики и торговли Оренбургской области, ОАО &laquo;Авиакомпания &laquo;Уральские авиалинии&raquo;, ОАО &laquo;ВПК &laquo;НПО машиностроения&raquo;, КБ &laquo;Орион&raquo;. За разработку и внедрение методологии оптимизации парка ВС на примере Оренбургской области ее авторы получили диплом лауреата премии губернатора Оренбургской области за достижения в сфере науки и техники за 2009 г.</p>
+<p>Литература</p>
+<p>1.&nbsp;Припадчев А.Д., Султанов Н.З. Проблемы и перспективы развития рынка гражданской авиации Российской Федерации // Интеллект. Инновации. Инвестиции. 2009. № 1.  С. 27&ndash;31.</p>
+<p>2.&nbsp;Припадчев А.Д., Султанов Н.З., Чеховский А.В. Программа для оптимизации парка воздушных судов. Свид. о гос. регистр. прогр. для ЭВМ №&nbsp;2010611242. Зарегистр. в Реестре программ для ЭВМ 12 февраля 2010 г. М.: Федеральная служба по интеллектуальной собственности, патентам и товарным знакам, 2010.</p>
+<p>3.&nbsp;Припадчев А.Д., Султанов Н.З. Оптимизация парка воздушных судов авиапредприятий: науч.-методич. рекоменд. Оренбург: ОГУ, 2010.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2570</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2570">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 3 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=91">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

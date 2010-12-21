@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Разработка и применение распределенных пакетов прикладных программ</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Разработка и применение распределенных пакетов прикладных программ</h2><div style="margin-bottom:10px"><strong>Development and application of the distributed softfare packages</strong></div>Статья опубликована в выпуске журнала № 2 за 2010 год. [ 27.05.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Обсуждаются вопросы, связанные с организацией распределенных вычислений. В частности, рассматриваются архитектура и принципы функционирования инструментальных средств для автоматизации разработки и применения в распределенной вычислительной среде сложных прикладных программных комплексов.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">The questions linked to the organisation of distributed computing are discussed. In particular, the architecture and principles of functioning of toolkit for automation of development and application in the distributed computing system of applied program complexes are considered. </em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=3992">Опарин Г.А. (oparin@icc.ru)</a> - Институт динамики систем и теории управления Сибирского отделения РАН, г. Иркутск Доктор технический наук Ph.D., <a href="index.php?page=infou&id=3993">Феоктистов А.Г. (agf@icc.ru)</a> - Институт динамики систем и теории управления Сибирского отделения РАН, г. Иркутск Кандидат технический наук Ph.D., <a href="index.php?page=infou&id=5864">Сидоров И.А. (ivan.sidorov@icc.ru)</a> - Институт динамики систем и теории управления Сибирского отделения РАН, г. Иркутск Кандидат технический наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1586">ресурсоемкие задачи</a>, <a href="index.php?page=infotg&id=1157">распределенные вычисления</a>, <a href="index.php?page=infotg&id=1585">пакеты прикладных программ</a>, <a href="index.php?page=infotg&id=1587">концептуальная модель</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1586">resources capacity tasks</a>, <a href="index.php?page=infotg&id=1157">distributed computing</a>, <a href="index.php?page=infotg&id=1585">software package</a>, <a href="index.php?page=infotg&id=1587">conceptual model</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 278<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2527">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Пакеты прикладных программ, базирующиеся на методологиях концептуального и модульного программирования, долгое время являются гибким и эффективным инструментом проведения вычислительных экспериментов при решении сложных задач математического моделирования. Однако наблюдаемое сегодня бурное развитие высокопроизводительной вычислительной техники обусловливает возникновение новых требований к средствам и методам разработки и к применению таких программных комплексов.</p>
+<p>&nbsp;</p>
+<p>В данной работе рассматривается инструментальный комплекс (ИК) DISCOMP, обеспечивающий автоматизацию разработки и применения распределенных пакетов прикладных программ (РППП) &ndash; специализированных систем параллельного модульного программирования. Пакеты данного вида представляют собой сложные программные комплексы, ориентированные на максимальное использование потенциала высокопроизводительных вычислительных систем при решении поставленных задач.</p>
+<p>В качестве среды функционирования РППП может выступать как однородная вычислительная среда (ВС), так и среда с вычислительными узлами, организованными на базе различных программно-аппаратных платформ и управляемыми разными операционными системами. Крупноблочный распределенный алгоритм решения задачи в ВС строится на концептуальной модели предметной области, относящейся к классу вычислительных моделей [1]. Данная модель включает совокупность параметров исследуемой предметной области, модулей РППП, реализующих вычислительные операции с этими параметрами, и отношений между множествами параметров и модулей.</p>
+<p>Модули составляют функциональное наполнение РППП и представляют собой исполняемые в пакетном режиме программы, которые могут быть написаны на различных языках программирования (C, Fortran, Pascal и др.) и являться платформо-зависимыми. Модули размещаются в разных узлах ВС, причем в одном узле ВС может быть установлено несколько модулей. Допустимо включение в состав функционального наполнения нетиражируемых программных комплексов, размещенных в строго определенных узлах ВС, а также унаследованного программного обеспечения, уже не соответствующего современным требованиям, но до сих пор эксплуатируемого из-за трудоемкости его замены.</p>
+<p>Удаленный запуск модулей, распределенный обмен данными между модулями через файлы и мониторинг узлов ВС реализуются средствами системной части РППП.</p>
+<p>При разработке РППП с помощью DISCOMP следует ориентироваться на класс задач, для которых характерны следующие свойства: решение задачи требует проведения расчетов на ЭВМ с использованием больших объемов вычислительных ресурсов (процессорного времени, оперативной памяти, дискового пространства и др.); возможна декомпозиция общей сложной задачи на более простые (с вычислительной точки зрения) подзадачи; процесс решения общей задачи подразумевает распределенное решение набора ее взаимосвязанных подзадач; не предполагается интенсивное взаимодействие между параллельными  вычислительными процессами; задача допускает декомпозицию данных на блоки и независимую параллельную обработку этих блоков; задача выполняется, как правило, по одной слабо меняющейся схеме, требующей динамического управления процессом вычислений. К такому классу относятся, например, задачи c многовариантными расчетами, а также многие переборные задачи.</p>
+<p>Известные системы организации распределенных вычислений (например, кластерная система Condor, программный комплекс BOINC, инструментарий X-COM, пакет Globus Toolkit и др.) позволяют, как правило, осуществить в распределенной ВС решение не связанных между собой задач, допускающих распараллеливание по данным, но не обладают в полной мере всеми необходимыми возможностями для разработки и реализации более сложных распределенных прикладных программных комплексов.</p>
+<p>Описание предметной области РППП в ИК DISCOMP задается в виде структуры S=, где Z &ndash; множество параметров; T &ndash; множество допустимых типов параметров; M &ndash; множество модулей; Y &ndash; множество узлов ВС, в которых размещен тот или иной модуль из M. Множество T включает следующие типы параметров: тип file, используемый для описания параметров неопределенной структуры (блоков произвольного текста большого размера); тип filelist, предназначенный для поддержки распараллеливания по данным (параллельный список параметров типа file); тип fileconst, введенный с целью сокращения объемов передачи данных в ВС (значение параметра типа fileconst один раз передается узлу ВС и затем может неоднократно использоваться при запуске модулей, размещенных в данном узле).</p>
+<p>Содержательно модуль mi&Icirc;M реализует возможность вычисления множества искомых (выходных) параметров модуля по множеству заданных (входных) параметров модуля. Поэлементная обработка параметра zj типа filelist модулем mi выполняется следующим образом: k-й элемент параметра zjk обрабатывается k-м экземпляром модуля mik.</p>
+<p>Постановка содержательной задачи для структуры S задается пользователем пакета в процедурном виде и в общем случае формулируется следующим образом: &laquo;зная S, выполнить Q&raquo;, где Q&Igrave;M представляет собой частично упорядоченную последовательность модулей из M. При установлении частичного порядка множество Q разбивается на n непустых подмножеств. Упорядочение подмножеств осуществляется в зависимости от того, модули какого подмножества должны быть запущены раньше. В рамках каждого n-го подмножества входящие в него модули могут выполняться независимо друг от друга в любой последовательности или параллельно.</p>
+<p>Описания предметной области РППП и постановок задач в DISCOMP представляются в формате, разработанном на основе расширяемого метаязыка XML [2].</p>
+<p>Схемой решения задачи (СРЗ) в ИК DISCOMP является модель крупноблочной программы, отражающей информационно-логическую структуру вычислений в терминах предметной области. СРЗ автоматически строится в параллельно-ярусной форме на основе информационного планирования [3] по постановке задачи из элементов множеств параметров Z; модулей M; событий E, возникающих в процессе выполнения СРЗ; множества операций F, предназначенных для управления процессом выполнения СРЗ; множества специальных операторов O={START, STOP, READ &lt;список параметров&gt;, WRITE &lt;список параметров&gt;, CALL &lt;имя модуля&gt;, FORK, JOIN, TERMI&shy;NATE &lt;список модулей&gt;}. Интерпретация СРЗ представляет собой последовательно-параллель&shy;ный вычислительный процесс выполнения ее операторов.</p>
+<p>ИК DISCOMP реализован на основе архитектуры &laquo;клиент&ndash;сервер&raquo; (см. рисунок). Система управления ВС (серверная часть ИК DISCOMP) поддерживает взаимодействие с подсистемами хранения данных и доступа пользователей к пакету, а также обеспечивает централизованное управление узлами ВС. Серверная часть ИК DISCOMP включает системное ядро, менеджеров вычислительных процессов и ресурсов, диспетчера очереди задач, подсистему журнализации и исполнительную подсистему. Вычислительный клиент реализует процесс выполнения модуля в узле ВС и осуществляет следующие функции: организация соответствующей среды для работы модуля (создание временных директорий, файлов входных и выходных параметров модулей, задание значений переменных окружения, перенаправление ввода/вы&shy;вода и т.д.); получение значений входных параметров модуля из управляющего узла; запуск модуля; контроль процесса его выполнения; отсылка значений выходных параметров в управляющий узел после завершения работы модуля. Система хранения данных используется для структурированного размещения описаний предметной области, постановок задач в формате XML и расчетных данных в виде файлов, а также для предоставления доступа к ним из различных подсистем ИК DISCOMP. Синхронизация процессов чтения/записи данных осуществляется посредством файловых блокировок. Средства доступа пользователей к РППП обеспечивают взаимодействие пользователя с пакетом, управление вычислительными процессами, ввод данных, получение результатов вычислений и пр. ИК DISCOMP предоставляет два способа взаимодействия пользователя с РППП: с помощью набора утилит командной строки и посредством интерактивного пользовательского web-интерфейса.</p>
+<p>Связь распределенных компонентов ИК DISCOMP между собой реализована на основе специально разработанного протокола сетевого взаимодействия, поддерживающего обмен сообщениями, удаленный вызов процедур и передачу больших объемов бинарных данных. Протокол обеспечивает высокопроизводительный обмен данными между компонентами ИК за счет установления между ними непрерывного соединения по TCP-каналу, использования многопоточного режима работы серверной части ИК DISCOMP и минимизации объемов управляющих данных в теле передаваемого сообщения.</p>
+<p>Эффективность решения задач в РППП обеспечивается следующими особенностями работы ИК DISCOMP: возможностью максимального  использования разнородных ресурсов ВС; поддержкой высокопроизводительного взаимодействия между распределенными компонентами DISCOMP; гибкой диспетчеризацией очередями задач; наличием средств оптимизации объемов данных, передаваемых между модулями в процессе решения задач в ВС; возможностью динамического управления процессами решения задач.</p>
+<p><img src="uploaded/image/2010-2/image613.gif" alt="Подпись:  
+Схема взаимодействия компонентов ИК DISCOMP" width="609" height="474" align="left" />Динамическое управление вычислительным процессом в ИК DISCOMP базируется на механизмах обработки событий, возникающих при выполнении СРЗ. Алгоритм процесса управления включает две основные фазы: 1) применение операций, предназначенных для обработки события и выбора нужного воздействия на процесс вычислений; 2) проверка корректности выбранного воздействия системными функциями РППП (контроль выполнения множества ограничений для интерпретатора СРЗ). Управляющие операции задаются разработчиком РППП при описании предметной области, а их вызовы реализуются в виде функций на языке JavaScript и включаются в постановку задачи. Динамическое управление вычислительным процессом позволяет сократить общее время решения задачи за счет устранения вычислительной избыточности на основе анализа текущих результатов счета в узлах ВС.</p>
+<p>Рассмотренные в данной работе инструментальные средства для разработки и применения РППП прошли успешную проверку при решении ряда прикладных задач из разных предметных областей: исследование биоресурсов озера Байкал; моделирование логистических складских систем; задачи оптимального управления летательным аппаратом; решение систем булевых уравнений. Так, использование ИК DISCOMP позволило реализовать технологию крупноблочного распараллеливания SAT-задач в виде пакета D-SAT [4]. С помощью данного пакета был успешно выполнен распределенный криптоанализ генераторов Гиффорда, суммирующего и порогового. Вычислительные эксперименты проводились в распределенной ВС, включающей 20 двухпроцессорных узлов (каждый процессор имеет по 4 ядра, всего 160 ядер).</p>
+<p>В таблице приведены сравнительные результаты криптоанализа на одном ядре и в ВС с применением механизмов устранения вычислительной избыточности (реализованных в ИК DISCOMP) и без них.</p>
+<table border="0" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr height="1">
+<td rowspan="2" width="82" valign="top" bgcolor="white">
+<p>SAT-задачи криптоанализа</p>
+</td>
+<td colspan="3" width="213" height="1" valign="top" bgcolor="white">
+<p>Время решения SAT-задачи</p>
+</td>
+</tr>
+<tr height="1">
+<td width="50" height="1" valign="top" bgcolor="white">
+<p>на одном вычислительном   ядре</p>
+</td>
+<td width="47" height="1" valign="top" bgcolor="white">
+<p>в ВС (160 ядер)</p>
+</td>
+<td width="115" height="1" valign="top" bgcolor="white">
+<p>в ВС (160 ядер)   с устранением   вычислительной    избыточности</p>
+</td>
+</tr>
+<tr height="1">
+<td width="82" height="1">
+<p>Генератор Гиффорда</p>
+</td>
+<td width="50" height="1">
+<p>14&ndash;30 ч.</p>
+</td>
+<td width="47" height="1">
+<p>1&ndash;2 ч.</p>
+</td>
+<td width="115" height="1">
+<p>30&ndash;60 мин.</p>
+</td>
+</tr>
+<tr height="1">
+<td width="82" height="1">
+<p>Суммирующий генератор</p>
+</td>
+<td width="50" height="1">
+<p>20 мин.&ndash;   2 ч.</p>
+</td>
+<td width="47" height="1">
+<p>10&ndash;30 мин.</p>
+</td>
+<td width="115" height="1">
+<p>2&ndash;6 мин.</p>
+</td>
+</tr>
+<tr height="1">
+<td width="82" height="1">
+<p>Пороговый    генератор</p>
+</td>
+<td width="50" height="1">
+<p><img src="uploaded/image/2010-2/image615.gif" border="0" alt="" width="13" height="16" />3 суток</p>
+</td>
+<td width="47" height="1">
+<p>30&ndash;120 мин.</p>
+</td>
+<td width="115" height="1">
+<p>6&ndash;10 мин.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Архитектура и принципы работы ИК DISCOMP, а также способы и средства его реализации обеспечивают широкий спектр функциональных возможностей данного комплекса для  организации распределенных вычислений. Компоненты ИК DISCOMP являются кросс-платфор&shy;менными и позволяют использовать весь потенциал доступных разнородных узлов ВС.</p>
+<p>Представленный в данной работе подход к организации РППП допускает естественное развитие и обобщение для базовых технологий параллельных и распределенных вычислений и новых классов фундаментальных и прикладных исследовательских задач.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Тыугу Э.Х. Концептуальное программирование. М.: Наука, 1984. 256 с.</p>
+<p>2.&nbsp;&nbsp; Феоктистов А.Г., Сидоров И.А. Языковые средства описания распределенных вычислений в инструментальном комплексе DISCOMP // Параллельные вычислительные технологии: тр. Междунар. науч. конф. СПб: Изд-во СПГПУ, 2008. С. 488&ndash;493.</p>
+<p>3.&nbsp;&nbsp; Технологические системы поддержки разработок искусственного интеллекта / Лавров С. [и др.] // Представление знаний в человеко-машинных и робототехнических системах: отчет Проблем. комис. многосторон. сотруднич. соцстран (Науч. вопр. вычислит. техн.). В 3-х т. М.: Изд-во ВЦ АН СССР, ВИНИТИ, 1984. С. 102&ndash;123.</p>
+<p>4.&nbsp;&nbsp; Заикин О.С., Семенов А.А. Технология крупноблочного параллелизма в SAT-задачах // Проблемы управления. 2008. № 1. С. 43&ndash;50.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2527</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2527">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 2 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=90">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

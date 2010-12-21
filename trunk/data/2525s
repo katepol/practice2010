@@ -1,0 +1,605 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Особенности реализации архитектурного шаблона thin web client на платформе java ee 6</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Особенности реализации архитектурного шаблона thin web client на платформе java ee 6</h2><div style="margin-bottom:10px"><strong>Implementation details of an architectural pattern  thin web client on java ee 6 platform</strong></div>Статья опубликована в выпуске журнала № 2 за 2010 год. [ 27.05.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">На конкретном примере рассматривается технология создания полнофункционального интерфейса web-прило-жения на основе шаблона Thin web client с помощью фреймворка Java Server Faces. Для построения пользовательского интерфейса применяются JSF-компоненты Woodstock, расширенные с помощью библиотеки DynamicFaces.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">Article describes implementation example of creation full-featured application interface based on a Thin Web Client pattern, using the Java Server Faces framework. To build the user interface used Woodstock  JSF-components, extended with the DynamicFaces library.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=3953">Аржаев В.И. (arzhaeVI@cps.tver.ru)</a> - НИИ «Центрпрограммсистем», г. Тверь Кандидат технический наук Ph.D., <a href="index.php?page=infou&id=5861">Полыгаев А.C. (arzhaeVI@cps.tver.ru)</a> - НИИ «Центрпрограммсистем», г. Тверь   </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1582">технология асинхронного обновления страниц</a>, <a href="index.php?page=infotg&id=1581">среда разработки</a>, <a href="index.php?page=infotg&id=1580">платформа создания корпоративных автоматизированных систем</a>, <a href="index.php?page=infotg&id=1579">архитектурные шаблоны web-приложения</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1582">asynchronow Javascript and XML</a>, <a href="index.php?page=infotg&id=1581">framework Java Server Faces</a>, <a href="index.php?page=infotg&id=1580">DynamicFaces</a>, <a href="index.php?page=infotg&id=1579">architectural pattern of web-application</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 381<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2525">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Архитектурный шаблон Thin web client (тонкий web-клиент) обычно используется в тех web-приложениях, в которых гарантируется наличие минимальной конфигурации клиента. При этом вся бизнес-логика выполняется на сервере в процессе обработки запроса на получение страницы, сгенерированного браузером клиента.</p>
+<p>&nbsp;</p>
+<p>Термин расширенное клиентское приложение относится к настольным приложениям с расширенными возможностями, в то время как термин приложение для тонкого клиента относится к приложениям, базирующимся на архитектурных шаблонах web-приложений. Обычно расширенные клиенты сложны в развертывании и управлении, с другой стороны, тонкие клиенты не имеют таких широких возможностей пользовательского интерфейса и не так быстро реагируют, как толстые/рас&shy;ширенные клиенты.</p>
+<p>По мере развития технологий возникает новое поколение платформ и сред разработки для создания приложений для конечного пользователя. Асинхронный JavaScript и XML (AJAX), Rich Internet Application (RIA), Rich Client Platform (RCP) и Flash обеспечивают технологию, среду разработки и приемы, которые позволяют разработчикам создать web-приложения для конечного пользователя на основе шаблона тонкий клиент с гораздо более богатыми пользовательскими интерфейсами и повышенной быстротой реакции.</p>
+<p>Для разработки web-приложений используются два подхода: на основе компилируемых модулей и интерпретируемых сценариев.</p>
+<p>Наиболее популярным решением является Java Server Pages (JSP). Страницы JSP, хотя и содержат сценарии, при первом обращении к ним подлежат компиляции и загружаются как сервлеты. Пока серверная страница не изменяется, web-сервер продолжает использовать уже скомпилированный сервлет. Это дает некоторый выигрыш в производительности при использовании JSP по сравнению с другими типами сценариев. При разработке приложения на основе архитектуры тонкого клиента предлагается активно использовать достаточно новую компонентную, событийно-ориентированную технологию создания web-приложений Java Server Faces (JSF). Фактически подобно Swing и AWT приложение JSF &ndash; это каркас разработки приложений, предоставляющий набор стандартных графических компонентов для создания пользовательского интерфейса на стороне сервера.</p>
+<p>Приложение, созданное на основе JSF, состоит из следующих частей:</p>
+<p>-&nbsp;&nbsp;&nbsp; объекты JavaBean, управляющие состоянием и поведением приложения;</p>
+<p>-&nbsp;&nbsp;&nbsp; компоненты GUI с возможностью сохранения состояния;</p>
+<p>-&nbsp;&nbsp;&nbsp; классы, реализующие событийную модель, аналогичные используемым при традиционной разработке графических интерфейсов;</p>
+<p>-&nbsp;&nbsp;&nbsp; страницы, выступающие в роли представлений (view) в парадигме модель-представление-контроллер (model-view-controller &ndash; MVC).</p>
+<p>Кроме стандартных, JSF-компонентам доступны дополнительные компоненты, предоставляемые сторонними разработчиками.</p>
+<p>JSF состоит из модели публикации событий; простого контейнера для зависимых компонентов (inversion-of-control (IoC) container); компонентов, реализующих практически все стандартные возможности графических интерфейсов: встраиваемую генерацию интерфейса, валидацию на стороне сервера, конвертирование данных, управление переходами (навигацией) между страницами.</p>
+<p>Являясь компонентной архитектурой, JSF легко расширяется и конфигурируется. Интерфейс JSF-приложения состоит из страниц JSP, которые содержат компоненты, обеспечивающие функциональность интерфейса. JSF не имеет непосредственного отношения к JSP: данная технология лишь использует JSP через специальную библиотеку тегов &ndash; своего рода мост. Жизненный цикл компонент JSF сильно отличается от цикла JSP-страниц. При этом альтернативную технологию управления представлением Facelets гораздо легче использовать вместе с JSF, так как она изначально проектировалась под нужды JSF вместо интеграции JSF и JSP.</p>
+<p>Однако страницы проходят все 6 стадий жизненного цикла JSF, на стороне сервера выполняются требуемые вызовы класса backing bean, который изменяет состояние компонентов и возвращает пользователю обновленную версию страницы. Это достаточно долгий путь для такого простого действия, ведь, чтобы обновить одно текстовое поле на странице, сервер приложения тратит свои ресурсы на ее полную перерисовку.</p>
+<p>К тому же страница в браузере пользователя полностью перезагружается, заставляя самого пользователя ждать ее повторной отрисовки, а разработчика &ndash; озаботиться сохранением состоя&shy;ний остальных визуальных компонентов.</p>
+<p>Такой интерфейс подходит для отображения статичес&shy;кого содержимого, но если стоит задача активного взаимодействия с пользователем, построенные стандартным способом web-страницы перестают напоминать интерфейс настольного приложения.</p>
+<p>Для решения этих задач разработчики web-приложений применяют технологию асинхронного обновления страниц &ndash; Asynchronous Javascript and XML (AJAX).</p>
+<p>Важно то, что появилась возможность усилить данную технологию, поскольку желательно управлять всеми сложностями DOM, JavaScript и CSS-браузера. Таким образом, появляется новый класс web-приложений, предлагающих известное поведение толстого клиента, которое было преобладающим до того, как web стал популярным. Разработка web-приложений RIA (Rich Internet Appli&shy;cation) предоставляет пользователю практику более живого взаимодействия, отсутствует необходимость полностью обновлять страницу для каждой транзакции. Самое важное в данном методе разработки web-приложения &ndash; рациональное использование клиентской стороны JavaScript и/или DHTML с применением асинхронного JavaScript и XML (AJAX) подхода. AJAX сам по себе предоставляет превосходную практику для конечного пользователя, но он основан в большей степени на трудоемком программировании на языке Java&shy;Script. Однако в паре с JSF эта сложность существенно уменьшается посредством инкапсуляции сложного AJAX-JavaScript-кода в JSF-компонент&shy;ную технологию. AJAX позволяет web-клиенту делать запросы к серверу асинхронно, независимо от представления всей страницы конечному пользователю.</p>
+<p>Следовательно, в дополнение к значительному усовершенствованию пользовательского интерфейса AJAX совместно с JSF предусматривает более сложную событийную модель, в которой интерактивные действия основаны на особых UI-событиях в противовес упрощенным событиям HTTP GET и POST, когда вся страница обновляется полностью.</p>
+<p>Применение в качестве сервера приложений GlassFish в составе программного обеспечения поддерживает использование специального расширения DynamicFaces для дополнения функциональности AJAX компонентам Java Server Faces. DynamicFaces обеспечивает дополнительную функциональность любому (не только созданному) компоненту UI, который используется при разработке JSF-приложения. При этом не требуется модифицировать компонент или переписывать фрагменты кода для придания приложению преимуществ технологии AJAX. Кроме того, в большинстве случаев даже нет необходимости прибегать к написанию JavaScript, поскольку Dynamic&shy;Faces обеспечивает компоненты собственным набором библиотек JavaScript, реализующих AJAX. В то же время DynamicFaces сохраняет мощную компонентную модель и специфические стадии жизненного цикла, присущие уникальной технологии JavaServer Faces.</p>
+<p>Рассмотрим основные элементы работы предлагаемого расширения DynamicFaces. Как указывалось ранее, цель применения AJAX состоит в том, чтобы обеспечить асинхронное обновление части страницы в ответ на события, инициируемые пользователем взамен ожидания перезагрузки страницы целиком.</p>
+<p>DynamicFaces направлена на получение преимуществ такой функциональности компонентами JSF при поддержании сложной модели жизненного цикла &laquo;запрос&ndash;отклик&raquo; путем внедрения следующих элементов:</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; пользовательского JSP-тега, именуемого AjaxZone и используемого для идентификации той части дерева компонентов, которой добавляется функциональность AJAX;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; набора функций JavaScript, придающих выбранным компонентам свойства AJAX, чтобы отправить AJAX-запрос серверу, обновить данные дерева элементов модели DOM на клиентском браузере после получения AJAX отклика от сервера (существует возможность использования некоторых из этих функций непосредственно в методах компонентов);</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; набора API, определяющих объекты со стороны сервера и вовлеченных в процесс обработки AJAX-запроса;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; субдерева компонентов, требующих асинхронного обновления на стадиях жизненного цикла, конструирования и отправки AJAX-отклика клиенту.</p>
+<p>Наиболее широко используемыми функциями JavaScript, включенными в DynamicFaces, являются:</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; fireAjaxTransaction &ndash; функция инициализирует AJAX-запрос с набором параметров, указывающим на компоненты асинхронного обновления;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; <img src="uploaded/image/2010-2/image603.gif" alt="Подпись:  
+Рис. 1. Группирование фаз жизненного цикла JSF" width="609" height="312" align="left" />installDeferredAjaxTransaction &ndash; сопоставляет fireAjaxTransaction с элементом DOM, требование fireAjaxTransaction задерживается, что означает вызов только в моменты инициируемых пользователем событий;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; inspectElement &ndash; обращается к элементам, разграниченным тегом AjaxZone, и указывает на тот, который должен представить поведение в стиле AJAX, по умолчанию добавляется к элементам ввода и опциональным элементам.</p>
+<p>Наиболее важными объектами на стороне сервера, участвующими в поддержке обработки AJAX-запроса, создании конструкции и обслуживании доставки AJAX-отклика, являются:</p>
+<p>o&nbsp;&nbsp;&nbsp; PartialTraversalViewRoot &ndash; реализация поль&shy;зовательского ViewRoot, представляющего ту часть дерева компонентов, которая нуждается в асинхронной обработке;</p>
+<p>o&nbsp;&nbsp;&nbsp; PartialTraversalLifecycle &ndash; реализация пользовательского Lifecycle, которая сочетается с выполнением ViewRoot для возвращения соответствующего субдерева компонентов в требуемое время;</p>
+<p>o&nbsp;&nbsp;&nbsp; AsyncResponse &ndash; ссылается на сформатированное XML-сообщение, которое представляет частичное обновление дерева компонентов.</p>
+<p>При использовании расширения DynamicFaces фазы жизненного цикла JSF группируются по функциональности (рис. 1).</p>
+<p>Часть жизненного цикла (execute &ndash; исполнение) выполняется в течение так называемого процесса обработки (post&shy;back) и включает те фазы жизненного цикла, которые обеспечивают преобразование данных, валидацию и обновление объекта модели приложения. Группа фаз обновления (render) возвращает результат выполнения запроса на странице.</p>
+<p>Рассмотрим один из подходов к реализации асинхронной технологии. Чтобы начать использовать компонент DynamicFaces на странице, необходимо подключить дополнительно пространство имен: .</p>
+<p>После чего на странице становятся доступными для использования теги  и . Для асинхронного обновления компонентов страницы создадим Ajax-тран&shy;закцию внутри тега : .</p>
+<p>С помощью свойства inputs указываются компоненты, которые необходимо выполнить на сервере, а свойство render указывает элементы для обновления до завершения запроса. Созданную Ajax-транзакцию можно вызвать с помощью простого JavaScript-кода, который будет исполняться при нажатии на кнопку onClick="DynaFaces.Tx. fire('ajaxTransaction1')".</p>
+<p>Кроме того, Ajax-транзакция вызывается с помощью события onSubmit для формы страницы. Событие произойдет, когда пользователь нажмет на клавишу ENTER. При этом функция onSubmit должна возвращать значение FALSE, чтобы предотвратить обновление страницы при подтверждении формы onSubmit="DynaFaces.Tx.fire('Ajax&shy;Transaction1');returnfalse;".</p>
+<p>Приведенный пример прост. Для иллюстрации потенциала совместного использования JSF с технологией AJAX решим более конкретную задачу.</p>
+<p>Пусть имеется страница, предназначенная для управления учетными записями пользователей. На ней расположены несколько вкладок, позволяющих управлять зарегистрированными в системе пользователями, группами пользователей и аккаунтами. Страница имеет вид, представленный на рисунке 2.</p>
+<p>Для управления учетными записями пользователю необходимо переключаться между вкладками Пользователи, Аккаунты и Группы. При использовании обычных JSF-компонентов каждое переключение между вкладками заставляет сервер полностью перерисовывать страницу и обновлять все находящиеся на ней компоненты.</p>
+<p>Такой подход неудобен как с точки зрения пользователей (необходимо каждый раз при переходе между вкладками ждать полной загрузки страницы), так и с точки зрения производительности: сервер выполняет множество лишних операций, в то время как можно ограничиться обновлением лишь одного компонента .</p>
+<p>Приведем исходный код страницы без использования асинхронной обработки запроса:</p>
+<p>&nbsp;</p>
+<p><!-- Панель навигации --></p>
+<p>&nbsp;</p>
+<div id="centralFragmentHeader">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><!--Серая горизонтальная полоса--></p>
+<p>&nbsp;</p>
+<hr noshade="true" />
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+<p><!-- Панель с закладками  (Пользователи, Аккаунты, Группы)--></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><!--Содержимое вкладки "Пользователи" --></p>
+<p>&nbsp;</p>
+<p><!--Фрагмент с возможностью просмотра  и редактирования пользователей--></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="uploaded/image/2010-2/image605.gif" alt="Подпись:  
+Рис. 2.  JSF страница web-приложения" width="298" height="177" align="left" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p><!-- Содержимое вкладки "Аккаунты" --></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><!--Содержимое вкладки "Группы"--></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><!-- Конец фрагмента--></p>
+<p>&nbsp;</p>
+<p>Для динамического обновления компонента tabSet пользователю необходимо нажать на вкладку и выполнить ряд действий.</p>
+<p>1.&nbsp;Подключить пространство имен, чтобы иметь возможность использовать теги Dynamic&shy;Faces на странице xmlns:df=http://java.sun.com/jsf/ dynamicfaces.</p>
+<p>2.&nbsp;Определить внутри страницы Ajax-транзак&shy;ции для обновления каждой вкладки:</p>
+<p><!-- Ajax-транзакции для фрагмента--></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>3)&nbsp;Связать компонент tabSet со свойством прикрепленного к странице класса:</p>
+<p>&nbsp;</p>
+<p>Для изменения своего состояния компонент tabSet передает новые параметры с помощью GET-запроса к странице, на которой находится. Так как для этого потребуется перезагрузка страницы в браузере, что неприемлемо, сделаем небольшое изменение. К каждой вкладке компонента tabSet, описываемой при помощи тега , добавим событие onClick, по которому будет запускаться соответствующая Ajax-транзакция: &laquo;renderTab1&raquo; &ndash; для первой вкладки, &laquo;renderTab2&raquo; &ndash; для второй и так далее для последующих.</p>
+<p>Пример добавления события для вкладки &laquo;Пользователи&raquo;:</p>
+<p>&nbsp;</p>
+<p>Нетрудно заметить, что при определении транзакций перечисленные в свойстве input идентификаторы компонентов не совпадают с теми, что присвоены вкладкам компонента tabSet. Это сделано потому, что при попытке вызвать код, установленный свойством actionExpression для вкладок, ничего не произойдет, так как при нажатии на вкладку страницы компонент пытается обновить свое состояние с помощью передачи на текущую страницу GET-запроса. Это вызовет неминуемую перезагрузку страницы, поэтому компонент вынесен за пределы тега</p>
+, в результате он срабатывает вхолостую.
+<p>&nbsp;</p>
+<p>Чтобы все-таки обновить состояние компонентов, необходимо выполнить на сервере код, отображающий выбранную пользователем вкладку. Для этого на странице созданы три скрытые кнопки (по числу вкладок), методы которых и будем вызывать.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>С каждой из созданных кнопок агрегирован код следующего вида:</p>
+<p>&nbsp;&nbsp;&nbsp; public String tab3_action() {</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; usersTabSet.setSelected("groupsTab");</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return null;</p>
+<p>&nbsp;&nbsp;&nbsp; }</p>
+<p>Приведенный код указывает компоненты tabSet, имя вкладки, которую следует отобразить на данный момент.</p>
+<p>Заново построим пример и развернем на сервере приложений.</p>
+<p>Пользователь, открывший эту страницу в браузере, никаких внешних изменений не заметит, за исключением одного: вкладки быстро и удобно переключаются без ожидания обновления страницы. Теперь можно полноценно работать с приложением, интерфейс которого функционально не отличается от интерфейса обычного настольного приложения.</p>
+<p>Приведем фрагмент кода страницы, полученной в результате добавления к компонентам JSF Ajax-функциональности:</p>
+<p><!--Панель с закладками  (Пользователи, Аккаунты, Группы)--></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><!--Содержимое вкладки "Пользователи"--></p>
+<p>&nbsp;</p>
+<p><!--Фрагмент с возможностью просмотра  и редактирования пользователей--></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><!-- Содержимое вкладки "Аккаунты" --></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><!-- Содержимое вкладки "Группы" --></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!-- Конец фрагмента--></p>
+<p>Подводя итоги реализации web-приложения на основе платформы Java EE 6 с использованием JSF и DynamicFaces, можно утверждать, что технология JSF с расширением DynamicFaces позволяет создавать web-приложения, функционально не отличающиеся от своих настольных аналогов, увеличить скорость работы web-приложения, сократив тем самым время реакции за счет группирования фаз жизненного цикла компонентов и их точечного обновления, а также снизить нагрузку на сервер приложений, заставляя его обновлять отдельные компоненты интерфейса вместо целых страниц.</p>
+<p>Литература</p>
+<p>1.&nbsp;Создание корпоративных систем на основе Java 2 Enterprise Edition. Руководство разработчика; пер. с англ. М.: Издат. дом &laquo;Вильямс&raquo;, 2001. 1184 с.</p>
+<p>2.&nbsp;Jonas J. Pro JSF and Ajax. Building Rich Internet Components / Jonas Jacobi, John R. Fallows. Изд-во &laquo;Apress&raquo;, 2006.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2525</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2525">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 2 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=90">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

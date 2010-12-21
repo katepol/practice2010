@@ -1,0 +1,653 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Разработка и исследование гибридного метода генетического программирования</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Разработка и исследование гибридного метода генетического программирования</h2><div style="margin-bottom:10px"><strong>Implementation and investigation of hybryd genetic programming method</strong></div>Статья опубликована в выпуске журнала № 3 за 2010 год. [ 07.09.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Предложен новый подход к решению задач символьной регрессии, включающий в себя стандартный метод генетического программирования и разработанную процедуру локального поиска на структуре решения. Приведены результаты исследования рассматриваемого подхода на наборе тестовых функций. Изложены результаты апробации подхода на реальной задаче моделирования процесса рудно-термической плавки. </em><br /><strong>Abstract:</strong><em style="font-size:8pt">A new approach for solving symbolic regression problems is proposed. It consists of standard method of genetic programming and developed procedure of local search on the structure of the solution. The results of investigation of this approach on a set of test functions are presented. The results of testing the approach on the real problem of ore-thermal melting process modeling are also presented in the article.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=5522">Семенкин Е.С. (styugin@rambler.ru)</a> - Сибирский государственный аэрокосмический университет им. академика М.Ф. Решетнева, г. Красноярск Доктор технический наук Ph.D., <a href="index.php?page=infou&id=5886">Бухтояров В.В. (vladber@list.ru)</a> - Сибирский государственный аэрокосмический  университет им. академика М.Ф. Решетнева, г. Красноярск   </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1634">эволюционные алгоритмы</a>, <a href="index.php?page=infotg&id=1637">рудно-термическая плавка</a>, <a href="index.php?page=infotg&id=14">моделирование</a>, <a href="index.php?page=infotg&id=1636">локальный поиск</a>, <a href="index.php?page=infotg&id=1635">генетическое программирование</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1634">evolutionary algorithms</a>, <a href="index.php?page=infotg&id=1637">ore-thermal melting</a>, <a href="index.php?page=infotg&id=14">modeling</a>, <a href="index.php?page=infotg&id=1636">local search</a>, <a href="index.php?page=infotg&id=1635">genetic programming</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 272<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2554">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Для исследования характеристик практически любого процесса математическими методами, включая машинные, должна быть проведена формализация этого процесса, то есть построена математическая модель. Необходимость построения модели, в частности, может быть обусловлена невозможностью активного экспериментирования с объектом или чрезвычайной дороговизной постановки экспериментов на таком объекте. Исследование с помощью моделей зачастую оказывается единственно возможным способом изучения и решения важнейших практических задач. Математические модели позволяют воспроизводить реальные процессы, их структуру, свойства и поведение. С их помощью можно получить параметры и характеристики системы и ее отдельных подсистем значительно проще, быстрее и экономичнее, чем при исследовании реальной системы.</p>
+<p>&nbsp;</p>
+<p>Построение модели для исследования сложных процессов и систем само по себе становится сложным процессом, требующим значительных усилий, направленных на нахождение функциональных зависимостей между входными и выходными переменными, особенно если требуется найти эти зависимости в аналитическом виде.</p>
+<p>В большинстве численных методов идентификации (регрессионный анализ, непараметрические и нейросетевые методы) для построения зависимостей, аппроксимирующих экспериментальные данные, используют регрессионные модели. Одним из недостатков упомянутых численных методов является то, что построенная при их помощи модель по сути является моделью черного ящика. Преодолеть этот недостаток можно за счет сведения исходной задачи к задаче символьной регрессии и последующего ее решения подходящими методами. Задача символьной регрессии заключается в нахождении в символьной форме математического выражения, аппроксимирующего зависимость между входными и соответствующими им выходными переменными исследуемого процесса или системы. Полезным свойством решения задачи символьной регрессии представляется то, что полученное решение, помимо собственно вычислительной процедуры, является символьным математическим выражением &ndash; формулой, которая может быть подвергнута содержательному анализу, а затем упрощена либо уточнена. На современном этапе методы решения задачи символьной регрессии не разработаны достаточно хорошо. Метод генетического программирования &ndash; один из самых многообещающих подходов в данном направлении [1].</p>
+<p>В настоящей статье рассматривается постановка задачи символьной регрессии, а также предлагается существенная модификация стандартного алгоритма генетического программирования, повышающая эффективность решения задач символьной регрессии методом генетического программирования за счет совершенствования процедуры синтеза структуры модели и более тонкой настройки ее параметров с помощью эволюционных алгоритмов [2].</p>
+<p>Рассмотрим постановку задачи символьной регрессии. Пусть имеются наблюдения входных и выходных переменных исследуемого процесса V=(xi, yi), <img src="uploaded/image/2010-3/image272.png" border="0" alt="" width="41" height="21" />, n &ndash; объем выборки наблюдений. Известно, что существует зависимость y=f(x), связывающая входные и выходные переменные исследуемого процесса, однако вид и структура зависимости неизвестны.</p>
+<p>Необходимо по имеющейся выборке наблюдений V найти в символьной форме математическое выражение <img src="uploaded/image/2010-3/image274.png" border="0" alt="" width="47" height="23" />, аппроксимирующее зависимость между входными и выходными переменными. Символьное математическое выражение (формула, связывающая входные и выходные параметры процесса) должно по возможности наиболее точно соответствовать реальной зависимости.</p>
+<p>В качестве критерия оптимальности построенной регрессионной модели может использоваться, например, величина относительной средней ошибки моделирования по выборке:</p>
+<p><img src="uploaded/image/2010-3/image276.png" border="0" alt="" width="191" height="40" />,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+<p>где i &ndash; номер наблюдения в выборке, <img src="uploaded/image/2010-3/image272.png" border="0" alt="" width="41" height="21" />; ymax и ymin &ndash; максимальное и минимальное значения выходного параметра.</p>
+<p>Основная идея, используемая при решении задачи символьной регрессии методом генетического программирования, состоит в том, чтобы с помощью программной реализации процедур, имитирующих эволюционные процессы, из случайно сгенерированного множества функциональных зависимостей получить зависимость, хорошо описывающую данные, представленные в исходных выборках, в идеале совпадающую с подлинной. Сам метод генетического программирования представляет собой некоторое расширение идей, заложенных в генетических алгоритмах [3]. В ряде исследований генетических алгоритмов была предложена и успешно апробирована схема их гибридизации [4]. Ввиду указанной схожести подходов, используемых в генетических алгоритмах и генетическом программировании, становится очевидным, что идеи, лежащие в основе гибридного генетического алгоритма, можно использовать и в генетическом программировании.</p>
+<p>С этой целью была разработана специальная процедура локального поиска на структуре решения [5]. Опишем ее подробнее.</p>
+<p>1.&nbsp;&nbsp; Отбор наиболее перспективных с точки зрения решаемой задачи индивидов текущего поколения. Обычно отбирается заданное количество индивидов, имеющих наибольшее значение функции пригодности.</p>
+<p>2.&nbsp;&nbsp; Применение к отобранным индивидам процедуры локального поиска. Локальный поиск осуществляется на заданном числе r вершин дерева, которыми представлено исходное решение. Вершины дерева выбираются случайно с равной вероятностью <img src="uploaded/image/2010-3/image279.png" border="0" alt="" width="39" height="36" />, где i &ndash; номер вершины, <img src="uploaded/image/2010-3/image281.png" border="0" alt="" width="40" height="21" />; s &ndash; число вершин в дереве.</p>
+<p>Поиск осуществляется следующим образом:</p>
+<p>-&nbsp;&nbsp;&nbsp; значение в выбранной вершине дерева заменяется новым в соответствии с правилами для локального поиска в генетическом программировании [5];</p>
+<p>-&nbsp;&nbsp;&nbsp; вычисляется значение функции пригодности индивида, измененного на предыдущем шаге;</p>
+<p>-&nbsp;&nbsp;&nbsp; если пригодность измененного индивида выше пригодности исходного индивида, то шаг поиска считается успешным, новое содержание вершины дерева фиксируется; иначе шаг поиска считается неудачным, вершине возвращается исходное значение;</p>
+<p>-&nbsp;&nbsp;&nbsp; переходим к новому шагу локального поиска (к началу п. 2), если число шагов не превышает r, иначе поиск останавливается.</p>
+<p>3.&nbsp;&nbsp; Возвращение индивидов в исходную популяцию для применения к ним операторов стандартного метода генетического программирования. Индивид возвращается в популяцию таким, каким он стал после применения локального  поиска, и с новым значением функции пригодности.</p>
+<p>Операторы селекции, скрещивания и мутации в гибридном алгоритме генетического программирования применяются аналогично соответствующим операторам стандартного метода генетического программирования.</p>
+<p>Гибридизация стандартного метода генетического программирования не исключает возможности настройки параметров модели с помощью эволюционных алгоритмов оптимизации. В общем случае получаем модификацию метода генетического программирования, включающую в себя идеи и операторы стандартного метода генетического программирования, локального поиска на структуре решения (дерева) и эволюционных алгоритмов оптимизации.</p>
+<p>Общая схема гибридного алгоритма генети- ческого программирования представлена на рисунке 1.</p>
+<p>Для оценки эффективности предлагаемого метода гибридного генетического программирования был проведен ряд численных экспериментов.  В качестве конкурирующих подходов в исследования включен стандартный метод генетического программирования (далее на рисунках и в таблицах он обозначен как Стандартный МГП).</p>
+<p>При сравнительном исследовании эффективности использовались параметры методов, определенные на стадии предварительной оценки эффективности разработанных алгоритмов и на основе предыдущего опыта применения метода генетического программирования.</p>
+<p>В качестве общего для всех задач критерия останова использовалось условие достижения уровня относительной ошибки моделирования либо выполнение заданного максимального числа вычислений функции пригодности.</p>
+<p>Численные эксперименты проводились с помощью разработанной программной системы &laquo;Моделирование: гибридный метод генетического программирования&raquo;, в которой реализованы исследуемые методы [6].</p>
+<p>Для каждой задачи максимальное число вычислений функции пригодности для выполнения остановки выбиралось исходя из результатов предварительного исследования метода генетического программирования на этой задаче.</p>
+<p>Эффективность методов оценивалась по критерию надежности, который определялся как отношение числа запусков, в которых была достигнута заданная точность аппроксимации исходных данных, к общему числу запусков. При этом максимальное число вычислений функции пригодности не должно превышать заданное в критерии останова. Статистика для получения оценок надежности набиралась по 50 запускам каждого из рассмотренных методов. Значимость в различиях результатов алгоритмов проверялась методами ANOVA. Проверка выполнялась при уровне значимости &alpha;=0,05.</p>
+<p><img src="uploaded/image/2010-3/image283.png" alt="Подпись:  
+Рис. 1. Блок-схема гибридного алгоритма
+ генетического программирования" width="302" height="208" align="left" />Описание тестовых задач приведено в табли- це 1. В таблице 2 представлены результаты сравнительного исследования эффективности, полученные для рассматриваемых модификаций метода генетического программирования на тестовых задачах. Жирным шрифтом выделен метод, победивший на тестовой задаче, то есть статистически значимо превосходящий по надежности конкурирующий метод.</p>
+<p>Разработанный гибридный метод генетического программирования на шести из семи рассмотренных тестовых задачах оказался значительно эффективнее стандартного подхода.</p>
+<p>Одной из практических задач, на которой апробировались разработанные методы и оценивалась их эффективность, являлась задача моделирования процесса рудно-термической плавки (РТП) [7].</p>
+<p><img src="uploaded/image/2010-3/image305.png" alt="Подпись: Таблица 1 
+Тестовые задачи
+№ 
+задачи	Моделируемая функция	Интервал 
+варьирования 
+переменных	Функциональ-ное множество	Объем 
+выборки
+1	 
+ 
+ 
+100
+2	 
+ 
+ 
+100
+3	 
+ 
+ 
+200
+4	Функция Растригина:
+ 
+ 
+ 
+200
+5	 
+ 
+ 
+200
+6	Функция Розенброка:
+ 
+ 
+ 
+200
+7	 
+ 
+ 
+300" width="612" height="316" align="left" />Исходные данные задачи следующие: имеются выборки данных, характеризующих эффективность работы печи рудно-термической плавки. В качестве управляющих параметров (входных воздействий) <img src="uploaded/image/2010-3/image307.png" border="0" alt="" width="14" height="20" />, <img src="uploaded/image/2010-3/image309.png" border="0" alt="" width="40" height="21" />, используются электрические параметры и загрузка шихты по отдельным составляющим, так как именно эти входные параметры влияют на процессы в печи и, кроме того, предоставляют возможность непрерывно получать достоверную информацию о них.</p>
+<p>Таблица 2</p>
+<p>Результаты тестирования</p>
+<table border="0" cellspacing="0" cellpadding="0" width="297">
+<tbody>
+<tr>
+<td width="83">
+<p>Тестовая      задача</p>
+</td>
+<td width="107">
+<p>Стандартный   МГП</p>
+</td>
+<td width="107">
+<p>Гибридный   МГП</p>
+</td>
+</tr>
+<tr>
+<td width="83">
+<p>1</p>
+</td>
+<td width="107">
+<p>0,6</p>
+</td>
+<td width="107">
+<p>0,95</p>
+</td>
+</tr>
+<tr>
+<td width="83">
+<p>2</p>
+</td>
+<td width="107">
+<p>0,9</p>
+</td>
+<td width="107">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="83">
+<p>3</p>
+</td>
+<td width="107">
+<p>0,5</p>
+</td>
+<td width="107">
+<p>0,9</p>
+</td>
+</tr>
+<tr>
+<td width="83">
+<p>4</p>
+</td>
+<td width="107">
+<p>0,45</p>
+</td>
+<td width="107">
+<p>0,95</p>
+</td>
+</tr>
+<tr>
+<td width="83">
+<p>5</p>
+</td>
+<td width="107">
+<p>0,95</p>
+</td>
+<td width="107">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td width="83">
+<p>6</p>
+</td>
+<td width="107">
+<p>0,6</p>
+</td>
+<td width="107">
+<p>0,95</p>
+</td>
+</tr>
+<tr>
+<td width="83">
+<p>7</p>
+</td>
+<td width="107">
+<p>0,45</p>
+</td>
+<td width="107">
+<p>0,85</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Известно, что существует зависимость, связывающая входные и выходные параметры процесса РТП:</p>
+<p><img src="uploaded/image/2010-3/image311.png" border="0" alt="" width="108" height="25" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)</p>
+<p>Однако вид и структура этой зависимости неизвестны. Необходимо по имеющимся выборкам наблюдений восстановить в символьном виде функциональную зависимость, характеризующую процесс РТП:</p>
+<p><img src="uploaded/image/2010-3/image313.png" border="0" alt="" width="108" height="25" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p>В качестве критерия, позволяющего оценить построенную регрессионную модель, выберем критерий (1). Очевидно, что повышение качества получаемой регрессионной модели требует минимизации этого критерия:</p>
+<p><img src="uploaded/image/2010-3/image315.png" border="0" alt="" width="76" height="21" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)</p>
+<p>Значения параметров метода генетического программирования для решения предложенной задачи были определены на основе предварительного анализа эффективности работы рассматриваемого метода на тестовых задачах.</p>
+<p>Выборка наблюдений за процессом РТП состоит из 47 элементов. При решении задачи выборка была разбита случайным образом на две части: на обучающую выборку, включающую в себя 37 элементов, и на экзаменующую, состоящую из 10 элементов.</p>
+<p>Лучшее решение, найденное с помощью разработанного подхода, имеет следующий вид:</p>
+<p><img src="uploaded/image/2010-3/image317.png" border="0" alt="" width="268" height="27" /></p>
+<p><img src="uploaded/image/2010-3/image319.png" border="0" alt="" width="255" height="91" />.</p>
+<p>Для обучающей выборки относительная ошибка оценивания составила 8,8&nbsp;%, а для экзаменующей выборки относительная ошибка прогнозирования составила 10,2&nbsp;%. Результаты моделирования предложенным алгоритмом генетического программирования сопоставимы с результатами нейросетевого моделирования, полученными группой аналитиков [7].</p>
+<p>Сравнительный график прогнозируемой концентрации никеля, вычисленной на модели, и реальных данных в точках обучающей выборки, приведен на рисунке 2.</p>
+<p>Сравнительный график концентрации никеля, спрогнозированной с помощью модели, и реальных данных в точках экзаменующей выборки приведен на рисунке 3.</p>
+<p><img src="uploaded/image/2010-3/image322.png" alt="Подпись:  
+Рис. 2. График прогнозируемой концентрации никеля и реальных данных в точках обучающей выборки 
+ 
+Рис. 3. График прогнозируемой концентрации никеля и реальных данных в точках экзаменующей выборки" width="613" height="434" align="left" />Полученные результаты решения задачи моделирования процесса РТП можно считать вполне удовлетворительными. Достигнутое значение относительной ошибки прогноза концентрации никеля в отработанном шлаке равно 10&nbsp;%, что является достаточно хорошим показателем ввиду чрезвычайной ограниченности объема выборок наблюдений, отсутствия какой-либо априорной информации о структуре модели исследуемого процесса, о законах распределения помех. Все это, безусловно, затрудняет процесс построения модели РТП. Тем не менее, разработанный гибридный алгоритм генетического программирования доказал свою работоспособность в условиях ограниченности вычислительных ресурсов и может использоваться при необходимости быстро получить с приемлемой точностью аналитический вид зависимости, связывающей входные и выходные переменные, и построить прогноз состояния исследуемого процесса, значений его выходных переменных.</p>
+<p>В целом анализ результатов решения рассмотренных задач позволяет утверждать, что совместное использование предложенного гибридного алгоритма генетического программирования и эволюционных алгоритмов настройки параметров модели позволило создать перспективный метод построения символьных регрессионных моделей, включающий в себя средства как структурной, так и параметрической оптимизации модели.</p>
+<p>Развитие используемого подхода к решению задачи символьной регрессии и совместное его использование с другими методами автоматического проектирования интеллектуальных технологий является перспективным направлением повышения эффективности автоматизации построения моделей объектов и систем.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Koza John R. The Genetic Programming Paradigm: Genetically Breeding Populations of Computer Programs to Solve Problems. Cambridge, MA: MIT Press, 1992.</p>
+<p>2.&nbsp;&nbsp; Holland J.H. Adaptation in natural and artificial systems. Ann Arbor. MI: University of Michigan Press, 1975.</p>
+<p>3.&nbsp;&nbsp; Goldberg D.E. Genetic algorithms in search, optimization and machine learning. Reading, MA: Addison-Wesley, 1989.</p>
+<p>4.&nbsp;&nbsp; Бежитский С.С., Семенкин Е.С., Семенкина О.Э. Гибридный эволюционный алгоритм для задач выбора эффективных вариантов систем управления // Автоматизация и современные технологии. 2005. № 11. С. 24&ndash;31.</p>
+<p>5.&nbsp;&nbsp; Бухтояров В.В. Разработка гибридного метода генетического программирования // Решетневские чтения: матер. XII Междунар. науч. конф., посвященной памяти генерального конструктора ракетно-космических систем акад. М.Ф. Решетнева (ноябрь 2008 г., Красноярск). Красноярск: РИО СибГАУ, 2008.</p>
+<p>6.&nbsp;&nbsp; Бухтояров В.В. Моделирование: гибридный алгоритм генетического программирования // Свид. о гос. рег.  №&nbsp;2010613317. М.: ФИПС, 2010.</p>
+<p>7.&nbsp;&nbsp; Гонебная О.Е. Экспертная система рудно-термической плавки: дис. &hellip; канд. техн. наук. Красноярск: ГУЦМиЗ, 2004. 136 с.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2554</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2554">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 3 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=91">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

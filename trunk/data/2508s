@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Технология автоматизированной защиты информационного обслуживания через интернет</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Технология автоматизированной защиты информационного обслуживания через интернет</h2><div style="margin-bottom:10px"><strong>Automated protection technology  of the internet information service</strong></div>Статья опубликована в выпуске журнала № 2 за 2010 год. [ 27.05.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Рассматривается технология построения автоматизированных информационных систем реального времени и динамического криптографирования информационных ресурсов в масштабе Интернета. Представленная технология существенно опережает по производительности, уровню автоматизации и безопасности известные технологии ин-формационного обслуживания, соблюдаемые в рамках стандарта HTML/XML и концепции сервера приложений.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">This article is devoted to the technology of construction of the automated information real-time systems on the Internet scale with dynamic encryption of the information resources. The submitted technology essentially outstrips the known technologies of information service, adhering to standard HTML/XML and the concept of application server, in effectivity, throughput, the level of automation and safety.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=5839">Алексеевский М.В. (alemivabol@istranet.ru)</a> - Научно-производственное предприятие  Всероссийский научно-исследовательский институт электромеханики, г. Москва Кандидат физико-математических наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=449">субд</a>, <a href="index.php?page=infotg&id=1518">криптографическая защита</a>, <a href="index.php?page=infotg&id=266">интернет</a>, <a href="index.php?page=infotg&id=1464">автоматизированная информационная система</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=449">DBMS</a>, <a href="index.php?page=infotg&id=1518">encryption</a>, <a href="index.php?page=infotg&id=266">Internet</a>, <a href="index.php?page=infotg&id=1464">automated information system</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 323<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2508">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Применение мер криптографической защиты к конфиденциальным электронным документам является необходимым условием их безопасности. Надежно обеспечить привилегированность доступа к корпоративным автоматизированным информационным системам масштаба Интернета и реального времени (АИС МИР) на базе локализованного в Интернете источника данных можно лишь с использованием мер криптографической защиты эксплуатируемых информационных ресурсов.</p>
+<p>&nbsp;</p>
+<p>Под АИС МИР будем понимать введенное в эксплуатацию программное обеспечение, реализующее графический пользовательский интерфейс в порядке управления доступом к источнику данных через Интернет в режиме реального времени. В данной работе представлена технологически законченная и успешно апробированная концепция прогрессивного программно-инструментального обслуживания жизненного цикла производства, модернизации и эксплуатации АИС МИР в едином процессе управления организованными на базе мировых стандартов HTTP (W3C) и SQL (ANSI, ISO) информационными ресурсами, обеспеченными обязательной криптографической защитой [1,&nbsp;2]. В принятой концепции, как и в традиционной реализации АИС МИР [3, 4], используется трехзвенная архитектура подключения к источнику данных через Интернет: КЛИЕНТ &harr; Исполняемый модуль &harr; СУБД.</p>
+<p>Клиентом является оператор рабочей станции, подключенной к Интернету, с загруженным менеджером гипертекста режима эксплуатации (МЕГРЭ) полезных данных, обслуживаемых по HTTP-протоколу обращения в графическом интерфейсе управления.</p>
+<p>Исполняемые модули обработки и сопровождения транзита (МОСТ) устанавливаются на позиции монтирования конфигурации шлюза HTTP-сервера (Apache, IIS и др.).</p>
+<p>СУБД использует SQL-инструкции, поступающие преимущественно по протоколу TCP/IP [1] на заданный порт прослушивания в режиме параллельных транзакций.</p>
+<p>Криптографическая защита в HTML/XML реализации АИС МИР</p>
+<p>Криптографической защитой должны быть обеспечены все пользовательские обращения в Интернет в режиме динамической загрузки (выгрузки) программных модулей шифрования (дедешифрования). Поэтому ресурс каждого обращения без ущемления полноты суммарной информа-</p>
+<p>онной отдачи должен находиться в разумных пределах заданных ограничений для поддержания характерных темпов реального времени оперативного информационного обслуживания. В противном случае время, затрачиваемое на динамическую обработку интернет-ресурсов, может оказаться непомерно большим и в лучшем случае восприниматься пользователем как зависание сеанса информационного обслуживания, а в худшем приводить к действительному конфликту с установленными системными перерывами во времени наступления ожидаемого результата. Это в полной мере относится к корпоративному информационному обслуживанию по стандарту HTML/XML, сопряженному с нерациональным расходованием системных ресурсов в расчете на каждое пользовательское обращение (рис. 1).</p>
+<p>В программном обеспечении трехзвенной архитектуры подключения по стандарту HTML/XML на позиции клиента в качестве МЕГРЭ используется обычный web-браузер (IE, Opera, Mozilla и др.). Как видно из рисунка 1, метаданные динамически конструируются в системе МОСТ (EJB, ADO.NET), определяя статью значительных системных расходов [3,&nbsp;4]. Затем полезные данные производятся или обрабатываются в СУБД и компонуются с инструкциями графического интерфейса клиента. Причина избытка ресурсов, загружаемых в web-браузер, в том, что наряду с полезными данными загружаются динамически конструируемые на позиции МОСТ (JSP, ASP.NET) инструкции графического интерфейса. В среднем объем этих инструкций существенно превышает полезные данные. Инструкции поставляются в ответ на каждое обращение пользователя и обычно содержат массированные процедурные включения для восполнения недостаточности непроцедурного инструктирования. Обслуживание процедурных включений в порядке динамической компиляции, сборки и загрузки на выполнение (ДКС, рис. 1) осуществляется службами (JVM, CLR) с отвлечением значительной доли системных ресурсов от прямых задач информационного обслуживания. За исключением ППД процессы ПМД, ПГИ, ДКС совершенно избыточны и истощают системные ресурсы настолько, что с учетом громоздкости web-страниц можно уверенно дать неутешительный прогноз на добавление процессов Ш/ДШ.</p>
+<p><img src="uploaded/image/2010-2/image204.gif" alt="Подпись:  
+ПМД &ndash; производство метаданных, ППД &ndash; производство полезных данных, ПГИ &ndash; производство графического интерфейса, ДКС &ndash; динамическая компиляция и стабилизация, Ш/ДШ &ndash; шифрование/дешифрование. 
+Рис. 1. Принципиальная схема реализации 
+трехзвенной архитектуры подключения 
+по стандарту HTML/XML" width="754" height="253" align="left" />Нарушается единый порядок управления информационными ресурсами. Действительно, модули прикладного программного обеспечения на позиции МОСТ (так называемого сервера приложений) эксплуатируются в режимах добавления, удаления и обновления в едином процессе и наравне с полезными данными в порядке адаптации к естественной эволюции корпоративных проблем управления. Однако если управление полезными данными реализуется в режиме полной автоматизации обслуживания SQL-инструкций на позиции СУБД, управление модулями сервера приложений происходит путем трудоемкого ручного составления кодов на сложных процедурных объектно-ориентированных языках программирования (C#, Java 2, Visual Basic и др.) с применением ручных операций (компиляции, сборки и инсталляции в систему) на позиции МОСТ, во время которых информационное обслуживание прекращается.</p>
+<p>&nbsp;</p>
+<p>Технология КОРИНФ  и оптимальная реализация АИС МИР</p>
+<p>Решение поставленной задачи обеспечивается в рамках концепции оптимального управления информационными ресурсами в Интернете. Эта концепция подробно рассмотрена в [5] и обеспечена программными средствами реализации на основе языка гипертекстового инструктирования режима обслуживания интерфейса конечного пользователя КОРИНФ (корпоративный информатор). В используемой концепции криптографическая защита каждого пользовательского обращения в Интернет реализуется благодаря оптимизации ресурса &ndash; полной редукции структуры интернет-ресурса обращения до уровня набора полезных данных в чистом виде, а также его нормализации &ndash; планирования нормы разовой загрузки полезных данных на этапе конструирования режима обслуживания пользовательского интерфейса.</p>
+<p>Реализация трехзвенной архитектуры подключения в концепции КОРИНФ показана на рисунке 2.</p>
+<p>В приведенной схеме КОРМ обозначает модулированный и структурированный гипертекстовый ресурс, составленный на основе элементов программирования языка КОРИНФ [5], а буквами К, Ф и О обозначены объекты проектирования, принятые в языке КОРИНФ, &ndash; консоль, фильтр и отчет соответственно. Спроектированные картриджи сохраняются на стороне СУБД наравне с полезными данными. В режиме динамической заправки через Интернет на сторону клиента (и последующей автоматической очистки) КОРМ инструктирует МЕГРЭ, обеспечивая пользователю графический интерфейс. Этим достигается оптимизация ресурса обращения, поскольку предварительно загруженный картридж в порядке активизации его объектов предоставляет пользователю возможность управлять полезными данными в чистом виде. Нормализация ресурса обращения достигается благодаря тому, что объекты картриджа являются гипертекстовыми модулями, основу которых составляют блоки параметризованных SQL-инструкций. Активизация объекта подготавливает SQL-инструкцию путем замещения параметров фактическими данными и передает ее на исполнение в СУБД. Возможности языка SQL позволяют без особого труда на этапе конструирования картриджа решить задачу поддержания разовой загрузки запрашиваемых ресурсов в рамках установленных ограничений.</p>
+<p><img src="uploaded/image/2010-2/image206.gif" alt="Подпись:  
+Примечание: И &ndash; инструктор, П &ndash; пользователь.
+Рис. 3. Порядок автоматизации информационного 
+обращения" width="754" height="169" align="left" />Таким образом, соблюдаются условия оптимизации и нормализации ресурса, благоприятствующие применению динамической криптографической защиты на каждое пользовательское обращение. Выбор метода криптографической защиты произвольный, из числа санкционированных к использованию и реализованных в виде подготовленных библиотечных модулей динамической загрузки на выполнение. При тестировании и проверке успешности технологии в целом был использован авторский метод криптографической обработки. При этом в качестве сервера HTTP и СУБД, установленных на общей платформе Linux (Fedora 8 /RED HAT), были отобраны Apache 2.2 и MYSQL 5.0 соответственно. Впрочем, отработанная техника сопряжения позволяет использовать известные СУБД из семейств Oracle, MS SQL Server и InterBase. Во Всероссийском НИИ электромеханики (г. Москва) программное обеспечение трехзвенной архитектуры подключения, реализующее концепцию КОРИНФ, разработано по режимам жизненного цикла детерминируемой АИС МИР. Режим эксплуатации полезных данных обеспечивается компоновкой трехзвенной архитектуры подключения при помощи:</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; <img src="uploaded/image/2010-2/image208.gif" alt="Подпись:  
+Примечание: КОРМ &ndash; картридж объектных ресурсов метаданных, ПД &ndash; полезные данные.
+Рис. 2. Принципиальная схема реализации 
+трехзвенной архитектуры подключения
+согласно концепции КОРИНФ" width="754" height="229" align="left" />программного менеджера МЕГРЭ КОБРА [5], преобразующего гипертекстовые инструкции КОРМ, составленные на языке КОРИНФ, в унифицированный интерфейс конечного пользователя;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; специальных модулей на позиции МОСТ трехзвенной архитектуры подключения, обслуживающих авторизацию, динамическую криптографическую защиту и операции с СУБД, монтируемые в каталог конфигурации шлюза HTTP-сер&shy;вера.</p>
+<p>Режим конструирования обслуживания интерфейса конечного пользователя реализуется программным менеджером гипертекста режима экспресс-программирования (МЕГРЭП) на языке КОРИНФ [5] акселератором КОРИНФ-дизайна (АКОРД).</p>
+<p>Сценарий промышленного автоматизированного информационного обслуживания корпоративных клиентов через Интернет по технологии КОРИНФ показан на рисунке 3.</p>
+<p>МЕГРЭ &ndash; это универсальное средство обслуживания графического интерфейса инструкторов и пользователей в режиме эксплуатации через Интернет объектов СУБД. МЕГРЭП АКОРД [5] используется инструкторами для автоматизированного производства картриджей, которые затем сохраняются на стороне СУБД. Заправленные картриджи эксплуатируются пользователями в порядке управления полезными данными (рис. 3).</p>
+<p>Построение системы безопасности  информационного обслуживания</p>
+<p>На рисунке 4 представлена автоматизированная система обслуживания безопасности интернет-обращения по технологии КОРИНФ.</p>
+<p>Массив байтов, составляющий КЗС, безопасно переводится на сторону СУБД сокрытым заданным образом (индивидуально для каждого клиента) внутри другого массива (контейнера), значительно превосходящего КЗС по длине. КЗС обеспечивает шифрование и дешифрование ресурсов всего сеанса интернет-обращения. Во избежание деградации режима безопасности по каналам локального администрирования БД (рис. 2) заявочные параметры (имена, пароли и др.) и КОРМ сохраняются в БД в зашифрованном виде с помо<img src="uploaded/image/2010-2/image210.gif" alt="Подпись:  
+Примечание: ТЗК &ndash; технология защитного контейнера, ТВК &ndash; технология вложенного ключа, КЗС &ndash; ключ защиты сеанса, КЗЗП &ndash; ключ защиты ЗП (заявочных параметров), КЗУМ &ndash; ключ защиты управляемых метаданных, знаки &laquo;+&raquo; и &laquo;&ndash;&raquo; &ndash; процедуры шифрования и дешифрования соответственно.
+Рис. 4. Система безопасности информационного 
+обслуживания" width="754" height="238" align="left" />щью КЗЗП и КЗУМ соответственно. Согласно ТВК дешифрование происходит на стороне МОСТ, куда КЗЗП и КЗУМ доставляются в зашифрованном виде. Вариант 2 (рис. 4) показывает необходимость синхронизации действий инструктора и пользователя (методами варианта 1) по отношению к КЗУМ, с помощью которого КОРМ шифруется инструктором и сохраняется в базе, а пользователем дешифруется перед заправкой.</p>
+<p>Технологические аспекты стратегии безопасной информатизации России в целом, к сожалению, еще не проработаны, как и системные средства и инструментальные компоненты обслуживания информационного обмена, которые заимствуются у известных иностранных поставщиков программного обеспечения. Происходит очевидное ущемление национальных интересов с превращением отечественных разработчиков информационных систем в зависимых потребителей чужой интеллектуальной собственности из разряда стратегических информационных технологий &ndash; одного из важнейших направлений модернизации России. Представленная автором технология дает шанс отечественным потребителям и производителям услуг крупномасштабной корпоративной информатизации в действительности гарантировать рекордную производительность и безопасность информационного обслуживания.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Семенов Ю.А. Протоколы Интернет. М.: Горячая линия &ndash; Телеком, 2005.</p>
+<p>2.&nbsp;&nbsp; Грабер М. SQL. Описание SQL92, SQL99 и SQLJ. М.: Лори, 2003.</p>
+<p>3.&nbsp;&nbsp; Алур Д., Крупи Д., Малкс Д. Образцы J2EE. Лучшие решения и стратегии проектирования. М.: Лори, 2004.</p>
+<p>4.&nbsp;&nbsp; Чакраборти А., Кранти Ю., Сандху Р. Microsoft .NET Framework. Разработка профессиональных проектов. СПб: BHV, 2003.</p>
+<p>5.&nbsp;&nbsp; Алексеевский М.В. Технология программирования КОБРА/КОРИНФ и корпоративная интернет-информатика. М.: Изд-во МЭИ, 2006.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2508</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2508">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 2 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=90">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Построение адаптивной регулярной сетки трехмерной сцены в реальном режиме времени</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Построение адаптивной регулярной сетки трехмерной сцены в реальном режиме времени</h2><div style="margin-bottom:10px"><strong>Real-time construction of 3d scene’s adaptive regular grid</strong></div>Статья опубликована в выпуске журнала № 4 за 2010 год. [ 09.12.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Предлагаются новые методы и алгоритмы построения и заполнения в реальном режиме времени структуры ус-корения, основанной на регулярной сетке, для системы трассировки лучей в трехмерных виртуальных сценах. Опи-санные методы и алгоритмы используют архитектуру параллельных вычислений CUDA и подходят как для статиче-ских, так и для динамических сцен.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">New real-time methods and algorithms of acceleration structure construction and infill, based on regular grid, for the ray tracing system in three-dimensional virtual scenes are proposed. The described methods and algorithms use CUDA parallel computation architecture and are suitable for both static and dynamic scenes.  </em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Автор: </b><a href="index.php?page=infou&id=4026">Мальцев А.В. ()</a> -    </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1764">трассировка лучей</a>, <a href="index.php?page=infotg&id=1765">структура ускорения</a>, <a href="index.php?page=infotg&id=1766">регулярная сетка</a>, <a href="index.php?page=infotg&id=1044">параллельные вычисления</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1764"></a>, <a href="index.php?page=infotg&id=1765"></a>, <a href="index.php?page=infotg&id=1766"></a>, <a href="index.php?page=infotg&id=1044">parallel computing</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 42<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2608">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Приоритетным направлением в области компьютерной графики является улучшение качества создаваемого компьютером изображения и максимально возможное приближение его к существующей действительности. Один из способов получения так называемого фотореалистичного изображения &ndash; обратная трассировка лучей, которая заключается в прослеживании траектории распространения лучей света между глазом наблюдателя (камерой) и источниками света в трехмерной виртуальной сцене. Основной проблемой данного метода является его огромная вычислительная сложность для сцен с большим количеством полигонов (или объектов, если сцена состоит из параметрических объектов), связанная с необходимостью рассчитывать точную траекторию каждого из десятков миллионов лучей и точку его пересечения с поверхностью треугольника, ближайшего по направлению этого луча от его начала. Простейший подход основывается на тестировании каждого луча с каждым полигоном на предмет их пересечения, но при количестве полигонов, превышающем несколько десятков и сотен тысяч, и высоком разрешении визуализируемой картинки эта задача становится слишком сложной для реализации в реальном режиме времени даже на самых современных компьютерах.</p>
+<p>&nbsp;</p>
+<p>С целью сокращения времени, требуемого для генерации изображения, были разработаны алгоритмы, которые перед выполнением трассировки лучей строят так называемые структуры уско- рения. При этом трассировка одного луча не перебирает все треугольники сцены для проверки пересечения с этим лучом, а с помощью структуры ускорения выбирает из них некоторое подмножество. К наиболее известным типам структур ускорения можно отнести иерархию ограничивающих объемов (BVH), регулярные, иерархические и  нерегулярные сетки, а также kd-деревья. Так, напри&shy;мер, регулярная сетка &ndash; это разбиение всего пространства виртуальной сцены плоскостями, параллельными плоскостям мировой системы координат, на трехмерные ячейки (вокселы) одинакового размера, каждой из которых соответствует список полигонов, пересекающих эту ячейку. Построив сетку виртуальной сцены, для каждого луча можно вычислить последовательность ячеек, через которые он проходит, и тестировать луч на пересечение только с полигонами, принадлежащими этим ячейкам.</p>
+<p>Основным недостатком алгоритмов построения структур ускорения является сложность их адаптации к динамическим сценам, в которых многие объекты могут менять свой размер, положение и ориентацию от кадра к кадру. Проблема заключается в довольно значительных временных затратах, требующихся для создания такой структуры, что приводит к невозможности перестроения ее в каждом кадре.</p>
+<p>В данной статье предлагаются новые методы и алгоритмы создания и заполнения структуры ускорения на основе регулярной сетки, использующие параллельные вычисления на графических процессорах компании nVidia с поддержкой технологии CUDA. Представленные методы и алгоритмы дают возможность на порядок ускорить время построения регулярной сетки для статических сцен и перестраивать ее в реальном режиме времени для динамических.</p>
+<p>Кроме того, для динамических сцен сетка является адаптивной, то есть подстраивается под размеры сцены, которые могут изменяться от кадра к кадру.</p>
+<p>&nbsp;</p>
+<p>Этапы формирования регулярной сетки  для трехмерной сцены</p>
+<p>Построение и заполнение регулярной сетки трехмерной виртуальной сцены, состоящей из полигональных объектов (рис. 1), включают несколько основных этапов.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; Определение ограничивающего параллелепипеда сцены, стороны которого параллельны координатным плоскостям XY, YZ и ZX мировой системы координат WCS (World Coordinate Sys&shy;tem). В дальнейшем ограничивающий параллелепипед сцены (или треугольника), удовлетворяющий приведенным выше условиям, будем называть просто AABB (Axis-Aligned Bounding Box).</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; Разбиение AABB сцены плоскостями, параллельными XY, YZ и ZX, на множество кубических ячеек, называемых вокселами.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; Составление таблицы, хранящей для каждого воксела номера треугольников, с которыми он пересекается.</p>
+<p>Так как в данном случае рассматриваются динамические сцены, в которых многие объекты с течением времени могут менять свое положение, ориентацию и размер (например при морфинге), необходимо в каждом кадре осуществлять перестроение сетки. Для обеспечения реального режима времени составление таблицы, хранящей для каждого воксела номера треугольников, с которыми он пересекается, должно быть реализовано с малыми вычислительными затратами.</p>
+<p><img src="uploaded/image/2010-4/image427.gif" alt="Подпись:  
+Рис. 2" width="298" height="402" align="left" />Существуют два основных подхода к составлению такой таблицы. Первый &ndash; это пройти по всем вокселам и некоторым образом определить относящиеся к ним треугольники, например, перебором всех треугольников для каждого воксела. В этом случае, принимая за элементарную операцию тест пересечения одного полигона с одним вокселом регулярной сетки, получим M&times;N&times;K&times;t операций, где M, N, K &ndash; размерность AABB сцены в вокселах по осям X, Y и Z соответственно; t &ndash; количество треугольников в сцене. Второй подход &ndash; пройти по всем полигонам, определив, какие вокселы каждый из них пересекает. Тогда, если M&ge;N&ge;K, количество элементарных операций будет не больше M&times;N&times;t, поскольку максимально возможное число вокселов, занимаемых одним треугольником, равно M&times;N. Однако в таком случае, чтобы составить таблицу, хранящую для каждого воксела номера треугольников, с которыми он пересекается, необходим свой быстрый и эффективный алгоритм.</p>
+<p>В данной работе предлагается решение, в основе которого лежит второй из описанных выше подходов, позволяющее обеспечить построение и заполнение регулярной сетки динамической сцены в реальном режиме времени.</p>
+<p>Алгоритм построения и заполнения  регулярной сетки сцены</p>
+<p><img src="uploaded/image/2010-4/image429.gif" alt="Подпись:  
+Рис. 1" width="293" height="205" align="left" />На рисунке 2 представлена общая схема предлагаемого алгоритма построения регулярной сетки трехмерной виртуальной сцены. Поскольку этот процесс весьма трудоемкий, в основе данного алгоритма лежит использование параллельных вычислений с помощью многоядерных процессоров фирмы nVidia с поддержкой технологии CUDA. Так, например, чип gt200b содержит 240 ядер, что позволяет одновременно обрабатывать 240 потоков в режиме SIMD (Single Instruction, Multiple Data). Подробная информация об архитектуре таких процессоров и основных принципах программирования с применением технологии CUDA изложена в [1].</p>
+<p>Идею предлагаемого алгоритма можно описать следующим образом. Для начала необходимо загрузить в память видеоадаптера с поддержкой технологии CUDA координаты вершин треугольников, представленные в локальных системах тех объектов, которым они принадлежат, и матрицы перехода из локальных систем в мировую WCS. Далее нужно найти координаты всех загруженных вершин в мировой системе координат WCS и определить AABB каждого треугольника сцены в виде пары минимальной B0 и максимальной B1 вершин бокса. Это делается с помощью параллельной обработки (рис. 2, ядро 1; под термином &laquo;ядро&raquo; понимается программа для графического процессора, выполняемая на всех его аппаратных ядрах в режиме SIMD), где каждый поток отвечает за свой треугольник.</p>
+<p>Исходя из рассчитанных AABB треугольников, находим минимальную Bmin и максимальную Bmax точки для AABB всей сцены также с помощью параллельной обработки (рис. 2, ядро 2).</p>
+<p><img src="uploaded/image/2010-4/image430.gif" alt="Подпись: T-массив номеров треугольников
+0	0	0	1	2	2	2	3	3	&hellip;	100	101	101
+C-массив номеров ячеек сетки сцены
+3	4	5	0	0	1	2	4	5	&hellip;	8	0	1
+Рис. 3" width="297" height="106" align="left" />Графический процессор (GPU) фирмы nVidia содержит PM мультипроцессоров, каждый из которых состоит из PU универсальных процессоров. Числа PM и PU зависят от архитектуры чипа GPU. Разобьем совокупности ранее найденных вершин B0,i и B1,i (i&Icirc;[0, n-1]) AABB всех n треугольников сцены на группы по h элементов, где h &ndash; максимально возможное число потоков в GPU. Каждая группа будет обрабатываться на одном из PM мультипроцессоров. Для чипа gt200b (GTX280) PM=30, PU=8, h=512.</p>
+<p>В результате вычислений для каждой группы получим локальный минимум (максимум), после чего все локальные минимумы (максимумы) снова делятся на группы по h элементов и обрабатываются. Процесс повторяется до тех пор, пока не будет получен один общий минимум (максимум) для AABB всей сцены.</p>
+<p>Если операция нахождения минимума (максимума) двух чисел занимает один такт, то (с учетом сложности чтения чисел из видеопамяти) нахождение минимума из n элементов с использованием описанного алгоритма параллельного вычисления составляет не более <img src="uploaded/image/2010-4/image432.gif" border="0" alt="" width="72" height="40" />&nbsp;тактов, где с &ndash; константа (не превышающая 20). Подставляя в эту формулу параметры чипа gt200b, получим, что t=0,08n.</p>
+<p><img src="uploaded/image/2010-4/image433.gif" alt="Подпись: Номер элемента 
+массива (номер треугольника)	0	1	2	3	4	&hellip;	100	101
+Количество ячеек	3	1	3	2	6	&hellip;	5	2
+Рис. 4" width="295" height="94" align="left" />Далее на CPU вычисляются параметры сетки, а именно, длина A ребра кубического воксела и количество вокселов, помещающееся по осям X, Y и Z системы WCS в AABB сцены, то есть размерность D=(Dx, Dy, Dz) сетки: <img src="uploaded/image/2010-4/image435.gif" border="0" alt="" width="73" height="40" />; <img src="uploaded/image/2010-4/image437.gif" border="0" alt="" width="151" height="29" />, <img src="uploaded/image/2010-4/image439.gif" border="0" alt="" width="120" height="36" />, где VAABB &ndash; объем AABB сцены; P &ndash; общее количество треугольников в сцене; &lambda; &ndash; константа, позволяющая делать сетку более плотной или более разреженной, квадратные скобки обозначают округление сверху до ближайшего целого; Bmax и Bmin &ndash; соответственно максимальная и минимальная точки AABB сцены. Формула для вычисления размера сетки А является эвристической.</p>
+<p>Имея характеристики сетки сцены, необходимо определить, каким вокселам какие треугольники сцены принадлежат. Чтобы решить эту задачу, сначала надо найти для каждого треугольника те ячейки, которые он пересекает, и составить два взаимосвязанных массива, в одном из которых будут храниться номера треугольников (T-массив, Triangle array), а в другом &ndash; номера соответствующих им ячеек (C-массив, Cell array). Под номером ячейки будем понимать число, рассчитываемое по формуле</p>
+<p>i=iz Dx Dy+ iy Dx + ix,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+<p>где ix, iy, iz &ndash; индексы ячейки по осям координат X, Y, Z соответственно, начиная c нуля от точки Bmin.</p>
+<p>На рисунке 3 показан пример C- и T-массива, где треугольнику 0 соответствуют вокселы с номерами 3, 4, 5, треугольнику 1 &ndash; воксел 0 и т.д. Совокупность массива номеров треугольников и соответствующего ему массива номеров ячеек сетки сцены в дальнейшем будем называть TC-массивом (Triangle/Cell element array), или массивом элементов треугольник/ячейка.</p>
+<p>Формирование TC-массива осуществляется с помощью параллельной (по треугольникам) обработки с использованием CUDA (рис. 2, ядро 4). Так как в технологии CUDA нет возможности динамического выделения глобальной (общей для всего видеоадаптера) памяти в процессе выполнения ядра, выделять память под TC-массив необходимо заранее. Кроме того, для каждого потока, обрабатывающего свой треугольник, необходимо знать смещение в TC-массиве, с которого этот поток будет начинать запись данных. Поэтому для начала нужно рассчитать число ячеек сетки, занимаемых каждым треугольником, и сумму таких чисел по всем треугольникам. Поскольку на данном шаге необходимо знать лишь максимальное количество ячеек под каждый треугольник, чтобы сделать выделение памяти, с целью ускорения вычислений можно ограничиться грубой оценкой, то есть количеством ячеек, которые пересекают AABB каждого треугольника.</p>
+<p>Для этого в режиме параллельной&nbsp; обработки (рис. 2, ядро 3) заполняется массив, длина которого равна общему числу n полигонов сцены, а каждый элемент i соответствует треугольнику с тем же номером и содержит то количество вокселов сетки, которое занимает AABB этого треугольника (рис. 4).</p>
+<p>Далее нужно рассчитать суммарное число элементов в TC-массиве и смещение (выраженное в количестве ячеек), с которого будет начата запись данных каждым потоком ядра 4. Это можно сделать с помощью функции сканирования (параллельной префиксной суммы [2]) cudppScan массива из библиотеки CUDPP (CUDA Data Parallel Primitives Library). На вход cudppScan подается числовой массив длиной n, а на выходе получается массив длиной n+1, в каждом элементе 0</p>
+<p>Укажем в качестве входа cudppScan созданный ранее массив (рис. 4), каждый элемент i которого содержит количество вокселов сетки сцены, занимаемых AABB треугольника с номером i. Тогда на выходе получим таблицу смещений в TC-массиве для каждого потока и размер (в ячейках) TC-массива (рис. 5).</p>
+<p>Напомним, что занесение данных в TC-массив производится в режиме параллельной (относительно треугольников) обработки (рис. 2, ядро 4), где каждый поток, отвечающий за свой полигон, осуществляет запись начиная с некоторого смещения, задаваемого таблицей смещений (рис. 5).</p>
+<p><img src="uploaded/image/2010-4/image440.gif" alt="Подпись: Номер элемента
+ массива (номер треугольника)	0	1	2	3	4	&hellip;	100	101	102
+Смещение	0	3	4	7	9	&hellip;	531	536	538
+	Размер
+ТС-массива
+Рис. 5" width="302" height="119" align="left" />Рассмотрим алгоритм определения номеров ячеек сетки, занимаемых некоторым треугольником с нормалью n к его поверхности. Спроецируем сетку сцены и треугольник на одну из плоскостей XY, ZY или XZ мировой системы координат в зависимости от того, какая из координат нормали &ndash; nz, nx или nу (соответственно) &ndash; является большей по модулю. Такой выбор плоскости позволяет исключить вероятность того, что проекцией треугольника будет отрезок.</p>
+<p>Пусть, например, nz &ndash; максимальная по модулю координата нормали n. Тогда в качестве плоскости проецирования будет выбрана плоскость XY. Проведем растеризацию полученного треугольника-проекции, в ходе которой определим для каждого слоя j ячеек по оси Y индексы imin и imax минимальной и максимальной ячеек по X, пересекающихся с треугольником (рис. 6а, искомые ячейки выделены).</p>
+<p>Далее для каждого индекса i из [imin, imax] каждого слоя j следует определить отрезок из ячеек, расположенных параллельно оси z и пересекающихся с плоскостью треугольника (рис. 6б). Для каждого отрезка получим четыре (это обусловлено сделанным ранее выбором плоскости проецирования) точки его пересечения с плоскостью треугольника, среди которых выберем две: с минимальной zmin и максимальной zmax z-координатой (рис. 6б). По zmin и zmax вычислим минимальный kmin и максимальный kmax индексы ячеек отрезка, которые пересекают треугольник. И, наконец, в рассматриваемом отрезке для всех ячеек с индексами по z от kmin до kmax по формуле (1) определим номера, которые в паре с номером треугольника запишем в TC-массив.</p>
+<table border="1" cellspacing="0" cellpadding="0" width="294">
+<tbody>
+<tr height="1">
+<td width="152" height="1" valign="top">
+<p><img src="uploaded/image/2010-4/image441.gif" alt="" width="144" height="121" /><img src="uploaded/image/2010-4/image442.gif" alt="" width="144" height="128" align="left" /></p>
+</td>
+<td width="142" height="1" valign="top"></td>
+</tr>
+<tr height="1">
+<td width="152" height="1" valign="top">
+<p>а)</p>
+</td>
+<td width="142" height="1" valign="top">
+<p>б)</p>
+</td>
+</tr>
+<tr height="13">
+<td colspan="2" width="294" height="13" valign="top">
+<p>Рис. 6</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Выполнив ядро 4 (см. рис. 2), получаем заполненный TC-массив, отсортированный по номерам треугольников (рис. 3). Такое представление неудобно для дальнейшего использования. Действительно, зная номер ячейки сетки сцены, необходимо делать полный перебор C-массива, чтобы найти индексы, обращаясь по которым в T-массив, уже можно будет составить список принадлежащих этой ячейке треугольников. Чтобы перейти от представления TC-массива, где пары треугольник/ячейка упорядочены по номерам треугольников, к представлению ячейка/треугольник, то есть упорядочить пары относительно номеров ячеек, можно применить функцию cudppSort параллельной сортировки массивов из библиотеки CUDPP. Функция cudppSort использует алгоритм поразрядной сортировки (radix sort), описанный в [2]. На вход cudppSort подаются массив ключей и массив данных, которые содержат одинаковое коли- чество элементов. При этом считается, что оба массива взаимосвязаны, а именно: i-й элемент первого массива образует с i-м элементом второго массива пару (ключ, информация). Функция производит сортировку ключевого массива и ана- логично изменяет индексы элементов массива данных. На выходе имеем пару массивов, отсортированных по ключам.</p>
+<p>Если в функцию cudppSort в качестве ключевого массива подать C-массив, а в качестве массива данных &ndash; T-массив, в результате получим  TC-массив, отсортированный по номерам ячеек, который будем называть СT-массивом (Cell/Triangle element array), или массивом элементов ячейка/треугольник (рис. 7).</p>
+<p><img src="uploaded/image/2010-4/image443.gif" alt="Подпись: C-массив номеров ячеек сетки сцены
+0	0	0	0	1	1	1	2	3	&hellip;	398	400	400
+T-массив номеров треугольников
+1	2	43	101	2	11	101	2	0	&hellip;	77	34	82
+Рис. 7" width="296" height="112" align="left" />Кроме CT-массива, необходимо составить таблицу смещений, по которой для любой ячейки с номером i можно определить индекс первого вхождения этой ячейки в CT-массив, и таблицу заполнения ячеек, где будет записано количество треугольников, принадлежащих каждой ячейке (рис. 8). Эта задача решается с помощью параллельного (относительно ячеек) бинарного поиска в C-массиве номеров ячеек (рис. 2, ядро 5). Для ячеек, которые не содержат ни одного треугольника и, следовательно, отсутствуют в CT-массиве, смещение можно задать равным &ndash;1, а количество треугольников равным 0.</p>
+<p><img src="uploaded/image/2010-4/image444.gif" alt="Подпись: Номер элемен-та массива (номер ячейки)	0	1	2	3	&hellip;	398	399	400
+Смещение	0	4	7	8	&hellip;	535	-1	536
+Количество 
+треугольников	4	3	1	6	&hellip;	1	0	2
+Рис. 8" width="297" height="157" align="left" />Итак, мы получили набор данных (CT-массив, таблицы смещений и заполнения ячеек), полностью описывающих регулярную сетку трехмерной виртуальной сцены и необходимых для дальнейшей трассировки лучей.</p>
+<p>Одним из основных преимуществ изложенного алгоритма параллельного построения регулярной сетки на GPU, кроме, конечно, поддержки реального режима времени, является&nbsp; экономия памяти видеоадаптера, поскольку отсутствует предварительное выделение памяти по среднему, заранее рассчитываемому числу ячеек, которые зани-</p>
+<p>мает один треугольник, и свободные ячейки вообще не записываются в CT-массив.</p>
+<p>Практические результаты</p>
+<p>Описанный алгоритм построения регулярной сетки трехмерной виртуальной сцены был реализован в виде программного кода и протестирован на нескольких сценах с различной степенью сложности. Полученные результаты приведены в таблице.</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr height="24">
+<td width="223" height="24">
+<p>Сцена</p>
+</td>
+<td width="108" height="24">
+<p>1</p>
+</td>
+<td width="108" height="24">
+<p>2</p>
+</td>
+<td width="108" height="24">
+<p>3</p>
+</td>
+<td width="108" height="24">
+<p>4</p>
+</td>
+</tr>
+<tr height="24">
+<td width="223" height="24">
+<p align="left">Количество полигонов</p>
+</td>
+<td width="108" height="24">
+<p>4860</p>
+</td>
+<td width="108" height="24">
+<p>69423</p>
+</td>
+<td width="108" height="24">
+<p>136770</p>
+</td>
+<td width="108" height="24">
+<p>225051</p>
+</td>
+</tr>
+<tr height="24">
+<td width="223" height="24">
+<p align="left">Размер    сетки</p>
+</td>
+<td width="108" height="24">
+<p>36&acute;18&acute;17</p>
+</td>
+<td width="108" height="24">
+<p>78&acute;119&acute;30</p>
+</td>
+<td width="108" height="24">
+<p>21&acute;179&acute;79</p>
+</td>
+<td width="108" height="24">
+<p>117&acute;99&acute;41</p>
+</td>
+</tr>
+<tr height="24">
+<td width="223" height="24">
+<p align="left">Размер    CT-массива</p>
+</td>
+<td width="108" height="24">
+<p>13897</p>
+</td>
+<td width="108" height="24">
+<p>181787</p>
+</td>
+<td width="108" height="24">
+<p>353266</p>
+</td>
+<td width="108" height="24">
+<p>323633</p>
+</td>
+</tr>
+<tr height="24">
+<td width="223" height="24">
+<p align="left">Время    построения сетки, мс</p>
+</td>
+<td width="108" height="24">
+<p>9,68</p>
+</td>
+<td width="108" height="24">
+<p>16,42</p>
+</td>
+<td width="108" height="24">
+<p>25,78</p>
+</td>
+<td width="108" height="24">
+<p>36,73</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Для тестирования была использована следующая конфигурация компьютера: процессор Pentium IV, 1 Гбайт ОЗУ, видеоадаптер nVidia GeForce GTX280, операционная система Windows XP.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; NVIDIA CUDA Programming Guide, Version 2.3, 2009. URL: http://developer.download.nvidia.com/compute/cuda/2_3/ toolkit/docs/NVIDIA_CUDA_Programming_Guide_2.3.pdf (дата обращения: 15.06.2010).</p>
+<p>2.&nbsp;&nbsp; Дональд Кнут. Искусство программирования. Сортировка и поиск: 2-е изд. М.: &laquo;Вильямс&raquo;, 2007. Т. 3.</p>
+<p>3.&nbsp;&nbsp; URL: http://gpgpu.org/developer/cudpp (дата обращения: 15.06.2010).</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2608</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2608">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 4 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=92">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

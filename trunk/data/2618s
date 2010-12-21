@@ -1,0 +1,644 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Информационная система для распознавания состояний стохастической системы</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Информационная система для распознавания состояний стохастической системы</h2><div style="margin-bottom:10px"><strong>Information system for recognition of stochastic system state</strong></div>Статья опубликована в выпуске журнала № 4 за 2010 год. [ 09.12.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Для решения задачи распознавания состояний динамической системы в режиме реального времени предлагается новая информационная система, основанная на модифицированных алгоритмах распознавания образов, теории ин-формации, математической статистике и принципе согласования оценок. Работоспособность системы показана на распознавании состояний электромеханической системы за реальное время при большой размерности признакового пространства. </em><br /><strong>Abstract:</strong><em style="font-size:8pt">The problem of recognition of state of real-time stochastic dynamical system provided in the form of time series is considered. A new information intelligent software system on the base of modified algorithms of pattern recognition, of statistical theory, information theory and of principle of estimate concordance is suggested. Availability of presented of information technology suggested technology has been shown on the example of real-time recognition of state in feature dimensionality space for the electromechanical system.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=5933">Колесникова С.И. ()</a> -    , <a href="index.php?page=infou&id=5934">Букреев В.Г. ()</a> -    , <a href="index.php?page=infou&id=5935">Мертвецов А.Н. ()</a> -    , <a href="index.php?page=infou&id=5936">Цой Ю.Р. ()</a> -    </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1794">эффективность распознавания</a>, <a href="index.php?page=infotg&id=1796">статистические оценки</a>, <a href="index.php?page=infotg&id=1792">состояние динамической системы</a>, <a href="index.php?page=infotg&id=1795">оценка качества алгоритмов</a>, <a href="index.php?page=infotg&id=1793">методы распознавания образов</a>, <a href="index.php?page=infotg&id=137">интеллектуальная система</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1794"></a>, <a href="index.php?page=infotg&id=1796"></a>, <a href="index.php?page=infotg&id=1792"></a>, <a href="index.php?page=infotg&id=1795"></a>, <a href="index.php?page=infotg&id=1793"></a>, <a href="index.php?page=infotg&id=137">intellectual system</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 29<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2618">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Решение оперативных диагностических задач, обеспечивающих эффективную эксплуатацию дорогостоящей и сложной аппаратуры (компьютер, программное сопровождение, хранилище данных, хранилище знаний (моделей данных), интерфейсы и пр.), модель которой можно рассматривать как стохастическую динамическую систему (ДС), не потеряло актуальности.</p>
+<p>&nbsp;</p>
+<p>В статье ставится задача распознавания состояний ДС, излагаются теоретические подходы к распознаванию состояний ДС и подход к программной реализации информационной интеллектуальной программной системы (ИИС), а также приводятся результаты численных экспериментов, свидетельствующие о приемлемом качестве представляемой ИИС, базовые принципы построения системы обучения и принятия решений которой частично опираются на работу [1].</p>
+<p>Основные определения и понятия. Под системой реального времени будем понимать систему, гарантирующую время реакции на измерение контролируемой реализации ДС в темпе протекания процессов в системе (например, оперативное обнаружение разладки ДС), под состоянием ДС &ndash; совокупность элементов (подмножество) фазового пространства ДС (скаляр, точка многомерного пространства, вектор), наделенную характерными свойствами (например, определенными экспертом согласно физической природе ДС). Под дискретизацией реализации ДС (сигнала) Y(t) понимается ее разбиение по временной составляющей Yj=Y(tj)=Y(jD), D&gt;0 (значения временного ряда), под квантованием &ndash; разбиение диапазона значений реализации на отрезки равной длины (шаг квантования). Под системой градаций квантования (СГК) будем понимать мультимножество: уникальные значения уровней квантования (целое число шагов квантования, кодирующих значение реализации ДС) и их кратности. Формализуем класс задач, решаемых системой.</p>
+<p>Общая постановка задачи. Обозначим через W0 множество реальных состояний ДС; WY &ndash; множество реализаций состояний ДС, отражающих математическую (или иную) модель; WTS &ndash; подмножество дискретных наблюдений реализаций состояний ДС, WTS&Iacute;WY; W=(W1, &hellip;, WI) &ndash; множество образов (классов) СДС, W&Iacute;WY. Предполагается выполнение следующих предположений: 1) существует отображение f:&nbsp;W0&reg;WY; 2) существует (неизвестное, однозначное) отображение g: W0&reg;W &ndash; модель состояний ДС.</p>
+<p>По заданной обучающей выборке (множеству значений пар объект&ndash;метка состояний ДС)  QY={ylj,&nbsp;rlj}Nj=1&sub;WTS, где <img src="uploaded/image/2010-4/image723.gif" border="0" alt="" width="41" height="21" />&nbsp;&ndash; число серий наблюдений (реализаций) одной ДС, требуется:</p>
+<p>1)&nbsp; построить алгоритм распознавания A(QY): WTS&reg;W (возможно, множество алгоритмов), осуществляющий оценку метки СДС d&isin;IW={1,&nbsp;&hellip;,&nbsp;I} по совокупности новых наблюдений (L-окну) YjL=(yj1,&nbsp;&hellip;,&nbsp;yjL), YjL&Icirc;WTS, L&sup3;1, j&Icirc;TL={1,&nbsp;&hellip;,&nbsp;T‑L};</p>
+<p>2)&nbsp; оценить вектор апостериорных вероятностей принадлежности к каждому из состояний ДС {p(d/YjL), d&nbsp;&isin;&nbsp;IW};</p>
+<p>3)&nbsp; синтезировать итоговое решающее правило, согласующее частные решения пунктов 1,&nbsp;2 и минимизирующее критерий качества распознавания, под которым понимают средний риск потерь, среднее число ошибок на полном скользящем контроле, вероятность неправильного распознавания;</p>
+<p>4)&nbsp; оценить обобщающую способность алгоритма распознавания (и решающего правила) в смысле минимума информационного критерия качества;</p>
+<p>5)&nbsp; обеспечить решение задач 1&minus;4 в режиме реального времени (для технических систем) на реальных размерностях данных при ограничениях на вычислительные ресурсы ЭВМ.</p>
+<p>Заметим, что при L=T задача распознавания переходит в задачу идентификации.</p>
+<p>Пример постановки задачи из решаемых ИИС класса. Пусть задан случайный процесс</p>
+<p><img src="uploaded/image/2010-4/image725.gif" border="0" alt="" width="207" height="49" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+<p>характеризующий состояние ДС, где X(t) &minus; вектор ненаблюдаемых переменных состояния системы; Y(t) &minus; случайная наблюдаемая векторная функция; x(t) &minus; шум достаточно общей природы. Относительно динамики поведения случайного процесса (1) на [t0,&nbsp;Т] выдвинуто I&gt;1 альтернативных гипотез W={W1, W2, &hellip;, WI}, составляющих полную группу событий и интерпретируемых как классы состояний ДС. Другими словами, временной фрагмент реализации случайного процесса может находиться только в одной из заданных (экспертом или по обучающей выборке) областей (классов) Wi, <img src="uploaded/image/2010-4/image727.gif" border="0" alt="" width="39" height="21" />. Наблюдение осуществляется в соответствии с дискретным планом t&Icirc;{t0, t1, &hellip;, tN}, tj=t0+jD, <img src="uploaded/image/2010-4/image729.gif" border="0" alt="" width="43" height="23" />, по реальной ДС или ее модели. Задача состоит в отнесении наблюдаемых в момент t или на некотором фиксированном интервале (t&cent;, t&cent;&cent;) наблюдаемых реализаций Y(t) к классу Wi, <img src="uploaded/image/2010-4/image727.gif" border="0" alt="" width="39" height="21" />.</p>
+<p>Несмотря на большое количество методов интеллектуальной обработки диагностической информации, вопрос об идентификации состояний ДС в такой постановке остается открытым, поскольку практическое решение поставленной задачи затруднено не только наличием возможной зашумленной нелинейной связи между откликом (выходом) и входным воздействием, но и присутствием немоделируемой динамики, реальностью времени решения задачи распознавания состояний ДС. Рассмотрим особенности двух базовых подходов, реализованных в ИИС, применительно к решению поставленной задачи.</p>
+<p>Решение задачи. Принципиальная сложность задачи распознавания состояний ДС методами распознавания образов обусловлена следующими факторами: 1) необходимость анализа обучающей выборки большого размера (для технических систем порядка более 104&ndash;106, а как известно, задача поиска информативных наборов признаков является NP-полной), в силу чего применение традиционных методов весьма затруднительно; 2) проведение обучения и построение решающего правила на одной реализации ДС, а принятие решения при распознавании &ndash; на другой (возможно, с другим уровнем и типом шумов); 3) реальность времени для технических систем, оцениваемая малыми порядками (10‑5с для электронно-механи&shy;ческих систем (ЭМС)); 4) нелинейность и нестационарность зашумленного случайного процесса (1), вследствие чего применение спектральных методов приводит к неадекватным выводам;  5) возможное пересечение граничащих состоя- ний ДС.</p>
+<p>Известно, что недостаточная информативность признаков не может гарантировать получение высокого качества классификации объектов из генеральной совокупности даже группой правил. Поэтому акцент в ИИС распознавания состояний ДС смещен в сторону решения задачи выбора информативных признаков и согласованности оценок их разделяющей способности. В обсуждаемой ИИС в качестве предварительной обработки временного ряда применяются линейные и нелинейные фильтры; формируются взвешенные эталоны, обобщающие близко расположенные объекты с учетом возможной принадлежности разным состояниям ДС, при этом эталоны с малыми весами можно интерпретировать как шумы с последующим применением традиционных методов (k-бли&shy;жайших соседей, эталонов). При получении частных конкурирующих решений (по нескольким алгоритмам распознавания относительно всех состояний ДС) итоговое решение (с учетом весов алгоритмов на контрольной выборке) агрегируется по алгоритму согласования оценок, разработанному по [2].</p>
+<p>Подход к решению задачи на основе теории информации является математической основой многих методов (критерий релевантности, ROC-анализ и др.). Принципиальное отличие от традиционного &ndash; формирование диагностических признаков на основе метода адаптивного квантования значений временного ряда. Суть его заключается в выборе СГК минимальной размерности, которая наилучшим образом выделяла бы информативность градаций в смысле их дискриминирующей сути. Здесь под информативностью понимается качественное свойство, характеризующее долю полезной информации в общем объеме СГК и количественно выраженное определенной мерой (энтропией, дивергенцией информации и др.). Метод на основе выбранной СГК и на базе сравнения условных распределений уровней реализации ДС (признака) в разных состояниях ДС обеспечивает на порядок и более меньшее время распознавания СДС без существенной потери его качества (рис.&nbsp;1).</p>
+<p>Архитектура программного комплекса ReDSS. Программный комплекс ReDSS (Recogni&shy;tion of Dynamic System State), реализующий ИИС, имеет распределенную архитектуру. На стороне сервера развертываются БД (в которой хранится история моделирования), множество алгоритмов распознавания, выполненных в виде подключаемых модулей, в состав комплекса входит web-клиент. К серверу можно подключаться из сторонних приложений, для этого доступны сборки с интерфейсами 1 и 2 (рис.&nbsp;2), с помощью которых можно добавить свой модуль (отдельную библиотеку) в каталог алгоритмов. Модуль имеет параметры (типы входных и выходных данных). Тип модуля может быть произвольным и задается его разработчиком (распознаватель, фильтр, генератор ряда, модуль голосования и т.д.). Данные о конфигурации модулей, параметры, передаются серверу в виде модели [3]. Модель представляет собой коллекцию ячеек, каждая из которых содержит информацию о блоке модели и его связи. Всякому подключенному к серверу клиенту соответствует свой экземпляр модели. Любые изменения в структуре модели, выполненные пользователем в клиентском приложении, отражаются на экземпляре, созданном на сервере. Установив необходимые значения параметров каждому модулю, обучив модули, требующие обучения, пользователь может начать процесс моделирования.</p>
+<p><img src="uploaded/image/2010-4/image732.gif" alt="Подпись:  	 б)
+а)																	б)
+Примечание: СК, АК &ndash; стандартное и адаптивное квантование, соответственно; ЕМ &ndash; Евклида метрика; ХМ &ndash;Хемминга метри-ка; ИнфОМ &ndash; метрика на основе информационного расстояния Кульбака.
+Рис. 1. Точность распознавания а) в зависимости от уровня квантования по одной реализации 30 %-го шума; 
+время распознавания б) при адаптивном и стандартном квантовании" width="611" height="226" align="left" />Программная реализация комплекса. Для реализации комплекса была выбрана платформа Microsoft.NET, имеющая объектно-ориентирован&shy;ную архитектуру, для поддержки распределенных приложений &ndash; Microsoft.NET Remoting [4], серверным доменом приложения выбрана служба Windows.</p>
+<p><img src="uploaded/image/2010-4/image734.gif" alt="Подпись:  
+Рис. 2. Блок-схема программного комплекса" width="301" height="403" align="left" />Решение прикладной задачи распознавания состояний ЭМС. Численная иллюстрация качества работы ИИС проведена на примере распознавания состояний ЭМС (асинхронного двигателя). Моделирование на ЭВМ преследовало следующие цели: исследовать время и эффективность распознавания (доли правильно распознанных объектов, под которыми понимались &laquo;окна&raquo; случайного размера в 5&ndash;10 отсчетов) при разных СГК в условиях разных метрик (Евклида, Хемминга, информационная) и при различных типах и уровнях шумов; оценить влияние предварительной (ядерной) фильтрации на распознавание состояний ДС. Численное моделирование (в том числе фильтрации) алгоритма распознаваний состояний ДС проводилось на измеряемых сигналах тока и напряжения АД по 6 моделям в условиях зашумленности порядка 0,30&nbsp;%&ndash;90&nbsp;% от максимальной амплитуды полезного сигнала (см. табл.).</p>
+<p>Результаты моделирования на ЭВМ. В ходе анализа полученных реализаций фильтрации и прогноза были выявлены следующие особенности: а) увеличение числа градаций квантования приводит в среднем к повышению точности распознавания до определенного уровня (далее возможны падения точности, связанные со структурой сигнала и переобучением); б) время распознавания растет линейно для всех метрик в условиях стандартной и адаптивной процедуры квантования;  в) оптимальное число градаций (минимальное значение n0 шагов квантования такое, что при n&gt;n0 точность распознавания не увеличивается, а при 0</p>
+<p><img src="uploaded/image/2010-4/image737.gif" alt="Подпись:  
+а) модель содержит описание объектов и связей 
+между ними, каталог алгоритмов &ndash; информацию 
+обо всех подключенных в данный момент модулях
+ 
+б) пример модели: результаты работы модулей, их параметры сохраняются в БД
+Рис. 3. Блок-схема сервера" width="294" height="645" align="left" />При анализе нелинейных нестационарных моделей ДС с высоким уровнем шумов был обнаружен эффект, когда в силу адаптивного выбора уровней квантования число градаций не увеличивалось с ростом параметра квантования, что повлекло существенное уменьшение времени распознавания (в 3&ndash;50 и более раз, см. табл.). Отметим, что с большим уровнем шумов сигнал фильтруется слабо, а при использовании ядерных функций в качестве обобщенных признаков необходимо проводить скользящий контроль для различных параметров ядерных функций, что влечет возрастание времени обучения в несколько раз. В этом случае предварительная фильтрация малоэффективна, и процедура фильтрации в тех ситуациях, когда распознавание состояния ДС в реальном режиме времени является самостоятельной задачей, не несет основной нагрузки при условии применения вышеизложенных модификаций выбора признаков и АР. Статистическая значимость указанных данных (точности распознавания) проверялась по  t-тесту с уровнем значимости 0,95.</p>
+<p>Эффективность и время распознавания  по трем метрикам</p>
+<table border="1" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr height="1">
+<td rowspan="2" width="39">
+<p>Минимальное число градаций</p>
+</td>
+<td colspan="3" width="135" height="1">
+<p>Эффективность распознавания (СК/АК)</p>
+</td>
+</tr>
+<tr height="1">
+<td width="48" height="1">
+<p>ИнфОМ</p>
+</td>
+<td width="48" height="1">
+<p>ЕМ</p>
+</td>
+<td width="40" height="1">
+<p>ХМ</p>
+</td>
+</tr>
+<tr height="1">
+<td width="39" height="1">
+<p>10</p>
+</td>
+<td width="48" height="1">
+<p>94,86/90,41</p>
+</td>
+<td width="48" height="1">
+<p>93,76/93,16</p>
+</td>
+<td width="40" height="1">
+<p>90,2/85,26</p>
+</td>
+</tr>
+<tr height="1">
+<td width="39" height="1">
+<p>20</p>
+</td>
+<td width="48" height="1">
+<p>98,85/97,88</p>
+</td>
+<td width="48" height="1">
+<p>97,62/97,41</p>
+</td>
+<td width="40" height="1">
+<p>99,06/96,25</p>
+</td>
+</tr>
+<tr height="1">
+<td width="39" height="1">
+<p>30</p>
+</td>
+<td width="48" height="1">
+<p>100/97,96</p>
+</td>
+<td width="48" height="1">
+<p>99,83/97,78</p>
+</td>
+<td width="40" height="1">
+<p>100/95,85</p>
+</td>
+</tr>
+<tr height="1">
+<td width="39" height="1">
+<p>40</p>
+</td>
+<td width="48" height="1">
+<p>100/100</p>
+</td>
+<td width="48" height="1">
+<p>100/100</p>
+</td>
+<td width="40" height="1">
+<p>100/100</p>
+</td>
+</tr>
+<tr height="1">
+<td width="39" height="1"></td>
+<td colspan="3" width="135" height="1">
+<p>Время распознавания х&times;10-5 с (СК/АК)    для 104 объектов</p>
+</td>
+</tr>
+<tr height="1">
+<td width="39" height="1">
+<p>10</p>
+</td>
+<td width="48" height="1">
+<p>9624/324</p>
+</td>
+<td width="48" height="1">
+<p>2221/141</p>
+</td>
+<td width="40" height="1">
+<p>1062/76</p>
+</td>
+</tr>
+<tr height="1">
+<td width="39" height="1">
+<p>20</p>
+</td>
+<td width="48" height="1">
+<p>19197/399</p>
+</td>
+<td width="48" height="1">
+<p>4407/137</p>
+</td>
+<td width="40" height="1">
+<p>2058/90</p>
+</td>
+</tr>
+<tr height="1">
+<td width="39" height="1">
+<p>30</p>
+</td>
+<td width="48" height="1">
+<p>28503/409</p>
+</td>
+<td width="48" height="1">
+<p>6407/144</p>
+</td>
+<td width="40" height="1">
+<p>2895/65</p>
+</td>
+</tr>
+<tr height="1">
+<td width="39" height="1">
+<p>40</p>
+</td>
+<td width="48" height="1">
+<p>38198/601</p>
+</td>
+<td width="48" height="1">
+<p>8728/181</p>
+</td>
+<td width="40" height="1">
+<p>4096/83</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Обзор аналогов. Среди систем для удаленного тестирования алгоритмов в различных их комбинациях и на различных данных следует отметить следующие: WEKA (http://www.cs.waikato.ac.nz/ml/ weka), RapidMiner (http://rapid-i.com/content/view/ 124/1/), находящийся в разработке Полигон алгоритмов (http://poligon.machinelearning.ru), ЭЙДОС (http://www.cs.tut.fi/~lasip/), ДЕЛЬТА (http://lc.ku&shy;bagro.ru/ aidos/) и др. Анализ ПО показал, что в перечисленных системах, во-первых, нет ориентации на реальное время (отклик в технических системах должен соизмеряться с временным интервалом получения информации о состоянии ДС), во-вторых, в рамках временного ряда рассматривается только либо разложение его на составляющие (в том числе фильтрация), либо задача идентификации (восстановление зависимости) и не решается задача распознавания состояний ДС как фрагмента реализации случайного процесса; в-третьих, программный комплекс ReDDS позволяет без вмешательства в исходный код расширять базу используемых алгоритмов и обладает всеми преимуществами распределенной архитектуры. ИИС ReDDS решает задачи предоставления пользователю инструментария для обработки реального или модельного временного ряда; выбора модели из существующих прецедентов; использования алгоритмов распознавания, адаптированных к предметной области, возможности их комбинирования; применения алгоритмов анализа временного ряда на основе методов частично наблюдаемых случайных процессов; обработки, анализа и представления результатов.</p>
+<p>Таким образом, можно сделать следующее заключение. Представлена разработка новой распределенной ИИС автоматизированной обработки ВР как модели ДС. Продемонстрирована работоспособность ИИС ReDDS для распознавания состояний динамического объекта за реальное время с большой размерностью исходного признакового пространства. На конкретной прикладной задаче изучены поведение и свойства вариантов алгоритмов распознавания при различных вариациях интенсивностей шумов и величин параметров  оптимизации, а именно: исследованы время и  эффективность распознавания при изменении интервалов дискретизации, метода системы информативных признаков (СГК), вида распределения шумов и дисперсии шумов.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Вагин В.Н. [и др.] Достоверный и правдоподобный вывод в интеллектуальных системах. М.: Физматлит, 2004.</p>
+<p>2.&nbsp;&nbsp; Шоломов Л.А. Исследование одного класса динамических процедур коллективного выбора // Нелинейная динамика и управление. Вып. 5. М.: Физматлит, 2007.</p>
+<p>3.&nbsp;&nbsp; Вирт Н. Алгоритмы и структуры данных М.: Мир, 1989. С. 360.</p>
+<p>4.&nbsp;&nbsp; Маклин С., Нафтел Дж., Уильяме К. М15 Microsoft .NET Remoting; пер. с англ. М.: Изд.-торг. дом &laquo;Русская Редакция&raquo;, 2003. 384 с.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2618</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2618">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 4 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=92">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

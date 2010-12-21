@@ -1,0 +1,756 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Генератор текста программ в исходном виде для систем реального времени</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Генератор текста программ в исходном виде для систем реального времени</h2><div style="margin-bottom:10px"><strong>Source code generator for real-time systems</strong></div>Статья опубликована в выпуске журнала № 4 за 2010 год. [ 09.12.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Статья посвящена практическим вопросам технологии генерации текста программ в исходном виде для систем реального времени. Рассматриваются принципы работы технологических средств автоматизированной генерации программ, логическая структура генератора текста программ в исходном виде и алгоритмы функционирования его программных модулей.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">This article is devoted to practical questions about source code generation technology in real-time systems. The author has been considered basic principles of automated source code generation programs, logic structure of the code generator and functional algorithms of its modules.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Автор: </b><a href="index.php?page=infou&id=5925">Нархов К.Г. ()</a> -    </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1499">системы реального времени</a>, <a href="index.php?page=infotg&id=298">программирование</a>, <a href="index.php?page=infotg&id=256">надежность</a>, <a href="index.php?page=infotg&id=155">модель</a>, <a href="index.php?page=infotg&id=14">моделирование</a>, <a href="index.php?page=infotg&id=1758">многопоточность</a>, <a href="index.php?page=infotg&id=1759">исходный код</a>, <a href="index.php?page=infotg&id=1756">генерация исходных текстов</a>, <a href="index.php?page=infotg&id=810">xml</a>, <a href="index.php?page=infotg&id=1757">uml</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1499">realtime systems</a>, <a href="index.php?page=infotg&id=298">programming</a>, <a href="index.php?page=infotg&id=256">reliability</a>, <a href="index.php?page=infotg&id=155">mathematical model</a>, <a href="index.php?page=infotg&id=14">modeling</a>, <a href="index.php?page=infotg&id=1758"></a>, <a href="index.php?page=infotg&id=1759"></a>, <a href="index.php?page=infotg&id=1756"></a>, <a href="index.php?page=infotg&id=810">xml</a>, <a href="index.php?page=infotg&id=1757"></a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 51<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2605">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Повышение надежности специального программного обеспечения (СПО) комплексов, функционирующих в реальном масштабе времени под управлением oc2000, может быть достигнуто применением при его создании автоматизированных средств построения и анализа архитектурных и структурных моделей вычислительных систем реального времени (ВС РВ), автоматизированной генерации заготовок программных модулей на языке программирования Си для компонентов СПО ВС РВ, имитационного моделирования работы ВС РВ.</p>
+<p>&nbsp;</p>
+<p>Разработанные НИИСИ РАН технологические средства автоматизированной генерации СПО (ТСАГ СПО) позволяют снизить трудоемкость разработки СПО, повысить его надежность за счет применения типовых программных компонентов, автоматизировать значительную часть работ процесса разработки СПО (в том числе работ по подготовке проектной документации).</p>
+<p>ТСАГ СПО представляют собой совокупность следующих взаимодействующих программных средств: подсистема графического интерфейса (ППГИ РВ), подсистема графического представления (ПГП РВ), подсистема текстовой поддержки графического представления (ПТП РВ) и подсистема генерации текстов программ в исходном виде (ПГЕН РВ). Программные средства ТСАГ СПО функционируют под управлением операционной системы типа Linux (например Red Hat Fedora Core 7).</p>
+<p>ТСАГ СПО реализованы на основе стандарта унифицированного языка моделирования UML [1] и расширяемого языка разметки XML [2]. Согласно стандарту UML особенности моделируемого объекта должны изображаться графически в виде совокупности связанных между собой графических элементов.</p>
+<p>В процессе проектирования программ ТСАГ СПО используют заготовки UML, которые представляются XML-документами и визуализируются ТСАГ СПО графическими вершинами (graphic node [1]) типа action [1]. XML-документы содержат представления конструкций языка программирования Си в соответствии со стандартом [3] в виде XML-разметки, а также данные, требуемые для отображения этих заготовок на диаграммах (количество графических вершин, отображаемый в графических вершинах текст).</p>
+<p>Проект разрабатываемых программ может содержать сотни (и более) логически связанных диаграмм различных типов (например, диаграммы классов, деятельностей, состояний, развертывания). Диаграммы, как и заготовки UML, представляются XML-документами.</p>
+<p>Среди диаграмм проекта особое место занимают диаграммы программной деятельности (ДПД), представляющие собой новый вид диаграмм деятельности UML (таким образом, ДПД расширяют стандарт UML). Создавая программу, пользователь переносит заготовки UML из библиотеки заготовок UML (отражающие конструкции языка программирования Си) на ДПД и  заполняет значения параметров этих заготовок. Такой перенос может предполагать вставку заготовки UML внутрь уже имеющейся. Заполнение значений параметров заготовки UML предполагает установку и сохранение значений полей диалогового окна &laquo;Параметры&raquo; ДПД.</p>
+<p>XML-документы, представляющие заготовки UML, соответствуют XML-схеме, разработанной на основе стандарта языка Си [3] и позволяющей устанавливать синтаксическую правильность генерируемых из ДПД программ без предварительной компиляции. Кроме конструкций языка программирования Си, описанных в стандарте [3], библиотеки заготовок UML могут содержать заготовки, объединяющие несколько конструкций языка программирования Си, а также заготовки, представляющие собой XML-представле&shy;ния вызовов специальных функций, относящихся к работе на конкретной платформе (например, на платформе ос2000 [4]).</p>
+<p>XML-документы, представляющие заготовки UML, содержат специальные технологические теги , позволяющие настраивать заготовки UML в процессе составления ДПД, а также специальные разделительные теги , при помощи которых заготовки UML разбиваются на логические части, отображаемые на ДПД, со своими именами и графическими вершинами.</p>
+<p>Для каждой ДПД можно построить результирующий XML-документ, объединяющий в себе XML-документы, которыми представлены на ДПД заготовки UML. Порядок объединения XML-доку&shy;ментов соответствует порядку следования заготовок UML на конкретной ДПД. Результирующий XML-документ содержит конкретные значения параметров XML-документов, которыми представлены заготовки UML. ДПД считается корректной, если построенный из нее результирующий XML-документ соответствует XML-схеме языка Си. Проверка корректности ДПД обеспечивается на лету, непосредственно в момент ее построения. Единственным источником синтаксических ошибок могут быть параметры заготовок UML, значения которых определяет пользователь.</p>
+<p>Представленные XML-документами данные удобны для автоматизированного разбора. Существуют программные библиотеки функций, например LibXML 2.0 или Expat, которые предоставляют программисту интерфейс для работы с  XML-документами. В ТСАГ СПО для работы  с XML-документами используется библиотека LibXML 2.0.</p>
+<p>Следует отметить, что данные, представлен&shy;ные XML-документами, удобны для обмена между программами. В ТСАГ СПО результирующий для ДПД XML-документ генерируется утилитой xmlgen, входящей в состав ТСАГ СПО. Этот документ преобразуется в текст программы в исходном виде на языке Си программой ПГЕН РВ, а также может быть открыт для просмотра и редактирования в программе ptp-editor, входящей в состав ТСАГ СПО.</p>
+<p>Так как язык XML является стандартом представления данных де-факто, XML-документы мож&shy;но просматривать и редактировать с помощью программ, входящих в стандартные поставки операционных систем Linux, например gedit и kate. Просмотр и редактирование XML-документов возможны и в коммерческих программных продуктах, например, SyncRO Soft Oxygen XML editor или Altova XMLSpy.</p>
+<p>Программа ПГЕН РВ</p>
+<p>ДПД являются основой для получения программы на языке программирования Си. Преобразование ДПД в текст программы в исходном виде выполняет входящая в состав ТСАГ СПО программа ПГЕН РВ, предназначенная для перевода программных моделей ВС РВ в набор файлов с текстом в исходном виде на языке Си. Программа ПГЕН РВ поддерживает программный протокол обмена данными между программами, входящими в состав ТСАГ СПО. Программа использует библиотеки GTK 2.0 и LibXML 2.0.</p>
+<p>Программа ПГЕН РВ выполняет преобразование результирующих XML-документов ДПД в файлы с текстом в исходном виде на языке Си. Документы XML, передаваемые ПГЕН РВ, должны соответствовать схеме XML языка Си. Пользователь имеет возможность контролировать процесс преобразования XML-документов с помощью параметров запуска, сообщений и графических интерфейсных компонентов главного окна ПГЕН РВ (кнопок, элементов ввода текста, пунктов меню, панелей инструментов). Программа сохраняет результаты работы в текстовый файл, который может использоваться для детального анализа работы программы и обработанных данных.</p>
+<p>Алгоритм преобразования XML-документов, реализованный в ПГЕН РВ, предполагает, что в документе присутствуют теги , , , , , , , . Эти теги являются управляющими для алгоритма: по ним ПГЕН РВ определяет начало, конец и тип синтаксических конструкций.</p>
+<p><img src="uploaded/image/2010-4/image030.gif" alt="Подпись:  
+Рис. 1. Логические связи между программными модулями" width="617" height="468" align="left" />Таким образом, ПГЕН РВ, используя структурированные в XML-документах данные, порождает форматированную последовательность символов, являющуюся текстом программы в исходном виде на языке Си. Правила обработки XML-документов определяются как в схеме XML, так и непосредственно в алгоритме преобразования.</p>
+<p>Вызов ПГЕН РВ в ТСАГ СПО выполняют программа ППГИ РВ, программа ПГП РВ, утилиты xmlgen, ptp-editor.</p>
+<p>В ПГЕН РВ реализованы дополнительные функции, такие как форматирование файлов, проверка на соответствие схеме XML, отображение документа XML в виде дерева, вывод информации о результатах преобразования документов XML, вывод отладочной информации, вывод конфигурации ПГЕН РВ, запуск ПГЕН РВ в оконном режиме. Наличие этих функций позволяет использовать ПГЕН РВ отдельно от ТСАГ СПО как самостоятельную программу.</p>
+<p>Логическая структура ПГЕН РВ</p>
+<p>Программа ПГЕН РВ реализована на языке программирования Си. Список программных модулей с кратким описанием приведен в таблице 1.</p>
+<p>У каждого программного модуля имеется препроцессорная директива #include с одноименным заголовочным файлом. Заголовочные файлы содержат объявления используемых в программном модуле функций и располагаются в подкаталоге include.</p>
+<p><img src="uploaded/image/2010-4/image032.gif" alt="Подпись:  
+Рис. 3. Р-схема функции PgenfileParse()" width="283" height="811" align="left" />Таблица 1</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="88" valign="top">
+<p>Имя модуля</p>
+</td>
+<td width="207" valign="top">
+<p>Функция</p>
+</td>
+</tr>
+<tr>
+<td width="88" valign="top">
+<p>gui_interface.c</p>
+</td>
+<td width="207" valign="top">
+<p align="left">Построение интерфейсных компонентов окна ПГЕН РВ   (функции построения меню, элементов ввода, кнопок, списка, панелей   инструментов)</p>
+</td>
+</tr>
+<tr>
+<td width="88" valign="top">
+<p>pgengraph.c</p>
+</td>
+<td width="207" valign="top">
+<p align="left">Работа с главным окном ПГЕН РВ (создание, закрытие)</p>
+</td>
+</tr>
+<tr>
+<td width="88" valign="top">
+<p>pgenparse.c</p>
+</td>
+<td width="207" valign="top">
+<p align="left">Разбор XML-документов</p>
+</td>
+</tr>
+<tr>
+<td width="88" valign="top">
+<p>pgenutils.c</p>
+</td>
+<td width="207" valign="top">
+<p align="left">Разбор документов XML (резервное копирование файлов,   обработка комментариев, обработка проектов ППГИ РВ)</p>
+</td>
+</tr>
+<tr>
+<td width="88" valign="top">
+<p>regularexpr.c</p>
+</td>
+<td width="207" valign="top">
+<p align="left">Разбор документов XML (используется механизм регулярных   выражений)</p>
+</td>
+</tr>
+<tr>
+<td width="88" valign="top">
+<p>spawns.c</p>
+</td>
+<td width="207" valign="top">
+<p align="left">Запуск подсистем ППГИ РВ и ПГП РВ (xmlgen)   из ПГЕН РВ</p>
+</td>
+</tr>
+<tr>
+<td width="88" valign="top">
+<p>fifo_io_channels.c</p>
+</td>
+<td width="207" valign="top">
+<p align="left">Обеспечение обмена данными между ПГП РВ (xmlgen)   и ПГЕН РВ</p>
+</td>
+</tr>
+<tr>
+<td width="88" valign="top">
+<p>package_info.c</p>
+</td>
+<td width="207" valign="top">
+<p align="left">Работа с диаграммами ПГП РВ (получение списка ДПД   проекта)</p>
+</td>
+</tr>
+<tr>
+<td width="88" valign="top">
+<p>codeformat.c</p>
+</td>
+<td width="207" valign="top">
+<p align="left">Форматирование исходного кода</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Программные модули логически связаны между собой объявлениями внешних функций (extern). Список внешних функций приведен в таблице 2. Под внешней для программного модуля функцией понимается функция, не входящая в состав стандартных библиотек и определенная в другом модуле ПГЕН РВ.</p>
+<p>Логические связи между программными модулями на уровне объявлений внешних функций (extern) представлены на рисунке 1.</p>
+<p><img src="uploaded/image/2010-4/image034.gif" alt="Подпись:  
+Рис. 2. Модель реализации ПГЕН РВ" width="305" height="283" align="left" />После запуска ПГЕН РВ порождает следующие процессы: главный процесс ПГЕН РВ pgen_start; процесс графического интерфейса ПГЕН РВ (создание окон ПГЕН РВ, интерфейсных компонентов и т.д.) pgen_graph; процесс pgen_par&shy;se, обеспечивающий генерацию текстов программ в исходном виде на языке Си из документов XML и проектов ТСАГ СПО; проверку на корректность и соответствие документов XML схеме XML. Модель реализации ПГЕН РВ в контексте взаимодействия с подсистемами ТСАГ СПО представлена на рисунке 2.</p>
+<p>Функция PgenfileParse() является основополагающей в ПГЕН РВ &ndash; в ней реализован алгоритм анализа и обработки XML-данных, выполняющий генерацию текста программы в исходном виде на языке Си. Функция PgenfileParse() определена в программном модуле pgenparse.c и является внешней для программных модулей pgenutils.c и gui_interface.c (см. табл. 2). Объявление Pgenfile&shy;Parse() выполнено в заголовочном файле include/ pgenparse.h.</p>
+<p>Функция PgenfileParse() реализована в соответствии с поточно-событийным принципом разбора XML-данных. Функция получает дескриптор XML-документа (вызов open) и начинает последовательное чтение строк этого документа, тем самым напоминая канал, исходными данными для которого выступает XML-разметка. Этот канал условно называется потоком событий. Р-схемы функции PgenfileParse() представлены на рисунках 3&ndash;5.</p>
+<p><img src="uploaded/image/2010-4/image037.gif" alt="Подпись:  
+Рис. 5. Р-схема обработки XML данных 
+в функции PgenfileParse()" width="297" height="402" align="left" />Прочие функции, реализованные в ПГЕН РВ, в этой статье не рассматриваются, так как они являются утилитарными и используются для обеспечения корректной работы оконного интерфейса ПГЕН РВ (процесс pgen_graph), обмена данными с подсистемами ТСАГ СПО (процессы pgen_start, pgen_parse) и управления протоколированием и отладкой ПГЕН РВ.</p>
+<p>Используемые технические  и программные средства</p>
+<p><img src="uploaded/image/2010-4/image039.gif" alt="Подпись:  
+Рис. 4. Р-схема подпрограммы анализа строки 
+функции PgenfileParse()" width="301" height="659" align="left" />Программа ПГЕН РВ эксплуатируется на персональном компьютере типа IBM PC (инструментальная ЭВМ). Необходимая и достаточная для работы ПГЕН РВ конфигурация: корпус ATX, процессор Intel Celeron 3,06 ГГц, оперативная память 2 Гб, сетевая карта Marvell Technology Group Ltd, 88E8001 Gigabit Ethernet Controller (или аналогичная), жесткий диск не менее 80 Гб, DVD-RW-дисковод.</p>
+<p>Для работы в диалоговом режиме требуются цветной графический монитор, клавиатура, манипулятор типа &laquo;мышь&raquo;.</p>
+<p>На инструментальную ЭВМ должно быть установлено следующее ПО: операционная система Linux Fedore Core 7, подсистемы ТСАГ СПО, пользовательская среда GNOME 2.18.0, обозреватель файлов для среды GNOME Nautilus 2.18.1.</p>
+<p>Вызов и загрузка</p>
+<p>Обращение к подсистеме ПГЕН РВ может быть выполнено как из командной строки Unix-shell, так и из прикладной программы. Предположим, что /usr/local/bin/pgen &ndash; путь к исполняемому файлу pgen подсистемы ПГЕН РВ, тогда вызов из командной строки Unix-shell будет выглядеть следующим образом:</p>
+<p>$ ./usr/local/bin/pgen [параметры]</p>
+<p>При использовании ключа &ndash;pgp ПГЕН РВ после завершения обработки входных документов XML отправляет сообщения в канал FIFO. Файл канала FIFO PGEN_xxxx_yyyy_OUT размещается в каталоге /$HOME_DIR/.pgp/, где $HOME_DIR &ndash; пользовательский каталог; xxxx &ndash; числовой идентификатор родительского процесса; yyyy &ndash; числовой идентификатор процесса ПГЕН РВ. Сообщение соответствует следующему формату: Mxxxx, где xxxx &ndash; числовой идентификатор процесса ПГЕН РВ.</p>
+<p>При использовании ключей &ndash;prj и &ndash;isrp ПГЕН РВ создает файлы каналов FIFO XMLGEN_xxxx_ yyyy_OUT и XMLGEN_xxxx_yyyy_IN в каталоге /$HOME_DIR/pgp/, где $HOME_DIR &ndash; пользовательский каталог; xxxx &ndash; числовой идентификатор процесса ПГЕН РВ; yyyy &ndash; числовой идентифи- катор процесса программы-потомка. ПГЕН РВ ожидает получения сообщения по каналу FIFO XMLGEN_xxxx_yyyy_IN, которое свидетельствует о завершении программы-потомка.</p>
+<p>Сообщение соответствует формату Mxxxx, где xxxx &ndash; числовой идентификатор процесса программы-потомка.</p>
+<p>Входные и выходные данные</p>
+<p>Программа ПГЕН РВ выполняет преобразование XML-документов в файлы с текстом в исходном виде на языке Си. Пути к XML-документам в файловой системе инструментальной ЭВМ передаются ПГЕН РВ в качестве параметров. Вызов ПГЕН РВ из командной строки UNIX-shell может быть выполнен, например, следующим образом:</p>
+<p>$ /usr/local/bin/pgen &ndash;in while.xml &ndash;out while.c &ndash;sch schema.xsd</p>
+<p>Входными данными для ПГЕН РВ при работе в текстовом режиме являются входные параметры, которые передаются ПГЕН РВ при запуске (полный список параметров вызова приведен в таблице 3). При работе ПГЕН РВ с документами XML необходимыми являются следующие входные данные:</p>
+<p>&ndash;in file &ndash; ключ специфицирует файл входного документа XML;</p>
+<p>&ndash;out file &ndash; ключ специфицирует файл, в который будут помещены исходные тексты на языке Си;</p>
+<p>&ndash;sch file &ndash; ключ специфицирует схему XML.</p>
+<p>При работе ПГЕН РВ с проектами ТСАГ СПО необходимыми являются следующие входные данные:</p>
+<p>&ndash;prj path &ndash; ключ специфицирует каталог, где располагается проект ТСАГ СПО;</p>
+<p>&ndash;isrp file &ndash; ключ специфицирует файл проекта ТСАГ СПО.</p>
+<p>Выходными данными для ПГЕН РВ являются один или несколько файлов с текстом в исходном виде на языке Си, сообщения, передаваемые ПГЕН РВ вызывающей подсистеме через канал FIFO, сообщения, передаваемые ПГЕН РВ другим программам, сообщения средств контроля ПГЕН РВ, файл отчета.</p>
+<p>При использовании ключей &ndash;in и &ndash;out ПГЕН РВ генерирует на основании документа XML, специфицированного ключом &ndash;in, файл с исходным текстом на языке Си, специфицированный входным параметром &ndash;out. Имя и путь к файлу с исходным текстом определяются параметром &ndash;out.</p>
+<p>Таблица 3</p>
+<table border="1" cellspacing="0" cellpadding="0" width="295">
+<tbody>
+<tr>
+<td width="68" valign="top">
+<p>Синтаксис входных    параметров</p>
+</td>
+<td width="227" valign="top">
+<p>Назначение ключа</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;in файл1</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Определяет входной XML-документ</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;out файл</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Определяет файл, в который будет    сохранен исходный текст программы    на языке Си</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;sch файл</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Определяет схему XML</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;io</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Вывод в стандартный поток ввода/вывода представления XML-документа в виде    дерева</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;с</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Вывод в стандартный поток ввода/вывода внутреннего   представления XML-документа    в виде конструкций языка Си</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;v</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Вывод текущей версии ПГЕН РВ</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;pgp</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Отправка сообщения в FIFO-канал   после    завершения обработки входного    документа XML</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;t</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Вывод в стандартный поток ввода/вывода времени   обработки входного документа XML</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;g1</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Запуск ПГЕН РВ с выводом окна,    отображающего ход процесса обработки входного документа XML   в процентах</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;g2</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Запуск ПГЕН РВ c инициализацией    графического (оконного) интерфейса</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;r файл</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Определяет файл, в который будет помещен отчет об   анализе выходного документа XML</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;debug</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Вывод в стандартный поток ввода/вывода    диагностической информации (активация средств внутреннего контроля)</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;valid</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Проверка входного документа XML   на    соответствие схеме XML и вывод   результатов в стандартный поток ввода/вывода</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;sets</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Вывод конфигурации ПГЕН РВ    в стандартный поток ввода/вывода</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;prj файл</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Определяет каталог с проектом ТСАГ СПО (используется   совместно с ключом &ndash;isrp)</p>
+</td>
+</tr>
+<tr>
+<td width="68" valign="top">
+<p>&ndash;isrp файл</p>
+</td>
+<td width="227" valign="top">
+<p align="left">Определяет файл проекта ТСАГ СПО    (используется совместно с ключом &ndash;prj)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>При использовании ключей &ndash;prj и &ndash;isrp ПГЕН РВ генерирует один или несколько файлов с  исходным текстом на языке Си и помещает их  в каталог $ISRP_PROJ_PATH/pgen/ src/last, где $ISRP_PROJ_PATH специфицируется ключом  &ndash;prj. Сообщения, передаваемые ПГЕН РВ вызывающей подсистеме через FIFO-канал, соответствуют формату Mxxxx, где xxxx &ndash; числовой идентификатор процесса ПГЕН РВ. Файл отчета создается ПГЕН РВ в случае, если был указан параметр &ndash;r, который специфицирует путь к файлу отчета и его имя.</p>
+<p>Перспективы развития</p>
+<p>ПГЕН РВ может применяться как в виде отельного полнофункционального приложения, так и в составе системы проектирования. В настоящее время активно развиваются приложения, предоставляющие интерфейсы для разработки собственных расширений (add-on) и плагинов (plug-in). Таким образом, генератор исходных текстов может быть реализован для систем типа Eclipse, NetBeans и т.д.</p>
+<p>Не менее важны перспектива создания библиотек конструкций для популярных языков типа Java, C#, VisualBasic, а также реализация средств автоматизированного документирования сгенерированного исходного кода.</p>
+<p>Особое место занимает подготовка скелетов программ, которые могут быть включены в общую библиотеку заготовок UML. Это могут быть скелеты потоков управления, процессов, критические</p>
+<p>участки кода, обработчики исключений и прерываний [4] и др.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; ISO/IEC 19501:2005(E), January 2005. Unified Modeling Language Specification. Version 1.4.2 formal/05-04-01.</p>
+<p>2.&nbsp;&nbsp; Extensible Markup Language (XML) 1.0 (Fourth Edition) W3C Recommendation 16 August 2006, edited in place 29 September 2006. URL: http://www.w3.org/TR/REC-xml/ (дата обращения: 16.09.2010).</p>
+<p>3.&nbsp;&nbsp; ISO/IEC 9899:1999: Programming languages &ndash; C (Second Edition), N.Y.: American National Standards Institute, 1999,  pp. 402&ndash;416.</p>
+<p>4.&nbsp;&nbsp; Безруков В.Л. [и др.]. Введение в ос2000. Вопросы кибернетики. Информационная безопасность. Операционные системы реального времени. Базы данных [под. ред. В.Б. Бетелина]. М.: НИИСИ РАН, 1999. С. 76&ndash;109.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2605</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2605">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 4 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=92">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

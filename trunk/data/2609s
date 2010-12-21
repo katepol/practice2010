@@ -1,0 +1,631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Комбинаторные методы восстановления функций по их усреднениям на дискретных подмножествах области определения</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Комбинаторные методы восстановления функций по их усреднениям на дискретных подмножествах области определения</h2><div style="margin-bottom:10px"><strong>Combinatorial methods for functions reconstruction by their averaging on discrete subsets in domain of definition</strong></div>Статья опубликована в выпуске журнала № 4 за 2010 год. [ 09.12.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Рассматривается задача вычисления значений функции, определенной на счетном дискретном носителе, в каждой точке ее области определения, если известны только средние значения на достаточно большом наборе конечных или счетных подмножеств. Эта задача аналогична задаче интегральной геометрии на континуальных пространствах с мерой, однако дискретность носителя функционального пространства позволяет получить новые комбинаторные методы обращения усредняющих операторов, не сводимые к известным формулам обращения в интегральной геометрии. Методы можно применять к пространствам с различной дискретной математической структурой.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">It considered the task of computing the value of function (which is determent on countable discrete support) for each point in domain of definition, if it is known only average value of that function on sufficiently big assembly of finite or countable subsets. That task is analogous the integral geometry task on continuality spaces with measure. But the discrete support of functional space permit to obtain new combinatorial methods for inversion of average operators, which are not reducible to known formulas in integral geometry. Those methods may by apply on spaces with different mathematical structures.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=4024">Коганов А.В. (koganow@niisi.msk.ru)</a> - НИИСИ РАН, г. Москва Кандидат физико-математических наук Ph.D., <a href="index.php?page=infou&id=5391">Граев М.И. ()</a> -    </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1767">формула обращения</a>, <a href="index.php?page=infotg&id=1769">усреднение на группе</a>, <a href="index.php?page=infotg&id=1768">интегральная геометрия</a>, <a href="index.php?page=infotg&id=1770">двойное разбиение</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1767"></a>, <a href="index.php?page=infotg&id=1769"></a>, <a href="index.php?page=infotg&id=1768"></a>, <a href="index.php?page=infotg&id=1770"></a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 32<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2609">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Классическая интегральная геометрия (начиная с работ И.М. Гельфанда) рассматривает интегральные преобразования, относящие измеримым функциям, определенным на том или ином многообразии, их интегралы по некоторому семейству его подмногообразий (например, преобразование Радона на плоскости, относящее функциям на плоскости их интегралы по всевозможным прямым [1&ndash;3]). Основная задача состоит в описании образов и ядер этих преобразований и, главное, в построении формулы обращения, которая восстанавливает исходную функцию по ее преобразованию.</p>
+<p>&nbsp;</p>
+<p>Идеи и результаты интегральной геометрии используются в других разделах математики и в ее приложениях, в частности, в медицинской томографии. В постановке задач интегральной геометрии исходные объекты (многообразия) могут быть заменены объектами иной природы, например, дискретными комбинаторными множествами или графами [3&ndash;5]. Это приводит к новому циклу задач, интересных не только внутри математики, но и в приложениях.</p>
+<p>В данной статье рассматриваются некоторые простейшие задачи, связанные с дискретными множествами. Для краткости назовем их задачами усреднения, а возникающие в них преобразования &ndash; операторами усреднения.</p>
+<p>В общей постановке задача усреднения может быть сформулирована следующим образом. Заданы конечное или счетное множество X и набор Y подмножеств этого множества. Оператор усреднения ставит в соответствие каждой числовой функции, определенной на X, суммы ее значений по элементам каждого подмножества из совокупности Y. Если значения некоторой функции на X образуют абсолютно сходящийся ряд, то ее суммы образуют функцию на Y. Требуется найти условия, при которых исходная функция на X может быть восстановлена по соответственной функции на Y, и получить для этого явную формулу обращения.</p>
+<p>Отметим, что в такой постановке задачи самому понятию &laquo;усреднение&raquo; можно придать обобщенный смысл (например, усреднение с весами). Кроме того, можно предполагать, что само мно- жество X и область значений функций на нем снабжены дополнительной структурой (например, частичным порядком или специальным действием некоторой группы). Таким образом, исходное определение оператора усреднения имеет много разных вариантов.</p>
+<p>Двойные разбиения</p>
+<p>Пусть A и B &ndash; произвольные счетные абстрактные множества, а C&Igrave;A&acute;B &ndash; фиксированное подмножество пар (a, b), где a&Icirc;A и b&Icirc;B; <img src="uploaded/image/2010-4/image446.gif" border="0" alt="" width="135" height="31" />. Назовем элементы a&Icirc;A  и b&Icirc;B инцидентными и будем писать a~b, если (a, b)&Icirc;C. Обозначим Ab={a&frac12;a~b}&Igrave;A, Ba={b&frac12;a~b}&Igrave;B.</p>
+<p>Определение. Положим, что C&Igrave;A&acute;B задает двойное разбиение и будем писать (A&not;C&reg;B), если Ab&sup1;&AElig; для всех b&Icirc;B, Ab&sup1;Ab&cent; при b&sup1;b&cent; и <img src="uploaded/image/2010-4/image448.gif" border="0" alt="" width="61" height="28" />; аналогично Ba&sup1;&AElig; для всех a&Icirc;A, Ba&sup1;Ba&cent; при a&sup1;a&cent; и <img src="uploaded/image/2010-4/image450.gif" border="0" alt="" width="58" height="28" />.</p>
+<p>В силу этого определения множество B можно рассмотреть с точностью до биекции как набор попарно различных подмножеств Ab&Igrave;A. Аналогично множество A может быть интерпретировано как набор попарно различных подмножеств Ba&Igrave;B.</p>
+<p>Свяжем с каждым двойным разбиением (A&not;C&reg;B) следующую задачу усреднения. Обозначим для произвольного не более чем счетного множества V через H(V) пространство всех вещественных или комплекснозначных функций f(&times;) на V, удовлетворяющих условию абсолютной суммируемости: <img src="uploaded/image/2010-4/image452.gif" border="0" alt="" width="71" height="29" />.</p>
+<p>Поставим в соответствие каждой функции f&Icirc;H(A) функцию If(&times;) на B:</p>
+<p><img src="uploaded/image/2010-4/image454.gif" border="0" alt="" width="135" height="28" />.</p>
+<p>Предложение. Если для любого b&Icirc;B число элементов #Ab не превосходит k&lt;&yen;, то из условия f&Icirc;H(A) следует, что If&Icirc;H(B). В общем случае это необязательное свойство.</p>
+<p>Задача: восстановить исходную функцию f&Icirc;H(A) по функции If&Icirc;H(B).</p>
+<p>Рассмотрим подходы к решению этой задачи при различных дополнительных условиях на двойные разбиения.</p>
+<p>Неособые точки двойных разбиений. Пусть (A&not;C&reg;B) &ndash; произвольное двойное разбиение.</p>
+<p>Определение. Назовем точку a&Icirc;A неособой, если для любого конечного подмножества <img src="uploaded/image/2010-4/image456.gif" border="0" alt="" width="71" height="19" />&nbsp;существует элемент b(a/A&cent;)&Icirc;B, инцидентный a, но не инцидентный ни одному элементу a&cent;&Icirc;A&cent;:</p>
+<p><img src="uploaded/image/2010-4/image458.gif" border="0" alt="" width="196" height="39" /></p>
+<p>В противном случае назовем a&Icirc;A особой точкой множества A.</p>
+<p>Теорема 1. Для любой неособой точки a0 двойного расслоения существует формула обращения, восстанавливающая f(a)&Icirc;H(A) по j(b).</p>
+<p>Доказательство. Занумеруем произвольным образом элементы множества A=(a0, a1, &hellip;). Поскольку a0 &ndash; неособая точка, то для любого натурального числа n существует такой элемент bn&Icirc;B, что a~bn и ai&Oslash;~bn, i=1, &hellip;, n.</p>
+<p>Тогда для любой функции f(a)&Icirc;H(A) справедлива следующая формула обращения:</p>
+<p><img src="uploaded/image/2010-4/image460.gif" border="0" alt="" width="257" height="36" />.&nbsp; (1)</p>
+<p>Действительно, частичные суммы этого ряда равны: <img src="uploaded/image/2010-4/image462.gif" border="0" alt="" width="163" height="37" />. С ростом n последняя сумма стремится к 0 в силу определения H(A). Конец доказательства.</p>
+<p>Замечание. Имеется тривиальный частный случай теоремы, когда для некоторого a&Icirc;A имеется такое b&Icirc;Ba, что Ab={a}. Иными словами, точка имеет инцидентное подмножество, состоящее только из нее самой. Тогда, по определению, точка a неособая, даже если нет других инцидентных ей подмножеств. И в этом случае формула (1) вырождается в f(a)=j(b), где уже нет бесконечной суммы или предельного перехода. В качестве последовательности {bi} можно взять bi=b. Этот пример показывает, что неособые точки могут иметь конечное число инцидентных подмножеств. Но это нехарактерный случай.</p>
+<p>Частные случаи двойных разбиений. Рассмотрим примеры двойных разбиений (A&not;C&reg;B), у которых все точки неособые. Далее для удобства изложения элементы из A будем называть точками, а элементы из B &ndash; подмножествами. Это соответствует сделанному выше замечанию об интерпретации B&laquo;{Ab&frac12;b&Icirc;B}.</p>
+<p>Лемма 1. Пусть двойное разбиение удовлетворяет следующим аксиомам.</p>
+<p>1.&nbsp;Для каждой пары точек существует одно и только одно подмножество, инцидентное им обеим: <img src="uploaded/image/2010-4/image464.gif" border="0" alt="" width="195" height="19" />. Далее это подмножество обозначим b=b(a, a&cent;).</p>
+<p>2.&nbsp;Для каждой точки существует бесконечно много инцидентных ей подмножеств: "a&Icirc;A #Ba=&yen;.</p>
+<p>Тогда все точки неособые.</p>
+<p>Доказательство. Пусть заданы произвольная точка a&Icirc;A и такое конечное множество V&Igrave;A, #V&lt;&yen;, что a&Icirc;A\V. Обозначим <img src="uploaded/image/2010-4/image466.gif" border="0" alt="" width="81" height="28" />. По условию 2 A\W&sup1;&AElig;. Тогда для любого a&cent;&Icirc;A\W выполнено условие V&Ccedil;Ab(a, a&cent;)=&AElig;. Но по определению a!~b(a, a&cent;). Условие неособенной точки выполнено. Лемма доказана.</p>
+<p>Лемма 2 (усиление леммы 1). Условие 1 заменяется на более слабое. 1м) Для каждой пары точек существует не более чем одно подмножество, инцидентное им обеим:</p>
+<p><img src="uploaded/image/2010-4/image468.gif" border="0" alt="" width="215" height="39" /></p>
+<p>Условие 2 сохраняется. Тогда все точки неособые.</p>
+<p>Доказательство повторяет доказательство леммы 1 с заменой определения b(a, a&cent;)=b, если такое подмножество есть (тогда оно единственно по условию 1м), либо b(a, a&cent;)=&AElig;, если такого подмножества нет.</p>
+<p>Пример 1 (соответствует лемме 1). A=<img src="uploaded/image/2010-4/image470.gif" border="0" alt="" width="19" height="17" />= ={(x, y)&frac12;x, y&Icirc;<img src="uploaded/image/2010-4/image472.gif" border="0" alt="" width="15" height="15" />} &ndash; множество точек с целыми координатами на координатной плоскости. B &ndash; множество прямых вида ax+bx=c с целыми коэффициентами a, b, c на той же координатной плоскости. Отношение инцидентности &ndash; принадлежность точки прямой.</p>
+<p>Пример 2 (соответствует лемме 2). Рассмотрим многомерную целочисленную сеть <img src="uploaded/image/2010-4/image474.gif" border="0" alt="" width="17" height="21" />, n&gt;2. Определим A как множество целочисленных прямых на этой сети, а множество B &ndash; как множество целочисленных плоскостей там же. Инцидентность по принадлежности прямой плоскости. Ясно, что выполняется условие леммы 2. Следовательно, усреднения функций от коэффициентов прямой по плоскостям обратимы на этой сети.</p>
+<p>Данный пример имеет важное обобщение.</p>
+<p>Лемма 3. При любой размерности n сети <img src="uploaded/image/2010-4/image475.gif" border="0" alt="" width="19" height="21" />&nbsp;обратимы усреднения функций от наборов параметров целочисленных К-плоскостей (в качестве точек) по всем целочисленным (К+1)-плоскостям (в качестве подмножеств). Отношение инцидентности задается по вложению К-плоскости в (К+1)-плоскость. Доказательство сразу следует из леммы 2, поскольку для двух различных К-плос&shy;костей есть инцидентная им (К+1)-плоскость только в случае, если у них пересечение по (К-1)-плоскости, и в этом случае объемлющая их (К+1)-плоскость натянута на совокупность их направляющих векторов, а это определяет ее однозначно.</p>
+<p>Пример 3 (соответствует лемме 2). Оба множества определяются одинаково:</p>
+<p><img src="uploaded/image/2010-4/image477.gif" border="0" alt="" width="265" height="23" />,</p>
+<p>являясь множеством пар взаимно простых целых чисел. Две пары инцидентны (x, y)~(u, v), если xv&ndash;yu=1. Это означает, что для любой пары инцидентная ей пара задает соответственные коэффициенты линейной комбинации, выявляющей взаимную простоту компонент. Тогда пара из класса подмножеств инцидентна двум парам из класса точек, если верны два уравнения (x, y)~(u, v) &amp; (p, q)~(u, v) &Ucirc; xv&ndash;yu=1 &amp; pv&ndash;qu=1. Такое целочисленное решение u, v существует не для всех двоек (x, y), (p, q). Но если решение есть, то два числа однозначно определены двумя линейными уравнениями.</p>
+<p>Лемма 4 (обобщение лемм 1 и 2). Задача усреднения разрешима в любой точке a&Icirc;A, для которой существует последовательность инцидентных подмножеств bi&Icirc;B, a~bi, i=0, 1, &hellip; , в которой bi&Ccedil;bj={a}, i&sup1;j. Формула обращения совпадает с формулой (1).</p>
+<p>Допустимые подмножества и связанные с ними формулы обращения. Формула обращения (1) для преобразования If функций f из H(A) применима только при восстановлении функций в неособых точках a&Icirc;A, и возникает задача о восстановлении функций в особых точках. Такая задача может не иметь решения, а потому заменяем ее на более общую задачу, которая здесь будет рассмотрена: восстановить по функции If сумму значений исходной функции f на некотором фиксированном подмножестве D&Igrave;A. Такое восстановление будем называть условным обращением преобразования усреднения.</p>
+<p>Определение. Назовем подмножество D&Igrave;A в двойном разбиении (A&not;C&reg;B) допустимым, если для каждого конечного подмножества M&Igrave;A\D существует элемент b&Icirc;B, инцидентный всем элементам a&Icirc;D и не инцидентный ни одному элементу из M.</p>
+<p>В частности, само множество A всегда допустимо, а одноэлементное подмножество {a}, a&Icirc;A допустимо тогда и только тогда, когда точка a неособая.</p>
+<p>Теорема 2. Для каждого допустимого подмно&shy;жества D&Igrave;A имеет место следующая формула условного обращения для преобразования I на H(A):</p>
+<p><img src="uploaded/image/2010-4/image479.gif" border="0" alt="" width="184" height="65" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)</p>
+<p>где bi&Icirc;B &ndash; элемент, инцидентный всем a&Icirc;D и не инцидентный (как минимум) первым i элементам множества A\D при любом фиксированном упорядочении элементов этого множества.</p>
+<p>Вывод формулы (2) совпадает с выводом формулы обращения (1).</p>
+<p>Отметим, что в простейшем случае, когда множество A\D конечно, в соответствии с определением допустимости существует такой элемент b&Icirc;B, что Ab=D. Тогда формулу (2) можно представить в тривиальной форме: Sf(D)=j(b).</p>
+<p>Заметим также, что каждое подмножество Ab, b&Icirc;B является допустимым и</p>
+<p>Sf(Ab)=j(b).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p>Определение. Назовем допустимое подмножество D&Igrave;A приклеенным к точке a, если a&Icirc;D.</p>
+<p>Назовем точку a&Icirc;A слабо неособой, если существует приклеенное к a допустимое подмножество D&Igrave;A, в котором все точки, отличные от a, неособые.</p>
+<p>В частности, если a&Icirc;A &ndash; единственная особая точка, то, поскольку множество A допустимо, она является слабо неособой.</p>
+<p>Утверждение. Для каждой слабо неособой точки a существует формула обращения:</p>
+<p><img src="uploaded/image/2010-4/image481.gif" border="0" alt="" width="137" height="29" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)</p>
+<p>В правой части первый член определяется по формуле (2), а каждый член второй суммы &ndash; по (1).</p>
+<p>Дадим рекуррентное определение неособой точки глубины n, n=0, 1, 2, &hellip; .</p>
+<p>Определение. Неособая точка имеет глубину 0. Неособая точка a&Icirc;A глубины n, n&gt;0, принадлежит допустимому множеству D&Igrave;A, в котором все точки, кроме a, являются неособыми точками глубины, меньшей n, а сама точка a не относится к этому классу.</p>
+<p>В частности, определенная выше слабо неособая точка имеет глубину 1.</p>
+<p>Обозначим для неособой точки x&Icirc;A конечной глубины ее глубину как n(x).</p>
+<p>Теорема 3. Для каждой неособой точки a конечной глубины n существует формула обращения. Пусть для точек x&Icirc;A всех глубин n(x)<img src="uploaded/image/2010-4/image483.gif" border="0" alt="" width="116" height="21" />, где D(x) &ndash; допустимое множество для точки x&Icirc;A, а символ F обозначает совокупность значений оператора усреднения <img src="uploaded/image/2010-4/image485.gif" border="0" alt="" width="125" height="19" />. Тогда D(a)=D, n(a)=n и оператор обращения для точки a имеет вид</p>
+<p><img src="uploaded/image/2010-4/image487.gif" border="0" alt="" width="252" height="29" />.&nbsp;&nbsp;&nbsp; (5)</p>
+<p>Доказательство по индукции. Для n(a)=0 имеется оператор обращения, заданный уравнением (1). Для n(a)=1 формула (4) соответствует общему виду (5). Предположим, что формула обращения (5) верна для всех n(x)</p>
+<p>Эта теорема значительно расширяет класс точек, где можно восстановить функцию по усреднениям. При этом требуется следующая последовательность действий. Вначале восстанавливаются значения в неособых точках, потом &ndash; в слабо неособых точках и далее &ndash; в порядке роста глубины. Для счетных бесконечных множеств вычисления пределов и сумм рядов делаются приближенно с нужной точностью. Это возможно, если f&Icirc;H(A).</p>
+<p>Пример 4. Множество точек A=<img src="uploaded/image/2010-4/image489.gif" border="0" alt="" width="15" height="15" />&acute;<img src="uploaded/image/2010-4/image491.gif" border="0" alt="" width="15" height="16" />={(x, n)&frac12;x&Icirc;<img src="uploaded/image/2010-4/image489.gif" border="0" alt="" width="15" height="15" />, n&Icirc;<img src="uploaded/image/2010-4/image491.gif" border="0" alt="" width="15" height="16" />}.</p>
+<p>Система подмножеств B=<img src="uploaded/image/2010-4/image489.gif" border="0" alt="" width="15" height="15" />&acute;<img src="uploaded/image/2010-4/image491.gif" border="0" alt="" width="15" height="16" />&acute;<img src="uploaded/image/2010-4/image491.gif" border="0" alt="" width="15" height="16" />={[y, m, n]&frac12;y&Icirc;<img src="uploaded/image/2010-4/image489.gif" border="0" alt="" width="15" height="15" />; m, n&Icirc;<img src="uploaded/image/2010-4/image491.gif" border="0" alt="" width="15" height="16" />}.</p>
+<p>Отношение инцидентности (x, 1)~[y, 1, n]&Ucirc; &Ucirc;$i&Icirc;<img src="uploaded/image/2010-4/image489.gif" border="0" alt="" width="15" height="15" />, x=y+ni.</p>
+<p>Тогда <img src="uploaded/image/2010-4/image494.gif" border="0" alt="" width="151" height="23" />.</p>
+<p>Для m&sup3;2 определим (x, m)~[y, m&cent;, 1]&Ucirc;x=y; m&cent;=m, m+1.</p>
+<p>Тогда A[y, m, 1]={(y, m); (y, m&ndash;1)}, m&sup3;2.</p>
+<p>Подмножества [y, m, n], n&sup3;2, не имеют инцидентных точек: A[y, m, n]=&AElig;, m&sup3;2, n&sup1;1.</p>
+<p>Иными словами, модель имеет слои, пронумерованные индексом m=1, &hellip;, и на первом слое точка инцидентна всем проходящим через нее арифметическим прогрессиям с натуральной разностью и двусторонним индексом, а на других слоях точка инцидентна паре из себя и такой же точке на предыдущем слое. Все точки первого слоя неособые. Действительно, если задано произвольное конечное подмножество M&Igrave;A, то имеется x(M)=max{&frac12;x&frac12;&frac12;(x, m)&Icirc;M}. Для точки (x, 1) инцидентное подмножество [x, 1,&frac12;x&ndash;x(M)&frac12;]&Icirc;B не содержит ни одной точки из M\{(x, 1)}. Тогда точки второго слоя (x, 2) неособые глубины 1. В качестве допустимого множества можно взять подмножество [x, 2, 1]&Icirc;B. Аналогично точки любого слоя m&gt;2 являются неособыми глубины m&ndash;1 с допустимым подмножеством [x, m, 1]&Icirc;B. Таким образом, пространство A имеет неособые точки любой глубины, и на H(A) оператор усреднения обратим по рекуррентной формуле (5), которая в данном случае упрощается, поскольку приклеенные допустимые множества двухэлементные:</p>
+<p><img src="uploaded/image/2010-4/image496.gif" border="0" alt="" width="203" height="41" /></p>
+<p>N-разбиения</p>
+<p>Определение. Пусть задано N-разбиение, ес- ли задана последовательность N счетных множеств A1, &hellip;, AN, и с каждой парой соседних  множеств Ak, Ak+1 из этой последовательности связано двойное разбиение (Ak&not;Ck&reg;Ak+1), где Ck&Igrave;Ak&acute;Ak+1.</p>
+<p>Определение. Порожденным двойным разбиением (Ak&not;Ck,l&reg;Al), k</p>
+<p><img src="uploaded/image/2010-4/image498.gif" border="0" alt="" width="252" height="44" /></p>
+<p>Для N-разбиения определены все операторы усреднения на компонентах N-разбиения, которые действуют на пространствах H(Ak), k=1, &hellip;, N&ndash;1:</p>
+<p><img src="uploaded/image/2010-4/image500.gif" border="0" alt="" width="244" height="31" />, &nbsp;&nbsp;&nbsp;&nbsp; (6)</p>
+<p>где скобки внизу показывают, к какому множеству Ak принадлежит элемент, а индекс у функции указывает на ее принадлежность к H(Ak).</p>
+<p>Заметим, что это преобразование действует только на соседних по индексу множествах. Если применить усреднение для порожденного двойного разбиения при l&ndash;k&gt;1, то формула (6) не будет соответствовать порожденной инцидентности. Кроме того, итерация усреднений может оказаться невыполнимой, если образ функции выйдет из H(Ak+1).</p>
+<p>Обозначим оператор усреднения по порожденному 2-разбиению (A1&not;C1,l&reg;Al), 1</p>
+<p><img src="uploaded/image/2010-4/image502.gif" border="0" alt="" width="181" height="31" />, f(&times;)=f*1(&times;).</p>
+<p>Введем оператор частичного усреднения функции на Ak по подмножеству V&Igrave;Ak:</p>
+<p><img src="uploaded/image/2010-4/image504.gif" border="0" alt="" width="263" height="33" /></p>
+<p>Область определения этой функции <img src="uploaded/image/2010-4/image506.gif" border="0" alt="" width="116" height="20" />&nbsp;состоит из тех x(k+1)&Icirc;Ak+1, для которых множество членов суммы в определении не пусто. Этот домен зависит только от выбранного подмножества и одинаков для всех функций.</p>
+<p>Определение. Назовем N-разбиение транзитивным, если выполнены следующие условия.</p>
+<p>1а.&nbsp;Для каждого x(k)&Icirc;Ak существует такое подмножество V=Vk(x(k))&Igrave;Ak, что</p>
+<p><img src="uploaded/image/2010-4/image508.gif" border="0" alt="" width="188" height="21" />.</p>
+<p>2а.&nbsp;Совокупность значений (x(k+1), f*k+1(x(k+1))), x(k+1)&Icirc;D[V] достаточна для применения некоторой формулы обращения при восстановлении значения f*k(x(k)).</p>
+<p>Теорема 4. Для транзитивного N-разбиения транзитивное усреднение обратимо.</p>
+<p>Доказательство. По условию 2а имеется оператор, который в любой точке x(k) восстанавливает значение f*k(x(k)) по известным значениям <img src="uploaded/image/2010-4/image510.gif" border="0" alt="" width="71" height="24" />. Выбрав точку x(k-1) и построив для нее по условию 1а множество <img src="uploaded/image/2010-4/image512.gif" border="0" alt="" width="107" height="21" />, получим D[(x(k-1))]&Igrave;Ak. Вычислив значения f*k(y) в каждой точке y&Icirc;D[x(k-1)], можно перейти к значению f*k-1(x(k-1)). Продолжая этот процесс, получим любое значение вида f*i(y), 1&pound;i&pound;k, y&Icirc;Ai. Теорема доказана.</p>
+<p>Эта теорема имеет принципиальное следствие.</p>
+<p>Теорема 5. При любой размерности n сети <img src="uploaded/image/2010-4/image514.gif" border="0" alt="" width="19" height="17" />&nbsp;множества К-плоскостей, K=0, 1, &hellip;, n, образуют транзитивную n-систему. Возможно восстановление усреднений на К-плоскостях по значениям усреднений на М-плоскостях при 0&pound;K</p>
+<p>Этот результат обобщает на случай целочисленных решеток любых размерностей известную теорему [6] о наличии формул обращения для аналогичных интегральных операторов на элементах грассманиана в <img src="uploaded/image/2010-4/image516.gif" border="0" alt="" width="18" height="17" />. Однако структура формул обращения в дискретном случае совершенно иная.</p>
+<p>Доказательство. Для того чтобы использовать формулу обращения (1) при восстановлении значения функции на К-плоскости по усреднению ее значений на (К+1)-плоскостях в <img src="uploaded/image/2010-4/image514.gif" border="0" alt="" width="19" height="17" />, достаточно знать значения усреднений на (К+1)-плоскостях, содержащих эту К-плоскость (лемма 3). Для получения усреднений достаточно знать значения функции на семействе К-плоскостей, параллельных исходной К-плоскости. Усреднения по прямым (1-плоскости) начинаются с функции  f&Icirc;H(<img src="uploaded/image/2010-4/image514.gif" border="0" alt="" width="19" height="17" />), определенной на точках (0-плоскости). Тогда сумма абсолютных значений этих усреднений по семейству параллельных прямых не выше суммы абсолютных значений исходной функции по пространству. (Напомним, что под усреднением понимается сумма значений.) Таким образом, каждой прямой можно сопоставить подмножество прямых, на котором усреднения абсолютно суммируемы. И этих прямых достаточно, чтобы получить набор усреднений по 2-плоскостям, позволяющий восстановить усреднение на исходной прямой. Продолжая построения для K&cent;=2, &hellip;, K для произвольной К-плоскости, получаем, что на семействе параллельных ей К-плоскостей усреднения абсолютно суммируемы и позволяют получить набор усреднений на (К+1)-плоскостях, достаточный для восстановления значения усреднения на исходной К-плоскости. Таким образом,  К-плоскости образуют n-систему и она транзитивна. Тогда обратимость следует из теоремы 4. Теорема доказана.</p>
+<p>Заметим, что формула (1) в данном случае содержит бесконечный ряд или предельный переход. Это означает, что практически провести восстановление значений усреднения с понижением размерности можно в общем случае только приближенно.</p>
+<p>Задачи, связанные с подгруппами  счетных дискретных групп</p>
+<p>Резольвентные подгруппы. (Термин &laquo;резольвентный&raquo; предложен И.М. Гельфандом.) Пусть A &ndash; произвольная дискретная счетная группа и G &ndash; собственная счетная подгруппа группы A. Свяжем с парой (G, A) двойное разбиение (A&not;C&reg;B), где B &ndash; совокупность всех двусторонних классов смежности подгруппы G в группе A, то есть подмножеств в A вида b=a1Ga2; a1, a2&Icirc;A; отношение инцидентности a~b &ndash; принадлежность элемента a&Icirc;A классу смежности b. Условимся называть  такие двойные разбиения связанными с группой A и ее подгруппой G и коротко обозначать через  [G, A].</p>
+<p>Заметим, что классами сопряженных элементов, инцидентными единичному элементу e&Icirc;A, являются подгруппы aGa-1, сопряженные с подгруппой G.</p>
+<p>Очевидно, что для каждого двойного разбиения [G, A] все точки a&Icirc;A являются одновременно особыми или неособыми.</p>
+<p>Определение. Назовем подгруппу G группы A резольвентной, если для связанного с парой [G, A] двойного разбиения отображение, относящее функциям f&Icirc;H(A) их образы If, обратимо во всех точках a&Icirc;A.</p>
+<p>Назовем подгруппу G группы A строго резольвентной, если все точки a&Icirc;A в двойном разбиении [G, A] являются неособыми или, что эквивалентно, неособой точкой является единичный элемент e&Icirc;A.</p>
+<p>Очевидно, что любая подгруппа строго резольвентной группы также строго резольвентна.</p>
+<p>Примерами нестрого резольвентных подгрупп являются все группы G&Igrave;~A, для которых пересечение G&Ccedil;Z, где Z &ndash; центр группы A, отлично от единичной группы. В этом случае любая подгруппа, сопряженная с Z, содержит все элементы  из G&Ccedil;Z.</p>
+<p>На основании теоремы 1 любая строго резольвентная подгруппа является резольвентной, и для нее обращение преобразования I может быть за- дано формулой (1). Вопрос о том, следует ли обратно условие строгой резольвентности из условия резольвентности, требует отдельного обсуждения.</p>
+<p>Примеры строго резольвентных подгрупп. Пусть группа A относится к любому из двух классов: SL(n, <img src="uploaded/image/2010-4/image489.gif" border="0" alt="" width="15" height="15" />) всех целочисленных матриц порядка n с определителем 1 или GL(n, <img src="uploaded/image/2010-4/image519.gif" border="0" alt="" width="16" height="17" />) всех невырожденных матриц порядка n, n&sup3;2, с рациональными элементами. Для каждой из них будут определены две строго резольвентные подгруппы G.</p>
+<p>Пример 5. Пусть G &ndash; подгруппа всех нижних треугольных матриц с единицами на диагонали, то есть подгруппа матриц &ecirc;&ecirc;gi,j&uacute;&uacute;, у которых gi,j=0 при i<img src="uploaded/image/2010-4/image521.gif" border="0" alt="" width="16" height="20" />&nbsp;подгруппу всех верхних треугольных матриц. У ее элементов на диагонали стоят числа &plusmn;1 в случае группы SL(n, <img src="uploaded/image/2010-4/image489.gif" border="0" alt="" width="15" height="15" />) или любые отличные от нуля рациональные числа в случае группы GL(n, <img src="uploaded/image/2010-4/image519.gif" border="0" alt="" width="16" height="17" />). В обоих случаях пересечение <img src="uploaded/image/2010-4/image523.gif" border="0" alt="" width="41" height="20" />&nbsp;есть единичная подгруппа. Свяжем с каждым целым числом a матрицу ga&Icirc;<img src="uploaded/image/2010-4/image521.gif" border="0" alt="" width="16" height="20" /> с элементами: gi,i=1; gi,i+1=a; gi,j=0, j&ndash;i&gt;1.</p>
+<p>Легко убедиться, что у матрицы <img src="uploaded/image/2010-4/image525.gif" border="0" alt="" width="20" height="21" />, обратной к ga, элементы над ее диагональю суть <img src="uploaded/image/2010-4/image527.gif" border="0" alt="" width="71" height="23" />.</p>
+<p>Строгая резольвентность подгруппы G определяется на основании теоремы 1 из следующего утверждения.</p>
+<p>Лемма 5. Для каждого отличного от единичного элемента x=&uacute;&uacute;xi,j&uacute;&uacute; группы G имеем <img src="uploaded/image/2010-4/image529.gif" border="0" alt="" width="64" height="21" />&nbsp;при достаточно большом a.</p>
+<p>Доказательство. Обозначим y=<img src="uploaded/image/2010-4/image531.gif" border="0" alt="" width="39" height="21" />. Если x &ndash; любая верхняя треугольная матрица, отличная от единичной, то y есть матрица того же вида, а потому y&Icirc;G при любом a. Поэтому достаточно ограничиться случаем, когда существует элемент xi,j&sup1;0 с индексами i&gt;j. Воспользуемся тем, что элементы матрицы y выражаются через элементы матрицы x следующим равенством:</p>
+<p><img src="uploaded/image/2010-4/image533.gif" border="0" alt="" width="160" height="32" />,</p>
+<p>где положено xn+1,j=0. В силу этого равенства xi,j входит слагаемым в выражение для yi,n с коэффициентом an-j, где n-j&gt;0. Отсюда следует, что yi,n&reg;&yen; при a&reg;&yen;, а потому y&Iuml;G при достаточно большом a. Лемма доказана.</p>
+<p>Заметим, что подгруппа в GL(n, <img src="uploaded/image/2010-4/image519.gif" border="0" alt="" width="16" height="17" />) всех нижних треугольных матриц не является строго резольвентной, поскольку содержит центр группы GL(n, <img src="uploaded/image/2010-4/image519.gif" border="0" alt="" width="16" height="17" />) &ndash; все скалярные матрицы lE, где l&Icirc;<img src="uploaded/image/2010-4/image519.gif" border="0" alt="" width="16" height="17" />, l&sup1;0, а E &ndash; единичная матрица.</p>
+<p>Пример 6. Пусть G &ndash; группа SL(n-1, <img src="uploaded/image/2010-4/image489.gif" border="0" alt="" width="15" height="15" />) целочисленных матриц порядка n-1 с определителем 1 или группа GL(n-1, <img src="uploaded/image/2010-4/image519.gif" border="0" alt="" width="16" height="17" />) невырожденных рациональных матриц порядка n-1. Предполагается, что эти группы реализованы как блочные подгруппы, соответственно, групп SL(n, <img src="uploaded/image/2010-4/image489.gif" border="0" alt="" width="15" height="15" />) и GL(n, <img src="uploaded/image/2010-4/image519.gif" border="0" alt="" width="16" height="17" />), то есть как матрицы вида <img src="uploaded/image/2010-4/image535.gif" border="0" alt="" width="41" height="37" />.</p>
+<p>Докажем, что эти подгруппы также строго резольвентны. Условимся представлять элементы исходных групп в блочной форме: <img src="uploaded/image/2010-4/image537.gif" border="0" alt="" width="45" height="41" />, где диагональные элементы a и d &ndash; матрицы порядков n и 1 соответственно. В этих обозначениях G &ndash; суть подгруппа матриц вида <img src="uploaded/image/2010-4/image539.gif" border="0" alt="" width="44" height="41" />.</p>
+<p>Нужно убедиться, что для любого конечного множества X элементов исходной группы <img src="uploaded/image/2010-4/image541.gif" border="0" alt="" width="80" height="44" />, i=1, &hellip;, N, не содержащего единичный элемент, существует такой элемент h исходной группы, что h-1gih&Iuml;G, i=1, &hellip;, N.</p>
+<p>Введем множество элементов h исходной группы вида <img src="uploaded/image/2010-4/image543.gif" border="0" alt="" width="180" height="41" />, где r=(r1, &hellip;,rn), s=(s1, &hellip;, sn) &ndash; вектор-строка и вектор-столбец с целыми и, соответственно, рациональными элементами, и обозначим для каждого из них <img src="uploaded/image/2010-4/image545.gif" border="0" alt="" width="104" height="44" />.</p>
+<p>Из определения матриц h следует:</p>
+<p><img src="uploaded/image/2010-4/image547.gif" border="0" alt="" width="137" height="20" />,</p>
+<p><img src="uploaded/image/2010-4/image549.gif" border="0" alt="" width="189" height="20" />,</p>
+<p>где e &ndash; единичная матрица.</p>
+<p>Введем два дизъюнктных подмножества в X:</p>
+<p><img src="uploaded/image/2010-4/image551.gif" border="0" alt="" width="177" height="47" /></p>
+<p>Обозначим через H множество всех таких векторов r, что rbi&sup1;0 при gi&Icirc;X1, r(ai&ndash;di)&sup1;0 при gi&Icirc;X2, и примем s=rT (транспонированный вектор). Легко убедиться, что множество H непусто и содержит вместе с каждым вектором r все векторы nr.</p>
+<p>Покажем, что h-1gih&Iuml;G, i=1, &hellip;, N, при достаточно большом r. В самом деле, если gi&Icirc;X1, то из выражения для di следует, что при большом r оно становится сколь угодно большим, а потому  h-1gih&Iuml;G &nbsp;при большом r. То же самое справедливо на основании выражения для gi в случае gi&Icirc;X2.</p>
+<p>Если, наконец, gi&Icirc;X1\X2, то gi=ci. Значит,  h-1gih&Iuml;G, если ci&sup1;0. В случае ci=0 матрица gi скалярна. Тогда h-1gih&Iuml;G, кроме случая gi=e, который исключается. Утверждение доказано.</p>
+<p>Задачи, связанные с решетками  над счетными дискретными кольцами</p>
+<p>Постановка общей задачи. Пусть L &ndash; произвольное счетное, необязательно коммутативное кольцо. Двойное разбиение (A&not;C&reg;B) свяжем с произвольным полиномом P(a, x) над L от символов a=(a1, &hellip;,am) и x=(x1, &hellip;, xn).</p>
+<p>Определение. Назовем элементы a&Icirc;Lm и x&Icirc;Ln инцидентными и будем писать a~x, если для них P(a, x)=0. Введенное отношение инцидентности задает двойное разбиение, где C &ndash; множество инцидентных пар; A и B &ndash; проекции C на a&Icirc;Lm и x&Icirc;Ln соответственно.</p>
+<p>Естественно предположить, что множество C не пусто.</p>
+<p>Отметим специальный случай двойного разбиения. Пусть p(x) &ndash; такой произвольный полином над L от x=(x1, &hellip;, xn), что уравнение p(x)=0 имеет хотя бы одно решение в x&Icirc;Ln. Определим двойное разбиение, связанное с полиномом p(x), как разбиение, связанное с полиномом P(a, x)=p(a&ndash;x). Очевидно, что у этого разбиения A=B=Ln и для всех точек x&Icirc;Ln число инцидентных с ними точек одно и то же. Поэтому все подобные двойные разбиения распадаются на классы по числу инцидентных точек.</p>
+<p>Исследуем простейшие примеры таких двойных разбиений.</p>
+<p>Для анализа нам потребуется следующий факт. Пусть на счетном множестве A задано двойное разбиение с #B=#A. Имеется биективное отображение h:A&laquo;B. Отношение инцидентности сопоставляет каждому a&Icirc;A подмножество h(a)=b&Icirc;B, причем Ab={a}&Egrave;Ma. Тогда оператор усреднения можно записать в форме</p>
+<p><img src="uploaded/image/2010-4/image553.gif" border="0" alt="" width="153" height="35" />.</p>
+<p>Тогда <img src="uploaded/image/2010-4/image555.gif" border="0" alt="" width="141" height="33" />.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (7)</p>
+<p>Эта формула позволяет проводить итерацию, подставляя вместо каждого члена последней суммы его выражение такого вида.</p>
+<p>Лемма 6. Допустим, все множества Ma заданы так, что при бесконечном повторении итерации формулы (7) каждый элемент x&Icirc;A, x&sup1;a, встретится в сумме не более S раз (конечное число). Тогда для функции f&Icirc;H(A) преобразование усреднения обратимо, а асимптотическая формула обращения в каждой точке задается неограниченной итерацией формулы (7).</p>
+<p>Доказательство. По условию при неограниченной итерации из суммы за счет вычитания бу- дут навсегда удалены точки, которые уже возникали S раз. Таким образом, для любого конечного набора точек, который не содержит точку a, можно указать номер итерации, после которого эти точки   уже не появятся. Поскольку f&Icirc;H(A), то <img src="uploaded/image/2010-4/image557.gif" border="0" alt="" width="94" height="31" />. Отсюда следует, что с ростом номера итерации сумма значений f(x), добавленная к знакопеременному ряду значений If(h(x)) в правой части результирующей формулы, стремится к 0. Лемма доказана.</p>
+<p>Пример 7.<img src="uploaded/image/2010-4/image559.gif" border="0" alt="" width="12" height="19" /> P(a, x)=a1x2&ndash;a2x1&ndash;1 над кольцом <img src="uploaded/image/2010-4/image489.gif" border="0" alt="" width="15" height="15" />&nbsp;целых чисел. В соответственном разбиении элементами множеств A и B являются пары взаимно простых целых чисел. Естественно интерпретировать элементы (x1, x2) как точки, а элементы (a1, a2) как прямые на плоскости <img src="uploaded/image/2010-4/image489.gif" border="0" alt="" width="15" height="15" />2.</p>
+<p>Операция усреднения функций на A имеет вид: <img src="uploaded/image/2010-4/image562.gif" border="0" alt="" width="164" height="32" />.</p>
+<p>Очевидно, что в этом примере через каждую точку проходит счетное множество прямых. Отметим, что через каждую пару точек (x1, x2) и (x&cent;1, x&cent;2) проходит не более одной прямой и условием прохождения прямой через эти точки является равенство x1x&cent;2=x2x&cent;1=&plusmn;1. По лемме 2 оператор усреднения обратим.</p>
+<p>Пример 8. p(x, a)=xa&ndash;c, c&gt;0, x,a&Icirc;<img src="uploaded/image/2010-4/image489.gif" border="0" alt="" width="15" height="15" />2.</p>
+<p>Отношение инцидентности между этими парами имеет вид (x1, x2)~(a1, a2)&Ucirc;(a1&ndash;x1)(a2&ndash;x2)=c.</p>
+<p>Таким образом, число элементов a&Icirc;B, инцидентных x&Icirc;A, и, соответственно, число элементов x&Icirc;A, инцидентных a&Icirc;B, конечно и равно числу k разложений c в произведение положительных и отрицательных целых сомножителей. В частности, при c=1, 2, 3, 4 имеем соответственно k=2, 2, 2, 4. Назовем это число k типом рассматриваемого разбиения.</p>
+<p>Для этого двойного разбиения операция усреднения имеет следующий вид:</p>
+<p><img src="uploaded/image/2010-4/image564.gif" border="0" alt="" width="157" height="32" /></p>
+<p>В данной сумме можно выделить член с минимально возможной координатой p=&nbsp;&ndash;c при q=&nbsp;&ndash;1. Сумму запишем относительно приращений (p&cent;, q&cent;) к этой точке:</p>
+<p><img src="uploaded/image/2010-4/image566.gif" border="0" alt="" width="208" height="56" /></p>
+<p>В настоящей формуле существенно, что p&cent;&gt;0 для всех точек суммирования. Отсюда следует, что в пространстве абсолютно суммируемых функций f на <img src="uploaded/image/2010-4/image489.gif" border="0" alt="" width="15" height="15" />2 существует явная формула обращения для этого преобразования (лемма 6).</p>
+<p>Пример 9. p(x, y)=x2+y2&ndash;c2.</p>
+<p>Условие инцидентности (x, y)~(a, b)&Ucirc;(a&ndash;x)2+ +(b&ndash;y)2=c2.</p>
+<p>Известно, что эти подмножества непусты тогда и только тогда, когда c представимо в виде суммы квадратов целых чисел: c=p2+q2. Таким образом, число элементов a&Icirc;B, которые инцидентны x&Icirc;A, и, соответственно, число элементов x&Icirc;A, инцидентных a&Icirc;B, конечное и равно числу k указанных разложений c. Именно каждой такой паре чисел (p, q) отвечает с точностью до перестановки решение x=2pq, y=p2&ndash;q2. В частности, k=4 при c=1 и c=2, k=12 при c=5 и т.д. Это число k также назовем типом 2-разбиения.</p>
+<p>Пусть <img src="uploaded/image/2010-4/image568.gif" border="0" alt="" width="195" height="21" />. Соответствующий y имеет вид <img src="uploaded/image/2010-4/image570.gif" border="0" alt="" width="121" height="25" />.</p>
+<p>Тогда для этого двойного разбиения операцию усреднения функций f&Icirc;H(A) можно представить в виде <img src="uploaded/image/2010-4/image559.gif" border="0" alt="" width="12" height="19" /><img src="uploaded/image/2010-4/image572.gif" border="0" alt="" width="247" height="42" /></p>
+<p>Аналогично предыдущему примеру по лемме 6 этот оператор обратим для абсолютно суммируемых функций f и существует явная формула обращения для этого преобразования.</p>
+<p>На основании изложенного можно сделать следующие выводы. Свойство дискретности носителя для пространства функций позволяет сформулировать эффективные требования к системе множеств усреднения, которые гарантируют наличие формул обращения.</p>
+<p>Характерным видом формул обращения в рассмотренном случае является предел некой последовательности или бесконечного ряда, которые в конечных пространствах имеют конечное число членов. В конечном случае конструктивны формулы обращения (иногда тривиальны), а в бесконечном &ndash; вычисления с заданной точностью.</p>
+<p>Имеются многочисленные примеры из разных разделов математики, таких как теория графов, теория групп, теория колец, в которых применимы найденные формулы обращения для усреднения на естественных системах подмножеств в соответствующих структурах.</p>
+<p>Литература</p>
+<p>1.&nbsp;Гельфанд И.М., Граев М.И., Виленкин Н.Я. Обобщенные функции. Интегральная геометрия и связанные проблемы теории представлений. М.: Физматгиз, 1962. Т. 5.</p>
+<p>2.&nbsp;Гельфанд И.М., Гиндикин С.Г., Граев М.И. Избранные задачи интегральной геометрии. М.: Добросвет, 2000. 208 с.</p>
+<p>3.&nbsp;Граев М.И., Коганов А.В. Алгоритмы восстановления функции через ее усреднения по подмножествам // Программные продукты и системы. 2008. № 4. С. 33&ndash;38.</p>
+<p>4.&nbsp;Коганов А.В. Комбинаторные методы интегральной геометрии//Математика. Компьютер. Образование. М.&ndash;Ижевск: НИЦ &laquo;Регулярная и хаотическая динамика&raquo;. Вып. 12. Ч. 2. 2005. С. 746&ndash;758.</p>
+<p>5.&nbsp;Коганов А.В. Интегральная геометрия на системах покрытий // Математические исследования: сб. тр. [под ред. В.Б. Бетелина]. НИИСИ РАН, 2005. С. 197&ndash;230.</p>
+<p>6.&nbsp;Граев М.И. Относительно замкнутые операторы, связанные с парой грассманианов. Математические заметки. M.: Наука, 2002. Т. 71. Вып. 1. С. 61&ndash;74.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2609</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2609">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 4 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=92">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Метод построения нечеткой полумарковской модели функционирования сложной системы</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Метод построения нечеткой полумарковской модели функционирования сложной системы</h2><div style="margin-bottom:10px"><strong>Building method of fuzzy semi-markov model of complex system functioning</strong></div>Статья опубликована в выпуске журнала № 3 за 2010 год. [ 07.09.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Анализируется функционирование систем на основе нечетких полумарковских моделей. Рассматриваются различные способы введения нечеткости в полумарковские модели в зависимости от характера используемой информации и особенностей решаемых задач анализа функционирования систем.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">The article deals with the system functioning analysis on the base of fuzzy semi-Markov models. Different ways of fuzzy introduction are given into semi-Markov models according to the character of using information and solving problems peculiarities of system functioning analysis. A new class of fuzzy semi-Markov models is defined according to the given method of fuzziness introduction into these models. The building method of fuzzy semi-Markov model of system functioning is given. </em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=4131">Борисов В.В. (BYG@yandex.ru)</a> - Смоленский филиал Московского энергетического института (технического университета) Доктор технический наук Ph.D., <a href="index.php?page=infou&id=4134">Бояринов Ю.Г. (byg@yandex.ru)</a> - Филиал Московского энергетического института (технического университета) в г. Смоленске Кандидат технический наук Ph.D., <a href="index.php?page=infou&id=4211">Дли М.И. (byg@yandex.ru)</a> - Филиал Московского энергетического института (технического университета) в г. Смоленске Доктор технический наук Ph.D., <a href="index.php?page=infou&id=5596">Мищенко В.И. (BYG@yandex.ru)</a> - Смоленский филиал Московского энергетического института (технического университета) Доктор технический наук Ph.D.</td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1632">нечеткое отображение</a>, <a href="index.php?page=infotg&id=71">нечеткий вывод</a>, <a href="index.php?page=infotg&id=1631">нечеткая функция</a>, <a href="index.php?page=infotg&id=1630">нечеткая полумарковская модель</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1632">fuzzy representation</a>, <a href="index.php?page=infotg&id=71">fuzzy conclusion</a>, <a href="index.php?page=infotg&id=1631">fuzzy function</a>, <a href="index.php?page=infotg&id=1630">fuzzy semi-Markov model</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 401<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2552">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Одним из эффективных инструментов анализа функционирования систем, базирующихся на вероятностном подходе, является использование полумарковских моделей для оценки вероятностей нахождения системы в различных состояниях.</p>
+<p>&nbsp;</p>
+<p>Сложность полумарковской модели функционирования системы определяется как множеством учитываемых факторов, так и непростой организацией самой системы (наличием разнородных подсистем, элементов и взаимосвязей между ними). Существенным является также необходимость учета фактора неопределенности анализируемых переменных и случайности событий.</p>
+<p>Традиционно используемый для учета стохастической неопределенности вероятностный подход в полумарковских моделях не всегда применим из-за недостатка статистической информации о состоянии сложной системы. Кроме того, при традиционном подходе невозможно учесть:</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; неопределенность переменных, обусловленную экспертным характером значительной части информации или эвристическим описанием процессов;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; разнокачественность данных, а также их оценку с помощью различных шкал;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; нечеткость выделения и описания переменных или отдельных состояний, а также входных и выходных воздействий.</p>
+<p>Одним из основных способов решения подобных проблем при анализе функционирования систем является использование нечетких полумарковских моделей [1&ndash;3].</p>
+<p>Следует отметить определенные ограничения существующих нечетких полумарковских моделей:</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; не всегда четко обосновано соответствие вложенных цепей полумарковской модели классу цепей Маркова;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; имеющиеся модели в общем случае используются только для прогнозирования характеристик пребывания моделируемой системы в заданном состоянии, что затрудняет решение задач управления;</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; предлагаемые подходы к построению нечетких полумарковских моделей не учитывают наличие избыточности ресурса как необходимое условие функционирования сложной системы.</p>
+<p>Использование полумарковских моделей  для анализа функционирования систем</p>
+<p>Сложные системы, как правило, характеризуются некоторым уровнем избыточности, позволяющим, с одной стороны, противостоять отказам (или другим повышающим их энтропию явлениям), с другой стороны, накапливать соответствующее этому уровню количество отказов элементов, не приводящее к отказу системы в целом. Для восстановления такой избыточности в системе проводится обслуживание с контролем состояния системы и восстановительными мероприятиями. Формальное описание такого процесса функционирования системы представляется полумарковской моделью (рис. 1).</p>
+<p>На рисунке S1 &ndash; состояние применения системы по назначению (желаемое состояние); S2 &ndash; состояние проверки работоспособности системы (пригодности к использованию по назначению);  S3 &ndash; состояние проверки непригодности (отказа) к использованию по назначению, а также восстановление до состояния пригодности (готовности) к использованию по назначению после обнаружения дефекта (отказа); Ротк &ndash; вероятность возникновения отказа системы, Ротк=Fотк(ТП); Fотк(ТП)= =Вер(tотк&lt;ТП) &ndash; функция распределения случайной величины tотк момента отказа, соответствующая значению tотк&lt;ТП, то есть вероятности отказа в течение периода проверки системы TП.</p>
+<p>Учитывая, что Ротк является также и вероятностью перехода из состояния S1 в состояние S2 за один шаг для вложенной марковской цепи, для нее должно выполняться ограничение на отсутствие последействия как основное условие марковости переходов из состояния в состояние.</p>
+<p>Полумарковский процесс задается с помощью матрицы F(t) условных функций распределения продолжительности пребывания в состояниях, матрицы W переходных вероятностей вложенной марковской цепи и начального состояния процесса, из которого он стартует:</p>
+<p><img src="uploaded/image/2010-3/image076.png" border="0" alt="" width="188" height="83" />;</p>
+<p><img src="uploaded/image/2010-3/image078.png" border="0" alt="" width="203" height="85" />.</p>
+<p>Ненулевые компоненты матрицы F(t) запишутся в следующем виде:</p>
+<p><img src="uploaded/image/2010-3/image080.png" border="0" alt="" width="115" height="44" /></p>
+<p><img src="uploaded/image/2010-3/image082.png" border="0" alt="" width="180" height="85" /></p>
+<p><img src="uploaded/image/2010-3/image084.png" alt="Подпись:  
+Рис. 1. Граф состояний модели процесса 
+функционирования системы" width="754" height="178" align="left" /><img src="uploaded/image/2010-3/image086.png" border="0" alt="" width="121" height="44" /></p>
+<p><img src="uploaded/image/2010-3/image088.png" border="0" alt="" width="147" height="44" /></p>
+<p>Здесь ТК, ТВ &ndash; математические ожидания продолжительностей проведения проверки и восстановления после достоверного обнаружения отказа системы.</p>
+<p>Безусловные функции распределения Fi(t) определятся в соответствии с выражением Fi(t)= <img src="uploaded/image/2010-3/image090.png" border="0" alt="" width="75" height="40" />, где &omega;ij &ndash; вероятность перехода вложенной марковской цепи за один шаг.</p>
+<p>Для рассматриваемого примера получим:</p>
+<p><img src="uploaded/image/2010-3/image092.png" border="0" alt="" width="152" height="65" /></p>
+<p><img src="uploaded/image/2010-3/image094.png" border="0" alt="" width="104" height="44" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)</p>
+<p><img src="uploaded/image/2010-3/image096.png" border="0" alt="" width="131" height="44" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>Среднее время пребывания системы в соответствующих состояниях находится следующим образом:</p>
+<p><img src="uploaded/image/2010-3/image098.png" border="0" alt="" width="113" height="36" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)</p>
+<p>Тогда <img src="uploaded/image/2010-3/image100.png" border="0" alt="" width="128" height="37" />&nbsp;m2=TK; m3=TK+TB.</p>
+<p>Финальное распределение вероятностей состояний вложенной марковской цепи определяется в результате решения системы уравнений в матричном виде P=PW, где P &ndash; вектор-строка (Р1, Р2, Р3).</p>
+<p>Эта система уравнений является линейно зависимой, так как для нее выполняется условие нормировки. Таким образом, для рассматриваемого случая получим систему уравнений</p>
+<p><img src="uploaded/image/2010-3/image102.png" border="0" alt="" width="102" height="85" /></p>
+<p>Решение этого уравнения имеет следующий вид:</p>
+<p><img src="uploaded/image/2010-3/image104.png" border="0" alt="" width="208" height="73" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)</p>
+<p>В стационарном режиме распределение вероятностей состояний для полумарковского процесса в целом определяется из выражения</p>
+<p><img src="uploaded/image/2010-3/image106.png" border="0" alt="" width="77" height="53" /></p>
+<p>Очевидно, что показателем эффективности системы, функционирование которой описывается с помощью приведенного полумарковского процесса, будет вероятность застать систему в состоянии S1 в произвольный момент. И эта вероятность является функцией периода и продолжительности контроля, то есть ТП и ТК, а также функцией распределения моментов отказа системы Fотк.</p>
+<p>Выражение этой вероятности имеет вид</p>
+<p><img src="uploaded/image/2010-3/image108.png" border="0" alt="" width="227" height="71" /></p>
+<p>Таким образом, числитель данного выражения соответствует средней продолжительности пребывания системы в исправном состоянии S1, а знаменатель &ndash; сумме средних времен пребывания в состоянии исправности, контроля и восстановления. В этой полумарковской модели в отличие от марковской учтены периодичность и продолжительность контроля [4].</p>
+<p>Способы введения нечеткости  в полумарковские модели</p>
+<p>Анализ функционирования системы во многом субъективный процесс, в ходе которого требуется учитывать как количественные, так и качественные переменные, плохо поддающиеся формализации. Это затрудняет использование традиционных полумарковских моделей. Кроме того, как отмечалось, сложность использования вероятностного подхода анализа функционирования систем обусловлена уникальностью и сложностью типизации оцениваемых ситуаций и отсутствием достаточных статистических данных.</p>
+<p>Все это позволяет обосновать целесообразность применения методов теории нечетких множеств и нечетких вычислений при построении и использовании полумарковских моделей.</p>
+<p>Предлагаются два способа введения нечеткости в полумарковские модели.</p>
+<p>1.&nbsp;Дополнение выражения для оценки распределения вероятностей состояний функциями принадлежностей времени пребывания системы в соответствующих состояниях.</p>
+<p>В этом случае выражение для оценки распределения вероятностей состояний примет следующий вид: <img src="uploaded/image/2010-3/image110.png" border="0" alt="" width="97" height="53" /></p>
+<p>2.&nbsp;Замена вероятностей состояний и времен пребывания системы в соответствующих состояниях на нечеткие числа (нечеткие множества), а обычных операций &ndash; на расширенные операции над нечеткими числами; при этом для определения соответствующих нечетких множеств используются нечеткие отображения, реализуемые в соответствии с одним из известных подходов (нечеткие продукции, нечеткие отношения, нечеткие функции).</p>
+<p>Данный способ введения нечеткости в полумарковскую модель заключается в следующем:</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; вероятности состояний и времен пребывания системы в соответствующих состояниях заменяются на нечеткие числа (нечеткие множества);</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; для задания нечетких переменных, характеризующих вероятности состояний и времен пребывания системы в соответствующих состояниях, используются нечеткие отображения, реализуемые в соответствии с одним из подходов (нечеткие продукции, нечеткие отношения, нечеткие функции);</p>
+<p>&middot;&nbsp;&nbsp;&nbsp;&nbsp; операции суммирования, произведения и деления над вероятностями состояний и времен пребывания системы в соответствующих состояниях заменяются на расширенные (например, по принципу обобщения Л.&nbsp;Заде или на основе интервального метода) операции суммирования, произведения и деления нечетких чисел соответственно.</p>
+<p>Примечания:</p>
+<p>1)&nbsp;использование указанных выше способов введения нечеткости в полумарковские модели зависит от характера используемой информации и особенностей решаемых задач анализа функционирования систем;</p>
+<p>2)&nbsp;в предлагаемом методе построения и использования нечеткой полумарковской модели функционирования системы реализован второй способ введения нечеткости в полумарковскую модель.</p>
+<p>Метод построения  нечеткой полумарковской модели  функционирования системы</p>
+<p>Рассмотрим основные этапы предлагаемого метода.</p>
+<p>Этап 1. Задание нечетких переменных <img src="uploaded/image/2010-3/image112.png" border="0" alt="" width="14" height="23" />&nbsp;на базовых множествах значений вероятностей Pi состояний системы.</p>
+<p>При этом значения вероятностей Pi состояний системы являются базовыми множествами, на ко-  торых определены функции принадлежности нечетких множеств, число которых для каждого состояния системы может быть различным. Для наглядности при оценке будем использовать по три нечетких множества (термы {Низкий, Средний, Высокий}) для задания каждой нечеткой переменной <img src="uploaded/image/2010-3/image112.png" border="0" alt="" width="14" height="23" />: для <img src="uploaded/image/2010-3/image114.png" border="0" alt="" width="16" height="23" />&nbsp;&ndash; НP1, СP1, ВP1; для <img src="uploaded/image/2010-3/image116.png" border="0" alt="" width="16" height="23" />&nbsp;&ndash; НP2, СP2, ВP2; для <img src="uploaded/image/2010-3/image118.png" border="0" alt="" width="16" height="23" />&nbsp;&ndash; НP3, СP3, ВP3. С одной стороны, это не нарушает общности при рассмотрении предлагаемой нечеткой полумарковской модели (то есть при необходимости перечень термов для каждой нечеткой переменной <img src="uploaded/image/2010-3/image112.png" border="0" alt="" width="14" height="23" />&nbsp;может быть изменен), с другой стороны, позволяет типизировать компоненты модели, что существенно упрощает задачу при ее построении и использовании.</p>
+<p>Отметим, что, хотя возможно совпадение названий термов для различных нечетких переменных, на самом деле они могут характеризоваться разными параметрами.</p>
+<p>Для формирования терм-множеств нечетких переменных <img src="uploaded/image/2010-3/image112.png" border="0" alt="" width="14" height="23" />&nbsp;(в виде нечетких множеств) и построения их логико-лингвистических шкал целесообразно использовать типовые L&ndash;R-функции, например, колоколообразного типа [5]. Так, для показанной на рисунке 2 нечеткой переменной <img src="uploaded/image/2010-3/image116.png" border="0" alt="" width="16" height="23" />&nbsp;значение НP2 задается следующим образом:</p>
+<p><img src="uploaded/image/2010-3/image121.png" border="0" alt="" width="186" height="51" /></p>
+<p>где a2, b2 &ndash; параметры функции принадлежности колоколообразного типа.</p>
+<p><img src="uploaded/image/2010-3/image124.png" alt="Подпись:  
+Рис. 2. Пример логико-лингвистической шкалы 
+для нечеткой переменной  " width="754" height="192" align="left" />Этап 2. Задание нечетких переменных <img src="uploaded/image/2010-3/image126.png" border="0" alt="" width="18" height="20" />&nbsp;на базовых множествах значений вероятностей mi времен пребывания системы в соответствующих состояниях.</p>
+<p>Все значения вероятностей времен mi пребывания системы в соответствующих состояниях являются базовыми множествами, на которых определены функции принадлежности нечетких множеств нечетких переменных <img src="uploaded/image/2010-3/image126.png" border="0" alt="" width="18" height="20" />.</p>
+<p>Как и для нечетких переменных <img src="uploaded/image/2010-3/image112.png" border="0" alt="" width="14" height="23" />, задаются нечеткие множества для переменных <img src="uploaded/image/2010-3/image126.png" border="0" alt="" width="18" height="20" />: для <img src="uploaded/image/2010-3/image128.png" border="0" alt="" width="20" height="20" />&nbsp;&ndash; Нm1, Сm1, Вm1; для <img src="uploaded/image/2010-3/image130.png" border="0" alt="" width="20" height="20" />&nbsp;&ndash; Нm2, Сm2, Вm2; для <img src="uploaded/image/2010-3/image132.png" border="0" alt="" width="20" height="20" />&nbsp;&ndash; Нm3, Сm3, Вm3 (аналогично этапу 1).</p>
+<p>Этап 3. Задание нечетких отображений для нечетких переменных <img src="uploaded/image/2010-3/image126.png" border="0" alt="" width="18" height="20" />, характеризующих вероятности времен пребывания системы в соответствующих состояниях.</p>
+<p>Исходя из выражений (1) и (2) зададим следующие нечеткие отображения для нечетких переменных <img src="uploaded/image/2010-3/image126.png" border="0" alt="" width="18" height="20" />: <img src="uploaded/image/2010-3/image134.png" border="0" alt="" width="185" height="20" />&nbsp;<img src="uploaded/image/2010-3/image136.png" border="0" alt="" width="79" height="21" />&nbsp;где <img src="uploaded/image/2010-3/image138.png" border="0" alt="" width="19" height="23" />&nbsp;&ndash; нечеткое отображение.</p>
+<p>Как уже было сказано, нечеткие отображения <img src="uploaded/image/2010-3/image138.png" border="0" alt="" width="19" height="23" />&nbsp;могут задаваться одним из известных способов: нечеткими продукционными правилами, нечеткими отношениями, нечеткими функциями.</p>
+<p>Рассмотрим пример реализации нечеткого отображения <img src="uploaded/image/2010-3/image141.png" border="0" alt="" width="19" height="21" />&nbsp;для нечеткой переменной <img src="uploaded/image/2010-3/image132.png" border="0" alt="" width="20" height="20" />&nbsp;на основе нечеткой продукционной модели MISO-ти&shy;па (Multiple Inputs, Single Outputs) в предположении, что входные переменные TК, TВ также являются нечеткими и задаются соответствующими нечеткими множествами: для <img src="uploaded/image/2010-3/image144.png" border="0" alt="" width="19" height="23" />&nbsp;&ndash; НК, СК, ВК;  для <img src="uploaded/image/2010-3/image146.png" border="0" alt="" width="17" height="23" />&nbsp;&ndash; НВ, СВ, ВВ:</p>
+<p>П1:  ЕСЛИ <img src="uploaded/image/2010-3/image144.png" border="0" alt="" width="19" height="23" />&nbsp;есть НК И <img src="uploaded/image/2010-3/image146.png" border="0" alt="" width="17" height="23" />&nbsp;есть НВ, ТО <img src="uploaded/image/2010-3/image132.png" border="0" alt="" width="20" height="20" />&nbsp;есть Нm3,</p>
+<p>П2: ЕСЛИ <img src="uploaded/image/2010-3/image144.png" border="0" alt="" width="19" height="23" />&nbsp;есть НК И <img src="uploaded/image/2010-3/image146.png" border="0" alt="" width="17" height="23" />&nbsp;есть CВ, ТО <img src="uploaded/image/2010-3/image132.png" border="0" alt="" width="20" height="20" />&nbsp;есть Нm3,</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . . .</p>
+<p>Пl: ЕСЛИ <img src="uploaded/image/2010-3/image144.png" border="0" alt="" width="19" height="23" />&nbsp;есть CК И <img src="uploaded/image/2010-3/image146.png" border="0" alt="" width="17" height="23" />&nbsp;есть CВ, ТО <img src="uploaded/image/2010-3/image132.png" border="0" alt="" width="20" height="20" />&nbsp;есть Cm3.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . . .</p>
+<p>П9: ЕСЛИ <img src="uploaded/image/2010-3/image144.png" border="0" alt="" width="19" height="23" />&nbsp;есть ВК И <img src="uploaded/image/2010-3/image146.png" border="0" alt="" width="17" height="23" />&nbsp;есть ВВ, ТО <img src="uploaded/image/2010-3/image132.png" border="0" alt="" width="20" height="20" />&nbsp;есть Вm3.</p>
+<p>Для нечеткой переменной <img src="uploaded/image/2010-3/image132.png" border="0" alt="" width="20" height="20" />&nbsp;в рамках сформированной нечеткой продукционной модели  реализуется алгоритм нечеткого вывода Мамда- ни [5].</p>
+<p>Этап 4. Задание нечетких отображений для нечетких переменных <img src="uploaded/image/2010-3/image112.png" border="0" alt="" width="14" height="23" />, характеризующих вероятности состояний системы.</p>
+<p>В соответствии с выражением (3) зададим следующие нечеткие отображения для нечетких переменных <img src="uploaded/image/2010-3/image112.png" border="0" alt="" width="14" height="23" />: <img src="uploaded/image/2010-3/image149.png" border="0" alt="" width="165" height="23" />&nbsp;<img src="uploaded/image/2010-3/image151.png" border="0" alt="" width="77" height="23" />&nbsp;где <img src="uploaded/image/2010-3/image153.png" border="0" alt="" width="17" height="21" />&nbsp;&ndash; нечеткое отображение.</p>
+<p>Если входную переменную TП представлять как нечеткую переменную <img src="uploaded/image/2010-3/image155.png" border="0" alt="" width="19" height="23" />, то нечеткое отображение <img src="uploaded/image/2010-3/image157.png" border="0" alt="" width="16" height="20" />&nbsp;можно реализовать на основе нечеткой продукционной модели SISO-типа (Single Inputs, Single Outputs).</p>
+<p>Рассмотрим пример реализации нечеткого отображения <img src="uploaded/image/2010-3/image159.png" border="0" alt="" width="17" height="20" />&nbsp;для нечеткой переменной <img src="uploaded/image/2010-3/image116.png" border="0" alt="" width="16" height="23" />&nbsp;на основе нечеткой продукционной модели SISO-ти&shy;па с учетом того, что нечеткая переменная <img src="uploaded/image/2010-3/image155.png" border="0" alt="" width="19" height="23" />&nbsp;задается нечеткими множествами НП, СП, ВП:</p>
+<p>П1: ЕСЛИ <img src="uploaded/image/2010-3/image155.png" border="0" alt="" width="19" height="23" />&nbsp;есть НП, ТО <img src="uploaded/image/2010-3/image116.png" border="0" alt="" width="16" height="23" />&nbsp;есть BP2.</p>
+<p>П2: ЕСЛИ <img src="uploaded/image/2010-3/image155.png" border="0" alt="" width="19" height="23" />&nbsp;есть СП, ТО <img src="uploaded/image/2010-3/image116.png" border="0" alt="" width="16" height="23" />&nbsp;есть СP2.</p>
+<p>П3: ЕСЛИ <img src="uploaded/image/2010-3/image155.png" border="0" alt="" width="19" height="23" />&nbsp;есть BП, ТО <img src="uploaded/image/2010-3/image116.png" border="0" alt="" width="16" height="23" />&nbsp;есть НP2.</p>
+<p>Далее для нечеткой переменной <img src="uploaded/image/2010-3/image116.png" border="0" alt="" width="16" height="23" />&nbsp;в рамках сформированной нечеткой продукционной модели реализуется алгоритм нечеткого вывода Мамдани.</p>
+<p>Если переменная TП является четкой, то для реализации нечеткого отображения <img src="uploaded/image/2010-3/image157.png" border="0" alt="" width="16" height="20" />&nbsp;целесообразно использовать нечеткую функцию от этой четкой переменной TП, формирующей образ ее четкой области определения в соответствующем нечетком множестве <img src="uploaded/image/2010-3/image163.png" border="0" alt="" width="73" height="23" />.</p>
+<p>Следует отметить, что, поскольку понятия нечеткой функции четкой переменной и нечеткого отношения соответствуют друг другу в математическом смысле, нечеткая функция <img src="uploaded/image/2010-3/image157.png" border="0" alt="" width="16" height="20" />&nbsp;может быть интерпретирована как нечеткое отношение <img src="uploaded/image/2010-3/image166.png" border="0" alt="" width="17" height="19" />&nbsp;и определена следующим образом:</p>
+<p><img src="uploaded/image/2010-3/image168.png" border="0" alt="" width="223" height="21" /></p>
+<p>Этап&nbsp;5. Определение значений нечетких переменных, характеризующих распределение вероятностей состояний для нечеткого полумарковского процесса.</p>
+<p>Для выполнения данного этапа предлагаемого метода введем необходимые понятия, определения и выражения для расчетов.</p>
+<p>Нечеткое число <img src="uploaded/image/2010-3/image170.png" border="0" alt="" width="14" height="19" />&nbsp;определяется как нечеткое множество, заданное на множестве действительных чисел R с функцией принадлежности <img src="uploaded/image/2010-3/image172.png" border="0" alt="" width="76" height="21" />, где x&Icirc;R, и для которого выполняются следующие условия:</p>
+<p>а) $ x&Icirc;R, такое, что <img src="uploaded/image/2010-3/image174.png" border="0" alt="" width="56" height="21" />;</p>
+<p>б) множества &alpha;-уровней нечеткого числа <img src="uploaded/image/2010-3/image170.png" border="0" alt="" width="14" height="19" />&nbsp;представляют собой закрытые ограниченные интервалы <img src="uploaded/image/2010-3/image177.png" border="0" alt="" width="20" height="23" />=[a,&nbsp;b]={x/<img src="uploaded/image/2010-3/image179.png" border="0" alt="" width="37" height="21" />&ge;&alpha;};</p>
+<p>в) $ N&Icirc;R, такое, что " x&Icirc;R, если |x|&ge;N, то <img src="uploaded/image/2010-3/image179.png" border="0" alt="" width="37" height="21" />=1.</p>
+<p>Операции над нечеткими числами могут выполняться с использованием различных методов.</p>
+<p>Так, при осуществлении операций над нечеткими числами с использованием интервального арифметического метода интервальные вычисления выполняются над всеми множествами &alpha;-уров&shy;ней этих чисел.</p>
+<p>Пусть заданы два нечетких числа <img src="uploaded/image/2010-3/image170.png" border="0" alt="" width="14" height="19" />&nbsp;и <img src="uploaded/image/2010-3/image181.png" border="0" alt="" width="14" height="19" />, а также множества их &alpha;-уровней <img src="uploaded/image/2010-3/image177.png" border="0" alt="" width="20" height="23" />=[a,&nbsp;b]={x/<img src="uploaded/image/2010-3/image179.png" border="0" alt="" width="37" height="21" />&ge;&alpha;} и <img src="uploaded/image/2010-3/image184.png" border="0" alt="" width="19" height="23" />=[c,&nbsp;d]={x/<img src="uploaded/image/2010-3/image179.png" border="0" alt="" width="37" height="21" />&ge;&alpha; для каждого значения &alpha;&Icirc;[0,&nbsp;1].</p>
+<p>Интервальные операции над множествами  &alpha;-уровней нечетких чисел <img src="uploaded/image/2010-3/image177.png" border="0" alt="" width="20" height="23" />=[a,&nbsp;b] и <img src="uploaded/image/2010-3/image184.png" border="0" alt="" width="19" height="23" />=[c,&nbsp;d] вычисляются в соответствии со следующими выражениями [6].</p>
+<p>Сложение:</p>
+<p><img src="uploaded/image/2010-3/image187.png" border="0" alt="" width="211" height="23" />.</p>
+<p>Умножение:</p>
+<p><img src="uploaded/image/2010-3/image189.png" border="0" alt="" width="256" height="42" /></p>
+<p>Деление:</p>
+<p><img src="uploaded/image/2010-3/image191.png" border="0" alt="" width="259" height="63" /></p>
+<p>где <img src="uploaded/image/2010-3/image193.png" border="0" alt="" width="151" height="23" />.</p>
+<p>Примечание: чтобы отличить арифметические операции над нечеткими числами от обычных арифметических операций, обозначим символами <img src="uploaded/image/2010-3/image195.png" border="0" alt="" width="15" height="20" />, <img src="uploaded/image/2010-3/image197.png" border="0" alt="" width="15" height="20" />, <img src="uploaded/image/2010-3/image199.png" border="0" alt="" width="11" height="20" />&nbsp;операции нечеткого сложения, умножения и деления соответственно.</p>
+<p>По другому методу выполнения вычислений, основанному на принципе расширения Л.&nbsp;Заде, произвольная расширенная бинарная арифметическая операция <img src="uploaded/image/2010-3/image201.png" border="0" alt="" width="11" height="19" />&nbsp;над нечеткими числами может быть задана следующим образом:</p>
+<p><img src="uploaded/image/2010-3/image203.png" border="0" alt="" width="247" height="29" /></p>
+<p>где <img src="uploaded/image/2010-3/image170.png" border="0" alt="" width="14" height="19" />, <img src="uploaded/image/2010-3/image181.png" border="0" alt="" width="14" height="19" />, <img src="uploaded/image/2010-3/image206.png" border="0" alt="" width="14" height="19" />&nbsp;&ndash; нечеткие числа, <img src="uploaded/image/2010-3/image201.png" border="0" alt="" width="11" height="19" />&nbsp;&ndash; обозначение произвольной расширенной бинарной арифметической операции над нечеткими числами [5].</p>
+<p>Тогда, например, расширенная операция произведения <img src="uploaded/image/2010-3/image197.png" border="0" alt="" width="15" height="20" />&nbsp;над нечеткими числами <img src="uploaded/image/2010-3/image208.png" border="0" alt="" width="59" height="23" />&nbsp;и <img src="uploaded/image/2010-3/image210.png" border="0" alt="" width="101" height="25" />&nbsp;имеет следующий вид:</p>
+<p><img src="uploaded/image/2010-3/image212.png" border="0" alt="" width="238" height="96" /></p>
+<p>Примечание: в дальнейшем при осуществлении операций над нечеткими числами будем использовать интервальный арифметический метод над множествами &alpha;-уровней этих чисел.</p>
+<p>Для задания правил вывода на основе нечеткой байесовой сети рассмотрим понятия нечеткой вероятностной меры и нечеткого вероятностного пространства.</p>
+<p>Функция <img src="uploaded/image/2010-3/image214.png" border="0" alt="" width="16" height="23" />:&nbsp;e&reg;F(R) называется нечеткой вероятностной мерой [7] на (W,&nbsp;e) в том и только в том случае, если:</p>
+<p>а) 0x<img src="uploaded/image/2010-3/image216.png" border="0" alt="" width="16" height="16" /><img src="uploaded/image/2010-3/image218.png" border="0" alt="" width="37" height="23" /><img src="uploaded/image/2010-3/image216.png" border="0" alt="" width="16" height="16" />1x для "A&Icirc;e;</p>
+<p>б) <img src="uploaded/image/2010-3/image220.png" border="0" alt="" width="37" height="23" />=1x и <img src="uploaded/image/2010-3/image222.png" border="0" alt="" width="37" height="23" />=0x;</p>
+<p>в) если A и B являются несовместными значениями из e (то есть A&Ccedil;B=&AElig;), то <img src="uploaded/image/2010-3/image218.png" border="0" alt="" width="37" height="23" />&Aring;<img src="uploaded/image/2010-3/image225.png" border="0" alt="" width="36" height="23" />&Ecirc; &Ecirc;<img src="uploaded/image/2010-3/image227.png" border="0" alt="" width="61" height="23" />;</p>
+<p>г) если A и B являются событиями из e, то</p>
+<p><img src="uploaded/image/2010-3/image229.png" border="0" alt="" width="248" height="90" /></p>
+<p>Здесь W=Rm &ndash; некоторое универсальное множество, на котором задана переменная A; e &ndash; множество несовместных значений переменной A; F(R) &ndash; множество всех нечетких чисел, определенных на множестве действительных чисел R; 0x и 1x &ndash; нечеткие числа 0 и 1.</p>
+<p>Нечетким вероятностным пространством называется тройка <img src="uploaded/image/2010-3/image231.png" border="0" alt="" width="56" height="23" />.</p>
+<p>Таким образом, в основе предлагаемого метода построения и использования нечеткой полумарковской модели лежит следующее выражение:</p>
+<p><img src="uploaded/image/2010-3/image233.png" border="0" alt="" width="177" height="39" />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)</p>
+<p>где <img src="uploaded/image/2010-3/image235.png" border="0" alt="" width="17" height="20" />&nbsp;&ndash; нечеткая переменная, характеризующая распределение вероятностей состояний для нечеткого полумарковского процесса.</p>
+<p>В заключение отметим, что в данной работе делается анализ функционирования систем на основе нечетких полумарковских моделей.</p>
+<p>Предложены различные способы введения нечеткости в полумарковские модели в зависимости от характера используемой информации и особенностей решаемых задач анализа функционирования систем.</p>
+<p>Разработан новый класс нечетких полумарковских моделей с учетом предложенного способа введения нечеткости в эти модели.</p>
+<p>Предложен метод построения и использования нечеткой полумарковской модели функционирования системы.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Bhattacharyya M. Fuzzy Markovian decision process // Fuzzy Sets and Systems. Vol. 99, 1998, pp. 273&ndash;282.</p>
+<p>2.&nbsp;&nbsp; Praba B., Sujatha R., Srikrishna S. Fuzzy reliability measures of fuzzy probabilistic semi-Markov model // Int. Journal of Recent Trend in Engineering. Vol. 2, No. 2, 2009, pp. 25&ndash;29.</p>
+<p>3.&nbsp;&nbsp; Praba B., Sujatha R., Srikrishna S. A study on homogeneous fuzzy semi-Markov model // Applied Mathematical Sciences. Vol. 3, No 50, 2009, pp. 2453&ndash;2467.</p>
+<p>4.&nbsp;&nbsp; Бояринов Ю.Г., Дли М.И., Круглов В.В. Оценка диапазона возможных значений вероятности пребывания в заданном состоянии марковской модели производственно-экономичес&shy;кой системы // Программные продукты и системы. 2009. № 4. С. 88&ndash;91.</p>
+<p>5.&nbsp;&nbsp; Круглов&nbsp;В.В., Борисов&nbsp;В.В. Искусственные нейронные сети. Теория и практика. М.: Горячая линия &ndash; ТЕЛЕКОМ, 2002.</p>
+<p>6.&nbsp;&nbsp; Moore&nbsp;R.&nbsp;E. Interval analysis. New Jersey: Prentice Hall, 1966.</p>
+<p>7.&nbsp;&nbsp; Kwakernaak H. Fuzzy random variables: definitions and theorems // Information Sciences. № 15(1), 1978, pp. 1&ndash;29.</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2552</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2552">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 3 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=91">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>

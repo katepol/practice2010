@@ -1,0 +1,500 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+<meta name="sprypayUrlChecker" content="sprypay_fpraOIA7CnzFuVkwTFol4GEMpK3RdzExgx4SCKayofR7wwGQvRBfNE2QUww9JV84_1763">
+
+<title>Система поддержки принятия решений по управлению товарными запасами</title>     <style>
+	 .sps {
+        padding-left: 20px;
+        line-height: 20px;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .hed {
+       color: #666666;
+       font: bold;
+       font-size: 14px;
+       border: 1px solid;
+	   padding:1px;
+	   margin:0px;
+     }
+
+     .trhed {
+       padding: 25px;
+     }
+	 
+	 .td_arch {
+	   margin:0px;
+	   padding:5px;
+	  }
+	 
+	 .in_journal {
+	  border:3px solid #fff;
+	 }
+
+	 .in_journal:hover {
+	  border:3px solid #aaaaaa;
+	 }
+	 
+     .ndisp {
+         display:none;
+     }
+     
+	  </style>
+
+<!--[if IE]>
+<style>
+.outer, .wrapper, .minwidth {
+	zoom: 1;
+}
+
+</style>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<style>
+.minwidth {
+	border-left: 504px solid #fff;
+}
+.wrapper {
+	margin-left: -504px;
+	position: relative;
+}
+</style>
+<![endif]-->
+
+<link href="css/layout_2col_right_31.css" rel="stylesheet" type="text/css"/>	  
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.swsys.ru/rss">
+
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_right_31.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <script src="script/CalendarPopup.js"></script>
+
+
+<script>
+
+function submit_login() {
+ if ( document.login_form.login.value != "" && document.login_form.password.value != "" ) { 
+  document.login_form.activity.value = "AUTORIZ";
+  document.login_form.submit();
+  }
+ else 
+ {
+ alert("Введите логин и пароль"); 
+ document.login_form.username.focus();
+ }
+ 
+}
+
+ function to_registry() {
+	document.login_form.action = "event.php?page=registry";
+    document.login_form.submit();
+ }
+
+ function to_search() {
+    document.search_form.submit();
+ }
+
+</script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="page_margins">
+	<div id="page">
+		<div id="header">
+			<div id="topnav">
+				  <form action="event.php?page=search&order=date"  method="post" id="search-theme-form" name="search_form">
+<div><div id="search" class="container-inline"><div class="form-item">
+ <input type="text" maxlength="128" name="search" id="edit-search-theme-form-keys"  size="15" value="поиск..." title="Введите слова для поиска." class="form-text" onBlur="if ( this.value == '' ) this.value = 'поиск...';" onFocus="if ( this.value=='поиск...' ) this.value='';"/>
+ <a href="#" onclick="Javascript: if ( document.search_form.search.value == 'поиск...' ) { alert('Введите поисковый запрос!') } else document.search_form.submit()">Найти</a>
+</div>
+</div>
+</div></form>
+				<div id="subsearch"><span><a href="index.php?page=extsearch">Расширенный поиск</a> / <a href="index.php?page=sitemap">Карта сайта</a></span></div> </div>
+			<span style="cursor:pointer" onclick="Javascript:document.location = 'index.php'" class="zag">Международный журнал</span>
+			<h1 style="cursor:pointer; width:auto" onclick="Javascript:document.location = 'index.php'">Программные продукты и системы</h1>
+		   
+			</div>
+		<!-- begin: main navigation #nav -->
+		<div id="nav"> <a id="navigation" name="navigation"></a>
+			<!-- skiplink anchor: navigation -->			
+		</div>
+		<!-- end: main navigation -->
+		<!-- begin: main content area #main -->
+		<div id="main">
+			<!-- begin: #col1 - first float column -->
+			<div id="col1">
+				<div id="col1_content" class="clearfix">
+					<div id="menu" class="r-block">
+						<h2>Разделы сайта</h2>
+						<ul id="submenu">
+						
+						<li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=1">О журнале</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=3">Редколлегия</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=12">Научные направления</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=9">Свежий выпуск</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=19">Список авторов выпуска</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=10">Архив выпусков</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=11">Подписка</a></li><li style="white-space:nowrap;margin-left:-15px"><a href="index.php?page=5">Авторам и издателям</a></li>						
+					  </ul>	
+					</div>	
+
+     
+					<div id="login" class="mainborder r-block">
+                    
+                    <h2>Вход</h2>				
+				   <form action="event.php?page=article"  method="post" id="login-form" name="login_form">
+<div id="login-form-div">
+	<div class="form-item"><input type="text" maxlength="128" name="login" size="15" value="" title="" class="form-text" /></div>
+ <div class="form-item"><input type="password" maxlength="128" name="password" size="15" value="" title="" class="form-text"/></div>
+ <input type="hidden" name="activity" />
+ 
+        <label for="save_pas"><input type="checkbox" style="width:25px;border:none;" name="save_pas" id="save_pas" />Запомнить</label><br />
+
+  <div id="login-button"><input style="border:none;width:46px;height:45px" type="image" src="images/login-button1.gif" onclick="submit_login();"></div> 
+<!-- <input type="submit" /> -->
+</div></form>
+				 
+				<span><a href="index.php?page=recovery">Забыли пароль?</a> / <a href="#" onclick="to_registry();">Регистрация</a></span>				  
+                         
+                 
+
+                 
+                 
+				  </div>
+
+
+                  
+                  
+
+           
+  
+  <div style="padding: 5px 0px 0px 45px">     
+<script type="text/javascript"><!--
+google_ad_client = "pub-6573451237838679";
+/* Вторая страница право */
+google_ad_slot = "0208394776";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>                  
+     </div>
+     
+      
+				  
+				  
+				                    <div id="next-after" class="r-block">
+                    <h2>Добавить в закладки</h2>
+                    <script src="/ok2.js" type="text/javascript"></script>
+                  </div>
+                  
+				  <div id="next-after" class="r-block">
+					<h2>Следующий номер</h2>
+					<div id="sled-nomer" class="floatbox"><span class="simv-nomer">№</span>1</div>
+					<div id="sled-nomer-text">
+					Выходит:<br/>
+					<div> 18 Марта 2011 </div>
+                     				  </div>
+				 </div>
+				  <div class="r-block" id="arh">
+					<h2>Выпуски</h2>
+
+ 						<div class="god">2010</div><ul><li><a href="index.php?page=search&order=date&journal=92">№4 Декабрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=91">№3 Сентябрь 2010</a></li><li><a href="index.php?page=search&order=date&journal=90">№2 Май 2010</a></li><li><a href="index.php?page=search&order=date&journal=89">№1 Март 2010</a></li></ul>
+				
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=10">все выпуски</a></div>
+						<div align="center" style="margin-top:0px; padding:0px" ><a style="font-size:12px" href="index.php?page=all_article">все статьи</a></div>
+				  </div>
+				  
+				  
+				</div>
+
+                  <div id="next-after" class="r-block">
+                    <h2>Новости</h2>  
+                                 
+                        <p>     
+                        <a href="index.php?page=show_news&id=117">В Международном университете природы, общества и человека (г. Дубна) предложен алгоритм генерации растущих сетей с нелинейным предпочтительным присоединением, конкуренцией и удалением узлов</a> [15.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=116">В Группе компаний «Генезис знаний» (г. Самара) предложено решение по построению и внедрению мультиагентной системы распределения производственных ресурсов МАС «Оптимизатор»</a> [08.12.2010]
+                        <br/>
+                                     
+                        <p>     
+                        <a href="index.php?page=show_news&id=115">В Волгоградском государственном техническом университете разработана модель обучающей системы в области автомобильного транспорта</a> [01.12.2010]
+                        <br/>
+                                                
+                        <div style="text-align:center"><a href="index.php?page=show_news">читать все новости</a></div>
+                        
+                                          </div>
+
+					<div class="r-block" style="text-align:center;padding:0px;margin:0px;">
+					   <a style="text-decoration:none;" href="rss/"><img alt="RSS" title="RSS" src="images/rss.gif"/><br/>
+						<div style="text-decoration:underline;display:inline">Подписаться на RSS</div></a>
+					</div>
+                    
+                  
+
+			</div>
+
+       
+
+			<!-- end: #col1 -->
+			<!-- begin: #col3 static column -->
+			<div id="col3">
+				<div id="col3_content" class="clearfix"> <a id="content" name="content"></a>
+
+
+
+
+
+<script>
+
+            function go_event_comment(act, id)
+            {
+                 document.s_article.activity.value = act;
+                 document.s_article.id.value = id;
+                document.s_article.submit();
+            }
+
+
+            function go_event_vote(act, id)
+            {
+                 document.v_article.activity.value = act;
+                 document.v_article.id.value = id;
+                document.v_article.submit();
+            }
+            
+            
+</script>
+
+<h2 style="margin-bottom:3px">Система поддержки принятия решений по управлению товарными запасами</h2><div style="margin-bottom:10px"><strong>Decision support system for trade stock management</strong></div>Статья опубликована в выпуске журнала № 2 за 2010 год. [ 27.05.2010 ]<br/><strong>Аннотация:</strong><em style="font-size:8pt">Статья посвящена автоматизации управления товарными запасами на предприятиях розничной торговли. Пред-ставлена система поддержки принятия решений в этой области с нечетким логическим выводом, основанным на ак-тивации сети правил. Рассматриваются структура системы и алгоритм логического вывода.</em><br /><strong>Abstract:</strong><em style="font-size:8pt">Questions of trade stock management automation in retail trade is considered in this paper. The decision support system with fuzzy deduction based on the activating rule net is presented The system structure and algorithm of a logical deduction is examined.</em><table border="0" width="100%" style="width:100%;"> 
+            <tr>
+             <td colspan="2"><b>Авторы: </b><a href="index.php?page=infou&id=3935">Синюк В.Г. (lysevi@gmail.com)</a> - Белгородский государственный технологический университет им. В.Г. Шухова, Северо-Кавказский филиал, г. Минеральные Воды Кандидат технический наук Ph.D., <a href="index.php?page=infou&id=5874">Пивненко Е.В. (H_Pivnenko@mail.ru)</a> - Белгородский государственный технологический университет им. В.Г. Шухова   </td>            
+         </tr> 
+            <tr>
+             <td><b>Ключевые слова: </b><a href="index.php?page=infotg&id=1613">товарные запасы</a>, <a href="index.php?page=infotg&id=791">система поддержки принятия решений</a>, <a href="index.php?page=infotg&id=1614">правила</a>, <a href="index.php?page=infotg&id=1615">нечеткий логический вывод</a><br /></td> 
+           </tr>
+            <tr>
+             <td><b>Keywords: </b><a href="index.php?page=infotg&id=1613">trade stock</a>, <a href="index.php?page=infotg&id=791">decision support system</a>, <a href="index.php?page=infotg&id=1614">rules</a>, <a href="index.php?page=infotg&id=1615">fuzzy logical deduction</a><br /></td> 
+           </tr>   
+
+ <tr>
+             <td>Средний балл статьи: - <br />Всего комментариев: 0<br />Количество просмотров: 556<br />   
+             </td> 
+            <td align="right"><a target="_blank" href="/print/article_print.php?id=2535">Версия для печати</a></td>
+         </tr>           
+          </table>
+
+<br/>
+
+    
+    
+    <script>
+      function set_size(vl) {
+         document.getElementById('id_art').style.fontSize = vl;
+      }
+      function set_font(vl) {
+         document.getElementById('id_art').style.fontFamily = "'" + vl + "'";
+      }
+    </script>
+    
+      <div style="width:100%;background:#E0E0E0;padding:5px;border:1px solid #D0D0D0">
+         <form>
+           Размер шрифта:
+            <select name="f_size" onchange="set_size(this.value)">
+               <option value="10px">10 px</option>
+               <option value="12px" selected="selected">12 px</option>
+               <option value="14px">14 px</option>
+               <option value="16px">16 px</option>
+               <option value="18px">18 px</option>
+               <option value="24px">24 px</option>
+            </select> &nbsp; &nbsp; &nbsp;
+           Шрифт:
+            <select name="f_name" onchange="set_font(this.value)">
+               <option value="Arial">Arial</option>
+               <option value="Trebuchet MS" selected="selected">Trebuchet MS</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Arial Narrow">Arial Narrow</option>
+               <option value="Tahoma">Tahoma</option>
+            </select>
+            
+         </form>
+        </div>
+         <br />
+    <table bgcolor="#FFFFFF"><tr><td><div id="id_art" style="font-size:12px;"><p>Товарные запасы торговых предприятий имеют основной удельный вес в стоимости их активов, являются главным источником пополнения собственных средств за счет прибыли от реализации и вместе с тем создают большую проблему ежедневного контроля. В России оптимизация запасов на уровне торговых предприятий, обеспечивающая максимальный уровень обслуживания потребителей при минимальных инвестициях в запасы, минимальных затратах на заказ и транспортировку, пока осуществляется, как правило, методом проб и ошибок. Для управления запасами используется системный подход, то есть запасы рассматриваются во взаимосвязи с различными сторонами деятельности фирмы. В настоящее время актуальным является применение научного управления запасами, что сокращает стихийные регуляторы этого процесса [1].</p>
+<p>&nbsp;</p>
+<p>В статье рассматриваются задачи управления товарными запасами в системе складов на предприятиях розничной торговли. К логистическим задачам управления товарными запасами можно отнести определение оптимального уровня запасов на всех складах торговой сети, объемов и  сроков поставок, выбор лучших поставщиков, контроль уровня товарных запасов и автомати- ческая подготовка проектов заказов на их пополнение [2].</p>
+<p>Для определения оптимального уровня запасов на всех складах торговой сети решаются подзадачи: пополнение запасов региональных складов с центрального склада, перераспределение товарных запасов между региональными складами с целью увеличения продаж, выбор лучших поставщиков и заказ товара у них.</p>
+<p>Запасы региональных складов пополняются с центрального склада ритмичными еженедельными поставками или по его указанию со складов изготовителей. Поставляемые партии комплектуются на основе предложений центрального склада по номенклатуре и количеству, подтвержденными региональными складами.</p>
+<p>Управление товарными запасами  в системе складов (филиалов)</p>
+<p><img src="uploaded/image/2010-2/image771.gif" alt="Подпись:  
+Рис. 1. UML-диаграмма пакетов" width="297" height="239" align="left" />ЛПР (товаровед, директор магазина и т.п.) получает рекомендации системы поддержки принятия решений (СППР) относительно того, какой товар лучше добавить в поставку филиалу для быстрой реализации. ЛПР посылает запрос системе учета товара по сбору статистической информации из своих баз и/или хранилищ данных. Эти данные передаются СППР, которая выдает рекомендации по управлению в приемлемом для пользователя виде.</p>
+<p>Очевидно, что использование естественного языка со всем набором имеющихся в нем выразительных средств для рассуждений и принятия решений с помощью качественных представлений, понятий и оценок типа &laquo;мало&raquo;, &laquo;много&raquo;, &laquo;редко&raquo;, &laquo;часто&raquo; и т.д. позволяет всесторонне и компактно описать общую смысловую постановку задач управления. Целесообразность и продуктивность такого подхода для решения задач управления подтверждается рядом практических разработок (см., например, [3]).</p>
+<p>На рисунке 1 представлена диаграмма пакетов СППР, в которые сгруппированы классы и методы, позволяющие использовать методы нечеткой логики, работать с лингвистическими переменными и нечеткой арифметикой.</p>
+<p><img src="uploaded/image/2010-2/image773.gif" alt="Подпись:  
+Рис. 2. Фрагмент UML-диаграммы классов пакета нечетких объектов" width="457" height="421" align="left" />Класс, реализующий логический вывод, наиболее удачно описан в пакете FuzzyObj, который взаимосвязан с пакетом FuzzyArithmetics, где реализованы функции фаззификации, дефаззификации, вычисления расширенной Т-нор&shy;мы, Т-конормы, сравнения нечетких множеств, арифметические операции над нечеткими переменными, имеющими числовую интерпретацию, и с пакетом Fuzzy&shy;Db, в котором осуществляются доступ к знаниям, хранящимся в БЗ, и манипулирование ими.</p>
+<p>На рисунке 2 представлен фрагмент статической структуры пакета FuzzyObj в терминологии классов объектно-ориентированного программирования, приведены классы, реализующие функции и поведение объектов, участвующих в логическом выводе. Термы задаются в системе функциями принадлежности, имеющими предопределенный вид: П-, S-, Z-образные. Переменные могут быть входящими, исходящими, промежуточными, а также лингвистического, логического или числового типов.</p>
+<p>При управлении товарными запасами выделим следующие критерии: складские остатки в филиалах, значимость филиалов в распределении выбранной товарной позиции, продажи выбранной товарной позиции в филиалах, количество товара, подлежащего распределению/пере&shy;распределению, стоимость доставки партии из филиала в филиал в случае перераспределения и прибыльность высвобождаемых средств.</p>
+<p><img src="uploaded/image/2010-2/image775.gif" alt="Подпись:  
+Рис. 3. UML-диаграмма состояний" width="609" height="294" align="left" />Эксперт формулирует ряд правил, которые можно записать согласно поддерживаемой системой структуре:</p>
+<p>Правило ::= 'IF' Условие 'THEN' заключение ['WITH' вес_правила] ';'</p>
+<p>Условие ::= (подусловие | Имя_переменной) { 'AND' (подусловие | имя_переменной)}</p>
+<p>Подусловие ::= имя_переменной 'IS' имя_терма ['WITH' вес_подусловия]</p>
+<p>Заключение ::= (подзаключение) { 'AND' (подзаключение)}</p>
+<p>Подзаключение ::= (имя переменной | имя_переменной 'IS' имя_терма | Арифм_выраж)| внешняя_функция {'AND' ( имя_переменной | (имя_переменной 'IS' имя_терма) | Арифм_выраж ) | внешняя_функция }</p>
+<p>Арифм_выраж ::= (имя_переменной | имя_терма) арифметическая_операция (имя_переменной | имя_терма) {арифметическая_операция (имя_переменной| имя_терма) арифметическая_операция (имя_переменной | имя_терма)}</p>
+<p>Арифметическая_операция ::= +|-|*|/</p>
+<p>Вес_правила ::= 0..1</p>
+<p>Вес_подусловия ::= 0..1</p>
+<p>Логический вывод в сети таких правил организуется в СППР и носит циклический характер (рис. 3). Для выбора наиболее подходящего правила следует сравнить истинность условия правила с заданным значением лингвистической переменной, которая определяется полнотой покрытия правилами БЗ данной предметной области. Она определена на интервале [0,1] и может принимать значения &laquo;удовлетворительно&raquo;, &laquo;безупречно&raquo; и т.п. На основании этого сравнения принимается решение о выполнении следствия правила, причем при означивании переменных, определенных в следствии, степень истинности того, что переменная принимает заданное значение, становится равной степени истинности условия правила [4].</p>
+<p>Так, согласно представленной структуре для задачи распределения товарных ресурсов могут быть сформулированы правила следующего типа:</p>
+<p>ЕСЛИ Остатки_филиала_i= &laquo;Низкие&raquo; [важность &laquo;Высокая&raquo;] И Важность_филиала_i= &laquo;Высокая&raquo; И Продажи_филиала_i = &laquo;Высоке&raquo; И Количество_товара_для_рас&shy;пределения &gt;0 ТО INC(Количество_товара_ для _фили&shy;ала_i ) И DEC(Количество_товара_для_распределения ) И DEC(Важность_филиала_i ) [вес_правила = Высокий]</p>
+<p>ЕСЛИ Остатки_филиала_1 = &laquo;Норма&raquo; И Остатки_фи&shy;лиала_2 = &laquo;Норма&raquo; &hellip; И Остатки_филиала_N = &laquo;Норма&raquo; ТО РАСПРЕДЕЛИТЬ_СОГЛАСНО_ПРОДАЖАМ</p>
+<p>Где РАСПРЕДЕЛИТЬ_СОГЛАСНО_ПРОДАЖАМ &ndash; внешняя функция.</p>
+<p>Для решения задачи перераспределения товарных ресурсов между филиалами пример правила, по которому может приниматься решение о перемещении товара из филиала в филиал, следующий:</p>
+<p>ЕСЛИ Остатки_на_филиале_доноре_i = &laquo;больше нормы&raquo; И Остатки_на_филиале_доноре_i = &laquo;больше среднего кол-ва по складам&raquo; И Остатки_на_филиале_реципиенте_j = &laquo;меньше нормы&raquo; И Остатки_на_филиале_реципиенте_j = &laquo;меньше среднего кол-ва по складам&raquo; И Прибыльность_от_высвобождаемых средств = &laquo;высокая&raquo; ТО &laquo;Выбрать Q наиболее подходящих изделий для перемещения&raquo; И INC(Остатки_на_филиале_реципиенте_j , Q) И DEC(Ос&shy;татки_на_филиале_доноре_i ,Q)</p>
+<p>Необходимо отметить, что каждому параметру, выбранному в качестве регулирующего товарные запасы, должно соответствовать либо количественное, либо качественное значение. Во втором случае требуется построить функции принадлежности терм-множеств лингвистической переменной в разрезе каждого товара или групп, принятых к учету. При большой номенклатуре построение соответствующих функций принадлежности затруднительно. Для автоматизации этого процесса использовался метод построения функций принадлежности по накопленным статистическим наблюдениям исходя из распределения данных. Метод основан на кластеризации [5], с помощью которой синтезируют функции принадлежности при экстракции нечетких моделей.</p>
+<p>Литература</p>
+<p>1.&nbsp;&nbsp; Добронравин Е.Р. Организация системы управления запасами // Genobium, 2006. URL: http://www.genobium.com/ r/a28_thesis.htm (дата обращения: 20.11.2009).</p>
+<p>2.&nbsp;&nbsp; Волгин В.В. Склад: организация, управление, логистика. М.: Издат.-торг. корпор. &laquo;Дашков и К&raquo;, 2005.</p>
+<p>3.&nbsp;Прикладные нечеткие системы; под ред. Т. Тэрано, К. Асам, М. Сугено. М.: Мир, 1993.</p>
+<p>4.&nbsp;Синюк В.Г., Пивненко Е.В. Применение нечеткой истинности в логическом выводе, основанном на активации сети</p>
+<p>продукций // Интеллектуальные системы (AIS'07); Интеллектуальные САПР (CAD-2007): тр. Междунар. науч.-технич. конф. В 4-х т. М.: Физматлит, 2007. Т. 2. С. 221&ndash;223.</p>
+<p>5.&nbsp;Штовба С.Д. Введение в теорию нечетких множеств и нечеткую логику // Консультационный центр Matlab компании Softline, 2006. URL: http://matlab.exponenta.ru/fuzzylogic/book1/ index.php (дата обращения: 15.12.2009).</p></div><br /></td></tr></table><table border="0" width="100%" style="width:100%;">
+                   <tr>
+                      <td><b>Постоянный адрес статьи: http://swsys.ru/index.php?page=article&id=2535</b></td>
+                      <td align="right"><a target="_blank" href="/print/article_print.php?id=2535">Версия для печати</a></td>
+                   </tr>
+                   <tr>
+                      <td><b>Статья опубликована в выпуске журнала № 2 за 2010 год.</b></td>                      
+                                  </tr>            <tr><td><a href="http://swsys.ru/pay/form.php?journal=90">Электронная подписка на данный выпуск в формате PDF</a>            </tr></td>              
+          </table><br /><a href="javascript:history.back();">Назад, к списку статей</a><br /><br />Хотите оценить статью или опубликовать комментарий к ней - <a href="http://swsys.ru/index.php?page=registry">зарегистрируйтесь</a><br /><br />
+
+
+
+
+				
+				<div id="ie_clearing">&nbsp;</div>
+				<!-- End: IE Column Clearing -->
+				
+			</div>
+			<!-- end: #col3 -->
+            
+         
+            
+		</div>
+        
+		<!-- end: #main -->
+		<!-- begin: #footer -->
+
+
+         </div>
+
+
+		<div id="footer">
+
+			<div class="black">Журнал зарегистрирован в комитете РФ по печати</div><div style="margin:0px; padding:0px; line-height:16px">
+			Свидетельство о регистрации средства массовой информации № 013831 от 26.11.99 г.<br />
+			Решение Президиума Высшей аттестационной комиссии Министерства образования и науки РФ от 19.02.2010 г. (о внесении в Перечень ведущих рецензируемых научных журналов и изданий, в которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней кандидата и доктора наук).<br />
+&copy; Все права на авторские материалы охраняются в соответствии с законодательством РФ. Перепечатка возможна только с разрешения редакции. При цитировании материалов обязательна ссылка на Международный журнал "Программные продукты и системы" (для on-line проектов обязательна гиперссылка).</div>
+			
+
+			<div style="margin-top:15px;float:left">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t26.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border=0 width=88 height=15><\/a>")//--></script><!--/LiveInternet-->
+			</div>
+
+			<div align="right" style="margin:15px">
+               <a target="_blank" href="http://www.cps.tver.ru">Сайт разработан в <span>НИИ &laquo;ЦЕНТРПРОГРАММСИСТЕМ&raquo;</span></a><br />
+               <a href="http://swsys.ru/index.php?page=17">Информация о сайте</a>
+            </div>
+
+		</div>		
+		<!-- end: #footer -->
+
+
+
+	</div>
+
+</div>
+
+
+
+<style>
+
+.reklama {
+    color: #666;
+   font-size:11px;
+   font-family:Arial;
+  padding-bottom:20px;
+}
+.reklama a {
+    color: #666;
+   text-decoration:underline;
+}
+.reklama a:hover {
+    color: #000;
+   text-decoration:none;
+}
+ 
+
+@media print {
+  .reklama {
+      display:none;
+  }
+}
+
+</style>
+
+
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+/*
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+*/
+</script>
+<script type="text/javascript">
+/*
+try {
+var pageTracker = _gat._getTracker("UA-9821437-1");
+pageTracker._trackPageview();
+} catch(err) {}
+*/
+</script>
+
+</body>
+</html>
