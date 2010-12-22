@@ -1,0 +1,4 @@
+true        livejournal        news        science article        
+livejournal       100       0       0       
+news       8       92       0       
+science article       2       0       98       
